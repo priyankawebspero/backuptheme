@@ -21,7 +21,7 @@
               {% assign collection = block.settings.collection %}
               <a href="{{ collection.url }}">
                 {%- assign img_url = block.settings.image_desk | img_url: '200x' , format: 'pjpg'-%}
-                {% if block.settings.image_desk != blank %}
+                {% if img_url != blank %}
                 <img data-src="{{ img_url }}"
                      src="{{ img_url }}" alt="{{ block.settings.image_desk.alt | default: shop.name }}" itemprop="logo"
                      class="lazyautosizes lazyload" data-sizes="auto">
