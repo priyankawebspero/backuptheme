@@ -1,0 +1,208 @@
+<div class="caramel-section">
+<div class="section_main_caramel" {% if section.settings.top_caramel_img_dsk != blank%}style="background-image:url('{{ section.settings.top_caramel_img_dsk | img_url: 'master' }}'); background-size: cover;"{% endif %}>
+  <div class="cs_container">
+    <div class="first_section" {% if section.settings.back_image != blank%}style="background-image:url('{{ section.settings.back_image | img_url: 'master' }}');background-size: cover;"{% endif %} >
+    <div class="caramel-video">  
+      <div class="caramel-video_inner"> 
+        <video src="{{section.settings.video_url}}" muted autoplay loop playsinline></video>  </div>  
+    </div>
+    <div class="caramel-gif">
+      {% if section.settings.title_image_dsk != blank%}
+      <img class="desktop caramel_im_main" src="{{ section.settings.title_image_dsk | img_url: 'master' , format: 'pjpg'}}"  alt="{{section.settings.title_image_dsk.alt}}">
+      <img class="mobile caramel_im_main" src="{{ section.settings.title_image_mob | img_url: 'master' , format: 'pjpg'}}"  alt="{{section.settings.title_image_mob.alt}}">
+      {% endif %}
+      <div class="gift-sec">
+        <div class="col-nml">
+          {% if section.settings.gif_one_dsk != blank%}
+          <img class="desktop" src="{{ section.settings.gif_one_dsk | img_url: 'master' , format: 'pjpg'}}"  alt="{{section.settings.gif_one_dsk.alt}}">
+          <img class="mobile" src="{{ section.settings.gif_one_mob | img_url: 'master' , format: 'pjpg'}}"  alt="{{section.settings.gif_one_mob.alt}}">
+          {% endif %}
+        </div>
+        <div class="col-nml">
+          {% if section.settings.gif_sec_dsk != blank%}
+          <img class="desktop" src="{{ section.settings.gif_sec_dsk | img_url: 'master' , format: 'pjpg'}}"  alt="{{section.settings.gif_sec_dsk.alt}}">
+          <img class="mobile" src="{{ section.settings.gif_sec_mob | img_url: 'master' , format: 'pjpg'}}"  alt="{{section.settings.gif_sec_mob.alt}}">
+          {% endif %}
+        </div>
+        <div class="col-nml">
+          {% if section.settings.gif_third_dsk != blank%}
+          <img class="desktop" src="{{ section.settings.gif_third_dsk | img_url: 'master' , format: 'pjpg'}}"  alt="{{section.settings.gif_third_dsk.alt}}">
+          <img class="mobile" src="{{ section.settings.gif_third_mob | img_url: 'master' , format: 'pjpg'}}"  alt="{{section.settings.gif_third_mob.alt}}">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    </div></div></div>
+  <div class="gift-guaranty">
+    {% if section.settings.guaranty_dsk != blank%}
+    <img class="desktop" src="{{ section.settings.guaranty_dsk | img_url: 'master' , format: 'pjpg'}}"  alt="{{section.settings.guaranty_dsk.alt}}">
+    <img class="mobile" src="{{ section.settings.guaranty_mob | img_url: 'master' , format: 'pjpg'}}"  alt="{{section.settings.guaranty_mob.alt}}">
+    {% endif %}
+  </div>
+  <div class="third-section_main_outer">
+    <div class="third-section" {% if section.settings.bg_footer != blank%}style="background-image:url('{{ section.settings.bg_footer | img_url: 'master' }}'); background-size: cover;"  {% endif %}>
+    <div class="popcorn-inner-sec" {% if section.settings.bg_third_dsk != blank%}style="background-image:url('{{ section.settings.bg_third_dsk | img_url: 'master' }}'); background-size: cover;"{% endif %}>
+      <div class="popcorn">
+        {% if section.settings.Gif_image_before != blank%}
+        <img class="before" src="{{ section.settings.Gif_image_before | img_url: 'master' , format: 'pjpg'}}"  alt="{{section.settings.Gif_image_before.alt}}">
+        <img class="after" src="{{ section.settings.Gif_image_after | img_url: 'master' , format: 'pjpg'}}"  alt="{{section.settings.Gif_image_after.alt}}">
+        {% endif %}
+      </div>
+     
+    </div>
+      
+       <div class="text_caramel_cs">
+        {% if section.settings.image_above_text != blank%}
+        <img class="desktop" src="{{ section.settings.image_above_text | img_url: 'master' , format: 'pjpg'}}"  alt="{{section.settings.image_above_text.alt}}">
+        {% endif %}
+        <h3 class="date_cs">{{section.settings.date}}</h3>
+      </div>
+      
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CRM Offers Section",
+  "class": "crm-offers-section",
+  "settings": [
+        {
+        "type": "image_picker",
+        "id": "top_caramel_img_dsk",
+        "label": "Top Caramel Image Desktop"
+        },
+        {
+        "type": "image_picker",
+        "id": "top_caramel_img_mob",
+        "label": "Top Caramel Image Mobile"
+        },
+        {
+        "type": "image_picker",
+        "id": "back_image",
+        "label": "Background Image"
+        },
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Video Link"
+        },
+        {
+        "type": "paragraph",
+        "content": "Second Section"
+        },
+        {
+        "type": "image_picker",
+        "id": "title_image_dsk",
+        "label": "Title Image Dektop"
+        },
+        {
+        "type": "image_picker",
+        "id": "title_image_mob",
+        "label": "Title Image Mobile"
+        },
+        {
+        "type": "paragraph",
+        "content": "Gif Images"
+        },
+        {
+        "type": "image_picker",
+        "id": "gif_one_dsk",
+        "label": "Gif First Dektop"
+        },
+        {
+        "type": "image_picker",
+        "id": "gif_one_mob",
+        "label": "Gif First Mobile"
+        },
+        {
+        "type": "image_picker",
+        "id": "gif_sec_dsk",
+        "label": "Gif Second Dektop"
+        },
+        {
+        "type": "image_picker",
+        "id": "gif_sec_mob",
+        "label": "Gif Second Mobile"
+        },
+        {
+        "type": "image_picker",
+        "id": "gif_third_dsk",
+        "label": "Gif Third Dektop"
+        },
+        {
+        "type": "image_picker",
+        "id": "gif_third_mob",
+        "label": "Gif Third Mobile"
+        },
+        {
+        "type": "image_picker",
+        "id": "guaranty_dsk",
+        "label": "Guaranty Dektop"
+        },
+        {
+        "type": "image_picker",
+        "id": "guaranty_mob",
+        "label": "Guaranty Mobile"
+        },
+        {
+        "type": "paragraph",
+        "content": "Third Section"
+        },
+        {
+        "type": "image_picker",
+        "id": "bg_third_dsk",
+        "label": "Backgroung Image"
+        },
+        {
+        "type": "image_picker",
+        "id": "Gif_image_before",
+        "label": "Gif Before"
+        },
+        {
+        "type": "image_picker",
+        "id": "Gif_image_after",
+        "label": "Gif After"
+        },
+        {
+        "type": "image_picker",
+        "id": "image_above_text",
+        "label": "Choose Image"
+        },
+        {
+        "type": "text",
+        "id": "date",
+        "label": "Enter Date"
+        },
+        {
+        "type": "image_picker",
+        "id": "bg_footer",
+        "label": "Backgroung Footer"
+        }
+
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+
+<script>
+window.addEventListener('load', async () => {
+  let video = document.querySelector('video[muted][autoplay]');
+  try {
+    await video.play();
+  } catch (err) {
+    video.controls = true;
+  }
+}); 
+  
+  
+$('img.before').on('click', function(){
+ $(this).hide();
+$('img.after').show();
+})
+</script>

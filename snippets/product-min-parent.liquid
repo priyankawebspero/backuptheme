@@ -1,0 +1,15 @@
+<div class="product-template product-template-default">
+  <div class="">
+      <div class="halo-product-content">
+      <div class="pro-page">
+        {% section 'product-template-min-parent' %}
+      </div>
+    </div>   
+  </div>
+</div>
+
+<div class="footbar-fixed footbar-fixed-product">
+  {% if settings.display_sticky %} 
+  {% include 'sticky-add-to-cart' %}
+  {% endif %}
+</div>

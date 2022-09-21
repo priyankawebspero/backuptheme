@@ -1,0 +1,114 @@
+<div class="col-12 col-md-12">
+<div class="innner-wrppaer-squad">
+{% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'slide' %}
+      <div class="slide " {{ block.shopify_attributes }}>
+        <a {% if forloop.index == 1%}download onclick="downloadFile(this)" {% else %}  href="{{block.settings.link_buttons}} {% endif %}">
+        {% if  block.settings.text_button != blank %}
+          {{block.settings.text_button}} 
+          {% endif %}
+        </a>
+      </div>
+  {% endcase %}
+{% endfor %}
+<div class="col-12 col-md-12 col-lg-12">
+  <div class="paragraph">{{section.settings.paragraph}}</div>
+  <div class="text_area">{{section.settings.text_area}}</div>
+  <div class="textarea">{{section.settings.textarea}}</div>
+  <div class="download_area_custom">
+    <p><span>{{section.settings.title}}</span><a href="{{section.settings.link_1}}">{{section.settings.text_1}}</a><a href="{{section.settings.link_2}}">{{section.settings.text_2}}</a></p>
+  </div>
+  </div></div>
+{% schema %}
+{
+  "name": "Squad Footer Section",
+  "class": "squad-footer-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Affiliate Fourth Section"
+    },{
+      "type": "text",
+      "id": "paragraph",
+      "label": "Enter your paragraph"
+    },{
+      "type": "text",
+      "id": "text_area",
+      "label": "Enter Text"
+    },{
+      "type": "richtext",
+      "id": "textarea",
+      "label": "Enter Email"
+    },
+     {
+      "type": "text",
+      "id": "text_1",
+      "label": "terms & conditions"
+    },
+    {
+      "type": "url",
+      "id": "link_1",
+      "label": "terms & conditions link"
+    },
+     {
+      "type": "text",
+      "id": "text_2",
+      "label": "FAQ"
+    },
+    {
+      "type": "url",
+      "id": "link_2",
+      "label": "FAQ Link"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+           "type": "text",
+           "id": "text_button",
+           "label": "Add your Button"
+         },{
+      "type": "url",
+      "id": "link_buttons",
+      "label": "Link To button"
+    }
+       ]
+     }
+   ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+  
+  <script>
+      function downloadFile(elmnt) {
+
+    const link = elmnt
+    const url = 'https://cdn.shopify.com/s/files/1/0390/2985/files/Plum_Squad_Logo_Ad_Film_Sticker.png'
+  const options = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+  };
+
+   fetch(url, options)
+    .then( response => {
+      response.blob().then(blob => {
+          let url = window.URL.createObjectURL(blob);
+          let a = document.createElement('a');
+          a.href = url;
+          a.download = "plumsquad.png";
+          a.click();
+        });
+      }); 
+  }
+  </script>

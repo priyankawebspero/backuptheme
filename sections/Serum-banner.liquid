@@ -1,0 +1,69 @@
+<div class="col-12 col-md-12">
+
+{% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'slide' %}
+      <div class="slide desktop" {{ block.shopify_attributes }}>
+        {% if  block.settings.image != blank %}
+        <img class="slide" src="{{ block.settings.image | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.image.alt}}">
+        {% endif %}
+        {% if  block.settings.image_bottom_left != blank %}
+         <img class="slide" src="{{ block.settings.image_bottom_left | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.image_bottom_left.alt}}" >
+        {% endif %}
+      </div>
+      <div class="slide mobile" {{ block.shopify_attributes }} style="display:none;">
+        {% if  block.settings.image_mob != blank %}
+        <img class="slide" src="{{ block.settings.image_mob | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.image_mob.alt}}" >
+        {% endif %}
+        {% if  block.settings.image_bottom != blank %}
+         <img class="slide" src="{{ block.settings.image_bottom | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.image_bottom.alt}}">
+        {% endif %}
+      </div>
+  {% endcase %}
+{% endfor %}
+
+</div>
+{% schema %}
+{
+  "name": "Serum banner Section",
+  "class": "serum-second-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Serum Second Section"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Serum Slide",
+       "type": "slide",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image Desktop"
+         },{
+           "type": "image_picker",
+           "id": "image_bottom_left",
+           "label": "Image Desktop Bottom"
+         },{
+           "type": "image_picker",
+           "id": "image_mob",
+           "label": "Image"
+         },{
+           "type": "image_picker",
+           "id": "image_bottom",
+           "label": "Image Mobile Bottom"
+         }
+       ]
+     }
+   ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

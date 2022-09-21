@@ -1,0 +1,55 @@
+<section class="teaser-page-banner-section">
+  <div class="container">
+       <h3>{{section.settings.form_text_head}}</h3>
+      	<div class="signup-mail-outer">		
+		<div class="outter">			
+          <div class="desktop_view">
+            <div class="desktop-form right">
+              <input type="text" oninput="yourFunction()" id="desktop-name" name="name" placeholder="enter your name" required="">
+              <input type="text" oninput="validatePhone();yourFunction()" name="number" id="desktop-phone" placeholder="Contact Number" required=""><br>
+              <button id="signup_button_desktop" style="" onclick="submit()" value="Sign me up" disabled="">Submit</button>
+            </div>
+            <div class="confirm" style="display:none;height:auto">Thank you!</div>
+          </div>
+          </div>
+    </div>
+    </div>
+  <a href="{{ section.settings.link }}" class="teaser-link">
+  <img class="banner-image teaser_desktop lazyautosizes lazyload" data-src="{{ section.settings.banner-id | img_url: 'master' , format: 'pjpg'}}" src="{{ section.settings.banner-id | img_url: 'master' }}"   data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]">
+  <img class="banner-image mobile-xs lazyautosizes lazyload" data-src="{{ section.settings.image_mobile | img_url: 'master' , format: 'pjpg'}}" src="{{ section.settings.image_mobile | img_url: 'master' }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]">
+  </a>
+    
+</section>
+
+{% schema %}
+{
+  "name": "Teaser Last Section",
+  "settings": [
+    {
+    "type": "text",
+    "id": "form_text_head",
+    "label": "Form Text Heading"
+    }, {
+    "type": "image_picker",
+    "id": "banner-id",
+    "label": "image"
+    },
+    {
+    "type": "image_picker",
+    "id": "image_mobile",
+    "label": "Mobile Image"
+    },
+    { 
+    "type": "url",
+    "id": "link",
+    "label": "Link",
+    "info": "Optional"
+    }
+  ],
+    "presets": [
+      {
+        "name": "Teaser Last Section"
+      }
+    ]
+}
+{% endschema %}

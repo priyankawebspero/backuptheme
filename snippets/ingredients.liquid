@@ -1,0 +1,1064 @@
+var ingredients=[
+    {
+        "srno": "1",
+        "ingredient_name": "1,3-Butylene Glycol",
+        "common_name": "-",
+        "reason_to_use": "Preserves the moisture and used as a skin conditioning agent"
+    },
+    {
+        "srno": "2",
+        "ingredient_name": "Acer Saccharum (Sugar Maple) Extract",
+        "common_name": "Sugar Maple",
+        "reason_to_use": "Natural source of AHA and removes dead skin"
+    },
+    {
+        "srno": "3",
+        "ingredient_name": "Acrylates copolymer",
+        "common_name": "-",
+        "reason_to_use": "Used as a thickener"
+    },
+    {
+        "srno": "4",
+        "ingredient_name": "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+        "common_name": "-",
+        "reason_to_use": "Thickening and gelling agent"
+    },
+    {
+        "srno": "5",
+        "ingredient_name": "Actinidia Chinensis (Kiwi) Seed Extract",
+        "common_name": "Kiwi ",
+        "reason_to_use": "Antioxidant and used as a skin conditioning agent"
+    },
+    {
+        "srno": "6",
+        "ingredient_name": "Allantoin",
+        "common_name": "-",
+        "reason_to_use": "Acts as a soothing agent and protects the skin"
+    },
+    {
+        "srno": "7",
+        "ingredient_name": "Aloe Barbadensis (Aloe Vera) Leaf Juice",
+        "common_name": "Aloe Vera",
+        "reason_to_use": "Excellent skin mosturizer, heals and provides nutrients to the skin"
+    },
+    {
+        "srno": "8",
+        "ingredient_name": "Althaea Officinalis (Marshmallow) Root Extract",
+        "common_name": "Marshmallow",
+        "reason_to_use": "Mosturizes, soothes and calms the skin"
+    },
+    {
+        "srno": "9",
+        "ingredient_name": "Ammonium Acryloyldimethyltaurate/VP Copolymer",
+        "common_name": "-",
+        "reason_to_use": "Synthetic polymer used as thickening and gelling agent"
+    },
+    {
+        "srno": "10",
+        "ingredient_name": "Argania Spinosa (Argan) Kernel Oil",
+        "common_name": "Argan oil",
+        "reason_to_use": "Liquid gold for soft & supple skin and hair, hydrates and repairs the skin."
+    },
+    {
+        "srno": "11",
+        "ingredient_name": "Ascorbyl Palmitate",
+        "common_name": "-",
+        "reason_to_use": "Antioxidant used for reducing pigmentation"
+    },
+    {
+        "srno": "12",
+        "ingredient_name": "Aspalathus Linearis (Rooibos) Leaf Extract",
+        "common_name": "Rooibos",
+        "reason_to_use": "Used as a conditioning agent"
+    },
+    {
+        "srno": "13",
+        "ingredient_name": "Azadirachta Indica (Neem) Leaf Extract",
+        "common_name": "Neem Leaf",
+        "reason_to_use": "Has anti-bacterial, anti-fungal, anti-inflammatory properties"
+    },
+    {
+        "srno": "14",
+        "ingredient_name": "Behentrimonium Chloride",
+        "common_name": "-",
+        "reason_to_use": "Used as a conditioning agent for hair"
+    },
+    {
+        "srno": "15",
+        "ingredient_name": "Bellis Perennis (Daisy) Flower Extract",
+        "common_name": "Daisy flower",
+        "reason_to_use": "Has astringent property and reduces pigmentation"
+    },
+    {
+        "srno": "16",
+        "ingredient_name": "Bentonite",
+        "common_name": "",
+        "reason_to_use": "Acts as a binding agent"
+    },
+    {
+        "srno": "17",
+        "ingredient_name": "Benzoic Acid",
+        "common_name": "-",
+        "reason_to_use": "Fragrance ingredient that also acts as a preservative"
+    },
+    {
+        "srno": "18",
+        "ingredient_name": "Benzophenone-3",
+        "common_name": "-",
+        "reason_to_use": "Used as sunscreening agent"
+    },
+    {
+        "srno": "19",
+        "ingredient_name": "Benzyl alcohol",
+        "common_name": "-",
+        "reason_to_use": "Fragrance ingredient that also acts as a preservative"
+    },
+    {
+        "srno": "20",
+        "ingredient_name": "Betaine",
+        "common_name": "-",
+        "reason_to_use": "Natural mosturizer present in plants and animals"
+    },
+    {
+        "srno": "21",
+        "ingredient_name": "Biosaccharide Gum-1",
+        "common_name": "-",
+        "reason_to_use": "Anti-ageing agent used for soothing and mosturizing the skin"
+    },
+    {
+        "srno": "22",
+        "ingredient_name": "Brassica Campestris (Rapeseed) Seed Oil ",
+        "common_name": "Rapeseed",
+        "reason_to_use": "Anti-ageing agent used for skin-brightening"
+    },
+    {
+        "srno": "23",
+        "ingredient_name": "Brassica Campestris/ Aleurites Fordi Oil Copolymer",
+        "common_name": "-",
+        "reason_to_use": "Anti-Pollution agent that provide thermal protection to hair"
+    },
+    {
+        "srno": "24",
+        "ingredient_name": "Butyl Methoxydibenzoylmethane",
+        "common_name": "-",
+        "reason_to_use": "Used as sunscreening agent"
+    },
+    {
+        "srno": "25",
+        "ingredient_name": "Butyrospermum Parkii (Shea) Butter",
+        "common_name": "Shea Butter",
+        "reason_to_use": "Used for soothing and softening skin and hair"
+    },
+    {
+        "srno": "26",
+        "ingredient_name": "C12-20 Alkyl Glucoside",
+        "common_name": "-",
+        "reason_to_use": "Surfactant used for soothing and softening skin"
+    },
+    {
+        "srno": "27",
+        "ingredient_name": "C14-22 Alcohols",
+        "common_name": "-",
+        "reason_to_use": "Emulsion stabilizer"
+    },
+    {
+        "srno": "28",
+        "ingredient_name": "C15-23 Alkanes",
+        "common_name": "-",
+        "reason_to_use": "Solvent used for soothing and softening "
+    },
+    {
+        "srno": "29",
+        "ingredient_name": "Calendula Officinalis (Calendula) Flower Extract",
+        "common_name": "Calendula Flower",
+        "reason_to_use": "Soothing and calming agent with anti-acne and anti-bacterial properties"
+    },
+    {
+        "srno": "30",
+        "ingredient_name": "Camellia Sinensis (Green Tea Extract) Leaf Extract",
+        "common_name": "Green tea",
+        "reason_to_use": " Antioxidant and anti-acne property"
+    },
+    {
+        "srno": "31",
+        "ingredient_name": "Camellia Sinesis (White Tea) Leaf Extract",
+        "common_name": "White Tea",
+        "reason_to_use": "Rich in antioxidant, fight oxidative damage from sun exposure"
+    },
+    {
+        "srno": "32",
+        "ingredient_name": "Caprylic/Capric Triglyceride",
+        "common_name": "-",
+        "reason_to_use": "Used for soothing and softening skin and hair"
+    },
+    {
+        "srno": "33",
+        "ingredient_name": "Dipotassium Glycyrrhizate",
+        "common_name": "-",
+        "reason_to_use": "Flavoring agent with skin conditioning and anti-inflammatory properties"
+    },
+    {
+        "srno": "34",
+        "ingredient_name": "Carbomer",
+        "common_name": "-",
+        "reason_to_use": "Vicosity modifier used as thickening agent "
+    },
+    {
+        "srno": "35",
+        "ingredient_name": "Cellulose Beads",
+        "common_name": "-",
+        "reason_to_use": "Mild scrub that smoothens skin, and disintegrates easily when washed off"
+    },
+    {
+        "srno": "36",
+        "ingredient_name": "Centella Asiatica (Gotu Kola) Leaf Extract",
+        "common_name": "Gotu kola",
+        "reason_to_use": "Anti-ageing property, firming and calming properties, protects hair color"
+    },
+    {
+        "srno": "37",
+        "ingredient_name": "Cetearyl Olivate",
+        "common_name": "-",
+        "reason_to_use": "Emulsifier and texture enhancer with moisturizing property"
+    },
+    {
+        "srno": "38",
+        "ingredient_name": "Cetostearyl Alcohol",
+        "common_name": "-",
+        "reason_to_use": "Emulsion stabilizer"
+    },
+    {
+        "srno": "39",
+        "ingredient_name": "Cetyl alcohol",
+        "common_name": "-",
+        "reason_to_use": "Emulsion stabilizer"
+    },
+    {
+        "srno": "40",
+        "ingredient_name": "Chamomilla Recutita (Matricaria) Flower Extract",
+        "common_name": "-",
+        "reason_to_use": "Soothing agent for sensitive skin, has anti-inflammatory and antiseptic properties"
+    },
+    {
+        "srno": "41",
+        "ingredient_name": "Cinnamomum Zeylanicum Bark Extract",
+        "common_name": "Cinnamon Bark",
+        "reason_to_use": "Anti-microbial and astringent property"
+    },
+    {
+        "srno": "42",
+        "ingredient_name": "Citric acid",
+        "common_name": "-",
+        "reason_to_use": "pH adjuster"
+    },
+    {
+        "srno": "43",
+        "ingredient_name": "Citrus Aurantium Dulcis (Orange) Fruit Extract",
+        "common_name": "Orange",
+        "reason_to_use": "Antioxidant, anti-ageing, exfoliating and moisturizing property, reduces skin pigmentation"
+    },
+    {
+        "srno": "44",
+        "ingredient_name": "Citrus Junos (Yuzu) Seed Extract",
+        "common_name": "-",
+        "reason_to_use": "Contains high content of organic acid, anti-acne properties, used for skin brightening "
+    },
+    {
+        "srno": "45",
+        "ingredient_name": "Citrus Limon (Lemon) Fruit Extract",
+        "common_name": "Lemon",
+        "reason_to_use": "Antiseptic property, astringent property, reduces skin pigmentation "
+    },
+    {
+        "srno": "46",
+        "ingredient_name": "Citrus Unshiu Peel Extract",
+        "common_name": "-",
+        "reason_to_use": "Anti-oxidant, anti-inflammatory"
+    },
+    {
+        "srno": "47",
+        "ingredient_name": "Cocamide DEA",
+        "common_name": "-",
+        "reason_to_use": "Viscosity enhancer and foam booster"
+    },
+    {
+        "srno": "48",
+        "ingredient_name": "Cocamidopropyl Betaine",
+        "common_name": "-",
+        "reason_to_use": "A mild surfactant used as a cleansing and lathering agent"
+    },
+    {
+        "srno": "49",
+        "ingredient_name": "Coco Glucoside",
+        "common_name": "-",
+        "reason_to_use": "Mild surfactant used as cleansing agent"
+    },
+    {
+        "srno": "50",
+        "ingredient_name": "Cocos Nucifera (Coconut) Oil",
+        "common_name": "Coconut",
+        "reason_to_use": "Excellent moisturizer for dry skin & hair, strengthens and repairs hair"
+    },
+    {
+        "srno": "51",
+        "ingredient_name": "Color",
+        "common_name": "-",
+        "reason_to_use": "Adds color to the products"
+    },
+    {
+        "srno": "52",
+        "ingredient_name": "Copernicia Cerifera (Carnauba) Wax",
+        "common_name": "-",
+        "reason_to_use": "Plant wax used as thickening agent, soothes and softens skin."
+    },
+    {
+        "srno": "53",
+        "ingredient_name": "Dehydroacetic acid",
+        "common_name": "-",
+        "reason_to_use": "Preservative"
+    },
+    {
+        "srno": "54",
+        "ingredient_name": "Dipotassium Glycyrrhizate",
+        "common_name": "-",
+        "reason_to_use": "Flavoring agent with anti-inflammatory and soothing properties"
+    },
+    {
+        "srno": "55",
+        "ingredient_name": "Emblica officinalis (Amla) Extract",
+        "common_name": "Amla",
+        "reason_to_use": "Conditioning agent, provides shine to hair, prevents hair fall and strengthens hair"
+    },
+    {
+        "srno": "56",
+        "ingredient_name": "Ethylhexyl Palmitate",
+        "common_name": "-",
+        "reason_to_use": "Solvent that softens and smoothens the skin"
+    },
+    {
+        "srno": "57",
+        "ingredient_name": "Ethylene/Propylene copolymer",
+        "common_name": "-",
+        "reason_to_use": "Synthetic polymer used as thickening and viscosity modifier"
+    },
+    {
+        "srno": "58",
+        "ingredient_name": "Ethylenediaminetetraacetic acid (EDTA)",
+        "common_name": "-",
+        "reason_to_use": "Chelating agent"
+    },
+    {
+        "srno": "59",
+        "ingredient_name": "Ethylhexyl Glycerin",
+        "common_name": "",
+        "reason_to_use": "Preservative that prevents microbial growth in product"
+    },
+    {
+        "srno": "60",
+        "ingredient_name": "Ethylhexyl Methoxycinnamate ",
+        "common_name": "-",
+        "reason_to_use": "Used as sunscreening agent"
+    },
+    {
+        "srno": "61",
+        "ingredient_name": "Ethylhexyl Olivate",
+        "common_name": "-",
+        "reason_to_use": "Emulsion stabilizer"
+    },
+    {
+        "srno": "62",
+        "ingredient_name": "Fragaria Chiloensis (Strawberry) Fruit Extract",
+        "common_name": "Strawberry",
+        "reason_to_use": "Rich in antioxidant, good source of vitamin C, Soothes and mosturizes skin"
+    },
+    {
+        "srno": "63",
+        "ingredient_name": "Fragrance",
+        "common_name": "-",
+        "reason_to_use": "Adds fragrance to product"
+    },
+    {
+        "srno": "64",
+        "ingredient_name": "Fruit Cell Culture Extract ",
+        "common_name": "Plant Stem cells",
+        "reason_to_use": "Anti-ageing agent. promotes the vitality and longevity of skin stem cells, protects them from damage due to environmental stress."
+    },
+    {
+        "srno": "65",
+        "ingredient_name": "Garcinia Indica (Kokum) Seed Butter",
+        "common_name": "Kokum Butter",
+        "reason_to_use": "Prevents skin dryness, helps regenrates skin cells, softens the skin and has antioxidant properties"
+    },
+    {
+        "srno": "66",
+        "ingredient_name": "Garcinia Mangostana Peel Extract",
+        "common_name": "-",
+        "reason_to_use": "Prevents cellular damage caused by free oxygen radicals and anti-inflammatory."
+    },
+    {
+        "srno": "67",
+        "ingredient_name": "Gingko Biloba Leaf Extract",
+        "common_name": "Gingko Biloba ",
+        "reason_to_use": "Antioxidant, anti-inflammatory property, anti-ageing property"
+    },
+    {
+        "srno": "68",
+        "ingredient_name": "Glycerin ",
+        "common_name": "-",
+        "reason_to_use": "Attracts moisture to skin, thereby keeping away dryness"
+    },
+    {
+        "srno": "69",
+        "ingredient_name": "Glyceryl Monostearate",
+        "common_name": "-",
+        "reason_to_use": "Emulsifier and thickening agent"
+    },
+    {
+        "srno": "70",
+        "ingredient_name": "Glyceryl Stearate Citrate",
+        "common_name": "-",
+        "reason_to_use": "Emulsifier"
+    },
+    {
+        "srno": "71",
+        "ingredient_name": "Glycine",
+        "common_name": "-",
+        "reason_to_use": "Contains amino acid, acts as a conditioning agent and anti-static agent"
+    },
+    {
+        "srno": "72",
+        "ingredient_name": "Glycol Distearate ",
+        "common_name": "-",
+        "reason_to_use": "Gives opacifying and pearly effect to cleansing preparation"
+    },
+    {
+        "srno": "73",
+        "ingredient_name": "Glycolic Acid",
+        "common_name": "-",
+        "reason_to_use": "Alpha-hydroxy acid commonly found in citrus fruits, natural exfoliant that removes dead skin cells, keeps the skin looking younger and fresher"
+    },
+    {
+        "srno": "74",
+        "ingredient_name": "Glycyrrhiza Glabra (Licorice) Root Extract",
+        "common_name": "Licorice root",
+        "reason_to_use": "Mosturises and conditions skin and reduces pigmentation"
+    },
+    {
+        "srno": "75",
+        "ingredient_name": "Guar Hydroxypropyltrimonium Chloride",
+        "common_name": "-",
+        "reason_to_use": "Conditioning agent for skin and hair, helps deposit active ingredients on skin and/or hair, and also provides anti-static properties without weighing hair down"
+    },
+    {
+        "srno": "76",
+        "ingredient_name": "Hamamelis Virginiana (Witch Hazel) Extract",
+        "common_name": "Witch hazel",
+        "reason_to_use": "Astringent, anti-inflammatory and anti-bacterial agent"
+    },
+    {
+        "srno": "77",
+        "ingredient_name": "Hectorite",
+        "common_name": "-",
+        "reason_to_use": "Clay used as viscosity modifier and suspending agent"
+    },
+    {
+        "srno": "78",
+        "ingredient_name": "Helianthus Annuus (Sunflower)Seed Oil",
+        "common_name": "Sunflower oil",
+        "reason_to_use": "Easily penetrates and improves spreadability on skin and hair, used as a conditioning agent"
+    },
+    {
+        "srno": "79",
+        "ingredient_name": "Hibiscus Rosa-Sinensis (Hibiscus) Extract",
+        "common_name": "Hibiscus",
+        "reason_to_use": "Increases skin elasticity and rejuvinates the skin, promote hair growth and conditioning effect to hair"
+    },
+    {
+        "srno": "80",
+        "ingredient_name": "Hieracium Pilosella (Hawkweed) Extract",
+        "common_name": "-",
+        "reason_to_use": "Reduces puffiness and dark circles"
+    },
+    {
+        "srno": "81",
+        "ingredient_name": "Hippophae Rhamnoides (Sea Buckthorn) Fruit Oil",
+        "common_name": "Sea Buckthorn oil",
+        "reason_to_use": "Promotes skin hydration, elasticity, cell regeneration, and helps treat and prevent acne"
+    },
+    {
+        "srno": "82",
+        "ingredient_name": "Hydrogenated Olive Oil  ",
+        "common_name": "-",
+        "reason_to_use": "Improves spreadablity and softens skin and hair, adds shine to hair"
+    },
+    {
+        "srno": "83",
+        "ingredient_name": "Hydrogenated Olive Oil Unsaponifiables",
+        "common_name": "-",
+        "reason_to_use": "Used as conditioning agent, adds shine and improves manageability of hair"
+    },
+    {
+        "srno": "84",
+        "ingredient_name": "Hydrogenated Soy Polyglycerides",
+        "common_name": "-",
+        "reason_to_use": "Skin conditioning and mosturizing agent "
+    },
+    {
+        "srno": "85",
+        "ingredient_name": "Hydrogenated Soybean Oil",
+        "common_name": "-",
+        "reason_to_use": "Film former, texturizing agent, increases viscosity of oils"
+    },
+    {
+        "srno": "86",
+        "ingredient_name": "Hydrolyzed Corn Protein  ",
+        "common_name": "-",
+        "reason_to_use": "Repairs, smoothens and detangles the hair"
+    },
+    {
+        "srno": "87",
+        "ingredient_name": "Hydrolyzed Hyaluronic Acid",
+        "common_name": "-",
+        "reason_to_use": "Alleviates dry skin, reducing the appearance of fine lines and wrinkles and speeding up wound healing"
+    },
+    {
+        "srno": "88",
+        "ingredient_name": "Hydrolyzed Pea Protein",
+        "common_name": "-",
+        "reason_to_use": "Anti-aging properties, improves skin tone and lifts skin."
+    },
+    {
+        "srno": "89",
+        "ingredient_name": "Hydrolyzed Rice Protein  ",
+        "common_name": "-",
+        "reason_to_use": "Increased moisture retention creates a more hydrated and elastic surface"
+    },
+    {
+        "srno": "90",
+        "ingredient_name": "Hydrolyzed Sesame Protein PG - propyl methylsilanediol",
+        "common_name": "-",
+        "reason_to_use": "Protects and repairs hair and improves its texture "
+    },
+    {
+        "srno": "91",
+        "ingredient_name": "Hydrolyzed Soy Protein",
+        "common_name": "-",
+        "reason_to_use": "Skin Conditioning agent, mosturises and soothes the skin"
+    },
+    {
+        "srno": "92",
+        "ingredient_name": "Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer",
+        "common_name": "-",
+        "reason_to_use": "Thickening agent"
+    },
+    {
+        "srno": "93",
+        "ingredient_name": "Hydroxyhydrocinnamate",
+        "common_name": "-",
+        "reason_to_use": "Acts as anti-oxidant"
+    },
+    {
+        "srno": "94",
+        "ingredient_name": "Hydrolyzed Wheat Protein  ",
+        "common_name": "-",
+        "reason_to_use": "Adds volume and body to the hair by swelling the hair shaft with moisture, adds lustre and repairs damaged hair with proteins"
+    },
+    {
+        "srno": "95",
+        "ingredient_name": "Isodecyl Neopentanoate.",
+        "common_name": "-",
+        "reason_to_use": "Skin conditioning agent, mosturises and soothes the skin"
+    },
+    {
+        "srno": "96",
+        "ingredient_name": "Juglans Regia (Walnut Shell) Granules",
+        "common_name": "-",
+        "reason_to_use": "Exfoliates the skin"
+    },
+    {
+        "srno": "97",
+        "ingredient_name": "Kaolin",
+        "common_name": "-",
+        "reason_to_use": "Cleansing agent that absorbs excess oil and impurities from skin"
+    },
+    {
+        "srno": "98",
+        "ingredient_name": "Laureth-3",
+        "common_name": "-",
+        "reason_to_use": "Cleansing agent"
+    },
+    {
+        "srno": "99",
+        "ingredient_name": "Laureth-9",
+        "common_name": "-",
+        "reason_to_use": "Skin conditioning agent, mosturises and soothes the skin"
+    },
+    {
+        "srno": "100",
+        "ingredient_name": "Lecithin  ",
+        "common_name": "-",
+        "reason_to_use": "Skin conditioning agent, mosturises and soothes the skin"
+    },
+    {
+        "srno": "101",
+        "ingredient_name": "Leontopodium Alpinum (Edelweiss) Flower Extract",
+        "common_name": "Edelweiss",
+        "reason_to_use": "Helps skin stay wrinkle-free, supple and firm. "
+    },
+    {
+        "srno": "102",
+        "ingredient_name": "Lycium Barbarum (Goji Berry) Fruit Extract ",
+        "common_name": "Goji Berry",
+        "reason_to_use": "Antioxidant, has detoxifying and protecting property"
+    },
+    {
+        "srno": "103",
+        "ingredient_name": "Macadamia Ternifolia (Macadamia) Seed Oil",
+        "common_name": "Macadamia ",
+        "reason_to_use": "Mosturises, regenerates and softens the skin"
+    },
+    {
+        "srno": "104",
+        "ingredient_name": "Malus Domestica Fruit Cell Culture Extract ",
+        "common_name": "-",
+        "reason_to_use": "Anti-aging properties and prevents wrinkles"
+    },
+    {
+        "srno": "105",
+        "ingredient_name": "Melaleuca Alternifolia (Tea Tree) Leaf Oil",
+        "common_name": "Tea tree",
+        "reason_to_use": "Anti-inflammatory and anti-fungal"
+    },
+    {
+        "srno": "106",
+        "ingredient_name": "Menthol",
+        "common_name": "-",
+        "reason_to_use": "Cools and soothes the skin"
+    },
+    {
+        "srno": "107",
+        "ingredient_name": "Niacinamide",
+        "common_name": "-",
+        "reason_to_use": "Niacinamide helps build keratin , a type of protein that keeps skin firm and healthy."
+    },
+    {
+        "srno": "108",
+        "ingredient_name": "Octyl Methoxycinnamate",
+        "common_name": "-",
+        "reason_to_use": "Protects from harmful UV rays"
+    },
+    {
+        "srno": "109",
+        "ingredient_name": "Olea Europaea (Olive) Fruit Oil ",
+        "common_name": "Olive Fruit",
+        "reason_to_use": "Anti-oxidant, protects the skin from damage "
+    },
+    {
+        "srno": "110",
+        "ingredient_name": "Olea Europaea (Olive) Leaf Extract",
+        "common_name": "Olive Leaf",
+        "reason_to_use": "Soothes and calms skin"
+    },
+    {
+        "srno": "111",
+        "ingredient_name": "Olea Europaea (Olive) Oil Unsaponifibles",
+        "common_name": "-",
+        "reason_to_use": "A multi-acid, rinse-off exfoliant peel helps to smoothen skin, brighten tone and unclog pores"
+    },
+    {
+        "srno": "112",
+        "ingredient_name": "Olive Oil PEG-7 Ester",
+        "common_name": "-",
+        "reason_to_use": "Moisturizes skin"
+    },
+    {
+        "srno": "113",
+        "ingredient_name": "Oryza Sativa (Rice) Bran Extract",
+        "common_name": "Rice Bran",
+        "reason_to_use": "Increases skin's natural regeneration, helps in retaining moisture and soothes irritation"
+    },
+    {
+        "srno": "114",
+        "ingredient_name": "Oryza Sativa (Rice) Bran Wax",
+        "common_name": "Rice Bran wax",
+        "reason_to_use": "Used to give matte appearance, good antioxidant properties"
+    },
+    {
+        "srno": "115",
+        "ingredient_name": "p-Methoxycinnamidopropyl Dimethyl Behenyl Ammonium Chloride",
+        "common_name": "-",
+        "reason_to_use": "Conditions and protects hair"
+    },
+    {
+        "srno": "116",
+        "ingredient_name": "Panthenyl Hydroxypropyl Steardimonium Chloride",
+        "common_name": "-",
+        "reason_to_use": "Conditions hair"
+    },
+    {
+        "srno": "117",
+        "ingredient_name": "PEG 400",
+        "common_name": "-",
+        "reason_to_use": "Helps in retaining mositure and conditions skin"
+    },
+    {
+        "srno": "118",
+        "ingredient_name": "PEG- 40 castor oil",
+        "common_name": "-",
+        "reason_to_use": "It works as surfactant, emollient and emulsifying agent"
+    },
+    {
+        "srno": "119",
+        "ingredient_name": "PEG-100 Stearate",
+        "common_name": "-",
+        "reason_to_use": "Emulsifying agent"
+    },
+    {
+        "srno": "120",
+        "ingredient_name": "PEG-150 Distearate",
+        "common_name": "-",
+        "reason_to_use": "Rheology modifier"
+    },
+    {
+        "srno": "121",
+        "ingredient_name": "PEG-20 Glyceryl Triisosterate",
+        "common_name": "-",
+        "reason_to_use": "Works as mild surfactant on skin without leaving oily residue"
+    },
+    {
+        "srno": "122",
+        "ingredient_name": "PEG-40 Hydrogenated Castor oil",
+        "common_name": "-",
+        "reason_to_use": "Solubilizer, emulsifier"
+    },
+    {
+        "srno": "123",
+        "ingredient_name": "Pentaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate",
+        "common_name": "-",
+        "reason_to_use": "Antioxidant"
+    },
+    {
+        "srno": "124",
+        "ingredient_name": "Phenoxyethanol",
+        "common_name": "-",
+        "reason_to_use": "Peservative; prevents microbial growth in product"
+    },
+    {
+        "srno": "125",
+        "ingredient_name": "Phospholipids",
+        "common_name": "-",
+        "reason_to_use": "Skin-identical ingredient that softens and soothens the skin"
+    },
+    {
+        "srno": "126",
+        "ingredient_name": "Polyglyceryl-3 Diisostearate",
+        "common_name": "-",
+        "reason_to_use": "Surfactant that softens and soothens the skin"
+    },
+    {
+        "srno": "127",
+        "ingredient_name": "Polyglyceryl-4 Olivate",
+        "common_name": "-",
+        "reason_to_use": "Delivers superior sensoriality attributes and sustains skin hydration."
+    },
+    {
+        "srno": "128",
+        "ingredient_name": "Polyquaternium-10",
+        "common_name": "-",
+        "reason_to_use": "Conditioning agent"
+    },
+    {
+        "srno": "129",
+        "ingredient_name": "Polyquaternium-22",
+        "common_name": "-",
+        "reason_to_use": "Conditioning agent"
+    },
+    {
+        "srno": "130",
+        "ingredient_name": "Polyquaternium-37",
+        "common_name": "-",
+        "reason_to_use": "Conditioning agent"
+    },
+    {
+        "srno": "131",
+        "ingredient_name": "Polyquaternium-7",
+        "common_name": "-",
+        "reason_to_use": "Conditioning agent"
+    },
+    {
+        "srno": "132",
+        "ingredient_name": "Polysorbate 20",
+        "common_name": "-",
+        "reason_to_use": "Solubilizer, emulsifier"
+    },
+    {
+        "srno": "133",
+        "ingredient_name": "Polysorbate 60",
+        "common_name": "-",
+        "reason_to_use": "Acts as a surfactant, emulsifier, solubilizer and dispersing agent"
+    },
+    {
+        "srno": "134",
+        "ingredient_name": "Potassium Sorbate",
+        "common_name": "-",
+        "reason_to_use": "Preservative"
+    },
+    {
+        "srno": "135",
+        "ingredient_name": "Proline ",
+        "common_name": "-",
+        "reason_to_use": "Anti aging ingredient, improves skin elasticity and promotes collagen production"
+    },
+    {
+        "srno": "136",
+        "ingredient_name": "Propanediol",
+        "common_name": "-",
+        "reason_to_use": "Retains skin moisture"
+    },
+    {
+        "srno": "137",
+        "ingredient_name": "Prunus Amygdalus Dulcis (Sweet Almond) Oil",
+        "common_name": "Sweet Almond",
+        "reason_to_use": "Nourishes and moisturizes skin & hair"
+    },
+    {
+        "srno": "138",
+        "ingredient_name": "Prunus Armeniaca (Apricot) Kernel Oil",
+        "common_name": "Apricot",
+        "reason_to_use": "Moisturises skin, treats dry and sensitive skin"
+    },
+    {
+        "srno": "139",
+        "ingredient_name": "Punica Granatum (Pomegranate) Fruit Extract",
+        "common_name": "Pomegranate",
+        "reason_to_use": "The anti-ageing plant compounds in the fruit helps in stimulating keratinocyte cells (skin cells) and help in cellular regeneration thereby keeping wrinkles and sagging skin at bay"
+    },
+    {
+        "srno": "140",
+        "ingredient_name": "PVP/Polycarbamyl Polyglycol Ester ",
+        "common_name": "-",
+        "reason_to_use": "Binding and film-forming agent"
+    },
+    {
+        "srno": "141",
+        "ingredient_name": "Rifolium Pratense (Red Clover) Flower Extract",
+        "common_name": "Red Clover",
+        "reason_to_use": "Fight signs of cutaneous ageing and reduces scalp irritation"
+    },
+    {
+        "srno": "142",
+        "ingredient_name": "Rosa Canina (Rose hip) Seed Oil",
+        "common_name": "Rose Hip Oil",
+        "reason_to_use": "Rich in essential fatty acids and antioxidants, helps in cell regeneration, reduces scars and fine lines"
+    },
+    {
+        "srno": "143",
+        "ingredient_name": "Rosa Damascena (Rose) flower extract",
+        "common_name": "Rose extract",
+        "reason_to_use": "Has astringent and antibacterial properties, high in vitamin C and vitamin E "
+    },
+    {
+        "srno": "144",
+        "ingredient_name": "Rosa Rubiginosa Seed Oil",
+        "common_name": "-",
+        "reason_to_use": "Restores and regenerates tissues (the oil is great for scars and burns), decreases wrinkles, prevents acne and normalizes pore size"
+    },
+    {
+        "srno": "145",
+        "ingredient_name": "Rosmarinus Officinalis (Rosemary) Leaf Extract",
+        "common_name": "Rosemary extract",
+        "reason_to_use": "Anti-inflammatory properties help to reduce swelling and puffiness of the skin, heal burns and soothes the skin."
+    },
+    {
+        "srno": "146",
+        "ingredient_name": "Saccharum Officinarum (Suagrcane) Extract",
+        "common_name": "Sugar cane Extract",
+        "reason_to_use": "Contains alpha hydroxy acids (AHAs) like glycolic acid, which increase cell turnover and exfoliates the skin, prevents acne"
+    },
+    {
+        "srno": "147",
+        "ingredient_name": "Salicylic Acid",
+        "common_name": "Salicylic acid",
+        "reason_to_use": "Anti-fungal and anti-acne"
+    },
+    {
+        "srno": "148",
+        "ingredient_name": "Salix Alba (White Willow) Bark Extract",
+        "common_name": "White willow bark",
+        "reason_to_use": "Containing salicin from which salicylic acid is derive this versatile ingredient is both anti-inflammatory and antibacterial, clearing pores and alleviating acne and irritation."
+    },
+    {
+        "srno": "149",
+        "ingredient_name": "Salix Nigra (Willow) Bark Extract",
+        "common_name": "Willow bark",
+        "reason_to_use": "Inflammatory and antibacterial, clearing pores and alleviating acne and irritation."
+    },
+    {
+        "srno": "150",
+        "ingredient_name": "Sambucus Nigra (Elder) Flower Extract",
+        "common_name": "Elder Flower Extract",
+        "reason_to_use": "Anti-inflammatory properties, rich in vitamins, flavonoids and quercetin, makes the skin firmer, improves complexion and helps even skin tone "
+    },
+    {
+        "srno": "151",
+        "ingredient_name": "Sarcosine",
+        "common_name": "-",
+        "reason_to_use": "Sarcosine can help minimize the impact UV light exposure has on skin's surface"
+    },
+    {
+        "srno": "152",
+        "ingredient_name": "Silica",
+        "common_name": "-",
+        "reason_to_use": "Texturing agent, oil-absorbing property controls sebum and gives a matte finish"
+    },
+    {
+        "srno": "153",
+        "ingredient_name": "Simmondsia Chinensis (Jojoba) Seed Oil",
+        "common_name": "Jojoba Oil",
+        "reason_to_use": "Anti-inflammatory properties, eases the effects of eczema and rosacea, rich in vitamin E and vitamin B-complex"
+    },
+    {
+        "srno": "154",
+        "ingredient_name": "Sodium Acrylates Copolymer",
+        "common_name": "Acrylates Copolymer",
+        "reason_to_use": "Rheology Modifier"
+    },
+    {
+        "srno": "155",
+        "ingredient_name": "Sodium Benzoate ",
+        "common_name": "Sodium Benzoate",
+        "reason_to_use": "Preservative"
+    },
+    {
+        "srno": "156",
+        "ingredient_name": "Sodium Citrate",
+        "common_name": "Sodium Citrate",
+        "reason_to_use": "Balances pH of skin and acts as natural preservative"
+    },
+    {
+        "srno": "157",
+        "ingredient_name": "Sodium Cocoyl Glycinate",
+        "common_name": "-",
+        "reason_to_use": "Mild surfactant"
+    },
+    {
+        "srno": "158",
+        "ingredient_name": "Sodium Gluconate",
+        "common_name": "-",
+        "reason_to_use": "Chelating agent"
+    },
+    {
+        "srno": "159",
+        "ingredient_name": "Sodium Hydroxide",
+        "common_name": "-",
+        "reason_to_use": "Nuetralizer"
+    },
+    {
+        "srno": "160",
+        "ingredient_name": "Sodium Laureth Sulphate (27% active)",
+        "common_name": "-",
+        "reason_to_use": "Surfactant"
+    },
+    {
+        "srno": "161",
+        "ingredient_name": "Sodium Lauroyl Sarcosiante",
+        "common_name": "-",
+        "reason_to_use": "Surfactant"
+    },
+    {
+        "srno": "162",
+        "ingredient_name": "Sorbitan Olivate",
+        "common_name": "-",
+        "reason_to_use": "Helps retain skin moisture and has a high moisturizing effect, biomimics the skin and is hypoallergenic."
+    },
+    {
+        "srno": "163",
+        "ingredient_name": "Stearalkonium chloride",
+        "common_name": "-",
+        "reason_to_use": "Anti-static agent, a surfactant and an antimicrobial."
+    },
+    {
+        "srno": "164",
+        "ingredient_name": "Stearic Acid",
+        "common_name": "-",
+        "reason_to_use": "Fatty acid used as an emollient and emulsifier, protects skin's surface against water loss and help shore up skin's protective barrier."
+    },
+    {
+        "srno": "165",
+        "ingredient_name": "Titanium Dioxide",
+        "common_name": "-",
+        "reason_to_use": "Inert earth mineral used as a thickening, whitening, lubricating, and sunscreen ingredient, protects skin from UVA and UVB radiation "
+    },
+    {
+        "srno": "166",
+        "ingredient_name": "Tocopherol",
+        "common_name": "Vitamin E",
+        "reason_to_use": "Helps support the immune system, cell function, and skin health, an antioxidant, reduces UV skindamage"
+    },
+    {
+        "srno": "167",
+        "ingredient_name": "Tocopheryl Acetate",
+        "common_name": "Vitamin E",
+        "reason_to_use": "Mosturises skin and prevents wrinkles"
+    },
+    {
+        "srno": "168",
+        "ingredient_name": "Triethanolamine",
+        "common_name": "-",
+        "reason_to_use": "Nuetralizer"
+    },
+    {
+        "srno": "169",
+        "ingredient_name": "Undecylenamidopropyl PEG-2-dimonium undecylenate",
+        "common_name": "-",
+        "reason_to_use": "Anti-dandruff agent"
+    },
+    {
+        "srno": "170",
+        "ingredient_name": "Vaccinium Myrtillus Fruit Extract ",
+        "common_name": "-",
+        "reason_to_use": "Promotes vital, radiant, soft, supple and firmer skin."
+    },
+    {
+        "srno": "171",
+        "ingredient_name": "Vitis Vinifera (Grape) Leaf Extract",
+        "common_name": "Grape leaf Extract",
+        "reason_to_use": "Protects against sunburns, has anti-aging benefits, softens and rejuvenates the skin, lightens scars"
+    },
+    {
+        "srno": "172",
+        "ingredient_name": "Vitis Vinifera (Grape) Seed Oil",
+        "common_name": "Grape seed oil",
+        "reason_to_use": "Reduces acne and heals the skin"
+    },
+    {
+        "srno": "173",
+        "ingredient_name": "Vitis Vinifera (Grape) Skin Extract",
+        "common_name": "Grapeseed extract",
+        "reason_to_use": "Rejuvenates and brightens skin"
+    },
+    {
+        "srno": "174",
+        "ingredient_name": "White Tea Leaf Extract",
+        "common_name": "White tea extract",
+        "reason_to_use": "Contains high amounts of anti-bacterial and anti-ageing properties that help prevent wrinkles and sagging skin"
+    },
+    {
+        "srno": "175",
+        "ingredient_name": "Willow Bark Extract",
+        "common_name": "Willow bark",
+        "reason_to_use": "Anti-Inflammatory and anti-bacterial property"
+    },
+    {
+        "srno": "176",
+        "ingredient_name": "Xanthan Gum",
+        "common_name": "Xanthan gum ",
+        "reason_to_use": "Thickening and stabilizing agent"
+    },
+    {
+        "srno": "177",
+        "ingredient_name": "Zingiber Officinale (Ginger) Root Extract",
+        "common_name": "Ginger",
+        "reason_to_use": "Soothens skin and has antioxidant properties."
+    }
+]

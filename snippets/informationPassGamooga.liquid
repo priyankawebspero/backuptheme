@@ -1,0 +1,52 @@
+<script>
+  if(Shopify.Checkout.step == "shipping_method"){
+//     $('#continue_button').click(function(){
+//     	var email2=$('#checkout_email').val();
+//         var fname=$('#checkout_shipping_address_first_name').val();
+//       	var lname=$('#checkout_shipping_address_last_name').val();
+//       	var city=$('#checkout_shipping_address_city').val();
+//       	var country=$('#checkout_shipping_address_country').val();
+//       	var province=$('#checkout_shipping_address_province').val();
+//       	var zipcode=$('#checkout_shipping_address_zip').val();
+//       	var phone=$('#checkout_shipping_address_phone').val();
+//       window.dataLayer = window.dataLayer || [];
+//     window.dataLayer.push({
+//       'event':'information_checkout',
+//       'email':email2,
+//       'phone':phone,
+//       'zipcode':zipcode
+      
+//     })
+//     });
+    ordered_items=[]
+     {% for item in checkout.line_items %}
+    ordered_items.push({
+    'title':'{{item.title}}',
+    'quantity':{{item.quantity}},
+    'original_price':{{item.original_price | divided_by:100}},
+    'price_after_discount':{{item.final_price | divided_by:100}},
+    'imageURL':'{{ item.image |  img_url:"medium"}}'
+
+    })
+    {% endfor%}
+    var phone='{{checkout.shipping_address.phone}}'
+    phone=phone.split(" ").join("")
+    console.log("Phone without space "+phone)
+    var address='{{checkout.shipping_address.address1}} '+'{{checkout.shipping_address.address2}}'
+    console.log('{{checkout.shipping_address.address1}}')
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event':'information_checkout',
+      'items':ordered_items,
+      'name':'{{checkout.shipping_address.name}}',
+      'city':'{{checkout.shipping_address.city}}',
+      'country':'{{checkout.shipping_address.country}}',
+      'province':'{{checkout.shipping_address.province}}',
+      'email':'{{checkout.email}}',
+      'phone':phone,
+      'zipcode':'{{checkout.shipping_address.zip}}'
+      
+    })
+    
+  }
+</script>

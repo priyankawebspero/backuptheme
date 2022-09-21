@@ -1,0 +1,615 @@
+<style>
+.img-box-ratio img {
+    border-radius: 0;
+  width:100%;
+}
+  
+div#subscribe-section-second {
+    padding: 30px 0 0 0;
+      background: #e5cbf4;
+}
+  
+div#subscribe-section-second .collection-links {
+    background: #5e0d8b!important;
+    color: #fff!important;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 12px 15px;
+    min-width: inherit;
+    font-weight: 700;;
+    width: auto;
+    box-shadow: none;
+    margin-top: 0;
+    min-width: 200px;
+    /* width: 100%; */
+    display: inline-block;
+}
+  
+  div#subscribe-section-second .collection-links:hover{
+  	color: #fff!important;
+    background: #8901bd!important;
+  
+  }
+  
+ .subscription-repeats-steps {
+    background: #e5cbf4;
+    text-align: center;
+   padding:50px 0;
+}
+  
+  .subscription-repeats-steps .section-title, .subscription-repeats-four-steps .section-title {
+    color: #5e0d8b;
+    text-align: center;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 1.8;
+    font-family: 'serifabold';
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+  
+  .subscription-repeats-steps .repeats-step {
+    float: left;
+    width: calc(25% - 32px);
+    margin: 15px 15px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+  
+  .subscription-repeats-steps .repeats-step .repeats-step-icon {
+    min-height: 90px;
+    margin-bottom: 20px;
+}
+  
+.subscription-repeats-steps .repeats-step-text .repeats-step-number {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 14px;
+    color: #696b69;
+}
+  
+.subscription-repeats-steps .repeats-step-text p {
+    font-size: 19px;
+    font-weight: 600;
+    margin: 5px 0 0;
+}
+  
+  .subscription-repeats-four-steps {
+    padding: 10px 0 10px;
+}
+  
+ .subscription-repeats-four-steps .repeats-usp {
+    padding: 9px 18px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+  
+.subscription-repeats-four-steps .repeats-block {
+    width: 50%;
+    float: left;
+    padding: 0 15px;
+    margin-bottom: 40px;
+}
+  
+  
+  .subscription-repeats-four-steps .repeats-block:first-child .repeats-usp {
+    background: #fff1eb;
+}
+  
+  .subscription-repeats-four-steps .repeats-block:nth-of-type(2) .repeats-usp {
+    background: #fff7e4;
+}
+  
+   .subscription-repeats-four-steps .repeats-block:nth-of-type(3) .repeats-usp {
+    background: #f0f9ff;
+}
+  
+  .subscription-repeats-four-steps .repeats-block:last-child .repeats-usp {
+    background:#ffe7e7;
+}
+  
+.subscription-repeats-four-steps .repeats-usp p {
+    margin-left: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+  
+  .faqs-sections {
+    background: #fffbf9;
+    padding: 50px 0 70px;
+}
+  
+  
+  
+.faqs-sections .section-title {
+    color: #5e0d8b;
+    text-align: center;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 1.8;
+    font-family: 'serifabold';
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+  
+  .faqs-sections .container {
+    max-width: 990px;
+}
+  
+  
+.faqs-sections .toggle-title h3 {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0;
+    padding: 15px 35px 15px 0;
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .5s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+  
+.faqs-sections .toggle-title h3:before {
+    content: "";
+    width: 2px;
+    height: 12px;
+    display: block;
+    background: #333;
+    position: absolute;
+    right: 20px;
+    top: 22px;
+    transition: all .5s ease-in-out;
+}
+  
+  .faqs-sections .toggle-title h3:after {
+    content: "";
+    width: 12px;
+    height: 2px;
+    display: block;
+    background: #333;
+    position: absolute;
+    right: 15px;
+    top: 27px;
+    transition: all .5s ease-in-out;
+}
+ 
+  .faqs-sections .toggle-inner {
+    padding-top: 10px;
+    display: none;
+}
+  
+.faqs-sections .toggle-title.active h3:before {
+    opacity: 0;
+    visibility: hidden;
+}
+  
+#subscription-landing .main-content {
+    padding-bottom: 0;
+}
+  
+  @media only screen and (min-width:768px){
+  
+  .img-box-ratio img.mobile {
+    display: none;
+}
+  
+  }
+  
+ @media only screen and (max-width:767px){
+  
+  .img-box-ratio img.desktop {
+    display: none;
+}
+   
+ .subscription-repeats-steps .repeats-step {
+    width: calc(50% - 32px);
+}
+   
+ .subscription-repeats-four-steps {
+    padding: 30px 0;
+}
+   
+ .subscription-repeats-steps .section-title, .subscription-repeats-four-steps .section-title {
+    font-size: 35px;
+    letter-spacing: 0;
+}
+   
+ .subscription-repeats-four-steps .repeats-usp p {
+    font-size: 16px;
+}
+   
+.subscription-repeats-steps {
+    padding: 30px 0 40px 0;
+}
+div#subscribe-section-second {
+    padding: 20px 0 0 0;
+}
+   
+.subscription-repeats-steps .repeats-step-text p {
+    font-size: 17px;
+    margin: 0;
+}
+   
+.subscription-repeats-steps .repeats-step-text .repeats-step-number {
+    font-size: 13px;
+}
+   
+.faqs-sections {
+    padding: 30px 0 50px;
+}
+   
+ .faqs-sections .section-title {
+    font-size: 35px;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    margin-bottom: 35px;
+}
+   
+.faqs-sections .toggle-title h3 {
+    font-size: 17px;
+}
+   
+.subscription-repeats-four-steps .repeats-block {
+    width: 100%;
+    margin-bottom: 25px;
+}
+   
+.faqs-sections .toggle-title h3:before {
+    right: 7px;
+}
+   
+.faqs-sections .toggle-title h3:after {
+    right: 2px;
+}
+  
+  }
+  
+@media only screen and (max-width:479px){
+  
+ 
+.subscription-repeats-steps .repeats-step {
+  width: calc(100% - 30px);
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    text-align: left;
+    margin: 6px 15px;
+}
+  
+.subscription-repeats-steps .repeats-step .repeats-step-icon {
+    min-height: inherit;
+    margin-bottom: 0;
+}
+  
+.subscription-repeats-steps .repeats-step .repeats-step-icon img {
+    max-width: 75px;
+}
+  
+.repeats-step-text {
+    text-align: left;
+    margin-left: 20px;
+}
+  
+.subscription-repeats-steps .repeats-step-text p {
+    font-size: 16px;
+}
+  
+.subscription-repeats-steps .repeats-step-text .repeats-step-number {
+    font-size: 12px;
+}
+ 
+  
+.subscription-repeats-steps {
+    padding: 0px 0 20px 0;
+}
+
+div#subscribe-section-second .collection-links {
+    font-size: 16px;
+    padding: 8px 15px;
+    min-width: 165px;
+}
+
+.subscription-repeats-steps .section-title {
+    margin-bottom: 0;
+}
+
+
+.subscription-repeats-four-steps {
+    padding: 10px 0;
+}
+
+.subscription-repeats-four-steps .section-title {
+    margin-bottom: 5px;
+}
+.faqs-sections .section-title {
+    margin-bottom: 15px;
+}
+  
+.subscription-repeats-four-steps .repeats-block {
+    margin-bottom: 15px;
+}
+  
+.subscription-repeats-steps .repeats-step-text p {
+    line-height: 1.2;
+    padding-top: 3px;
+}
+  
+  }
+
+
+</style>
+
+
+<div class="page-tpl">
+  
+   <div class="subscribe-section" id="subscribe-section-first">
+        <div class="spotlight-1-blocks">
+            <div class="spotlight-item">
+              <div class="img-box">
+                <div class="img-box-ratio">
+                  <a class="slide-image">
+                    <img data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/HP-Banner_Save-more-with-subscription.jpg?v=1652357861" src="https://cdn.shopify.com/s/files/1/0390/2985/files/HP-Banner_Save-more-with-subscription.jpg?v=1652357861" alt="Plum Goodness" itemprop="logo" class="lazyautosizes lazyload desktop" data-sizes="auto" >
+                    <img data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/HP-Mobile-Banner_Save-more-with-subscription.jpg?v=1652357861" src="https://cdn.shopify.com/s/files/1/0390/2985/files/HP-Mobile-Banner_Save-more-with-subscription.jpg?v=1652357861" alt="Plum Goodness" itemprop="logo" class="lazyautosizes lazyload mobile" data-sizes="auto" >
+                  </a>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  
+  
+   
+    <div class="collection-subscribe" id="subscribe-section-second">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">            
+            <div class="text-center">
+              <a class="collection-links" href="/collections/essentials-subscription">get started</a>
+            </div>
+          </div>
+        </div>
+    </div>  </div>
+    
+    
+    <div class="subscription-repeats-steps" id="subscribe-section-third">
+      <div class="container">
+      <h2 class="section-title">how to repeat</h2>
+      <div class="row repeats-steps">
+        <div class="repeats-step">
+          <div class="repeats-step-icon">
+            <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/Icon_select-unlimited-products-1_desktop-_-mobile_100x92_863cc618-d9cd-4f6e-915e-1314cd8b1155.jpg?v=1652345179" alt="icon">
+          </div>
+          <div class="repeats-step-text">
+            <p class="repeats-step-number">STEP 1</p>
+            <p>select unlimited products</p>
+          </div>
+        </div>
+
+        <div class="repeats-step">
+          <div class="repeats-step-icon">
+            <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/Icon_choose-repeat-frequency-1_desktop-_-mobile_100x92_425a4cbe-8065-421a-92db-a122768816aa.jpg?v=1652345158" alt="icon">
+          </div>
+          <div class="repeats-step-text">
+            <p class="repeats-step-number">STEP 2</p>
+            <p>choose repeat frequency</p>
+          </div>
+        </div>
+
+
+
+        <div class="repeats-step">
+          <div class="repeats-step-icon">
+            <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/Icon_place-your-order-1_desktop-_-mobile_100x92_484f5373-3c29-47e5-8d2c-05d5a5a9cfea.jpg?v=1652345045" alt="icon">
+          </div>
+          <div class="repeats-step-text">
+            <p class="repeats-step-number">STEP 3</p>
+            <p>place your order, we’ll do the rest</p>
+          </div>
+        </div>
+
+
+
+        <div class="repeats-step">
+          <div class="repeats-step-icon">
+            <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/Icon_enjoy-1_desktop-_-mobile_100x92_678648b5-2e74-412f-924c-cb63aada7db7.jpg?v=1652344979" alt="icon">
+          </div>
+          <div class="repeats-step-text">
+            <p class="repeats-step-number">STEP 4</p>
+            <p>enjoy</p>
+          </div>
+        </div>
+      </div>
+          </div>
+    </div>
+    
+    
+    <div class="subscription-repeats-four-steps" id="subscribe-section-third">
+      <div class="container">
+      <h2 class="section-title mm-text-bold">why you win!</h2>
+      <div class="repeats-usps-wrapper row">
+        <div class="repeats-block">
+          <div class="repeats-usp repeats-usp-0084a136-e397-45ab-880e-ed60e56b5105 mm-text-bold">
+            <div class="repeats-ques-wrapper">
+              <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/Icon_personalised_desktop-_-mobile_55x55_9e130294-b701-4694-b019-9f0c6f581550.png?v=1652356992" alt="Usp Icon">
+            </div>
+            <p>100% <br>personalised by you </p>
+          </div>
+        </div>
+        <div class="repeats-block">
+          <div class="repeats-usp repeats-usp-b1fd2334-4ce9-4cee-a209-0e3515dd33fd mm-text-bold">
+            <div class="repeats-ques-wrapper">
+              <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/Icon_chosen-frequency_desktop-_-mobile_55x55_5bbf10e2-39a7-411f-bf5b-fcaab9a52a4a.png?v=1652356992" alt="Usp Icon">
+            </div>
+            <p>doorstep delivery <br>at your chosen frequency</p>
+          </div>
+        </div>
+        <div class="repeats-block">
+          <div class="repeats-usp repeats-usp-57693eac-6a65-4be1-8b41-5af77fb285ef mm-text-bold">
+            <div class="repeats-ques-wrapper">
+              <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/Icon_discount_desktop-_-mobile_55x55_1c4603d3-027f-4c8b-a83b-03a0d27fe96f.png?v=1652356992" alt="Usp Icon">
+            </div>
+            <p>flat 10%  <br>discount on your faves </p>
+          </div>
+        </div>
+
+        <div class="repeats-block">
+          <div class="repeats-usp repeats-usp-495307a6-d013-4568-a9f5-4c7523963ed5 mm-text-bold">
+            <div class="repeats-ques-wrapper">
+              <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/Icon_pause-_-cancel-order_desktop-_-mobile_55x55_b172dec6-9043-48f5-8e71-cb83d623b79c.png?v=1652356992" alt="Usp Icon">
+            </div>
+            <p>pause or<br>cancel anytime</p>
+          </div>
+        </div>
+
+ </div>
+      </div>
+    </div>
+    
+    <div class="faqs-sections" id="subscribe-section-fourth">  
+       <div class="container">
+      <h2 class="section-title mm-text-bold">Frequently Asked Questions</h2>
+      <div class="toggle">
+        <div class="toggle-title ">
+          <h3>
+            <i></i>
+            <span class="title-name">What is subscription program? </span>
+          </h3>
+        </div>
+        <div class="toggle-inner">
+          <p>Subscription program allows you to keep up your beauty regime without any hassle and at a great value! All you have to do is choose your products, the frequency and sit back. We'll send across your goodies at your chosen time. </p>
+        </div>
+      </div>
+      <div class="toggle">
+        <div class="toggle-title ">
+          <h3>
+            <i></i>
+            <span class="title-name">How does the payment for subscription happen? </span>
+          </h3>
+        </div>
+        <div class="toggle-inner">
+          <p>Due to the recurring nature of the payments, we only accept Debit Card, Credit Card or UPI. With UPI, automatic recurring payments are enabled. We currently do not accept COD for subscriptions. We will share the payment link with you at your set frequencies. </p>
+        </div>
+      </div>
+      <div class="toggle">
+        <div class="toggle-title ">
+          <h3>
+            <i></i>
+            <span class="title-name">What to expect next once I subscribe to products? </span>
+          </h3>
+        </div>
+        <div class="toggle-inner">
+          <p>Expect nothing but goodness 😊</p>
+          <p>For all subsequent deliveries you will be receiving a payment link and an email. Make the payment , sit back and wait for goodness to arrive!!  </p>
+        </div>
+      </div>
+      <div class="toggle">
+        <div class="toggle-title ">
+          <h3>
+            <i></i>
+            <span class="title-name">Will I be notified on renewals and payments? </span>
+          </h3>
+        </div>
+        <div class="toggle-inner">
+          <p>Yes, you will receive an email reminder before the renewal and payment</p>
+        </div>
+      </div>
+      <div class="toggle">
+        <div class="toggle-title ">
+          <h3>
+            <i></i>
+            <span class="title-name">What if my payment fails? </span>
+          </h3>
+        </div>
+        <div class="toggle-inner">
+          <p>In case your payment fails, we will send you another reminder before the subscription is due, through which you can complete the payment. If any amount has been debited, it will be refunded by your bank within 7 working days. </p>
+        </div>
+      </div>
+      <div class="toggle">
+        <div class="toggle-title ">
+          <h3>
+            <i></i>
+            <span class="title-name">Can I pause my subscription?</span>
+          </h3>
+        </div>
+        <div class="toggle-inner">
+          <p>Yes, you can pause to your subscription at any point of time. For pausing the subscription, click <a href="https://plumgoodness.com/a/subscriptions/manage" style="color:#5e248c">here</a>. You will find cancel/pause option</p>
+        </div>
+      </div>
+      <div class="toggle">
+        <div class="toggle-title ">
+          <h3>
+            <i></i>
+            <span class="title-name">Can I cancel my subscription?</span>
+          </h3>
+        </div>
+        <div class="toggle-inner">
+          <p>Yes, you can cancel to your subscription at any point of time. For cancelling the subscription, click <a href="https://plumgoodness.com/a/subscriptions/manage" style="color:#5e248c">here</a>. You will find cancel/pause option. </p>
+        </div>
+      </div>
+      <div class="toggle">
+        <div class="toggle-title ">
+          <h3>
+            <i></i>
+            <span class="title-name">How I can find details about my subscription?</span>
+          </h3>
+        </div>
+        <div class="toggle-inner">
+          <p>You can find all your subscription details <a href="https://plumgoodness.com/a/subscriptions/manage" style="color:#5e248c">here</a>. </p>
+      </div>
+
+  </div>
+            <div class="toggle">
+        <div class="toggle-title ">
+          <h3>
+            <i></i>
+            <span class="title-name">Why should I subscribe?</span>
+          </h3>
+        </div>
+        <div class="toggle-inner">
+          <p>You get additional 10% off on your subsequent purchase and moreover you get all your required products without having to order again and again. </p>
+        </div>
+      </div>
+         <div class="toggle">
+        <div class="toggle-title ">
+          <h3>
+            <i></i>
+            <span class="title-name">Can I change my address after subscribing?</span>
+          </h3>
+        </div>
+        <div class="toggle-inner">
+          <p>Yes, you can change your address after subscribing. You just have to change the address before payment of subscribed product. </p>
+        </div>
+      </div>
+         <div class="toggle">
+        <div class="toggle-title ">
+          <h3>
+            <i></i>
+            <span class="title-name">Can I subscribe to multiple products?</span>
+          </h3>
+        </div>
+        <div class="toggle-inner">
+          <p>Yes, you can subscribe to multiple products.  </p>
+        </div>
+      </div>
+      </div>
+    
+</div>
+
+
+<script>
+  if( jQuery(".toggle .toggle-title").hasClass('active') ){
+    jQuery(".toggle .toggle-title.active").closest('.toggle').find('.toggle-inner').show();
+  }
+  jQuery(".toggle .toggle-title").click(function(){
+    if( jQuery(this).hasClass('active') ){
+      jQuery(this).removeClass("active").closest('.toggle').find('.toggle-inner').slideUp(200);
+    }
+    else{	jQuery(this).addClass("active").closest('.toggle').find('.toggle-inner').slideDown(200);
+        }
+  }); 
+</script>

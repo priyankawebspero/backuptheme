@@ -1,0 +1,92 @@
+{% assign on_sale = false %}
+{% if product.variants[0].compare_at_price > product.variants[0].price %}
+  {% assign on_sale = true %}
+{% endif %}
+
+{% assign sold_out = true %}
+{% if product.available  %}
+  {% assign sold_out = false %}
+{% endif %}
+
+<!-- new product -->
+{% assign custom_label = false %}
+{% assign new_label = false %}
+{% assign discount_on = false %}
+{% assign product_show_tag = '' %}
+
+{% for tag in product.tags %}
+{% assign tag_handle = tag | handle %}
+{% if tag_handle == 'label' %}
+{% assign custom_label = true %}
+{% endif %}
+
+{% if tag_handle == 'new' %}
+{% assign new_label = false %}
+{% endif %}
+{% assign product_tag = tag | downcase %}
+{% if product_tag == 'bestseller' or product_tag == 'recommended' or product_tag == 'just launched' %}
+        {% assign discount_on = true %}
+        {% assign product_show_tag = tag %}
+{% endif %}
+  
+{% endfor %}
+
+{% assign bundle_label = false %}
+{% if product.metafields.c_f['Grouped Sub Product'] %}
+{% assign bundle_label = true %}
+{% endif %}
+
+
+
+{% if on_sale or sold_out or custom_label or bundle_label or new_label or discount_on %}
+{% if template != 'collection' %}
+ {% if new_label %}
+  <strong class="label new-label" {% if settings.enable_multilang %}data-translate="products.product.new_label"{% endif %} >
+    <img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/New-label_89e72cd3-173c-4c2d-88ce-8dc2474be097.png" src="https://cdn.shopify.com/s/files/1/0390/2985/files/New-label_89e72cd3-173c-4c2d-88ce-8dc2474be097.png" width="58" height="58"><span class="new">{{ 'products.product.new_label' | t }}</span>
+  </strong>
+  {% endif %}
+{% endif %}
+{%- if discount_on -%}
+    <span class="discount-tag-col"> {{ product_show_tag | capitalize }} </span>
+{% endif %}
+
+<div class="product-label {% if on_sale %}{% else %}deactive{% endif %}">
+
+  
+  {% if on_sale %}
+  {% if settings.type_label_sale == 'label_sale' %}
+  <strong class="label sale-label" {% if settings.enable_multilang %}data-translate="products.product.sale"{% endif %}>
+    {{ 'products.product.sale' | t }} Off
+  </strong>
+
+  {% else %}
+  <strong class="label sale-label">
+    {{ product.variants[0].compare_at_price | minus:product.variants[0].price | times:100 | divided_by:product.variants[0].compare_at_price | money_without_currency | times: 100 | replace: '.0', '' }}%
+  off </strong>
+
+  {% endif %}
+  
+  {% endif %}
+  {% if sold_out %}
+<!--   <strong class="label sold-out-label" {% if settings.enable_multilang %}data-translate="products.product.sold_out"{% endif %}>
+    {{ 'products.product.sold_out' | t }}
+  </strong> -->
+<!--   <br> -->
+  {% endif %}
+  
+ 
+  
+  {% if custom_label %}
+  <strong class="label custom-label" {% if settings.enable_multilang %}data-translate="products.product.custom_label"{% endif %} >
+    {{ 'products.product.custom_label' | t }}
+  </strong>
+
+  {% endif %}
+  
+  {% if bundle_label %}
+  <strong class="label bundle-label" {% if settings.enable_multilang %}data-translate="products.product.custom_label"{% endif %} >
+    {{ 'products.product.bundle_label' | t }}
+  </strong>
+  {% endif %}
+</div>
+{% endif %}

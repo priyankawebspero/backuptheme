@@ -1,0 +1,86 @@
+<div class="toolbar"> 
+  <div class="column-right">
+    {% if collection.title == 'Skin Care' or collection.title == 'All In Stock'  %}
+    <div class="filters-button visible-xs">
+      <span clas="filter">
+        filter
+      </span>
+      <span class="icon-dropdown">
+        <i class="fa fa-angle-down"></i>
+      </span>
+    </div>
+    {% else %}
+    {% endif %}
+    <div class="filters-toolbar__sortby toolbar-col" data-sortby>
+      <div class="filter-sortby"> 
+        <div class="label-tab" data-toggle="dropdown" aria-expanded="false">
+          <span class="label-text">
+            {{ 'collections.sorting.featured' | t }}
+          </span>
+          <span class="icon-dropdown">
+            <i class="fa fa-angle-down"></i>
+          </span>
+        </div>
+
+        <ul class="dropdown-menu">
+          <li class="active">
+            <span data-href="manual" {% if settings.enable_multilang %}data-translate="collections.sorting.featured"{% endif %}>
+              {{ 'collections.sorting.featured' | t }}
+            </span>
+          </li>
+          <li>
+            <span data-href="price-ascending" {% if settings.enable_multilang %}data-translate="collections.sorting.price_ascending"{% endif %}>
+              {{ 'collections.sorting.price_ascending' | t }}
+            </span>
+          </li>
+          <li>
+            <span data-href="price-descending" {% if settings.enable_multilang %}data-translate="collections.sorting.price_descending"{% endif %}>
+              {{ 'collections.sorting.price_descending' | t }}
+            </span>
+          </li>
+          <li>
+            <span data-href="title-ascending" {% if settings.enable_multilang %}data-translate="collections.sorting.az"{% endif %}>
+              {{ 'collections.sorting.az' | t }}
+            </span>
+          </li>
+          <li>
+            <span data-href="title-descending" {% if settings.enable_multilang %}data-translate="collections.sorting.za"{% endif %}>
+              {{ 'collections.sorting.za' | t }}
+            </span>
+          </li>
+          <li>
+            <span data-href="best-selling" {% if settings.enable_multilang %}data-translate="collections.sorting.best_selling"{% endif %}>
+              {{ 'collections.sorting.best_selling' | t }}
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="refined-widgets visible-xs"{% if has_refined == false %} style="display:none"{% endif %}>
+    <div class="widget-content-2">
+      <ul class="refined">    
+        {% for t in current_tags %}
+        {% assign tag = t | strip %}
+        {% assign tag_value = tag | handleize %}
+        <li>
+          <input type="checkbox" value="{{ tag_value }}" {% if current_tags contains tag %}checked{% endif %}/>
+          <a href="{{tag_value}}" class="selected-tag">
+            {% if settings.enable_multilang and tag contains '|' %}
+            <span class="lang1">{{tag | split: '|' | first}}&nbsp;X</span>
+            <span class="lang2">{{tag | split: '|' | last}}&nbsp;X</span>
+            {% else %}
+            <span>{{tag | split: '|' | first}}&nbsp;X</span>
+            {% endif %}
+          </a>
+        </li>
+        {% endfor %}
+        <li>
+          <a href="javascript:void(0)" class="clear-all text-hover" {% if has_refined == false %}style="display:none"{% endif %} {% if settings.enable_multilang %}data-translate="collections.sidebar.clear_all"{% endif %}>
+            {{ 'collections.sidebar.clear_all' | t }}
+          </a>
+        </li>
+      </ul>
+    </div>                  
+  </div>
+</div>

@@ -1,0 +1,116 @@
+<script>
+"undefined" == typeof freegifts_product_json &&
+    (window.freegifts_product_json = function (o) {
+        if (o) {
+            if (
+                (Array.isArray ||
+                    (Array.isArray = function (o) {
+                        return "[object Array]" === Object.prototype.toString.call(o);
+                    }),
+                String.prototype.endsWith ||
+                    Object.defineProperty(String.prototype, "endsWith", {
+                        value: function (o, i) {
+                            var t = this.toString();
+                            (void 0 === i || i > t.length) && (i = t.length), (i -= o.length);
+                            var e = t.indexOf(o, i);
+                            return -1 !== e && e === i;
+                        },
+                    }),
+                o.options && Array.isArray(o.options))
+            )
+                for (var i = 0; i < o.options.length; i++)
+                    if (void 0 !== o.options[i] && void 0 !== o.options[i].values) {
+                        var t = o.options[i];
+                        if (t.values && Array.isArray(t.values)) for (var e = 0; e < t.values.length; e++) (t.values[e].endsWith("(Freegifts)") || t.values[e].endsWith("% off)")) && (t.values.splice(e, 1), e--);
+                    }
+            var p = o.price,
+                a = o.price_max,
+                r = o.price_min,
+                n = o.compare_at_price,
+                s = o.compare_at_price_max,
+                c = o.compare_at_price_min;
+            if (o.variants && Array.isArray(o.variants))
+                for (var f = 0; o.variants.length, void 0 !== o.variants[f]; f++) {
+                    var l = o.variants[f],
+                        h = l.option3 ? l.option3 : l.option2 ? l.option2 : l.option1;
+                    ("undefined" != typeof SECOMAPP && void 0 !== SECOMAPP.gifts_list_avai && void 0 !== SECOMAPP.gifts_list_avai[l.id]) || h.endsWith("(Freegifts)") || h.endsWith("% off)")
+                        ? (o.variants.splice(f, 1), (f -= 1))
+                        : (a >= l.price && ((a = l.price), (p = l.price)),
+                          r <= l.price && (r = l.price),
+                          l.compare_at_price && (s >= l.compare_at_price && ((s = l.compare_at_price), (n = l.compare_at_price)), c <= l.compare_at_price && (c = l.compare_at_price)),
+                          void 0 !== l.available && 1 == l.available && (o.available = !0));
+                }
+            (o.price = p), (o.price_max = r), (o.price_min = a), (o.compare_at_price = n), (o.compare_at_price_max = c), (o.compare_at_price_min = s), (o.price_varies = r > a), (o.compare_at_price_varies = c > s);
+        }
+        return o;
+    }),
+    (Shopify.productOptionsMap = {}),
+    (Shopify.quickViewOptionsMap = {}),
+    (Shopify.updateOptionsInSelector = function (o, i) {
+        switch (((Shopify.optionsMap = ".product" === i ? Shopify.productOptionsMap : Shopify.quickViewOptionsMap), o)) {
+            case 0:
+                var t = "root",
+                    e = $(i + " .single-option-selector:eq(0)");
+                break;
+            case 1:
+                (t = $(i + " .single-option-selector:eq(0)").val()), (e = $(i + " .single-option-selector:eq(1)"));
+                break;
+            case 2:
+                t = $(i + " .single-option-selector:eq(0)").val();
+                t += " / " + $(i + " .single-option-selector:eq(1)").val();
+                e = $(i + " .single-option-selector:eq(2)");
+        }
+        var p = e.val();
+        e.empty();
+        var a = Shopify.optionsMap[t];
+        if (a && a.length) {
+            for (var r = 0; r < a.length; r++) {
+                var n = a[r],
+                    s = $("<option></option>").val(n).html(n);
+                e.append(s);
+            }
+            $(i + ' .swatch[data-option-index="' + o + '"] .swatch-element').each(function () {
+                -1 !== $.inArray($(this).attr("data-value"), a)
+                    ? $(this).removeClass("soldout").find(":radio").removeAttr("disabled", "disabled").removeAttr("checked")
+                    : $(this).addClass("soldout").find(":radio").removeAttr("checked").attr("disabled", "disabled");
+            }),
+                -1 !== $.inArray(p, a) && e.val(p),
+                e.trigger("change");
+        }
+    }),
+    (Shopify.linkOptionSelectors = function (o, i) {
+        (o = freegifts_product_json(o)), (Shopify.optionsMap = ".product" === i ? Shopify.productOptionsMap : Shopify.quickViewOptionsMap);
+        for (var t = 0; t < o.variants.length; t++) {
+            var e = o.variants[t];
+            if (e.available) {
+                if (((Shopify.optionsMap.root = Shopify.optionsMap.root || []), Shopify.optionsMap.root.push(e.option1), (Shopify.optionsMap.root = Shopify.uniq(Shopify.optionsMap.root)), o.options.length > 1)) {
+                    var p = e.option1;
+                    (Shopify.optionsMap[p] = Shopify.optionsMap[p] || []), Shopify.optionsMap[p].push(e.option2), (Shopify.optionsMap[p] = Shopify.uniq(Shopify.optionsMap[p]));
+                }
+                if (3 === o.options.length) {
+                    p = e.option1 + " / " + e.option2;
+                    (Shopify.optionsMap[p] = Shopify.optionsMap[p] || []), Shopify.optionsMap[p].push(e.option3), (Shopify.optionsMap[p] = Shopify.uniq(Shopify.optionsMap[p]));
+                }
+            }else {
+             if (((Shopify.optionsMap.root = Shopify.optionsMap.root || []), Shopify.optionsMap.root.push(e.option1), (Shopify.optionsMap.root = Shopify.uniq(Shopify.optionsMap.root)), o.options.length > 1)) {
+                    var p = e.option1;
+                    (Shopify.optionsMap[p] = Shopify.optionsMap[p] || []), Shopify.optionsMap[p].push(e.option2), (Shopify.optionsMap[p] = Shopify.uniq(Shopify.optionsMap[p]));
+                }
+                if (3 === o.options.length) {
+                    p = e.option1 + " / " + e.option2;
+                    (Shopify.optionsMap[p] = Shopify.optionsMap[p] || []), Shopify.optionsMap[p].push(e.option3), (Shopify.optionsMap[p] = Shopify.uniq(Shopify.optionsMap[p]));
+                }
+            
+            }
+        }
+        Shopify.updateOptionsInSelector(0, i),
+            o.options.length > 1 && Shopify.updateOptionsInSelector(1, i),
+            3 === o.options.length && Shopify.updateOptionsInSelector(2, i),
+            $(i + " .single-option-selector:eq(0)").change(function () {
+                return Shopify.updateOptionsInSelector(1, i), 3 === o.options.length && Shopify.updateOptionsInSelector(2, i), !0;
+            }),
+            $(i + " .single-option-selector:eq(1)").change(function () {
+                return 3 === o.options.length && Shopify.updateOptionsInSelector(2, i), !0;
+            });
+    });
+</script>

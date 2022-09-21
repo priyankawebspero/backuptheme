@@ -1,0 +1,76 @@
+<div class="col-12 col-md-12">
+
+{% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'slide' %}
+      <div class="slide " {{ block.shopify_attributes }}>
+        {% if  block.settings.image != blank %}
+        <img class="slide aff_desktop" src="{{ block.settings.image | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.image.alt}}">
+        {% endif %}
+        {% if  block.settings.image_mob != blank %}
+         <img class="slide aff_mobile" src="{{ block.settings.image_mob | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.image_mob.alt}}" style="display:none;">
+        {% endif %}
+      </div>
+  {% endcase %}
+{% endfor %}
+<div class="col-12 col-md-12 col-lg-12">
+  <div class="download_area_custom">
+    <p><span>{{section.settings.title}}</span><a href="{{section.settings.link_1}}">{{section.settings.text_1}}</a><a href="{{section.settings.link_2}}">{{section.settings.text_2}}</a></p>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Affiliate Fourth Section",
+  "class": "affiliate-fourth-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Affiliate Fourth Section"
+    },
+     {
+      "type": "text",
+      "id": "text_1",
+      "label": "Link text 1"
+    },
+    {
+      "type": "url",
+      "id": "link_1",
+      "label": "Link 1"
+    },
+     {
+      "type": "text",
+      "id": "text_2",
+      "label": "Link text 2"
+    },
+    {
+      "type": "url",
+      "id": "link_2",
+      "label": "Link 2"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         },{
+           "type": "image_picker",
+           "id": "image_mob",
+           "label": "Image"
+         }
+       ]
+     }
+   ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

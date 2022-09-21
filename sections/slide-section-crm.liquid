@@ -1,0 +1,143 @@
+{% if section.blocks.size > 0 %}
+<div class="pm-offers-block pm-offers-slider" id="pm-offers-slider-{{section.id}}">
+    <div class="{% if section.settings.layout == 'default' %}container{% elsif section.settings.layout == 'padd_50' %}container-padd60{% else %}container-fluid{% endif %}">
+        <div class="row spotlight-{{ section.blocks.size }}-blocks"{% if section.blocks.size > 1 %} data-blogs-slider-new{% endif %} data-rows="1">
+            {% for block in section.blocks %}              
+            <div class="{{ column_size }}">
+                <div class="spotlight-item" >
+                    <div class="img-box">
+                       <div class="img-box-ratio">
+                            {% if block.settings.desk_image != blank %}                            
+                            {%- assign img_url_desk = block.settings.desk_image | img_url: 'master', format: 'pjpg'-%}
+                            {%- assign img_url_mob = block.settings.mob_image | img_url: 'master', format: 'pjpg'-%}
+                            <a {% if block.settings.slideurl != blank %} href="{{ block.settings.slideurl }}"{% endif %} class="slide-image">
+                            <img data-src="{{ img_url_desk }}"
+                                src="https:{{ img_url_desk }}" alt="{{ block.settings.desk_image.alt | default: shop.name }}" itemprop="logo"
+                                class="lazyautosizes lazyloaded desktop" data-sizes="auto">
+                           <img data-src="{{ img_url_mob }}"
+                                src="https:{{ img_url_mob }}" alt="{{ block.settings.mob_image.alt | default: shop.name }}" itemprop="logo"
+                                class="lazyautosizes lazyloaded mobile" data-sizes="auto">
+                         </a>
+                            {% else %}
+                            <div class="not_img">
+                                370 x 440px
+                            </div>   
+                            {% endif %}</div>
+                     </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endif %}
+
+
+{% schema %}
+  {
+    "name": "CRM Offer Slider",
+  "class": "pm-offer-slider",
+    "max_blocks": 10,
+    "settings": [      
+        {
+            "type": "select",
+            "id": "layout",
+            "label": "Layout:",
+            "options": [
+                {
+                    "value": "default",
+                    "label": "Default"
+                },
+                {
+                    "value": "padd_50",
+                    "label": "Boxed"
+                },
+                {
+                    "value": "full",
+                    "label": "Full Width"
+                }
+            ],
+            "default": "default"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "Image",
+            "settings": [       
+                {
+                    "type": "image_picker",
+                    "id": "desk_image",
+                    "label": "Desktop Image"
+                }
+                ,{
+                    "type": "image_picker",
+                    "id": "mob_image",
+                    "label": "Mobile Image"
+                }
+                ,{
+                    "type": "url",
+                    "id": "slideurl",
+                    "label": "Link For Slide"
+                }
+            ]
+        }
+    ],
+    "presets": [
+      {
+        "name": "Bodywash Slider",
+        "category": "Advanced layout",
+        "blocks": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "image"
+          },
+        {
+            "type": "image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+
+<script>
+      var blogBlock = $('[data-blogs-slider-new]');
+      blogBlock.each(function() {
+        var self = $(this),
+            rows = self.data('rows');
+
+        if(self.not('.slick-initialized')) {
+          self.slick({
+            slidesToShow: rows,
+            slidesToScroll: 1,
+            dots: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            pauseOnHover: false,
+            infinite: true,
+            arrows: true,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToScroll:1,
+                  slidesToShow: 1
+                }
+              },
+              {
+                breakpoint: 767,
+                settings: {
+                  slidesToScroll: 1,
+                  slidesToShow: 1
+                }
+              }
+            ]
+          });
+        };
+      });
+</script>

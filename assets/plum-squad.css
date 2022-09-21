@@ -1,0 +1,157 @@
+.page-plum-squad>.container-fluid{max-width:100%;padding-left:0;padding-right:0}
+div#shopify-section-video-image-banner{background:#f3e6fc;display:inline-block;width:100%;vertical-align:top;padding:20px 0 50px}
+div#shopify-section-video-image-banner .video-section{display:flex;flex-direction:column}
+div#shopify-section-video-image-banner .video-section .video-container .js-video{height:auto!important;width:100%!important;background:none!important;margin:0!important}
+#shopify-section-video-image-banner .video-poster{background-size:cover!important;z-index:1}
+#shopify-section-video-image-banner .play i{height:auto!important;z-index:22!important}
+div#shopify-section-video-image-banner .video-section .video-container .js-video iframe{position:absolute;width:100%;height:100%;background:none;top:0;left:0;border-radius:10px}
+div#shopify-section-video-image-banner .video-section .video-container .js-video{position:relative;padding-bottom:56.1%;overflow:hidden;border-radius:10px}
+div#shopify-section-video-image-banner .video-section h3{text-align:center;padding:45px 0 15px;margin-bottom:0;font-size:50px;color:#5b108b;font-weight:700}
+div#shopify-section-video-image-banner .video-section{width:100%;max-width:1270px;margin:0 auto;padding:0 15px}
+div#shopify-section-video-image-banner .video-section h3.mobile{font-size:47px;margin-bottom:0;padding-top:10px}
+div#shopify-section-video-image-banner .video-section h3.mobile img{margin-left:15px}
+div#shopify-section-video-image-banner .video-section h3.desktop img{vertical-align:top;margin-left:15px}
+#taeser-plum-squad-image-sec .container-fluid{max-width:100%!important}
+div#shopify-section-step-section{padding:60px 0;padding:60px 0;display:inline-block;width:100%;vertical-align:top}
+div#shopify-section-step-section .banner.desktop{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
+div#shopify-section-step-section .banner.desktop .item>img{margin-bottom:15px}
+div#shopify-section-step-section .banner.mobile{text-align:center}
+div#shopify-section-step-section .banner.mobile .item{display:-webkit-box;display:-ms-flexbox;display:flex;justify-content:center;align-items:center;margin:30px 0}
+div#shopify-section-step-section .banner.mobile .text_area{display:-webkit-box;display:-ms-flexbox;display:flex;flex-direction:column;align-items:center}
+div#shopify-section-step-section .banner.mobile .text_area .step.richtext strong{display:block;color:#5b108b;font-size:40px;padding:0;font-weight:700;line-height:normal}
+div#shopify-section-step-section .banner.mobile .text_area .step.richtext p{font-size:40px;line-height:normal}
+div#shopify-section-step-section .banner.mobile .item .images-contain{float:left;width:50%;padding:0 15px}
+div#shopify-section-step-section .banner.mobile .item .text_area{float:left;width:50%;padding:0 15px}
+div#shopify-section-step-section .banner.mobile .item:first-child{width:100%;flex-direction:column}
+div#shopify-section-step-section .banner.desktop .step.richtext{margin-top:15px}
+div#shopify-section-step-section .banner.desktop .step.richtext p{line-height:normal;font-size:22px}
+div#shopify-section-step-section .banner.desktop .step.richtext p strong{color:#5a108c;display:block}
+div#shopify-section-squad-last-section{background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/squad_bg_new_footer.jpg);background-size:cover;padding-top:100px;padding-bottom:11.5%;text-align:center;background-repeat:no-repeat;background-position:center}
+div#shopify-section-squad-last-section .paragraph{font-size:35px;line-height:normal;color:#5e0d8b;margin-bottom:50px;display:block;padding-top:15px}
+div#shopify-section-squad-last-section .paragraph sup{font-size:20px;top:-.7em}
+div#shopify-section-squad-last-section .text_area{font-size:30px;font-weight:700;line-height:normal;color:#5e0d8b;letter-spacing:0;padding-bottom:5px}
+div#shopify-section-squad-last-section .textarea p a{display:inline-block;border-bottom:1px solid #000;font-size:22px;line-height:normal;margin-bottom:50px}
+div#shopify-section-squad-last-section .textarea p a:hover{border-bottom:1px solid #5e0d8b;color:#5e0d8b}
+div#shopify-section-squad-last-section .download_area_custom a{display:inline-block;margin:15px;font-size:24px;color:#000;font-weight:700;line-height:normal;margin-top:0}
+div#shopify-section-squad-last-section .download_area_custom a:hover{color:#5e0d8b}
+#plum-squad main.main-content{padding-bottom:0!important}
+.innner-wrppaer-squad{width:100%;max-width:690px;margin:0 auto}
+.innner-wrppaer-squad .slide a{display:block;background:#5e2d88;color:#fff;font-size:24px;line-height:1.5;border-radius:5px;font-weight:600;padding:10px 20px 11px;cursor:pointer;box-shadow:6px 0 14px #000}
+.innner-wrppaer-squad .slide a:hover{color:#fff!important;background:#8901bd!important}
+.innner-wrppaer-squad .col-12.col-md-12.col-lg-12{clear:both}
+.slide-button{display:block;background:#5e2d88;color:#fff;font-size:24px;line-height:1.5;border-radius:5px;font-weight:600;padding:10px 20px 11px;cursor:pointer;box-shadow:6px 0 14px #000;width:305px;max-width:100%;margin:auto;text-align:center}
+.slide-button-bg{padding:30px;background-image:url(https://cdn.shopify.com/s/files/1/0390/2985/files/02_Part_Desk_V3.jpg?v=1642659199);background-size:contain}
+.slide-button:hover{color:#fff!important;background:#8901bd!important}
+.slide-button svg{float:right;width:22px;height:22px;position:relative;top:10px}
+.innner-wrppaer-squad .slide a svg{float:right;width:22px;height:22px;position:relative;top:10px}
+@media only screen and (min-width:768px) {
+.innner-wrppaer-squad .slide{float:left;width:50%;padding:0 20px;margin-bottom:15px}
+div#shopify-section-video-image-banner .video-section h3.mobile{display:none}
+div#shopify-section-step-section .banner.mobile{display:none}
+div#shopify-section-step-section .banner.desktop .item:first-child{width:36%;padding-right:0;padding-left:15px;padding-top:30px}
+div#shopify-section-step-section .banner.desktop .item{float:left;width:21.33%;padding:0 20px;text-align:center}
+div#shopify-section-video-image-banner .video-section{max-width:60%}
+#shopify-section-step-section .container-fluid{max-width:84%}
+}
+@media only screen and (min-width:992px) {
+div#shopify-section-step-section .banner.desktop .item>img{width:100%;max-width:37.5%}
+}
+@media only screen and (max-width:1600px) {
+div#shopify-section-squad-last-section{background-size:contain;background-position:bottom;background-color:#f7e7ff}
+}
+@media only screen and (max-width:1440px) {
+div#shopify-section-step-section .banner.desktop .step.richtext p{line-height:normal;font-size:20px}
+div#shopify-section-step-section .banner.desktop .item{padding:0 15px}
+}
+@media only screen and (max-width:1199px) and (min-width:768px) {
+#shopify-section-step-section .container-fluid{max-width:95%}
+div#shopify-section-video-image-banner .video-section{max-width:68%}
+div#shopify-section-video-image-banner .video-section h3{font-size:35px}
+}
+@media only screen and (max-width:991px) and (min-width:768px) {
+div#shopify-section-video-image-banner .video-section{max-width:68%}
+div#shopify-section-step-section .banner.desktop .item>img{width:100%;max-width:37.5%}
+div#shopify-section-step-section .banner.desktop .item:first-child a.slide-image img{width:100%;max-width:55%}
+div#shopify-section-video-image-banner .video-section h3{font-size:30px!important}
+div#shopify-section-video-image-banner .video-section h3.desktop img{max-width:40px!important}
+}
+@media only screen and (max-width:991px) {
+div#shopify-section-step-section .banner.desktop .item:first-child{width:100%;padding-right:15px;padding-left:15px;padding-top:0}
+div#shopify-section-step-section .banner.desktop .item{width:33.33%}
+div#shopify-section-video-image-banner .video-section h3{font-size:40px}
+#shopify-section-video-image-banner .play i{transform:translate(-50%,-50%)}
+}
+@media only screen and (max-width:767px) {
+div#shopify-section-video-image-banner .video-section h3.desktop{display:none}
+#shopify-section-plum-squad-image-sec img.slide-desktop{display:none}
+#shopify-section-plum-squad-image-sec img.slide-mobile{display:block!important;width:100%}
+div#shopify-section-video-image-banner{background:#f6eafe}
+div#shopify-section-video-image-banner .video-section h3.mobile{font-size:40px;margin-bottom:0;padding-top:0}
+.innner-wrppaer-squad .slide{margin-bottom:38px}
+div#shopify-section-squad-last-section{padding-top:70px}
+div#shopify-section-squad-last-section .paragraph{font-size:45px}
+div#shopify-section-squad-last-section .text_area{font-size:32px;letter-spacing:0}
+div#shopify-section-squad-last-section .paragraph{font-size:35px}
+div#shopify-section-squad-last-section .paragraph sup{font-size:21px;top:-.6em}
+div#shopify-section-squad-last-section .textarea p a{font-size:22px}
+div#shopify-section-squad-last-section .download_area_custom a{display:block;margin:15px 0 5px;font-size:30px;margin-top:0}
+.innner-wrppaer-squad .slide a{box-shadow:6px 6px 14px #000}
+div#shopify-section-video-image-banner .video-section h3.mobile{font-size:27px}
+div#shopify-section-video-image-banner .video-section h3.mobile img{margin-left:10px;max-width:28px}
+div#shopify-section-step-section .banner.desktop{display:none!important}
+div#shopify-section-step-section .banner.mobile .item:first-child img.slide-desktop{display:none}
+div#shopify-section-step-section .banner.mobile .item:first-child img.slide-mobile{display:block!important}
+div#shopify-section-step-section .banner.mobile .item:first-child .images-contain{width:100%}
+div#shopify-section-step-section .banner.mobile .item:first-child{width:100%;flex-direction:column;margin-top:0}
+div#shopify-section-step-section{padding-top:0;margin-top:-135px;padding-bottom:30px}
+div#shopify-section-video-image-banner{padding:20px 0 190px;position:relative}
+div#shopify-section-step-section .banner.mobile .item:first-child img.slide-mobile{max-width:300px;margin:0 auto}
+div#shopify-section-squad-last-section{background-color:#f7e7ff;padding-top:70px;background-image:url(https://cdn.shopify.com/s/files/1/0390/2985/files/Mobile_squd_footer_im.jpg);padding-bottom:45%}
+div#shopify-section-squad-last-section .download_area_custom a{font-size:26px}
+.innner-wrppaer-squad .col-12.col-md-12.col-lg-12{clear:both;padding:0}
+div#shopify-section-step-section .banner.mobile .text_area .step.richtext strong{font-size:22px}
+div#shopify-section-step-section .banner.mobile .text_area .step.richtext p{font-size:22px;line-height:normal;color:#000}
+div#shopify-section-step-section .banner.mobile .item .images-contain{padding:0 5px}
+div#shopify-section-step-section .banner.mobile .item .text_area{padding:0 5px}
+div#shopify-section-step-section .banner.mobile{text-align:center;padding:0 10px}
+div#shopify-section-step-section .banner.mobile .item .text_area img{max-width:80px}
+div#shopify-section-step-section .banner.mobile .item:nth-of-type(3) .images-contain{-webkit-box-ordinal-group:2;-moz-box-ordinal-group:2;-ms-flex-order:2;-webkit-order:2;order:2}
+div#shopify-section-step-section .banner.mobile .item{margin:40px 0}
+div#shopify-section-video-image-banner:after{content:"";background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/squad_bottom_icon_min.png);background-repeat:no-repeat;background-size:contain;width:91px;height:118px;display:block;position:absolute;right:0;bottom:45px}
+.innner-wrppaer-squad .slide a svg{width:16px;height:16px;position:relative;top:8px}
+.innner-wrppaer-squad .slide a{font-size:18px;width:100%;max-width:250px;margin:0 auto}
+.innner-wrppaer-squad .slide{margin-bottom:28px}
+div#shopify-section-squad-last-section .paragraph{font-size:26px;margin-bottom:30px}
+div#shopify-section-squad-last-section .paragraph sup{font-size:15px}
+div#shopify-section-squad-last-section .text_area{font-size:22px}
+div#shopify-section-squad-last-section .textarea p a{font-size:18px;margin-bottom:30px}
+div#shopify-section-squad-last-section .download_area_custom a{font-size:20px}
+div#shopify-section-squad-last-section{background-size:100%;padding-top:50px}
+div#shopify-section-step-section .banner.mobile .item:first-child img.slide-mobile{max-width:250px;margin:0 auto}
+div#shopify-section-step-section{margin-top:-120px}
+div#shopify-section-video-image-banner{padding:20px 0 170px}
+div#shopify-section-video-image-banner:after{bottom:30px}
+div#shopify-section-step-section .banner.mobile .text_area .step.richtext strong{font-size:17px}
+div#shopify-section-step-section .banner.mobile .text_area .step.richtext p{font-size:17px}
+div#shopify-section-step-section .banner.mobile .item .text_area img{max-width:70px}
+div#shopify-section-squad-last-section .paragraph{padding-top:0}
+div#shopify-section-step-section .banner.mobile{padding:0 20px}
+.innner-wrppaer-squad .slide{float:left;width:50%;padding:0 6px}
+}
+@media only screen and (max-width:479px) {
+.innner-wrppaer-squad .slide a{font-size:16px;width:100%;max-width:100%;margin:0 auto;padding:6px 5px 8px}
+.slide-button{font-size:16px;width:60%;max-width:100%;margin:0 auto;padding:6px 5px 8px}
+.slide-button svg{width:15px;height:15px;position:relative;top:5px}
+.slide-button-bg{padding:15px}
+.innner-wrppaer-squad{width:auto;margin:0 auto;margin:0 -5px;display:block}
+.innner-wrppaer-squad .slide a svg{width:15px;height:15px;position:relative;top:6px}
+div#shopify-section-step-section .banner.mobile .text_area .step.richtext strong{font-size:16px}
+div#shopify-section-step-section .banner.mobile .item .text_area{padding:0}
+div#shopify-section-step-section .banner.mobile .text_area .step.richtext p{font-size:15px}
+}
+@media only screen and (max-width:355px) {
+div#shopify-section-squad-last-section .textarea p a{font-size:18px}
+div#shopify-section-step-section .banner.mobile .text_area .step.richtext strong{font-size:14px}
+div#shopify-section-step-section .banner.mobile .text_area .step.richtext p{font-size:13px}
+.innner-wrppaer-squad .slide a{font-size:14px}
+}

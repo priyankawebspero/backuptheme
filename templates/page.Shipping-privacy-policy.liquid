@@ -1,0 +1,447 @@
+<style>
+  .img-responsive {
+    display: block;
+  }
+  .img-responsive.mobile {
+  display: none;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .img-responsive {
+    display: none;
+  }
+  .img-responsive.mobile {
+    display: block;
+  }
+}
+  .column {
+  float: center;
+  width: 50%;
+  padding: 5px;
+}
+  .text-more{
+  	font-size:100%;
+    text-align:left;
+    margin-left:15px;
+    margin-right:20px;
+  }
+  .img-size{
+    	width:20%
+    }
+  .show-more-butt{
+  	width:10%
+  }
+  @media only screen and (max-device-width: 480px) {
+  .column {
+  float: center;
+  width: 100%;
+  padding: 5px;
+}
+    .img-size{
+    	width:70%
+    }
+    .show-more-butt{
+  	width:24%
+  }
+    .text-more{
+  	font-size:60%;
+      text-align:left;
+      margin-left:15px;
+    margin-right:20px;
+      line-height: 14px;
+  }
+    .reduce-margin{
+    	margin-top:-15px
+    }
+    .text{
+  	font-size:85%
+  }
+}
+  .column1 {
+  float: left;
+  width: 100%;
+  padding: 5px;
+}
+  .margin-class {
+    
+  }
+  .cancel-image{
+      width:85%
+    }
+  @media only screen and (min-device-width: 480px) {
+  .margin-class {
+    margin:32px;
+  }
+    
+    .cancel-image{
+      width:30%
+    }
+  
+}
+
+/* Clearfix (clear floats) */
+ /* To chage timer background change background color code below */ 
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+      .timer{
+      text-align:center;
+        margin:0px;
+        background:rgb(73,24,103)
+        
+      }
+      .borderTime{
+        padding:8px;
+      	border:1px solid rgb(236,199,93);
+        border-radius:3px;
+        font-size:30px;
+        background:rgb(73,24,103);
+          color:rgb(236,199,93)
+      }
+  .dottedline{
+  	border-bottom:1px dashed purple
+  }
+</style>
+
+<script>
+  function showmore1(){
+  	document.getElementById("showless1").style.display= "block";
+    document.getElementById("showmore1").style.display= "none";
+  }
+  function showless1(){
+  	document.getElementById("showless1").style.display= "none";
+    document.getElementById("showmore1").style.display= "block";
+  }
+  function showmore2(){
+  	document.getElementById("showless2").style.display= "block";
+    document.getElementById("showmore2").style.display= "none";
+  }
+  function showless2(){
+  	document.getElementById("showless2").style.display= "none";
+    document.getElementById("showmore2").style.display= "block";
+  }
+  function showmore3(){
+  	document.getElementById("showless3").style.display= "block";
+    document.getElementById("showmore3").style.display= "none";
+  }
+  function showless3(){
+  	document.getElementById("showless3").style.display= "none";
+    document.getElementById("showmore3").style.display= "block";
+  }
+  function showc1(){
+  	document.getElementById("c1").style.display= "block";
+    document.getElementById("c2").style.display= "none";
+  }
+  function showc2(){
+  	document.getElementById("c1").style.display= "none";
+    document.getElementById("c2").style.display= "block";
+  }
+  function showc3(){
+  	document.getElementById("c3").style.display= "block";
+    document.getElementById("c4").style.display= "none";
+  }
+  function showc4(){
+  	document.getElementById("c3").style.display= "none";
+    document.getElementById("c4").style.display= "block";
+  }
+  function showc5(){
+  	document.getElementById("c5").style.display= "block";
+    document.getElementById("c6").style.display= "none";
+  }
+  function showc6(){
+  	document.getElementById("c5").style.display= "none";
+    document.getElementById("c6").style.display= "block";
+  }
+  function showc7(){
+  	document.getElementById("c7").style.display= "block";
+    document.getElementById("c8").style.display= "none";
+  }
+  function showc8(){
+  	document.getElementById("c7").style.display= "none";
+    document.getElementById("c8").style.display= "block";
+  }
+  function showc9(){
+  	document.getElementById("c9").style.display= "block";
+    document.getElementById("c10").style.display= "none";
+  }
+  function showc10(){
+  	document.getElementById("c9").style.display= "none";
+    document.getElementById("c10").style.display= "block";
+  }
+  function showc11(){
+  	document.getElementById("c11").style.display= "block";
+    document.getElementById("c12").style.display= "none";
+  }
+  function showc12(){
+  	document.getElementById("c11").style.display= "none";
+    document.getElementById("c12").style.display= "block";
+  }
+  function showc13(){
+  	document.getElementById("c13").style.display= "block";
+    document.getElementById("c14").style.display= "none";
+  }
+  function showc14(){
+  	document.getElementById("c13").style.display= "none";
+    document.getElementById("c14").style.display= "block";
+  }
+  function showc15(){
+  	document.getElementById("c15").style.display= "block";
+    document.getElementById("c16").style.display= "none";
+  }
+  function showc16(){
+  	document.getElementById("c15").style.display= "none";
+    document.getElementById("c16").style.display= "block";
+  }
+  function showc17(){
+  	document.getElementById("c17").style.display= "block";
+    document.getElementById("c18").style.display= "none";
+  }
+  function showc18(){
+  	document.getElementById("c17").style.display= "none";
+    document.getElementById("c18").style.display= "block";
+  }
+  function showc19(){
+  	document.getElementById("c19").style.display= "block";
+    document.getElementById("c20").style.display= "none";
+  }
+  function showc20(){
+  	document.getElementById("c19").style.display= "none";
+    document.getElementById("c20").style.display= "block";
+  }
+  function showc21(){
+  	document.getElementById("c21").style.display= "block";
+    document.getElementById("c22").style.display= "none";
+  }
+  function showc22(){
+  	document.getElementById("c21").style.display= "none";
+    document.getElementById("c22").style.display= "block";
+  }
+  function showc23(){
+  	document.getElementById("c23").style.display= "block";
+    document.getElementById("c24").style.display= "none";
+  }
+  function showc24(){
+  	document.getElementById("c23").style.display= "none";
+    document.getElementById("c24").style.display= "block";
+  }
+  function showc25(){
+  	document.getElementById("c25").style.display= "block";
+    document.getElementById("c26").style.display= "none";
+  }
+  function showc26(){
+  	document.getElementById("c25").style.display= "none";
+    document.getElementById("c26").style.display= "block";
+  }
+  
+</script>
+<div class="margin-class text">
+  <div style="margin:15px">
+    <br>
+    <img class="img-size" src="https://cdn.shopify.com/s/files/1/0390/2985/files/SHIPPING.png?v=1609331644">
+    <br>
+    <br>
+    <p>Plumgoodness.com has a simple shipping policy for all orders placed on our website, with no exceptions.</p>
+    
+  </div>
+  <div id="showmore1">
+  	<img class="show-more-butt" src="https://cdn.shopify.com/s/files/1/0390/2985/files/SHOW_MORE.png?v=1609316221" style="float:right;margin-right:3%" onclick="showmore1()">
+  </div>
+  <div id="showless1" style="display:none">
+    <div style="margin:15px">
+      <div class="row">
+        <div id="c1" class="column" style="text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/1D_spp_buttons.png?v=1609391495" onclick="showc2()">
+        </div>
+        <div id="c2" class="column" style="display:none;text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/1UP_spp_buttons.png?v=1609391495" onclick="showc1()">
+          <br>
+          <p class="text-more">
+            Yes, we do ship outside of India. To place an order & get your plums delivered to your doorstep, shoot us an email at hello@plumgoodness.com</p>
+        </div>
+        <div id="c3" class="column" style="text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/6D_spp_buttons.png?v=1609390218" onclick="showc4()">
+        </div>
+        <div id="c4" class="column" style="display:none;text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/6UP_spp_buttons.png?v=1609390218" onclick="showc3()">
+          <p class="text-more">We offer FREE Shipping on all orders above a minimum order amount, which is notified from time to time. We also offer Cash-On-Delivery to many locations at no additional charge. You should consider the shipping rates shown at the time of check-out to be final. </p>
+        </div>
+      </div>
+    </div>
+    <div style="margin:15px">
+      <div class="row reduce-margin">
+        <div id="c5" class="column" style="text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/2D_spp_buttons.png?v=1609390219" onclick="showc6()">
+        </div>
+        <div id="c6" class="column" style="display:none;text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/2UP_spp_buttons.png?v=1609390218" onclick="showc5()">
+          <br>
+          <p class="text-more">
+            Orders placed before 3PM are shipped same day, and orders received after 3PM are shipped next working day. In rare cases, we may take a little longer to ship your order. In case of any delay we will keep you informed.</p>
+        </div>
+        <div id="c7" class="column" style="text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/7D_spp_buttons.png?v=1609390218" onclick="showc8()">
+        </div>
+        <div id="c8" class="column" style="display:none;text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/7UP_spp_buttons.png?v=1609390218" onclick="showc7()">
+          <p class="text-more">We ship Monday to Saturday, excluding public holidays. Transit time to locations depends on courier loads, local conditions and a variety of other factors, although we estimate a 2-4 day transit time in most cases </p>
+        </div>
+      </div>
+    </div>
+    <div style="margin:15px">
+      <div class="row reduce-margin">
+        <div id="c9" class="column" style="text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/3D_spp_buttons.png?v=1609390218" onclick="showc10()">
+        </div>
+        <div id="c10" class="column" style="display:none;text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/3UP_spp_buttons.png?v=1609390218" onclick="showc9()">
+          <br>
+          <p class="text-more">
+            To ensure that your order reaches you in the fastest time and in good condition, we only ship through reputed courier agencies. Our current panel of couriers includes Blue Dart, FedEx, Aramex, Delhivery, Ecom Express & DTDC. We pick the most reliable (and not necessarily the least expensive) shipping partner to each location. </p>
+        </div>
+        <div id="c11" class="column" style="text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/8D_spp_buttons.png?v=1609390218" onclick="showc12()">
+        </div>
+        <div id="c12" class="column" style="display:none;text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/8UP_spp_buttons.png?v=1609390218" onclick="showc11()">
+          <p class="text-more">While we shall strive to ship all items in your order together, this may not always be possible due to product characteristics, or availability.Each order may be shipped only to a single destination address specified at the time of payment for that order. If you wish to ship products to different addresses, you will have to place multiple orders.</p>
+        </div>
+      </div>
+    </div>
+    <div style="margin:15px">
+      <div class="row reduce-margin">
+        <div id="c13" class="column" style="text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/4D_spp_buttons.png?v=1609390218" onclick="showc14()">
+        </div>
+        <div id="c14" class="column" style="display:none;text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/4UP_spp_buttons.png?v=1609390218" onclick="showc12()">
+          <br>
+          <p class="text-more">
+            If you believe that the product is not in good condition, or if the packaging is tampered with or damaged, before accepting delivery of the goods, please refuse to take delivery of the package, and call us on +91-750-649-6604 or send us an email at hello@plumgoodness.com</p>
+        </div>
+        <div id="c15" class="column" style="text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/9d_spp_buttons_copy.png?v=1609390218" onclick="showc16()">
+        </div>
+        <div id="c16" class="column" style="display:none;text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/9up_spp_buttons_copy.png?v=1609390218" onclick="showc15()">
+          <p class="text-more">Invoice will be emailed to the email address provided at the time of placing the order.</p>
+        </div>
+      </div>
+    </div>
+    <div style="margin:15px">
+      <div class="row reduce-margin">
+        <div id="c17" class="column" style="text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/5D_spp_buttons.png?v=1609390218" onclick="showc18()">
+        </div>
+        <div id="c18" class="column" style="display:none;text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/5UP_spp_buttons.png?v=1609390218" onclick="showc17()">
+          <br>
+          <p class="text-more">
+            We try our best to accommodate special requests (such as expedited delivery, delivery at certain times of the day, deferred delivery), but we cannot guarantee that these requests will be fulfilled by our courier partners. If you aren't sure, we encourage you to call us before placing your order.</p>
+        </div>
+      </div>
+    </div>
+      <br>
+    <img class="show-more-butt" src="https://cdn.shopify.com/s/files/1/0390/2985/files/SHOW_LESS.png?v=1609316221" style="float:right;margin-right:3%" onclick="showless1()">
+  </div>
+  <br>
+  <hr class="dottedline">
+  <br>
+  <div style="margin:15px">
+    <img class="img-size" src="https://cdn.shopify.com/s/files/1/0390/2985/files/RETURNS.png?v=1609331644">
+    <br>
+    <br>
+    <p>At Plum, we're quite sure that you will love all our products as much as we do. However, if you are dissatisfied for any reason, we have a simple, "no fuss" return policy in place.</p>
+    
+  </div>
+  <div id="showmore2">
+  	<img class="show-more-butt" src="https://cdn.shopify.com/s/files/1/0390/2985/files/SHOW_MORE.png?v=1609316221" style="float:right;margin-right:3%" onclick="showmore2()">
+  </div>
+  <div id="showless2" style="display:none">
+    <div style="margin:15px">
+      <div class="row">
+        <div id="c19" class="column" style="text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/10d_spp_buttons.png?v=1609390218" onclick="showc20()">
+        </div>
+        <div id="c20" class="column" style="display:none;text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/10UP_spp_buttons.png?v=1609390218" onclick="showc19()">
+          <br>
+          <p class="text-more">
+            Product must be returned within 7 days of receipt. We only accept returns where less than 1/3rd of the product has been used, and with the original packing materials, so that return transit is safe for our delivery partners. Return policy does not apply to free gifts and promotional merchandise. We reserve the right to not honour return requests that we determine to be fraudulent/malafide and the decision of Plum in this regard will be final. Lastly, this return policy is only valid for products purchased directly from plumgoodness.com</p>
+        </div>
+        <div id="c21" class="column" style="text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/12D_spp_buttons.png?v=1609390219" onclick="showc22()">
+        </div>
+        <div id="c22" class="column" style="display:none;text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/12UP_spp_buttons.png?v=1609390218" onclick="showc21()">
+          <p class="text-more">In the rare instance that you are unhappy with a product, simply drop us an email at hello@plumgoodness.com with your name, telephone number and a convenient time to call. One of our product advisors will call you to understand the issue better and provide you instructions on shipping the product back to us.</p>
+        </div>
+      </div>
+      <div class="row reduce-margin">
+        <div id="c23" class="column" style="text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/11D_spp_buttons.png?v=1609390218" onclick="showc24()">
+        </div>
+        <div id="c24" class="column" style="display:none;text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/11UP_spp_buttons.png?v=1609390218" onclick="showc23()">
+          <br>
+          <p class="text-more">
+            We will process your request within 3 working days of receiving your product at our facility. The amount (less shipping & handling charges) will be refunded in the form of equivalent value store gift coupons that can be used on plumgoodness.com Please note that cash refunds will not be issued under any circumstances. </p>
+        </div>
+        <div id="c25" class="column" style="text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/13D_spp_buttons.png?v=1609390218" onclick="showc26()">
+        </div>
+        <div id="c26" class="column" style="display:none;text-align:center">
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/13UP_spp_buttons.png?v=1609390218" onclick="showc25()">
+          <p class="text-more">Invoice will be emailed to the email address provided at the time of placing the order.</p>
+        </div>
+      </div>
+    </div>
+      <br>
+    <img class="show-more-butt" src="https://cdn.shopify.com/s/files/1/0390/2985/files/SHOW_LESS.png?v=1609316221" style="float:right;margin-right:3%" onclick="showless2()">
+  </div>
+  <br>
+  <hr class="dottedline">
+  <br>
+  <div style="margin:15px">
+    <img class="cancel-image" src="https://cdn.shopify.com/s/files/1/0390/2985/files/CANCELLATION.png?v=1609331644">
+    <br>
+    <br>
+    <p>If you wish to cancel an order, please let us know within 2 days of placing the order or before delivery - whichever is earlier! You can get in touch with us <a href="https://plumgoodness.com/pages/contact-us">here</a>.</p>
+    
+  </div>
+  <br>
+  <hr class="dottedline">
+  <br>
+  <div style="margin:15px">
+    <img class="img-size" src="https://cdn.shopify.com/s/files/1/0390/2985/files/PRIVACY.png?v=1609331644">
+    <br>
+    <br>
+    <p>Your privacy is important to us. We’ve got a strict set of rules that govern what information we received & what we do with it. Rest assured, our customer is our #1 priority. Read on below to know more. </p>
+    
+  </div>
+  <div id="showmore3">
+  	<img class="show-more-butt" src="https://cdn.shopify.com/s/files/1/0390/2985/files/SHOW_MORE.png?v=1609316221" style="float:right;margin-right:3%" onclick="showmore3()">
+  </div>
+  <div id="showless3" style="display:none">
+    <div style="margin:15px">
+      <p>1. All online payments on plumgoodness.com are processed on a world-class secure payment gateway. We do not store or have visibility into customers' netbanking information or credit/debit card details as all payments are handled by a secure 3rd party gateway with world-class security.</p>
+      <p>2. All the information provided to us by you, including sensitive personal information, is voluntary. You have the right to withdraw your consent at any time, in accordance with the terms of this User Agreement, but please note that withdrawal of consent will not be retroactive. You can access, modify, correct and eliminate the data about you which has been collected pursuant to your decision to become a user of the Website. If you update any information relating to you, we may keep a copy of the information which you originally provided to us in its archives.</p>
+      <p>3. Due to the communications standards on the Internet, when you visit the Website, we automatically receive the URL of the site from which you came and the site to which you are going when you leave. We also receive the Internet Protocol (IP) address of your computer (or the proxy server you used to access the World Wide Web), your computer operating system and type of web browser you are using, email patterns, as well as the name of your internet service provider (ISP). This information is used to analyze overall trends to help us improve our service.</p>
+      <p>4. The Website uses temporary cookies to store certain data (that is not sensitive personal data or information) that is used by us and our service providers for the technical administration of the Website, research and development, and for administration. In the course of serving advertisements or optimizing services to you, we may allow authorized third parties to place or recognize a unique cookie on your browser. We do not store personally identifiable information in the cookies.</p>
+      
+      <p>5. We may keep records of telephone calls received and made for making inquiries, orders or other purposes for the purpose of administration of services, research and development, quality management services and for proper administration.</p>
+      <p>6. We do not allow other companies, to serve advertisements to you. We assume no responsibility, and shall not be liable for, any damages to, or viruses that may infect your equipment on account of you access to, use of, or browsing the Website or the downloading of any material, data, text, images, video content, or audio content from the Website. If you are dissatisfied with the Website, your sole remedy is to discontinue using the Website. This privacy policy applies to all websites, services and mobile applications that are operated and managed by us.</p>
+      <p>7. We do not exercise control over the sites displayed as search results or links from within its services. These other sites may place their own cookies or other files on your computer, collect data or solicit personal information from you, for which we are not responsible or liable. Accordingly, we do not make any representations concerning the privacy practices or policies of such third parties or terms of use of such websites, nor do we guarantee the accuracy, integrity, or quality of the information, data, text, software, sound, photographs, graphics, videos, messages or other materials available on such websites. The inclusion or exclusion does not imply any endorsement by us of the website, the website's provider, or the information on the website. We encourage you to read the privacy policies of that website.</p>
+      <p>8. The Website may enable you to communicate with other users or to post information to be accessed by others, whereupon other users may collect such data. We hereby expressly disclaim any liability for any misuse of such information that is made available by visitors in such a manner. We value the privacy of information pertaining to our associates. The linkage between your IP address and your personally identifiable information is not shared with third-parties without your permission or except when required by law.</p>
+      <p>9. We will enable you to communicate your privacy concerns to us and that we will respond to them appropriately. We do not disclose any personal information to advertisers and for other marketing and promotional purposes.</p>
+    </div>
+      <br>
+    <img class="show-more-butt" src="https://cdn.shopify.com/s/files/1/0390/2985/files/SHOW_LESS.png?v=1609316221" style="float:right;margin-right:3%" onclick="showless3()">
+  </div>
+  <br>
+  <hr class="dottedline">
+  <br>
+  <p style="margin-left:15px">*Prices, policies and other information on this website are subject to change without notice.</p>
+  
+</div>

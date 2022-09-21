@@ -1,0 +1,212 @@
+{% if section.blocks.size > 0 %}
+<div class="teaser-spotlight-block home-spotlight-2" id="teaser-spotlight-2-{{section.id}}" style="background-image:url({{ section.settings.bg-image | img_url: 'master'}}); background-size:cover;">
+  <div class="{% if section.settings.layout == 'default' %}container-padd60{% else %}container-fluid{% endif %}">
+  
+    <div class="row">
+       {% for block in section.blocks %}             
+     {%- if block.settings.columns == 'one half size' -%}
+          {%- assign column_size = 'col-12 col-md-7' -%}
+        {% else %}
+          {%- assign column_size = 'col-12 col-md-6 col-lg-5' -%}
+        {%- endif -%}
+      <div class="{{ column_size }}">
+        <div class="spotlight-item">
+          <div class="img-box">
+            <a href="{{ block.settings.link }}" >
+              {% if block.settings.image != blank %}            
+              {%- assign img_url = block.settings.image | img_url: 'original', crop: 'center' -%}
+              {%- assign img_url_mobile = block.settings.image_mob | img_url: 'original', crop: 'center' -%}
+              <img data-src="{{ img_url }}"
+                   src="https:{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"
+                   class="lazyautosizes lazyloaded teaser_desktop" data-sizes="auto">
+              <img data-src="{{ img_url }}"
+                   src="https:{{ img_url_mobile }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"
+                   class="lazyautosizes lazyloaded teaser_mobile" data-sizes="auto" style="display:none;">
+              {% else %}
+
+              <div class="not_img">
+                370 x 440px
+              </div>   
+              {% endif %}
+            </a>
+         </div>
+        </div>
+      </div>
+      {% endfor %}
+      <div class="col-12 col-md-12 col-lg-12 text-center">
+        {% if section.settings.gift_image != blank %} 
+          <a href="{{ section.settings.link_git }}" >
+              {% if section.settings.gift_image != blank %}            
+              {%- assign img_url_gift = section.settings.gift_image | img_url: 'original', crop: 'center' -%}
+              {%- assign img_url_gift_mobile = section.settings.gift_image_mobile | img_url: 'original', crop: 'center' -%}
+              <img data-src="{{ img_url_gift }}"
+                   src="https:{{ img_url_gift }}" alt="{{ section.settings.gift_image.alt | default: shop.name }}" itemprop="logo"
+                   class="lazyautosizes lazyloaded teaser_desktop" data-sizes="auto">
+              <img data-src="{{ img_url_gift_mobile }}"
+                   src="https:{{ img_url_gift_mobile }}" alt="{{ section.settings.gift_image_mobile.alt | default: shop.name }}" itemprop="logo"
+                   class="lazyautosizes lazyloaded teaser_mobile" data-sizes="auto" style="display:none;">
+              {% else %}
+
+              <div class="not_img">
+                370 x 440px
+              </div>   
+              {% endif %}
+            </a>
+        {% endif %}
+     </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  {% assign margin_bottom =  section.settings.margin_bottom %}
+  
+  @media (min-width: 1200px) {
+    #teaser-spotlight-2-{{section.id}} {
+      margin-bottom: {{ margin_bottom }}px;
+    }
+  }	
+  @media (max-width: 768px) {
+    #teaser-spotlight-2-{{section.id}} {
+      background-image: url('{{ section.settings.bg-image-mob | img_url: 'original'}}') !important;
+    }
+  }	  
+  
+</style>
+{% endif %}
+
+
+{% schema %}
+  {
+    "name": "Teaser Product Section",
+	"class": "teaser-custom-block-2-sections",
+    "max_blocks": 2,
+    "settings": [      
+        {
+            "type": "select",
+            "id": "layout",
+            "label": "Teaser 2 Layout:",
+            "options": [
+                {
+                    "value": "default",
+                    "label": "Default"
+                },
+                {
+                    "value": "full",
+                    "label": "Full Width"
+                }
+            ],
+            "default": "default"
+        },
+        {
+            "type": "checkbox",
+            "id": "display_padding",
+            "label": "Display Padding?",
+            "default": false
+        },{
+            "type": "image_picker",
+            "id": "bg-image",
+            "label": "Background Image Desktop"
+          },{
+            "type": "image_picker",
+            "id": "bg-image-mob",
+            "label": "Background Image Mobile"
+          },{
+            "type": "image_picker",
+            "id": "gift_image",
+            "label": "Gift Image Desktop"
+          },{
+            "type": "image_picker",
+            "id": "gift_image_mobile",
+            "label": "Gift Image Mobile"
+          },{
+            "type": "url",
+            "id": "link_git",
+            "label": "Gift Link",
+            "info": "Optional"
+          },        
+        {
+            "type": "select",
+            "id": "title_style",
+            "label": "Title Style:",
+
+            "options": [
+                {
+                    "value": "style_1",
+                    "label": "Style 1" 
+                },
+                { 
+                    "value": "style_2",
+                    "label": "Style 2" 
+                }          
+            ],
+            "default": "style_1"
+        },
+        {
+            "type": "range",
+            "id": "margin_bottom",
+            "label": "Margin Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 0
+        }	
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [		  	
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },{
+            "type": "image_picker",
+            "id": "image_mob",
+            "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link",
+            "info": "Optional"
+          },
+        {
+        "type": "select",
+        "id": "columns",
+        "label": "___ Columns",
+        "info": "Items columns",
+        "options": [
+          
+          {
+            "value": "one fourth size",
+            "label": "4"
+          },{
+            "value": "one half size",
+            "label": "8"
+          }
+        ]
+       }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Block: teaser 2",
+        "category": "Advanced layout",
+        "blocks": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "image"
+          },
+	      {
+            "type": "image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

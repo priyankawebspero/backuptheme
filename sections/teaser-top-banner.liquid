@@ -1,0 +1,125 @@
+{% if section.blocks.size > 0 %}
+
+{% assign- autoplay = section.settings.autoplay -%}
+{% assign- autoplaySpeed = section.settings.slideshow_speed -%}
+{% assign- fade = section.settings.slideshow_transition -%}
+{% assign- dots =  section.settings.dots -%}
+
+<section class="taeser-banner" id="taeser-{{section.id}}">
+    <div class="{% if section.settings.layout == 'default' %}container{% elsif section.settings.layout == 'padd_60' %}container-padd60{% else %}container-fluid{% endif %}">
+        <div class="row">
+            <div class ="no-padd col-12">
+                <div class="banner" data-auto-video="{{ section.settings.auto_playvideo }}">
+                {% for block in section.blocks %}
+                <div class="item">
+                {% if block.type == 'image' and block.settings.dpl_slide_img %}
+
+                    <div class="images-contain">
+                        {% if block.settings.image_slide != blank %}
+
+                        {%- assign img_url = block.settings.image_slide | img_url: 'master' -%}
+
+                        <a {% if block.settings.link != blank %} href="{{ block.settings.link }}"{% endif %} class="slide-image">
+                            <img data-src="{{ img_url }}"
+                                src="https:{{ img_url }}" alt="{{ block.settings.image_slide.alt | default: shop.name }}" itemprop="logo"
+                                class="lazyautosizes lazyloaded{% if block.settings.image_slide_mb != blank %} slide-pc{% endif %}" data-sizes="auto">
+
+                            {% if block.settings.image_slide_mb != blank %}
+
+                            {%- assign img_url_mb = block.settings.image_slide_mb | img_url: 'master' -%}
+
+                            <img data-src="{{ img_url_mb }}"
+                                src="https:{{ img_url_mb }}" alt="{{ block.settings.image_slide_mb.alt | default: shop.name }}" itemprop="logo"
+                                class="lazyautosizes lazyloaded slide-mobile" data-sizes="auto" style="display:none;">
+                            {% endif %}
+                        </a>
+
+                        {% else %}
+
+                        <div class="not_img">
+                            1880 x 720px
+                        </div>
+                        {% endif %}
+                    </div>
+
+                {% endif %}
+                </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+
+{% schema %}
+    {
+        "name": "Teaser Top Banner",
+        "class": "home-slideshow-sections",
+        "max_blocks": 1,
+        "settings": [
+            {
+                "type": "select",
+                "id": "layout",
+                "label": "Slideshow Layout:",
+                "options": [
+                    {
+                        "value": "default",
+                        "label": "Default"
+                    },
+                    {
+                        "value": "padd_60",
+                        "label": "Boxed"
+                    },
+                    {
+                        "value": "full",
+                        "label": "Full Width"
+                    }
+                ],
+                "default": "full"
+            }
+        ],
+
+        "blocks" : [
+            {
+                "type": "image",
+                "name": "Image SlideShow",
+                "settings":[
+                    {
+                        "type": "checkbox",
+                        "id": "dpl_slide_img",
+                        "label" : "Enable",
+                        "default" : true
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image_slide",
+                        "label" : "Select Image",
+                        "info": "Recommended Image: Width x Height (1880 x 720)px"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image_slide_mb",
+                        "label" : "Select Image Mobile",
+                        "info": "Recommended Image: Width x Height (450 x 300)px"
+                    },
+                    {
+                        "type" : "url",
+                        "id" : "link",
+                        "label" : "Slide link"
+                    }
+                ]
+            }
+        ],
+        "presets": [{
+            "name": "Slideshow",
+            "category": "Slideshow",
+            "blocks": [
+                {
+                    "type": "image"
+                }
+            ]
+        }]
+    }
+{% endschema %}

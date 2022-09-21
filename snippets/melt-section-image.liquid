@@ -1,0 +1,7 @@
+{% if section.settings.display_image_melt %}
+<div class="row image_section melt_goodness container-padd60 fw-section" style="background-image:url('{{ section.settings.image_melt | img_url: 'master'}}');">
+  <div class="image_section">
+    <p>{{section.settings.melt_text}}</p>
+  </div>
+</div>
+{% endif %}

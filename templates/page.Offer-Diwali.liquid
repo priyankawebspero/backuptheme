@@ -1,0 +1,26 @@
+{{ 'slick.min.js' | asset_url | script_tag }}
+{{ 'plum-diwali.css' | asset_url | stylesheet_tag }}
+<div class="page-affiliate-landing offer-diwali">
+  <div class="container-fluid">
+
+    {% comment %}
+    Regular page content goes here.
+    {% endcomment %}
+    {% section 'diwali-top-banner' %}    
+    {% section 'diwali-slider-section' %}
+    {% section 'diwali-second-section' %}
+
+    {% if settings.enable_multilang and page.content contains '[lang2]' %}
+    <div class="rte lang1">
+      {{ page.content | split: '[lang2]' | first }}
+    </div>
+    <div class="rte lang2">
+      {{ page.content | split: '[lang2]' | last }}
+    </div>
+    {% else %}
+    <div class="rte">
+      {{ page.content | split: '[lang2]' | first }}
+    </div>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,22 @@
+{{ 'slick.min.js' | asset_url | script_tag }}
+{{ 'serum-landing.css' | asset_url | stylesheet_tag }}
+<div class="page-tpl">
+  <div class="container-fluid">
+    <div class="slider-serum-section">
+      {% section 'Serum-banner'%}
+      {% section 'serum-concern-section'%}
+      <div class="concern_tabs_cs">{% section 'concern-flipbox'%}
+        <a href="#top_scroll" id="scroll_top"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/back_top_min_updates.png" alt="backtotop"></a>
+      
+      </div>
+    </div>
+        
+
+    <div class="second-serum-section">
+      {% section 'slider-product'%}      
+      
+    </div>
+    <div class="third-serum-section">
+    </div>
+  </div>
+</div>

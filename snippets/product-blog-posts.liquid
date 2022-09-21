@@ -1,0 +1,46 @@
+{% assign article_Product =  product.metafields.product["blog handle"] | split:"," %}
+{% if article_Product != 0 and article_Product != blank %}
+<div class="detail-page-blog-sec">
+  <div class="container-padd60">
+    <h2 class="heading-use">Knowledge center</h2>
+    <div class="detail-page-blog-data">
+      <ul class="list-blog">
+        {% for article_handle in article_Product  %}
+        {% assign handleWithoutSpace = article_handle | strip %}
+        {% assign article =  articles[handleWithoutSpace] %}
+        <li class="blog-item">
+          <div class="article-details">
+            {% if article.image %}
+            {% assign image_alt = article.title | escape %}
+            <div class="article-img">
+              {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url | replace: '<a', '<a class="animate-scale"' }}
+            </div>
+
+            {% else %}
+            <div class="article-img">
+              <img src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/blog.png?v=1576997571">
+            </div>
+            {% endif %}
+
+            <h3 class="article-title">
+              <a href="{{ article.url }}">
+                {% include 'multilang' with article.title %}
+              </a>
+            </h3> 
+            <div class="rte article-excerpt">
+
+              <div class="actions">
+                <a href="{{ article.url }}" {% if settings.enable_multilang %}data-translate="blogs.article.read_more"{% endif %}>
+                  {{ 'blogs.article.read_more' | t }}
+                </a>
+              </div>            
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      <p class="text-center"><a href="/pages/blog" class="btn">View all</a></p>
+    </div>
+  </div>
+</div>
+{% endif %}

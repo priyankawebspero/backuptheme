@@ -1,0 +1,365 @@
+<div class="teaser-spotlight-block" id="teaser-spotlight-33-{{section.id}}">
+<div class="">
+  {% if section.settings.gift_image != blank %}            
+    {%- assign img_url_gift = section.settings.gift_image | img_url: 'master'-%}
+    {%- assign img_url_gift_mobile = section.settings.gift_image_mobile | img_url: 'master'-%}
+    <img data-src="{{ img_url_gift }}"
+         src="https:{{ img_url_gift }}" alt="{{ section.settings.gift_image.alt | default: shop.name }}" itemprop="logo"
+         class="lazyautosizes lazyloaded teaser_desktop" data-sizes="auto">
+    <img data-src="{{ img_url_gift_mobile }}"
+         src="https:{{ img_url_gift_mobile }}" alt="{{ section.settings.gift_image_mobile.alt | default: shop.name }}" itemprop="logo"
+         class="lazyautosizes lazyloaded teaser_mobile" data-sizes="auto" style="display:none;">
+    {% else %}
+
+    <div class="not_img">
+      1920 x 240px
+    </div>   
+    {% endif %}  
+  
+  </div>
+    <div class="row" id="flash-sale">
+      <div class="col-12 col-md-12 col-lg-12 text-center">
+        <div class="counter_text"><!--<span class="side_text">Flash Sale!</span> --> <p id="demo"></p><!--<span class="side_text"> Hurry up!</span>--></div>
+      </div>
+    </div>
+    
+    <div class="form_sec">
+      <h3>{{section.settings.form_text_head}}</h3>
+      	<div class="signup-mail-outer">		
+		<div class="outter">			
+          <div class="desktop_view">
+            <div class="desktop-form right">
+              <input type="email" oninput="validateEmail();yourFunction()" id="desktop-email" name="email" placeholder="Email id" required="">
+              <input type="text" oninput="validatePhone();yourFunction()" name="number" id="desktop-phone" placeholder="Phone Number" required=""><br>
+              <button id="signup_button_desktop" style="" onclick="submit()" value="Sign me up" disabled="">Submit</button>
+            </div>
+            <div class="confirm" style="display:none;height:auto">Thank you!</div>
+          </div>
+          </div>
+    </div>
+     {% if section.settings.display_bottom %} 
+      <div class="bottom_sec">
+        {% if section.settings.bottom_image != blank %}            
+        {%- assign img_url_gift = section.settings.bottom_image | img_url: 'master'-%}
+        {%- assign img_url_gift_mobile = section.settings.bottom_image_mobile | img_url: 'master'-%}
+        <a href="/collections/single-products-offer">
+        <img data-src="{{ img_url_gift }}"
+             src="https:{{ img_url_gift }}" alt="{{ section.settings.bottom_image.alt | default: shop.name }}" itemprop="logo"
+             class="lazyautosizes lazyloaded teaser_desktop" data-sizes="auto">
+        <img data-src="{{ img_url_gift_mobile }}"
+             src="https:{{ img_url_gift_mobile }}" alt="{{ section.settings.bottom_image_mobile.alt | default: shop.name }}" itemprop="logo"
+             class="lazyautosizes lazyloaded teaser_mobile" data-sizes="auto" style="display:none;">
+        </a>
+        {% else %}
+
+        <div class="not_img">
+          1920 x 240px
+        </div>   
+        {% endif %}   
+      </div>
+{% endif %}
+
+{% if section.settings.display_product %}  
+<div class="widget-title no-des">  
+<h3 class="box-title">{{ section.settings.heading_text }}</h3>
+</div>
+    <div class="sale-products">
+      <div class="container">
+        <div class="row">
+          <div class="col-12  featured-products" data-featured-products-slide> 
+            <div class="widget-product">
+              <div class="products-grid row four-items" data-row="4">
+                {% for product in collections[section.settings.show_slider_featured_collection].products limit:16%}
+                <div class="grid-item col-6 col-md-4 col-lg-3 small--one-half">
+                  {% include 'product-grid-item' %}
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="text-center">
+              <a class="pro_shop_feature" href="/collections/{{section.settings.show_slider_featured_collection}}" class="btn">view more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endif %}
+{% if section.settings.display_product1 %}  
+<div class="widget-title no-des">  
+<h3 class="box-title">{{ section.settings.heading_text1 }}</h3>
+</div>
+    <div class="sale-products">
+      <div class="container">
+        <div class="row">
+          <div class="col-12  featured-products" data-featured-products-slide> 
+            <div class="widget-product">
+              <div class="products-grid row four-items" data-row="4">
+                {% for product in collections[section.settings.show_slider_featured_collection1].products limit:16%}
+                <div class="grid-item col-6 col-md-4 col-lg-3 small--one-half">
+                  {% include 'product-grid-item' %}
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="text-center">
+              <a class="pro_shop_feature" href="/collections/{{section.settings.show_slider_featured_collection1}}" class="btn">view more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endif %}
+  </div>
+
+<style>
+  {% assign margin_bottom =  section.settings.margin_bottom %}
+
+  #teaser-spotlight-33-{{section.id}} div #flash-sale{
+    background-image: url('{{ section.settings.bg-image | img_url: 'original'}}') !important;
+      }
+
+  @media (min-width: 1200px) {
+    #teaser-spotlight-33-{{section.id}} {
+      margin-bottom: {{ margin_bottom }}px;
+    }
+  }	
+  @media (max-width: 768px) {
+    #teaser-spotlight-33-{{section.id}} div #flash-sale{
+      background-image: url('{{ section.settings.bg-image_mobile | img_url: 'original'}}') !important;
+        }
+  }	  
+
+</style>
+
+
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("{{section.settings.text_sale_date}}").getTime();
+
+     // Update the count down every 1 second
+     var x = setInterval(function() {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML =  "<span class='days countdown'><span class='ocount'>" + days + "</span><span class='inner'> DAYS </span> : </span><hr/>" + "<span class='hours countdown'><span class='ocount'>" + hours + "</span><span class='inner'> HOURS</span> : </span><hr/> <span class='minutes countdown'><span class='ocount'>"
+    + minutes + "</span><span class='inner'> MINUTES</span> : </span><hr><span class='seconds countdown'><span class='ocount'>" + seconds + "</span><span class='inner'>  SECONDS</span></span><hr> ";
+
+    // If the count down is over, write some text 
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "Sale is live!";
+    }
+  }, 1000);
+</script>
+
+<script type="text/javascript">
+
+			function validateEmail() {
+				var x, text;
+				x = document.getElementById("desktop-phone").value;
+				y = document.getElementById("desktop-email").value;
+				x = x.replace(/\D/g, '');
+				if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(y)) {
+					//alert(x)
+					document.getElementById("desktop-email").style.borderColor = "green";
+					return true
+				}
+				else {
+					//alert(x)
+					document.getElementById("desktop-email").style.borderColor = "red";
+					return false
+				}
+
+
+			}
+
+			function validatePhone() {
+				var x, text;
+
+				var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+				x = document.getElementById("desktop-phone").value;
+				y = document.getElementById("desktop-email").value;
+
+				if (/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(x)) {
+					document.getElementById("desktop-phone").style.borderColor = "green";
+					return true
+				}
+				else {
+					document.getElementById("desktop-phone").style.borderColor = "red";
+					return false
+				}
+			}
+			function yourFunction() {
+				//alert("Yes")
+				if (validatePhone() && validateEmail()) {
+					//alert("here")
+					document.getElementById("signup_button_desktop").disabled = false
+					document.getElementById("signup_button_desktop").style.background = "#5b128a";
+				}
+				else{
+					document.getElementById("signup_button_desktop").disabled = true
+					document.getElementById("signup_button_desktop").style.background = "grey";
+				}
+			}
+
+			function submit(){
+             var phone = document.getElementById("desktop-phone").value;
+			 var email = document.getElementById("desktop-email").value;
+              
+                        var tpid = '{{__template_id}}'
+                        var cp_id = '{{__campaign_id}}'
+                        var data = {tpid,cp_id}
+							//javascript:parent.signup_leads(data);
+				            //iframe_size();
+				          //  javascript:parent.notif_frame([['height',160],['width',220],['margin-left',-108],['margin-top',-76]])
+
+							//document.getElementsByClassName("desktop").style.display = "none";
+                             $('#desktop-phone').val('');
+                             $('#desktop-email').val('');
+                             $('.confirm').show();
+              clevertap.event.push("Sale customers", {
+                "Phone" : phone,
+                "Email" : email
+              });
+              clevertap.onUserLogin.push({
+                "Site": {          
+                  "Identity": email
+                }
+              });
+
+							
+							
+			}
+
+		</script>
+
+{% schema %}
+{
+"name": "Offer Count Section",
+"class": "offer-count-section",
+"settings": [      
+{
+"type": "select",
+"id": "layout",
+"label": "Offer Count 3 Layout:",
+"options": [
+{
+"value": "default",
+"label": "Default"
+},
+{
+"value": "full",
+"label": "Full Width"
+}
+],
+"default": "default"
+},{
+"type": "image_picker",
+"id": "bg-image",
+"label": "Top Image Desktop"
+},{
+"type": "image_picker",
+"id": "bg-image_mobile",
+"label": "Top Image Mobile"
+},{
+"type": "image_picker",
+"id": "gift_image",
+"label": "Top Image Desktop"
+},{
+"type": "image_picker",
+"id": "gift_image_mobile",
+"label": "Top Image Mobile"
+},{
+"type": "text",
+"id": "text_sale_date",
+"label": "Enter Date",
+"default": "Jan 22, 2022 23:59:59"
+},{
+"type": "text",
+"id": "form_text_head",
+"label": "Enter Text For Form",
+"default": "Allow notification access and enter your details below to get Exclusive access to B2G2 SALE"
+},
+{
+  "type": "checkbox",
+  "id": "display_bottom",
+  "label": "Display Footer image",
+  "default": true
+},{
+"type": "image_picker",
+"id": "bottom_image",
+"label": "Bottom Image Desktop"
+},{
+"type": "image_picker",
+"id": "bottom_image_mobile",
+"label": "Bottom Image Mobile"
+},{ 
+"type": "range",
+"id": "margin_bottom",
+"label": "Margin Bottom",
+"min": 0,
+"max": 100,
+"step": 1,
+"default": 0
+},
+{
+  "type": "checkbox",
+  "id": "display_product",
+  "label": "Display Product Carousel",
+  "default": true
+},
+{
+  "type": "text",
+  "id": "heading_text",
+  "label": "Heading"
+},
+{
+  "type": "collection",
+  "id": "show_slider_featured_collection",
+  "label": "Collection product"
+},
+{
+  "type": "checkbox",
+  "id": "display_product1",
+  "label": "Display Product Carousel",
+  "default": true
+},
+{
+  "type": "text",
+  "id": "heading_text1",
+  "label": "Heading"
+},
+{
+  "type": "collection",
+  "id": "show_slider_featured_collection1",
+  "label": "Collection product"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+  <style>
+    .confirm {
+    text-align: center;
+    padding-top: 15px;
+    color: green;
+}
+  </style>

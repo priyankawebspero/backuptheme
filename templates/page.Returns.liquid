@@ -1,0 +1,48 @@
+<div class="faqs-page">
+  <div class="container">
+    {% include 'breadcrumb' %}
+
+    <header class="page-header">
+      <h1 class="blog-headline">
+        <span class="blog-read">Shipping & returns</span>
+      </h1>  
+    </header>
+
+    <p><a href="mailto:Plumgoodness.com">Plumgoodness.com</a> has a simple shipping policy for all orders placed on our website, with no exceptions.</p>
+    {% section 'return-page' %}
+    {% section 'return1-page' %}
+
+    <div class="des_faqs">
+      <span>
+        Cancellation
+      </span>
+    </div>
+    <p>If you wish to cancel an order, please let us know within 3 days of placing the order or before delivery - whichever is earlier! You can get in touch with us here.</p>
+    <br><br>
+    <span>*Prices, policies and other information on this website are subject to change without notice.</span>
+    
+  </div>
+</div>
+<style>
+  .des_faqs span {
+    font-size: 40px;
+    text-transform: lowercase;
+    color: #450466;
+  }
+  h4.panel-title span {
+    width: 100%;
+    font-weight: 600;
+  }
+  @media ( max-width: 786px ) {
+    .faqs-page .panel-group .panel-title a:before {
+      position: absolute;
+      top: 12px;
+      min-width: inherit;
+      margin-right: 0;
+      right: 0;
+    }
+    .des_faqs span {
+      font-size: 28px;
+    }
+  }
+</style>

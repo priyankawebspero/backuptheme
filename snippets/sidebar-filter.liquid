@@ -1,0 +1,395 @@
+{%- assign filter_tree_vertical_style = shop.metafields.bc-sf-filter.settings | split: 'general":' | last | split: 'filterTreeVerticalStyle":"' | last | split: '","' | first | strip -%}
+{%- assign enable_filter_sticky_d = shop.metafields.bc-sf-filter.settings | split: 'general":' | last | split: 'stickyFilterOnDesktop":' | last | split: ',' | first | strip -%}
+{%- if filter_tree_vertical_style == 'style-off-canvas' or filter_tree_vertical_style == 'style-expand' -%}
+{%- assign enable_filter_tree_button_desktop_v = true -%}
+{%- else -%}
+{%- assign enable_filter_tree_button_desktop_v = false -%}
+{%- endif -%}
+
+{%- assign boost_settings = shop.metafields.bc-sf-filter.settings -%}
+{%- assign boost_in_collection_search = boost_settings | split: 'enableCollectionSearch":' | last | split: ',"' | first | strip -%}
+{% if current_tags == blank %}
+  {% assign has_refined = false %}
+{% else %}
+  {% assign has_refined = true %} 
+{% endif %}
+
+
+{% if section.settings.display_sidebar or settings.category_layout == "right_sidebar" or template.suffix == 'right-sidebar' %}
+
+{% if settings.category_layout == "right_sidebar" or settings.category_layout == "express_order" or template.suffix == 'express-order' or settings.category_layout == "mansory" or template.suffix == 'mansory' or settings.category_layout == "full_with" or template.suffix == 'fullwidth' or template.suffix == 'right-sidebar' or settings.category_layout == "with_banner" or template.suffix == 'with-banner' %}
+<div class="sidebar-label">
+    <span class="icon-filter">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xml:space="preserve"><g><path d="M6,48c-0.552,0-1-0.447-1-1v-7c0-0.553,0.448-1,1-1s1,0.447,1,1v7C7,47.553,6.552,48,6,48z"></path><path d="M6,31c-0.552,0-1-0.447-1-1V1c0-0.553,0.448-1,1-1s1,0.447,1,1v29C7,30.553,6.552,31,6,31z"></path><g><path d="M6,41c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S9.309,41,6,41z M6,31c-2.206,0-4,1.794-4,4s1.794,4,4,4s4-1.794,4-4    S8.206,31,6,31z"></path><path d="M42,48c-0.552,0-1-0.447-1-1V26c0-0.553,0.448-1,1-1s1,0.447,1,1v21C43,47.553,42.552,48,42,48z"></path><path d="M42,17c-0.552,0-1-0.447-1-1V1c0-0.553,0.448-1,1-1s1,0.447,1,1v15C43,16.553,42.552,17,42,17z"></path><path d="M42,27c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S45.309,27,42,27z M42,17c-2.206,0-4,1.794-4,4s1.794,4,4,4    s4-1.794,4-4S44.206,17,42,17z"></path><path d="M24,48c-0.552,0-1-0.447-1-1V21c0-0.553,0.448-1,1-1s1,0.447,1,1v26C25,47.553,24.552,48,24,48z"></path><path d="M24,12c-0.552,0-1-0.447-1-1V1c0-0.553,0.448-1,1-1s1,0.447,1,1v10C25,11.553,24.552,12,24,12z"></path><path d="M24,22c-3.309,0-6-2.691-6-6s2.691-6,6-6c3.309,0,6,2.691,6,6S27.309,22,24,22z M24,12c-2.206,0-4,1.794-4,4s1.794,4,4,4    s4-1.794,4-4S26.206,12,24,12z"></path></g></g></svg>
+    </span>
+    <span class="sidebar_more" {% if settings.enable_multilang %}data-translate="collections.sidebar.sidebar_more"{% endif %}>
+        {{ 'collections.sidebar.sidebar_more' | t }}
+    </span>
+</div>
+{% endif %}
+
+<div class="sidebar">
+  	<div class="sorting_order">
+      <div class="boost-pfs-filter-toolbar-item boost-pfs-filter-custom-sorting boost-pfs-filter-top-sorting">
+        {%- include 'boost-pfs-filter-skeleton' -%}
+      </div>
+ 	 </div>
+	<div class="filter_area">
+	{% if section.settings.sidebar_heading %}
+      <h3 class="sidebar-heading boost-pfs-filter-tree-mobile-button-stick-wrapper ">{{ section.settings.sidebar_heading }}<span class="on_active" style="display:none;">Apply Filter</span></h3>
+	{% endif %}
+    <a href="javascript:void(0)" title="{{ 'cart.general.close_cart' | t }}" class="close-sidebar close">
+        {% include 'icon-close' %}    
+    </a>
+  
+    <div class="sidebar-filter boost" data-has-collapse>
+        {% if settings.category_layout == "right_sidebar" or settings.category_layout == "express_order" or template.suffix == 'express-order' or settings.category_layout == "mansory" or template.suffix == 'mansory' or settings.category_layout == "full_with" or template.suffix == 'fullwidth' or template.suffix == 'right-sidebar' or settings.category_layout == "with_banner" or template.suffix == 'with-banner' %}
+        <a href="javascript:void(0)" title="{{ 'cart.general.close_cart' | t }}" class="close-sidebar close">
+            {% include 'icon-close' %}    
+        </a>
+        {% endif %}
+
+        <div class="boost-pfs-filter-tree boost-pfs-filter-tree-v" >{% include 'boost-pfs-filter-skeleton', type: 'filter-tree'  %}</div>        
+    </div>
+   
+    {% if section.settings.enable_product %}
+    <div class="widget sidebar-widget-product" data-sidebar-product>
+        {% if section.settings.title_product != blank %}
+        <div class="widget-title">   
+            <h3 class="sidebar-title">
+                {% include 'multilang' with section.settings.title_product %}
+            </h3>
+        </div>
+        {% endif %}
+
+        {% if section.settings.collection == blank %}
+        <div class="widget-product">
+            <div class="grid-item {{ grid_item_width }}">
+                <div class="grid-view-item no-product">
+                    <div class="product-top">
+                        <div class="not_img">
+                            Product Img
+                        </div>
+                    </div>
+
+                    <div class="product-bottom">
+                        <div class="product-title">
+                            <span>
+                                Your product's name
+                            </span>
+                        </div>
+
+                        <div class="price-box">
+                            <span> $250.00 </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% else %}
+        <div class="widget-product">
+            <div class="products-grid row">
+                {% for product in collections[section.settings.collection].products limit:section.settings.limit %}
+                <div class="grid-item col-12{% if settings.product_image_border %} grid-item-border{% endif %} ">
+                    {% include 'sidebar-product-grid' %}
+                </div>
+                {% endfor %}
+            </div> 
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    {% if section.settings.enable_img_1 %}
+    <div class="widget sidebar-banner">
+        {% if section.settings.image_img_1 != blank %}
+        {%- assign img_url = section.settings.image_img_1 | img_url: 'original', crop: 'center' -%}
+
+        {% if section.settings.link_img_1 != blank %}
+        <a class="animate-scale" href="{{ section.settings.link_img_1 }}">
+        {% endif %}
+        <img data-src="{{ img_url }}"
+            src="{{ img_url }}" alt="{{ section.settings.image_img_1.alt | default: shop.name }}"
+            class="lazyautosizes lazyloaded" data-sizes="auto">
+        {% if section.settings.link_img_1 != blank %}
+        </a>
+        {% endif %}
+
+        {% else %}
+        <div class="not_img">
+            210 x 165px
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+  
+    {% if section.settings.enable_img_2 %}
+    <div class="widget sidebar-banner">
+        {% if section.settings.image_img_2 != blank %}
+        {%- assign img_url = section.settings.image_img_2 | img_url: 'original', crop: 'center' -%}
+
+        {% if section.settings.link_img_2 != blank %}
+        <a class="animate-scale" href="{{ section.settings.link_img_2 }}">
+        {% endif %}
+        <img data-src="{{ img_url }}"
+            src="{{ img_url }}" alt="{{ section.settings.image_img_2.alt | default: shop.name }}"
+            class="lazyautosizes lazyloaded" data-sizes="auto">
+        {% if section.settings.link_img_2 != blank %}
+        </a>
+        {% endif %}
+
+        {% else %}
+        <div class="not_img">
+            210 x 165px
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+  
+    {% if section.settings.enable_custom_block %} 
+    <div class="widget sidebar-cms-custom">
+        {% if section.settings.title_custom_block != blank %}
+        <div class="widget-title">   
+            <h3 class="sidebar-title">
+                {% include 'multilang' with section.settings.title_custom_block | escape  %}
+            </h3>
+        </div>
+        {% endif %}
+
+        <div class="widget-content">
+        {% if section.settings.quote_custom_block != blank %}
+        {% if settings.enable_multilang and section.settings.quote_custom_block contains '|' %}
+        <div class="rte-setting lang1">
+            {{ section.settings.quote_custom_block | split: '|' | first }}
+        </div>
+        <div class="rte-setting lang2">
+            {{ section.settings.quote_custom_block | split: '|' | last }}
+        </div>
+        {% else %}
+        <div class="rte-setting">
+            {{ section.settings.quote_custom_block | split: '|' | first }}
+        </div>
+        {% endif %}
+        {% endif %}
+        </div>
+    </div>  
+    {% endif %}
+ </div> 
+</div>
+{% endif %}
+
+<style> 
+    @media (max-width: 1199px) {  
+        {% unless settings.category_layout == "right_sidebar" or template.suffix == 'right-sidebar' %}
+        {% unless section.settings.display_sidebar %}
+        .halo-collection-content .sidebar-label {
+            display: none !important;
+        }
+        {% endunless %}
+        {% endunless %}
+    }
+  
+    @media (min-width: 1200px) { 
+        {% unless settings.category_layout == "full_with" or template.suffix == 'fullwidth' %}
+        {% if section.settings.display_sidebar or settings.category_layout == "right_sidebar" or template.suffix == 'right-sidebar' %}
+        .halo-collection-content .products-grid .col5 .sizes-list {
+            margin-bottom: 8px;
+        }
+
+        .halo-collection-content .products-grid .col5 .sizes-list li a {
+            min-width: 23px;
+            padding: 1px 5px 0px;
+            font-size: 10px;
+        }
+
+        .halo-collection-content .products-grid .col5 .item-swatch label,
+        .halo-collection-content .products-grid .col5 .item-swatch a {
+            width: 23px;
+            height: 23px;
+            line-height: 23px;
+        }
+        
+        .halo-collection-content .products-grid .grid-item-mansory.col5 .countdown-grid-item>span {
+            display: none;
+        }
+        {% endif %}
+        {% endunless %}
+        
+        {% unless settings.category_layout == "right_sidebar" or template.suffix == 'right-sidebar' %}
+        {% unless section.settings.display_sidebar %}
+        .halo-collection-content .col-main {
+            width: 100%;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }  
+        
+        {% else %}
+        
+        {% if section.settings.show_sidebar == 'right' %}
+        .halo-collection-content > .row {
+            -webkit-flex-direction: row-reverse;
+            -moz-flex-direction: row-reverse;
+            -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+        }
+        {% endif %}
+        {% endunless %}
+        
+        {% else %}
+        .halo-collection-content > .row {
+            -webkit-flex-direction: row-reverse;
+            -moz-flex-direction: row-reverse;
+            -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+        }
+        {% endunless %}
+    } 
+  
+  {% if section.settings.display_sidebar %}
+  {% if settings.category_layout == "full_with" or template.suffix == 'fullwidth' %}
+    @media (min-width: 1200px) and (max-width: 1449px) {
+        .halo-collection-content .products-grid .col5 .sizes-list {
+            margin-bottom: 8px;
+        }
+
+        .halo-collection-content .products-grid .col5 .sizes-list li a {
+            min-width: 23px;
+            padding: 1px 5px 0px;
+            font-size: 10px;
+        }
+
+        .halo-collection-content .products-grid .col5 .item-swatch label,
+        .halo-collection-content .products-grid .col5 .item-swatch a {
+            width: 23px;
+            height: 23px;
+            line-height: 23px;
+        }
+    }
+    
+    @media (min-width: 1350px) {
+        .collection-template-fullwidth .toolbar .column-left {
+            width: 49.5%;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+        
+        .collection-template-fullwidth .toolbar .filters-toolbar__view-as {
+            -webkit-box-pack: flex-end;
+            -moz-box-pack: flex-end;
+            -ms-flex-pack: flex-end;
+            -webkit-justify-content: flex-end;
+            justify-content: flex-end;
+        }
+    }
+  {% endif %}
+  {% endif %}
+    @media (max-width: 1199px) {  
+        {% unless settings.category_layout == "right_sidebar" or template.suffix == 'right-sidebar' %}
+        {% unless section.settings.display_sidebar %}
+        .halo-collection-content .sidebar-label {
+            display: none !important;
+        }
+        {% endunless %}
+        {% endunless %}
+    }
+  
+    @media (min-width: 1200px) { 
+        {% unless settings.category_layout == "full_with" or template.suffix == 'fullwidth' %}
+        {% if section.settings.display_sidebar or settings.category_layout == "right_sidebar" or template.suffix == 'right-sidebar' %}
+        .halo-collection-content .products-grid .col5 .sizes-list {
+            margin-bottom: 8px;
+        }
+
+        .halo-collection-content .products-grid .col5 .sizes-list li a {
+            min-width: 23px;
+            padding: 1px 5px 0px;
+            font-size: 10px;
+        }
+
+        .halo-collection-content .products-grid .col5 .item-swatch label,
+        .halo-collection-content .products-grid .col5 .item-swatch a {
+            width: 23px;
+            height: 23px;
+            line-height: 23px;
+        }
+        
+        .halo-collection-content .products-grid .grid-item-mansory.col5 .countdown-grid-item>span {
+            display: none;
+        }
+        {% endif %}
+        {% endunless %}
+        
+        {% unless settings.category_layout == "right_sidebar" or template.suffix == 'right-sidebar' %}
+        {% unless section.settings.display_sidebar %}
+        .halo-collection-content .col-main {
+            width: 100%;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }  
+        
+        {% else %}
+        
+        {% if section.settings.show_sidebar == 'right' %}
+        .halo-collection-content > .row {
+            -webkit-flex-direction: row-reverse;
+            -moz-flex-direction: row-reverse;
+            -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+        }
+        {% endif %}
+        {% endunless %}
+        
+        {% else %}
+        .halo-collection-content > .row {
+            -webkit-flex-direction: row-reverse;
+            -moz-flex-direction: row-reverse;
+            -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+        }
+        {% endunless %}
+    } 
+  
+  {% if section.settings.display_sidebar %}
+  {% if settings.category_layout == "full_with" or template.suffix == 'fullwidth' %}
+    @media (min-width: 1200px) and (max-width: 1449px) {
+        .halo-collection-content .products-grid .col5 .sizes-list {
+            margin-bottom: 8px;
+        }
+
+        .halo-collection-content .products-grid .col5 .sizes-list li a {
+            min-width: 23px;
+            padding: 1px 5px 0px;
+            font-size: 10px;
+        }
+
+        .halo-collection-content .products-grid .col5 .item-swatch label,
+        .halo-collection-content .products-grid .col5 .item-swatch a {
+            width: 23px;
+            height: 23px;
+            line-height: 23px;
+        }
+    }
+    
+    @media (min-width: 1350px) {
+        .collection-template-fullwidth .toolbar .column-left {
+            width: 49.5%;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+        
+        .collection-template-fullwidth .toolbar .filters-toolbar__view-as {
+            -webkit-box-pack: flex-end;
+            -moz-box-pack: flex-end;
+            -ms-flex-pack: flex-end;
+            -webkit-justify-content: flex-end;
+            justify-content: flex-end;
+        }
+    }
+  {% endif %}
+  {% endif %}
+</style>

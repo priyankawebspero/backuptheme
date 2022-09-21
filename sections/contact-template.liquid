@@ -1,0 +1,335 @@
+{% comment %}
+This page template is a requirement if you are submitting your theme to the Shopify Theme Store.
+Be sure to select page.contact as the template from the admin page to have this template take effect.
+
+For information on adding more fields, visit:
+- http://docs.shopify.com/support/configuration/store-customization/adding-fields-to-the-liquid-contact-form
+{% endcomment %}
+
+{% comment %}
+Google Map
+{% include "contact-us-snipped" %}
+{% endcomment %}
+<style>
+  /*--------------------------------------------------contact-us-page--------------------------------------------*/
+
+  .page-contact .container {
+    max-width: 1200px;
+}
+  .contact-banner{display:flex; max-width:100%;}
+  .small-banner{display:flex; align-item:center; justify-content:center; flex:0 0 100%; padding:50px 0 25px 0; text-align:center; line-height:100%; margin:0;}
+  .small-banner h2 {
+    color: #5e0d8d;
+    font-weight: 400;
+    font-size: 52px;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+  .contact-grid .text-wrap a {
+    text-decoration: underline;
+  }
+  .contact-grid{padding:50px 0;}
+  .contact-grid .text-wrap{margin-bottom:40px;}
+
+  .contact-grid .text-wrap h4{color:#5e0d8d;  font-weight:600; font-size:22px; margin:0 0 5px; display:block;}
+  .contact-grid .text-wrap span, .contact-grid .text-wrap a{display:block; color:#505050; font-family:'Nunito', sans-serif; font-weight:500; font-size:16px;}
+  .contact-grid .text-wrap a:hover{color:#5e0d8d}
+
+  ul.social {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: block;
+    justify-content: space-around;
+    border-bottom: 1px solid #fff;
+    max-width: 100%;
+    width: 100%; padding-bottom:0px; margin-bottom:0px;
+  }
+
+  ul.social li{display:inline-block; margin:0 15px;}
+  ul.social li a, ul.social li a i{font-size:22px; color:#505050;}
+  ul.social li a:hover, ul.social li a:hover i{color:#5e0d8d;}
+
+
+  .formbox h2{
+    color: #5e0d8d;
+    font-weight: 400;
+    font-size: 36px;
+    margin: 0 0 30px;
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  .formbox h2 span{max-width:594px;}
+  .assistance-form {
+    max-width: 402px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .assistance-form textarea {
+    resize: none;
+    height: 160px;
+  }
+  .assistance-form input, .assistance-form textarea, .assistance-form select {
+    background: #f8f8f8;
+    font-size: 14px !important;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 34px;
+    padding: 10px 5px 10px 24px !important;
+    color: #505050 !important;
+    border: 0px solid #000 !important;
+    width: 100%;
+    max-width: 100% !important;
+    margin: 0 0 15px;
+    border-radius: 25px 25px !important;
+  }
+  .assistance-form textarea{resize:none; height:160px;}
+  .assistance-form input[type="submit"] {
+    background-image: linear-gradient(to right, #8901bd 0%, #660993 51%, #3f035d 100%) !important;
+    cursor: pointer;
+    width: 145px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #ffffff !important;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 16px !important;
+    padding: 0 !important;
+  }
+  .form-success {
+    border: 1px solid #ebebeb;
+    margin-bottom: 20px;
+    padding: 5px 20px 5px 30px;
+    margin-bottom: 30px !important;
+    border-radius: 5px;
+    border: 1px solid #8901bd;
+    color: #8901bd;
+  }
+  .errors li {
+    color: red;
+  }
+  .assistance-form input[type="submit"]:hover{opacity:0.8;}
+
+  @media only screen and (max-width: 1199px) {
+    .grid-tab{max-width:100%;}
+    .gridbox{margin:30px 25px 20px;}
+.page-contact .container {
+    max-width: 970px;
+}
+    
+  }
+  @media only screen and (max-width: 767px) {
+    .formbox h2 {
+      font-size: 26px;
+    }
+    .small-banner {
+      padding-bottom: 0;
+      padding-top: 25px;
+    }
+    .contact-grid {
+      padding: 40px 0;
+      padding-bottom: 0;
+    }
+    .small-banner h2 {
+      font-size: 26px;
+    }
+    .page-careers .content .text-wrap{max-width:100%;}
+    .formbox{padding: 0 10px;} 
+  }
+  .small-banner p {
+    line-height: 24px;
+    padding-top: 20px;
+    margin: auto;
+    font-size: 15px;
+}
+@media (min-width: 767px) {
+  .small-banner p {
+    line-height: 24px;
+    padding-top: 20px;
+    width: 70%;
+    margin: auto;
+     font-size: 18px;
+}
+}
+</style>
+
+<div class="inner-page page-contact">
+  <div class="contact-banner">
+    <div class="small-banner">
+      <div class="container">
+        <h2>Contact us</h2>
+<!--         <p>Hello Plumster! Our support executives are on a short office break until Saturday EOD. We regret being unable to get back to you immediately and apologise for the inconvenience this may cause. Rest assured, we will reply to your concern as soon as we are back. Love, Plum People💜 </p>
+     -->
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="container">
+      <div class="row contact-grid text-center justify-content-center">
+        <div class="col-md-4">
+          <div class="text-wrap call-box">
+            <h4>Call</h4>
+            <p><a href="tel:7506496604">75064-96604</a></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-wrap call-box">
+            <h4>Email</h4>
+            <p><a href="mailto:hello@plumgoodness.com">hello@plumgoodness.com</a></p>
+          </div>
+        </div>
+        {% comment %}
+        <div class="col-md-4">
+          <div class="text-wrap callback-box">
+            <h4>Request a call back</h4>
+            <p>SMS PLUM to 56161 to get a call back from us</p>
+          </div>
+        </div>
+        {% endcomment %}
+        <div class="col-md-4">
+          <div class="text-wrap blogger-box">
+            <h4>Blogger collaborations</h4>
+            <p>Fill the form below <a target="_blank" href="https://bit.ly/PlumCollabForm">bit.ly/PlumCollabForm</a></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-wrap hours-box">
+            <h4>Opening hours</h4>
+            <p><span>Monday to Sunday: 10:00AM- 6:30PM</span> </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-wrap join-box">
+            <h4>Join the plum list today!</h4>
+            <p>We hate spam</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-wrap hours-box">
+            <h4>Grievances</h4>
+            <p><span>Grievance Officer Name : Ajay Gopalakrishnan<br/>
+              Email ID : grievance.officer@teampureplay.com<br/>
+					Mobile Number : +91750-649-6604</span> </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-wrap Address">
+            <h4>Address</h4>
+            <p><span>1st Floor, Lodha i-Think Techno Campus, A Wing, Chirak Nagar, Thane Maharashtra 400607</span></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-wrap CIN">
+            <h4>Corporate Identification Number</h4>
+            <p><span>U74120MH2013PTC248969</span></p>
+          </div>
+        </div>
+         <div class="col-md-4">
+           <div class="text-wrap CIN">
+            <h4>Request A Call Back</h4>
+            <p><span><a href="https://plumgoodness.com/pages/request-a-call-back">Click here for call back</a></span></p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="w-100 d-flex justify-content-center">
+          <ul class="social">
+            <li class="fb"><a rel="nofollow" href="https://www.facebook.com/PlumGoodness/" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li class="yt"><a rel="nofollow" href="https://www.youtube.com/channel/UC6tQtwAuADVKuxIRKfwMZfw?sub_confirmation=1" title="YouTube" target="_blank"><i class="fa fa-youtube"></i></a></li>
+            <li class="tw"><a rel="nofollow" href="https://twitter.com/plumspeak?lang=en" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li class="in"><a rel="nofollow" href="https://www.instagram.com/plumgoodness/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+   {% comment %}
+  {% form 'contact' %}
+  <div class="formbox">
+    <div class="container">
+      <div class="row form-fill text-center">
+        <h2><span>Please fill out the form below if you need assistance.</span></h2>
+        <div class="assistance-form">
+          {% if form.posted_successfully? %}
+          <p class="note form-success" {% if settings.enable_multilang %}data-translate="contact.form.post_success"{% endif %}>
+            {{ 'contact.form.post_success' | t }}
+          </p>
+          {% endif %}
+
+          {{ form.errors | default_errors }}
+          <div class="field">
+            <input type="text" id="contactFormName" name="contact[name]" placeholder="Name"/>
+          </div>
+          <div class="field">
+            <input type="email" placeholder="Email" name="contact[email]" id="contactFormEmail" autocorrect="off" autocapitalize="off" />
+          </div>
+          <div class="field">
+            <input type="phone" placeholder="Phone Number" name="contact[phone]" id="contactFormPhone" pattern="[0-9]*" />
+          </div>
+          <div class="field">
+            <textarea placeholder="Message..." name="contact[body]" id="contactFormMessage"></textarea>
+          </div>
+          <div class="field">
+            <input type="submit" value="Send"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endform %}
+   {% endcomment %}
+</div>
+
+{% schema %}
+{
+"name": "Contact Page",
+"settings": [
+{
+"type": "text",
+"id": "contact_title",
+"label": "Title",
+"default": "Drop Us A Line"
+},
+{
+"type": "textarea",
+"id": "contact_text_desc",
+"label": "Text Description",
+"info":"Use [lang2] to separate multiple language"
+},
+{
+"type": "text",
+"id": "contact_your_name",
+"label": "Placeholder text in Your Name"
+},
+{
+"type": "text",
+"id": "contact_phone_number",
+"label": "Placeholder text in Your Phone"
+},
+{
+"type": "text",
+"id": "contact_your_email",
+"label": "Placeholder text in Your Email"
+},
+{
+"type": "checkbox",
+"id": "display_location",
+"label": "Display Location?",
+"default": true
+},
+{
+"type": "textarea",
+"id": "location_code",
+"label": "Location Code"
+}
+]
+}
+{% endschema %}

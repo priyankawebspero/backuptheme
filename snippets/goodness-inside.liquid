@@ -1,0 +1,103 @@
+{% comment %} Goodness Inside {% endcomment %}
+{% assign fullIngredintList = product.metafields.Product['All Ingredients'] %}
+{% if fullIngredintList == blank %}
+{% assign fullIngredintList = product.metafields.Product['All Ingredients '] %}
+{% endif %}
+{% if fullIngredintList != blank %}
+<div class="goodness-section inside_tab ">
+  {% assign GoodnessInside = product.metafields.Product['Goodness Inside'] %}
+
+  <div class="goodness-inside">
+    {% assign Ingredient1-Description = product.metafields.Product['Ingredient 1 - Description'] %}
+    {% if Ingredient1-Description != 0 and Ingredient1-Description != blank %}
+    <div class="image_section how-to-use detil-page">
+
+      <div class="image__block img-block-1 text-center">
+         <div class="image__block_inner-blg">
+        {% assign Ingredient1-Image = product.metafields.Product['Ingredient 1 - Image'] %}
+        {% if Ingredient1-Image != 0 and Ingredient1-Image != blank %}
+<!--          <div class="image-wrapper"><img src="{{ Ingredient1-Image }}"></div>   -->
+        {% endif %}
+
+        {% assign Ingredient1-Name = product.metafields.Product['Ingredient 1 - Name'] %}
+        {% if Ingredient1-Name != 0 and Ingredient1-Name != blank %}
+        <h4 class="text">{{ Ingredient1-Name }}</h4>
+        {% endif %}
+
+
+        {% assign Ingredient1-Description = product.metafields.Product['Ingredient 1 - Description'] %}
+        {% if Ingredient1-Description != 0 and Ingredient1-Description != blank %}
+        <p>{{ Ingredient1-Description }}</p>
+        {% endif %}
+      </div></div>
+
+      {% assign Ingredient2-Description = product.metafields.Product['Ingredient 2 - Description'] %}
+      {% if Ingredient2-Description != 0 and Ingredient2-Description != blank %}
+      <div class="image__block img-block-1 text-center">
+         <div class="image__block_inner-blg">
+        {% assign Ingredient2-Image = product.metafields.Product['Ingredient 2 - Image'] %}
+        {% if Ingredient2-Image != 0 and Ingredient2-Image != blank %}
+<!--         <div class="image-wrapper"><img src="{{ Ingredient2-Image }}"></div>   -->
+        {% endif %}
+
+        {% assign Ingredient2-Name = product.metafields.Product['Ingredient 2 - Name'] %}
+        {% if Ingredient2-Name != 0 and Ingredient2-Name != blank %}
+        <h4 class="text">{{ Ingredient2-Name }}</h4>
+        {% endif %}
+
+
+        {% assign Ingredient2-Description = product.metafields.Product['Ingredient 2 - Description'] %}
+        {% if Ingredient2-Description != 0 and Ingredient2-Description != blank %}
+        <p>{{ Ingredient2-Description }}</p>
+        {% endif %}
+        </div></div>
+      {% endif %}
+
+
+      {% assign Ingredient3-Description = product.metafields.Product['Ingredient 3 - Description'] %}
+      {% if Ingredient3-Description != 0 and Ingredient3-Description != blank %}
+      <div class="image__block img-block-1 text-center">
+         <div class="image__block_inner-blg">
+        {% assign Ingredient3-Image = product.metafields.Product['Ingredient 3 - Image'] %}
+        {% if Ingredient3-Image != 0 and Ingredient3-Image != blank %}
+<!--         <div class="image-wrapper"><img src="{{ Ingredient3-Image }}"></div>   -->
+        {% endif %}
+
+        {% assign Ingredient3-Name = product.metafields.Product['Ingredient 3 - Name'] %}
+        {% if Ingredient3-Name != 0 and Ingredient3-Name != blank %}
+        <h4 class="text">{{ Ingredient3-Name }}</h4>
+        {% endif %}
+
+
+        {% assign Ingredient3-Description = product.metafields.Product['Ingredient 3 - Description'] %}
+        {% if Ingredient3-Description != 0 and Ingredient3-Description != blank %}
+        <p>{{ Ingredient3-Description }}</p>
+        {% endif %}
+        </div></div>
+      {% endif %}
+
+    </div>
+    {% endif %}
+
+    {% if fullIngredintList != 0 and fullIngredintList != blank %}
+    <p class="full-ingredint-list">{{ fullIngredintList }}</p>
+    <p class="see-full-ingredent">
+     What's in<i class="fa fa-angle-right" style="padding-left:4px;"></i>
+    </p>
+    {% endif %}
+  </div>
+</div>
+<script async>  
+  $(document).ready(function(){
+    $(".see-full-ingredent").click(function(){
+      $(".full-ingredint-list").slideToggle("slow").delay(800);
+    });
+  });
+</script>
+<style>
+  .full-ingredint-list {
+    padding: 50px;
+    display: none;
+  }
+</style>
+{% endif %}

@@ -1,0 +1,262 @@
+@font-face{font-family:'Voltage';src:url(//cdn.shopify.com/s/files/1/0390/2985/t/100/assets/Voltage.eot?#iefix) format("embedded-opentype"),url(//cdn.shopify.com/s/files/1/0390/2985/t/100/assets/Voltage.otf) format("opentype"),url(//cdn.shopify.com/s/files/1/0390/2985/t/100/assets/Voltage.woff) format("woff"),url(//cdn.shopify.com/s/files/1/0390/2985/t/100/assets/Voltage.ttf) format("truetype"),url(//cdn.shopify.com/s/files/1/0390/2985/t/100/assets/Voltage.svg#Voltage) format("svg");font-weight:400;font-style:normal}
+@font-face{font-family:'Braxton';src:url(//cdn.shopify.com/s/files/1/0390/2985/t/100/assets/Braxton.eot?#iefix) format("embedded-opentype"),url(//cdn.shopify.com/s/files/1/0390/2985/t/100/assets/Braxton.otf) format("opentype"),url(//cdn.shopify.com/s/files/1/0390/2985/t/100/assets/Braxton.woff) format("woff"),url(//cdn.shopify.com/s/files/1/0390/2985/t/100/assets/Braxton.ttf) format("truetype"),url(//cdn.shopify.com/s/files/1/0390/2985/t/100/assets/Braxton.svg#Braxton) format("svg");font-weight:400;font-style:normal}
+.instafeed{margin:30px 0}
+#bodylovin_instagram .slick-slide{position:relative}
+#bodylovin_instagram div.slick-slide:after{position:absolute;top:50%;left:50%;z-index:5000;transform:translate(-50%,-50%);counter-increment:brick;content:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjk5Q0I2MEY5MjU3MzExRUFBNDQwODNFNEJDRDFGNDYzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjk5Q0I2MEZBMjU3MzExRUFBNDQwODNFNEJDRDFGNDYzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTlDQjYwRjcyNTczMTFFQUE0NDA4M0U0QkNEMUY0NjMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OTlDQjYwRjgyNTczMTFFQUE0NDA4M0U0QkNEMUY0NjMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7rSl+OAAACNklEQVR42rSWTUhUURTHfWGTWUkQA0IwUQwSEVKLVlGQCIXWoiK/aFXRSkhaJbiJwmgVLSIQLWgT6EJaZYuhhe6CXEgKokgFUcGUUWKj4fN35X/hzuN9NdaBH/fNPe+dc8+55547nu/7Vf9bqkPmDkInHIPdsJbCjge/4R2MwHiZ1kTicBOW/M3LINRau56Trh54oOeX8Bw+aZVJYqKtgxa4pm+GocPEYSNogGWtoi8Q3d9y1slG10YQUtzV5FiFhjOw3/ndJ3vj4NnJV5rsrNDJQ1iDVv0+AKvwHbK2unZq/BKT9yPQCnkowmvtndmPDzCneSM/4CfUbiDPE4qkOWKl/fAnpIoKkNM7W533s/BN+5yrTlE5t6FXzy9gAvZBFzTBKJyEpUgLCZHkoSTd9YDuELyX7kZAVxbJloQozkAGCjAQ0E3DPT2fjzOS5KRe49sI/RuNe+NsJTlZ1JiP0DdoLMb1uCQnBY2mXZwO6PbALT2PbSZdk/AUtqmK7sNF6FaVNcJHeBxrJcU52QEjEd12Fo6GfBN6TjynmwbF1P8lVdAFbfIvnfhnzikvW7swdj3rZCXQXsJkVKSRjFrKqsHuyYzGc//oxjWdoAYW4KvN4QnluOR00koxLX9B9nqDN+MQXNFd3a+brZjyZjRGtsMpuAM5mILjphu7TkwOn0C78+FiyvT4+r7GKf02tf+ySKxchqtwGHbJQJp/KyWYVwYe6T6pinJiJavVpXViKulz2DFYF2AACxgAbebQQ1AAAAAASUVORK5CYII=);transition:font-size .25s,opacity .25s ease-in-out;opacity:0;font-size:1.25em}
+#bodylovin_instagram div.slick-slide:hover:after{opacity:1}
+.bodylovin .footer-default .footer-bottom{padding:18px 0 20px}
+.bodylovin .footer-default .footer-bottom .three_row_combine{display:block}
+.bodylovin .footer-default .footer-bottom address{width:100%;margin:0;max-width:100%}
+.bodylovin .footer-default .footer-bottom address div{line-height:1.2;font-size:15px;letter-spacing:1px;font-family:'Lato',sans-serif}
+.bodylovin .footer-default .footer-top{border-top:1px solid #ebebeb;padding:37px 0 20px}
+.bodylovin .site-footer .foot-title{font-family:'Lato',sans-serif;font-size:26px;font-weight:900!important;color:#5e0d8b!important;margin:7px 0 10px!important;letter-spacing:.2px}
+.bodylovin .site-footer .col-footer ul li{margin:4px 0;display:block}
+.bodylovin .site-footer .foot-link{font-size:16px;font-weight:500;font-family:'Lato',sans-serif;color:#747474;letter-spacing:.2px}
+.bodylovin .site-footer .foot-link:hover{color:#000}
+.bodylovin .footer-default .footer-top .footer-col-right section.newsletter{margin:6px 0 10px;display:inline-block;width:100%}
+.bodylovin .newsletter_form{display:block;position:relative}
+.bodylovin .site-footer .newsletter .input-group-field{width:100%;border-radius:0;font-size:16px;color:#747474;font-family:'Lato',sans-serif;padding-right:120px;border-color:#ebebeb}
+.bodylovin .site-footer .newsletter input.btn{position:absolute;right:0;top:0;border-radius:0;background:#d6006d!important;font-family:'Lato',sans-serif;font-size:16px;letter-spacing:.2px;height:45px;min-width:110px}
+.bodylovin .site-footer .newsletter input.btn:hover{background:#5e0d8b!important}
+.bodylovin p.newsletter-des{font-family:font-family: 'Lato',sans-serif;font-family:Lato,sans-serif;font-size:16px;color:#747474;font-weight:500;letter-spacing:.2px;padding-top:5px}
+.bodylovin .site-footer .footer-social{padding-left:30px;display:block}
+.bodylovin .site-footer .footer-social .social-icons li{width:auto;height:auto;margin-right:6px}
+.bodylovin .site-footer .footer-social .social-icons li a{width:37px;height:37px;border:1px solid #c4c4c4;font-size:14px;line-height:40px;color:#c4c4c4}
+.bodylovin .site-footer .footer-social .social-icons li a:hover{color:#5e0d8b;border-color:#5e0d8b}
+#bodylovin #shopify-section-home-slideshow #slideshow-home-slideshow{margin-bottom:14px}
+#bodylovin .doubly-wrapper{margin-top:-36px}
+#bodylovin #shopify-section-bodylovin-block-banner-2 .img-box img{width:100%}
+#bodylovin .img-box img{border-radius:0}
+#bodylovin #shopify-section-bodylovin-block-banner-2 #custom-block-bodylovin-block-banner-2{margin-bottom:12px}
+#bodylovin #shopify-section-bodylovin-block-banner-3 .img-box img{width:100%}
+#bodylovin #shopify-section-bodylovin-featured-product .widget-title{text-align:left;border-bottom:1px solid #ebebeb;margin-bottom:25px}
+#bodylovin #shopify-section-bodylovin-featured-product .widget-title .box-title{font-size:28px;font-family:'Lato',sans-serif;/font-weight:900;letter-spacing:.2px;text-align:left;display:inline-block;margin-bottom:26px}
+#bodylovin #shopify-section-bodylovin-featured-product .row{margin:0}
+#bodylovin #shopify-section-bodylovin-featured-product .row .col-12.col-md-12{box-shadow:0 0 6px rgba(0,0,0,0.15);border:1px solid #ebebeb;padding:26px 22px}
+#bodylovin #shopify-section-bodylovin-featured-product .row{margin:0;position:static}
+#custom-block-bodylovin-block-banner-5 a{display:inline-block}
+#bodylovin #shopify-section-bodylovin-featured-product .widget-title .box-title .title{padding:0}
+#bodylovin #shopify-section-bodylovin-featured-product .widget-product .slick-arrow{top:46px;right:0;left:auto;background:#d6d6d6;color:#fff;width:37px;height:37px;line-height:37px;padding:0;text-align:center;opacity:1!important}
+#bodylovin #shopify-section-bodylovin-featured-product .widget-product button.slick-prev.slick-arrow{right:70px;margin:0}
+#bodylovin #shopify-section-bodylovin-featured-product .widget-product .slick-arrow:hover{background:#d6006d;color:#fff}
+#bodylovin #shopify-section-bodylovin-featured-product .widget-product .slick-arrow:focus{background:#d6006d;color:#fff}
+#bodylovin #shopify-section-bodylovin-featured-product .widget-product .slick-next.slick-arrow{right:22px}
+#bodylovin #shopify-section-bodylovin-featured-product .products-grid .product-image .product-grid-image{border:1px solid #ebebeb}
+#bodylovin #shopify-section-bodylovin-featured-product .products-grid .product-top:hover span.images-two{opacity:.4}
+#bodylovin #shopify-section-bodylovin-featured-product .products-grid .product-image .product-grid-image img{border-radius:0}
+#bodylovin #shopify-section-bodylovin-featured-product .slick-list{margin:0 -10px}
+#bodylovin #shopify-section-bodylovin-featured-product .product-item .product-top:hover .product-grid-image:before{opacity:.75}
+#bodylovin #shopify-section-bodylovin-featured-product .product-item .product-grid-image:before{background-color:rgba(214,0,109,0.99)}
+#bodylovin #shopify-section-bodylovin-featured-product .products-grid .grid-item{padding:0 10px}
+#bodylovin #shopify-section-bodylovin-featured-product{margin-top:40px;display:inline-block;width:100%}
+div#shopify-section-bodylovin-block-banner-5 .img-box img{margin-top:-1px;position:relative;z-index:-1}
+#shopify-section-bodylovin-block-banner-2 .widget-title .box-title:before{content:"";display:block;position:relative;width:100px;height:3px;background:#d6006d;margin:0 auto;margin-bottom:35px}
+#shopify-section-bodylovin-block-banner-2 .widget-title .box-title{font-size:45px;margin-bottom:33px;padding-top:20px;font-family:'Voltage';letter-spacing:3px}
+#shopify-section-bodylovin-block-banner-4 .home-custom-block{margin:0}
+#shopify-section-home-custom-block-baner .img-box img{width:100%}
+#shopify-section-bodylovin-block-banner-6 .img-box img{width:100%}
+div#shopify-section-bodylovin-block-banner-4 .img-box img{width:100%}
+div#shopify-section-bodylovin-block-banner-5 .img-box img{width:100%}
+.bodylovin .cart-icon svg{stroke-width:4px}
+.body-plumb-fea-inner{text-align:center}
+.body-plumb-fea-inner-box{text-align:center;width:25%;padding:0 15px;margin:20px -2px;display:inline-block}
+.body-plumb-fea-inner-box h3{font-size:18px;color:#000;text-align:center;margin-bottom:2px;margin-top:25px;font-family:'Lato',sans-serif;letter-spacing:.4px}
+.body-plumb-fea-inner{display:inline-block;width:100%;text-align:center}
+.custom-heading-area h1{text-align:center;font-size:32px;color:#5e0d8b;font-weight:900;font-family:'Lato',sans-serif;letter-spacing:.4px;margin-bottom:37px;padding-top:5px}
+.custom-heading-area h1:before{content:"";display:block;position:relative;width:100px;height:3px;background:#d6006d;margin:0 auto;margin-bottom:33px}
+#bodylovin h1,#bodylovin h1,#bodylovin h3,#bodylovin h4,#bodylovin p,#bodylovin ul,#bodylovin li{font-family:'Lato',sans-serif}
+#shopify-section-bodylovin-block-banner-2 .widget-title .box-title{font-weight:900}
+.custom-heading-area{text-align:center}
+.custom-heading-area ul li{display:inline-block;color:#ffcc3f;font-size:22px;margin-right:18px;padding-right:18px;border-right:2px solid #ffcc3f;line-height:22px;margin-top:0;margin-bottom:8px}
+.custom-heading-area ul li:last-child{border:none;margin-right:0;padding-right:0}
+.body-plumb-fea-outer{display:inline-block;width:100%;vertical-align:top;margin:45px 0 24px}
+#bodylovin #shopify-section-section_image_text h3{text-align:center;font-size:32px;color:#5e0d8b;font-weight:900;font-family:'Lato',sans-serif;letter-spacing:.4px;margin-bottom:40px;padding-top:5px}
+#bodylovin #shopify-section-section_image_text h3:before{content:"";display:block;position:relative;width:100px;height:3px;background:#d6006d;margin:0 auto;margin-bottom:37px}
+#bodylovin #shopify-section-section_image_text .row{-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}
+#bodylovin #shopify-section-section_image_text .spb_wrapper{text-align:center}
+#bodylovin #shopify-section-section_image_text .spb_wrapper p.gl_custom_heading.gl_mb_15{text-align:center!important;display:inline-block;font-size:32px!important;font-weight:600;color:#d6006d!important;letter-spacing:1.5px;position:relative;margin-bottom:10px}
+#bodylovin #shopify-section-section_image_text .spb_wrapper p.gl_custom_heading.gl_mb_15:after{content:"";width:100%;height:5px;border-bottom:4px dotted #49beb0;display:block;margin-top:12px}
+#bodylovin #shopify-section-section_image_text .spb_wrapper h2{font-size:48px!important;letter-spacing:4px;font-weight:500;display:inline-block;position:relative;font-family:'Voltage';margin-bottom:18px}
+#bodylovin #shopify-section-section_image_text .spb_wrapper h2:after{content:"";width:100%;height:5px;border-bottom:4px dotted #49beb0;display:block;margin-top:6px}
+#bodylovin #shopify-section-section_image_text span.and{font-family:'Braxton';display:block;font-size:48px;color:#d6006d;font-weight:600;line-height:normal;line-height:35px;margin-bottom:16px}
+#bodylovin #shopify-section-section_image_text span.loveline{font-family:'Lato',sans-serif;font-size:24px;color:#ffcc3f;font-weight:700;letter-spacing:3px;display:block;padding-top:5px}
+#bodylovin #shopify-section-section_image_text .spb_wrapper{text-align:center;margin:0}
+#bodylovin #shopify-section-bodylovin-blogs .widget-title .box-title{font-size:32px;font-weight:900;margin-bottom:42px;padding-top:13px;letter-spacing:.5px}
+#bodylovin #shopify-section-bodylovin-blogs .widget-title .box-title:before{content:"";display:block;position:relative;width:100px;height:3px;background:#d6006d;margin:0 auto;margin-bottom:45px}
+#bodylovin .product-item .product-bottom a.product-title{font-family:'Lato',sans-serif;font-size:16px;font-weight:500;letter-spacing:.2px;margin-bottom:5px}
+#bodylovin .product-item .product-bottom .jdgm-preview-badge .jdgm-star.jdgm-star{font-size:14px}
+#bodylovin .product-item .action form button.btn.add-to-cart-btn{margin:0 auto!important;display:block;border-radius:0;font-family:'Voltage';letter-spacing:2px;font-size:19px;padding:12px;transition:all .5s ease-in-out}
+#bodylovin #shopify-section-bodylovin-featured-product .row .col-12.col-md-12{padding-bottom:0}
+#bodylovin .blog-item{position:relative}
+#bodylovin .article-img{position:relative}
+#bodylovin .article-img .animate-scale{padding-bottom:110%}
+#bodylovin .article-img img{position:absolute;bottom:0;left:0;top:0;width:100%;height:100%;object-fit:cover}
+#bodylovin .article-img .animate-scale:before{top:15px;left:15px;width:auto;height:auto;opacity:1!important;right:15px;bottom:15px;border:2px solid #fff}
+#bodylovin .Bodylovin_blog_content h3.article-title{margin-bottom:5px;margin-top:12px;text-transform:inherit}
+#bodylovin .Bodylovin_blog_content h3.article-title a{color:#000;font-size:20px;line-height:1.2;display:block}
+#bodylovin .Bodylovin_blog_content h3.article-title a:hover{color:#d8006f}
+#bodylovin span.article__date{color:#000;font-family:'Lato',sans-serif;font-size:14px;text-transform:capitalize;font-weight:500;letter-spacing:1px}
+#shopify-section-bodylovin-blogs #home-blog-bodylovin-blogs{margin-bottom:43px}
+#bodylovin #shopify-section-bodylovin_Testimonials h4.title{font-size:32px;font-weight:900;margin-bottom:42px;padding-top:13px;color:#5e0d8b;letter-spacing:.5px}
+#bodylovin #shopify-section-bodylovin_Testimonials h4.title:before{content:"";display:block;position:relative;width:100px;height:3px;background:#d6006d;margin:0 auto;margin-bottom:45px}
+#bodylovin #shopify-section-bodylovin_Testimonials .spb_wrapper{max-width:1170px;padding:0 15px;margin:0 auto}
+#bodylovin #shopify-section-bodylovin_Testimonials .testimonial-inner{margin:20px 17px;padding:35px 20px;text-align:center;box-shadow:0 0 8px #ddd}
+#bodylovin #shopify-section-bodylovin_Testimonials .slick-current .testimonial-inner{box-shadow:0 0 19px #ddd}
+#bodylovin #shopify-section-bodylovin_Testimonials .testimonial-inner .testimonial-avatar img{width:150px;height:150px;object-fit:cover;border-radius:100%;margin-bottom:32px;border:2px solid #ebebeb}
+#bodylovin #shopify-section-bodylovin_Testimonials .slick-current .testimonial-inner .testimonial-avatar img{border-color:#78349e}
+#bodylovin #shopify-section-bodylovin_Testimonials span{font-family:'Lato',sans-serif}
+#bodylovin #shopify-section-bodylovin_Testimonials span.author_name{display:block;font-family:'Lato',sans-serif;color:#d6006d;font-size:18px;font-weight:600;letter-spacing:.5px;margin-bottom:3px}
+#bodylovin #shopify-section-bodylovin_Testimonials span.testimonial_title{color:#3e3e3e;font-size:16px;font-family:'Lato',sans-serif;font-weight:400;letter-spacing:.5px}
+#bodylovin #shopify-section-bodylovin_Testimonials .testimonial-content{font-family:'Lato',sans-serif;color:#8e8d8d;font-size:15px;letter-spacing:.5px;padding:20px 10px 0 15px;position:relative;line-height:1.4;font-weight:400}
+#bodylovin #shopify-section-bodylovin_Testimonials .testimonial-content:before{content:"";background:url(//cdn.shopify.com/s/files/1/0390/2985/files/testimonials-quote-icon.png);width:20px;height:17px;display:block;position:absolute;left:-5px;top:8px}
+#bodylovin #shopify-section-bodylovin_Testimonials button.slick-next.slick-arrow,#bodylovin #shopify-section-bodylovin_Testimonials button.slick-prev.slick-arrow{text-align:center;background:#d6d6d6;color:#fff;width:37px;height:37px;padding:5px}
+#bodylovin #shopify-section-bodylovin_Testimonials button.slick-next.slick-arrow:hover,#bodylovin #shopify-section-bodylovin_Testimonials button.slick-next.slick-arrow:focus{background:#d6006d}
+#bodylovin #shopify-section-bodylovin_Testimonials button.slick-prev.slick-arrow:hover,#bodylovin #shopify-section-bodylovin_Testimonials button.slick-prev.slick-arrow:focus{background:#d6006d}
+#bodylovin #shopify-section-bodylovin_Testimonials button.slick-next.slick-arrow svg{width:15px;height:15px;line-height:15px;position:relative;top:3px}
+#bodylovin #shopify-section-bodylovin_Testimonials button.slick-prev.slick-arrow svg{width:15px;height:15px;line-height:15px;position:relative;top:3px}
+#bodylovin .main-content{padding-bottom:0}
+#bodylovin #shopify-section-bodylovin_instagram i.fa{display:none}
+#bodylovin #shopify-section-bodylovin_instagram h2{margin-bottom:0;font-size:32px;font-weight:900;margin-bottom:10px;padding-top:0;color:#5e0d8b;letter-spacing:.5px;padding-top:20px}
+#bodylovin #shopify-section-bodylovin_instagram h2 span.red-color{display:block;margin-top:28px;color:#d6006d;font-size:24px;letter-spacing:1px;font-weight:600}
+#bodylovin #shopify-section-bodylovin_instagram h2 span.red-color img{margin-right:12px}
+#bodylovin #shopify-section-bodylovin_instagram h2:before{content:"";display:block;position:relative;width:100px;height:3px;background:#d6006d;margin:0 auto;margin-bottom:30px}
+#bodylovin #shopify-section-bodylovin_instagram section#new-instagram-bodylovin_instagram{background:none!important}
+#bodylovin #shopify-section-bodylovin_instagram h3.box-title{margin:0!important;font-size:0}
+#bodylovin #shopify-section-bodylovin_instagram span.title{padding:0!important}
+#bodylovin #shopify-section-bodylovin_instagram p{text-align:center;font-size:24px;line-height:1.8;color:#d6006d;font-weight:600;width:100%;max-width:1170px;margin:0 auto;letter-spacing:1px;margin-top:-15px}
+#bodylovin #shopify-section-bodylovin_instagram p span.blue-code{color:#5e0d8b}
+#bodylovin #shopify-section-bodylovin_instagram p span.hashtag{color:#ffcc3f}
+#bodylovin #instafeed{margin-bottom:0}
+#bodylovin #instafeed li{box-shadow:none!important}
+#bodylovin span.article__date:before{content:"\f073";display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.body-first-part-empty{display:inline-block;width:37.5%;padding:0 15px;margin:0 -2px}
+.body-sec-part-empty{display:inline-block;width:25%;padding:0 15px;margin:0 -2px}
+.body-third-part-empty{display:inline-block;width:12.5%;padding:0 15px;margin:0 -2px}
+#bodylovin .container-fluid{max-width:1440px}
+#bodylovin #new-instagram-bodylovin_instagram{margin-bottom:30px}
+#bodylovin #shopify-section-bodylovin-four-banner .container-fluid{max-width:1170px;text-align:center}
+#bodylovin #shopify-section-bodylovin-four-banner .heading h3{text-align:center;font-size:32px;color:#5e0d8b;font-weight:900;font-family:'Lato',sans-serif;letter-spacing:.4px;padding-top:10px}
+#bodylovin #shopify-section-bodylovin-four-banner .heading h3:before{content:"";display:block;position:relative;width:100px;height:3px;background:#d6006d;margin:0 auto;margin-bottom:30px}
+#bodylovin #shopify-section-bodylovin-four-banner{padding-bottom:25px}
+#bodylovin #shopify-section-bodylovin-four-banner .animate-scale:after{content:"";position:absolute;left:12px;right:12px;bottom:12px;top:12px;border:1px solid #fff}
+#bodylovin #sub-banner-bodylovin-four-banner .banner-title{font-size:17px;text-transform:capitalize;letter-spacing:.5px}
+@media (min-width: 992px) {
+#bodylovin #shopify-section-bodylovin_Testimonials button.slick-next.slick-arrow{right:-15px}
+#bodylovin #shopify-section-bodylovin_Testimonials button.slick-prev.slick-arrow{left:-15px}
+#shopify-section-bodylovin-blogs .row.list-blogs{padding:0 4px}
+#shopify-section-bodylovin-blogs .content-blog .col-12.col-sm-3.four-blocks.item{padding:0 11px}
+#bodylovin #shopify-section-bodylovin-featured-product .product-item .inner-top:hover .product-top .product-grid-image:before{opacity:.75}
+#bodylovin .product-item .inner-top:hover .product-top .product-grid-image:before{opacity:.75!important}
+#bodylovin .product-item .inner-top{position:relative}
+#bodylovin .product-item .action{position:static}
+#bodylovin .product-item .inner-top:hover .action form button.btn.add-to-cart-btn{opacity:1;visibility:visible}
+#bodylovin .product-item .action form button.btn.add-to-cart-btn{width:100%;max-width:145px;margin:0 auto!important;display:block;border-radius:0;background:none!important;border:1px solid #fff;font-family:'Voltage';letter-spacing:2px;font-size:19px;padding:12px;transition:all .5s ease-in-out;position:absolute;top:110px;left:0;right:0;margin:auto;z-index:99;opacity:0;visibility:hidden}
+#bodylovin .product-item .action form button.btn.add-to-cart-btn:hover{background:#5e0d8b!important}
+}
+@media (min-width: 1024px) {
+.bodylovin .footer-newsletter.desktop-xs{padding-left:30px}
+.bodylovin .footer-default .footer-top .footer-col-left{-webkit-box-flex:0;-ms-flex:0 0 66.66%;flex:0 0 66.66%;max-width:66.66%}
+.bodylovin .footer-default .footer-top .footer-col-right{-webkit-box-flex:0;-ms-flex:0 0 33.33%;flex:0 0 33.33%;max-width:33.33%}
+}
+@media (min-width: 1200px) {
+#bodylovin #shopify-section-bodylovin_Testimonials button.slick-next.slick-arrow{right:-30px}
+#bodylovin #shopify-section-bodylovin_Testimonials button.slick-prev.slick-arrow{left:-30px}
+}
+@media (min-width: 1310px) {
+#bodylovin #shopify-section-bodylovin_Testimonials button.slick-next.slick-arrow{right:-40px}
+#bodylovin #shopify-section-bodylovin_Testimonials button.slick-prev.slick-arrow{left:-40px}
+}
+@media (min-width: 1400px) {
+.bodylovin #shopify-section-bodylovin_Testimonials .spb_wrapper{max-width:1170px;padding:0 15px}
+.bodylovin #instagram-feed-box{margin:0 -15px}
+}
+@media (max-width:1199px) {
+.bodylovin #shopify-section-bodylovin_Testimonials .spb_wrapper{max-width:970px}
+.body-plumb-fea-inner-box h3{font-size:16px}
+.bodylovin .jas-mb-style{background-color:#ffcd41}
+.bodylovin .jas-mb-style .acc-links{color:#fff;text-decoration:underline}
+}
+@media (max-width:1020px) {
+#bodylovin #shopify-section-section_image_text .spb_wrapper h2.hidden-sm.hidden-xs{display:none!important}
+}
+@media (max-width:991px) {
+.bodylovin #shopify-section-bodylovin_Testimonials .spb_wrapper{max-width:750px}
+}
+@media (max-width:991px) and (min-width:768px) {
+#bodylovin #shopify-section-section_image_text .spb_wrapper p.gl_custom_heading.gl_mb_15{font-size:22px!important}
+#bodylovin #shopify-section-section_image_text .spb_wrapper h2{font-size:37px!important;margin-bottom:10px}
+#bodylovin #shopify-section-section_image_text span.and{font-size:40px;color:#d6006d;font-weight:600;line-height:normal;line-height:27px;margin-bottom:10px}
+#bodylovin #shopify-section-section_image_text span.loveline{font-size:20px}
+.body-plumb-fea-inner-box h3{font-size:14px;margin-top:15px}
+#bodylovin #shopify-section-bodylovin-four-banner .container-fluid{max-width:750px;text-align:center}
+#bodylovin #shopify-section-bodylovin-four-banner .home-sub-banner .item,#bodylovin #shopify-section-bodylovin-four-banner .home-custom-sub-banner .item{margin-bottom:30px}
+#bodylovin #shopify-section-bodylovin-four-banner .item.col-3.four-blocks{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}
+#bodylovin #shopify-section-bodylovin-four-banner .img-box img{border-radius:0;width:100%}
+}
+@media (max-width:767px) {
+.bodylovin #shopify-section-bodylovin_Testimonials .spb_wrapper{max-width:540px}
+#bodylovin #shopify-section-section_image_text .spb_wrapper h2.hidden-sm.hidden-xs{display:none!important}
+#bodylovin #shopify-section-section_image_text .spb_wrapper p.gl_custom_heading.gl_mb_15{margin-top:35px}
+.body-plumb-fea-inner-box{width:50%;vertical-align:top}
+.custom-heading-area h1,#shopify-section-bodylovin-block-banner-2 .widget-title .box-title{font-size:28px}
+#bodylovin #shopify-section-bodylovin-featured-product .widget-title .box-title{font-size:28px}
+#bodylovin #shopify-section-bodylovin-blogs .widget-title .box-title{font-size:28px}
+#bodylovin #shopify-section-bodylovin_Testimonials h4.title{font-size:28px}
+#bodylovin #shopify-section-bodylovin_instagram h2{font-size:28px}
+#bodylovin #shopify-section-bodylovin_instagram h2 span.red-color{margin-top:20px;font-size:22px}
+#bodylovin #shopify-section-bodylovin_instagram p{font-size:22px;line-height:1.5;max-width:540px}
+#bodylovin .product-item .product-bottom{text-align:center}
+#bodylovin .product-item .action form button.btn.add-to-cart-btn{margin-top:20px!important}
+#bodylovin #shopify-section-section_image_text h3{font-size:28px}
+.custom-heading-area ul li{font-size:17px;margin-right:10px;padding-right:12px;line-height:18px}
+#shopify-section-bodylovin-block-banner-2 .widget-title .box-title:before{margin-bottom:25px}
+.body-plumb-fea-inner .mobile-hide{display:none!important}
+.body-plumb-fea-inner{padding:0 2px}
+#bodylovin #shopify-section-section_image_text .spb_wrapper p.gl_custom_heading.gl_mb_15{font-size:28px!important;letter-spacing:1px}
+#bodylovin #shopify-section-section_image_text .spb_wrapper h2{font-size:42px!important}
+.body-plumb-fea-outer{margin:40px 0 24px}
+#bodylovin #shopify-section-bodylovin-featured-product .widget-product .slick-arrow{box-shadow:none!important}
+#bodylovin #shopify-section-bodylovin-featured-product .widget-product button.slick-prev.slick-arrow{right:65px}
+#bodylovin .article-img .animate-scale{padding-bottom:0}
+#bodylovin .article-img img{position:relative;bottom:0;left:0;top:0;width:auto;height:auto;object-fit:inherit}
+#bodylovin .Bodylovin_blog_content{text-align:center}
+#bodylovin #shopify-section-bodylovin-blogs .widget-title .box-title:before{margin-bottom:25px}
+#bodylovin #shopify-section-bodylovin_Testimonials h4.title{padding-top:0;margin-bottom:25px}
+#bodylovin .gl_custom_bodylovin_Testimonials{margin-bottom:40px!important;padding-top:20px!important}
+#bodylovin .footer-default .footer-top{padding:25px 0 0;margin-top:-20px}
+#bodylovin #shopify-section-bodylovin_instagram .widget-title.not-before{margin-top:0;margin-bottom:0}
+.bodylovin .site-footer .footer-social{padding-left:0;display:block;margin-bottom:20px}
+#bodylovin #instafeed{margin-bottom:0;padding:0}
+#bodylovin #shopify-section-bodylovin_instagram p{margin-top:-15px}
+.bodylovin p.newsletter-des{padding-bottom:10px;margin-top:-5px;text-align:center}
+.bodylovin #new-instagram-bodylovin_instagram{margin-bottom:6px}
+.bodylovin .site-footer .foot-title{font-size:18px;margin:7px 0 0!important}
+.bodylovin .footer-default .footer-bottom{padding:10px 0 12px;width:100%;margin-top:20px}
+.bodylovin .site-footer .newsletter .input-group-field{max-width:100%}
+.bodylovin .site-footer .footer-newsletter .foot-title{font-size:24px}
+#bodylovin #shopify-section-bodylovin_Testimonials button.slick-next.slick-arrow,#bodylovin #shopify-section-bodylovin_Testimonials button.slick-prev.slick-arrow{box-shadow:none!important}
+#shopify-section-bodylovin-blogs #home-blog-bodylovin-blogs{margin-bottom:23px}
+.body-plumb-fea-inner-box{margin:15px -2px}
+#bodylovin #shopify-section-bodylovin-four-banner .item.col-3.four-blocks{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%;margin-bottom:30px}
+#bodylovin #shopify-section-bodylovin-four-banner .img-box img{border-radius:0;width:100%}
+#bodylovin #shopify-section-bodylovin-four-banner .heading h3{font-size:28px}
+#shopify-section-bodylovin-block-banner-2 .widget-title .box-title{font-size:38px}
+}
+@media (max-width:767px) and (min-width:576px) {
+#bodylovin #shopify-section-bodylovin-four-banner .container-fluid{max-width:540px;text-align:center}
+#bodylovin #shopify-section-bodylovin-four-banner .item.col-3.four-blocks{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}
+#bodylovin #shopify-section-bodylovin-four-banner .img-box img{border-radius:0;width:100%}
+#bodylovin #shopify-section-bodylovin-blogs .col-12.col-sm-3.four-blocks.item{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}
+#bodylovin .Bodylovin_blog_content h3.article-title a{font-size:18px}
+}
+@media (max-width:575px) {
+#shopify-section-bodylovin-block-banner-2 .widget-title .box-title span.title{padding:0}
+.bodylovin #shopify-section-bodylovin_Testimonials .spb_wrapper{max-width:100%}
+#bodylovin #shopify-section-bodylovin-featured-product .widget-product .slick-arrow{width:30px;height:30px;line-height:30px}
+#bodylovin #shopify-section-bodylovin-featured-product .slick-arrow .fa{font-size:18px;font-weight:600}
+#bodylovin #shopify-section-bodylovin-featured-product .row .col-12.col-md-12{padding:26px 15px}
+#bodylovin .Bodylovin_blog_content h3.article-title a{font-size:18px}
+#bodylovin #shopify-section-section_image_text .spb_wrapper p.gl_custom_heading.gl_mb_15{font-size:26px!important;letter-spacing:.5px}
+.bodylovin #shopify-section-section_image_text .spb_wrapper h2{margin-bottom:12px}
+.bodylovin .footer-default .footer-bottom address div{font-size:14px;letter-spacing:.5px}
+}

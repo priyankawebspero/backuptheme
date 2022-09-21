@@ -1,0 +1,212 @@
+{{ 'pagination.js' | asset_url | script_tag }}
+
+
+{% if section.settings.blog_post != blank %}
+{% assign limit = 12 %}
+{% else %}
+{% assign limit = 12 %}
+{% endif %}
+
+{% capture blogs_data %}
+{% assign featuredBlogs = "ingredients,lifestyle,tips-tricks-easy-hacks-more,skincare,haircare,body-bloggin-1,concerns,world-of-goodness,whats-new,plumblogs" | split:',' %}      
+
+{% assign article_list = '' %}
+
+{% assign featuredArticles = false %}
+
+{% for featuredBlog in featuredBlogs %}
+    {% if blogs[featuredBlog].articles %}
+     {% if featuredArticles %}
+       {% assign featuredArticles = featuredArticles | concat:blogs[featuredBlog].articles %}
+     {% else %}
+       {% assign featuredArticles = blogs[featuredBlog].articles %}
+     {% endif %}
+    {% endif %}
+{% endfor %}
+
+
+    {% if featuredArticles %}
+      {% assign featuredArticles = featuredArticles | sort:'published_at' | reverse %}
+      {% for article in featuredArticles %}
+        {% include 'blog-item' %}
+    {% endfor %}
+
+    {% endif %}
+{% endcapture %}
+
+{% comment %}
+{% assign bloghandles = 'ingredients,lifestyle,tips-tricks-easy-hacks-more' | split:',' %}
+<div class="content-blog blog-default">
+{% for bloghandlesblogs in bloghandles %}
+      {% assign featuredArticles = blogs[bloghandlesblogs].articles %}
+   
+  <ul class="list-blog"> 
+    {% for article in featuredArticles %}
+    {% include 'blog-item' %}
+    {% endfor %}
+  </ul>
+    {% if paginate.pages > 1 %}
+  {% include 'pagination' %}
+  {% endif %}
+
+{% endfor %}
+</div>
+{% endcomment %}
+
+<div class="content-blog blog-default">
+  <ul class="list-blog"> 
+   {{blogs_data}}
+  </ul>
+</div>
+<div id="pagination-container"></div>
+
+
+
+<style>
+  .blog-page-info{
+    background:#fff;
+    padding-bottom:45px;
+  }
+  .blog-page-info .page-top-sec .page-header h2{
+    margin-bottom: 25px;
+    color: #5e0c8c;
+    font-weight: 400;
+    padding: 25px 0;
+    font-family: roboto;
+  }
+  .blog-page-info .homepage-blog-tab-sec{
+    padding:25px 0 40px; 
+  }
+  .blog-page-info .list-blog{
+    flex-wrap:wrap !important; 
+  }
+  .blog-page-info .list-blog li.blog-item{
+    width:33.33% !important;
+    margin-bottom:35px !important;
+  }
+  .blog-page-info .list-blog li.blog-item .actions a.btn{
+    color:#fff !important;
+    text-decoration:none !important;
+    text-transform:initial !important;
+
+    margin-bottom:0 !important;
+  }
+  .blog-page-info .blog-tab-sec-data p.text-center{
+    padding-top: 30px;
+    border-top: 1px solid #d7d7d7; 
+  }
+  .blog-page-info li.blog-item  .article-excerpt .des{
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400; 
+    padding-bottom:20px;
+  }
+  .blog-page-info  .share-icons-and-readmore{
+    align-items: center;
+    display: flex;
+  }
+  .blog-page-info .share-icons-and-readmore .blog-share-icon{
+    margin-left:15px; 
+  }
+  .blog-page-info .share-icons-and-readmore .blog-share-icon .share_toolbox{
+    margin-bottom:0; 
+  }
+  .blog-page-info .share-icons-and-readmore .blog-share-icon span{
+    font-size: 14px;
+    text-transform: lowercase;
+    font-weight: 400; 
+  }
+  .blog-page-info .share-icons-and-readmore .blog-share-icon a{
+    font-size: 13px;
+    padding: 5px; 
+  }
+  .blog-page-info .share-icons-and-readmore .blog-share-icon a .fa{
+    position: relative;
+    top: 7px; 
+  }
+  @media ( max-width: 767px ) {
+    .blog-page-info .list-blog li.blog-item{
+      width:100% !important; 
+      margin-bottom:25px !important;
+    }
+    .blog-page-info .list-blog li.blog-item .article-title{
+      font-size: 16px !important;
+      min-height: unset !important;
+    }
+    .blog-page-info{
+      padding-bottom:0; 
+    }
+    .blog-page-info .page-top-sec .page-header h2 {
+      margin-bottom: 40px;
+    }
+  }
+</style>
+
+
+{% schema %}
+{
+"name": "Blog Default",
+"class": "col-12 col-xl-12",
+"settings": [      
+{
+"type": "text",
+"id": "blog_post",
+"label": "Blog post per page",
+"default": "3"
+},
+{
+"type": "select",
+"id": "blog_text_align",
+"label": "Blog Text Align",
+"options": [
+{
+"value": "center",
+"label": "Center"
+},
+{
+"value": "left",
+"label": "Left"
+},
+{
+"value": "right",
+"label": "Right"
+}
+],
+"default": "left",
+"info": "Default Value: Left"
+},
+{
+"type": "checkbox",
+"id": "blog_show_author",
+"label": "Show author",
+"default": true
+},
+{
+"type": "checkbox",
+"id": "blog_show_date",
+"label": "Show date",
+"default": true
+}
+]
+}
+{% endschema %}
+
+<script>
+ 	var items = $(".blog-item");
+    var numItems = items.length;
+    var perPage = 9;
+
+    items.slice(perPage).hide();
+
+    jQuery('#pagination-container').pagination({
+      items: numItems,
+      itemsOnPage: perPage,
+      prevText: "{{ 'collections.toolbar.previous' | t }}",
+      nextText: "{{ 'collections.toolbar.next' | t }}",
+      onPageClick: function (pageNumber) {
+      var showFrom = perPage * (pageNumber - 1);
+      var showTo = showFrom + perPage;
+      items.hide().slice(showFrom, showTo).show();
+    }
+                                               });
+</script>

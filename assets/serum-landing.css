@@ -1,0 +1,1952 @@
+
+@font-face {
+    font-family: 'gothamblackregular';
+    src: url('//cdn.shopify.com/s/files/1/0390/2985/t/134/assets/gothamblack-webfont.woff2') format('woff2'),
+         url('//cdn.shopify.com/s/files/1/0390/2985/t/134/assets/gothamblack-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gothamregular';
+    src: url('//cdn.shopify.com/s/files/1/0390/2985/t/134/assets/gotham-black_0-webfont.woff2') format('woff2'),
+         url('//cdn.shopify.com/s/files/1/0390/2985/t/134/assets/gotham-black_0-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gothamboldregular';
+    src: url('//cdn.shopify.com/s/files/1/0390/2985/t/134/assets/gothambold-webfont.woff2') format('woff2'),
+         url('//cdn.shopify.com/s/files/1/0390/2985/t/134/assets/gothambold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'gothambook';
+    src: url('//cdn.shopify.com/s/files/1/0390/2985/t/134/assets/gotham-book-webfont.woff2') format('woff2'),
+         url('//cdn.shopify.com/s/files/1/0390/2985/t/134/assets/gotham-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gothammediumregular';
+    src: url('//cdn.shopify.com/s/files/1/0390/2985/t/134/assets/gothammedium-webfont.woff2') format('woff2'),
+         url('//cdn.shopify.com/s/files/1/0390/2985/t/134/assets/gothammedium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.concern_tab.front {
+    background: #e5d9ec;
+}.concern_tab .product-details {
+    display: none;
+}.concern_tab {
+    display: none;
+}.concern_tab.active {
+    display: block !important;
+}.mobile{
+  display: none;
+}.popup-tbl-pg {
+    display: none;
+}
+
+
+.page-tpl .container-fluid {
+    max-width: 100%;
+    padding: 0;
+}
+
+
+.page-tpl .container-fluid .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.page-tpl {
+    background: #f8f5ff;
+}
+
+#shopify-section-Serum-banner .col-12.col-md-12 {
+    padding: 0;
+}
+
+div#shopify-section-serum-concern-section {
+    background: #f8f5ff;
+    padding: 55px 0 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#shopify-section-concern-flipbox h3 .title {
+    background: none;
+    display: block;
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-family: serifabold;
+    letter-spacing: 1px;
+}
+
+#shopify-section-concern-flipbox h3.box-title {
+    margin-bottom: 15px;
+}
+
+#shopify-section-concern-flipbox .description {
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+#shopify-section-concern-flipbox .description p {
+    color: #5e0c8c;
+    font-size: 28px;
+    line-height: normal;
+    font-family: 'gothammediumregular';
+  padding-right: 10px;
+}
+
+.tabs_upper_cs .content .title {
+    color: #000;
+    font-size: 16px;
+   font-weight: normal;
+    font-family: 'gothambook';
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#shopify-section-concern-flipbox .container {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#shopify-section-concern-flipbox .container .row.slick-slider {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  padding-left: 15px;
+    padding-right: 15px;
+}
+
+#shopify-section-concern-flipbox .container .row.slick-slider .slick-list {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+#shopify-section-concern-flipbox .container .row.slick-slider .spotlight-item {
+    margin: 30px 0 45px 0;
+    background: #fff;
+    box-shadow: 7px 6px 10px 0px rgb(51 16 74 / 15%);
+    border-radius: 15px;
+    width: 100%;
+    padding: 25px;
+  /*border: 2px solid transparent;*/
+  position: relative;
+    transition: all .5s ease-in-out;
+  cursor: pointer;
+  min-height: 205px;
+}
+
+
+#shopify-section-concern-flipbox .container .row.slick-slider .spotlight-item .content.spotlight-inner {
+    padding: 0 0 10px 0;
+}
+
+#shopify-section-concern-flipbox .container .row.slick-slider .spotlight-item i.fa {
+    position: absolute;
+    right: 10px;
+    font-size: 40px;
+    bottom: 0;
+    color: #5e0c8c;
+    transition: all .5s ease-in-out;
+}
+
+#shopify-section-concern-flipbox .container .row.slick-slider .spotlight-item:hover {
+    box-shadow: 5px 13px 10px 0px rgb(51 16 74 / 15%);
+}
+
+#shopify-section-concern-flipbox .container .row.slick-slider .slick-slide:first-child .spotlight-item:hover {
+  background: #ffe0cc;
+}
+
+#shopify-section-concern-flipbox .container .row.slick-slider .slick-list .slick-slide:first-child .spotlight-item.active {
+    background: #ffe0cc;
+    box-shadow: none;
+}
+
+#shopify-section-concern-flipbox .container .row.slick-slider .slick-slide:nth-of-type(2) .spotlight-item:hover {
+
+ background: #fccfee;
+}
+
+#shopify-section-concern-flipbox .container .row.slick-slider .slick-list .slick-slide:nth-of-type(2) .spotlight-item.active {
+    background: #fccfee;
+    box-shadow: none;
+}
+
+#shopify-section-concern-flipbox .container .row.slick-slider .slick-slide:nth-of-type(3) .spotlight-item:hover {
+ 
+  background: #d8e8ff;
+}
+
+#shopify-section-concern-flipbox .container .row.slick-slider .slick-list .slick-slide:nth-of-type(3) .spotlight-item.active {
+    background: #d8e8ff;
+    box-shadow: none;
+}
+
+#shopify-section-concern-flipbox .container .row.slick-slider .slick-slide:nth-of-type(4) .spotlight-item:hover {
+  
+   background: #ebd0f3;
+}
+
+#shopify-section-concern-flipbox .container .row.slick-slider .slick-list .slick-slide:nth-of-type(4) .spotlight-item.active {
+    background: #ebd0f3;
+    box-shadow: none;
+}
+
+#shopify-section-concern-flipbox .container .row.slick-slider .slick-slide:nth-of-type(5) .spotlight-item:hover {
+
+  background: #e2e6cd;
+}
+
+#shopify-section-concern-flipbox .container .row.slick-slider .slick-list .slick-slide:nth-of-type(5) .spotlight-item.active {
+    background: #e2e6cd;
+    box-shadow: none;
+}
+
+
+#shopify-section-concern-flipbox .container .row.slick-slider .slick-list .spotlight-item.active {
+  
+    box-shadow: none;
+}
+
+#shopify-section-concern-flipbox .container .row.slick-slider .slick-list .spotlight-item.active i.fa {
+    transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+}
+
+#shopify-section-concern-flipbox .container .row.slick-slider .col-md-3.col-sm-6 {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.slide.desktop img {
+    display: block;
+    margin: 0 auto;
+}
+
+div#shopify-section-serum-concern-section img.slide {
+    border-radius: 10px;
+}
+
+
+div#shopify-section-slider-product {
+    padding: 30px 0;
+}
+
+div#shopify-section-slider-product .container-padd60 {
+    max-width: 100%!important;
+    width: 100%;
+}
+
+div#shopify-section-slider-product .row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+div#shopify-section-slider-product .widget-product {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.second-serum-section #shopify-section-slider-product .products-grid.row {
+    width: auto;
+    max-width: inherit;
+    padding: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.widget-product .slick-arrow {
+    background: #5c0f8b;
+    color: #fff;
+}
+
+.slick-arrow.slick-prev {
+    left: 4em;
+}
+
+.slick-arrow.slick-next {
+    right: 4em;
+}
+
+
+.featured-products .slick-arrow.slick-prev {
+    left: -10px;
+}
+
+.featured-products .slick-arrow.slick-next {
+    right: -10px;
+}
+
+.featured-products .inner.product-item {
+    margin-bottom: 20px;
+  border-radius: 10px;
+   background: #fff;
+}
+
+
+.grid-item .product-item, .st-products .product-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.inner-top {
+    width: 100%;
+}
+
+.products-grid .product-image .product-grid-image {
+    min-height: inherit;
+    padding-bottom: 66.66%;
+    overflow: hidden;
+}
+
+.products-grid .product-image .product-grid-image img {
+    position: absolute;
+    top: 0!important;
+    left: 0!important;
+    width: 100%!important;
+    object-fit: contain!important;
+    height: 100%!important;
+    min-height: inherit!important;
+    -moz-transform: inherit!important;
+    -o-transform: inherit!important;
+    -ms-transform: inherit!important;
+    -webkit-transform: inherit!important;
+    transform: inherit!important;
+}
+
+.featured-products .product-item .product-bottom {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.featured-products .product-item .product-bottom {
+    text-align: center;
+    min-height: 225px;
+    padding-bottom: 15px;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.featured-products a.product-title {
+    display: -webkit-box!important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    max-height: 42px;
+    min-height: 42px !important;
+    margin-bottom: 0;
+    line-height: 1.3;
+    font-size: 15px;
+    padding-bottom: 0;
+}
+
+.featured-products .price-box {
+    font-size: 18px;
+  margin-top: 9px;
+    margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.featured-products .product-item .price-box:before {
+    content: "";
+    width: 60px;
+    height: 2px;
+    background: #5c0f8b;
+    display: block;
+    margin: 0 auto 7px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.featured-products .price-box .special-price {
+    color: #000;
+}
+
+.featured-products .product-item .action {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.featured-products .btn {
+    background: #5e0d8b!important;
+    color: #fff!important;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    min-width: inherit;
+    font-weight: 700;
+    min-height: inherit;
+    width: auto;
+    box-shadow: none;
+    margin-top: 0;
+    min-width: 165px;
+  text-transform: lowercase!important;
+}
+
+
+.featured-products .btn:hover {
+    color: #fff!important;
+    background: #8901bd!important;
+}
+
+.products-grid .grid-item:not(.grid-item-mansory) .product-grid-image:after
+
+{display:none !important;}
+
+.featured-products .jdgm-prev-badge__text {
+    display: none;
+}
+
+.products-grid .grid-item {
+    height: auto !important;
+}
+
+div#shopify-section-slider-product {
+    padding: 40px 0 !important;
+}
+
+.second-serum-section img.slide.aff_desktop {
+    max-width: 960px;
+    display: block;
+    margin: 40px auto;
+    padding: 0 15px;
+  width:100%;
+}
+
+#serum-landing main.main-content {
+    padding-bottom: 0;
+}
+
+
+#shopify-section-concern-flipbox .container .tabs_upper_cs.row.slick-slider .slick-list {
+    margin-left: -15px;
+    margin-right: -15px;
+    /* display: -webkit-box; */
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+
+#shopify-section-concern-flipbox .concern_tab {
+    background: #f0ddf3;
+    padding: 0px 0 30px 0;
+}
+
+.concern_tab .prod_area {
+    padding-top: 60px;
+    position: relative;
+}
+
+#dullness-pigmentation .prod_area:before {
+    content: "";
+    width: 100%;
+    max-width: 1170px;
+    height: 3px;
+    background: #fa832f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#dryness-flakes .prod_area:before {
+    content: "";
+    width: 100%;
+    max-width: 1170px;
+    height: 3px;
+    background: #e36ca1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#oiliness-spots .prod_area:before {
+    content: "";
+    width: 100%;
+    max-width: 1170px;
+    height: 3px;
+    background: #5b89b4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#wrinkles-fine-lines .prod_area:before {
+    content: "";
+    width: 100%;
+    max-width: 1170px;
+    height: 3px;
+    background: #a25eb5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#build-up-acne .prod_area:before {
+    content: "";
+    width: 100%;
+    max-width: 1170px;
+    height: 3px;
+    background: #7d8b47;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+#shopify-section-concern-flipbox .concern_tab .row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left_area h2.heading_serum {
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 12px;
+    line-height: .8;
+    font-family: 'gothamblackregular';
+}
+
+#dullness-pigmentation .left_area h2.heading_serum {
+    color: #fa832f;
+}
+
+#dullness-pigmentation .left_area h2.heading_serum:after {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/glow-booster_icon_37da2f62-8b42-49ee-8c91-76b045aea2b6.png');
+    display: inline-block;
+    width: 34px;
+    height: 41px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#dryness-flakes .left_area h2.heading_serum {
+    color: #e36ca1;
+}
+
+#dryness-flakes .left_area h2.heading_serum:after {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/Super_Hydrator_icon_e938e66d-0584-4b84-8876-280e166bc73a.png');
+    display: inline-block;
+    width: 28px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+#oiliness-spots .left_area h2.heading_serum {
+    color: #5b89b4;
+}
+
+#oiliness-spots .left_area h2.heading_serum:after {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/Clarity_Booster_icon_605cc05f-ecb5-4122-9ca5-a7ff5a0aeaf7.png');
+    display: inline-block;
+    width: 35px;
+    height: 41px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+#wrinkles-fine-lines .left_area h2.heading_serum {
+    color: #a25eb5;
+}
+
+#wrinkles-fine-lines .left_area h2.heading_serum:after {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/Skin_Renewer_icon_5bd562bf-0323-4c22-9ec4-80140f40eaa5.png');
+    display: inline-block;
+    width: 38px;
+    height: 42px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#build-up-acne .left_area h2.heading_serum {
+    color: #7c8b46;
+}
+
+#build-up-acne .left_area h2.heading_serum:after {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/build-up-small-icon.png');
+    display: inline-block;
+    width: 19px;
+    height: 42px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.left_area img {
+    width: 100%;
+    /* display: block; */
+    margin: 20px 0;
+}
+
+
+.right_area .inner.product-item {
+    background: #fff;
+    padding: 15px 15px 20px 15px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    width: 100%;
+  position: relative;
+}
+
+.right_area .inner.product-item .inner-top {
+    width: 100%;
+}
+
+.right_area .inner.product-item .inner-top .product-image .product-grid-image {
+    min-height: inherit;
+    padding-bottom: 90.66%;
+    overflow: hidden;
+  display:block;
+  position:relative;
+}
+
+body .right_area .inner.product-item .inner-top .product-image .product-grid-image img{
+
+	min-height: inherit!important;
+    border-radius: 5px;
+    top: 0!important;
+    left: 0!important;
+    width: 100%!important;
+    object-fit: contain!important;
+    height: 100%!important;
+    min-height: inherit!important;
+    -moz-transform: inherit!important;
+    -o-transform: inherit!important;
+    -ms-transform: inherit!important;
+    -webkit-transform: inherit!important;
+    transform: inherit!important;
+  position: absolute;
+
+}
+
+.right_area .product-item .product-bottom {
+    text-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+  position: relative;
+    padding-bottom:0px;
+  min-height: 270px;
+}
+
+.right_area .product-item .product-bottom .product-title {
+    display: -webkit-box!important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    max-height: 52px;
+    min-height: 52px!important;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.right_area .product-item .product-label {
+    right: 0;
+    top: -15px;
+}
+
+.right_area .shade-list, .right_area .shade-sizes {
+    margin-top: 10px;
+}
+
+
+.inner.product-item .price-box {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  text-align: center;
+}
+
+.right_area .inner.product-item .price-box {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.inner.product-item .price-box:before {
+    content: "";
+    width: 70px;
+    height: 2px;
+    background: #5c0f8b;
+    display: block;
+    margin: 0 auto 10px auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.price-box .special-price {
+    color: #000;
+}
+
+.inner.product-item .btn {
+    background: #5e0d8b!important;
+    color: #fff!important;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    min-width: inherit;
+    font-weight: 700;
+    min-height: inherit;
+    width: auto;
+    box-shadow: none;
+    margin-top: 7px;
+    text-transform: lowercase!important;
+    min-width: 165px;
+    margin-bottom: 0;
+}
+
+.inner.product-item .btn:hover {
+    color: #fff!important;
+    background: #8901bd!important;
+}
+
+.right_area .inner.product-item {
+    margin-bottom: 40px;
+}
+
+.left_area p {
+    color: #231f20;
+    font-size: 18px;
+    padding-top: 12px;
+    font-family: 'gothambook';
+}
+
+
+
+
+/*--------------revie-design-----------*/
+
+#shopify-section-concern-flipbox .jdgm-widget.jdgm-widget {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 40px; */
+    /* margin-bottom: 40px; */
+    clear: both;
+    /* padding: 40px 0; */
+}
+
+#shopify-section-concern-flipbox .jdgm-widget.jdgm-widget .jdgm-rev-widg {
+    margin: 50px 0;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+#shopify-section-concern-flipbox .jdgm-rev-widg__header {
+    margin-bottom: 10px!important;
+}
+
+#shopify-section-concern-flipbox .jdgm-rev-widg .jdgm-rev-widg__title {
+    display: none;
+}
+
+#shopify-section-concern-flipbox .jdgm-histogram.jdgm-temp-hidden {
+    display: none;
+}
+
+#shopify-section-concern-flipbox .jdgm-rev-widg .jdgm-rev-widg__summary-stars {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#shopify-section-concern-flipbox .jdgm-rev-widg .jdgm-rev-widg__summary-text {
+    visibility: unset;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: 0;
+    margin-left: 5px;
+    color: #666;
+}
+
+#shopify-section-concern-flipbox .jdgm-rev-widg a.jdgm-write-rev-link {
+    color: #fff;
+    border-color: transparent;
+    width: 100%;
+    border-radius: 7px;
+    box-shadow: none;
+    border: none;
+    padding: 8px 15px;
+    min-width: 130px;
+    border: none;
+    background: #5e0d8b!important;
+    font-weight: 700;
+    text-transform: lowercase;
+}
+
+#shopify-section-concern-flipbox .jdgm-rev-widg__reviews .jdgm-rev {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#shopify-section-concern-flipbox .jdgm-quest, #shopify-section-concern-flipbox .jdgm-rev {
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+#shopify-section-concern-flipbox .jdgm-rev-widg__reviews .jdgm-rev .jdgm-rev__header {
+    float: left;
+    width: 25%;
+}
+
+#shopify-section-concern-flipbox .jdgm-rev-widg__reviews .jdgm-rev .jdgm-rev__content {
+    float: left;
+    padding-left: 45px;
+    width: 75%;
+    border-left: 1px solid #ccc;
+}
+
+#shopify-section-concern-flipbox .jdgm-rev-widg__reviews .jdgm-rev .jdgm-rev__actions {
+    width: 100%;
+}
+
+#shopify-section-concern-flipbox .jdgm-rev__content .jdgm-rev__title {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+
+.jdgm-rev__content p {
+    font-size: 14px;
+}
+
+#shopify-section-concern-flipbox .jdgm-rev-widg .jdgm-star {
+    color: #5e0d8b;
+}
+
+#shopify-section-concern-flipbox span.jdgm-rev__timestamp {
+    opacity: 1;
+    font-size: 14px;
+}
+
+#judgeme_product_reviews .jdgm-paginate {
+    margin-bottom: 20px;
+}
+
+a.jdgm-paginate__page {
+    display: none;
+}
+
+a.jdgm-paginate__page.jdgm-paginate__next-page, a.jdgm-paginate__page.jdgm-paginate__prev-page {
+    display: inline-block!important;
+}
+
+a.jdgm-paginate__page.jdgm-paginate__next-page::before {
+    content: 'Next';
+}
+
+a.jdgm-paginate__page.jdgm-paginate__next-page, a.jdgm-paginate__page.jdgm-paginate__prev-page {
+    display: inline-flex;
+    padding: 9px 30px 10px;
+    justify-content: center;
+    align-items: center;
+    background: #5e0d8b;
+    color: #fff;
+    font-family: 'Segoe Pro';
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: lowercase;
+    margin: 0 5px;
+    border-radius: 6px;
+    font-display: swap;
+}
+
+a.jdgm-paginate__page.jdgm-paginate__prev-page::before {
+    content: 'Prev';
+}
+
+#shopify-section-concern-flipbox .jdgm-rev-widg__reviews .jdgm-rev:last-child {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+#shopify-section-concern-flipbox .jdgm-rev-widg .jdgm-rev-widg__header .jdgm-star {
+    font-size: 15px;
+}
+
+#shopify-section-concern-flipbox .jdgm-form-wrapper .jdgm-form label {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#shopify-section-concern-flipbox .jdgm-form-wrapper input[type=submit] {
+    color: #fff;
+    border-color: transparent;
+    width: 100%;
+    border-radius: 7px;
+    box-shadow: none;
+    border: none;
+    padding: 8px 15px;
+    min-width: 130px;
+    border: none!important;
+    background: #5e0d8b!important;
+    font-weight: 700;
+    text-transform: lowercase;
+}
+
+#shopify-section-concern-flipbox .jdgm-form-wrapper input[type=submit]:hover{
+color: #fff!important;
+    background: #8901bd!important;
+
+}
+
+#shopify-section-concern-flipbox .jdgm-rev-widg__sort-wrapper .jdgm-sort-dropdown-wrapper {
+    display: none;
+}
+
+#shopify-section-concern-flipbox .jdgm-form-wrapper .jdgm-form {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.jdgm-widget input:not([type='submit']) {
+    width: 100%;
+    min-height: 2em;
+    margin: 0;
+    border: 1px solid #ddd;
+    max-width: 100%;
+}
+
+.jdgm-widget input[type='submit'] {
+    max-width: 100%;
+}
+
+.jdgm-widget textarea {
+    max-width: 100%;
+}
+
+/*--------------tabs-slider-css--------*/
+
+
+.concern-products .inner.product-item {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.inner-top {
+    width: 100%;
+}
+
+.concern-products .product-item .product-bottom {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.concern-products .product-item .product-bottom {
+    text-align: center;
+    min-height: 225px;
+    padding-bottom: 15px;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.concern-products a.product-title {
+    display: -webkit-box!important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    max-height: 42px;
+    min-height: 42px!important;
+    margin-bottom: 0;
+    line-height: 1.3;
+    font-size: 15px;
+    padding-bottom: 0;
+}
+
+#shopify-section-concern-flipbox .concern-products .row {
+    display: block;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+#shopify-section-concern-flipbox .concern-products span.jdgm-prev-badge__text {
+    display: none;
+}
+
+.concern-products .slick-arrow.slick-prev {
+    left: -10px;
+}
+
+.concern-products .slick-arrow.slick-next {
+    right: -10px;
+}
+
+
+.concern-products .container-padd60 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#shopify-section-Serum-banner .slide.desktop img + img {
+    padding: 0 15px;
+}
+
+
+.prod_area {
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-products h3.box-title span.title {
+    background: none !important;
+    padding: 0 !important;
+ 	 display: block;
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-family: serifabold;
+    letter-spacing: 1px;
+}
+
+.featured-products .widget-product .slick-arrow.slick-next, .concern-products .widget-product .slick-arrow.slick-next {
+    font-size: 0;
+}
+
+.featured-products .widget-product .slick-arrow.slick-prev, .concern-products .widget-product .slick-arrow.slick-prev {
+    font-size: 0;
+}
+
+.featured-products .widget-product .slick-arrow.slick-next:before, .concern-products .widget-product .slick-arrow.slick-next:before {
+    content: "\f105";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 4px;
+}
+
+.featured-products .widget-product .slick-arrow.slick-prev:before, .concern-products .widget-product .slick-arrow.slick-prev:before {
+    content: "\f104";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 4px;
+}
+
+.page-tpl ul.slick-dots {
+    padding: 0 15px;
+}
+
+.page-tpl .slick-dots li {
+    margin: 0 5px;
+    width: 16px;
+    height: 16px;
+}
+
+.page-tpl .slick-dots li button {
+    width: 16px;
+    height: 16px;
+    background:none;
+    border-color: #a0a0a0;
+    border: 2px solid #620c92;
+}
+
+.page-tpl .slick-dots li.slick-active button {
+    background: #620c92;
+}
+
+#shopify-section-concern-flipbox .container .row.slick-slider .col-md-3.col-sm-6 {
+    height: auto;
+}
+
+.popup-tbl-pg.open-popup {
+    display: block;
+}
+
+.popup-tbl-pg{
+  position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999999;
+    background: rgba(0,0,0,.85);
+	transition: all .5s ease-in-out;
+	width:100%;
+	height:100%;
+}
+
+
+
+.popup-tbl-pg-inner {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 95%;
+    max-width: 960px;
+    transform: translate(-50%,-100%);
+    -webkit-transform: translate(-50%,-100%);
+    -moz-transform: translate(-50%,-100%);
+    padding: 0px;
+    background: #fff;
+    transition: all .5s ease-in-out;
+  border-radius: 10px;
+  overflow:hidden;
+}
+
+.open-popup .popup-tbl-pg-inner {
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+}
+
+.popup-tbl-pg-inner button.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #5e0c8c;
+    text-shadow: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    width: 35px;
+    height: 35px;
+	z-index: 22;
+}
+
+.video_ration_custom {
+    position: relative;
+    padding-bottom: 66.66%;
+    overflow: hidden;
+}
+
+.video_ration_custom iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.popup_video_link {
+    position: relative;
+    cursor: pointer;
+}
+
+.popup_video_link img {
+    width: 100%;
+}
+
+.popup_video_link:after {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/video_icon_bg.png');
+    width: 80px;
+    height: 80px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.concern_tabs_cs a#scroll_top img {
+    width: 100%;
+    max-width: 125px;
+}
+
+.concern_tabs_cs a#scroll_top {
+    position: absolute;
+    right: 45px;
+    bottom: 60px;
+}
+
+.concern_tabs_cs {
+    position: relative;
+}
+
+#serum-landing div#back-top {
+    display: none !important;
+}
+
+a.range-link {
+    display: none !important;
+}
+
+@media only screen and (min-width: 1400px){
+.featured-products .widget-product .slick-arrow.slick-prev {
+    left: -40px!important;
+}
+  
+.featured-products .widget-product .slick-arrow.slick-next {
+    right: -40px!important;
+}
+  
+  .concern-products .widget-product .slick-arrow.slick-prev {
+    left: -40px!important;
+}
+  
+ .concern-products .widget-product .slick-arrow.slick-next {
+    right: -40px!important;
+}
+
+}
+
+@media (min-width: 1024px){
+.featured-products .widget-product .slick-list.draggable {
+    padding: 0!important;
+}
+  
+}
+
+@media (min-width: 992px){
+  ul.slick-dots {
+    display: none !important;
+}
+ 
+}
+
+@media (min-width: 768px){
+  
+ .col-md-12.column-product {
+    padding: 0;
+}
+  
+  .prod_area .left_area.col-lg-6.col-md-6.col-sm-12 {
+    flex: 0 0 58.4%;
+    max-width: 58.4%;
+}
+  
+  .prod_area .right_area.col-lg-6.col-md-6.col-sm-12 {
+    flex: 0 0 41.5%;
+    max-width: 41.5%;
+}
+  
+.featured-products .widget-product .slick-arrow,  .concern-products .widget-product .slick-arrow {
+    top: -moz-calc(50% - 35px);
+    top: -webkit-calc(50% - 35px);
+    top: -ms-calc(50% - 35px);
+    top: calc(50% - 35px);
+}
+  
+.featured-products .widget-product .slick-list.draggable {
+    margin-left: -7px;
+    margin-right: -7px;
+}
+  
+  .featured-products .inner.product-item {
+    margin-left: 7px;
+    margin-right: 7px;
+}
+  
+  
+  .concern-products .inner.product-item {
+    margin-left: 7px;
+    margin-right: 7px;
+}
+  
+  .concern-products .widget-product .slick-list.draggable {
+    margin-left: -7px;
+    margin-right: -7px;
+}
+  
+}
+
+
+@media only screen and (max-width: 1399px){
+
+div#shopify-section-slider-product .widget-product {
+    max-width: 1200px;
+}
+ 
+
+}
+
+@media only screen and (max-width: 1200px){
+
+.tabs_upper_cs .content .title {
+    max-height: inherit;
+    overflow: visible;
+    white-space: normal;
+}
+  
+#shopify-section-concern-flipbox .container .row.slick-slider .spotlight-item {
+    padding: 25px 15px;
+    min-height: 201px;
+}
+ 
+#shopify-section-concern-flipbox .jdgm-widget.jdgm-widget {
+    width: 97%;
+}
+
+}
+
+@media only screen and (max-width: 1100px){
+
+.right_area .product-item .product-bottom {
+    min-height: 240px;
+}
+  
+.left_area h2.heading_serum {
+    font-size: 45px;
+}
+ 
+
+}
+  
+
+@media only screen and (max-width: 1200px) and (min-width:768px){
+  
+  #shopify-section-concern-flipbox .container .row.slick-slider .spotlight-item {
+    box-shadow: 4px 6px 4px 0 rgb(51 16 74 / 15%);
+}
+  
+  #shopify-section-concern-flipbox .container .row.slick-slider .col-md-3.col-sm-6 {
+    height: auto;
+    width: 20% !important;
+    padding: 0 10px;
+}
+  
+#shopify-section-concern-flipbox .container .tabs_upper_cs.row.slick-slider .slick-list {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+  
+  
+}
+
+@media only screen and (max-width: 991px) and (min-width:768px){
+  
+  .tabs_upper_cs .content .title {
+    max-height: inherit;
+    overflow: visible;
+    white-space: normal;
+    font-size: 12px;
+    padding: 0;
+}
+  
+.featured-products .inner.product-item {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+  
+.featured-products .widget-product .slick-list.draggable {
+    margin-left: 0;
+    margin-right: 0;
+}
+  
+  .concern-products .inner.product-item {
+    margin-left: 0;
+    margin-right: 0;
+}
+  
+.featured-products .products-grid.row {
+    padding-bottom: 30px !important;
+}
+  
+.featured-products .widget-product .slick-list.draggable {
+    margin-bottom: 20px;
+}
+  
+  .featured-products .col-12.col-md-12 {
+    padding: 0;
+}
+  
+.right_area .inner.product-item {
+    padding: 15px 15px 10px 15px;
+    
+}
+  
+  
+}
+  
+  
+@media only screen and (max-width: 991px){
+  
+  .left_area p {
+    font-size: 15px;
+}
+  
+  .widget-product {
+    padding-bottom: 20px;
+}
+  
+  .widget-product .slick-list.draggable {
+    margin-bottom: 20px;
+}
+  
+  .concern-products .widget-product .slick-arrow{display: none !important;}
+  
+  .featured-products .widget-product .slick-arrow {
+    display: none !important;
+}
+  
+#shopify-section-concern-flipbox .jdgm-rev-widg__reviews .jdgm-rev .jdgm-rev__header {
+    width: 100%;
+}
+  
+#shopify-section-concern-flipbox .jdgm-rev-widg__reviews .jdgm-rev .jdgm-rev__content {
+    padding-left: 0;
+    width: 100%;
+    border-left: none;
+    border-top: none;
+    margin-top: 15px;
+    padding-top: 0;
+}
+  
+.featured-products .jdgm-preview-badge .jdgm-star.jdgm-star {
+    font-size: 13px;
+}
+  
+.featured-products .jdgm-preview-badge {
+    padding-bottom: 4px;
+}
+  
+  .concern-products .jdgm-preview-badge .jdgm-star.jdgm-star {
+    font-size: 13px;
+}
+  
+  .concern-products .jdgm-preview-badge {
+    padding-bottom: 4px;
+}
+
+}
+
+
+@media (max-width: 767px){
+  
+  .concern_tabs_cs a#scroll_top img {
+    width: 100%;
+    max-width: 95px;
+}
+  
+.concern_tabs_cs a#scroll_top {
+    right: 15px;
+    bottom: 10px;
+}
+  
+  #shopify-section-concern-flipbox .jdgm-widget.jdgm-widget {
+    width: 100%;
+}
+  
+  #shopify-section-concern-flipbox .jdgm-widget.jdgm-widget .jdgm-rev-widg {
+    border-radius: 0;
+}
+  
+  #featured-products-slider-product .widget-product {
+    padding-bottom: 20px !important;
+}
+  
+  #featured-products-slider-product .slick-list {
+    padding-bottom: 10px;
+}
+  
+ .page-tpl .slick-arrow {
+    font-size: 0;
+    display: none !important;
+}
+  
+#shopify-section-concern-flipbox .jdgm-rev-widg .jdgm-rev-widg__summary {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+  
+ #shopify-section-concern-flipbox .jdgm-widget-actions-wrapper {
+    width: 100%;
+    text-align: center;
+}
+  
+#judgeme_product_reviews .jdgm-widget-actions-wrapper a.jdgm-write-rev-link {
+    line-height: 28px;
+    height: 44px;
+    border-radius: 5px;
+    min-width: 180px;
+    width: auto;
+    display: inline-block;
+    margin: 0 auto;
+}
+  
+#shopify-section-Serum-banner .slide.desktop {
+    display: none;
+}
+  
+  .slide.mobile {
+    display: block !important;
+}
+  
+#shopify-section-Serum-banner .slide.mobile img.slide + img.slide {
+    padding: 25px;
+}
+  
+img.slide.aff_desktop {
+    display: none;
+}
+  
+img.slide.aff_mobile {
+    display: block !important;
+}
+ 
+#shopify-section-concern-flipbox h3.box-title {
+    margin-bottom: 15px;
+    line-height: normal;
+}
+  
+#shopify-section-concern-flipbox h3 .title {
+    font-size: 37px;
+    padding: 0 15px;
+}
+  
+#shopify-section-concern-flipbox .description p {
+    color: #5e0c8c;
+    font-size: 22px;
+    
+}
+  
+.left_area h2.heading_serum {
+    font-size: 33px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+  
+#shopify-section-concern-flipbox .concern_tab {
+    padding: 0px 0 30px 0;
+}
+  
+  .left_area img {
+    display: none;
+}
+  
+  .left_area img.mobile {
+    display: block;
+}
+  
+#shopify-section-concern-flipbox .container .row.slick-slider .col-md-3.col-sm-6 {
+    height: auto;
+    float: left;
+}
+  
+#shopify-section-concern-flipbox .container .tabs_upper_cs.row.slick-slider .slick-list {
+    display: block;
+}
+  
+.tabs_upper_cs .content .title {
+    max-height: inherit;
+    overflow: visible;
+    white-space: normal;
+}
+  
+.left_area p {
+    padding-top: 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+  
+.right_area .product-item .product-bottom {
+    min-height: inherit;
+}
+  
+  #shopify-section-concern-flipbox .concern-products h3 .title {
+    padding: 0;
+    font-size: 35px;
+}
+  
+ 
+  
+#shopify-section-Serum-banner .slide.mobile img.slide+img.slide {
+    padding: 25px;
+    padding-bottom: 0;
+    padding-top: 20px;
+}  
+  
+  .concern-products {
+    margin: 0 -15px;
+}
+  
+  .featured-products .col-12.col-md-12 {
+    padding-bottom: 0;
+}
+  
+  .left_area img.mobile {
+    display: block;
+    margin-top: 40px;
+}
+  
+  #shopify-section-concern-flipbox h3 .title {
+    font-size: 35px;
+    padding: 0;
+}
+  
+  #shopify-section-concern-flipbox .description {
+    padding-bottom: 0;
+}
+  
+div#concern-spotlight-slider-concern-flipbox>.widget-title h3.box-title {
+    padding: 0 15px;
+}
+  
+  #shopify-section-concern-flipbox .container .tabs_upper_cs .slick-arrow {
+    display: none !important;
+}
+  
+  .featured-products h3.box-title span.title {
+    font-size: 35px;
+}
+  
+  div#featured-products-slider-product .col-12.col-md-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+ 
+ #shopify-section-Serum-banner .slide.mobile img.slide {
+    display: block;
+    margin: 0 auto;
+}
+
+  #shopify-section-Serum-banner .slide.mobile img.slide:first-child {
+    width: 100%;
+}
+  
+div#shopify-section-serum-concern-section img.slide {
+    margin: 0 auto;
+}
+  
+  .tabs_upper_cs {
+    padding-bottom: 40px;
+}
+  
+#shopify-section-concern-flipbox .container .row.slick-slider .col-md-3.col-sm-6 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+  
+#shopify-section-concern-flipbox .container .tabs_upper_cs.row.slick-slider .slick-list {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+  
+#shopify-section-concern-flipbox .container .row.slick-slider .spotlight-item {
+    margin: 30px 0 35px 0;
+    box-shadow: 4px 5px 5px 0 rgb(51 16 74 / 15%);
+}
+  
+ #shopify-section-concern-flipbox .jdgm-widget.jdgm-widget .jdgm-rev-widg {
+    margin: 45px 0 50px 0;
+}
+  
+  
+}
+
+
+
+@media (max-width: 575px){
+  
+  .tabs_upper_cs {
+    padding-bottom: 30px;
+}
+  
+  .tabs_upper_cs .content .title {
+    font-size: 14px;
+}
+  
+  .page-tpl .featured-products ul.slick-dots {
+    padding: 0;
+    padding-right: 0;
+}
+ 
+  
+.col-md-12.column-product .widget-product {
+    margin-left: 0;
+}
+  
+  div#shopify-section-slider-product .widget-product {
+    padding: 0;
+}
+  
+  .featured-products .products-grid {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+  
+  .products-grid .grid-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+  
+  .featured-products .products-grid .grid-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+  
+  .featured-products .slick-list {
+    padding: 0;
+}
+  
+  .featured-products .action a.btn {
+    min-width: inherit;
+    width: 100%;
+    max-width: 100%;
+}
+  
+.inner.product-item .btn {
+    max-width: 100%;
+   min-width: inherit;
+    width: 100%;
+}
+
+.product-item .action, .product-item .sizes-list {
+    width: 100%;
+}
+  
+ .page-tpl .concern-products ul.slick-dots {
+    padding: 0;
+}
+  
+#featured-products-slider-product .slick-list {
+    padding-bottom: 0;
+}
+  
+  #build-up-acne .left_area h2.heading_serum:after {
+    width: 15px;
+    height: 29px;
+    position: relative;
+    top: -3px;
+    vertical-align: middle;
+}
+  
+#wrinkles-fine-lines .left_area h2.heading_serum:after {
+    width: 28px;
+    height: 32px;
+    vertical-align: middle;
+}
+  
+#oiliness-spots .left_area h2.heading_serum:after {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+} 
+  
+  #dryness-flakes .left_area h2.heading_serum:after {
+    
+    width: 22px;
+    height: 32px;
+    vertical-align: middle;
+    position: relative;
+    top: -4px;
+}
+  
+  
+.left_area h2.heading_serum {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+  
+.concern_tab .prod_area {
+    padding-top: 40px;
+    position: relative;
+}
+  
+.left_area img.mobile {
+    display: block;
+    margin-top: 30px;
+}
+  
+#dullness-pigmentation .left_area h2.heading_serum:after {
+    width: 26px;
+    height: 31px;
+    position: relative;
+    top: -3px;
+    vertical-align: middle;
+}
+  
+div#shopify-section-serum-concern-section {
+    padding: 45px 0 40px;
+}
+  
+.popup_video_link:after {
+    width: 60px;
+    height: 60px;
+}
+  
+.sale-products .product-item .product-bottom, .deal-of-the-day .product-item .product-bottom {
+    padding: 5px 5px 10px;
+    justify-content: flex-start;
+}
+  
+.concern-products .product-item .product-bottom {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+  
+.inner.product-item .price-box {
+    font-size: 15px;
+    line-height: normal;
+}
+  
+.inner.product-item .btn {
+    font-size: 16px;
+    padding: 8px 10px;
+}
+  
+  .featured-products .action a.btn {
+    font-size: 16px;
+    padding: 8px 10px;
+}
+  
+.products-grid .grid-item, .featured-products .products-grid .grid-item {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+  
+.concern-products .product-item .product-bottom {
+    min-height: 185px;
+}
+.product-item .action, .product-item .sizes-list {
+    margin-bottom: 0;
+}
+  
+.featured-products .product-item .product-bottom {
+    min-height: 185px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+  
+ .inner.product-item .price-box:before {
+    margin: 0 auto 3px;
+}
+  
+}
+
+
+
+@media (max-width: 355px){
+  
+  #shopify-section-concern-flipbox .container .row.slick-slider .spotlight-item {
+    padding: 20px 10px;
+}
+ 
+.tabs_upper_cs .content .title {
+    font-size: 12px;
+}
+  
+}

@@ -1,0 +1,46 @@
+<section id="newsletter" class="newsletter">
+    <div class="container">
+{% if section.settings.newsletter_title != blank %}
+      <div class="widget-title"><h3 class="box-title"> <span class="title"> {{section.settings.newsletter_title}}</span> </h3></div>    
+{% endif %}
+      <div class="row"> 
+        <div  class="col-12" >
+          {% if section.settings.newsletter_des != blank %}         
+          <div clas="text-center">{{section.settings.newsletter_des}}    </div>     
+          {% endif %}
+          <div class="newsletter_sec">
+            {% include 'newsletter-mc' %}
+          </div>
+        </div>
+      </div>     
+
+  </div> 
+</section>
+
+
+{% schema %}
+  {
+    "name": "Newsletter",
+   "class": "index-section newsletter",
+    "settings": [
+       {
+            "type": "text",
+            "id": "newsletter_title",
+            "label": "Newsletter Title",
+            "default": "Newsletter"
+        },
+        {
+            "type": "textarea",
+            "id": "newsletter_des",
+            "label": "Newsletter Description",
+            "default": "Phasellus lorem malesuada ligula pulvinar commodo maecenas"
+        }
+   ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

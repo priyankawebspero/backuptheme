@@ -1,0 +1,16 @@
+{% if collection.metafields.custom.collection_bottom_banner %}
+  <div class="bottom_banner">
+    {% if collection.metafields.custom.collection_bottom_banner_link %}
+          <a href="{{collection.metafields.custom.collection_bottom_banner_link}}">
+      {% endif %}  
+  {% if collection.metafields.custom.collection_bottom_banner %}
+              <img data-src="{{ collection.metafields.custom.collection_bottom_banner  | img_url:"master" }}" src="{{ collection.metafields.custom.collection_bottom_banner  | img_url:"master" }}" alt="{{ collection_title }}" class="lazyautosizes lazyload desktop" data-sizes="auto"/>
+   {% endif %}
+    {% if collection.metafields.custom.collection_bottom_banner_mob %}           
+            <img data-src="{{ collection.metafields.custom.collection_bottom_banner_mob  | img_url:"master" }}" src="{{ collection.metafields.custom.collection_bottom_banner_mob  | img_url:"master" }}" alt="{{ collection_title }}" class="lazyautosizes lazyload mobile" data-sizes="auto"/>
+   {% endif %}
+  {% if collection.metafields.custom.collection_bottom_banner_link %}
+          </a>    
+      {% endif %}
+</div>
+{% endif %}

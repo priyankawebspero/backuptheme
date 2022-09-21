@@ -1,0 +1,28 @@
+  
+  {% if handle contains 'pm' or handle contains 'crm' or handle contains 'plums-on-sale' or handle contains 'plum-live-shopping'%}
+  <meta name="robots" content="noindex">
+  {% endif %}	
+   <meta name="facebook-domain-verification" content="pmg3hvg1n8xz9n6uke5yl4agok1xsv" />    
+  <!-- Favicon -->
+    {% if settings.favicon != blank %}
+    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+    {% endif %}
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui">
+    <!-- Basic page needs ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- Title and description ================================================== -->
+    <title>
+      {{ page_title }}{% if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif %}{% if current_page != 1 %} &ndash; Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+    </title>
+    {% if page_description %}
+    <meta name="description" content="{{ page_description | escape | split: '[/countdown]' | last | strip_html }}">
+    {% endif %}
+
+    <!-- Helpers ================================================== -->
+    <link rel="canonical" href="{{ canonical_url }}">    
+    {% include 'fb-open-graph-tags' %}
+    <meta name="p:domain_verify" content="65884a2dea45523b9d1259d8ac880dc8"/>

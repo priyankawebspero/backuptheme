@@ -1,0 +1,248 @@
+{% if cart.attributes.pagination != blank and cart.attributes.pagination %}
+{% assign product_per_page = cart.attributes.pagination %}
+{% else %}
+{% assign product_per_page = section.settings.collection_results_per_page %}
+{% endif %}
+
+{% paginate collection.products by product_per_page %}
+ 
+{% case section.settings.collection_results_per_row %}
+{% when '1' %}
+		{%- assign grid_item_width = 'col-12' -%}
+		{%- assign rows = 'products-list' -%}
+
+	{% when '2' %}
+		{%- assign grid_item_width = 'col-6' -%}
+		{%- assign rows = 'products-grid' -%}
+
+	{% when '3' %}
+		{%- assign grid_item_width = 'col-6 col-md-4' -%}
+		{%- assign rows = 'products-grid' -%}
+
+	{% when '4' %}
+		{%- assign grid_item_width = 'col-6 col-md-4 col-lg-3' -%}
+		{%- assign rows = 'products-grid' -%}
+
+	{% when '5' %}
+		{%- assign grid_item_width = 'col-6 col-md-4 col-lg-3 col5' -%}
+		{%- assign rows = 'products-grid' -%}
+{% endcase %}
+<div data-section-id="{{ section.id }}" data-section-type="collection-template">
+
+
+	<div class="boost-pfs-filter-products product-collection {{ rows }} row">  
+     
+		{% for product in collection.products %}
+			<div class="{% if settings.product_image_border%}grid-item-border {% endif %}{% if settings.product_image_crop%}crop_image {% else %}no_crop_image {% endif %} grid-item col-xs-6 {{ grid_item_width }}">
+			{% if settings.style_product_grid == 'style_product_grid_2' %}
+				{% include 'product-grid-item-style-2' with product as product %}
+			{% elsif settings.style_product_grid == 'style_product_grid_3' %}
+				{% include 'product-grid-item-style-3' with product as product %}
+			{% else %}
+				{% include 'product-grid-item' with product as product %}
+			{% endif %}
+			</div>
+		{% endfor %}
+     
+      {%comment%}
+      {% for product in collection.products %}
+        <a href="{{ product.url | within: collection }}" class="boost-pfs-filter-product-skeleton grid-item col-xs-6 {{ grid_item_width }}">
+          <div class="boost-pfs-filter-product-skeleton-image" style="padding-top: 80%;"></div>
+          <div class="boost-pfs-filter-product-skeleton-meta">
+            <span class="boost-pfs-filter-skeleton-text boost-pfs-filter-skeleton"></span>
+            <span class="boost-pfs-filter-skeleton-text boost-pfs-filter-skeleton-width2"></span>
+            <span class="boost-pfs-filter-skeleton-text boost-pfs-filter-skeleton-width1"></span>
+            <span class="boost-pfs-filter-skeleton-text boost-pfs-filter-skeleton-width3"></span>
+            <span class="boost-pfs-filter-skeleton-text boost-pfs-filter-skeleton-width6"></span>
+          </div>
+        </a>
+      {% endfor %}
+       {%endcomment%}
+	</div>
+  
+	<div class="padding">
+		<div class="infinite-scrolling">
+		<div class="boost-pfs-filter-load-more"></div>
+		</div>
+		<div class="toolbar-bottom">
+		<p class="page-total boost-pfs-filter-total-products"></p>
+
+		<ul class="boost-pfs-filter-pagination-page boost-pfs-filter-bottom-pagination"></ul>
+		</div>
+	</div>
+</div>
+{% endpaginate %}
+
+<script>
+	// Declare boostPFSThemeConfig variable
+	var boostPFSThemeConfig = {
+		label: {
+			sorting: {% assign temp = 'collections.sorting.title' | t  %} {% unless temp contains 'translation missing'  %} {{ temp | json }} {% else %} "Sorting" {% endunless %},
+			sorting_best_selling: {% assign temp = 'collections.sorting.best_selling' | t %} {% unless temp contains 'translation missing'  %} {{ temp | json }} {% else %} "Best Selling" {% endunless %},
+			sorting_manual: {% assign temp = 'collections.sorting.featured' | t %} {% unless temp contains 'translation missing'  %} {{ temp | json }} {% else %} "Featured" {% endunless %},
+			sorting_title_ascending: {% assign temp = 'collections.sorting.az' | t %} {% unless temp contains 'translation missing'  %} {{ temp | json }} {% else %} "Alphabetically, A-Z" {% endunless %},
+			sorting_title_descending: {% assign temp = 'collections.sorting.za' | t %} {% unless temp contains 'translation missing'  %} {{ temp | json }} {% else %} "Alphabetically, Z-A" {% endunless %},
+			sorting_price_ascending: {% assign temp = 'collections.sorting.price_ascending' | t %} {% unless temp contains 'translation missing'  %} {{ temp | json }} {% else %} "Lowest Price" {% endunless %},
+			sorting_price_descending: {% assign temp = 'collections.sorting.price_descending' | t %} {% unless temp contains 'translation missing'  %} {{ temp | json }} {% else %} "Highest Price" {% endunless %},
+			sorting_created_ascending: {% assign temp = 'collections.sorting.date_ascending' | t %} {% unless temp contains 'translation missing'  %} {{ temp | json }} {% else %} "Date, Old to New" {% endunless %},
+			sorting_created_descending: {% assign temp = 'collections.sorting.date_descending' | t %} {% unless temp contains 'translation missing'  %} {{ temp | json }} {% else %} "Date, New to Old" {% endunless %},
+			sorting_sale_descending: {% assign temp = 'collections.sorting.sale_descending' | t %} {% unless temp contains 'translation missing'  %} {{ temp | json }} {% else %} "% Off" {% endunless %},
+			sorting_relevance: {% assign temp = 'collections.sorting.relevance' | t %} {% unless temp contains 'translation missing'  %} {{ temp | json }} {% else %} "Relevance" {% endunless %},
+
+			sale: {{ 'products.product.sale' | t | json }},
+			sold_out: {{ 'products.product.sold_out' | t | json }},
+			unavailable: {{ 'products.product.unavailable' | t | json }},
+			from_price: {{ 'products.product.from' | t | json }},
+			select_options: {{ 'products.product.select_options' | t | json }},
+			add_to_cart: {{ 'products.product.add_to_cart' | t | json }},
+			quick_view: {{ 'products.product.quick_view' | t | json }},
+			add_to_wishlist: {{ 'wishlist.general.add_to_wishlist' | t | json }},
+			added_to_wishlist: {{ 'wishlist.general.added_to_wishlist' | t | json }},
+			wishlist_note: {{ 'wishlist.general.note' | t | json }},
+			view_as: {{ 'collections.toolbar.view_as' | t | json }},
+			grid_view: {{ 'collections.general.grid_view' | t | json }},
+			list_view: {{ 'collections.general.list_view' | t | json }},
+			toolbar_next: {{ 'collections.toolbar.next' | t | json }},
+			toolbar_previous: {{ 'collections.toolbar.previous' | t | json }},
+			toolbar_showing: {{ 'collections.toolbar.showing' | t | json }},
+			toolbar_of: {{ 'collections.toolbar.of' | t | json }}
+		},
+		custom: {
+			products_per_page: {% if product_per_page %} {{ product_per_page | json }} {% else %} 24 {% endif %},
+			products_per_row: {% if section.settings.collection_results_per_row %} {{ section.settings.collection_results_per_row }} {% else %} 4 {% endif %},
+			grid_item_width: {% if grid_item_width %} {{ grid_item_width | json}} {% else %} "col-md-3" {% endif %},
+			image_size: {% if image_size %} {{ image_size | json }} {% else %} "250x" {% endif %},
+			product_image_border: {% if settings.product_image_border %} {{ settings.product_image_border | json }} {% else %} false  {% endif %},
+			product_image_crop: {% if settings.product_image_crop %} {{ settings.product_image_crop | json }} {% else %} false {% endif %},
+			display_product_reviews: {% if settings.display_product_reviews %} {{ settings.display_product_reviews | json }} {% else %} false {% endif %},
+			display_item_swatch: {% if settings.display_item_swatch %} {{ settings.display_item_swatch | json }} {% else %} false {% endif %},
+			time_lazy_load: {% if settings.time_lazy_load %} {{ settings.time_lazy_load }} {% else %} 100 {% endif %},
+			show_vendor: {% if settings.show_vendor %} {{ settings.show_vendor | json }} {% else %} false {% endif %},
+			enable_quick_view: {% if settings.enable_quick_view %} {{ settings.enable_quick_view | json }} {% else %} false {% endif %},
+			enable_size_swatch: {% if settings.display_item_size %} {{ settings.display_item_size | json }} {% else %} false {% endif %},
+			enable_wishlist: {% if settings.enable_wishlist %} {{ settings.enable_wishlist | json }} {% else %} false {% endif %},
+			display_button: {% if settings.display_button %} {{ settings.display_button | json }} {% else %} false {% endif %},
+			image_swap: {% if settings.image_swap %} {{settings.image_swap | json }} {% else %} false {% endif %},
+			product_image_resize: {% if settings.product_image_resize %} {{ settings.product_image_resize | json }} {% else %} false {% endif %},
+			enable_multilang: {% if settings.enable_multilang %} {{ settings.enable_multilang | json }} {% else %} false {% endif %},
+			style_product_grid: {% if settings.style_product_grid %} {{ settings.style_product_grid | json }} {% else %} "style_product_grid_1" {% endif %},
+          	type_label_sale: {% if settings.type_label_sale %} {{ settings.type_label_sale | json }} {% else %} "label_sale" {% endif %},
+        },
+		customer: {
+			tags: {% if customer.tags%} {{ customer.tags | json }} {% else %} [] {% endif %},
+			email: {% if customer.email %} {{ customer.email  | json }} {% else %} '' {% endif %},
+		}
+	};
+</script> 
+{% schema %}
+  {
+    "name": "Collection Default",
+	  "class": "col-12 col-xl-9 col-main test",
+    "settings": [
+	  {
+		"type": "header",
+		"content": "Collection Header"
+	  },
+	  {
+        "type": "checkbox",
+        "id": "display_collection_image",
+        "label": "Show collection image?",
+        "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "collection_image",
+        "label": "Image Category",
+	    "info": "This image will show up when you don't add image in Collections Description"
+      },
+	  {
+        "type": "checkbox",
+        "id": "display_collection_des",
+        "label": "Display Collections Description?",
+        "default": true
+      },
+	  {
+		"type": "header",
+		"content": "Collection Content"
+	  },
+	  {
+        "type": "checkbox",
+        "id": "limited_view",
+        "label": "Enable Limited View",
+        "default": true
+      },
+	  {
+        "type": "checkbox",
+        "id": "view_as_enable",
+        "label": "Enable View As",
+        "default": true
+      },
+	  {
+        "type": "checkbox",
+        "id": "sort_enable",
+        "label": "Enable sorting",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "collection_results_per_row",
+        "label": "Products per row (grid only)",
+        "default": "4",
+        "options": [
+		  {
+            "value": "1",
+            "label": "List"
+          },
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          },
+          {
+            "value": "5",
+            "label": "5"
+          }
+        ]
+      },
+	  {
+        "type": "select",
+        "id": "collection_results_per_page",
+        "label": "Products per page",
+        "default": "24",
+        "options": [
+		  {
+            "value": "12",
+            "label": "12"
+          },
+          {
+            "value": "16",
+            "label": "16"
+          },
+          {
+            "value": "20",
+            "label": "20"
+          },
+          {
+            "value": "24",
+            "label": "24"
+          },
+          {
+            "value": "30",
+            "label": "30"
+          },
+	      {
+            "value": "50",
+            "label": "50"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

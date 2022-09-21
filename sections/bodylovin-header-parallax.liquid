@@ -1,0 +1,938 @@
+{% include 'style-header-parallax' %}
+
+<header class="site-header header-parallax bodylovin" role="banner">
+  {% if section.settings.display_header_top and section.settings.top_message_text != blank %}
+  <div class="header-top">
+    <div class="container-padd60">
+      <div class="w3-content w3-section" style="max-width:100%">
+        <div class="slider-wrap">
+          <div class="slider header-top-slider">
+            {% if section.settings.top_message_text != blank %}
+            <div class="slide">
+              <p class="header-pramotion">
+                {% include 'multilang' with section.settings.top_message_text %}
+              </p>
+            </div>
+            {% endif %}
+            {% if section.settings.top_message_text1 != blank %}
+            <div class="slide">
+              <p class="header-pramotion">
+                {% include 'multilang' with section.settings.top_message_text1 %}
+              </p>
+            </div>
+            {% endif %}
+            {% if section.settings.top_message_text2 != blank %}
+            <div class="slide">
+              <p class="header-pramotion">
+                {% include 'multilang' with section.settings.top_message_text2 %}
+              </p>
+            </div>
+            {% endif %}
+            {% if section.settings.top_message_text3 != blank %}
+            <div class="slide">
+              <p class="header-pramotion">
+                {% include 'multilang' with section.settings.top_message_text3 %}
+              </p>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  {% endif %}
+
+  <a href="#" class="icon-nav close-menu-mb" title="Menu Mobile Icon" data-menu-mb-toogle>
+    <span class="icon-line"></span>
+  </a>
+
+  <div class="header-bottom" data-sticky-mb>
+    <div class="container-padd60">
+      {% include 'header-mobile' %} 
+    </div>
+  </div>
+
+  <div class="is_parallax">
+    <div class="wrapper-header-bt" data-sticky-pc>
+      <div class="container-padd60">       
+        <div class="header-panel-bt">
+          <div class="left-header header-items">
+            <h1 class="header-logo" itemscope itemtype="http://schema.org/Organization">
+              <meta itemprop="url" content="{{ shop.url }}">
+              {% if section.settings.brand_type == 'image' and section.settings.logo_pc != bank %}
+              <a class="logo-img" href="/" title="plum">
+                <img itemprop="logo" data-src="{{ section.settings.logo_pc | img_url: 'master' , format: 'pjpg'}}"
+                     src="{{ section.settings.logo_pc | img_url: 'master' }}"
+                     alt="{{ section.settings.logo_pc.alt | default: shop.name }}" itemprop="logo" class="lazyautosizes lazyloaded" data-sizes="auto">
+
+                {% if section.settings.display_parallax %}
+                {% comment %}
+                <img class="logo-parallax" data-src="{{ section.settings.logo_parallax | img_url: 'master' }}"
+                     src="{{ section.settings.logo_parallax | img_url: 'master' }}"
+                     alt="{{ section.settings.logo_parallax.alt | default: shop.name }}" itemprop="logo" class="lazyautosizes lazyloaded" data-sizes="auto">
+                {% endcomment %}
+                {% endif %}
+
+
+              </a>
+              {% elsif section.settings.brand_text != '' %}
+              <a class="logo-title" href="/">
+                {{ section.settings.brand_text }}
+              </a>
+              {% else %}
+              <a class="logo-title" href="/">
+                {{ shop.name }}
+              </a>
+              {% endif %}
+            </h1>
+          </div>
+
+          <div class="wrapper-navigation">
+            <div class="main-menu jas-mb-style">
+              <div class="col-12">
+                <div class="mb-area">
+                  <div class="header-links">
+                    <div class="customer-links">
+                      {% if customer %}
+                      <a class="acc-links text-hover acc-logout" id="customer_logout_link" href="/account/logout" {% if settings.enable_multilang %}data-translate="layout.customer.log_out"{% endif %}>
+                        {{ 'layout.customer.log_out' | t }}
+                      </a>
+                      <span> / </span>
+                      <a class="acc-links text-hover acc-title" href="/account"{% if settings.enable_multilang %} data-translate="customer.account.title"{% endif %}>
+                        {{ 'customer.account.title' | t }}
+                      </a>
+
+                      {% else %}  
+
+                      <a data-dropdown-user class="acc-links text-hover acc-sign-in" id="customer_login_link" href="/account/login" {% if settings.enable_multilang %}data-translate="customer.login.sign_in"{% endif %}>
+                        {{ 'customer.login.sign_in' | t }}
+                      </a>
+                      <span class="or-text"{% if settings.enable_multilang %} data-translate="wishlist.general.or"{% endif %}>
+                        /
+                      </span>
+                      <a class="acc-links text-hover acc-regis" id="customer_register_link" href="/account/register"{% if settings.enable_multilang %} data-translate="layout.customer.create_account"{% endif %}>
+                        {{ 'layout.customer.create_account' | t }}
+                      </a>
+                      {% endif %}                                   
+                    </div>
+                    
+                    {% include 'iwish_v2' with 'iwishlink_moblink' %}
+                   
+
+                    {% if settings.enable_wishlist %}
+                    <a class="wishlist" href="/pages/wish-list" title='{% if settings.enable_multilang %}data-translate="wishlist.general.my_wishlist"{% endif %}'>
+                      <span class="wishlist-text text-hover"{% if settings.enable_multilang %} data-translate="wishlist.general.my_wishlist"{% endif %}>
+                        {{ 'wishlist.general.my_wishlist' | t }}
+                      </span>                  
+                    </a>
+                    {% endif %}
+
+
+
+                    {% if settings.enable_multilang or settings.enable_multiple_currencies %}
+                    <div class="lang-currency-groups">
+                      <div class="option-title">
+                        <a href="javascript:void(0)" title="{{ 'cart.general.close_cart' | t }}" class="close-option close">
+                          {% include 'icon-close' %}
+                          <span {% if settings.enable_multilang %}data-translate="cart.general.close_cart"{% endif %}>
+                            {{ 'cart.general.close_cart' | t }}
+                          </span>
+                        </a>
+                      </div>
+
+                      {% include 'new-language-picker' %}
+
+                      {% include 'new-currency-picker' %}
+                    </div>
+                    {% endif %}
+
+                  </div> 
+                  <nav class="nav-bar" role="navigation">
+                    {% include 'site-nav-bodylovin' %}
+                  </nav>  
+
+                  <div class="header-pc" data-header-pc>
+
+                  </div>              
+                </div>
+              </div>                       
+            </div>                   
+          </div>
+          <div class="right-header header-items">
+        {%comment%}
+         <!--   <div class="nav-search svg-mb">                    
+              <a href="#" title="Search Icon" class="icon-search" data-search-mobile-toggle>
+                {% comment %} {% include 'icon-search' %} {% endcomment %}
+                <img src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/seach.png?v=1576688973">
+                <span>search</span>
+              </a>
+              {% include 'search-bar' %}
+            </div> -->
+            {%endcomment%}
+            <!-- Searchtap Searchbar  -->
+            <div class="st-search-bar">
+              <svg id="searchIcon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve"><g><g><path d="M508.874,478.708L360.142,329.976c28.21-34.827,45.191-79.103,45.191-127.309c0-111.75-90.917-202.667-202.667-202.667
+                S0,90.917,0,202.667s90.917,202.667,202.667,202.667c48.206,0,92.482-16.982,127.309-45.191l148.732,148.732
+                c4.167,4.165,10.919,4.165,15.086,0l15.081-15.082C513.04,489.627,513.04,482.873,508.874,478.708z M202.667,362.667
+                c-88.229,0-160-71.771-160-160s71.771-160,160-160s160,71.771,160,160S290.896,362.667,202.667,362.667z"/></g></g><g></g><g></g><g></g><g></g>
+                <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>  
+                <div class="search_bar">
+                      <input type="text" name="s" placeholder="Search..." value="" autocapitalize="off" autocomplete="off" autocorrect="off">
+                </div>
+            </div>
+            {% if settings.enable_wishlist %}
+            <div class="svg-mb wishlist-icon">
+              <a class="wishlist" href="/pages/wish-list" title='{% if settings.enable_multilang %}data-translate="wishlist.general.my_wishlist"{% endif %}'>
+                <img src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/wishlist.png?v=1576688973">
+                <span>wishlist</span>
+              </a>                   
+            </div>
+            {% endif %}
+
+
+            {% if customer != blank %}
+
+            <div class="acc-mb svg-mb">
+
+              <a href="/account" title="User Icon" class="icon-user">
+                <img src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/account.png?v=1576688973">
+                <span>account</span>
+              </a>
+              {% if shop.customer_accounts_enabled != blank %}
+              <div class="dropdown-content">
+
+                <div class="customer-links">
+                  {% if customer != blank %}
+                  <!--                   <p class="name-display">Hi! {{ customer.name }}</p> -->
+                  <p><a class="acc-links text-hover acc-title" href="/account"{% if settings.enable_multilang %} data-translate="customer.account.title"{% endif %}>
+                    {{ 'customer.account.title' | t }}
+                    </a></p>
+
+                  <p><a class="acc-links text-hover acc-logout" id="customer_logout_link" href="/account/logout" {% if settings.enable_multilang %}data-translate="layout.customer.log_out"{% endif %}>
+                    {{ 'layout.customer.log_out' | t }}
+                    </a></p>                 
+                  {% endif %}                                   
+                </div>
+
+              </div>
+              {% endif %}
+            </div>
+
+            {% else %}
+            <div class="acc-mb svg-mb">
+
+              <a href="/account" class="icon-user">
+                 <?xml version="1.0" encoding="iso-8859-1"?><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><g><path d="M437.02,330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521,243.251,404,198.548,404,148C404,66.393,337.607,0,256,0S108,66.393,108,148c0,50.548,25.479,95.251,64.262,121.962c-36.21,12.495-69.398,33.136-97.281,61.018C26.629,379.333,0,443.62,0,512h40c0-119.103,96.897-216,216-216s216,96.897,216,216h40C512,443.62,485.371,379.333,437.02,330.98z M256,256c-59.551,0-108-48.448-108-108S196.449,40,256,40c59.551,0,108,48.448,108,108S315.551,256,256,256z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+              </a>
+            </div>
+            {% endif %}
+            
+           <div class="iwish-icon svg-mb">
+              {% include 'iwish_v2' with 'iwishlink' %}
+            </div>
+
+            <div class="cart-icon svg-mb" data-cart-header-parallax>
+              <a href="#" title="Cart Icon" data-cart-toggle>       
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					viewBox="0 0 469.333 469.333" style="enable-background:new 0 0 469.333 469.333;" xml:space="preserve">
+					<g>
+					<g>
+					<g>
+					<path d="M434.979,42.667H85.333v3.061l-4.375-14.999C75.687,12.635,58.844,0,40,0H10.667C4.771,0,0,4.771,0,10.667
+					s4.771,10.667,10.667,10.667H40c9.427,0,17.844,6.313,20.479,15.365l66.396,227.635l-34.021,42.521
+					c-4.854,6.073-7.521,13.688-7.521,21.458c0,18.948,15.406,34.354,34.354,34.354H416c5.896,0,10.667-4.771,10.667-10.667
+					c0-5.896-4.771-10.667-10.667-10.667H119.687c-7.177,0-13.021-5.844-13.021-13.021c0-2.948,1.01-5.844,2.854-8.135l34.279-42.844
+					h209.221c16.448,0,31.604-9.615,38.615-24.5l74.438-158.177c2.135-4.552,3.26-9.604,3.26-14.615v-3.021
+					C469.333,58.073,453.927,42.667,434.979,42.667z M448,80.042c0,1.906-0.427,3.823-1.24,5.542L372.333,243.75
+					c-3.51,7.438-11.083,12.25-19.313,12.25H146.667L90.663,64h344.316C442.156,64,448,69.844,448,77.021V80.042z"/>
+					<path d="M128,384c-23.531,0-42.667,19.135-42.667,42.667s19.135,42.667,42.667,42.667s42.667-19.135,42.667-42.667
+					S151.531,384,128,384z M128,448c-11.76,0-21.333-9.573-21.333-21.333c0-11.76,9.573-21.333,21.333-21.333
+					c11.76,0,21.333,9.573,21.333,21.333C149.333,438.427,139.76,448,128,448z"/>
+					<path d="M384,384c-23.531,0-42.667,19.135-42.667,42.667s19.135,42.667,42.667,42.667s42.667-19.135,42.667-42.667
+					S407.531,384,384,384z M384,448c-11.76,0-21.333-9.573-21.333-21.333c0-11.76,9.573-21.333,21.333-21.333
+					c11.76,0,21.333,9.573,21.333,21.333C405.333,438.427,395.76,448,384,448z"/>
+					</g>
+					</g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+					</svg>
+                <span class="cartCount" data-cart-count>
+                  {{ cart.item_count }}
+                </span>
+              </a>                    
+            </div>
+            {% if settings.enable_multilang or settings.enable_multiple_currencies %}
+            <div class="hamburger-icon svg-mb">
+              <a href="#" class="icon-nav" title="Menu Mobile Icon" data-show-options>
+                <span class="icon-https://cdn.shopify.com/s/files/1/0257/8766/2417/files/cart.png?v=1576688973line"></span>
+              </a>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+</header>
+
+<!-- Searchtap Mobile Searchbar  -->
+
+<div class="st-search-bar hidden-desktop">
+    <input type="text" name="s" placeholder="Search..." value="" autocapitalize="off" autocomplete="off" autocorrect="off">
+    <span class="input-close-btn"></span>
+</div>
+
+<script> 
+  window.fixtop_menu = {{ section.settings.display_fixtop_menu }};
+
+  var appendPrependMenuMobile = function() {
+    var translateHeaderBlock = $('[data-translate-header]'),
+        headerPc = $('[data-header-pc]'),
+        areaMb = $('.wrapper-navigation .mb-area');
+
+    if (window.innerWidth < 1200) {
+      headerPc.appendTo(areaMb);
+    } else {
+      headerPc.appendTo(translateHeaderBlock);
+    };
+  };
+
+  $(document).ready(function() {
+    appendPrependMenuMobile();
+  });
+
+  var winWidth = $(window).innerWidth();
+
+  $(window).on('resize', function () {
+    var resizeTimerId;
+
+    clearTimeout(resizeTimerId);
+
+    resizeTimerId = setTimeout(function() {
+      var curWinWidth = $(window).innerWidth();
+
+      if ((curWinWidth < 1200 && winWidth >= 1200) || (curWinWidth >= 1200 && winWidth < 1200)) {
+        appendPrependMenuMobile();
+      };
+      winWidth = curWinWidth;
+    }, 0);
+  })
+
+  {% if settings.enable_multilang %}
+  translator.doTranslate('.site-header');
+  {% endif %}
+</script>
+
+
+<!-- Anouncement bar css and script -->
+
+<style>
+  .slider-wrap {
+    height:auto;
+  }
+  .slider{
+    width: 70%;
+    text-align: center;
+    padding: 2px;
+    color: white;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+  .slick-dots {
+    left:0;
+  }
+  @media ( max-width: 780px ) {
+    .slider{
+      width: 100%;
+      font-size: 13px;
+    }
+  }
+  .customer-links p {
+    margin-bottom: -2px;
+  }
+  .dropdown-content {
+    display: none;
+    background-color: #ffff !important;
+    padding: 0 11px 0 23px;
+    text-align: left;
+    position: absolute;
+    left: 87%;
+    padding-top: 14px;
+    overflow: hidden;
+    top: 95%;
+    min-width: 136px !important;
+  }
+  .customer-links a.acc-links.text-hover {
+    padding-bottom: 11px;
+  }
+  a.acc-links.text-hover:hover {
+    font-weight: bolder;
+  }
+  .acc-mb:hover .dropdown-content {
+    display: block;
+  }
+  a#customer_login_link {
+    padding-bottom: 10px;
+  }
+  p.name-display {
+    padding-bottom: 10px;
+  }
+</style>
+
+<script>
+  window.onload=function(){
+    $slideshow = $('.slider').slick({
+      dots:false,
+      autoplay:true,
+      arrows:true,
+      prevArrow:'<button type="button" class="slick-prev"></button>',
+      nextArrow:'<button type="button" class="slick-next"></button>',
+      slidesToShow:1,
+      slidesToScroll:1
+    });
+    $('.slide').click(function() {
+      $slideshow.slick('slickNext');
+    });
+  };
+</script>
+<!-- Anouncement bar css and script -->
+
+{% schema %}
+{
+"name": "Bodylovin Header 01",
+"settings": [
+{
+"type": "header",
+"content": "Header Top"
+},
+{
+"type": "checkbox",
+"id": "display_header_top",
+"label": "Display Header Top?",
+"default": true
+},
+{
+"type": "textarea",
+"id": "top_message_text",
+"label": "Top Message Text",
+"default": "Mid-Season Sale Up to 70% OFF."
+},
+{
+"type": "textarea",
+"id": "top_message_text1",
+"label": "Top Message Text",
+"default": "Mid-Season Sale Up to 70% OFF."
+},
+{
+"type": "textarea",
+"id": "top_message_text2",
+"label": "Top Message Text",
+"default": "Mid-Season Sale Up to 70% OFF."
+},
+{
+"type": "textarea",
+"id": "top_message_text3",
+"label": "Top Message Text",
+"default": "Mid-Season Sale Up to 70% OFF."
+},
+{
+"type": "checkbox",
+"id": "font_weight_bold",
+"label": "Font Weight: Bold?",
+"default": true
+},
+{
+"type": "color",
+"id": "bg_header_top",
+"label": "Background Color",
+"default": "#ef6454"
+},
+{
+"type": "color",
+"id": "text_header_top_color",
+"label": "Text Color",
+"default": "#fff"
+},
+{
+"type": "header",
+"content": "Logo"
+},
+{
+"type": "radio",
+"id": "brand_type",
+"label": "Use image or text for logo?",
+"options": [
+{
+"value": "text",
+"label": "Text"
+},
+{
+"value": "image",
+"label": "Image"
+}
+],
+"default": "text"
+},
+{
+"type": "text",
+"id": "brand_text",
+"label": "Logo text"
+},
+{
+"type": "image_picker",
+"id": "logo",
+"label": "Logo image for Mobile",
+"info": "95px x 44px recommended"
+},
+{
+"type": "text",
+"id": "max_height_logo_mb",
+"label": "Max Height of Logo Mobile",
+"default": "26px" 
+},
+{
+"type": "image_picker",
+"id": "logo_pc",
+"label": "Logo image for PC",
+"info": "95px x 44px recommended"
+},
+{
+"type": "text",
+"id": "max_height_logo_pc",
+"label": "Max Height of Logo PC",
+"default": "33px" 
+},
+{
+"type": "header",
+"content": "Parallax"
+},
+{
+"type": "checkbox",
+"id": "display_parallax",
+"label": "Display Parallax",
+"default": true,
+"info": "Use at Homepage"
+},
+{
+"type": "checkbox",
+"id": "font_weight_nav",
+"label": "Navigation Font Weight: Bold?",
+"default": false
+},
+{
+"type": "image_picker",
+"id": "logo_parallax",
+"label": "Logo Parallax image",
+"info": "95px x 44px recommended"
+},  
+{
+"type": "color",
+"id": "menu_parallax_color",
+"label": "Menu Color",
+"default": "#fff"
+},    
+{
+"type": "header",
+"content": "Search"
+},
+{
+"type": "color",
+"id": "bg_search_color",
+"label": "Background Color",
+"default": "#f8f8f8"
+},      
+{
+"type": "color",
+"id": "search_color",
+"label": "Search Color",
+"default": "#787878"
+},    
+{
+"type": "color",
+"id": "search_color_btn",
+"label": "Search Color Button",
+"default": "#333"
+},            
+{
+"type": "header",
+"content": "Cart Header"
+},
+{
+"type": "color",
+"id": "bg_cart_color",
+"label": "Background Color Items Cart",
+"default": "#1e1e1e"
+},
+{
+"type": "color",
+"id": "cart_color",
+"label": "Color Items Cart",
+"default": "#fff",
+"info": "======================="
+},
+{
+"type": "header",
+"content": "Navigation"
+},
+{
+"type": "checkbox",
+"id": "display_fixtop_menu",
+"label": "Display Fix Top Menu?",
+"default": true
+},           
+{
+"type": "header",
+"content": "Navigation Text alignment"
+},
+
+{
+"type": "select",
+"id": "alignment",
+"label": "Text alignment",
+"default": "left",
+"options": [
+{
+"value": "left",
+"label": "Left"
+},
+{
+"value": "center",
+"label": "Center"
+},
+{
+"value": "right",
+"label": "Right"
+}
+]
+},
+{
+"type" : "header",
+"content" : "Settings"
+},
+{
+"type" : "color",
+"id" : "bg_menu",
+"label" : "Background Main Menu",
+"default" : "#fff"
+},      
+{
+"type" : "color",
+"id" : "bg_dropdown_menu",
+"label" : "Background Dropdown Menu",
+"default" : "#f8f8f8",
+"info" : "======================="
+},
+{
+"type" : "color",
+"id" : "color_menu_lv1",
+"label" : "Level 1 Menu Color",
+"default" : "#232323"
+},
+{
+"type" : "color",
+"id" : "hover_color_mnu_lv1",
+"label" : "Level 1 Menu color when hover",
+"default" : "#232323"
+},
+{
+"type" : "text",
+"id" : "font_size_mnu_lv1",
+"label" : "Font size Menu level 1",
+"default" : "13px",
+"info" : "======================="
+},
+{
+"type" : "color",
+"id" : "color_menu_lv2",
+"label" : "Level 2 Menu Color",
+"default" : "#232323"
+},
+{
+"type" : "color",
+"id" : "hover_color_mnu_lv2",
+"label" : "Level 2 Menu color when hover",
+"default" : "#232323"
+},
+{
+"type" : "text",
+"id" : "font_size_mnu_lv2",
+"label" : "Font size Menu level 2",
+"default" : "12px",
+"info" : "======================="
+},
+{
+"type" : "color",
+"id" : "color_menu_lv3",
+"label" : "Level 3 Menu Color",
+"default" : "#3c3c3c"
+},
+{
+"type" : "color",
+"id" : "hover_color_mnu_lv3",
+"label" : "Level 3 Menu color when hover",
+"default" : "#0688e2"
+},
+{
+"type" : "text",
+"id" : "font_size_mnu_lv3",
+"label" : "Font size Menu level 3",
+"default" : "12px",
+"info" : "======================="
+},
+{
+"type" : "header",
+"content" : "Label"
+},
+{
+"type" : "checkbox",
+"id" : "enable_sale",
+"label" : "Display Label Sale",
+"default" : true
+},
+{
+"type" : "text",
+"id" : "lb_sale",
+"label" : "Label sale",
+"default" : "Sale"
+},
+{
+"type" : "textarea",
+"id" : "sale_item",
+"label" : "Label Sale Items"
+},
+{
+"type" : "color",
+"id" : "bg_lb_sale",
+"label" : "Background color label sale",
+"default" : "#ef6454"
+},
+{
+"type" : "color",
+"id" : "color_lb_sale",
+"label" : "Text Color label sale",
+"default" : "#fff"
+},
+{
+"type" : "checkbox",
+"id" : "enable_new",
+"label" : "Display Label New",
+"default" : true
+},
+{
+"type" : "text",
+"id" : "lb_new",
+"label" : "Label New",
+"default" : "New"
+},
+{
+"type" : "textarea",
+"id" : "new_item",
+"label" : "Label New Items"
+},
+{
+"type" : "color",
+"id" : "bg_lb_new",
+"label" : "Background color label New",
+"default" : "#06bfe2"
+},
+{
+"type" : "color",
+"id" : "color_lb_new",
+"label" : "Text Color label New",
+"default" : "#fff"
+},
+{
+"type" : "checkbox",
+"id" : "enable_hot",
+"label" : "Display Label Hot",
+"default" : true
+},
+{
+"type" : "text",
+"id" : "lb_hot",
+"label" : "Label Hot",
+"default" : "Hot"
+},
+{
+"type" : "textarea",
+"id" : "hot_item",
+"label" : "Label Hot Items"
+},
+{
+"type" : "color",
+"id" : "bg_lb_hot",
+"label" : "Background color label Hot",
+"default" : "#ffbb49"
+},
+{
+"type" : "color",
+"id" : "color_lb_hot",
+"label" : "Text Color label Hot",
+"default" : "#fff"
+},
+{
+"type": "header",
+"content": "Mega Menu"
+},
+{
+"type": "checkbox",
+"id": "display_megamenu",
+"label": "Display Mega Menu?",
+"default": true
+}
+],
+
+"blocks": [
+{
+"type": "style_1",
+"name": "Style 1",
+"settings": [
+{
+"type" : "header",
+"content" : "Column Menu"
+},
+{
+"type": "text",
+"id": "megamenu_items_1",
+"label": "Mega Menu Items for Style 1",
+"default": "Catalog",
+"info": "Use \"|\" when use language , For ex: Collections | Sammlungen "
+},            
+{
+"type" : "header",
+"content" : "Product"
+},
+{
+"type": "text",
+"id": "title_featured_product",
+"label": "Title Product",
+"default" : "Featured Products"
+},
+{
+"type": "product",
+"id": "featured_product",
+"label": "Product"
+},
+{
+"type" : "header",
+"content" : "Banner"
+},    
+{
+"type": "image_picker",
+"id": "banner_first_style_1",
+"label": "Upload a new image",
+"info": "210px x 337px recommended"
+},
+{
+"type": "url",
+"id": "link_banner_first_style_1",
+"label": "Link image "
+}
+]
+},    
+{
+"type": "style_2",
+"name": "Style 2",
+"settings": [
+{
+"type" : "header",
+"content" : "Column Menu"
+},
+{
+"type": "text",
+"id": "megamenu_items_2",
+"label": "Mega Menu Items for Style 2",
+"default": "Catalog",
+"info": "Use \"|\" when use language , For ex: Collections | Sammlungen "
+},
+{
+"type" : "header",
+"content" : "Banner"
+},
+{
+"type": "image_picker",
+"id": "banner_first_style_2",
+"label": "Upload a new image 1",
+"info": "210px x 165px recommended"
+},
+{
+"type": "url",
+"id": "link_banner_first_style_2",
+"label": "Link image 1 ",
+"info": "=============="
+},    
+{
+"type": "image_picker",
+"id": "banner_second_style_2",
+"label": "Upload a new image 2",
+"info": "210px x 165px recommended"
+},
+{
+"type": "url",
+"id": "link_banner_second_style_2",
+"label": "Link image 2 ",
+"info": "=============="
+},      
+{
+"type": "image_picker",
+"id": "banner_third_style_2",
+"label": "Upload a new image 3",
+"info": "210px x 337px recommended"
+},
+{
+"type": "url",
+"id": "link_banner_third_style_2",
+"label": "Link image 3"
+}
+]
+},    
+{
+"type": "style_3",
+"name": "Style 3",
+"settings": [     
+{
+"type": "text",
+"id": "megamenu_items_3",
+"label": "Mega Menu Items for Style 3",
+"default": "Catalog",
+"info": "Use \"|\" when use language , For ex: Collections | Sammlungen "
+}
+]
+},  
+{
+"type": "style_4",
+"name": "Style 4",
+"settings": [
+{
+"type" : "header",
+"content" : "Column Menu"
+},
+{
+"type": "text",
+"id": "megamenu_items_4",
+"label": "Mega Menu Items for Style 4",
+"default": "Catalog",
+"info": "Use \"|\" when use language , For ex: Collections | Sammlungen "
+},                  
+{
+"type" : "header",
+"content" : "Banner"
+},    
+{
+"type": "image_picker",
+"id": "banner_first_style_4",
+"label": "Upload a new image",
+"info": "210px x 320px recommended"
+},
+{
+"type": "url",
+"id": "link_banner_first_style_4",
+"label": "Link image"
+}
+]
+}    
+]
+
+}
+{% endschema %}

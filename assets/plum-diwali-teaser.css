@@ -1,0 +1,47 @@
+.page-teaser .container-fluid .row{margin:0}
+.page-teaser .container-fluid{max-width:100%;padding:0}
+#shopify-section-counter-bottom-diwali .counter_text{width:100%;max-width:793px;margin:80px auto 50px;background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/count_no_bg.png?v=1634546266);height:250px;background-size:cover;padding:15px}
+#shopify-section-counter-bottom-diwali .counter_text p#demo{background:#fdf1c4;border-radius:10px;padding:15px}
+#shopify-section-counter-bottom-diwali .counter_text p#demo hr{display:none}
+#shopify-section-counter-bottom-diwali .counter_text p#demo .countdown{display:inline-block;padding:0 3px;font-size:0;line-height:normal;color:#724c02;text-transform:uppercase;position:relative}
+#shopify-section-counter-bottom-diwali .counter_text p#demo .countdown .inner{font-size:45px;line-height:normal;color:#724c02;text-transform:uppercase}
+#shopify-section-counter-bottom-diwali .counter_text p#demo .ocount{font-size:120px!important;display:block;font-weight:900;position:relative;color:#724c02}
+#shopify-section-counter-bottom-diwali .counter_text p#demo .countdown{padding-left:25px;padding-right:25px}
+#shopify-section-counter-bottom-diwali .counter_text p#demo .countdown:after{content:":";display:block;position:absolute;right:-7px;font-size:120px;top:-27px}
+#shopify-section-counter-bottom-diwali .counter_text p#demo .seconds.countdown:after{display:none!important}
+#shopify-section-counter-bottom-diwali .counter_text p#demo .days.countdown{padding-left:0}
+#shopify-section-counter-bottom-diwali .counter_text p#demo .seconds.countdown{padding-right:0}
+#shopify-section-counter-bottom-diwali .counter_text p#demo .countdown .ocount{line-height:1.1;top:0}
+#shopify-section-counter-bottom-diwali div#teaser-spotlight-33-counter-bottom-diwali{padding:50px 0 140px;background-position:center}
+#shopify-section-teaser-top-banner-diwali .images-contain img{width:100%}
+@media only screen and (max-width:1450px) {
+#shopify-section-counter-bottom-diwali div#teaser-spotlight-33-counter-bottom-diwali{padding:30px 0 50px;background-position:center right}
+}
+@media only screen and (max-width:991px) {
+#shopify-section-counter-bottom-diwali .counter_text p#demo .countdown .inner{font-size:35px}
+#shopify-section-counter-bottom-diwali .counter_text p#demo .ocount{font-size:100px!important}
+#shopify-section-counter-bottom-diwali .counter_text p#demo .countdown:after{font-size:100px}
+#shopify-section-counter-bottom-diwali .counter_text{max-width:683px;height:215px}
+}
+@media only screen and (max-width:767px) {
+.page-teaser .slide-mobile{display:block!important;width:100%}
+.page-teaser .taeser-banner .images-contain .banner img{display:none}
+.page-teaser .item .slide-image img{display:none}
+#shopify-section-counter-bottom-diwali .counter_text p#demo .countdown .inner{font-size:20px}
+#shopify-section-counter-bottom-diwali .counter_text p#demo .ocount{font-size:40px!important}
+#shopify-section-counter-bottom-diwali .counter_text p#demo .countdown:after{font-size:40px}
+#shopify-section-counter-bottom-diwali .counter_text{max-width:360px;height:215px;background-size:cover;height:auto;overflow:hidden;border-radius:10px;padding:10px}
+#shopify-section-counter-bottom-diwali .counter_text p#demo .countdown{padding-left:15px;padding-right:15px}
+#shopify-section-counter-bottom-diwali .counter_text{margin:30px auto 20px}
+#shopify-section-counter-bottom-diwali .counter_text p#demo .countdown:after{top:-10px;right:0}
+div#shopify-section-counter-bottom-diwali{margin-top:-1px}
+}
+@media only screen and (max-width:479px) {
+#shopify-section-counter-bottom-diwali img{display:none}
+#shopify-section-counter-bottom-diwali img.teaser_mobile{display:block!important;text-align:center;margin:0 auto}
+}
+@media only screen and (max-width:350px) {
+#shopify-section-counter-bottom-diwali .counter_text p#demo .countdown .inner{font-size:15px}
+#shopify-section-counter-bottom-diwali .counter_text p#demo .ocount{font-size:30px!important}
+#shopify-section-counter-bottom-diwali .counter_text p#demo .countdown:after{font-size:30px}
+}

@@ -1,0 +1,23 @@
+<div id="{{collection.handle}}" class="collection-template collection-template-default">
+  <div class="collection_header">{% section 'collection-header' %}</div>
+  {% if collection.handle == 'all-in-stock' or collection.handle == 'all-in-stock-pbl' %}
+      {% include 'count-down-b2g2' %}
+   {% endif %}
+  <div class="container collection_inner_content">
+	  <div class="halo-collection-content">
+      <div class="row">
+        {% section 'sidebar-filter' %}
+        {% section 'collection-template-default' %}
+      </div>
+        {% comment %}
+        {% if settings.style_product_grid == 'style_product_grid_2' %}
+        {% section 'recently-viewed-products-skin-1170' %}
+        {% else %}
+        {% section 'recently-viewed-products' %}
+        {% endif %}
+        {% endcomment %}
+    </div>
+  </div>
+  
+  {% render 'collection_bottom_banner' %}
+</div>

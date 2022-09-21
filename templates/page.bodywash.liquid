@@ -1,0 +1,24 @@
+{{ 'slick.min.js' | asset_url | script_tag }}
+{{ 'bodywash_home.css' | asset_url | stylesheet_tag }}  
+<div class="page-tpl bodywash_home">
+    {% section 'bodywash-slideshow' %}    
+    {% section 'bodywash-collection' %}
+    {% section 'bodywash-featured' %}
+    {% section 'bodywash-new-products' %}
+    {% section 'bodywash-video' %}
+    {% section 'bodywash-CRG' %}
+    {% section 'bodywash-brand' %}
+    {% if settings.enable_multilang and page.content contains '[lang2]' %}
+    <div class="rte lang1">
+      {{ page.content | split: '[lang2]' | first }}
+    </div>
+    <div class="rte lang2">
+      {{ page.content | split: '[lang2]' | last }}
+    </div>
+    {% else %}
+    <div class="rte">
+      {{ page.content | split: '[lang2]' | first }}
+    </div>
+    {% endif %}
+
+</div>

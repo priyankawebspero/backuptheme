@@ -1,0 +1,550 @@
+<script>
+  //alert("Here")
+  var openClean=false
+  var openGood=false
+  var openReal=false
+  function imageOne(){
+    if(!openClean){
+    	
+      openClean=true;
+      openGood=false;
+      openReal=false;
+      document.getElementById("image1Alt").style.display= "block";
+      document.getElementById("image1").style.display= "none";
+      document.getElementById("image2Alt").style.display= "none";
+      document.getElementById("image2").style.display= "block";
+      document.getElementById("image3Alt").style.display= "none";
+      document.getElementById("image3").style.display= "block";
+      document.getElementById("image1Alt").style.border= "2px solid rgb(92, 16, 140) ";
+  	document.getElementById("image2Alt").style.border= "";
+    document.getElementById("image3Alt").style.border= "";
+      document.getElementById("cleanContent").style.display= "block";
+      document.getElementById("realContent").style.display= "none";
+      document.getElementById("goodContent").style.display= "none";
+    }
+    else{
+      openClean=false
+      document.getElementById("image1Alt").style.display= "none";
+      document.getElementById("image1").style.display= "block";
+      document.getElementById("image2Alt").style.display= "none";
+      document.getElementById("image2").style.display= "block";
+      document.getElementById("image3Alt").style.display= "none";
+      document.getElementById("image3").style.display= "block";
+      document.getElementById("image2Alt").style.border= "";
+    document.getElementById("image1Alt").style.border= "";
+    document.getElementById("image3Alt").style.border= "";
+      document.getElementById("cleanContent").style.display= "none";
+      document.getElementById("realContent").style.display= "none";
+      document.getElementById("goodContent").style.display= "none";
+    }
+    
+  }
+  function imageTwo(){
+    if(!openReal){
+      
+      openClean=false;
+      openGood=false;
+      openReal=true;
+      document.getElementById("image1Alt").style.display= "none";
+      document.getElementById("image1").style.display= "block";
+      document.getElementById("image2Alt").style.display= "block";
+      document.getElementById("image2").style.display= "none";
+      document.getElementById("image3Alt").style.display= "none";
+      document.getElementById("image3").style.display= "block";
+      document.getElementById("image2Alt").style.border= "2px solid rgb(92, 16, 140) ";
+    document.getElementById("image1Alt").style.border= "";
+    document.getElementById("image3Alt").style.border= "";
+      document.getElementById("cleanContent").style.display= "none";
+      document.getElementById("realContent").style.display= "block";
+      document.getElementById("goodContent").style.display= "none";
+    }
+    else{
+      openReal=false
+      openClean=false
+      document.getElementById("image1Alt").style.display= "none";
+      document.getElementById("image1").style.display= "block";
+      document.getElementById("image2Alt").style.display= "none";
+      document.getElementById("image2").style.display= "block";
+      document.getElementById("image3Alt").style.display= "none";
+      document.getElementById("image3").style.display= "block";
+      document.getElementById("image2Alt").style.border= "";
+    document.getElementById("image1Alt").style.border= "";
+    document.getElementById("image3Alt").style.border= "";
+      document.getElementById("cleanContent").style.display= "none";
+      document.getElementById("realContent").style.display= "none";
+      document.getElementById("goodContent").style.display= "none";
+    }
+  	
+  }
+  function imageThree(){
+    if(!openGood){
+    	
+      openClean=false;
+      openGood=true;
+      openReal=false;
+      document.getElementById("image1Alt").style.display= "none";
+      document.getElementById("image1").style.display= "block";
+      document.getElementById("image2Alt").style.display= "none";
+      document.getElementById("image2").style.display= "block";
+      document.getElementById("image3Alt").style.display= "block";
+      document.getElementById("image3").style.display= "none";
+      document.getElementById("image2Alt").style.border= "";
+    document.getElementById("image1Alt").style.border= "";
+  	document.getElementById("image3Alt").style.border= "2px solid rgb(92, 16, 140) ";
+      document.getElementById("cleanContent").style.display= "none";
+      document.getElementById("realContent").style.display= "none";
+      document.getElementById("goodContent").style.display= "block";
+    }
+    else{
+      openGood=false
+      openClean=false
+      document.getElementById("image1Alt").style.display= "none";
+      document.getElementById("image1").style.display= "block";
+      document.getElementById("image2Alt").style.display= "none";
+      document.getElementById("image2").style.display= "block";
+      document.getElementById("image3Alt").style.display= "none";
+      document.getElementById("image3").style.display= "block";
+      document.getElementById("image2Alt").style.border= "";
+    document.getElementById("image1Alt").style.border= "";
+    document.getElementById("image3Alt").style.border= "";
+      document.getElementById("cleanContent").style.display= "none";
+      document.getElementById("realContent").style.display= "none";
+      document.getElementById("goodContent").style.display= "none";
+    }
+    
+  }
+  var openCleanMob=false
+  var openGoodMob=false
+  var openRealMob=false
+  function imageOneMob(){
+    if(!openCleanMob){
+    	
+      openCleanMob=true;
+      openGoodMob=false;
+      openRealMob=false;
+      document.getElementById("image1MobAlt").style.display= "block";
+      document.getElementById("image1Mob").style.display= "none";
+      document.getElementById("image2MobAlt").style.display= "none";
+      document.getElementById("image2Mob").style.display= "block";
+      document.getElementById("image3MobAlt").style.display= "none";
+      document.getElementById("image3Mob").style.display= "block";
+      document.getElementById("image1MobAlt").style.border= "2px solid rgb(92, 16, 140) ";
+  	document.getElementById("image2MobAlt").style.border= "";
+    document.getElementById("image3MobAlt").style.border= "";
+      document.getElementById("cleanContentMob").style.display= "block";
+      document.getElementById("realContentMob").style.display= "none";
+      document.getElementById("goodContentMob").style.display= "none";
+    }
+    else{
+      openCleanMob=false
+      document.getElementById("image1MobAlt").style.display= "none";
+      document.getElementById("image1Mob").style.display= "block";
+      document.getElementById("image2MobAlt").style.display= "none";
+      document.getElementById("image2Mob").style.display= "block";
+      document.getElementById("image3MobAlt").style.display= "none";
+      document.getElementById("image3Mob").style.display= "block";
+      document.getElementById("image2MobAlt").style.border= "";
+      document.getElementById("image1MobAlt").style.border= "";
+      document.getElementById("image3MobAlt").style.border= "";
+      document.getElementById("cleanContentMob").style.display= "none";
+      document.getElementById("realContentMob").style.display= "none";
+      document.getElementById("goodContentMob").style.display= "none";
+    }
+    
+  }
+  function imageTwoMob(){
+    if(!openRealMob){
+      
+      openCleanMob=false;
+      openGoodMob=false;
+      openRealMob=true;
+      document.getElementById("image1MobAlt").style.display= "none";
+      document.getElementById("image1Mob").style.display= "block";
+      document.getElementById("image2MobAlt").style.display= "block";
+      document.getElementById("image2Mob").style.display= "none";
+      document.getElementById("image3MobAlt").style.display= "none";
+      document.getElementById("image3Mob").style.display= "block";
+      document.getElementById("image2MobAlt").style.border= "2px solid rgb(92, 16, 140) ";
+    document.getElementById("image1MobAlt").style.border= "";
+    document.getElementById("image3MobAlt").style.border= "";
+      document.getElementById("cleanContentMob").style.display= "none";
+      document.getElementById("realContentMob").style.display= "block";
+      document.getElementById("goodContentMob").style.display= "none";
+    }
+    else{
+      openRealMob=false
+      document.getElementById("image1MobAlt").style.display= "none";
+      document.getElementById("image1Mob").style.display= "block";
+      document.getElementById("image2MobAlt").style.display= "none";
+      document.getElementById("image2Mob").style.display= "block";
+      document.getElementById("image3MobAlt").style.display= "none";
+      document.getElementById("image3Mob").style.display= "block";
+      document.getElementById("image2MobAlt").style.border= "";
+    document.getElementById("image1MobAlt").style.border= "";
+    document.getElementById("image3MobAlt").style.border= "";
+      document.getElementById("cleanContentMob").style.display= "none";
+      document.getElementById("realContentMob").style.display= "none";
+      document.getElementById("goodContentMob").style.display= "none";
+    }
+  	
+  }
+  function imageThreeMob(){
+    if(!openGoodMob){
+    	
+      openCleanMob=false;
+      openGoodMob=true;
+      openRealMob=false;
+      document.getElementById("image1MobAlt").style.display= "none";
+      document.getElementById("image1Mob").style.display= "block";
+      document.getElementById("image2MobAlt").style.display= "none";
+      document.getElementById("image2Mob").style.display= "block";
+      document.getElementById("image3MobAlt").style.display= "block";
+      document.getElementById("image3Mob").style.display= "none";
+      document.getElementById("image2MobAlt").style.border= "";
+    document.getElementById("image1MobAlt").style.border= "";
+  	document.getElementById("image3MobAlt").style.border= "2px solid rgb(92, 16, 140)";
+      document.getElementById("cleanContentMob").style.display= "none";
+      document.getElementById("realContentMob").style.display= "none";
+      document.getElementById("goodContentMob").style.display= "block";
+    }
+    else{
+      openGoodMob=false
+      document.getElementById("image1MobAlt").style.display= "none";
+      document.getElementById("image1Mob").style.display= "block";
+      document.getElementById("image2MobAlt").style.display= "none";
+      document.getElementById("image2Mob").style.display= "block";
+      document.getElementById("image3MobAlt").style.display= "none";
+      document.getElementById("image3Mob").style.display= "block";
+      document.getElementById("image2MobAlt").style.border= "";
+    document.getElementById("image1MobAlt").style.border= "";
+    document.getElementById("image3MobAlt").style.border= "";
+      document.getElementById("cleanContentMob").style.display= "none";
+      document.getElementById("realContentMob").style.display= "none";
+      document.getElementById("goodContentMob").style.display= "none";
+    }
+    
+  }
+</script>
+<style>
+  .img-responsive {
+    display: block;
+  }
+  .img-responsive.mobile {
+  display: none;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .img-responsive {
+    display: none;
+  }
+  .img-responsive.mobile {
+    display: block;
+  }
+}
+  .column {
+  float: left;
+  width: 33%;
+  padding: 5px;
+}
+  .column1 {
+  float: left;
+  width: 24%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+  #cleanContent{
+  	display:none;
+    text-align:left;
+    margin-left:6.3%;
+    margin-right:7%;
+    
+    color:rgb(87, 49, 128);
+    padding:10px
+  }
+  #realContent{
+  	display:none;
+    text-align:left;
+    margin-left:6.3%;
+    margin-right:7%;
+    
+    color:rgb(87, 49, 128);
+    padding:10px
+  }
+  #goodContent{
+  	display:none;
+    text-align:left;
+    margin-left:6.3%;
+    margin-right:7%;
+    
+    color:rgb(87, 49, 128);
+    padding:10px
+  }
+  #cleanContentMob{
+  	display:none;
+    text-align:left;
+    margin-left:6.3%;
+    margin-right:7%;
+    background-color:rgb(252, 247, 254);
+    color:rgb(87, 49, 128);
+    padding:10px
+  }
+  #realContentMob{
+  	display:none;
+    text-align:left;
+    margin-left:6.3%;
+    margin-right:7%;
+    background-color:rgb(252, 247, 254);
+    color:rgb(87, 49, 128);
+    padding:10px
+  }
+  #goodContentMob{
+  	display:none;
+    text-align:left;
+    margin-left:6.3%;
+    margin-right:7%;
+    background-color:rgb(252, 247, 254);
+    color:rgb(87, 49, 128);
+    padding:10px
+  }
+</style>
+<div class="page-tpl">
+ 
+
+    {% comment %}
+    Regular page content goes here.
+    {% endcomment %}
+    <div class="img-responsive">
+    <div style="text-align:center;background:url('https://cdn.shopify.com/s/files/1/0390/2985/files/merge_from_ofoct_4.jpg?v=1601514941');background-size:contain;background-repeat:no-repeat">
+      <div style="height:49vw">
+        
+        
+      </div>
+      <div class="row" style="margin-left:6%;margin-right:6%;margin-bottom:4%">
+      	<div class="column image">
+          <img id="image1" src="https://cdn.shopify.com/s/files/1/0390/2985/files/CLEAN_4.png?v=1600932937" alt="Plum" onclick="imageOne()">
+          <img id="image1Alt" style="display:none" src="https://cdn.shopify.com/s/files/1/0390/2985/files/CLEAN_ON_1.png?v=1600931066" alt="Plum" onclick="imageOne()">
+        </div>
+        <div class="column">
+          <img id="image2" src="https://cdn.shopify.com/s/files/1/0390/2985/files/REAL_3.png?v=1600931066" onclick="imageTwo()">
+          <img id="image2Alt" style="display:none" src="https://cdn.shopify.com/s/files/1/0390/2985/files/REAL_ON.png?v=1600932937" onclick="imageTwo()">
+        </div>
+        <div class="column">
+          <img id="image3" src="https://cdn.shopify.com/s/files/1/0390/2985/files/GOOD_3.png?v=1600931065" onclick="imageThree()">
+          <img id="image3Alt" style="display:none" src="https://cdn.shopify.com/s/files/1/0390/2985/files/GOOD_ON_1.png?v=1600932936" onclick="imageThree()">
+        </div>
+      </div>
+     
+    </div>
+    <div id="cleanContent">
+      <div style="text-align:left">
+        <img style="width:10%;margin-bottom:-0.5vw" src="https://cdn.shopify.com/s/files/1/0390/2985/files/1_clean.png?v=1601452671">
+      </div>
+      <div class="row" style="background:#f7e8ff">
+        <div class="column1" style="margin:4.5%;margin-top:2%;margin-bottom:0">
+          <p style="font-size:15px;line-height:13px;font-weight:bold">research-backed plant-based active ingredients</p>
+          
+          <p style="font-size:13px;;line-height:13px;line-height:13px">at plum, we only use plant-based actives that are carefully chosen and combined in our skin care formula. these plant-actives solve beauty numerous concerns and treat your skin with the love and care it deserves</p>
+
+        </div>
+        <div class="column1" style="margin:4.5%;margin-top:2%;margin-bottom:0">
+          <p style="font-size:15px;line-height:13px;font-weight:bold">no harmful chemicals</p>
+                
+                <p style="font-size:13px;;line-height:13px;line-height:13px">we are proud of our very own in-house R&D facility that helps us create all the goodness and we scour global safety standards before we put anything in our formulations. while not all chemicals are bad, there’s a hoard of chemicals we DO NOT use in any of our products want to know more about what’s in and what’s out? find out here  
+          <br>
+          <img style="margin-top:0.5vw" src="https://cdn.shopify.com/s/files/1/0390/2985/files/what_s_in_and_what_s_out.png?v=1601296455">
+                  <br>
+                  <a href="https://plumgoodness.com/pages/inside-goodness-labs"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/FINT_OUT_MORE_CTA.png?v=1601286178"></a>
+          </p>
+          <br>
+          
+      
+        </div>
+        <div class="column1" style="margin:4.5%;margin-top:2%;margin-bottom:0">
+          <p style="font-size:15px;line-height:13px;font-weight:bold">we are 100% vegan</p>
+          
+          <p style="font-size:13px;line-height:13px;line-height:13px">all our products are 100% vegan as we do not use any animal-derived ingredients. simply put, we never use ingredients and derivatives from ingredients such as honey, beeswax, wool, silk, shells, insects, bone, leather, etc, and ingredients filtered through animal-derived materials. nor do we test our products on animals.</p>
+
+        </div>
+      </div>
+        
+    </div>
+    <div id="realContent">
+      <div style="text-align:left">
+        <img style="width:10%;margin-bottom:-0.5vw" src="https://cdn.shopify.com/s/files/1/0390/2985/files/2_real.png?v=1601452671">
+      </div>
+      <div class="row" style="background:#f7e8ff" >
+        <div class="column1" style="margin:4.5%;margin-top:2%;margin-bottom:0">
+      <p style="font-size:15px;line-height:13px;font-weight:bold">say no to beauty-standards </p>
+          
+      <p style="font-size:13px;;line-height:13px;line-height:13px">we believe in maintaining our distance from unrealistic beauty standards and wouldn’t suggest you to subscribe to them either.  for us, beauty has no shape, no size and no skin tone. our goal is to help you become the best version of yourself without conforming to the beauty standards. </p>
+<br>
+        </div>
+        <div class="column1" style="margin:4.5%;margin-top:2%;margin-bottom:0">
+      <p style="font-size:15px;line-height:13px;font-weight:bold">say no to secrets and false claims</p>
+               
+      <p style="font-size:13px;;line-height:13px;line-height:13px">you and us? we are team mates, and teammates don’t have secrets! we believe in complete transparency. we don’t make false promises and we also don’t keep any secrets.</p>
+          
+      <br>
+          <br>
+        </div>
+        <div class="column1" style="margin:4.5%;margin-top:2%;margin-bottom:0">
+          
+      <p style="font-size:15px;line-height:13px;font-weight:bold">be-YOU-tiful</p>
+          
+      <p style="font-size:13px;line-height:13px">we know that when it comes to skin, one product does not fit all. we care for all skin types equally and we have the perfect one for you too, no matter what your skin type so that it can be at its very best</p>
+
+        </div>
+      </div>
+      
+        
+    </div>
+    <div id="goodContent">
+      <div style="text-align:left">
+        <img style="width:10%;margin-bottom:-0.5vw" src="https://cdn.shopify.com/s/files/1/0390/2985/files/3_good.png?v=1601452480">
+      </div>
+      <div class="row" style="background:#f7e8ff">
+        <div class="column1" style="margin:4.5%;margin-top:2%;margin-bottom:0">
+      <p style="font-size:14px;line-height:13px;font-weight:bold">guess what? PETA approves! </p>
+          
+      <p style="font-size:13px;;line-height:13px;line-height:13px">we love our furry friends and guess what you know what, PETA approves! plum follows PETA's requirements for sourcing its ingredients and finished products from its vendors. specifically, these requirements forbid any party from conducting or commissioning animal testing for finished products or ingredients. we do hope to partner with PETA in more ways to make this world a happier place for our furry friends.</p>
+
+        </div>
+        <div class="column1" style="margin:4.5%;margin-top:2%;margin-bottom:0">
+      <p style="font-size:14px;line-height:13px;font-weight:bold">recyclable packaging</p>
+                
+      <p style="font-size:13px;;line-height:13px;line-height:13px"> yes we know. not many brands talk about sustainability in relation to clean beauty. but why not? when we talk clean, we talk about it as the ethos of plum, which is not just the products we make, but also about how we can  reduce our carbon footprint in the aftermath of the product usage. here’s how we are trying to do our part in keeping the planet happy. read about #Empties4Good now!  </p>
+          
+          <a href="https://plumgoodness.com/pages/recycle"><img style="margin-top:4%" src="https://cdn.shopify.com/s/files/1/0390/2985/files/CTA.png?v=1601387186"></a>
+      <br>
+          <br>
+          
+        </div>
+        <div class="column1" style="margin:4.5%;margin-top:2%;margin-bottom:0">
+          
+      <p style="font-size:14px;line-height:13px;font-weight:bold">1% for the planet</p>
+          
+      <p style="font-size:13px;;line-height:13px;line-height:13px">when you pick a plum, you make a difference! we have taken a plunge to donate 1% of our total sales to support environmental causes. In 2019, World Environment Day, plum has donated 1% of it’s annual sales to WWF towards saving snow leopards. (blog link in know more)</p>
+                <a href="https://plumgoodness.com/blogs/world-of-goodness/world-environment-weekend"><img style="margin-top:2%" src="https://cdn.shopify.com/s/files/1/0390/2985/files/FINT_OUT_MORE_CTA.png?v=1601286178"></a>
+
+        </div>
+      </div>
+      
+        
+    </div>
+      <div style="text-align:center">
+      <img style="width:88%" src="https://cdn.shopify.com/s/files/1/0390/2985/files/03_COLLAGE_2.png?v=1601451535">
+      <img style="margin-top:7%;margin-bottom:-3%;height:50%;margin-left:20%;margin-right:20%" src="https://cdn.shopify.com/s/files/1/0390/2985/files/04_LOGOS.png?v=1600850018">
+      </div>
+  </div>
+  <div class="img-responsive mobile">
+      <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/01_BANNER_3.jpg?v=1601515605">
+      <div class="row" style="margin-left:6%;margin-right:6%;margin-bottom:12%">
+      	<div class="column">
+          <img id="image1Mob" src="https://cdn.shopify.com/s/files/1/0390/2985/files/CLEAN_2.png?v=1600928682" alt="Plum" onclick="imageOneMob()">
+          <img id="image1MobAlt" style="display:none" src="https://cdn.shopify.com/s/files/1/0390/2985/files/CLEAN_ON.png?v=1600929497" alt="Plum" onclick="imageOneMob()">
+
+        </div>
+        <div class="column">
+          <img id="image2Mob" src="https://cdn.shopify.com/s/files/1/0390/2985/files/REAL_2.png?v=1600929407" onclick="imageTwoMob()">
+          <img id="image2MobAlt" style="display:none" src="https://cdn.shopify.com/s/files/1/0390/2985/files/REAL_ON_1.png?v=1600934465" onclick="imageTwoMob()">
+        </div>
+        <div class="column">
+          <img id="image3Mob" src="https://cdn.shopify.com/s/files/1/0390/2985/files/GOOD_2.png?v=1600929407" onclick="imageThreeMob()">
+          <img id="image3MobAlt" style="display:none" src="https://cdn.shopify.com/s/files/1/0390/2985/files/GOOD_ON.png?v=1600928682" onclick="imageThreeMob()">
+        </div>
+      </div>
+     
+    <div id="cleanContentMob" style="background:#f7e8ff">
+      <div style="margin:8%">
+      <p style="font-size:14px;font-weight:bold;line-height: 14px;">research-backed plant-based active ingredients</p>
+      
+      <p style="font-size:12px;line-height: 14px;">at plum, we only use plant-based actives that are carefully chosen and combined in our skin care formula. these plant-actives solve beauty numerous concerns and treat your skin with the love and care it deserves</p>
+      
+      <p style="font-size:14px;font-weight:bold;line-height: 14px;">no harmful chemical:</p>
+      
+      <p style="font-size:12px;line-height: 14px;">we are proud of our very own in-house R&D facility that helps us create all the goodness and we scour global safety standards before we put anything in our formulations. while not all chemicals are bad, there’s a hoard of chemicals we DO NOT use in any of our products want to know more about what’s in and what’s out? find out here  
+        <img style="margin-top:2%" src="https://cdn.shopify.com/s/files/1/0390/2985/files/what_s_in_and_what_s_out.png?v=1601296455">
+        
+        <a href="https://plumgoodness.com/pages/inside-goodness-labs"><img style="width:40%" src="https://cdn.shopify.com/s/files/1/0390/2985/files/FINT_OUT_MORE_CTA.png?v=1601286178"></a>
+        </p>
+        
+      
+      <p style="font-size:14px;font-weight:bold;line-height: 14px;">we are 100% vegan</p>
+      
+      <p style="font-size:12px;line-height: 14px;">all our products are 100% vegan as we do not use any animal-derived ingredients. simply put, we never use ingredients and derivatives from ingredients such as honey, beeswax, wool, silk, shells, insects, bone, leather, etc, and ingredients filtered through animal-derived materials. nor do we test our products on animals.</p>
+      
+        
+      </div>
+    </div>
+    <div id="realContentMob" style="background:#f7e8ff">
+      <div style="margin:8%">
+      <p style="font-size:14px;font-weight:bold;line-height: 14px;">say no to beauty-standards </p>
+      
+      <p style="font-size:12px;line-height: 14px;">we believe in maintaining our distance from unrealistic beauty standards and wouldn’t suggest you to subscribe to them either.  for us, beauty has no shape, no size and no skin tone. our goal is to help you become the best version of yourself without conforming to the beauty standards. 
+        
+        </p>
+      
+      
+        
+      <p style="font-size:14px;font-weight:bold;line-height: 14px;">say no to secrets and false claims</p>
+      
+      <p style="font-size:12px;line-height: 14px;">you and us? we are team mates, and teammates don’t have secrets! we believe in complete transparency. we don’t make false promises and we also don’t keep any secrets.
+</p>
+      
+      <p style="font-size:14px;font-weight:bold;line-height: 14px;">be-YOU-tiful</p>
+      
+      <p style="font-size:12px;line-height: 14px;">we know that when it comes to skin, one product does not fit all. we care for all skin types equally and we have the perfect one for you too, no matter what your skin type so that it can be at its very best</p>
+      
+      </div>
+        
+    </div>
+    <div id="goodContentMob" style="background:#f7e8ff">
+      <div style="margin:8%">
+      <p style="font-size:14px;font-weight:bold;line-height: 14px;">guess what? PETA approves! </p>
+      
+      <p style="font-size:12px;line-height: 14px;">we love our furry friends and guess what you know what, PETA approves! plum follows PETA's requirements for sourcing its ingredients and finished products from its vendors. specifically, these requirements forbid any party from conducting or commissioning animal testing for finished products or ingredients. we do hope to partner with PETA in more ways to make this world a happier place for our furry friends.</p>
+      
+      <p style="font-size:14px;font-weight:bold;line-height: 14px;">recyclable packaging</p>
+      
+      <p style="font-size:12px;line-height: 14px;"> yes we know. not many brands talk about sustainability in relation to clean beauty. but why not? when we talk clean, we talk about it as the ethos of plum, which is not just the products we make, but also about how we can  reduce our carbon footprint in the aftermath of the product usage. here’s how we are trying to do our part in keeping the planet happy. read about #Empties4Good now!  
+        <a href="https://plumgoodness.com/pages/recycle"><img style="margin-top:2%;width:63%" src="https://cdn.shopify.com/s/files/1/0390/2985/files/CTA.png?v=1601387186"></a>
+
+        </p>
+      
+      <p style="font-size:14px;font-weight:bold;line-height: 14px;">1% for the planet</p>
+      
+      <p style="font-size:12px;line-height: 14px;">when you pick a plum, you make a difference! we have taken a plunge to donate 1% of our total sales to support environmental causes. In 2019, World Environment Day, plum has donated 1% of it’s annual sales to WWF towards saving snow leopards. (blog link in know more)</p>
+                <a href="https://plumgoodness.com/blogs/world-of-goodness/world-environment-weekend"><img style="width:40%" src="https://cdn.shopify.com/s/files/1/0390/2985/files/FINT_OUT_MORE_CTA.png?v=1601286178"></a>
+
+      
+        
+      </div>
+        
+    </div>
+      <div style="text-align:center">
+      <img style="width:88%" src="https://cdn.shopify.com/s/files/1/0390/2985/files/03_COLLAGE_1.png?v=1600883935">
+      <img style="height:14vw;margin-top:10%;" src="https://cdn.shopify.com/s/files/1/0390/2985/files/logos.png?v=1600883748">
+      </div>
+    
+  </div>
+<div>
+    {% if settings.enable_multilang and page.content contains '[lang2]' %}
+    <div class="rte lang1">
+      {{ page.content | split: '[lang2]' | first }}
+    </div>
+    <div class="rte lang2">
+      {{ page.content | split: '[lang2]' | last }}
+    </div>
+    {% else %}
+    <div class="rte">
+      {{ page.content | split: '[lang2]' | first }}
+    </div>
+    {% endif %}
+  </div>
+</div>

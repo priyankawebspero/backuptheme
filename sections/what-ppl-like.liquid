@@ -1,0 +1,231 @@
+{% if section.settings.enable_recommendations %}
+{% if customer %}
+<div id="ppl-specially-curated-for-you" style="display:none;">
+<div class="container-padd60">
+ <div class="row">
+    <div class="col-md-12 column-product re_cols_product">
+        <div class="widget-title">
+            <h3 class="box-title"><span class="title">{% if customer %}{{section.settings.heading}} {% endif %}</span></h3>
+        </div>
+        <div class="widget-product">
+              <div class="products-grid"></div>
+        </div>
+    </div> 
+ </div>
+</div>
+</div>
+<script>
+    //var bitly_code = window.location.search.replace("?", "");
+    // console.log('bitly_code',bitly_code);
+    var customer_email = '{{customer.email}}';
+    if (customer_email) {
+    var payload = '{"Customer_email": "'+customer_email+'"}';
+    const solus_url_curated_section = 'https://plum.solus.ai/solus_genome_recos'
+    fetch(solus_url_curated_section, {
+      method: 'POST', 
+      body: payload ,
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => response.text())  // convert to json
+    .then(text => {
+      var baskhtml = "";
+      var t = JSON.parse(text);
+      var sbitems = t["items"];
+      if (sbitems.length <= 0) {
+        $('body').addClass('bitly_code_not_found');
+        $("#landing_page_json").append("<h3>No Product Found!</h3>"); 
+        $("#shopify-section-165287517225fd232a").hide(); 
+        return;
+      }
+      sbitems = sbitems.slice(0,20);
+      var handles = [];
+    // Create HTML for the products
+      for(var i=sbitems.length-1; i>=0; i--){
+        if ($.inArray(sbitems[i].Product_Handle, handles) != -1) {
+          console.log('alreay exist');          
+        }
+        else{
+          var product_url = '/products/'+ sbitems[i].Product_Handle + '.json';
+          var sbvariant = sbitems[i].Product_Variant_Id;
+          jQuery.getJSON(product_url, function(products) {
+                var product = products.product;                
+                console.log('product',product);
+                var imgsrc = product.images[0].src;
+                var imgsrc2 = product.images[1].src;
+                var imgalt = product.images[0].alt;
+                var imgalt2 = product.images[1].alt;
+                var sale = (product.variants[0].compare_at_price - product.variants[0].price) * 100 / product.variants[0].compare_at_price;
+                 sale = Math.round(sale)
+                      baskhtml = '<div class="grid-item col-6 col-md-4 col-lg-3 small--one-half">';
+                      baskhtml = baskhtml + '<div class="inner product-item " data-product-id="product-'+product.id+'">';
+                      baskhtml = baskhtml + '<div class="inner-top">';
+                      baskhtml = baskhtml + '<div class="product-top">';
+                      baskhtml = baskhtml + '<div class="product-image image-swap">';
+                      baskhtml = baskhtml + '<a href="https://plumgoodness.com/products/'+product.handle+'" class="product-grid-image" tabindex="0"  data-collections-related="/collections/?view=related">';
+                      baskhtml = baskhtml + '<img alt="'+imgalt+'" class="images-one lazyautosizes lazyloaded" data-src="'+imgsrc+'" src="'+imgsrc+'">';
+                      baskhtml = baskhtml + '<span class="images-two">';
+                      if (imgsrc2) {
+                        baskhtml = baskhtml + '<img alt="'+imgalt2+'" class="images-one lazyautosizes lazyloaded" data-src="'+imgsrc2+'" src="'+imgsrc2+'">';
+                        baskhtml = baskhtml + '</span>';
+                      }
+                      baskhtml = baskhtml + '</a>';
+                      baskhtml = baskhtml + '</div>';
+                      if(product.tags.indexOf('New') != -1)
+                      {
+                        baskhtml = baskhtml + '<strong class="label new-label" data-translate="products.product.new_label">';
+                        baskhtml = baskhtml + '<img class=" lazyloaded" data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/New-label_89e72cd3-173c-4c2d-88ce-8dc2474be097.png" src="https://cdn.shopify.com/s/files/1/0390/2985/files/New-label_89e72cd3-173c-4c2d-88ce-8dc2474be097.png" width="58" height="58"><span class="new">New</span>';
+                        baskhtml = baskhtml + '</strong>';
+                      }   
+                      if (sale > 0) {
+                        baskhtml = baskhtml + '<div class="product-label ">';
+                        baskhtml = baskhtml + '<strong class="label sale-label">'+sale+'% off';
+                        baskhtml = baskhtml + '</strong>';
+                        baskhtml = baskhtml + '</div>';
+                      }
+                      baskhtml = baskhtml + '</div>';
+
+                      baskhtml = baskhtml + '<div class="product-bottom">';
+                      baskhtml = baskhtml + '<span class="shopify-product-reviews-badge" data-id="'+product.id+'">'; 
+                      baskhtml = baskhtml + '</span>';
+                      baskhtml = baskhtml + '<a class="product-title" href="https://plumgoodness.com/products/'+product.handle+'" tabindex="0">';
+                      baskhtml = baskhtml + '<span class="lang1">';
+                      baskhtml = baskhtml + product.title;
+                      baskhtml = baskhtml + '</span>';
+                      baskhtml = baskhtml + '</a>';
+                      if (product.variants.length > 1){
+                      var length = product.variants.length;
+                        if (product.template_suffix == 'swatch'){
+                          baskhtml =  baskhtml + '<span class="shade-list"> '+length+' shades';
+                          baskhtml = baskhtml + '</span>';
+                        }      
+                        else{
+                          baskhtml =  baskhtml + '<span class="shade-sizes"> '+length+' sizes';
+                          baskhtml = baskhtml + '</span>';
+                        }    
+                      }
+                      else{
+                        baskhtml =  baskhtml + '<span class="shade-sizes deative_shades">';
+                        baskhtml = baskhtml + '</span>';
+                      } 
+                      baskhtml = baskhtml + '<div class="price-box">';
+                      if(product.variants[0].compare_at_price > product.variants[0].price){
+                      baskhtml = baskhtml + '<div class="price-sale">';  
+                      baskhtml = baskhtml + '<span class="old-price">₹ '+product.variants[0].compare_at_price+'';  
+                      baskhtml = baskhtml + '</span>';
+                      baskhtml = baskhtml + '<span class="special-price">₹ '+product.variants[0].price+'';  
+                      baskhtml = baskhtml + '</span>';
+                      baskhtml = baskhtml + '</div>';
+                      }else{
+                      baskhtml = baskhtml + '<div class="price-regular">';  
+                      baskhtml = baskhtml + '<span class="price-mrp test">₹ '+product.variants[0].compare_at_price+'';  
+                      baskhtml = baskhtml + '</span>';
+                      baskhtml = baskhtml + '</div>';
+                      }
+                      baskhtml = baskhtml + '</div>';
+                      baskhtml = baskhtml + '<div class="action">';
+                      baskhtml = baskhtml + '<form action="/cart/add" method="post" class="variants grid-product-form--'+product.id+'" id="grid-product-form--'+product.id+'" data-id="product-actions-'+product.id+'" enctype="multipart/form-data">';
+                      if (product.variants.length > 1){
+                       baskhtml = baskhtml + '<a class="btn" href="https://plumgoodness.com/products/'+product.handle+'" title="'+product.title+'" tabindex="0">';
+                       baskhtml = baskhtml + 'Select options';
+                       baskhtml = baskhtml + '</a>';
+                      }else{
+                      baskhtml = baskhtml + '<div class="cart ">';
+                      baskhtml = baskhtml + '<input type="hidden" name="id" value="'+product.variants[0].id+'" tabindex="0">';
+                      baskhtml = baskhtml + '<input type="hidden" name="quantity" value="1" tabindex="0">';
+                      baskhtml = baskhtml + '<button data-btn-addtocart="" class="btn add-to-cart-btn cartbutton" type="submit" data-form-id="#grid-product-form--'+product.id+'" tabindex="0">';
+                      baskhtml = baskhtml + 'Add to Cart';
+                      baskhtml = baskhtml + '</button>';
+                      baskhtml = baskhtml + '</div>'; 
+                      }
+                      baskhtml = baskhtml + '</div>'; 
+                      baskhtml = baskhtml + '</form>';
+                      // console.log(product);
+             
+                   $("#ppl-specially-curated-for-you .container-padd60 .products-grid").append(baskhtml); 
+                   $("#ppl-specially-curated-for-you").show(); 
+              } );
+      }
+         handles.push(sbitems[i].Product_Handle);
+      }
+
+      setTimeout(function () {
+        createslider();
+      }, 4000);
+    }) 
+    //print data to console
+    .catch(err => {
+      console.log('Request Failed', err);
+    }); // Catch errors
+    }
+  else{    
+    $("#ppl-specially-curated-for-you").hide();  
+  }
+ function createslider(){
+  $('#ppl-specially-curated-for-you .container-padd60 .widget-product .products-grid').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        dots: !0,
+        infinite: true,
+        arrows: true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToScroll:1,
+              slidesToShow: 4
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToScroll: 1,
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToScroll: 1,
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 575,
+            settings: {
+              slidesToScroll:1,
+              slidesToShow: 2
+            }
+          }
+        ]
+      });
+}
+  
+</script>
+
+ {% endif %}
+ {% endif %}
+{% schema %}
+  {
+    "name": "What People Like",
+    "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_recommendations",
+          "label": "Enable Section"
+        }, 
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading For Section"
+      }
+   ],
+  "presets": [{
+    "name": "what people like",
+    "category": "Products"
+  }]
+  }
+{% endschema %}
+

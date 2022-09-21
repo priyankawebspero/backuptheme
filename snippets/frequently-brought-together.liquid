@@ -1,0 +1,82 @@
+{% assign FBT_Product2 =  product.metafields.product["Plum Pairings"] | split:"," %}
+{% if FBT_Product2 != blank %}
+<div class="frequently-brought-together">
+  <h2 class="title">Frequently bought together</h2>
+  <div class="row frequently-brought-wrapper">
+    <div class="col-sm-6 item-wrapper">
+      <div class="item-0 item-list freq-product-0">
+        <div class="fbt-title-image">
+          <a href="javascript:void(0);" >
+            <div class="product-imgae">
+              <img src="{{ product.featured_image.src | product_img_url: '100x' }}">
+            </div>
+          </a>
+          <span class="product-info">
+            <a href="javascript:void(0);">{{ product.title }}</a>
+          </span>
+        </div>
+      </div>
+      {% assign FBT_Product =  product.metafields.product["Plum Pairings"] | split:"," %}
+      {% if FBT_Product != blank %}
+      {% for product_handle in FBT_Product  %}
+      {% assign handleWithoutSpace = product_handle | strip %}
+      {% assign productNew =  all_products[handleWithoutSpace] %}
+      <div class="plus-sign">{% include 'plus-icon-svg' %}</div>
+      <div class="item-{{ forloop.index | plus:1 }} item-list freq-product-{{ forloop.index | plus:1 }}">
+        <div class="fbt-title-image">
+          <div class="product-imgae"><img src="{{ productNew.featured_image.src | product_img_url: '100x' }}"></div>
+          <span class="product-info"><a href="{{ productNew.url }}">{{ productNew.title }}</a></span>
+        </div>
+      </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+    <div class="col-sm-5 add-to-cart-wrapper">
+      <ul>
+        <li class="freq-descriptions current-product">
+          <input type="checkbox" id="freq-product-0" data-product-price="{{ product.variants[0].price }}" data-product-id="{{ product.variants.first.id }}" checked>
+          <label class="checkbox-wrapper" for="freq-product-0">check</label>
+          <img src="{{ product.featured_image.src | product_img_url: '100x' }}">
+          <label class="freq-products" for="freq-product-0">
+            <a href="javascript:void(0);" >
+              <span class="current-item">
+                <strong>Current items</strong>
+              </span>
+              <span class="product-info">{{ product.title }}</span>
+              <span class="priceNew">{{ product.variants[0].price | money | remove: ".00" }}</span>
+            </a>
+          </label>
+        </li>
+        {% assign totalPrice = product.variants[0].price %}
+        {% assign FBT_Product2 =  product.metafields.product["Plum Pairings"] | split:"," %}
+        {% if FBT_Product != blank %}
+        {% for product_handle in FBT_Product  %}
+        {% assign handleWithoutSpace = product_handle | strip %}
+        {% assign productNew =  all_products[handleWithoutSpace] %}
+        <li class="freq-descriptions">
+          <input type="checkbox" id="freq-product-{{ forloop.index | plus:1 }}" data-product-price="{{ productNew.variants[0].price }}"  data-product-id="{{ productNew.variants.first.id }}" checked>
+          <label class="checkbox-wrapper" for="freq-product-{{ forloop.index | plus:1 }}">check</label>
+          <img src="{{ productNew.featured_image.src | product_img_url: '100x' }}">
+          <label class="freq-products" for="freq-product-{{ forloop.index | plus:1 }}">
+            <a href="{{ productNew.url }}" >
+              <span class="product-info">{{ productNew.title }}</span>
+              <span class="priceNew .">{{ productNew.variants[0].price | money }}</span>
+            </a>
+          </label>
+        </li>
+        {% assign totalPrice = totalPrice | plus: product.variants[0].price %}
+        {% endfor %}
+        {% endif %}
+      </ul>
+      <div class="total-cart">
+        Total: <span class="total-value">{{ totalPrice | money | remove: '.00' }}</span>
+        <button type="button" class="btn" id="frequently-brought-button">Add selected to cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  
+</style>
+{% endif %}

@@ -1,0 +1,28 @@
+<section class="teaser-page-banner-section">
+  <img class="banner-image teaser_desktop lazyautosizes lazyload" data-src="{{ section.settings.banner-id | img_url: 'master' , format: 'pjpg'}}" src="{{ section.settings.banner-id | img_url: 'master' }}"   data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]">
+  <img class="banner-image mobile-xs lazyautosizes lazyload" data-src="{{ section.settings.image_mobile | img_url: 'master' , format: 'pjpg'}}" src="{{ section.settings.image_mobile | img_url: 'master' }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]">
+
+</section>
+
+{% schema %}
+{
+  "name": "Teaser Banner Section",
+  "settings": [
+    {
+    "type": "image_picker",
+    "id": "banner-id",
+    "label": "image"
+    },
+    {
+    "type": "image_picker",
+    "id": "image_mobile",
+    "label": "Mobile Image"
+    }
+  ],
+    "presets": [
+      {
+        "name": "Teaser Banner Section"
+      }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,73 @@
+{% assign variantCount = productP.variants | size %}
+{% assign not_in_cart = false %}
+{% for item in cart.items %}
+  {% if item.product.id == productP.id  %}
+    {% assign not_in_cart = true %}
+    {% assign cart_value = item.quantity %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+<form action="/cart/add" method="post" class="variants grid-product-form--{{ productP.id }}" class="grid-product-form--{{ productP.id }}" id="grid-product-form--{{ productP.id }}" data-id="product-actions-{{ productP.id }}" enctype="multipart/form-data">
+  {% if sold_out %}
+  <button class="btn add-to-cart-btn" type="submit" disabled="disabled" {% if settings.enable_multilang %}data-translate="products.product.unavailable"{% endif %}>
+    {{ 'products.product.unavailable' | t }}
+  </button>
+  {% else %}
+  {% if not_in_cart and variantCount <= 1 %}
+    <div class="qty-group newtab">
+    <a href="javascript:void(0)" title="remove" class="btn-remove-item" data-id="{{ productP.variants[0].id }}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+    <a href="javascript:void(0)" data-minus-qtt="" class="minus button quantity"></a>
+    <input type="hidden" class="product_id" data-id="{{ productP.variants[0].id }}">
+    <input type="text" class="quantity" data-qtt-id="quantity__{{ productP.variants[0].id }}" name="quantity" value="{{cart_value}}">
+    <a href="javascript:void(0)" data-plus-qtt="" class="plus button quantity"></a>
+  </div>
+   {% endif %}
+  {% if variantCount <= 1 %}
+  <div class="cart {% if not_in_cart %}disable{% endif %}">
+  <input type="hidden" name="id" value="{{ productP.variants[0].id }}" />
+  <input type="hidden" name="quantity" value="1" />
+  <button data-btn-addToCart class="btn add-to-cart-btn cartbutton add-to-cart-btnload" type="submit" data-form-id="#{{id}}-{{ productP.id }}" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{% endif %} onclick="myFunction6('{{productP.title}}',{{productP.id}},'{{product.variants[0].price | divided_by:100}}','{{productP.variants[0].compare_at_price}}','{{productP.variants[0].inventory_quantity}}','{{ productP |  img_url:"medium"}}');quoraPixel(); scq('Add to cart', 'pre_defined');">
+    {{ 'products.product.add_to_cart' | t }}
+  </button>
+  </div>
+   {% else %} 
+  <a class="btn" href="{{ productP.url }}" title="{{ productP.title }}" {% if settings.enable_multilang %}data-translate="products.product.select_options"{% endif %}>
+    {{ 'products.product.select_options' | t }}
+  </a> 
+    {% endif %}
+  {% endif %}
+  
+</form>
+<script>
+  function quoraPixel(){
+	qp('track', 'AddToCart'); 
+  }
+ 
+</script>
+
+
+<style>
+.added_product {
+    display: none;
+    width: 200px;
+    height: 40px;
+    background-color: rgb(94 92 95 / 59%);
+    top: 90%;
+    left: 50%;
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    -ms-border-radius: 1px;
+    -o-border-radius: 1px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+}.cart.disable {
+    display: none;
+}
+</style>

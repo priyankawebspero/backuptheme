@@ -1,0 +1,66 @@
+<section class="sub-page-banner-section">
+ {% if section.settings.heading != blank %}
+  <div class="widget-title">   
+   <h3 class="box-title"><i class="fa fa-star" aria-hidden="true"></i>{{section.settings.heading}}<i class="fa fa-star" aria-hidden="true"></i></h3>
+  </div>
+  {% endif %}
+  <div class="row">
+  {% for block in section.blocks %}
+ <div class="col-sm-2 col-lg-2 col-md-2">
+    <a rel="nofollow" href="{{ block.settings.link }}" class="">
+    <img class="banner-image desktop-xs lazyautosizes lazyload" data-src="{{ block.settings.image_desk | img_url: 'master' , format: 'pjpg'}}" src="{{ block.settings.image_desk | img_url: 'master' , format: 'pjpg'}}">
+    <img class="banner-image mobile-xs lazyautosizes lazyload" data-src="{{ block.settings.image_mobile | img_url: 'master' , format: 'pjpg'}}" src="{{ block.settings.image_mobile | img_url: 'master' , format: 'pjpg'}}">
+    </a>
+  </div>
+  {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+"name": "PHY Social",
+"max_blocks": 5,
+"settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "PHY on social"
+    }
+   ]
+   ,"blocks":[
+    {
+    "type": "image",
+    "name": "image",
+    "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_desk",
+      "label": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link",
+      "info": "Optional"
+    }
+ ]
+ }
+],"presets":[
+      {
+        "name": "PHY Social",
+        "blocks": [
+         {
+           "type": "image"
+         }
+       ]
+      }
+
+   ]
+}
+{% endschema %}

@@ -1,0 +1,65 @@
+.page-affiliate-landing .container-fluid{padding-left:0;padding-right:0;max-width:100%}
+#shopify-section-affiliate-third-section .col-12.col-md-12{padding:0}
+#shopify-section-affiliate-fourth-section .col-12.col-md-12,#shopify-section-affiliate-second-section .col-12.col-md-12{padding:0}
+.download_area_custom{text-align:center;padding:5px 15px 10px}
+#shopify-section-affiliate-first-section .spotlight-item{margin-bottom:10px}
+.download_area_custom p span{color:#5e2d88;padding-right:0}
+.download_area_custom p *{font-size:24px;font-weight:500}
+.download_area_custom p a{font-weight:700;color:#000;margin:0 20px}
+#shopify-section-affiliate-fourth-section .slide img,#shopify-section-affiliate-third-section .slide img,#shopify-section-affiliate-second-section .slide img{width:100%}
+.page-affiliate-landing .container-fluid .row{margin:0}
+#shopify-section-affiliate-first-section .img-box img{width:100%}
+#shopify-section-affiliate-top-banner .images-contain img{width:100%}
+.btns-outer-main{width:100%;max-width:630px;margin:0 auto}
+.btns-outer-main .btn_half_bottom{float:left;width:50%;padding:0 20px;margin-top:40px}
+.btns-outer-main .btn_half_bottom a{display:block;background:#5e2d88;color:#fff;font-size:27px;line-height:1.5;border-radius:10px;font-weight:600;padding:7px 30px 11px;cursor:pointer; box-shadow: 0 9px 14px rgba(94,45,136,0.3);}
+.bottom_btn{clear:both;display:inline-block;width:100%;overflow:visible;margin-bottom:60px}
+.btns-outer-main .btn_half_bottom a svg{float:right;width:22px;height:22px;position:relative;top:12px}
+#shopify-section-affiliate-slider-section .slick-slide .img-box{padding:0 20px}
+#shopify-section-affiliate-slider-section .slick-slide .img-box .img-box-ratio img{width:100%;border-radius:20px}
+#shopify-section-affiliate-slider-section #home-spotlight-slider-affiliate-slider-section{padding-top:90px;padding-left:30px;padding-right:30px}
+#shopify-section-affiliate-slider-section button.slick-arrow{background:#5e2d88;width:55px;height:55px;color:#fff!important;font-size:0}
+#shopify-section-affiliate-slider-section button.slick-next.slick-arrow:after{content:"\f105";display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:44px}
+#shopify-section-affiliate-slider-section button.slick-next.slick-arrow{right:-15px}
+#shopify-section-affiliate-slider-section button.slick-prev.slick-arrow{left:-15px}
+#shopify-section-affiliate-slider-section button.slick-prev.slick-arrow:after{content:"\f104";display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:44px}
+#shopify-section-affiliate-slider-section .slick-arrow.slick-disabled{opacity:0}
+#shopify-section-affiliate-slider-section .img-box-ratio{position:relative;background:#fff;border-radius:20px}
+#shopify-section-affiliate-slider-section .img-box-ratio img{width:auto!important;max-width:100%}
+@media only screen and (max-width:1100px) {
+.btns-outer-main{max-width:780px;margin:0 auto}
+.btns-outer-main .btn_half_bottom a{font-size:33px}
+.btns-outer-main .btn_half_bottom a svg{width:25px;height:25px;position:relative;top:16px}
+.download_area_custom p *{font-size:26px}
+.download_area_custom p span{padding-right:0}
+#shopify-section-affiliate-slider-section .slick-slide .img-box{padding:0 10px}
+.btns-outer-main{padding:0 5px}
+}
+@media only screen and (max-width:767px) {
+img.slide.aff_desktop{display:none!important}
+.slide img.slide.aff_mobile{display:block!important}
+#shopify-section-affiliate-top-banner .slide-image .slide-mobile{display:block!important}
+#shopify-section-affiliate-top-banner .slide-image .slide-desktop{display:none!important}
+#shopify-section-affiliate-first-section .img-box .aff_mobile{display:block!important}
+#shopify-section-affiliate-first-section .img-box .aff_desktop{display:none!important}
+#shopify-section-affiliate-first-section .aff_desktop{display:none!important}
+#shopify-section-affiliate-first-section .aff_mobile{display:block!important;margin:0 auto 30px}
+#shopify-section-affiliate-first-section .spotlight-item{margin-bottom:0!important}
+#shopify-section-affiliate-first-section a .aff_mobile{max-width:215px}
+#shopify-section-affiliate-slider-section #home-spotlight-slider-affiliate-slider-section{padding:40px 0}
+#shopify-section-affiliate-slider-section .slick-slide .img-box{padding:0 5px}
+#shopify-section-affiliate-slider-section .container-fluid{padding-left:15px;padding-right:0}
+#shopify-section-affiliate-slider-section .slick-list{padding-right:40px!important}
+.btns-outer-main .btn_half_bottom{padding:0 10px}
+.btns-outer-main .btn_half_bottom a{font-size:18px;padding:4px 10px 7px;border-radius:10px;box-shadow:0 4px 10px #f00000}
+.btns-outer-main .btn_half_bottom a svg{width:16px;height:16px;position:relative;top:7px}
+.download_area_custom p span{display:inline-block;vertical-align:middle}
+.download_area_custom p *{font-size:15px}
+.download_area_custom p a{margin-left:12px;display:inline-block;vertical-align:middle;font-size:16px;margin-right:12px}
+#affiliate-landing main.main-content{padding-bottom:20px!important}
+.bottom_btn{margin-bottom:30px}
+.btns-outer-main .btn_half_bottom{margin-top:15px}
+#shopify-section-affiliate-slider-section button.slick-arrow{display:none!important}
+#shopify-section-affiliate-first-section .img-box img{margin-bottom:0}
+#shopify-section-affiliate-first-section .aff_mobile{margin:0 auto 5px}
+}

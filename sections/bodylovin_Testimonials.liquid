@@ -1,0 +1,308 @@
+{% if section.blocks.size > 0 %} 
+	{% assign- number = section.settings.silder_per_view -%}
+{% endif %}
+{%- if section.settings.section_margin_top != blank or section.settings.section_margin_bottom != blank or section.settings.section_border != blank -%}
+{%- assign s_margin_top = section.settings.section_margin_top | remove: ' ' | join: ' ' -%}
+{%- assign s_margin_bottom = section.settings.section_margin_bottom | remove: ' ' | join: ' ' -%}
+{%- assign s_border = section.settings.section_border | remove: ' ' | split: '-' | join: ' ' -%}
+{%- endif -%}
+{%- capture style_block_section -%}
+   {%- if section.settings.section_margin_top != blank or section.settings.section_margin_bottom != blank or section.settings.section_padding_top != blank or section.settings.section_padding_right != blank or section.settings.section_padding_left != blank or section.settings.section_padding_bottom != blank or section.settings.section_bg_color != blank or section.settings.section_bg_image != blank or section.settings.section_border != blank -%}
+   <style type="text/css">.gl_custom_{{section.id}}{ {%- if section.settings.section_margin_top != blank -%} margin-top: {{s_margin_top}} !important;{%- endif -%}{%- if section.settings.section_margin_bottom != blank -%} margin-bottom: {{s_margin_bottom}} !important;{%- endif -%}{%- if section.settings.section_padding_top != blank -%}padding-top: {{section.settings.section_padding_top}} !important;{%- endif-%}{%- if section.settings.section_padding_right != blank -%}padding-right: {{section.settings.section_padding_right}} !important;{%- endif-%}{%- if section.settings.section_padding_bottom != blank -%}padding-bottom: {{section.settings.section_padding_bottom}} !important;{%- endif-%}{%- if section.settings.section_padding_left != blank -%}padding-left: {{section.settings.section_padding_left}} !important; {%- endif -%}{%- if section.settings.section_bg_color != blank -%}background-color: {{ section.settings.section_bg_color }} !important;{%- endif -%}{%- if section.settings.section_bg_image != blank -%}{%- assign image = section.settings.section_bg_image -%}background-position: center !important; background-repeat: no-repeat !important; background-size: cover !important;{%- endif -%}{%- if section.settings.section_border != blank and section.settings.section_border_color != blank -%}border-width: {{ s_border }} !important; border-color: {{section.settings.section_border_color}} !important; border-style: {{section.settings.section_border_style}} !important{%- endif -%} }</style>
+   {%- endif -%}
+{%- endcapture -%}
+{%- capture data_section -%}
+  {%- if section.settings.row_stretch == 'stretch_row' -%}
+   {%- assign class_has_fill = 'gl_row-has-fill' -%}
+   data-gl='has_section_gl_js' data-gl-full-width='true' data-gl-full-width-init='true'
+  {%- elsif section.settings.row_stretch == 'stretch_row_content' or section.settings.row_stretch == 'stretch_row_content_no_spaces' -%}
+   {%- assign class_has_fill = 'gl_row-has-fill' -%}
+   data-gl='has_section_gl_js' data-gl-full-width='true' data-gl-full-width-init='true' data-gl-stretch-content='true'
+  {%- else -%}
+  {%- assign class_has_fill = '' -%}
+  {%- endif -%}
+{%- endcapture -%}
+{%- capture data_grid -%}
+  {%- if section.settings.photo_design == 'grid' -%}
+  instagram-grid
+  {%- elsif section.settings.photo_design == 'slider' -%}
+  instagram-slider
+  {%- else -%}
+  {%- endif -%}
+{%- endcapture -%}
+{%- capture style_title -%}
+  {%- if section.settings.bg_title != blank -%}
+  style="background-color: {{section.settings.bg_title}} !important"
+  {%- endif -%}
+{%- endcapture -%}
+{%- unless image_size != blank -%}
+  {%- assign image_size = '100x100' -%}
+{%- endunless -%}
+{%- case section.settings.width -%}
+   {%- when '4' -%}
+      {%- assign class_phu = '4' -%}
+   {%- when '6' -%}
+      {%- assign class_phu = '3' -%}
+   {%- when '8' -%}
+      {%- assign class_phu = '2' -%}
+   {%- when '10' -%}
+      {%- assign class_phu = '1' -%}
+   {%- when '12' -%}
+      {%- assign class_phu = '12' -%}
+{%- endcase -%}
+{{ style_block_section }}
+<div {{ data_section }}{%- if section.settings.use_video and section.settings.video_url != blank %} data-gl-video-bg="{{ section.settings.video_url }}"{%- endif %} class="gl_custom_{{section.id}} {% if section.settings.row_stretch == 'stretch_row_content_no_spaces' %}gl_row-no-padding{%- endif %}{%- if section.settings.use_parallax %} basel-parallax{%- endif %} gl_row spb_row gl_row-fluid {{class_has_fill}} {%- if section.settings.use_video and section.settings.video_url != blank %} opacity-video-bg gl_video-bg-container gl_has_youtube{%- endif %}{%- if section.settings.full_height %} gl_row-o-full-height gl_row-o-columns-{{section.settings.columns_position}}{%- endif %}{%- if section.settings.equal_height %} gl_row-o-equal-height{%- endif %}{%- unless section.settings.content_position == 'default' %} gl_row-o-content-{{section.settings.content_position}}{%- endunless %}{%- if section.settings.equal_height or section.settings.full_height or section.settings.content_position != 'default' %} gl_row-flex{%- endif %}{%- if section.settings.section_bg_image != blank %} lazy_bg lazyload{%- endif %}"{%- if section.settings.section_bg_image != blank %} data-bgset="{%- include 'bgset', image: section.settings.section_bg_image -%}" data-sizes="auto" data-parent-fit="cover" style="background-image: url('{{ section.settings.section_bg_image | img_url: '50x50' }}')"{%- endif -%}>
+   <div class="spb_column gl_column_container gl_col-sm-{{section.settings.width}} gl_col-has-fill color-scheme-{{ section.settings.text_color }}">
+      <div class="gl_column-inner gl_custom_testimonials">
+         <div class="spb_wrapper">
+            {%- if section.settings.title != blank -%}
+            <div class="title-wrapper text-{{ section.settings.title_align }}">
+               {%- if section.settings.sub_title != blank -%}
+               <span class="title-subtitle">{{ section.settings.sub_title }}</span>
+               {%- endif -%}
+               {%- if section.settings.title != blank -%}
+               {%- assign section_title = section.settings.title -%}
+               <div class="liner-continer"> 
+                   <span class="left-line"></span> 
+                   <h4 class="title">{%- if section_title contains ']' -%}{%- assign _section_title = section_title | split:'[' -%}{{_section_title[0]}} <span class="color-primary">{{ _section_title[1] | split:']' | first }}</span>{%- else -%}{{ section_title }}{%- endif -%}<span class="title-separator"><span></span></span></h4> 
+                   <span class="right-line"></span> 
+               </div>
+               {%- endif -%}
+               {%- if section.settings.text_after_title != blank -%}
+               <span class="title-after_title">{{ section.settings.text_after_title }}</span>
+               {%- endif -%}
+            </div>
+            {%- endif -%}
+            <div class="testimonials-wrapper">
+               {%- if section.blocks.size > 0 -%}
+                  {% comment %}{%- if section.settings.title != blank and section.settings.title_style == 'silder_title' -%}<h2 class="title slider-title">{{section.settings.title}}</h2>{%- endif -%}{% endcomment %}
+                  <div id="testimonials" slidesToShowNumber="{{ number }}">
+                     {%- for block in section.blocks -%}
+                     <div class="testimonial">
+                        <div class="testimonial-inner">
+                           <div class="testimonial-avatar">
+                              {%- if block.settings.avatar != blank -%}
+                              {%- assign image = block.settings.avatar -%}
+                                 <img class="testimonial-avatar-image" src="{{ image | img_url: '200x', crop: 'center' , format: 'pjpg'}}" width="{{ image.width }}" height="{{ image.height }}" alt="{{ image.alt }}" title="{{ image.alt }}">                 
+                              {%- endif -%}
+                              {%- if block.settings.author != blank -%}
+                              		<header>
+                              			<span class="author_name">{{ block.settings.author }}</span>
+                              			{%- if block.settings.user_title != blank -%}
+                              					<span class="testimonial_title">{{block.settings.user_title}}</span>
+                              			{%- endif -%}
+                              		</header>
+
+                              {%- endif -%}
+                           </div>
+                           <div class="testimonial-content">
+                              {%- if block.settings.quote != blank -%}{{ block.settings.quote | strip_html }}{%- endif -%}         
+                           </div>
+                        </div>
+                     </div>
+                     {%- endfor -%}
+                  </div>
+               {%- endif -%}
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{%- schema -%}
+  {
+    "name": "Testimonials",
+    "class": "index-section index-section_testimonials",
+    "max_blocks": 9,
+    "settings": [
+      {
+        "type": "header",
+        "content": "== Testimonials Options"
+      },
+      {
+       "type": "select",
+       "id": "text_color",
+       "options": [
+        {
+           "value": "light",
+           "label": "Light"
+         },
+         {
+           "value": "dark",
+           "label": "Dark"
+         }
+       ],
+       "label": "== Color Scheme",
+       "info": "only for style Testimonials Boxed",
+       "default": "dark"
+     },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "info": "MADE THE HARD WAY[highlight]",
+        "default": "FEATURED CATEGORIES"
+      },
+      {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Sub Title",
+        "default": "MADE THE HARD WAY"
+      },
+      {
+        "type": "textarea",
+        "id": "text_after_title",
+        "label": "Text after title"
+      },
+      {
+        "type": "select",
+        "id": "title_align",
+        "label": "Title align",
+        "options": [
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
+      },
+      {
+        "type": "select",
+        "id": "align",
+        "label": "Align",
+        "default": "center",
+        "options": [
+          {
+            "label": "Center",
+            "value": "center"
+          },
+          {
+            "label": "Left",
+            "value": "left"
+          },
+          {
+            "label": "Right",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "== Design Options"
+      },
+      {
+        "type": "image_picker",
+        "id": "section_bg_image",
+        "label": "Background Image"
+      },
+      {
+        "type": "color",
+        "id": "section_bg_color",
+        "label": "Background color"
+      },
+      {
+        "type": "text",
+        "id": "section_margin_top",
+        "label": "Margin top",
+        "info": "60px"
+      },
+      {
+        "type": "text",
+        "id": "section_margin_bottom",
+        "label": "Margin bottom",
+        "info": "60px"
+      },
+      {
+        "type": "text",
+        "id": "section_padding_top",
+        "label": "Padding top",
+        "info": "60px"
+      },
+{
+        "type": "text",
+        "id": "section_padding_right",
+        "label": "Padding right",
+        "info": "60px"
+      },
+{
+        "type": "text",
+        "id": "section_padding_bottom",
+        "label": "Padding bottom",
+        "info": "60px"
+      },
+{
+        "type": "text",
+        "id": "section_padding_left",
+        "label": "Padding left",
+        "info": "60px"
+      },
+      {
+        "type": "header",
+        "content": "== Basel Extras"
+      },
+      {
+        "type": "checkbox",
+        "id": "use_parallax",
+        "label": "Use Basel parallax?",
+        "default": false
+      }
+    ],
+    "blocks": [
+      {
+        "type": "quote",
+        "name": "Testimonial",
+        "settings": [
+            {
+               "type": "text",
+               "id": "author",
+               "label": "Author",
+               "info": "User name",
+               "default": "Author's name"
+            },
+            {
+               "type": "text",
+               "id": "user_title",
+               "label": "Title",
+               "info": "User title",
+               "default": "User title"
+            },
+            {
+              "type": "image_picker",
+              "id": "avatar",
+              "label": "User Avatar (100x100)"
+            },
+            {
+               "type": "textarea",
+               "id": "quote",
+               "label": "Text",
+               "default": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>"
+            }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Testimonials",
+        "category": "SLIDESHOW",
+        "blocks": [
+          {
+            "type": "quote"
+          },
+          {
+            "type": "quote"
+          },
+          {
+            "type": "quote"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}                                 

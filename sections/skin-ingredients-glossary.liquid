@@ -1,0 +1,83 @@
+<div class="cd-h-timeline__event-content container">
+  <div class="row">
+    {% for block in section.blocks %}
+      <div class="col-md-6">
+        <div class="row ingredy-box">
+          <div class="col-md-4">
+            <div class="img-wrap"> 
+              {% if block.settings.image != blank %}
+              <img class="img-fluid lazyautosizes lazyloaded" data-src="{{ block.settings.image | img_url:"148x" }}" src="{{ block.settings.image | img_url:"148x" }}" alt="{{ block.settings.title }}" /> 
+              {% else %}
+              <img class="img-fluid lazyautosizes lazyloaded" data-src="{{ "tea.png" | file_img_url:"148x" }}" src="{{ "tea.png" | file_img_url:"148x" }}" alt="{{ block.settings.title }}" /> 
+              {% endif %}
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="text-wrap">
+              <h3>{{ block.settings.title }}</h3>
+              {{ block.settings.description }}
+              {% if block.settings.subtitle != blank %}
+              <h4>Suitable For:   {{ block.settings.subtitle }}</h4>
+              {% endif %}
+              <a class="btn-sm" href="{{ block.settings.link }}">{{ block.settings.button }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+ {
+    "name": "Skin ingredients glossary",
+    "settings": [
+	
+	],
+	"blocks": [
+      {
+        "type": "ingredients",
+        "name": "Ingredients",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+		  {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Subtitle"
+          },
+  		  {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description",
+			"default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>"
+          },
+          {
+            "type": "text",
+            "id": "button",
+            "label": "Button text",
+			"default":"SHOP PRODUCTS"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Button url"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,54 @@
+{% if template contains 'article' %} 
+<div class="share_toolbox">  
+  {% if section.settings.share_text != blank %}
+  	{% include 'multilang' with section.settings.share_text %}
+  {% endif %}
+  <!----- www.addthis.com/dashboard ----->
+  <div class="addthis_inline_share_toolbox"></div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-595b0ea2fb9c5869"></script>
+  
+  <a href="https://www.facebook.com/sharer.php?u={{ canonical_url }}" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/intent/tweet?text='{{page_title}}'&amp;url={{ canonical_url }}&amp;via=plumspeak" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ canonical_url }}" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
+</div>
+
+{% else %}
+<div class="share_toolbox">  
+  <span id="share_now_btn"><i class="fa fa-share-alt" aria-hidden="true"></i></span>
+  <div class="share_buttons">
+          <!----- www.addthis.com/dashboard ----->
+          <div class="addthis_inline_share_toolbox"></div>
+          <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-595b0ea2fb9c5869"></script>
+          
+          <a href="https://www.facebook.com/sharer.php?u={{ canonical_url }}" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a class="whatsapp" href="whatsapp://send?text={{ canonical_url }}" data-action="share/whatsapp/share"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+          <span class="copied_text">
+              <span class="cp">copied</span>
+              <span class="copy_btn" onclick="Copy(this);" url="{{ canonical_url }}"><i class="fa fa-copy"></i></span>  
+          </span>
+          
+
+        <!--             <a href="https://twitter.com/intent/tweet?text='{{page_title}}'&amp;url={{ canonical_url }}&amp;via=plumspeak" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ canonical_url }}" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a> -->
+    </div>
+</div>
+
+<script type="text/javascript">
+function Copy(btn) {
+    let text = $(btn).attr('url');
+    copyToClipboard(text);
+    $(btn).parent().addClass('show_cp');
+    setTimeout(function(){
+      $(btn).parent().removeClass('show_cp');
+    },1000);
+}
+function copyToClipboard(text) {
+    var sampleTextarea = document.createElement("textarea");
+    document.body.appendChild(sampleTextarea);
+    sampleTextarea.value = text; //save main text in it
+    sampleTextarea.select(); //select textarea contenrs
+    document.execCommand("copy");
+    document.body.removeChild(sampleTextarea);
+}
+</script>
+  {% endif %}

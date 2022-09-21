@@ -1,0 +1,261 @@
+<style>
+  .feature-header-icon ol {
+    display: flex;
+    justify-content: center;
+  }
+  .feature-header-icon li {
+    margin: 0 10px;
+    border:1px solid transparent;
+    border-radius:50%;
+    cursor:pointer;
+    position: relative;
+    margin-bottom: 17px !important;
+  }
+  .feature-header-icon img.arrow-up {
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity:0;
+  }
+  .feature-header-icon li.active {
+    border:1px solid #5e0c8c;
+  }
+  .feature-header-icon li.active img.arrow-up {
+    opacity:1;
+  }
+  .page-ingredients .small-banner {
+    align-items: center;
+  }
+  .page-ingredients .small-banner h2 {
+    margin-bottom: 0;
+    color: #5e0c8c;
+    font-weight: 400;
+    padding: 25px 0;
+    font-family: roboto;
+  }
+  .feature-wrapper{
+    margin: 30px auto 40px;
+  }
+  .slider-container{
+    position:relative;
+    margin: 80px auto 0;
+  }
+  .slider-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    top:0;
+    max-width:100%;
+    width: 1024px;
+    margin: 0 auto;
+  }
+  .slider-wrapper.slider-tab1{
+    opacity:1;
+    z-index:70;
+  }
+  .slider-tab0{
+    opacity:0;
+  }
+  .feature-wrapper .slick-arrow{
+    background-color: transparent;
+    border: 1px solid transparent;
+  }
+  .feature-wrapper .slick-arrow svg{
+    fill: #5e0c8c;
+    stroke: #5e0c8c;
+  }
+  .feature-wrapper .slick-dots {
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    right: 0;
+  }
+  .feature-wrapper  .slick-dots li button {
+    background: gray;
+  }
+  .feature-wrapper  .slick-dots li.slick-active button {
+    background: #7806ac;
+  }
+  .feature-wrapper .slick-initialized .slick-slide {
+    display: block;
+    padding: 0 20px;
+  }
+  .feature-wrapper .slick-arrow.slick-prev {
+    left: -20px;
+  }
+  .feature-wrapper .slick-arrow.slick-next {
+    right: -20px;
+  }
+  @media (max-width:767px){
+    .page-ingredients .small-banner h2 {
+      padding-bottom: 0;
+    }
+    .slider-container{
+      position:relative;
+      margin: 40px auto 0;
+      padding: 0 0;
+    }
+    .feature-wrapper {
+      margin: 30px auto 20px;
+    }
+    .feature-header-icon ol {
+      justify-content: start;
+      overflow: auto;
+    }
+    .feature-header-icon li {
+      margin: 0 8px;
+      min-width: 90px;
+    }
+  }
+  @media (min-width:1200px){
+    .slider-container{
+      padding: 0 80px;
+      margin: 20px auto 0;
+    }
+  }
+</style>
+<div class="page-ingredients">
+  <div class="contact-banner">
+    <div class="small-banner">
+      <div class="container-padd60">
+        <div class="text-wrap page-header">
+          <h2>Plum features</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="feature-wrapper">
+    <div class="feature-header-icon">
+      <ol>
+        <li class="active">
+          <img class="icons-img-thumbnail lazyautosizes lazyloaded" data-slider-tab="slider-tab1" data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/1_17591d39-ee1d-444e-a04e-366dc30b3e25.png?v=1579170713" src="https://cdn.shopify.com/s/files/1/0390/2985/files/1_17591d39-ee1d-444e-a04e-366dc30b3e25.png?v=1579170713" alt="idiva">
+          <img data-src="//cdn.shopify.com/s/files/1/0257/8766/2417/files/arrow-up_20x.png?v=1577263228" src="//cdn.shopify.com/s/files/1/0257/8766/2417/files/arrow-up_20x.png?v=1577263228" class="arrow-up lazyautosizes lazyloaded">
+        </li>
+        <li>
+          <img class="icons-img-thumbnail lazyautosizes lazyloaded" data-slider-tab="slider-tab2" data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/2_fcf666a7-9d4b-45fa-96a4-64752db64bd6.png?v=1579170713" src="https://cdn.shopify.com/s/files/1/0390/2985/files/2_fcf666a7-9d4b-45fa-96a4-64752db64bd6.png?v=1579170713" alt="idiva">
+          <img src="//cdn.shopify.com/s/files/1/0257/8766/2417/files/arrow-up_20x.png?v=1577263228" class="arrow-up lazyautosizes lazyloaded">
+        </li>
+        <li>
+          <img class="icons-img-thumbnail lazyautosizes lazyloaded" data-slider-tab="slider-tab3" data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/3_af8f146e-7f79-4a6b-b634-f4dafa0cc982.png?v=1579170713" src="https://cdn.shopify.com/s/files/1/0390/2985/files/3_af8f146e-7f79-4a6b-b634-f4dafa0cc982.png?v=1579170713" alt="idiva">
+          <img src="//cdn.shopify.com/s/files/1/0257/8766/2417/files/arrow-up_20x.png?v=1577263228" class="arrow-up lazyautosizes lazyloaded">
+        </li>
+        <li>
+          <img class="icons-img-thumbnail lazyautosizes lazyloaded" data-slider-tab="slider-tab4" data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/4_bc371179-7c8b-4200-8a26-a70b31dbe5c8.png?v=1579170713" src="https://cdn.shopify.com/s/files/1/0390/2985/files/4_bc371179-7c8b-4200-8a26-a70b31dbe5c8.png?v=1579170713" alt="idiva">
+          <img src="//cdn.shopify.com/s/files/1/0257/8766/2417/files/arrow-up_20x.png?v=1577263228" class="arrow-up lazyautosizes lazyloaded">
+        </li>
+        <li>
+          <img class="icons-img-thumbnail lazyautosizes lazyloaded" data-slider-tab="slider-tab5" data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/5_7ecfbf97-b5e6-4b09-b6cf-20343aab9dc7.png?v=1579170713" src="https://cdn.shopify.com/s/files/1/0390/2985/files/5_7ecfbf97-b5e6-4b09-b6cf-20343aab9dc7.png?v=1579170713" alt="idiva">
+          <img src="//cdn.shopify.com/s/files/1/0257/8766/2417/files/arrow-up_20x.png?v=1577263228" class="arrow-up lazyautosizes lazyloaded">
+        </li>
+        <li>
+          <img class="icons-img-thumbnail lazyautosizes lazyloaded" data-slider-tab="slider-tab6" data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/6_17ac2b85-481c-4198-a4bf-cfa053a6d6e7.png?v=1579170713" src="https://cdn.shopify.com/s/files/1/0390/2985/files/6_17ac2b85-481c-4198-a4bf-cfa053a6d6e7.png?v=1579170713" alt="idiva">
+          <img src="//cdn.shopify.com/s/files/1/0257/8766/2417/files/arrow-up_20x.png?v=1577263228" class="arrow-up lazyautosizes lazyloaded">
+        </li>
+      </ol>
+    </div>
+    <div class="slider-container">
+      <!--    slider is added to set the height for other slider    -->
+      <div class="slider-tab0">
+        <section class="slider2">
+          <div>
+            <img data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/idiva-2017.jpg?v=1578923426" src="https://cdn.shopify.com/s/files/1/0390/2985/files/idiva-2017.jpg?v=1578923426" class="lazyautosizes lazyloaded">
+          </div>
+          <div>
+            <img data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/idiva-2018.jpg?v=1578923426" src="https://cdn.shopify.com/s/files/1/0390/2985/files/idiva-2018.jpg?v=1578923426" class="lazyautosizes lazyloaded" >
+          </div>
+        </section> 
+      </div>
+      <!--    slider is added to set the height for other slider end here   -->
+
+      <div class="slider-tab1 slider-wrapper">
+        <section class="slider2">
+          <div>
+            <img data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/idiva-2017.jpg?v=1578923426" src="https://cdn.shopify.com/s/files/1/0390/2985/files/idiva-2017.jpg?v=1578923426" class="lazyautosizes lazyloaded">
+          </div>
+          <div>
+            <img data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/idiva-2018.jpg?v=1578923426" src="https://cdn.shopify.com/s/files/1/0390/2985/files/idiva-2018.jpg?v=1578923426" class="lazyautosizes lazyloaded">
+          </div>
+        </section> 
+      </div>
+      <!--        -->
+      <div class="slider-tab2 slider-wrapper">
+        <section class="slider2">
+          <div>
+            <img data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/Hello-Aloe-SPF-20_Plum-in-Media_c1d4a6d8-dadb-4a0f-9162-f425d964c30e.jpg?v=1578924506" src="https://cdn.shopify.com/s/files/1/0390/2985/files/Hello-Aloe-SPF-20_Plum-in-Media_c1d4a6d8-dadb-4a0f-9162-f425d964c30e.jpg?v=1578924506" class="lazyautosizes lazyloaded">
+          </div>
+        </section> 
+      </div>
+
+      <div class="slider-tab3 slider-wrapper">
+        <section class="slider2">
+          <div>
+            <img data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/GSSB-Face-oils_Plum-in-Media.jpg?v=1578924549" src="https://cdn.shopify.com/s/files/1/0390/2985/files/GSSB-Face-oils_Plum-in-Media.jpg?v=1578924549" class="lazyautosizes lazyloaded">
+          </div>
+          <div>
+            <img data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/website_plum-feature_GT_face-mask.jpg?v=1578924549" src="https://cdn.shopify.com/s/files/1/0390/2985/files/website_plum-feature_GT_face-mask.jpg?v=1578924549" class="lazyautosizes lazyloaded">
+          </div>
+          <div>
+            <img data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/NatureStudio_Gemstone-Green_Plum-in-Media_7891f1a5-29e2-4d52-8af1-8c3977076b74.jpg?v=1578924628" src="https://cdn.shopify.com/s/files/1/0390/2985/files/NatureStudio_Gemstone-Green_Plum-in-Media_7891f1a5-29e2-4d52-8af1-8c3977076b74.jpg?v=1578924628" class="lazyautosizes lazyloaded">
+          </div>
+        </section> 
+      </div>
+
+      <div class="slider-tab4 slider-wrapper">
+        <section class="slider2">
+          <div>
+            <img data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/GT-Renewed-Clarity-Night-Gel_Plum-in-Media_16c26d0a-a6f6-4b34-b01f-9d8264309aeb.jpg?v=1578925490" src="https://cdn.shopify.com/s/files/1/0390/2985/files/GT-Renewed-Clarity-Night-Gel_Plum-in-Media_16c26d0a-a6f6-4b34-b01f-9d8264309aeb.jpg?v=1578925490" class="lazyautosizes lazyloaded">
+          </div>
+          <div>
+            <img data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/V-_-F_-Fudge-Body-Butter_Plum-in-Media_57df4ab6-7369-4161-882d-5627e3988d8a.jpg?v=1578925491" src="https://cdn.shopify.com/s/files/1/0390/2985/files/V-_-F_-Fudge-Body-Butter_Plum-in-Media_57df4ab6-7369-4161-882d-5627e3988d8a.jpg?v=1578925491" class="lazyautosizes lazyloaded">
+          </div>
+        </section> 
+      </div>
+
+      <div class="slider-tab5 slider-wrapper">
+        <section class="slider2">
+          <div>
+            <img data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/NatureStudio_Plum-in-Media.jpg?v=1578980245" src="https://cdn.shopify.com/s/files/1/0390/2985/files/NatureStudio_Plum-in-Media.jpg?v=1578980245" class="lazyautosizes lazyloaded">
+          </div>
+          <div>
+            <img data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/Green-Tea-Face-Mask_Plum-Features.jpg?v=1578980243" src="https://cdn.shopify.com/s/files/1/0390/2985/files/Green-Tea-Face-Mask_Plum-Features.jpg?v=1578980243" class="lazyautosizes lazyloaded">
+          </div>
+        </section> 
+      </div>
+
+      <div class="slider-tab6 slider-wrapper">
+        <section class="slider2">
+          <div>
+            <img data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/V-_-F-body-butter_Plum-in-Media.jpg?v=1578980326" src="https://cdn.shopify.com/s/files/1/0390/2985/files/V-_-F-body-butter_Plum-in-Media.jpg?v=1578980326" class="lazyautosizes lazyloaded">
+          </div>
+          <div>
+            <img data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/Swirlster_O-_-M-Hair-Mask_Plum-Features.jpg?v=1578980326" src="https://cdn.shopify.com/s/files/1/0390/2985/files/Swirlster_O-_-M-Hair-Mask_Plum-Features.jpg?v=1578980326" class="lazyautosizes lazyloaded">
+          </div>
+          <div>
+            <img data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/CWT-face-wash_Plum-in-Media.jpg?v=1578980326" src="https://cdn.shopify.com/s/files/1/0390/2985/files/CWT-face-wash_Plum-in-Media.jpg?v=1578980326" class="lazyautosizes lazyloaded">
+          </div>
+          <div>
+            <img data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/website_plum-feature_GT-toner.jpg?v=1578980326" src="https://cdn.shopify.com/s/files/1/0390/2985/files/website_plum-feature_GT-toner.jpg?v=1578980326" class="lazyautosizes lazyloaded">
+          </div>
+        </section> 
+      </div>
+
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function(){
+    $(".feature-header-icon li img").on("click",function(){
+      var sliderCount = $(this).attr("data-slider-tab");
+      $(".feature-header-icon li").removeClass("active");
+      $(this).closest("li").addClass("active");
+      $(".slider-wrapper").css({"opacity":"0","z-index":"unset"});
+      $("."+sliderCount).css({"opacity":"1","z-index":"70"});
+    });
+  });
+</script>
+

@@ -1,0 +1,54 @@
+{%- layout none -%}
+
+{%- capture results -%}
+
+    {%- for result in search.results limit:settings.popular_products_limit-%}
+        {% assign hide_product = false %}
+        {% for tag in result.tags %}
+        {% if tag contains 'st-hide' %}
+        {% assign hide_product = true %}
+        {% endif %}
+        {% endfor %}
+
+        {% if hide_product == false %}
+		{% assign sca_product_id_text = "," | append : result.id | append : "," %}{% assign sca_price = result.price %}{% assign sca_price_min = result.price_min %}{% assign sca_price_max = result.price_max %}{% assign sca_compare_at_price = result.compare_at_price %}{% assign sca_compare_at_price_min = result.compare_at_price_min %}{% assign sca_compare_at_price_max = result.compare_at_price_max %}{% assign sca_product_available = result.available %}{% assign sca_product_variantCount = result.variants.size %}{% assign sca_compare_at_price_varies = result.compare_at_price_varies %}{% assign sca_price_varies = result.price_varies %}{% assign sca_has_only_default_variant = false %}{% assign sca_product_variants_json = result.variants | json %}{% capture sca_product_json %}{ {% if sca_all_gift_products_ids == null or sca_all_gift_products_ids contains sca_product_id_text %}{% assign sca_product_available = false %}{% assign sca_product_variantCount = 0 %}{% assign sca_has_only_default_variant = false %}{% assign sca_is_first_variant = true %}{% capture sca_variants_json%}[{% for variant in result.variants %}{% unless variant.metafields.secomapp.freegifts %}{% unless variant.title contains '(Freegifts)' %}{% unless variant.title contains '% off)' %}{% unless variant.metafields.shappify_qb.qb_hide == "1" %}{% unless variant.metafields.shappify_bundle.is_bundle == "true" %}{% unless variant.metafields.brodev_scn.hide == "true" %}{% unless variant.metafields.wholesaler2.wholesale %}{% unless variant.metafields.Wholesaler.level %}{% unless variant.title contains '(Wholesale' %}{% if sca_is_first_variant %}{{ variant | json }}{% assign sca_price = variant.price %} {% assign sca_price_min = variant.price %}{% assign sca_price_max = variant.price %}{% assign sca_compare_at_price = variant.compare_at_price %}{% assign sca_compare_at_price_min = variant.compare_at_price %}{% assign sca_compare_at_price_max = variant.compare_at_price %}{% assign sca_product_available = variant.available %}{% assign sca_product_variantCount = 1 %}{% assign sca_is_first_variant = false %}{% else %},{{variant | json }}{% if sca_price_min >= variant.price %}{% assign sca_price_min = variant.price %}{% assign sca_price = variant.price %}{% endif %}{% if sca_price_max <= variant.price %}{% assign sca_price_max = variant.price %}{% endif %}{% if variant.compare_at_price %}{% if sca_compare_at_price_min == null or sca_compare_at_price_min >= variant.compare_at_price %}{% assign sca_compare_at_price_min = variant.compare_at_price %}{% assign sca_compare_at_price = variant.compare_at_price %}{% endif %}{% if sca_compare_at_price_max == null or sca_compare_at_price_max < variant.compare_at_price %}{% assign sca_compare_at_price_max = variant.compare_at_price %}{% endif %}{% endif %}{% if variant.available == true %}{% assign sca_product_available = true %}{% endif %}{% assign sca_product_variantCount = sca_product_variantCount | plus: 1 %}{% endif %}{% endunless %}{% endunless %}{% endunless %}{% endunless %}{% endunless %}{% endunless %}{% endunless %}{% endunless %}{% endunless %}{% endfor %}]{% endcapture %}{% if sca_price_min < sca_price_max %}{% assign sca_price_varies = true %}{% else %}{% assign sca_price_varies = false %}{% endif %}{% if sca_compare_at_price_min < sca_compare_at_price_max %}{% assign sca_compare_at_price_varies = true %}{% else %}{% assign sca_compare_at_price_varies = false %}{% endif %}{% if sca_product_variantCount > 1 %}{% assign sca_has_only_default_variant = true %}{% endif %}{% if sca_product_variantCount == result.variants.size %}"variants":{{ result.variants }},{% else %}{% assign sca_product_variants_json = sca_variants_json %}"variants":{{sca_variants_json }},{% endif %}{% endif %}"id": {{ result.id }},"title": {{ result.title | json }},"handle": {{ result.handle | json }},"description": {{ result.description | json }},"published_at": {{ result.published_at | json }},"created_at": {{ result.created_at | json }},"vendor": {{ result.vendor | json }},"type": {{ result.type | json }},"tags": {{ result.tags | json }},"price": {{ sca_price }},"price_min": {{ sca_price_min }},"price_max": {{ sca_price_max }},"available": {{ result.available }},"price_varies": {{sca_price_varies }},"compare_at_price": {{ sca_compare_at_price }},"compare_at_price_min": {{ sca_compare_at_price_min }},"compare_at_price_max": {{ sca_compare_at_price_max }},"compare_at_price_varies": {{ sca_compare_at_price_varies }},"images": {{ result.images | json }},"featured_image": {{ result.featured_image | json }},"options": {{ result.options | json }},"media": {{ result.media | json }},"content": {{result.content | json}} }{% endcapture sca_product_json %}
+
+        {%- assign first_available_variant = result.selected_or_first_available_variant -%}
+            
+        {
+            "object_type"     : {{ result.object_type | json }},
+            "variants"        : {{ result.options | json }},
+            "vendor"          : {{ result.vendor | json }},
+            "title"           : {{ result.title | json }},
+            "url"             : {{ result.url | json }},
+            "product_tag"     : {{ result.tags | json }},
+            "on_sale"         : {% if sca_compare_at_price > sca_price %}true{% else %}false{% endif %},
+            "price"           : {{ sca_price | money | json }},
+            "compare_at_price": {{ sca_compare_at_price | money | json }},
+            "image"           : {{ result.featured_image | img_url: 'x430' | json }},            
+            "image_alt"       : {{ result.featured_image.alt | escape | json }}
+        }{% unless forloop.last %},{% endunless %}
+    
+    {%- endif -%}
+    {%- endfor -%}
+{%- endcapture -%}
+
+{
+    "results": [{{ results }}],
+    "results_count": {{ search.results_count }},
+    "results_label": {% if search.results_count == 0 %}{{ 'general.search.no_results' | t | json }}{% else %}{{ 'general.search.view_results'| t | json }}{% endif %},
+    "url": "/search?q={{ search.terms }}"
+}
+
+<script>
+  $('.st-search-bar input').on("keypress", function() {
+var dInput = this.value;
+ if (dInput.length > 2){    
+clevertap.event.push("Searched Product", {
+    "Terms": dInput,
+    "Date": new Date()
+});
+ }  
+
+    }
+  </script>

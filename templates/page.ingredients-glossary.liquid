@@ -1,0 +1,116 @@
+{% include "ingredients-page-css" %}
+<script>document.getElementsByTagName("html")[0].className += " js";</script>
+<div class="inner-page page-ingredients">
+  <div class="contact-banner">
+    <div class="small-banner">
+      <div class="container-padd60">
+        <div class="text-wrap page-header">
+          <h2>Ingredients Glossary</h2>
+          {% comment %}
+          <p>Say hello to a world of plum goodness!</p>
+          <p>Juicy, filled with natural & life-friendly ingredients that work delightfully on your skin. 100% vegan & paraben-free, as always! </p>
+          {% endcomment %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="container">
+      <!-- .cd-h-timeline__line --> 
+      <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md">
+        <div class="uppar-category">
+          <ol>
+            <li>
+              <a href="javascript:void(0);" class="round skin">
+                <img data-src="//cdn.shopify.com/s/files/1/0390/2985/files/Icons-02_600x_crop_center.png?v=1579091092" src="//cdn.shopify.com/s/files/1/0390/2985/files/Icons-02_600x_crop_center.png?v=1579091092" class="lazyautosizes lazyloaded">
+                <span>Skin</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);" class="round hair">
+                <img data-src="//cdn.shopify.com/s/files/1/0390/2985/files/Icons-01_600x_crop_center.png?v=1579091105" src="//cdn.shopify.com/s/files/1/0390/2985/files/Icons-01_600x_crop_center.png?v=1579091105" class="lazyautosizes lazyloaded">
+                <span>Hair</span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);" class="round body">
+                <img data-src="//cdn.shopify.com/s/files/1/0390/2985/files/Category_ICon_new-06_600x_crop_center.png?v=1579100240" src="//cdn.shopify.com/s/files/1/0390/2985/files/Category_ICon_new-06_600x_crop_center.png?v=1579100240" class="lazyautosizes lazyloaded">
+                <span>Body</span>
+              </a>
+            </li>
+          </ol> 
+        </div>
+        <div class="cd-h-timeline__container container">
+          <div class="cd-h-timeline__dates">
+            <div class="cd-h-timeline__line">
+              <ol>
+                <li>
+                  <a href="#0" data-date="" class="cd-h-timeline__date cd-h-timeline__date--selected">
+                    Skin
+                  </a>
+                </li>
+                <li>
+                  <a href="#0" data-date="" class="cd-h-timeline__date">
+                    Hair
+                  </a>
+                </li>
+                <li>
+                  <a href="#0" data-date="" class="cd-h-timeline__date">
+                    Body
+                  </a>
+                </li>
+              </ol>
+              <span class="cd-h-timeline__filling-line" aria-hidden="true"></span> 
+            </div>
+            <!-- .cd-h-timeline__line --> 
+          </div>
+          <!-- .cd-h-timeline__dates -->
+
+          <ul>
+            <li><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive">Prev</a></li>
+            <li><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--next">Next</a></li>
+          </ul>
+        </div>
+        <!-- .cd-h-timeline__container -->
+
+        <div class="cd-h-timeline__events">
+          <ol>
+            <li class="cd-h-timeline__event cd-h-timeline__event--selected text-component">
+              {% section "skin-ingredients-glossary" %}
+            </li>
+            <li class="cd-h-timeline__event text-component">
+              {% section "hair-ingredients-glossary" %}
+            </li>
+            <li class="cd-h-timeline__event text-component">
+              {% section "body-ingredients-glossary" %}
+            </li>
+          </ol>
+        </div>
+        <!-- .cd-h-timeline__events --> 
+      </section>
+<!--       <div class="container">
+        <div class="text-center">
+          <a class="btn-sm" href="#">View All</a>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>
+<script>
+  $(".uppar-category li:first-child a").click(function(){
+    console.log(123);
+    $(".cd-h-timeline__line ol li:first-child").click();
+  });
+  $(".uppar-category li:nth-child(2) a").click(function(){
+    console.log(24);
+    $(".cd-h-timeline__line ol li:nth-child(2)").click();
+  });
+  $(".uppar-category li:nth-child(3) a").click(function(){
+    console.log(124);
+    console.log($(".cd-h-timeline__line ol li:nth-child(3) a"));
+    $(".cd-h-timeline__line ol li:nth-child(3) a").trigger("click");
+  });
+</script>
+<script src="{{ 'util.js' | asset_url }}" defer></script>
+<script src="{{ 'swipe-content.js' | asset_url }}" defer></script>
+<script src="{{ 'main.js' | asset_url }}" defer></script>

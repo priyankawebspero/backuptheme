@@ -1,0 +1,19 @@
+<div class="wrapper-header wrapper_header_parallax">
+  {% section 'header-parallax' %}
+</div>
+{% if handle contains 'fragrance' %}
+<link rel="preload stylesheet" href="{{ 'fragrance.min.css' | asset_url  }}" as="style">
+{% endif %}
+<script>
+ $(".header-mb-middle .dropdown.no-mega-menu .menu__moblie ").on("click", function(e) {
+    e.preventDefault(); 
+    $('.dropdown.no-mega-menu').removeClass("active");
+    $(this).parent('.dropdown.no-mega-menu').addClass("active");
+  });
+
+  $(document).on("click", function(e) {
+    if ($(e.target).is(".site-nav") === false) {
+      $(".dropdown.no-mega-menu").removeClass("active");
+    }
+  });
+</script>

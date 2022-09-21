@@ -1,0 +1,242 @@
+<div class="offers">
+    {% for block in section.blocks %}
+    {% case block.type %}
+    {% when 'image-slide' %}
+    <div class="sale_banner" id="section-{{block.id}}">
+      <img class="desktop" src="{{ block.settings.top_banner_image_desktop | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.top_banner_image_desktop.alt}}">
+      <img class="mobile" src="{{ block.settings.top_banner_image_mobile | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.top_banner_image_mobile.alt}}">
+    </div>
+    {% when 'product-slide' %} 
+    <div class="sale-products" id="section-{{block.id}}">
+      <div class="container">
+        <div class="row">
+          <div class="col-12  featured-products" data-featured-products-slide> 
+            <div class="widget-product">
+              <div class="products-grid row four-items" data-row="4">
+                {% for product in collections[block.settings.show_slider_featured_collection].products limit:16%}
+                <div class="grid-item col-6 col-md-4 col-lg-3 small--one-half">
+                  {% include 'product-grid-item' %}
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="text-center">
+              <a class="pro_shop_feature" href="/collections/{{block.settings.show_slider_featured_collection}}" class="btn">view more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     {% when 'deal-of-the-day' %}
+    <div class="deal-of-the-day" id="section-{{block.id}}">
+      <div class="container">
+        <div class="row">
+          {%if block.settings.deal_heading != 'blank'%}
+          <h3>{{block.settings.deal_heading}}</h3>
+           {% endif %}
+          {%if block.settings.deal_sub_head != 'blank'%}
+           <p>{{block.settings.deal_sub_head}}</p>
+           {% endif %}
+          <div class="col-12  featured-products" data-featured-products-slide> 
+            <div class="widget-product">
+              <div class="products-grid row four-items" data-row="3">
+                {% for product in collections[block.settings.show_slider_featured_collection].products limit:16%}
+                <div class="grid-item col-6 col-md-4 col-lg-3 small--one-half">
+                  {% include 'product-grid-item' %}
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          {%if block.settings.deal_btn_url != 'blank'%}
+          <div class="text-center"><a class="pro_shop_now" href="{{block.settings.deal_btn_url}}">{{block.settings.deal_btn}}</a></div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% when 'deal-of-the-day-banner' %}
+    <div class="deal-of-the-day-banner" id="section-{{block.id}}">
+      <div class="container">
+        <div class="row">
+          {%if block.settings.deal_heading != 'blank'%}
+          <h3>{{block.settings.deal_heading}}</h3>
+           {% endif %}
+          {%if block.settings.deal_sub_head != 'blank'%}
+           <p>{{block.settings.deal_sub_head}}</p>
+           {% endif %}
+          <div class="col-12  featured-products"> 
+            <div class="widget-product">
+              <div class="products-grid row four-items" data-row="3">
+                {%if block.settings.first_desk != 'blank' %}
+                <div class="grid-item col-6 col-md-4 small--one-half">
+                  <img class="desktop" src="{{ block.settings.first_desk | img_url: 'master' }}"  alt="{{block.settings.first_desk.alt}}">
+                  <img class="mobile" src="{{ block.settings.first_mob | img_url: 'master' }}"  alt="{{block.settings.first_mob.alt}}">
+                </div>
+                {% endif %}
+                {%if block.settings.sec_desk != 'blank' %}
+                <div class="grid-item col-6 col-md-4 small--one-half">
+                  <img class="desktop" src="{{ block.settings.sec_desk | img_url: 'master' }}"  alt="{{block.settings.sec_desk.alt}}">
+                  <img class="mobile" src="{{ block.settings.sec_mob | img_url: 'master' }}"  alt="{{block.settings.sec_mob.alt}}">
+                </div>
+                 {% endif %}
+               {%if block.settings.third_desk != 'blank' %}
+                <div class="grid-item col-6 col-md-4 small--one-half">
+                  <img class="desktop" src="{{ block.settings.third_desk | img_url: 'master' }}"  alt="{{block.settings.third_desk.alt}}">
+                  <img class="mobile" src="{{ block.settings.third_mob | img_url: 'master' }}"  alt="{{block.settings.third_mob.alt}}">
+                </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {%if block.settings.deal_btn_url != 'blank'%}
+          <div class="text-center"><a class="bnr_shop_now" href="{{block.settings.deal_btn_url}}">{{block.settings.deal_btn}}</a></div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endcase %}
+    {% endfor %}
+ 
+</div>
+
+{% schema %}
+{
+  "name": "Offers Section",
+  "class": "offers-section",
+  "settings": [
+
+  ],
+  "blocks": [
+     {
+       "name": "Image Banner slide",
+       "type": "image-slide",
+       "settings": [
+         {
+          "type": "image_picker",
+          "id": "top_banner_image_desktop",
+          "label": "Add Top Banner Image"
+         },
+         {
+          "type": "image_picker",
+          "id": "top_banner_image_mobile",
+          "label": "Add Top Banner Image"
+         }
+       ]
+     },
+     {
+       "name": "Product Slider",
+       "type": "product-slide",
+       "settings": [
+         {
+          "type": "collection",
+          "id": "show_slider_featured_collection",
+          "label": "Best Gift Set Collection"
+         }
+       ]
+     },
+     {
+       "name": "Deal Of The Day",
+       "type": "deal-of-the-day",
+       "settings": [
+         {
+          "type": "text",
+          "id": "deal_heading",
+          "label": "Heading",
+          "default": "Deal of the Day"
+         },
+         {
+          "type": "text",
+          "id": "deal_sub_head",
+          "label": "Sub Heading",
+          "default": "Deal Subheading"
+         },
+         {
+          "type": "collection",
+          "id": "show_slider_featured_collection",
+          "label": "Best Gift Set Collection"
+         },
+         {
+          "type": "text",
+          "id": "deal_btn",
+          "label": "Button Text",
+          "default": "Shop now"
+         },
+         {
+          "type": "url",
+          "id": "deal_btn_url",
+          "label": "Button Link"
+         }
+         
+       ]
+     },
+     {
+       "name": "Deal Of The Day Banner",
+       "type": "deal-of-the-day-banner",
+       "settings": [
+         {
+          "type": "text",
+          "id": "deal_heading_bnr",
+          "label": "Heading",
+          "default": "Deal of the Day"
+         },
+         {
+          "type": "text",
+          "id": "deal_sub_head",
+          "label": "Sub Heading",
+          "default": "Deal Subheading"
+         },
+         {
+          "type": "image_picker",
+          "id": "first_desk",
+          "label": "First Image Desktop"
+         },
+         {
+          "type": "image_picker",
+          "id": "first_mob",
+          "label": "First Image Mobile"
+         },
+         {
+          "type": "image_picker",
+          "id": "sec_desk",
+          "label": "Second Image Desktop"
+         },
+         {
+          "type": "image_picker",
+          "id": "sec_mob",
+          "label": "Second Image Mobile"
+         },
+         {
+          "type": "image_picker",
+          "id": "third_desk",
+          "label": "Third Image Desktop"
+         },
+         {
+          "type": "image_picker",
+          "id": "third_mob",
+          "label": "Third Image Mobile"
+         },
+         {
+          "type": "text",
+          "id": "deal_btn",
+          "label": "Button Text",
+          "default": "Shop now"
+         },
+         {
+          "type": "url",
+          "id": "deal_btn_url",
+          "label": "Button Link"
+         }
+         
+       ]
+     }
+   ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+

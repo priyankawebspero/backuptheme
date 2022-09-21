@@ -1,0 +1,68 @@
+{% comment %} How to use section  {% endcomment %}
+{% assign Howtousevideo = product.metafields.Product['How to use video'] %}
+{% assign Howtousedesc = product.metafields.Product['How to Use - Text'] %}
+
+<div class="how-to-use-steps-section desktop-xs">
+  <div class="inside_tab ">
+    <div class="how-to-use-steps row">
+      {% if Howtousedesc != 0 and Howtousedesc != blank %}
+      <div class="{% if Howtousevideo == blank %} col-sm-12 {% else %}col-sm-6{% endif %} left-content-sec">
+        
+        <!--      how to use title    -->
+        {% assign Howtousesecondtitle = product.metafields.Product['How to use second title '] %}
+        {% if Howtousesecondtitle != 0 and Howtousesecondtitle != blank %}
+        <h3>{{ Howtousesecondtitle }}</h3>
+        {% endif %}
+        <!--      how to use title end   -->
+        
+        <!--      how to use description    -->
+        {% if Howtousedesc != 0 and Howtousedesc != blank %}
+        {{ Howtousedesc }}
+        {% endif %}
+        <!--      how to use description end   -->
+        
+      </div>
+      {% endif %}
+      {% if Howtousevideo != 0 and Howtousevideo != blank %}
+      <div class="{% if Howtousedesc == blank %} col-sm-12 {% else %}col-sm-6{% endif %} video-sec">
+        <div>
+          <iframe width="100%" data-video-id="{{ Howtousevideo }}" height="100%" src="https://www.youtube.com/embed/{{ Howtousevideo }}?enablejsapi=1&rel=0&autoplay=0" frameborder="0" allowfullscreen="" volume="0"></iframe>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+
+<div class="how-to-use-steps-section mobile-xs">
+  <div class="container">
+    <div class="how-to-use-steps row">
+      {% if Howtousevideo != 0 and Howtousevideo != blank %}
+      <div class="{% if Howtousedesc == blank %} col-sm-12 {% else %}col-sm-6{% endif %} video-sec">
+        <div>
+          <iframe width="100%" data-video-id="{{ Howtousevideo }}" height="100%" src="https://www.youtube.com/embed/{{ Howtousevideo }}?enablejsapi=1&rel=0&autoplay=0" frameborder="0" allowfullscreen="" volume="0"></iframe>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if Howtousedesc != 0 and Howtousedesc != blank %}
+      <div class="{% if Howtousevideo == blank %} col-sm-12 {% else %}col-sm-6{% endif %} left-content-sec">
+        <!--      how to use title    -->
+        {% assign Howtousesecondtitle = product.metafields.Product['How to use second title '] %}
+        {% if Howtousesecondtitle != 0 and Howtousesecondtitle != blank %}
+        <h3>{{ Howtousesecondtitle }}</h3>
+        {% endif %}
+        <!--      how to use title end   -->
+        <!--      how to use description    -->
+        {% if Howtousedesc != 0 and Howtousedesc != blank %}
+        {{ Howtousedesc }}
+        {% endif %}
+        <!--      how to use description end   -->
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% comment %} How to use section  {% endcomment %}

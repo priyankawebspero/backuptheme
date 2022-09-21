@@ -1,0 +1,41 @@
+<link rel="preload stylesheet" href="{{ 'lity.min.css' | asset_url  }}" type="text/css" media="all">
+<link rel="preload stylesheet" href="{{ 'affiliate-and-landing-pages.css' | asset_url  }}" type="text/css" media="all">
+{{ 'slick.min.js' | asset_url | script_tag }}
+<script src="{{ 'halo.js' | asset_url }}"></script>
+<div class="page-tpl">
+  <div class="container-fuild">
+    <div class="vedio-box">
+            <a href="https://youtu.be/GcIqqP3zRnM" data-lity>
+            <video   class="we-did-it-vedio">
+            </video>
+            </a>
+        </div>
+    {% section 'slide-section-crm' %}
+    {% section 'crm-offers' %}
+  </div>
+</div>
+<style> .deal-of-the-day { background: #f8f8f8; padding: 40px 0;}
+  .deal-of-the-day h3 {color: #5e248c;}
+</style>
+{{ 'lity.min.js' | asset_url | script_tag }}
+{{ 'youtube.min.js' | asset_url | script_tag }}
+<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+<script type="text/javascript">
+    $(document).on('lity:ready', function (event, instance) {
+        var iframe = $(".lity-iframe-container").find("iframe");
+        iframe.prop("id", "lity-youtube-player");
+ 
+        var player = new YT.Player("lity-youtube-player", {
+            events: {
+                'onReady': function (e) {
+                    e.target.playVideo();
+                },
+                'onStateChange': function (e) {
+                    if (e.data == YT.PlayerState.ENDED) {
+                        instance.close();
+                    }
+                }
+            }
+        });
+    });
+</script>

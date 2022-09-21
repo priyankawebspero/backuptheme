@@ -1,0 +1,40 @@
+<section id="newsletter" class="newsletter">
+{% if section.settings.newsletter_title != blank %}
+      <h3 class="box-title"> {{section.settings.newsletter_title}} </h3>        
+{% endif %}
+{% if section.settings.newsletter_des != blank %}
+      <div> {{section.settings.newsletter_des}} </div>        
+{% endif %}
+    
+    {% include 'newsletter-mc' %}
+
+  
+</section>
+
+
+{% schema %}
+  {
+    "name": "Newsletter",
+   "class": "index-section newsletter",
+    "settings": [
+       {
+            "type": "text",
+            "id": "newsletter_title",
+            "label": "Newsletter Title",
+            "default": "Newsletter"
+        },
+        {
+            "type": "textarea",
+            "id": "newsletter_des",
+            "label": "Newsletter Description",
+            "default": "Phasellus lorem malesuada ligula pulvinar commodo maecenas"
+        }
+   ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

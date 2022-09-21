@@ -1,0 +1,680 @@
+<header class="site-header header-parallax" role="banner">
+  {% if section.settings.display_header_top and section.settings.top_message_text != blank %}
+  <div class="header-top">
+    <div class="container-padd60">
+      <div class="w3-content w3-section" style="max-width:100%">
+        <div class="slider-wrap">
+          
+          <div class="header-top-slider">
+            {% if section.settings.top_message_text != blank %}
+            <div class="slide">
+              <p class="header-pramotion text-center">
+                {% include 'multilang' with section.settings.top_message_text %}
+                {% if section.settings.enable_timer != blank %}
+                <p id="countdown_tt"></p>
+                 {% endif %}
+              </p>
+            </div>
+            {% endif %}
+          </div>
+        {% comment %}
+        <div class="slider header-top-slider">
+            {% if section.settings.top_message_text != blank %}
+            <div class="slide">
+              <p class="header-pramotion">
+                {% include 'multilang' with section.settings.top_message_text %}
+              </p>
+            </div>
+            {% endif %}
+            {% if section.settings.top_message_text1 != blank %}
+            <div class="slide">
+              <p class="header-pramotion">
+                {% include 'multilang' with section.settings.top_message_text1 %}
+              </p>
+            </div>
+            {% endif %}
+            {% if section.settings.top_message_text2 != blank %}
+            <div class="slide">
+              <p class="header-pramotion">
+                {% include 'multilang' with section.settings.top_message_text2 %}
+              </p>
+            </div>
+            {% endif %}
+            {% if section.settings.top_message_text3 != blank %}
+            <div class="slide">
+              <p class="header-pramotion">
+                {% include 'multilang' with section.settings.top_message_text3 %}
+              </p>
+            </div>
+            {% endif %}
+           </div>
+          {% endcomment %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <a href="#" class="icon-nav close-menu-mb" title="Menu Mobile Icon" data-menu-mb-toogle>
+    <span class="icon-line"></span>
+  </a>
+
+  <div class="header-bottom" data-sticky-mb>
+    <div class="container-padd60">
+      {% include 'header-mobile' %} 
+    </div>
+  </div>
+
+          <div class="wrapper-navigation">
+            <div class="main-menu jas-mb-style">
+                <div class="mb-area">
+                  <div class="header-links">
+                    <div class="customer-links">
+                      {% if customer %}
+                      <a class="acc-links text-hover acc-logout" id="customer_logout_link" href="/account/logout" {% if settings.enable_multilang %}data-translate="layout.customer.log_out"{% endif %}>
+                        {{ 'layout.customer.log_out' | t }}
+                      </a>
+                      <span> / </span>
+                      <a class="acc-links text-hover acc-title" href="/account"{% if settings.enable_multilang %} data-translate="customer.account.title"{% endif %}>
+                        {{ 'customer.account.title' | t }}
+                      </a>
+
+                      {% else %}  
+
+                      <a data-dropdown-user class="acc-links text-hover acc-sign-in" id="customer_login_link" href="/account/login" {% if settings.enable_multilang %}data-translate="customer.login.sign_in"{% endif %}>
+                        {{ 'customer.login.sign_in' | t }}
+                      </a>
+                      <span class="or-text"{% if settings.enable_multilang %} data-translate="wishlist.general.or"{% endif %}>
+                        /
+                      </span>
+                      <a class="acc-links text-hover acc-regis" id="customer_register_link" href="/account/register"{% if settings.enable_multilang %} data-translate="layout.customer.create_account"{% endif %}>
+                        {{ 'layout.customer.create_account' | t }}
+                      </a>
+                      {% endif %}                                   
+                    </div>
+                    <div class="iwish-icon svg-mb mobile-wishlist">
+                        {% include 'iwish_v2' with 'iwishlink' %}
+                      </div>
+                 </div> 
+                  <nav class="nav-bar" role="navigation">
+                    {% include 'site-nav' %}
+                  </nav>  
+           
+                </div>
+              </div>                       
+            </div>                   
+
+</header>
+
+  {% if section.settings.display_header_top %}
+<div class="promopopup" style="display:none;">
+  <div class="container">
+    <span class="closepromo">x</span>
+    <h3 class="promo_heading text-center">{{section.settings.top_message_text}}</h3>
+    {% for block in section.blocks %}
+    {% case block.type %}
+     {% when 'style_1' %}
+      <div class="promobanner slide">
+        <a href="{{block.settings.promo_link}}">
+          {% if block.settings.promo_image != blank %}
+          <div class="image_block">
+            <img data-src="{{ block.settings.promo_image | img_url: 'large' , format: 'pjpg'}}"
+                     src="{{ block.settings.promo_image | img_url: 'large' , format: 'pjpg'}}"
+                     alt="{{ block.settings.promo_image.alt | default: shop.name }}" class="lazyautosizes lazyloaded" data-sizes="auto">
+          </div>
+          {% endif %}
+          <div class="text_block">
+            {{ block.settings.promotext }}
+               {% if block.settings.promotext_code != blank %} <span class="promo-code">{{ block.settings.promotext_code }} <i class="fa fa-clone" aria-hidden="true"></i></span> {% endif %}
+            <span></span>
+          </div>
+        </a>
+      </div>
+     {% when 'style_2' %}
+       <div class="promobanner slide">
+         {% if block.settings.promo_image_slide != blank %}
+         <a href="{{block.settings.promo_link_slide}}">         
+          <img data-src="{{ block.settings.promo_image_slide | img_url: 'large' , format: 'pjpg'}}"
+               src="{{ block.settings.promo_image_slide | img_url: 'large' , format: 'pjpg'}}"
+               alt="{{ block.settings.promo_image_slide.alt | default: shop.name }}" class="lazyautosizes lazyloaded" data-sizes="auto">
+         </a>
+         {% endif %}
+      </div>
+   {% endcase %}
+  {% endfor %}
+  </div>
+</div>
+   {% endif %}
+
+<script asyn>
+  $(document).ready(function(){
+    $(".promo-code").click(function(event){
+      event.preventDefault();
+      var $tempElement = $("<input>");
+      $("body").append($tempElement);
+      $tempElement.val($.trim($(this).text())).select();
+      $(".promo-code").removeClass('active');
+      $(this).addClass('active')
+      setTimeout(function() {
+        $(".promo-code").removeClass('active');
+      },3000);  
+      document.execCommand("Copy");
+      $tempElement.remove();
+    });
+  });
+</script>
+
+ {% comment %}
+
+  {% if section.settings.timer_date != blank %}
+<script>
+  // Set the date we're counting down to
+  var countDownDatet = new Date(Date.parse("{{section.settings.timer_date}}")).getTime();
+
+     // Update the count down every 1 second
+     var xt = setInterval(function() {
+
+    // Get today's date and time
+    var nowt = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distancet = countDownDatet - nowt;
+
+    // Time calculations for days, hours, minutes and seconds
+    var dayst = Math.floor(distancet / (1000 * 60 * 60 * 24));
+    var hourst = Math.floor((distancet % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutest = Math.floor((distancet % (1000 * 60 * 60)) / (1000 * 60));
+    var secondst = Math.floor((distancet % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("countdown_tt").innerHTML =  "<span class='days countdown'><span class='ocount'>" + dayst + "</span><span class='inner'> DAYS </span> : </span><hr/>" + "<span class='hours countdown'><span class='ocount'>" + hourst + "</span><span class='inner'> HOURS</span> : </span><hr/> <span class='minutes countdown'><span class='ocount'>"
+    + minutest + "</span><span class='inner'> MINUTES</span> : </span><hr><span class='seconds countdown'><span class='ocount'>" + secondst + "</span><span class='inner'>  SECONDS</span></span><hr> ";
+
+    // If the count down is over, write some text 
+    if (distancet < 0) {
+      clearInterval(xt);
+      document.getElementById("countdown_tt").innerHTML = "Sale Over!!";
+    }
+  }, 1000);
+</script>   
+{% endif %}
+
+ {% endcomment %}
+{% schema %}
+{
+"name": "Header 01",
+"settings": [
+{
+"type": "header",
+"content": "Header Top"
+},
+{
+"type": "checkbox",
+"id": "display_header_top",
+"label": "Display Header Top?",
+"default": true
+},
+{
+"type": "textarea",
+"id": "top_message_text",
+"label": "Top Message Text",
+"default": "Mid-Season Sale Up to 70% OFF."
+},
+{
+"type": "textarea",
+"id": "top_message_text1",
+"label": "Top Message Text",
+"default": "Mid-Season Sale Up to 70% OFF."
+},
+{
+"type": "textarea",
+"id": "top_message_text2",
+"label": "Top Message Text",
+"default": "Mid-Season Sale Up to 70% OFF."
+},
+{
+"type": "textarea",
+"id": "top_message_text3",
+"label": "Top Message Text",
+"default": "Mid-Season Sale Up to 70% OFF."
+},{
+"type": "checkbox",
+"id": "enable_timer",
+"label": "Enable Timer",
+"default": true
+},{
+"type": "text",
+"id": "timer_date",
+"label": "Enter Timer Date",
+"default": "July 4, 2022 15:37:25"
+},
+{
+"type": "checkbox",
+"id": "font_weight_bold",
+"label": "Font Weight: Bold?",
+"default": true
+},
+{
+"type": "color",
+"id": "bg_header_top",
+"label": "Background Color",
+"default": "#ef6454"
+},
+{
+"type": "color",
+"id": "text_header_top_color",
+"label": "Text Color",
+"default": "#fff"
+},
+{
+"type": "header",
+"content": "Logo"
+},
+{
+"type": "radio",
+"id": "brand_type",
+"label": "Use image or text for logo?",
+"options": [
+{
+"value": "text",
+"label": "Text"
+},
+{
+"value": "image",
+"label": "Image"
+}
+],
+"default": "text"
+},
+{
+"type": "text",
+"id": "brand_text",
+"label": "Logo text"
+},
+{
+"type": "image_picker",
+"id": "logo",
+"label": "Logo image for Mobile",
+"info": "95px x 44px recommended"
+},
+{
+"type": "image_picker",
+"id": "logo_body",
+"label": "Bodylovin Logo image for Mobile",
+"info": "95px x 44px recommended"
+},
+{
+"type": "url",
+"id": "logo_body_url",
+"label": "PHY bodylovin URL"
+},
+{
+"type": "image_picker",
+"id": "logo_phy",
+"label": "PHY Logo image for Mobile",
+"info": "95px x 44px recommended"
+},
+{
+"type": "url",
+"id": "logo_phy_url",
+"label": "PHY Logo URL"
+},
+{
+"type": "text",
+"id": "max_height_logo_mb",
+"label": "Max Height of Logo Mobile",
+"default": "26px" 
+},
+{
+"type": "image_picker",
+"id": "logo_pc",
+"label": "Logo image for PC",
+"info": "95px x 44px recommended"
+},
+{
+"type": "image_picker",
+"id": "logo_body_pc",
+"label": "Bodylovin Logo image for PC",
+"info": "95px x 44px recommended"
+},
+{
+"type": "image_picker",
+"id": "logo_phy_pc",
+"label": "PHY Logo image for PC",
+"info": "95px x 44px recommended"
+},
+{
+"type": "text",
+"id": "max_height_logo_pc",
+"label": "Max Height of Logo PC",
+"default": "33px" 
+},
+{
+"type": "header",
+"content": "Parallax"
+},
+{
+"type": "checkbox",
+"id": "display_parallax",
+"label": "Display Parallax",
+"default": true,
+"info": "Use at Homepage"
+},
+{
+"type": "checkbox",
+"id": "font_weight_nav",
+"label": "Navigation Font Weight: Bold?",
+"default": false
+},
+{
+"type": "image_picker",
+"id": "logo_parallax",
+"label": "Logo Parallax image",
+"info": "95px x 44px recommended"
+},	
+{
+"type": "color",
+"id": "menu_parallax_color",
+"label": "Menu Color",
+"default": "#fff"
+},    
+{
+"type": "header",
+"content": "Search"
+},
+{
+"type": "color",
+"id": "bg_search_color",
+"label": "Background Color",
+"default": "#f8f8f8"
+},      
+{
+"type": "color",
+"id": "search_color",
+"label": "Search Color",
+"default": "#787878"
+},    
+{
+"type": "color",
+"id": "search_color_btn",
+"label": "Search Color Button",
+"default": "#333"
+},            
+{
+"type": "header",
+"content": "Cart Header"
+},
+{
+"type": "color",
+"id": "bg_cart_color",
+"label": "Background Color Items Cart",
+"default": "#1e1e1e"
+},
+{
+"type": "color",
+"id": "cart_color",
+"label": "Color Items Cart",
+"default": "#fff",
+"info": "======================="
+},
+{
+"type": "header",
+"content": "Navigation"
+},
+{
+"type": "checkbox",
+"id": "display_fixtop_menu",
+"label": "Display Fix Top Menu?",
+"default": true
+},           
+{
+"type": "header",
+"content": "Navigation Text alignment"
+},
+
+{
+"type": "select",
+"id": "alignment",
+"label": "Text alignment",
+"default": "left",
+"options": [
+{
+"value": "left",
+"label": "Left"
+},
+{
+"value": "center",
+"label": "Center"
+},
+{
+"value": "right",
+"label": "Right"
+}
+]
+},
+{
+"type" : "header",
+"content" : "Settings"
+},
+{
+"type" : "color",
+"id" : "bg_menu",
+"label" : "Background Main Menu",
+"default" : "#fff"
+},		  
+{
+"type" : "color",
+"id" : "bg_dropdown_menu",
+"label" : "Background Dropdown Menu",
+"default" : "#f8f8f8",
+"info" : "======================="
+},
+{
+"type" : "color",
+"id" : "color_menu_lv1",
+"label" : "Level 1 Menu Color",
+"default" : "#232323"
+},
+{
+"type" : "color",
+"id" : "hover_color_mnu_lv1",
+"label" : "Level 1 Menu color when hover",
+"default" : "#232323"
+},
+{
+"type" : "text",
+"id" : "font_size_mnu_lv1",
+"label" : "Font size Menu level 1",
+"default" : "13px",
+"info" : "======================="
+},
+{
+"type" : "color",
+"id" : "color_menu_lv2",
+"label" : "Level 2 Menu Color",
+"default" : "#232323"
+},
+{
+"type" : "color",
+"id" : "hover_color_mnu_lv2",
+"label" : "Level 2 Menu color when hover",
+"default" : "#232323"
+},
+{
+"type" : "text",
+"id" : "font_size_mnu_lv2",
+"label" : "Font size Menu level 2",
+"default" : "12px",
+"info" : "======================="
+},
+{
+"type" : "color",
+"id" : "color_menu_lv3",
+"label" : "Level 3 Menu Color",
+"default" : "#3c3c3c"
+},
+{
+"type" : "color",
+"id" : "hover_color_mnu_lv3",
+"label" : "Level 3 Menu color when hover",
+"default" : "#0688e2"
+},
+{
+"type" : "text",
+"id" : "font_size_mnu_lv3",
+"label" : "Font size Menu level 3",
+"default" : "12px",
+"info" : "======================="
+},
+{
+"type" : "header",
+"content" : "Label"
+},
+{
+"type" : "checkbox",
+"id" : "enable_sale",
+"label" : "Display Label Sale",
+"default" : true
+},
+{
+"type" : "text",
+"id" : "lb_sale",
+"label" : "Label sale",
+"default" : "Sale"
+},
+{
+"type" : "textarea",
+"id" : "sale_item",
+"label" : "Label Sale Items"
+},
+{
+"type" : "color",
+"id" : "bg_lb_sale",
+"label" : "Background color label sale",
+"default" : "#ef6454"
+},
+{
+"type" : "color",
+"id" : "color_lb_sale",
+"label" : "Text Color label sale",
+"default" : "#fff"
+},
+{
+"type" : "checkbox",
+"id" : "enable_new",
+"label" : "Display Label New",
+"default" : true
+},
+{
+"type" : "text",
+"id" : "lb_new",
+"label" : "Label New",
+"default" : "New"
+},
+{
+"type" : "textarea",
+"id" : "new_item",
+"label" : "Label New Items"
+},
+{
+"type" : "color",
+"id" : "bg_lb_new",
+"label" : "Background color label New",
+"default" : "#06bfe2"
+},
+{
+"type" : "color",
+"id" : "color_lb_new",
+"label" : "Text Color label New",
+"default" : "#fff"
+},
+{
+"type" : "checkbox",
+"id" : "enable_hot",
+"label" : "Display Label Hot",
+"default" : true
+},
+{
+"type" : "text",
+"id" : "lb_hot",
+"label" : "Label Hot",
+"default" : "Hot"
+},
+{
+"type" : "textarea",
+"id" : "hot_item",
+"label" : "Label Hot Items"
+},
+{
+"type" : "color",
+"id" : "bg_lb_hot",
+"label" : "Background color label Hot",
+"default" : "#ffbb49"
+},
+{
+"type" : "color",
+"id" : "color_lb_hot",
+"label" : "Text Color label Hot",
+"default" : "#fff"
+},
+{
+"type": "header",
+"content": "Mega Menu"
+},
+{
+"type": "checkbox",
+"id": "display_megamenu",
+"label": "Display Mega Menu?",
+"default": true
+}
+],
+
+"blocks": [
+{
+"type": "style_1",
+"name": "Style 1",
+"settings": [
+{
+"type": "image_picker",
+"id": "promo_image",
+"label": "Upload image"
+},
+{
+"type": "richtext",
+"id": "promotext",
+"label": "Add Promo text"
+},
+{
+"type": "richtext",
+"id": "promotext_code",
+"label": "Add Promo text Code"
+},
+{
+"type": "url",
+"id": "promo_link",
+"label": "Link "
+}
+]
+},	  
+{
+"type": "style_2",
+"name": "Style 2",
+"settings": [
+{
+"type": "image_picker",
+"id": "promo_image_slide",
+"label": "Upload image"
+},
+{
+"type": "url",
+"id": "promo_link_slide",
+"label": "Link "
+}
+]
+}   
+]
+
+
+}
+{% endschema %}
+

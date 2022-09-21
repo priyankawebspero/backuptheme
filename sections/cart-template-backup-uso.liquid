@@ -1,0 +1,393 @@
+ {% include 'breadcrumb' %}
+
+<header class="page-header">
+  {% if cart.item_count > 0 %}
+  <a href="/collections/all-in-stock" class="continue">
+    <span {% if settings.enable_multilang %}data-translate="cart.ajax_cart.continue_shopping"{% endif %}>
+      {{ 'cart.ajax_cart.continue_shopping' | t }}
+    </span>
+    <i class="fa fa-angle-right"></i>
+  </a>
+
+  {% endif %}
+
+  <h1 {% if settings.enable_multilang %}data-translate="cart.general.title"{%endif%}>
+    {{ 'cart.general.title' | t }}
+  </h1>
+</header>
+
+{% if cart.item_count > 0 %}
+<form class="cart-form wrapper-cart-template" action="/cart" method="post" novalidate>
+  <div class="left-col cart_items">
+    <!--     <div class="box-title"{% if settings.enable_multilang %} data-translate="cart.label.product"{%endif%}>
+{{ 'cart.label.product' | t }}
+</div>  -->
+
+    <ul class="cart-list">
+      {% for item in cart.items %}
+      <li data-product_id="{{item.product_id}}" id="dta-{{item.product_id}}">
+        <div class="details">
+          <div class="cart-thumb">
+            <a class="product-img" href="{%if item.variant.metafields.secomapp.freegifts%}{{ item.product.url }}{%else%}{{ item.url | within: collections.all }}{%endif%}">
+              <img data-src="{{ item | img_url: '160x' , format: 'pjpg'}}" src="{{ item | img_url: '160x' , format: 'pjpg'}}"  alt="{{ item.title | remove: '/ Default Title'| remove: 'Default Title' | remove: '/ Default' | remove: 'Default' | replace: '(Freegifts)', ''  | escape }}" class="lazyautosizes lazyloaded"/>
+            </a>
+          </div>
+
+          <div class="cart-details">
+            <div class="pro-name-and-price-infos">
+              <div class="pro-name-and-vendor">
+                <a href="{%if item.variant.metafields.secomapp.freegifts%}{{ item.product.url }}{%else%}{{ item.url }}{%endif%}" class="product-name">
+                  {% include 'multilang' with item.product.title %}
+                </a>
+                {% if item.product.variants.size > 1 %}
+                  <span class="variant_title">{{ item.variant.title }}</span>
+                  {% endif %}
+              </div>
+              <div class="price-box">
+                <span>
+                  <div class="qb-price-item" data-id="{{ item.key }}"><span class='hulkapps-cart-item-price' data-key='{{item.key}}'><div class="qb-price-item" data-id="{{ item.key }}">
+<span class="saso-cart-item-price" data-key="{{item.key}}"><div class="qb-price-item" data-id="{{ item.key }}">{{ item.price | money }}</div></span>
+</div></span></div>
+                </span>
+              </div>
+            </div>
+
+            {% if item.properties.size > 0 %}
+            <div class="properties">
+              {%- comment -%}{% for p in item.properties %}
+              {% unless p.last == blank %}
+              {{ p.first }}:
+              {% if p.last contains '/uploads/' %}
+              <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+              {% else %}
+              {{ p.last }}
+              {% endif %}
+              <br>
+              {% endunless %}
+              {% endfor %}{%- endcomment -%}{%- for p in item.properties -%}
+            {%- unless p.last == blank -%}
+              <li class="product-details__item product-details__item--property{%if property_size == 0%} hide{% endif %}" data-cart-item-property>
+                <span class="product-details__item-label" data-cart-item-property-name>{{ p.first }}: </span>
+
+                {%- comment -%}
+                  Check if there was an uploaded file associated
+                {%- endcomment -%}
+                <span data-cart-item-property-value>
+                  {%- if p.last contains "uploads" -%}
+                    <a href="{{ p.last }}">Uploaded File</a>
+                  {%- else -%}
+                    {{ p.last }}
+                  {%- endif -%}
+                </span>
+              </li>
+            {%- endunless -%}
+          {%- endfor -%}
+            <button type="button" class="edit_cart_option btn btn--primary button" data-product_id="{{item.product_id}}" data-key="{{item.key}}" data-variant_id="{{item.variant_id}}" data-quantity="{{item.quantity}}">Edit Options</button>
+            </div>
+            {% endif %}
+
+
+            <div class="quantity-and-remove-btn">
+              <div class="quantity">
+                <label {% if settings.enable_multilang %}data-translate="cart.label.quantity"{%endif%}>
+                  {{ 'cart.label.quantity' | t }}:
+                </label>
+
+                <div class="qty-group">
+                  {%unless item.variant.metafields.secomapp.freegifts%}
+                  <a href="#" onclick="myFunction2('{{item.title}}','{{item.id}}','{{item.original_price}}','{{item.price}}','1','{{ item.image |  img_url:"medium"}}')" data-minus-quantity class="minus button"></a>
+                  {% endunless %}
+                  <input {%if item.variant.metafields.secomapp.freegifts%}readonly{%endif%} type="text" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}">
+                  {%unless item.variant.metafields.secomapp.freegifts%}
+                  <a href="#" onclick="myFunction1('{{item.title}}','{{item.id}}','{{item.original_price}}','{{item.price}}','{{ item.image |  img_url:"medium"}}')" data-plus-quantity class="plus button"></a>
+                  {% endunless %}
+                </div>
+
+                <div class="group-action">
+                  <button class="update btn" type="submit" name="update">
+                    <span class="text" {% if settings.enable_multilang %}data-translate="cart.general.update"{% endif %}>
+                      {{ 'cart.general.update' | t }}
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="cart-remove-btn">
+                <a class="remove" href="/cart/change?line={{ forloop.index }}&amp;quantity=0" data-id="{{ item.id }}">
+                  {% comment %} {% include 'icon-close' %}{% endcomment %}
+                  <span onclick="myFunction2('{{item.title}}','{{item.id}}','{{item.original_price}}','{{item.price}}','{{item.quantity}}')" class="text text-hover" {% if settings.enable_multilang %}data-translate="cart.general.remove"{% endif %}>
+                    {{ 'cart.general.remove' | t }}
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <p class="mono">
+            {% assign property_size = item.properties | size %}
+            <div class='hulkapps-reminder' data-key='{{item.key}}'></div>{% if property_size > 0 %}
+            {% for p in item.properties %}
+            {% unless p.last == blank %}
+            {{ p.first }}:
+            {% if p.last contains '/uploads/' %}
+            <a class="lightbox" href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+            {% else %}
+            {{ p.last }}
+            {% endif %}
+            <br>
+            {% endunless %}
+            {% endfor %}
+            {% endif %}
+          </p>
+          </li>
+        {% endfor %}
+    </ul>
+    {% include 'special_offer' %}
+    
+    {% if settings.img_trust != blank %}
+    <div class="secure-shopping-guarantee">
+      <div class="secure-text">
+        <span class="icon">
+          <svg aria-hidden="true" data-prefix="fas" data-icon="user-shield" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-user-shield fa-w-20 fa-2x"><path fill="currentColor" d="M622.3 271.1l-115.2-45c-4.1-1.6-12.6-3.7-22.2 0l-115.2 45c-10.7 4.2-17.7 14-17.7 24.9 0 111.6 68.7 188.8 132.9 213.9 9.6 3.7 18 1.6 22.2 0C558.4 489.9 640 420.5 640 296c0-10.9-7-20.7-17.7-24.9zM496 462.4V273.3l95.5 37.3c-5.6 87.1-60.9 135.4-95.5 151.8zM224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm96 40c0-2.5.8-4.8 1.1-7.2-2.5-.1-4.9-.8-7.5-.8h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c6.8 0 13.3-1.5 19.2-4-54-42.9-99.2-116.7-99.2-212z" class=""></path></svg>
+        </span>
+    
+
+        {% include 'multilang' with settings.secure_text %}
+      </div>
+      <img data-src="{{ settings.img_trust | img_url: '800x'  , format: 'pjpg'}}" src="{{ settings.img_trust | img_url: '800x'  , format: 'pjpg'}}" class="lazyautosizes lazyloaded">
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="right-col">
+    <div class="box-title"{% if settings.enable_multilang %} data-translate="cart.label.order_summary"{%endif%}>
+      {{ 'cart.label.order_summary' | t }}
+    </div>
+    <div class="right-col-infos">
+      <div class="total">
+        <span class="label">
+          <span {% if settings.enable_multilang %}data-translate="cart.label.total"{% endif %}>
+            {{ 'cart.label.total' | t }}:
+          </span>
+        </span>
+        <span class="price">
+          
+<span class="saso-cart-original-total"><span class='hulkapps-cart-original-total'>{{ cart.total_price | money }}</span></span>
+<span class="saso-cart-total"></span>
+
+        </span>
+      </div>
+      
+
+      <!--   GIFT WRAP BOX     -->
+      
+      <footer class="Cart__Footer">
+
+        {%- if settings.cart_enable_notes -%}
+
+        <div class="Cart__NoteContainer">
+          <span class="Cart__NoteButton">{{ 'cart.general.add_note' | t }}</span>
+          <textarea class="Cart__Note Form__Textarea" name="note" id="cart-note" rows="4" placeholder="{{ 'cart.general.note_placeholder' | t }}">{{ cart.note }}</textarea>
+        </div>
+        {%- endif -%}
+
+        <div class="Cart__NoteContainer">
+          <div class="Section">
+            <div class="Panel">
+              <h2 class="Panel__Title Heading u-h2">Gift wrap your order</h2>
+
+              <div class="Panel__Content">
+                {%include 'gift-wrapping' %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </footer>
+      
+      {% comment %}
+      {% if section.settings.cart_notes %}
+      <label class="add-comments" for="cartSpecialInstructions">
+        <span class="note" {% if settings.enable_multilang %}data-translate="cart.general.label"{%endif%}>
+          {{ 'cart.general.label' | t }}
+        </span>
+        <span {% if settings.enable_multilang %}data-translate="cart.general.label_text"{%endif%}>
+          {{ 'cart.general.label_text' | t }}
+        </span>
+      </label>
+
+      
+      <textarea name="note" class="input-full" id="cartSpecialInstructions">
+        {{ cart.note }}
+      </textarea>
+      {% endif %}
+      {% endcomment %}
+      
+      <div class="btn-actions">
+        <!--div class="free_delivery_p">
+
+      <div class="free_delivery">
+		Your surprise gifts have been added to your order 🥳   
+      
+	</div>
+        
+      </div-->
+        {% if cart.total_price <=1400000 %} 
+         <input class="btn btn-checkout" type="submit"  name="checkout" {% if settings.enable_multilang %}data-translate="cart.general.button_checkout"{% endif %} value="{{ 'cart.general.button_checkout' | t }}" onclick="myFunction()">
+        {% else %}
+        <input class="btn btn-checkout disable" type="submit"  name="checkout" {% if settings.enable_multilang %}data-translate="cart.general.button_checkout"{% endif %} value="{{ 'cart.general.button_checkout' | t }}" onclick="myFunction()">
+        {% endif %}
+
+        {% if additional_checkout_buttons %}
+        <div>{{ content_for_additional_checkout_buttons }}</div>
+        {% endif %}
+      </div>
+      
+<!-- Free Delivery witten box below checkout in cart page -->
+      
+      {% if cart.total_price >=29900 %}
+      <div class="free_delivery_p">
+
+      <div class="free_delivery">
+		Congratulations! You've got FREE shipping      
+      
+	</div>
+      </div>
+      {% endif%}
+      {% unless cart.item_count == 0 %}
+      {% include 'shipping-rates-calculator' %}
+      {% endunless %}
+    </div>
+  </div>
+</form>
+
+{% else %}
+<p class="alert alert-warning" {% if settings.enable_multilang %}data-translate="cart.general.empty"{%endif%}>
+  {{ 'cart.general.empty' | t }}
+</p>
+<p class="cart-empty" {% if settings.enable_multilang %}data-translate="cart.general.continue_browsing_html"{%endif%}>
+  {{ 'cart.general.continue_browsing_html' | t }}
+</p>
+
+{% endif %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+  function myFunction(){
+  	jQuery.getJSON('/cart.js', function(cart) {
+   // now have access to Shopify cart object
+   console.log('There are now ' + cart.item_count + ' items in the cart.');
+      var product = data.product;
+      console.log(cart.item_count+" How is this")
+      var isMobile = false; //initiate as false
+      // device detection
+      if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
+         || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) { 
+        isMobile = true;
+      }
+      var device_type="Mobile"
+      if(!isMobile){
+        device_type="Desktop"
+      }
+      window.dataLayer.push({
+        'event':'proceed_to_checkout',
+        'quantity':cart.item_count,
+        'products_count':url,
+        'subtotal':cart.original_total_price/100,
+        'discount':product.variants[0].price/100,
+        'total':cart.total_price/100,
+        'device':device_type
+      })
+} );
+    return;
+  }
+</script>
+<script>
+  function myFunction1(name,id,mrp,price,imageURL){
+    console.log(imageURL)
+    var isMobile = false; //initiate as false
+          // device detection
+          if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
+              || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) { 
+              isMobile = true;
+          }
+          var device_type="Desktop"
+          if(isMobile){
+          	device_type="Mobile"
+          }
+      from_page="",
+      added_from=""
+  	console.log(name+' '+id+' '+mrp)
+   window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event':'add_to_cart',
+      'prod_id':id,
+      'prod_name':name,
+      'mrp':mrp/100,
+      'price':price/100,
+      'device':device_type,
+      'from_page':document.referrer,
+      'added_from':window.location.href,
+      'imageURL':imageURL
+      
+    })
+    return;
+  }
+</script>
+
+<script>
+  function myFunction2(name,id,mrp,price,quantity,imageURL){
+    console.log("Add")
+    var isMobile = false; //initiate as false
+          // device detection
+          if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
+              || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) { 
+              isMobile = true;
+          }
+          var device_type="Desktop"
+          if(isMobile){
+          	device_type="Mobile"
+          }
+      from_page="",
+      added_from=""
+  	console.log(name+' '+id+' '+mrp)
+   window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event':'remove_from_cart',
+      'prod_id':id,
+      'prod_name':name,
+      'quantity':quantity,
+      'mrp':mrp/100,
+      'price':price/100,
+      'device':device_type,
+      'from_page':document.referrer,
+      'added_from':window.location.href ,
+      'imageURL':imageURL
+      
+    })
+    return;
+  }
+</script>
+
+{% schema %}
+{
+"name": "Cart Page",
+"settings": [
+{
+"type": "checkbox",
+"id": "cart_notes",
+"label": "Allow customers to add notes to their order?",
+"default": true,
+"info": "Only enabled in the ajax cart if you use your cart.liquid markup. See docs below."
+}
+]
+}
+{% endschema %}
+<style>
+  .free_delivery{
+  	color:#5e0c8c;
+    border:1px solid;
+    padding:20px;
+    margin:15px;
+    width:100%;
+    font-weight:bold;
+  }
+</style>

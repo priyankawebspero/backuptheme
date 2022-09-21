@@ -1,0 +1,55 @@
+<ul class="first_selection">
+  {% assign first_feild =  product.metafields.custom.first_feild.value %}
+  <span class="select_box">- select varaiant -</span>
+  {% for product in first_feild  %}     
+    <li>  
+       {{ product.featured_image | image_url: width: 50 | image_tag: loading: 'lazy' }}
+        <input type="radio" class="variants" name="first_selection" data-title="{{product.title}}"c value="{{product.id}}">
+    </li>
+  {% endfor %}
+</ul>
+<ul class="second_selection">
+  {% assign second_feild =  product.metafields.custom.second_feild.value %}
+  <span class="select_box">- select varaiant -</span>
+  {% for product in second_feild  %}     
+    <li>        {{ product.featured_image | image_url: width: 50 | image_tag: loading: 'lazy' }}
+        <input type="radio" class="variants" name="second_selection" data-title="{{product.title}}"c value="{{product.id}}">
+    </li>
+  {% endfor %}
+</ul>
+<input data-btn-addtocart="" type="button" name="add" class="btn add-to-cart-btnload" id="product-add-to-cart" value="Add to Cart" data-form-id="#add-to-cart-form" >
+
+<script>
+addAllItems(variantIdArray) {
+  # split fake liquid array to make proper array
+  var newVariantIdArray = array.split(',');
+
+  # map over variant array to create an array of objects with quantity and id
+  var product_data = newVariantIdArray.map(variantId => {
+    return {quantity: 1, id: variantId}
+  })
+
+  # add the items to the data object we need to pass to the fetch call 
+  var data = {
+    items: product_data
+  }
+        
+  fetch('/cart/add.js', {
+    body: JSON.stringify(data),
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Requested-With':'xmlhttprequest'
+    },
+    method: 'POST'
+  }).then((response) => {
+    return response.json();
+  }).then((json) => {
+    /* yay! our products were added - do something here to indicate to the user */
+    console.log('products', json)
+  }).catch((err) => {
+    /* uh oh, we have error. */
+    console.error(err)
+  });
+}
+</script>

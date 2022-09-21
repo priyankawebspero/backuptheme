@@ -1,0 +1,137 @@
+<div class="inner product-item{% if sold_out %} sold-out{% endif %}{% if on_sale %} on-sale{% endif %} {% if product.tags contains 'birthday20' %} birthday20{% endif %} {% if product.tags contains 'birthday40' %} birthday40{% endif %} {% if product.tags contains 'birthday50' %} birthday50{% endif %}{% if product.tags contains 'Plum 999' %} plum_999{% endif %}{% if product.tags contains 'Lipstick' %} plum-Lipstick{% endif %}" data-product-id="product-{{ product.id }}">
+  <div class="inner-top">
+    <div class="product-top">
+
+      <label class="offer_label" ><a href="{{ product.url  }}"></a></label>
+      <div class="product-image{% if product.images.size > 1 and settings.image_swap %} image-swap{% endif %}">
+        <span id="secomapp-fg-image-{{ product.id }}" style="display: none;"> {{ "icon-freegift.png" | asset_url | img_tag: "", "sca-fg-img-collect" }} </span>
+        <span class="sca-fg-cat-list prod-show-list" style="display:none;" id="secomapp-fg-data-{{ product.id }}"> </span>
+        <a href="{{ product.url }}" class="product-grid-image" data-collections-related="/collections/{{collection.handle}}?view=related">
+          {%- assign img_pr = product.featured_image.src | product_img_url: '277x' , format: 'pjpg'-%}
+          {%- assign img_pr_1 = product.featured_image.src | product_img_url: '277x' , format: 'pjpg'-%}
+          {%- assign img_pr_2 = product.featured_image.src | product_img_url: '277x' , format: 'pjpg'-%}
+
+          {%- assign img_0 = product.images[0].src | product_img_url: '277x' , format: 'pjpg'-%}
+          {%- assign img_01 = product.images[0].src | product_img_url: '277x' , format: 'pjpg'-%}
+          {%- assign img_02 = product.images[0].src | product_img_url: '277x' , format: 'pjpg'-%}
+
+          {%- assign img_1 = product.images[1].src | product_img_url: '277x' , format: 'pjpg'-%}
+          {%- assign img_11 = product.images[1].src | product_img_url: '277x' , format: 'pjpg'-%}
+          {%- assign img_12 = product.images[1].src | product_img_url: '277x' , format: 'pjpg'-%}
+
+          {% if product.images.size > 1 and settings.image_swap %}
+          <img alt="{{ product.images[0].alt | escape }}"
+               class="images-one lazyautosizes lazyload"
+               data-src="{{ img_0 }}"
+               data-srcie="{{ img_01 }}"
+               data-srcief="{{ img_02 }}"
+               data-widths="[180 , 220, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+               data-aspectratio="{{ product.featured_image.aspect_ratio }}"
+               data-sizes="auto">
+
+          <span class="images-two">
+            <img alt="{{ product.images[1].alt | escape }}"
+                 class="lazyautosizes lazyload"
+                 data-src="{{ img_1 }}"
+                 data-srcie="{{ img_11 }}"
+                 data-srcief="{{ img_12 }}"
+                 data-widths="[180, 220 , 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ product.featured_image.aspect_ratio }}"
+                 data-sizes="auto">
+
+          </span>
+          {% else %}
+          <img alt="{{ product.featured_image.alt | escape }}"
+               data-src="{{ img_pr }}"
+               data-srcie="{{ img_pr_1 }}"
+               data-srcief="{{ img_pr_2 }}"
+               class="lazyautosizes lazyload"
+               data-widths="[180, 220 , 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+               data-aspectratio="{{ product.featured_image.aspect_ratio }}"
+               data-sizes="auto">
+          {% endif %}
+        </a>
+      </div>
+
+      {% include 'product-label' %}
+
+    </div>
+
+    {% comment %} Use for productGrid {% endcomment %}
+    <div class="product-bottom">
+      {% if settings.display_product_reviews %}
+      <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+      {% endif %}
+      {% if settings.show_vendor %}
+      <div class="product-vendor">
+        {{ product.vendor | link_to_vendor }}
+      </div>
+      {% endif %}
+      {% assign Range_url = product.metafields.Product['Range_url'] %}
+      {% assign rangeText =  product.metafields.Product["Range"] %}
+      {% if rangeText == blank %}
+      {% assign rangeText =  product.metafields.Product["Range "] %}
+      {% endif %}
+      {% if Range_url != blank %}
+      {% if rangeText != blank %}
+      <a href="{{ Range_url }}" class="range-link">{{ rangeText }}</a>
+      {% endif %}
+      {% else %}
+      {% if rangeText != blank %}
+      <span href="{{ Range_url }}" class="range-link">{{ rangeText }}</span>
+      {% endif %}
+      {% endif %}
+      
+     {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
+      
+      <a class="product-title" href="{{ product.url }}">
+        <span class="lang1">
+          {{ product.title }}
+        </span>
+      </a>
+            {% assign variantCounts = product.variants | size %}
+      {% if variantCounts > 1 %}
+      {% assign producTemplate =  product.template_suffix %}
+      {% if producTemplate == 'swatch' %}
+      <span class="shade-list">{{variantCounts}} shades</span>
+      {% else %}
+      <span class="shade-sizes">{{variantCounts}} sizes</span>
+      {% endif %}
+      {%else%}
+      <span class="shade-sizes deative_shades"></span>
+      {% endif %}
+      <div class="price-box">              
+        {% if on_sale %}
+        
+        <div class="price-sale">
+         <span class="price-mrp test"></span> <span class="old-price">{{ product.variants[0].compare_at_price | money }}</span>
+          <span class="price-mrp test"></span><span class="special-price">{{ product.variants[0].price | money }}</span>
+        </div>
+        
+        {% else %}
+        <div class="price-regular">
+          <span class="price-mrp test"></span><span>{{ product.variants[0].price | money }}</span>
+        </div>
+        {% endif %}
+      </div>
+      
+      {% if settings.display_button %}
+      {% assign prodtemplate =  product.template_suffix %}
+      <div class="action">
+        {% include 'add-to-cart-form', id: 'grid-product-form-' %}
+      </div>
+       {% endif %}
+      
+    </div>
+ </div>
+
+  <!-- **BEGIN** Hextom USB Integration // Collection Include - DO NOT MODIFY -->
+  {% render 'hextom_usb_coll', product: product %}
+  <!-- **END** Hextom USB Integration // Collection Include - DO NOT MODIFY -->
+</div>
+
+<style>
+  .product-label.deactive {
+    display: none !important;
+}
+</style>

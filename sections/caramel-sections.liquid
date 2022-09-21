@@ -1,0 +1,238 @@
+<div class="caramel-offers">
+    {% for block in section.blocks %}
+    {% case block.type %}
+    {% when 'video-slide' %}
+    {% when 'image-slide' %}
+    <div class="second section" id="section-{{block.id}}" style="background-image:url('https://cdn.shopify.com/s/files/1/0390/2985/files/caramel_liquid_lo_min.png?v=1647341544');background-size: cover;" >
+      <div class="cs_container">
+      <div class="first_inner">
+        <div class="caramel-video">  
+          <div class="caramel-video_inner"> 
+            {% if block.settings.video_url != blank%} <video src="{{block.settings.video_url}}" muted autoplay loop playsinline></video> {% endif %}
+          </div>  
+        </div> 
+    
+       {% if block.settings.heading != blank%} <img class="im_p_cs_text" src="{{ block.settings.heading | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.heading.alt}}"> {% endif %}
+       {% if block.settings.top_img != blank%} <img class="im_p_cs_sale" src="{{ block.settings.top_img | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.top_img.alt}}"> {% endif %}
+      <div class="pro-quality_im_pl">
+        <div class="row">
+          {% if block.settings.col_first != blank%} <div class="col-md-4 col-sm-4"><a href="{{ block.settings.col_f_url}}"><img src="{{ block.settings.col_first | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.col_first.alt}}"></a></div> {% endif %}
+          {% if block.settings.col_second != blank%} <div class="col-md-4 col-sm-4"><a href="{{ block.settings.col_s_url}}"><img src="{{ block.settings.col_second | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.col_second.alt}}"></a></div> {% endif %}
+          {% if block.settings.col_third != blank%} <div class="col-md-4 col-sm-4"><a href="{{ block.settings.col_t_url}}"><img src="{{ block.settings.col_third | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.col_third.alt}}"></a></div> {% endif %}
+      </div></div>
+      </div></div>
+    </div>
+    {% when 'product-slide' %} 
+    <div class="sale-products" id="section-{{block.id}}">
+      <div class="sale-products_cs_contain">
+         <div class="products_cs_contain-inner">
+     {% if block.settings.banner_img != blank%} <img class="pd-sal_bn" src="{{ block.settings.banner_img | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.banner_img.alt}}">{% endif %}
+      {% if block.settings.offer_image != blank%}<img class="pd-sal_bn-text" src="{{ block.settings.offer_image | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.offer_image.alt}}">{% endif %}
+      {{block.settings.offer_text}}
+      <div class="container">        
+        <div class="row">
+          <div class="col-12  featured-products" data-featured-products-slide> 
+            <div class="widget-product">
+              <div class="products-grid row four-items" data-row="4">
+                {% for product in collections[block.settings.show_slider_featured_collection].products %}
+                <div class="grid-item col-6 col-md-4 col-lg-3 small--one-half">
+                  {% include 'product-grid-item' %}
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></div></div>
+  
+   {% when 'popcorn-video' %} 
+  <div class="popcorn-video" id="section-{{block.id}}">
+    <div class="popcorn-inner-sec">
+      <div class="popcorn">
+        {% if block.settings.Gif_image_before != blank%}
+        <img class="before" src="{{ block.settings.Gif_image_before | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.Gif_image_before.alt}}">
+        <img class="after" src="{{ block.settings.Gif_image_after | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.Gif_image_after.alt}}">
+        {% endif %}
+      </div>
+    </div>
+    <div class="video-wrapper">
+	<div class="video-container" id="video-container">
+		<video controls id="video" preload="metadata" poster="{{block.settings.vid_banner | img_url: 'master' , format: 'pjpg'}}">
+			<source src="{{block.settings.video_url}}" type="video/mp4">
+		</video>
+
+		<div class="play-button-wrapper">
+			<div title="Play video" class="play-gif" id="circle-play-b">
+				<!-- SVG Play Button -->
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+					<path d="M40 0a40 40 0 1040 40A40 40 0 0040 0zM26 61.56V18.44L64 40z" />
+				</svg>
+			</div>
+		</div>
+	</div>
+</div>
+  </div>
+    {% endcase %}
+    {% endfor %}
+  <div class="bottom-popcorn" style="background-image:url('https://cdn.shopify.com/s/files/1/0390/2985/files/popcorn_bottom_caramel_pl_bg_1.png?v=1647341824');background-size: cover;" ></div>
+</div>
+
+{% schema %}
+{
+  "name": "Caramel Offers Section",
+  "class": "caramel-offers-section",
+  "settings": [
+  ],
+  "blocks": [
+     {
+       "name": "Video Section",
+       "type": "video-slide",
+       "settings": [
+        
+       ]
+     },
+     {
+       "name": "Collection Section",
+       "type": "image-slide",
+       "settings": [
+          {
+          "type": "url",
+          "id": "video_url",
+          "label": "Video Link"
+          },
+         {
+          "type": "image_picker",
+          "id": "heading",
+          "label": "Heading Image"
+         },
+         {
+          "type": "image_picker",
+          "id": "top_img",
+          "label": "Top Image"
+        },
+        {
+        "type": "paragraph",
+        "content": "=== Collection images"
+        },
+        {
+        "type": "url",
+        "id": "col_f_url",
+        "label": "Collection First Link"
+        },
+        {
+        "type": "image_picker",
+        "id": "col_first",
+        "label": "Collection First Image"
+        },
+        {
+        "type": "url",
+        "id": "col_s_url",
+        "label": "Collection First Link"
+        },
+        {
+        "type": "image_picker",
+        "id": "col_second",
+        "label": "Collection Second Image"
+        },
+        {
+        "type": "url",
+        "id": "col_t_url",
+        "label": "Collection First Link"
+        },
+        {
+        "type": "image_picker",
+        "id": "col_third",
+        "label": "Collection Third Image"
+        }
+       ]
+     },
+     {
+       "name": "Product section",
+       "type": "product-slide",
+       "settings": [
+        {
+        "type": "image_picker",
+        "id": "banner_img",
+        "label": "Banner Image"
+        },
+        {
+        "type": "image_picker",
+        "id": "offer_image",
+        "label": "Offer Image"
+        },
+        {
+        "type": "html",
+        "id": "offer_text",
+        "label": "Offer Text"
+        },
+        {
+          "type": "collection",
+          "id": "show_slider_featured_collection",
+          "label": "Offer Collection"
+         }
+       ]
+     },
+     {
+       "name": "Popcorn and Video section",
+       "type": "popcorn-video",
+       "settings": [
+        {
+        "type": "image_picker",
+        "id": "Gif_image_before",
+        "label": "Gif Before"
+        },
+        {
+        "type": "image_picker",
+        "id": "Gif_image_after",
+        "label": "Gif After"
+        },
+        {
+        "type": "image_picker",
+        "id": "vid_banner",
+        "label": "Video Banner Image"
+        },
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Video Link"
+        }
+       ]
+     }
+
+   ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+
+<script>
+  const video = document.getElementById("video");
+  const circlePlayButton = document.getElementById("circle-play-b");
+
+  function togglePlay() {
+    if (video.paused || video.ended) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  }
+
+  circlePlayButton.addEventListener("click", togglePlay);
+  video.addEventListener("playing", function () {
+    circlePlayButton.style.opacity = 0;
+  });
+  video.addEventListener("pause", function () {
+    circlePlayButton.style.opacity = 1;
+  });
+
+  $('img.before').on('click', function(){
+    $(this).hide();
+    $('img.after').show();
+  })
+</script>

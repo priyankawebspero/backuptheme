@@ -1,0 +1,609 @@
+<style>
+  .section-two ul li:nth-child(1) {
+    padding-left: 0;
+  }
+  .section-two ul li:nth-child(2) {
+    padding-left: 0;
+  }
+  p {
+    color: #000;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .img-wrap {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .flexbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  h3 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+  .page-header {
+    height: 395px;
+    position: relative;
+  }
+  .page-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .page-header .container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .page-header .container, .page-header .row {height: 100%;}
+  .page-header .row {
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+  }
+  .page-header h2 {
+    color: #610c8e;
+    font-size: 50px;
+    font-family: roboto;
+    font-weight: 400;
+  }
+  .section-one {
+    padding: 75px 0;
+  }
+  .section-one p {
+    font-size: 36px;
+    font-weight: 400;
+    color: #5e0d8b;
+    line-height: 1.2;
+    font-family: roboto;
+  }
+  .section-two {
+    padding-bottom: 60px;
+  }
+  .section-two .row {
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+  }
+  .section-two .about-plum {
+    padding-left: 10%;
+  }
+  .section-two span {
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .section-two ul {
+    margin: 23px 0;
+  }
+  .section-two ul li {
+    padding: 0 10px;
+    text-align: center;
+  }
+  .section-two ul span {
+    display: block;
+    line-height: 1.1;
+    margin-top: 9px;
+  }
+  .section-two .bottom-content {
+    padding-top: 23px;
+    border-top: 1px solid #ccc;
+  }
+  .section-two .bottom-content img {
+    min-width: 62px;
+    height: 100px;
+  }
+  .section-two .bottom-content div {
+    padding-left: 45px;
+    width: calc(100% - 62px);
+  }
+  .section-two .bottom-content span {
+    display: block;
+    margin-bottom: 6px;
+    color: #5e0d8b;
+  }
+  .section-three {
+    background: #f7f7f7;
+    padding: 55px 0;
+  }
+  .section-three p {
+    margin-bottom: 63px;
+  }
+  .section-three h4 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 29px 0 5px;
+  }
+  .section-three span {
+    color: #000
+      font-weight: 400;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .section-four {
+    padding: 60px 0;
+  }
+  .section-four .row {
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+  }
+  .section-four .image {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+  }
+  .section-four .content {
+    padding-right: 10%;
+  }
+  .section-four .content b {
+    color: #5f0d8c;
+    font-weight: 700;
+  }
+  .section-four .content p a {
+    text-decoration: underline;
+    font-weight: 700;
+    color: #5e0d8b;
+  }
+  .section-four .btn {
+    margin-top: 24px;
+  }
+  .section-five {
+    background: #f7f5ff;
+    padding-top: 55px;
+  }
+  .section-five h3 + p {
+    width: 1009px;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .section-five .content {
+    font-size: 16px;
+    color: #fff;
+    margin: 28px 0 0;
+    position: relative;
+    width: 50%;
+    float: right;
+  }
+  .section-five .content img {
+    position: absolute;
+    bottom: 0;
+    left: 12%;
+    z-index: 1;
+    width: 45%;
+  }
+  .section-five .content .bg {
+    background: url(https://cdn.shopify.com/s/files/1/0257/8766/2417/files/content-bg.png?v=1576768722) no-repeat center;
+    display: inline-block;
+    width: 443px;
+    height: 501px;
+    position: relative;
+    left: 20%;
+    background-size: 80%;
+    top: -89px;
+  }
+  .section-five .bg div {
+    width: 295px;
+    position: absolute;
+    bottom: 0;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .section-five .bg div p {
+    margin-bottom: 38px;
+  }
+  .section-five .content p {
+    color: #fff;
+    line-height: 21px;
+  }
+  .section-five .content span {
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 20px;
+  }
+  .section-six {
+    padding: 60px 0 0;
+  }
+  .section-six .content {
+    background: #edf5ff;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 68px 0 78px;
+    position: relative;
+    z-index: 0;
+  }
+  .section-six .content:before {
+    content: "";
+    display: block;
+    background: url("https://cdn.shopify.com/s/files/1/0257/8766/2417/files/content-bg-1.png?v=1576769271") 
+      no-repeat;
+    width: 334px;
+    height: 329px;
+    position: absolute;
+    top: 140px;
+    left: -145px;
+    z-index: -1;
+  }
+  .section-six .content .btn {
+    margin-top: 28px;
+  }
+
+  #discover-plum .section-three img.desk { display:block;margin: auto; }
+  #discover-plum .section-three img.mob { display:none; margin: auto;}
+
+  @media only screen and (min-width: 768px) {
+    .page-header img.mob, 
+    .section-one .img-wrap, 
+    .section-four .content h3 br, 
+    .section-five .content img.mob {display: none;}
+  }
+
+  @media only screen and (max-width: 767px) {
+    .section-five .content{
+      width: 100%;
+      float: none;
+    }
+    .founders {
+      width: 100% !important;
+      display: contents !important;
+      height: autov;
+    }
+    .founder_info {
+      width: 100% !important;
+      margin: initial !important;
+      padding: 0 !important;
+    }
+    body#discover-plum h2 {
+      font-size: 26px;
+      font-weight: 400;
+    }
+    .section-two ul li:nth-child(1) {
+      padding-left: 12px;
+    }
+    ul.flexbox {
+      text-align: center;
+      justify-content: center;
+    }
+    p {
+      color: #505050;
+      padding: 0 10px;
+      text-align: center;
+    }
+    h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    .page-header {
+      height: auto;
+    }
+    .page-header img.desk {display: none;}
+    .page-header .container {
+      position: static;
+      transform: none;
+    }
+    .page-header h2 {
+      font-size: 30px;
+      margin: 15px 0 12px;
+    }
+    .section-one {padding: 0;}
+    .section-one p {
+      font-size: 24px;
+      padding: 0 10px;
+      margin: 20px 0;
+    }
+    .section-one p br {display: none;}
+    .section-two {padding-bottom: 25px;}
+    .section-two .img-wrap, .section-two h3 {display: none;}
+    .section-two .about-plum {
+      padding-left: 10px;
+      text-align: center;
+    }
+    .section-two ul {
+      margin: 15px 0 0;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+    .section-two ul li {
+      margin-bottom: 18px;
+    }
+    .section-two span {
+      font-size: 16px;
+    }
+    .section-two ul li img {
+      height: 68px;
+    }
+    .section-two .bottom-content {
+      padding-top: 19px;
+      display: block;
+    }
+    .section-two .bottom-content img {
+      min-width: 49px;
+      height: 79px;
+      margin-bottom: 12px;
+    }
+    .section-two .bottom-content div {
+      width: 100%;
+      padding: 0;
+    }
+    .section-three {
+      padding: 20px 0;
+    }
+    .section-three p {
+      margin-bottom: 23px;
+    }
+    .section-three img {
+      width: 88%;
+    }
+    .col-md-6.content.text-left a.btn {
+      min-width: 166px;
+    }
+    body#discover-plum .about-plum-page h3 {
+      font-size:26px;
+    }
+    .section-three h4 {
+      font-size: 24px;
+      margin: 16px 0 0;
+    }
+    .section-three .col-md-3:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    .section-four {
+      padding: 24px 0;
+    }
+    .section-four .content {
+      text-align: center !important;
+      padding-right: 10px;
+    }
+    .section-four .content p a {display: inline-block;}
+    .section-five {padding-top: 22px;}
+    .section-five .content {margin: 15px 0 0;}
+    .section-five .content .bg {
+      background: url("https://cdn.shopify.com/s/files/1/0257/8766/2417/files/content-bg-mob.png?v=1576835983") 
+        no-repeat center;
+      background-size: cover;
+      display: block;
+      width: 262px;
+      height: 339px;
+      position: relative;
+      left: auto;
+      margin: 0 auto;
+      top: 0;
+    }
+    .section-five .bg div {
+      width: 234px;
+      bottom: 62px;
+    }
+    .section-five .content p {
+      font-size: 14px;
+      padding: 0;
+    }
+    .section-five .content img {
+        width: fit-content;
+    }
+    .section-five .content span {
+      font-size: 14px;
+      margin-top: 11px;
+    }
+    .section-five .content img {
+      position: relative;
+      left: auto;
+      margin-top: -51px;
+    }
+    .section-five .content img.desk {
+      display: none;
+    }
+    .section-six {
+      padding: 27px 0 0;
+    }
+    .section-six .content {
+      padding: 43px 0 50px;
+    }
+    .section-six .content .btn {margin: 20px 0 0; min-width: 184px;}
+    .section-six .col-md-6:first-child {margin-bottom: 20px;}
+    #discover-plum .section-three img.desk { display:none; }
+    #discover-plum .section-three img.mob { display:block; }
+  }
+  @media only screen and (max-width: 399px) {
+    .section-six .content p br {display: none;}
+  }
+  .col-md-6.content.text-left p, .founder_info p,section.section-six p {
+    font-weight: 300;
+  }
+</style>
+
+<div class="about-plum-page">
+  <header class="page-header">
+    <img src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/about-us-banner.jpg?v=1576755876" class="desk" alt="" />
+    <img src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/about-us-banner-mob.jpg?v=1576820111" class="mob" alt="" />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>{% include 'multilang' with page.title %}</h2>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section-one text-center">
+    <div class="container">
+      <div class="img-wrap">
+        <img src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/about-plum.jpg?v=1576755876" alt="" />
+      </div>
+      <p>Plum is a fresh line of 100% vegan beauty products <br />that's all about "being good" - to your skin, to your senses, <br />to others and to the environment.</p>
+    </div>
+  </section>
+
+  <section class="section-two">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/about-plum.jpg?v=1576755876" alt="" />
+          </div>
+        </div>
+        <div class="col-md-6 about-plum">
+          <h3>About plum</h3>
+          <p>Plum is a fresh line of 100% vegan beauty products that's all about "being good" - to your skin, to your senses, to others and to the environment. Plum believes people look the prettiest in the skin they were born in. Plums are formulated with love to protect, repair, nourish - and delight, using some of the richest sources of natural nutrients, in sync with "good science".</p>
+          <ul class="flexbox">
+            <li>
+              <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/cruetly-free.png?v=1579176954" alt="" />
+            </li>
+            <li>
+              <img src="//cdn.shopify.com/s/files/1/0390/2985/files/parabeen_phthalates_free_250x.png?v=1578929381" alt="" />
+            </li>
+            <li>
+              <img src="//cdn.shopify.com/s/files/1/0390/2985/files/planet1_2_250x.png?v=1578930049" alt="" />
+          </ul>
+          <div class="bottom-content flexbox">
+            <img src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/no-fairness-cream-icon.png?v=1576757926" alt="" />
+            <div>
+              <span>No fairness cream</span>
+              <p>However, one thing we aren't and will never be, are
+                manufacturers of fairness creams. Why? Because respecting diversity and protecting natural skin...
+                that's what goodness is about!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-three text-center">
+    <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/our_value.png?v=1579101747" class="desk">
+    <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/our_value_mobile_c2da932a-3ad4-4263-9b3f-a50066d86538.png?v=1579177836" class="mob">
+    {% comment %}
+    <div class="container"> 
+      <h3>plum values</h3>
+      <p>"It's not hard to make decisions when you know what your values are." -- Roy Disney <br />
+        Values help us set direction and give a sense of purpose to what we do. They inspire us and give us the power - and the resonsibility <br />
+        - to question, and to decide. Values are put to the test when choices are to be made. Here are the four core values that shape Plum:</p>
+
+      <div class="row">
+        <div class="col-md-3">
+          <img src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/plum-values-1.png?v=1576761945" alt="" />
+          <h4>Customer delight</h4>
+          <span>thier joy is our joy!</span>
+        </div>
+        <div class="col-md-3">
+          <img src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/plum-values-2.png?v=1576761945" alt="" />
+          <h4>Respect</h4>
+          <span>for huiman capabiility diversity and hard work</span>
+        </div>
+        <div class="col-md-3">
+          <img src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/plum-values-3.png?v=1576761945" alt="" />
+          <h4>Transparency</h4>
+          <span>nothing to hide</span>
+        </div>
+        <div class="col-md-3">
+          <img src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/plum-values-4.png?v=1576761945" alt="" />
+          <h4>Sustainability</h4>
+          <span>preserve the goodness we've been blessed with.</span>
+        </div>
+      </div>
+    </div>
+    {% endcomment %}
+  </section>
+
+  <section class="section-four">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 image">
+          <div class="img-wrap">
+            <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/ermpities4good.png?v=1579102191" alt="" />
+          </div>
+        </div>
+        <div class="col-md-6 content text-left">
+          <h3>Happier plumsters, <br />happier planet.</h3>
+          <p>Here's how. First up, you perhaps already know that only RECYCLABLE packaging is used to package plum goodness. Not wanting to stop there, we're now making it easier (and rewarding) for you to actually recycle your Plum empties. Send your empties to us, and we'll connect it to a verified recycler (we give it away free). And for every empty you send us, we'll reward you with Rs. 50 in shopping credits on plumgoodness.com!</p>
+          <p>Join the <b>#Empties4Good</b> Campaign today. <a href="/pages/recycle">join now</a></p>
+          <a href="/pages/recycle" class="btn">Read more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-five text-center">
+    <div class="">
+      <h3>About our founder</h3>
+      <div class="founders">
+        <div class="content founder_image">
+          <div class="bg">
+            <div>
+              <p>The more you give, the more you get. That's the beauty of goodness.</p>
+              <span>Shankar Prasad,<br />
+                Founder & director</span>
+            </div>
+          </div>
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/CEO.png?v=1579102191" class="desk" alt="" />
+          <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/CEO-mob.png?v=1579102467" class="mob" />
+        </div>
+        <div class="founder_info">
+          <p>#Founded Plum in 2013, inspired by nature & 'good' science<br>
+            #Double gold-medalist IIT chemical engineer & MBA, award-winning product formulator, former management consultant & venture investor <br> 
+            #Loves to brainstorm with the fun-loving, passionate team of Plum People to make amazing things happen<br>
+            #Lives in Mumbai with family. His wife and two young daughters love inviting themselves onto Plum’s consumer panel<br>
+            #Likes: Animals, yoga, puns & music. Dislikes: Junk food & noisy places</p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="section-six">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="content">
+            <h3>Contact us</h3>
+            <p>Questions? Feedback? Don't hesitate to reach out. <br />
+              we'd love to connect with you.</p>
+            <a href="/pages/contact-us" class="btn">Get in touch</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="content">
+            <h3>A great place to work</h3>
+            <p>Plum is also a great place to work. Literally. <br />
+              How about joining our team! </p>
+            <a href="/pages/careers" class="btn">Join our team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  .founders {
+    width: 100%;
+    display: flex;
+    height: 390px;
+  }
+  .founder_info {
+    width: 50%;
+    margin: auto;
+    padding: 0 92px;
+  }
+</style>

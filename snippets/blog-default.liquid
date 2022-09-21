@@ -1,0 +1,27 @@
+<div class="blog-template blog-template-default blog-page-info">
+  <div  class="page-top-sec">
+    <div class="container">
+      {% comment %}
+      {% include 'breadcrumb' %}
+      {% endcomment %}
+      <div class="page-header">
+        {% if current_tags %}    
+        <h2>
+          <a href="{{ blog.url }}">{% include 'multilang' with page_title %}</a> &raquo; {{ current_tags.first }}
+        </h2>
+        {% else %}    
+        <h2>
+          {% include 'multilang' with page_title %}
+        </h2>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="halo-blog-content">
+      <div class="row">
+        {% section 'blog-template' %}
+      </div>      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="main-content">
+{% section 'home-slideshow' %}
+{% section 'home-custom-block-baner' %}
+{% section 'section_image_text' %}
+{% section 'bodylovin-custom-content' %} 
+{% section 'bodylovin-block-banner-6' %}
+{% section 'bodylovin-block-banner-2' %}
+{% section 'bodylovin-block-banner-3' %}
+ 	{% section 'bodylovin-block-banner-H5' %}
+  {% section 'bodylovin-block-banner-H6' %}
+  {% section 'bodylovin-block-banner-H1' %}
+  {% section 'bodylovin-block-banner-H2' %}
+  {% section 'bodylovin-block-banner-H3' %}
+  {% section 'bodylovin-block-banner-H4' %}
+{% section 'bodylovin-four-banner' %}
+{% section 'bodylovin-block-banner-4' %}
+{% section 'bodylovin-block-banner-5' %}
+  
+{% section 'bodylovin-featured-product' %}
+  {%comment%}
+
+  {% section 'bodylovin-block-banner-3' %}
+  {% section 'bodylovin_Testimonials' %}
+ {%endcomment%}
+{% section 'bodylovin_instagram' %}  
+  {% comment %}
+    Regular page content goes here.
+    {% endcomment %}
+
+    {% if settings.enable_multilang and page.content contains '[lang2]' %}
+    <div class="rte lang1">
+      {{ page.content | split: '[lang2]' | first }}
+    </div>
+    <div class="rte lang2">
+      {{ page.content | split: '[lang2]' | last }}
+    </div>
+    {% else %}
+    <div class="rte">
+      {{ page.content | split: '[lang2]' | first }}
+    </div>
+    {% endif %}
+</div>

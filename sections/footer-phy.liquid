@@ -1,0 +1,44 @@
+<footer>
+  <div class="row mobile">
+    <div class="col-12">{% if section.settings.image_payment != blank %}<img class="lazyload" src="https://cdn.shopify.com/s/files/1/0390/2985/files/Group_684.svg?v=1655900394" alt="footer"/>{% endif %}</div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      {% if section.settings.image != blank %}<div class="logo"><img class="lazyload" src="{{section.settings.image}}" alt="logo"/></div>{% endif %}
+      {% if section.settings.copy_right != blank %}<div class="copyright text">{{section.settings.copy_right}}</div>{% endif %}
+    </div>
+    {% if section.settings.image_payment != blank %}<div class="col-6 desktop"><img class="lazyload" src="{{section.settings.image_payment | img_url:'master'}}" alt="footer"/></div>{% endif %}
+  </div>
+</footer>
+
+
+{% schema %}
+  {
+    "name": "PHY footer",
+    "settings": [
+         {
+            "type": "url",
+            "id": "image",
+            "label": "PHY logo"
+          },
+         {
+            "type": "text",
+            "id": "copy_right",
+            "label": "Copy Right Text"
+          },
+         {
+            "type": "image_picker",
+            "id": "image_payment",
+            "label": "Footer image desktop"
+          }       
+
+
+   ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

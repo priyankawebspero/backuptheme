@@ -1,0 +1,18 @@
+  {{ 'build-a-box.css' | asset_url | stylesheet_tag }} 
+<div class="page-tpl">
+  <div class="container-fluid">
+    {% section 'build-a-box'%}
+    {% if settings.enable_multilang and page.content contains '[lang2]' %}
+    <div class="rte lang1">
+      {{ page.content | split: '[lang2]' | first }}
+    </div>
+    <div class="rte lang2">
+      {{ page.content | split: '[lang2]' | last }}
+    </div>
+    {% else %}
+    <div class="rte">
+      {{ page.content | split: '[lang2]' | first }}
+    </div>
+    {% endif %}
+  </div>
+</div>

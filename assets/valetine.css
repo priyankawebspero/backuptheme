@@ -1,0 +1,326 @@
+#shopify-section-valetine .row {
+    margin: 0;
+}
+
+#valentine_top_banner{padding:0;}
+
+#valentine_top_banner img{width:100%;}
+
+#valentine_bottom_banner img{width:100%;}
+
+.section_divide {
+    width: 100%;
+    padding: 60px 0;
+}
+
+#gifts-for-everyone main.main-content {
+    padding-bottom: 0;
+}
+
+#valentine_bottom_banner{padding:0;}
+
+.featured-products .product-item .product-bottom {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.product-item .product-bottom {
+    text-align: center;
+    min-height: 220px;
+    padding-bottom: 15px;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.featured-products a.product-title {
+    display: -webkit-box!important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    max-height: 42px;
+    min-height: 42px !important;
+    margin-bottom: 0;
+    line-height: 1.3;
+    font-size: 15px;
+    padding-bottom: 0;
+}
+
+.featured-products .jdgm-widget {
+    margin: 0 0 6px !important;
+}
+
+.featured-products .price-box {
+    font-size: 18px;
+}
+
+.featured-products .price-box {
+    margin-top: 9px;
+    margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.featured-products .price-box .special-price {
+    color: #000;
+}
+
+.featured-products .product-item .action {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+
+.featured-products .btn{
+    background: #5e0d8b!important;
+    color: #fff!important;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    min-width: inherit;
+    font-weight: 700;
+    min-height: inherit;
+    width: auto;
+    box-shadow: none;
+    margin-top: 0;
+    min-width: 165px;
+  text-transform: lowercase!important;
+}
+
+.featured-products .btn:hover{
+background:#8901bd!important;
+  color:#fff !important;
+
+}
+
+.featured-products .product-item .price-box:before {
+    content: "";
+    width: 60px;
+    height: 2px;
+    background: #5C0F8B;
+    display: block;
+    margin: 0 auto 7px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.featured-products .inner.product-item .jdgm-widget.jdgm-widget {
+    display: block!important;
+}
+
+.featured-products .jdgm-preview-badge .jdgm-star.jdgm-star {
+    font-size: 15px;
+}
+
+.featured-products .jdgm-prev-badge__text {
+    display: none;
+}
+
+.shade-list, .shade-sizes {
+    color: #5e248b;
+    font-size: 13px;
+    padding-bottom: 0;
+    position: relative;
+    display: block;
+}
+
+span.shade-list:before, .shade-sizes:before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background: #5e248b;
+    margin-right: 6px;
+    box-shadow: 2px 2px 1px #d2a1f8;
+    border-radius: 2px;
+}
+
+.featured-products .inner.product-item {
+    margin-bottom: 20px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.widget-product .slick-arrow {
+    background: #fff;
+    color: #5C0F8B;
+}
+
+.featured-products .slick-arrow.slick-prev {
+    left: -10px;
+}
+
+.featured-products .slick-arrow.slick-next {
+    right: -10px;
+}
+
+.cs-featured-products{background: #5C0F8B;padding:40px 0;}
+
+.featured-products .slick-list.draggable {
+    padding: 0 !important;
+}
+
+a.range-link {
+    display: none !important;
+}
+
+.products-grid .product-image .product-grid-image {
+    min-height: inherit;
+    padding-bottom: 66.66%;
+    overflow: hidden;
+}
+
+.products-grid .product-image .product-grid-image img {
+    position: absolute;
+    top: 0!important;
+    left: 0!important;
+    width: 100%!important;
+    object-fit: contain!important;
+    height: 100%!important;
+    min-height: inherit!important;
+    -moz-transform: inherit!important;
+    -o-transform: inherit!important;
+    -ms-transform: inherit!important;
+    -webkit-transform: inherit!important;
+    transform: inherit!important;
+}
+
+.products-grid .grid-item:not(.grid-item-mansory) .product-grid-image:after {
+    display:none !important;
+}
+
+.featured-products .btn {
+    box-shadow: none !important;
+}
+
+.cs-featured-products h3 {
+    padding: 0 15px;
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+    font-family: serifabold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+#gifts-for-everyone .grid-item .inner.product-item .inner-top {
+    position:relative;
+}
+
+#gifts-for-everyone .grid-item .inner.product-item .inner-top:before {
+    content: "";
+    display: block;
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/Valentines-day-offer-unit-icon.png');
+    position: absolute;
+    left:6px;
+    top: 6px;
+    width: 65px;
+    height: 60px;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+@media only screen and (min-width:768px){
+  
+  .featured-products .widget-product .slick-arrow {
+    top: -moz-calc(50% - 35px);
+    top: -webkit-calc(50% - 35px);
+    top: -ms-calc(50% - 35px);
+    top: calc(50% - 35px);
+}
+
+  .mobile_valentine{display:none !important;}
+
+}
+
+
+@media only screen and (max-width:767px){
+  
+  .cs-featured-products h3 {
+    font-size: 32px;
+    letter-spacing: 0;
+}
+
+  .desktop_valentine{display:none !important;}
+  
+  .featured-products .slick-list.draggable {
+    padding: 0 12% 0 0 !important;
+}
+
+  #shopify-section-valetine .featured-products .products-grid.row {
+    margin-left: 5%;
+    margin-right: 0;
+}
+  
+.featured-products .btn {
+    width: 100%;
+    min-width: inherit;
+    max-width: 100%;
+}
+  
+.col-12.featured-products {
+    padding: 0;
+}
+  
+.cs-featured-products .container {
+    padding: 0;
+}
+  
+.featured-products .products-grid .grid-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+  
+.brands-style-2 .slick-dots li, .widget-product .slick-dots li {
+    margin: 0 5px;
+    width: 16px;
+    height: 16px;
+}
+  
+.brands-style-2 .slick-dots li button, .widget-product .slick-dots li button {
+    width: 16px;
+    height: 16px;
+    background: none;
+    border: 2px solid #fff !important;
+}
+  
+  .widget-product .slick-dots li.slick-active button, .brands-style-2 .slick-dots li.slick-active button{background: #fff;}
+  
+  .cs-featured-products {
+    padding: 50px 0;
+}
+  
+.cs-featured-products .slick-dots {
+    margin-top: 20px;
+}
+  
+.section_divide .row {
+    margin: 0 -15px !important;
+}
+  
+.section_divide .col-md-6 {
+    margin: 15px 0;
+}
+  
+.section_divide {
+    padding: 40px 0;
+}
+  
+}

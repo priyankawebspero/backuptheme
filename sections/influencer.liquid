@@ -1,0 +1,127 @@
+<div class="influencer_div" id="banner-{{section.settings.id_inf | handle}}">
+  <div class="container-padd60">
+    <div class="row">
+    <div class="col-12">
+     <div class="widget-title">   
+          <h3 class="box-title">             
+            {% if section.settings.influncer_title != blank %}
+                <span class="title">{% include 'multilang' with section.settings.influncer_title %} </span>
+            {% endif %}
+          </h3>    
+          {% if section.settings.influncer_sub_title != blank %}
+          <span>{{section.settings.influncer_sub_title}}</span>
+          {% endif %}   
+     </div>
+      </div>
+    </div>
+     <div class="row"> 
+       <div class="col-4"><a href="{{section.settings.infulencer_link_1}}"><img src="{{section.settings.image_slide_1 | img_url: 'master'}}" alt="{{section.settings.image_slide_1.alt}}"><h3 class="influencer_name">{{section.settings.influncer_name_1}}</h3></a></div>
+       <div class="col-4"><a href="{{section.settings.infulencer_link_2}}"><img src="{{section.settings.image_slide_2 | img_url: 'master'}}" alt="{{section.settings.image_slide_2.alt}}"><h3 class="influencer_name">{{section.settings.influncer_name_2}}</h3></a></div>
+       <div class="col-4"><a href="{{section.settings.infulencer_link_3}}"><img src="{{section.settings.image_slide_3 | img_url: 'master'}}" alt="{{section.settings.image_slide_3.alt}}"><h3 class="influencer_name">{{section.settings.influncer_name_3}}</h3></a></div>
+       <div class="content aa">
+        <a href="{{ section.settings.link_all }}" class="btn">{{ section.settings.view_all_button }} <i class="fa fa-angle-right"></i></a>
+      </div>
+       {% if section.settings.Image_influencer != blank %}<img  class="bottom_image" src="{{ section.settings.Image_influencer | img_url: 'master'}}">{% endif %}
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Influencer Like",
+    "class": "influencer-like",
+    "settings": [ 
+    {
+                      "type": "text",
+                      "id": "id_inf",
+                      "label" : "Enter Id for section"
+                    },
+                      {
+                          "type": "text",
+                          "id": "influncer_title",
+                          "label": "Title",
+                          "default": "Influncer"
+                      },
+                        {
+                          "type": "text",
+                          "id": "influncer_sub_title",
+                          "label": "Influncer Text",
+                          "default": "Influncer Text"
+                        },
+                      {
+                          "type": "image_picker",
+                          "id": "image_slide_1",
+                          "label" : "Select Image",
+                          "info": "Image for Influencer"
+                      },
+                        {
+                          "type": "text",
+                          "id": "influncer_name_1",
+                          "label": "Influncer Text",
+                          "default": "Influncer text"
+                        },
+                        {
+                          "type" : "url",
+                          "id" : "infulencer_link_1",
+                          "label" : "Influncer Link"
+                        },
+                      {
+                          "type": "image_picker",
+                          "id": "image_slide_2",
+                          "label" : "Select Image",
+                          "info": "Image for Influencer"
+                      },
+                        {
+                          "type": "text",
+                          "id": "influncer_name_2",
+                          "label": "Influncer Text",
+                          "default": "Influncer text"
+                        },
+                        {
+                          "type" : "url",
+                          "id" : "infulencer_link_2",
+                          "label" : "Influncer Link"
+                        },
+                      {
+                          "type": "image_picker",
+                          "id": "image_slide_3",
+                          "label" : "Select Image",
+                          "info": "Image for Influencer"
+                      },
+                        {
+                          "type": "text",
+                          "id": "influncer_name_3",
+                          "label": "Influncer Text",
+                          "default": "Influncer text"
+                        },
+                        {
+                          "type" : "url",
+                          "id" : "infulencer_link_3",
+                          "label" : "Influncer Link"
+                        },
+                        {
+                          "type" : "text",
+                          "id" : "view_all_button",
+                          "label" : "view All Banner",
+                          "default" : "View All "
+                        },
+                        {
+                          "type" : "url",
+                          "id" : "link_all",
+                          "label" : "View all Link"
+                        },
+                        {
+                          "type" : "image_picker",
+                          "id" : "Image_influencer",
+                          "label" : "Add bottom Image"
+                        }
+   ],
+  "presets": [
+      {
+        "name": "New Influencer Like",
+        "category": "Collection" 
+      }
+    ]
+  }
+{% endschema %}
+
+

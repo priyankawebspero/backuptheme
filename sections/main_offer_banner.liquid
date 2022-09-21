@@ -1,0 +1,129 @@
+<section class="sub-page-banner-section" id="sub-{{section.id}}">
+  <a href="{{ block.settings.link }}" class="">
+    <img class="banner-image desktop-xs lazyautosizes lazyloaded" data-src="{{ section.settings.banner-id | img_url: 'master' }}" src="{{ section.settings.banner-id | img_url: 'master' }}">
+
+    <img class="banner-image mobile-xs lazyautosizes lazyloaded" data-src="{{ section.settings.image_mobile | img_url: 'master' }}" src="{{ section.settings.image_mobile | img_url: 'master' }}">
+  </a>
+  <div class="container banner-title">
+    <h1>{{ section.settings.banner-title }}</h1>
+    <div class="content">
+      <a href="/collections/goodness-combos" class="btn">shop now</a>
+    </div>
+  </div> 
+
+</section>
+<style>  
+  div#shopify-section-main_offer_banner .container.banner-title {
+    position: absolute;
+    top: 56.5%;
+    left: 32%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 30%;
+    text-align: center;
+  }
+  div#shopify-section-main_offer_banner h1 {
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  div#shopify-section-main_offer_banner {
+    margin-bottom: 40px;
+  }
+  @media ( max-width: 767px ) {
+    div#shopify-section-main_offer_banner .container.banner-title {
+      position: absolute;
+      top: 52.5%;
+      left: auto;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: none;
+      width: 93%;
+      text-align: center;
+    }
+    div#shopify-section-main_offer_banner {
+      margin-bottom: 26px;
+    }
+    div#shopify-section-main_offer_banner h1 {
+      margin-bottom: 20px;
+      color: #fff;
+      font-size: 30px;
+    }
+    div#shopify-section-main_offer_banner img.banner-image.mobile-xs {
+      border-radius: 8px;
+    }
+  }
+  @media ( max-width: 1000px ) and ( min-width: 800px ) {    
+    div#shopify-section-main_offer_banner .container.banner-title {
+      top: 46.5%;
+      width: 38%;
+      transform: none;
+      left: auto;
+    }
+    div#shopify-section-main_offer_banner h1 {
+      font-size: 30px;
+    }
+  }
+  @media ( max-width: 1200px ) and ( min-width: 1001px ) {    
+    div#shopify-section-main_offer_banner .container.banner-title {
+      top: 53.5%;
+      width: 50%;
+      transform: none;
+      left: 0;
+    }
+  }
+    @media ( max-width: 1199px ) and ( min-width: 1001px ) {    
+    div#shopify-section-main_offer_banner .container.banner-title {
+      top: 53.5%;
+      width: 50%;
+      transform: none;
+      left: 0;
+    }
+  }
+      @media ( max-width: 1400px ) and ( min-width: 1200px ) {    
+    div#shopify-section-main_offer_banner .container.banner-title {
+    top: 55.5%;
+    width: 50%;
+    transform: none;
+    left: 0;
+    }
+  }
+</style>
+
+
+{% schema %}
+{
+"name": "Banner Section",
+"settings": [
+{
+"type": "image_picker",
+"id": "banner-id",
+"label": "image"
+},
+{
+"type": "image_picker",
+"id": "image_mobile",
+"label": "Mobile Image"
+},
+{
+"type": "url",
+"id": "link",
+"label": "Link",
+"info": "Optional"
+},
+{
+"type": "text",
+"id": "banner-title",
+"label": "Banner Title"
+},
+{
+"type" : "textarea",
+"id" : "des",
+"label" : "Description",
+"default": "Phasellus lorem malesuada ligula pulvino commodo maecenas"
+}
+]
+}
+{% endschema %}

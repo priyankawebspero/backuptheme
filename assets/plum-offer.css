@@ -1,0 +1,2098 @@
+#shopify-section-bday_offer_third .spotlight-item {
+    text-align: center;
+}
+
+#shopify-section-bday_offer_third .spotlight-item h3 {
+    margin-bottom: 0;
+    font-family: 'candy_chicksregular';
+    color: #5b108b;
+    font-size: 75px;
+    font-size: 4vw;
+    line-height: 1;
+}
+
+#shopify-section-bday_offer_third .spotlight-item span {
+    font-size: 34px;
+    color: #5b108b;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 14px;
+    font-size: 1.8vw;
+}
+
+.inner.product-item .btn[disabled="disabled"] {
+    opacity: 0.5;
+}
+
+#shopify-section-bday_offer_third .box-title span.title {
+    padding: 0;
+    display: block;
+    font-family: 'candy_chicksregular';
+    font-size: 91px;
+    font-size: 4.8vw;
+    line-height: 1;
+    position: static;
+}
+
+#shopify-section-bday_offer_third .box-title .title + span {
+    font-family: Segoe Pro;
+    color: #000000;
+    display: block;
+    margin-top: -2px;
+  font-size: 1.75vw;
+}
+
+.grid-item .inner.product-item {
+    border: 1px solid #ccc;
+}
+span.jdgm-prev-badge__text {
+    display: none !important;
+}
+
+
+.container-fluid {
+    max-width: 1270px;
+}
+
+.product-item .action {
+    max-width: 100%;
+    width: 100%!important;
+    margin-bottom: 0;
+}
+.product-item .action .btn {
+    min-width: inherit !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 0;
+}
+
+#shopify-section-bday_offer_third .box-title {
+    margin-bottom: 30px;
+}
+
+.featured-products .box-title span.title {
+    padding: 0;
+    display: block;
+    font-family: candy_chicksregular;
+    font-size: 91px;
+    font-size: 4.8vw;
+    line-height: 1;
+    position: static;
+}
+
+.featured-products .box-title span.title + span{
+font-family: Segoe Pro;
+    color: #000;
+    display: block;
+    font-size: 34px;
+    font-size: 1.75vw;
+
+}
+
+#shopify-section-bday_offer_third a.button {
+    display: inline-block;
+    background: #5e0d8b!important;
+    color: #fff!important;
+    font-size: 37px;
+    border-radius: 7px;
+    padding: 20px 15px 22px 15px;
+    font-weight: normal;
+    min-height: inherit;
+    width: auto;
+    margin-top: 25px;
+    text-transform: lowercase!important;
+    min-width: 275px;
+    margin-bottom: 20px;
+    line-height: 35px;
+    box-shadow: 0 8px 15px rgb(0 0 0 / 20%);
+  position: relative;
+  text-shadow: 0 1px 6px #f6b2c3;
+}
+
+#shopify-section-bday_offer_third a.button:hover{
+	color: #fff!important;
+    background: #8901bd!important;
+}
+
+#shopify-section-bday_offer_third a.button.quantity {
+    min-width: inherit !important;
+    background: none !important;
+    box-shadow: none !important;
+    width: 30px;
+    height: 38px;
+    font-size: 18px;
+    padding: 0 !important;
+    margin: 0;
+    line-height: 35px;
+}
+
+#shopify-section-bday_offer_third a.button i {
+    float: right;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    text-shadow: none !important;
+}
+
+div#shopify-section-bday_offer_third {
+    padding-top: 0;
+    position: relative;
+}
+
+#shopify-section-bday_offer_third #teaser-spotlight-2-bday_offer_third {
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/minmimum-under-bg.jpg') !important;
+    background-size: cover !important;
+    min-height: 1700px;
+    background-repeat: no-repeat !important;
+    padding-top: 55px;
+}
+
+
+div#shopify-section-bday_offer_third:after {
+    content: "";
+    display: block;
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/second-bg-right-side-ballon.png');
+    background-repeat: no-repeat;
+    background-size: contain !important;
+    width: 178px;
+    height: 646px;
+    position: absolute;
+    top: -28vw;
+    right: 0;
+    width: 9vw;
+    height: 33vw;
+}
+
+div#shopify-section-bday_offer_third:before {
+    content: "";
+    display: block;
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/second-left-side-balloan.png');
+    position: absolute;
+    left: 0;
+    top: -21vw;
+    width: 221px;
+    height: 700px;
+    width: 12vw;
+    height: 37vw;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+}
+
+#shopify-section-bday_offer_third .box-title {
+    margin-bottom: 30px;
+    margin-top: 2vw;
+}
+.content.aa a.btn{
+  display: inline-block;
+    background: #5e0d8b!important;
+    color: #fff!important;
+    font-size: 37px;
+    border-radius: 7px;
+    padding: 20px 15px 22px;
+    font-weight: 400;
+    min-height: inherit;
+    width: auto;
+    margin-top: 30px;
+    text-transform: lowercase!important;
+    min-width: 275px;
+    margin-bottom: 20px;
+    line-height: 35px;
+    box-shadow: 0 8px 15px #0003;
+    position: relative;
+    text-shadow: 0 1px 6px #f6b2c3;
+}
+
+.content.aa a.btn i {
+    float: right;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    text-shadow: none!important;
+}
+
+.content.aa a.btn:hover{background:#8901bd!important;color:#fff!important}
+
+div#shopify-section-product-section-featured {
+    margin-top: -90px;
+}
+
+.influencer_div .row {
+    justify-content: center;
+}
+
+.influencer_div h3.influencer_name {
+    text-align: center;
+    display: block;
+    font-family: candy_chicksregular;
+    font-size: 60px;
+    color: #5b108b;
+    margin-bottom: 2vw;
+    margin-top: 10px;
+  font-size: 3.1vw;
+}
+
+
+.influencer_div .col-4 {
+    text-align: center;
+}
+
+.product-item .product-bottom {
+    padding: 15px;
+    min-height: 220px;
+}
+
+.inner.product-item .btn {
+    margin-top: 0px !important;
+}
+
+.images-contain img {
+    width: 100%;
+}
+
+.product-item .jdgm-widget.jdgm-widget {
+    order: 4;
+}
+
+.product-item .action {
+    order: 5;
+    margin: 10px 0 0px 0;
+}
+
+div#featured-products-49c82c19-ef1f-44be-8faa-12927a0733dd {
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/min-just-landed-BG.png');
+    /* background-color: #ffe1e2; */
+    padding-top: 60px;
+    margin-top: -90px;
+    position: relative;
+   /* z-index: 1;*/
+    padding-bottom: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+div#featured-products-49c82c19-ef1f-44be-8faa-12927a0733dd:after {
+    content: "";
+    background: #ffe1e2;
+    display: block;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    bottom: -80px;
+}
+
+
+div#featured-products-c80d4b01-0f14-4644-b157-86ba0be62185 {
+    background: url(https://cdn.shopify.com/s/files/1/0390/2985/files/desktop_deal_resize_new.png?v=1656331012);
+    background-repeat: no-repeat;
+    margin-top: -50px;
+   position: relative;
+    /* z-index: 1;*/
+    padding-top: 60px;
+    background-size: cover;
+}
+
+
+.influencer_div .box-title {
+    display: block;
+    font-family: candy_chicksregular;
+    font-size: 91px;
+    font-size: 4.8vw;
+    line-height: 1;
+    position: static;
+    margin-bottom: 5px;
+}
+
+.influencer_div .box-title + span {
+    font-family: Segoe Pro;
+    color: #000;
+    display: block;
+    font-size: 34px;
+    font-size: 1.75vw;
+    margin-bottom: 50px;
+    margin-top: 15px;
+}
+
+
+
+div#influencer-1de341cd-71ad-41d1-90a2-a5181a265590 {
+    /* z-index: 1; */
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/desktop_influence_new_birthdy_bg_with_ballons.png?v=1656324195');
+    margin-top: -15vw;
+    padding-top: 395px;
+    min-height: 1644px;
+  position: relative;
+}
+
+.influencer_div .content.aa a.btn {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+
+div#featured-products-429f84c7-1424-420b-807b-ecf5985c5aac {
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/updateddesktop-skincare-offers-new-bg.png');
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+    padding-top: 120px;
+    padding-bottom: 100px;
+    /*min-height: 1024px;*/
+    position: relative;
+}
+
+div#featured-products-429f84c7-1424-420b-807b-ecf5985c5aac:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 17vw;
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/shape_desktop_blue_new.png?v=1656332046');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15vw;
+    height: 30vw;
+}
+
+div#featured-products-429f84c7-1424-420b-807b-ecf5985c5aac:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -13vw;
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/glow-right-side.png');
+    width: 98px;
+    height: 541px;
+    width: 5vw;
+    height: 28vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+div#featured-products-c80d4b01-0f14-4644-b157-86ba0be62185:before {
+    content: "";
+    display: block;
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/left-side-ballon.png');
+    position: absolute;
+    top: -5vw;
+    width: 148px;
+    height: 438px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 8vw;
+    height: 24vw;
+}
+
+
+div#featured-products-f537e12f-69d8-40c8-9b5e-85775301aead {
+    background: url(https://cdn.shopify.com/s/files/1/0390/2985/files/desktop-body-loving_new_bg.png?v=1656326146);
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    padding-top: 21vw;
+    margin-top: -20vw;
+    background-size: contain;
+}
+
+
+div#banner-6f547a96-67e8-416e-8df8-d41e77dd4f61 {
+    position: relative;
+    margin-top: -160px;
+    z-index: 1;
+}
+
+div#featured-products-f537e12f-69d8-40c8-9b5e-85775301aead h3.box-title {
+    margin-bottom: 30px;
+}
+
+div#featured-products-f3bd50d3-a819-4ef3-9565-9d8b7472a5e9 h3.box-title {
+    margin-bottom: 30px;
+}
+
+
+div#featured-products-f3bd50d3-a819-4ef3-9565-9d8b7472a5e9 {
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/glam-gang-bg.png');
+    background-size: cover;
+    padding-top: 170px;
+    position: relative;
+    margin-top: -90px;
+    min-height: 1352px;
+}
+
+div#featured-products-7db726e3-d042-4e1c-b65b-28298a210107 {
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/hair_for_all_the_fun_BG.png?v=1655719845');
+    background-size: cover;
+    min-height: 1306px;
+    padding-top: 140px;
+    position: relative;
+    margin-top: -75px;
+}
+
+div#featured-products-7db726e3-d042-4e1c-b65b-28298a210107:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -6vw;
+    left: 0;
+    width: 131px;
+    height: 409px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/left-side-ballonnn.png?v=1655720013');
+    width: 8vw;
+    height: 22vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+div#featured-products-7db726e3-d042-4e1c-b65b-28298a210107:after {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/right-side-liness.png?v=1655720190');
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -20vw;
+    width: 137px;
+    height: 886px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 7vw;
+    height: 46vw;
+}
+
+div#featured-products-7db726e3-d042-4e1c-b65b-28298a210107 .box-title {
+    margin-bottom: 30px;
+}
+
+div#banner-9eb9954a-3696-45a2-85ac-94c6756d5201 {
+    position: relative;
+    margin-top: -100px;
+    z-index: 1;
+}
+
+div#featured-products-1b1dad2d-b1e0-4581-9074-1e2dee510f89 {
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/scent-sational-stuff-BG.png?v=1655720684');
+    background-size: cover;
+    min-height: 2531px;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    margin-top: -65px;
+    padding-top: 70px;
+    padding-bottom: 65px;
+}
+
+div#featured-products-1b1dad2d-b1e0-4581-9074-1e2dee510f89 h3.box-title {
+    margin-bottom: 20px;
+}
+
+
+div#influencer-1de341cd-71ad-41d1-90a2-a5181a265590:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -17vw;
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/min-right-side-ballon.png?v=1655721461');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 8vw;
+    height: 29vw;
+}
+
+
+
+div#featured-products-c80d4b01-0f14-4644-b157-86ba0be62185:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -11vw;
+    right: 0;
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/best-dealsLines.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10vw;
+    height: 45vw;
+}
+
+div#featured-products-1b1dad2d-b1e0-4581-9074-1e2dee510f89 {
+    background: url(https://cdn.shopify.com/s/files/1/0390/2985/files/min-fragnes-for-you-bg.png);
+    background-size: cover;
+    min-height: 1177px;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    margin-top: -65px;
+    padding-top: 100px;
+    padding-bottom: 0;
+}
+
+div#featured-products-1b1dad2d-b1e0-4581-9074-1e2dee510f89 span.title {
+    padding-bottom: 50px !important;
+}
+
+div#featured-products-81994d46-16f8-47c6-9b19-ea4d2fbef379 h3.box-title {
+    margin-bottom: 20px;
+}
+
+div#featured-products-81994d46-16f8-47c6-9b19-ea4d2fbef379 {
+    background: url(https://cdn.shopify.com/s/files/1/0390/2985/files/fragnes-for-him_bg.png?v=1655726536);
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    min-height: 1265px;
+    padding-top: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+
+div#influencer-6d716329-2d6e-4331-9d05-8ac6a7cb6f33 {
+    background: url(https://cdn.shopify.com/s/files/1/0390/2985/files/min-top-plumster-Bottom-BG.jpg);
+    background-size: contain;
+    /* min-height: 1765px; */
+    background-repeat: no-repeat;
+    padding-top: 60px;
+    width: 100%;
+    min-height: 73vw;
+  padding-bottom: 80px;
+}
+
+img.bottom_image {
+    border-radius: 15px;
+    margin-top: 80px;
+}
+
+div#featured-products-81994d46-16f8-47c6-9b19-ea4d2fbef379:after {
+    content: "";
+    display: block;
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/new_ballons_bottom_right.png?v=1655727245');
+    position: absolute;
+    right: 0;
+    top: -17vw;
+    width: 159px;
+    height: 402px;
+    width: 7vw;
+    height: 18vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+div#influencer-6d716329-2d6e-4331-9d05-8ac6a7cb6f33 {
+    position: relative;
+    z-index: 1;
+}
+
+div#influencer-6d716329-2d6e-4331-9d05-8ac6a7cb6f33:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -12vw;
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/new_bootm_left_bg.png?v=1655727246');
+    width: 7vw;
+    height: 20vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+div#influencer-6d716329-2d6e-4331-9d05-8ac6a7cb6f33:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -16vw;
+    display: block;
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/top-plumster-picks-_lines.png?v=1655727758');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 8vw;
+    height: 41vw;
+}
+
+.content.aa a.btn, #shopify-section-bday_offer_third a.button {
+    position: relative;
+    z-index: 11;
+}
+
+div#banner-6f547a96-67e8-416e-8df8-d41e77dd4f61 {
+    z-index: 11;
+}
+
+
+.page-teaser>.container-fluid{max-width:100%;padding:0}
+#shopify-section-bday_offer_banner .container-fluid{max-width:100%!important}
+#shopify-section-bday_offer_banner .slide-image img{width:100%}
+#shopify-section-bday_offer_second .teaser-spotlight-block .container-padd60{max-width:1140px;top:20px;position:relative}
+#shopify-section-bday_offer_second .col-12.col-md-12.col-lg-12 a{display:inline-block;margin-top:20px}
+#shopify-section-bday_offer_second .col-12.col-md-12.col-lg-12 a img{width:100%;max-width:350px}
+div#shopify-section-bday_offer_second{margin-bottom:80px}
+#shopify-section-image-section img,#shopify-section-image-sectiontwo img,#shopify-section-image-section3 img{width:100%}
+.featured-products .container-padd60{max-width:1270px}
+div#shopify-section-product-section-featured h3.box-title img{border-radius:10px;}
+.grid-item .inner.product-item{background:#fff;padding:0;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-moz-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;height:100%;border-radius:10px;width:100%}
+.product-item .jdgm-widget.jdgm-widget{margin-bottom:0;min-height:23px}
+.product-item .jdgm-preview-badge .jdgm-star.jdgm-star{font-size:15px}
+.product-item .product-bottom .product-title{text-align:center;line-height:1.4;font-size:15px;display:-webkit-box!important;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;position:relative;max-height:42px;min-height:42px;margin-bottom:0;padding-bottom:0}
+.inner.product-item .price-box{font-size:18px;font-weight:500;margin-top:5px;margin-bottom:5px}
+.grid-item .inner.product-item .price-box:before{content:"";width:70px;height:2px;background:#5c0f8b;display:block;margin:0 auto 10px;bottom:0;left:0;right:0}
+.price-box .special-price{color:#000}
+.inner.product-item .btn{background:#5e0d8b!important;color:#fff!important;font-size:18px;border-radius:5px;padding:14px 15px !important;min-width:inherit;font-weight:700;min-height:inherit;width:auto;box-shadow:none;margin-top:0px;text-transform:lowercase!important;margin-bottom:0 !important;}
+.products-grid .product-image .product-grid-image{min-height:inherit;padding-bottom:92%;overflow:hidden}
+.product-item .product-bottom{text-align:center;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-moz-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;flex-direction:column;width:100%;position:relative;}
+body .products-grid .product-image img{min-height:inherit!important;border-radius:5px;top:0!important;left:0!important;width:100%!important;object-fit:contain!important;height:100%!important;min-height:inherit!important;-moz-transform:inherit!important;-o-transform:inherit!important;-ms-transform:inherit!important;-webkit-transform:inherit!important;transform:inherit!important}
+.inner.product-item .btn:hover{color:#fff!important;background:#8901bd!important}
+.products-grid .product-image .product-grid-image:after{display:none!important}
+div#shopify-section-product-section-featured h3.box-title span.title{background:none;padding:0}
+
+.product-bottom .range-link{display:none}
+div#shopify-section-Best-sellers-bday{background:#fbf3ff;padding-top:15px;padding-bottom:50px}
+div#shopify-section-shop-favourite{padding-top:15px;padding-bottom:20px}
+div#shopify-section-skintastic-party{background:#ffe8fa;padding-top:15px;padding-bottom:20px}
+div#shopify-section-body-shot-lovers{background:#fbf3ff;padding:15px 0 20px}
+.grid-item .inner.product-item{flex-direction:column}
+.product-item .product-label{right:0;top:-15px}
+#shopify-section-hair-for-all-fun{padding:15px 0 20px}
+div#shopify-section-glam-gang{background:#ffe8fa;padding:15px 0 20px}
+.featured-products span.title{background:none!important;padding-left:0!important;padding-right:0!important}
+div#shopify-section-new-product-plum{background:#fbf3ff;padding:15px 0 20px}
+#shopify-section-bottom-count-offer .container-fluid{max-width:100%!important;padding:0!important}
+#shopify-section-bottom-count-offer .container-fluid img{width:100%}
+main.main-content{padding-bottom:0}
+.counter_text p#demo hr{display:none}
+.counter_text{display:flex;flex-wrap:wrap;justify-content:center;padding-top:18px;width:auto;background:#5e0e8b}
+.counter_text p#demo{background:#fff;padding:0 15px;border-radius:10px;min-width:345px;line-height:normal}
+.counter_text p#demo span{font-size:45px!important;color:#701e9d!important;font-weight:500}
+#shopify-section-image-section .uns_hero_static{border-top:3px dotted #701e9d;padding-top:3px}
+#shopify-section-shop-favourite .grid-item .inner.product-item{box-shadow:0 0 5px #000}
+#shopify-section-hair-for-all-fun .grid-item .inner.product-item{box-shadow:0 0 5px #000}
+#featured-products-product-section-featured,#featured-products-Best-sellers-bday{margin-bottom:0!important}
+.grid-item .inner.product-item .inner-top{width:100%}
+
+
+/*-------------------media-query-start------------*/
+
+.widget-title .box-title .title {
+    background: none !important;
+}
+
+.widget-product {
+    position: relative;
+    z-index: 9;
+}
+
+.Offer-images-contain {
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+   padding: 0 15px;
+}
+
+div#influencer-6d716329-2d6e-4331-9d05-8ac6a7cb6f33{
+    margin-top: -130px;
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 1;
+}
+div#banner-89c9c37a-f28d-443a-ab41-d802d7d97741 {
+    margin-top: -130px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.tandc {
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#influencer-6d716329-2d6e-4331-9d05-8ac6a7cb6f33 {
+    background-size: cover;
+    padding-bottom: 190px;
+  min-height: inherit;
+}
+
+div#featured-products-1b1dad2d-b1e0-4581-9074-1e2dee510f89 h3.box-title span.title+span {
+    margin-bottom: -10px;
+    margin-top: 15px;
+  font-size: 28px;
+}
+
+div#influencer-6d716329-2d6e-4331-9d05-8ac6a7cb6f33 .content.aa {
+    display: none;
+}
+
+div#influencer-1de341cd-71ad-41d1-90a2-a5181a265590 .content.aa {
+    display: none;
+}
+
+@media only screen and (min-width: 768px){
+  
+  div#featured-products-1b1dad2d-b1e0-4581-9074-1e2dee510f89 h3.box-title span.title + span {
+    display:none;
+}
+  
+  div#featured-products-81994d46-16f8-47c6-9b19-ea4d2fbef379 span.title {
+    display: none;
+}
+  
+  div#featured-products-429f84c7-1424-420b-807b-ecf5985c5aac span.title {
+    display: none;
+}
+  
+div#featured-products-f537e12f-69d8-40c8-9b5e-85775301aead span.title {
+    display: none;
+}
+  
+div#featured-products-f3bd50d3-a819-4ef3-9565-9d8b7472a5e9 span.title {
+    display: none;
+}
+  
+div#featured-products-7db726e3-d042-4e1c-b65b-28298a210107 span.title {
+    display: none;
+}
+  
+div#banner-eb4136cb-b3fe-4c44-8566-8d52949adcb3 .Offer-images-contain {
+    text-align: center;
+    padding: 0 30px;
+    margin-bottom: 40px;
+}
+  
+  
+  div#banner-73447d74-4d08-49f2-a209-ff3d28449e7b {
+    text-align: center;
+    margin: 80px 0 80px;
+    padding: 0;
+}
+  
+div#banner-6f547a96-67e8-416e-8df8-d41e77dd4f61 {
+    margin-top: 0 !important;
+}
+  
+div#banner-89c9c37a-f28d-443a-ab41-d802d7d97741 {
+    padding: 0;
+    text-align: center;
+}
+  
+  .Offer-images-contain {
+    padding: 0 15px;
+}
+  
+div#banner-9eb9954a-3696-45a2-85ac-94c6756d5201 {
+    margin-top: 0 !important;
+}
+  
+div#banner-f201510c-6ac1-4283-8f25-df566c567b1b {
+    text-align: center;
+    padding: 100px 30px 85px 30px;
+}
+  
+  div#shopify-section-bday_offer_third:before{display:none !important;}
+  
+  div#shopify-section-bday_offer_third:after{display:none !important;}
+  
+  div#influencer-1de341cd-71ad-41d1-90a2-a5181a265590:after {display:none !important;}
+  
+ div#banner-f201510c-6ac1-4283-8f25-df566c567b1b {
+    position: relative;
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/find-name_background_bg.png?v=1656326506');
+    background-repeat: no-repeat;
+    margin-top: -60px;
+    /* z-index: -1; */
+    padding-top: 150px;
+   background-position: top center;
+}
+ div#featured-products-7db726e3-d042-4e1c-b65b-28298a210107 {
+    z-index: 1;
+} 
+  
+div#influencer-1de341cd-71ad-41d1-90a2-a5181a265590:before {
+    content: "";
+    display: block !important;
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/img_line_with_baloons.png?v=1656331012');
+    position: absolute;
+    left: 0;
+    top: -21vw;
+    width: 22vw;
+    height: 44vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* height: 833px; */
+    /* width: 169px; */
+}
+  
+div#banner-6f547a96-67e8-416e-8df8-d41e77dd4f61 {
+    z-index: inherit;
+}
+div#banner-9eb9954a-3696-45a2-85ac-94c6756d5201 {
+    margin-top: 60px!important;
+}
+  
+}
+
+@media only screen and (max-width: 1699px){
+  
+  div#featured-products-f537e12f-69d8-40c8-9b5e-85775301aead {
+    margin-top: -375px;
+}
+  
+  
+  #shopify-section-bday_offer_third #teaser-spotlight-2-bday_offer_third {
+    background-size: contain !important;
+    min-height: 97vw;
+}
+  
+div#shopify-section-product-section-featured {
+    margin-top: 30px;
+}
+  
+div#featured-products-49c82c19-ef1f-44be-8faa-12927a0733dd:after {
+    height: 45vw;
+    position: absolute;
+    bottom: -3vw;
+    z-index: -1;
+}
+  
+div#featured-products-49c82c19-ef1f-44be-8faa-12927a0733dd {
+    margin-top: -80px;
+    background-size: contain;
+}
+  
+  
+  
+div#influencer-1de341cd-71ad-41d1-90a2-a5181a265590 {
+    margin-top: -275px;
+    padding-top: 325px;
+    min-height: inherit;
+    background-size: cover;
+    padding-bottom: 50px;
+}
+  
+ div#featured-products-f537e12f-69d8-40c8-9b5e-85775301aead {
+    margin-top: -375px;
+    padding-top: 385px;
+}
+  
+div#banner-f201510c-6ac1-4283-8f25-df566c567b1b {
+    background-size: contain;
+}
+
+  div#featured-products-f3bd50d3-a819-4ef3-9565-9d8b7472a5e9 {
+    background-position: center;
+}
+  
+div#influencer-6d716329-2d6e-4331-9d05-8ac6a7cb6f33 {
+    padding-bottom: 100px;
+    min-height: inherit;
+    background-position: center;
+}
+  
+div#influencer-6d716329-2d6e-4331-9d05-8ac6a7cb6f33+div#banner-89c9c37a-f28d-443a-ab41-d802d7d97741 {
+    margin-top: -40px;
+}
+  
+}
+
+@media only screen and (max-width: 1450px){
+  
+  
+  .container-fluid {
+    max-width: 1150px;
+}
+  
+.featured-products .container-padd60 {
+    max-width: 1150px;
+}
+  
+.body-full .container, .container-padd60 {
+    max-width: 1150px;
+    padding: 0 15px;
+}
+  
+img.bottom_image {
+    max-width: 95%;
+}
+  
+.content.aa a.btn, #shopify-section-bday_offer_third a.button {
+    font-size: 30px;
+    border-radius: 7px;
+    padding: 15px 12px 18px;
+    margin-top: 30px;
+    min-width: 225px;
+    line-height: 30px;
+}
+  
+.content.aa a.btn i {
+    right: 23px;
+    top: 17px;
+}
+  
+#shopify-section-bday_offer_third a.button i {
+     right: 23px;
+    top: 17px;
+}
+  
+div#featured-products-429f84c7-1424-420b-807b-ecf5985c5aac {
+    padding-bottom: 40px;
+    min-height: inherit;
+    position: relative;
+}
+  
+div#featured-products-f537e12f-69d8-40c8-9b5e-85775301aead {
+    min-height: inherit;
+}
+ 
+ 
+  
+  div#featured-products-c80d4b01-0f14-4644-b157-86ba0be62185 {
+    min-height: inherit;
+    background-position: center;
+    /* padding-bottom: 13vw; */
+}
+  
+  
+div#featured-products-429f84c7-1424-420b-807b-ecf5985c5aac {
+    /* padding-top: 100px; */
+    background-size: cover;
+  background-position: center;
+}
+ 
+  
+  div#featured-products-f3bd50d3-a819-4ef3-9565-9d8b7472a5e9 {
+    /* margin-top: -120px; */
+    min-height: inherit;
+   padding-bottom: 120px;
+    padding-top: 140px; 
+}
+  
+  div#featured-products-81994d46-16f8-47c6-9b19-ea4d2fbef379 {
+    min-height: inherit;
+    padding-bottom: 60px;
+}
+  
+  
+div#featured-products-7db726e3-d042-4e1c-b65b-28298a210107 {
+    min-height: inherit;
+    padding-bottom: 128px;
+    padding-top: 100px;
+}
+ div#featured-products-1b1dad2d-b1e0-4581-9074-1e2dee510f89 {
+    padding-top: 50px;
+    background-position: center;
+} 
+ div#featured-products-1b1dad2d-b1e0-4581-9074-1e2dee510f89 {
+    min-height: inherit;
+} 
+  
+ div#featured-products-81994d46-16f8-47c6-9b19-ea4d2fbef379:after {
+    top: -13vw;
+}
+  
+  .widget-product {
+    position: relative;
+    z-index: 9;
+}
+  
+  
+div#featured-products-f3bd50d3-a819-4ef3-9565-9d8b7472a5e9 {
+    margin-top: -80px;
+}
+div#shopify-section-product-section-featured h3.box-title img {
+    position: relative;
+    z-index: 1;
+}
+  
+div#featured-products-7db726e3-d042-4e1c-b65b-28298a210107 {
+    padding-bottom: 68px;
+}
+  
+.Offer-images-contain {
+    max-width: 1150px;
+}
+  
+div#influencer-6d716329-2d6e-4331-9d05-8ac6a7cb6f33 {
+    background-size: contain;
+    background-position: inherit;
+}
+  
+}
+
+
+
+@media only screen and (max-width: 1199px){
+  
+  .Offer-images-contain {
+    max-width: 1000px;
+}
+  
+  div#featured-products-f537e12f-69d8-40c8-9b5e-85775301aead {
+    margin-top: -275px;
+    padding-top: 275px;
+}
+  
+  .container-fluid, .featured-products .container-padd60 {
+    max-width: 1000px;
+}
+  
+ div#influencer-1de341cd-71ad-41d1-90a2-a5181a265590 {
+    background-position: center;
+}
+  
+.body-full .container, .container-padd60 {
+    max-width: 1000px;
+}
+  
+ div#featured-products-1b1dad2d-b1e0-4581-9074-1e2dee510f89 {
+    padding-top: 50px;
+    padding-bottom: 0;
+    min-height: inherit;
+    background-position: center;
+}
+  
+div#featured-products-49c82c19-ef1f-44be-8faa-12927a0733dd {
+    margin-top: -60px;
+}
+  
+#shopify-section-bday_offer_third .box-title span.title, .featured-products .box-title span.title, 
+  .influencer_div .box-title{
+    font-size: 6.8vw;
+
+}
+  
+div#featured-products-1b1dad2d-b1e0-4581-9074-1e2dee510f89 {
+    margin-top: -50px;
+}
+  
+#shopify-section-bday_offer_third .spotlight-item h3 {
+    font-size: 6vw;
+}
+  
+div#featured-products-7db726e3-d042-4e1c-b65b-28298a210107 {
+    background-position: center;
+}
+ 
+  
+div#banner-f201510c-6ac1-4283-8f25-df566c567b1b {
+    margin-top: -30px;
+    padding-top: 100px;
+}
+  
+}
+
+
+@media only screen and (min-width: 769px) {
+div#shopify-section-bday_offer_second{border-bottom:4px dotted #701e9d;margin-bottom:80px;position:relative;padding-bottom:0}
+#shopify-section-bday_offer_second .teaser-spotlight-block .container-padd60{position:static}
+#shopify-section-bday_offer_second .col-12.col-md-12.col-lg-12{position:absolute;bottom:-55px;left:0;right:0;margin:auto}
+#shopify-section-bday_offer_second .teaser-spotlight-block{min-height:inherit;height:57vw;background-size:100%!important;background-repeat:no-repeat!important;display:flex;flex-wrap:wrap;justify-content:center;align-items:center}
+}
+@media only screen and (min-width: 1440px) {
+#shopify-section-bday_offer_second .teaser-spotlight-block{height:48vw}
+}
+@media only screen and (min-width: 1700px) {
+#shopify-section-bday_offer_second .teaser-spotlight-block{height:42vw}
+}
+@media only screen and (max-width: 1250px) {
+#shopify-section-bday_offer_second .teaser-spotlight-block{height:63vw}
+  
+  
+}
+
+
+@media only screen and (max-width: 1100px) and (min-width:768px) {
+  
+  div#featured-products-f3bd50d3-a819-4ef3-9565-9d8b7472a5e9 {
+    margin-top: -50px;
+    background-position: inherit;
+    background-size: 100%;
+    padding-top: 80px;
+}
+ 
+div#featured-products-f3bd50d3-a819-4ef3-9565-9d8b7472a5e9:after {
+    content: "";
+    width: 100%;
+    height: 38vw;
+    background: #ffe1e1;
+    display: block;
+    position: absolute;
+    bottom: 120px;
+    z-index: -1;
+}
+  
+}
+
+
+@media only screen and (max-width: 991px) and (min-width:769px) {
+.counter_text p#demo span{font-size:27px!important}
+.counter_text p#demo{min-width:290px}
+div#shopify-section-bday_offer_second .col-12.col-md-6.col-lg-5{-webkit-box-flex:0;-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}
+#shopify-section-bday_offer_second .teaser-spotlight-block .container-padd60{max-width:700px}
+}
+@media only screen and (max-width: 991px) {
+.featured-products .grid-item{display:block!important;margin-top:0;-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}
+.products-grid .grid-item{margin-bottom:20px!important;margin-top:10px!important}
+.grid-item .inner.product-item{margin-bottom:0}
+}
+
+@media only screen and (max-width: 991px){
+  
+  .Offer-images-contain {
+    max-width: 900px;
+}
+  
+ #shopify-section-bday_offer_third .spotlight-item h3 {
+    font-size: 7vw;
+}
+ 
+#shopify-section-bday_offer_third .spotlight-item span {
+    font-size: 2.5vw;
+}
+  
+.content.aa a.btn, #shopify-section-bday_offer_third a.button {
+    font-size: 25px;
+    border-radius: 7px;
+    padding: 12px 12px 14px;
+    margin-top: 30px;
+    min-width: 205px;
+    line-height: 27px;
+}
+  
+  .content.aa a.btn i, #shopify-section-bday_offer_third a.button i {
+    right: 23px;
+    top: 14px;
+}
+  
+#shopify-section-bday_offer_third .box-title span.title, .featured-products .box-title span.title {
+    font-size: 6.8vw;
+}
+  
+#shopify-section-bday_offer_third .box-title .title+span, .featured-products .box-title span.title+span {
+    font-size: 2.75vw;
+}
+  
+.container-fluid, .featured-products .container-padd60, .body-full .container, .container-padd60 {
+    max-width: 900px;
+}
+  
+.influencer_div h3.influencer_name {
+    font-size: 4.1vw;
+}
+  
+.influencer_div .content.aa a.btn {
+    margin-top: 20px;
+}
+  
+.inner.product-item .btn {
+    font-size: 16px;
+    padding: 10px 15px!important;
+}
+  
+ .featured-products .action a.btn {
+    font-size: 16px;
+}
+  
+div#influencer-6d716329-2d6e-4331-9d05-8ac6a7cb6f33 {
+    padding-bottom: 70px;
+}
+  
+img.bottom_image {
+    margin-top: 30px;
+}
+  
+.influencer_div .box-title {
+    font-size: 6.8vw;
+}
+div#featured-products-49c82c19-ef1f-44be-8faa-12927a0733dd {
+    margin-top: -40px;
+}
+  div#featured-products-1b1dad2d-b1e0-4581-9074-1e2dee510f89 {
+    margin-top: -40px;
+}
+  
+.influencer_div .box-title+span {
+    font-size: 2.75vw;
+}
+  
+}
+
+@media only screen and (max-width: 991px) and (min-width:768px){
+  
+  
+
+.featured-products .grid-item {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+  
+.widget-product {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+  
+div#shopify-section-bday_offer_third .grid-item.col-6 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+  
+div#shopify-section-bday_offer_third .widget-title + .row {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+  
+.inner.product-item .price-box {
+    font-size: 15px;
+}
+  
+  div#featured-products-49c82c19-ef1f-44be-8faa-12927a0733dd:after {
+    height: 65vw;
+}
+  
+div#featured-products-c80d4b01-0f14-4644-b157-86ba0be62185 h3.box-title {
+    margin-bottom: 20px;
+}
+  
+.inner.product-item .btn {
+    font-size: 15px;
+}
+  
+  .featured-products .action a.btn {
+    font-size: 15px;
+}
+  
+.widget-title .box-title {
+    margin-bottom: 20px;
+}
+  
+}
+
+
+@media only screen and (max-width: 767px) {
+.counter_text p#demo span{font-size:25px!important}
+.counter_text p#demo{min-width:250px;line-height:normal;padding:4px 15px}
+#shopify-section-bday_offer_second .teaser-spotlight-block .row{justify-content:center}
+#shopify-section-bday_offer_second .teaser-spotlight-block{height:auto;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;padding-top:10px;padding-left:25px;padding-right:25px;min-height:inherit;margin-top:-1px;background-size:100%!important;background-repeat:no-repeat!important}
+div#shopify-section-bday_offer_second{margin-bottom:20px}
+div#shopify-section-bday_offer_banner img.slide-pc{display:none}
+div#shopify-section-bday_offer_banner img.slide-mobile{display:block!important}
+#shopify-section-bday_offer_second .col-12.col-md-12.col-lg-12 a img.teaser_desktop{display:none}
+#shopify-section-bday_offer_second .col-12.col-md-12.col-lg-12 a img.teaser_mobile{display:block!important;width:auto;max-width:100%}
+#shopify-section-bday_offer_second .spotlight-item .img-box img.teaser_desktop{display:none}
+#shopify-section-bday_offer_second .spotlight-item .img-box img.teaser_mobile{display:block!important}
+#shopify-section-image-section img.slide-desktop,#shopify-section-image-sectiontwo img.slide-desktop{display:none}
+#shopify-section-image-section3 img.slide-desktop{display:none}
+#shopify-section-image-section img.slide-mobile,#shopify-section-image-sectiontwo img.slide-mobile{display:block!important}
+#shopify-section-image-section3 img.slide-desktop img.slide-mobile{display:block!important}
+#shopify-section-bottom-count-offer .container-fluid img.teaser_desktop{display:none}
+#shopify-section-bottom-count-offer .container-fluid img.teaser_mobile{display:block!important}
+#shopify-section-bday_offer_second .col-12.col-md-12.col-lg-12 a{margin-top:0}
+.featured-products .col-12.col-md-12{padding-bottom:0}
+div#shopify-section-skintastic-party{padding-bottom:10px}
+div#shopify-section-shop-favourite{padding-bottom:10px}
+div#shopify-section-product-section-featured h3.box-title img{margin-top:20px;display:none}
+div#shopify-section-product-section-featured h3.box-title img.slide-mobile{display:block!important}
+.featured-products h3.box-title img{display:none}
+.featured-products h3.box-title img.slide-mobile{display:block!important}
+div#shopify-section-product-section-featured{margin-top:30px}
+.content.aa a.btn{font-size:28px;border-radius:10px;padding:4px 15px 12px;margin-top:37px;min-width:270px;margin-bottom:0}
+#shopify-section-image-section3 img.slide-mobile{display:block!important}
+div#shopify-section-shop-favourite{padding-bottom:10px}
+div#shopify-section-glam-gang{padding:15px 0 10px}
+div#shopify-section-new-product-plum{padding:15px 0 10px}
+#shopify-section-hair-for-all-fun{padding:15px 0 10px}
+div#shopify-section-body-shot-lovers{padding:15px 0 10px}
+.counter_text{padding-top:8px;padding-bottom:6px}
+  
+  .teaser_desktop {
+    display: none;
+}
+ div#shopify-section-bday_offer_third .slick-arrow {
+    display: none !important;
+} .slick-dots li button {
+    border: 1px solid #5f1587;
+}
+  div#influencer-1de341cd-71ad-41d1-90a2-a5181a265590 {
+    z-index: 1;
+}
+  
+img.teaser_mobile {
+    display: block !important;
+}
+  
+#shopify-section-bday_offer_third #teaser-spotlight-2-bday_offer_third {
+    min-height: inherit;
+    padding-top: 20px;
+}
+  
+#shopify-section-bday_offer_third .spotlight-item h3 {
+    font-size: 12vw;
+    line-height: 1;
+}
+  
+#shopify-section-bday_offer_third .spotlight-item span {
+    font-size: 5.5vw;
+}
+  
+  #shopify-section-bday_offer_third a.button {
+    min-width: inherit;
+    width: 100%;
+    margin-top: 10px;
+}
+  
+div#shopify-section-bday_offer_third .col-12.col-md-6.col-lg-6 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+  
+div#shopify-section-bday_offer_third  .container-fluid>.row {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+  
+#shopify-section-bday_offer_third .box-title {
+    margin-top: 0;
+}
+  
+#shopify-section-bday_offer_third .box-title span.title, .featured-products .box-title span.title {
+    font-size: 12vw;
+}
+  
+#shopify-section-bday_offer_third .box-title .title+span, .featured-products .box-title span.title+span {
+    font-size: 5vw;
+}
+ 
+  
+  
+div#shopify-section-bday_offer_third .container-fluid .widget-title + .row {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+  
+.product-item .product-bottom {
+    min-height: inherit;
+}
+  
+  div#shopify-section-bday_offer_third .container-fluid .grid-item.col-6:nth-of-type(3) {
+    display: none;
+}
+  
+  div#shopify-section-bday_offer_third .container-fluid .grid-item.col-6:nth-of-type(4) {
+    display: none;
+}
+  
+div#shopify-section-bday_offer_third .col-12.col-md-6.col-lg-6 {
+    padding-left: 5px;
+    padding-right: 5px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+  
+.content.aa a.btn {
+    font-size: 27px;
+    padding: 15px 15px 16px;
+    min-width: inherit;
+    margin-top: 20px;
+    max-width: 220px;
+    width: 100%;
+    border-radius: 5px;
+}
+  
+.content.aa a.btn i {
+    right: 23px;
+    top: 12px;
+}
+  
+.content.aa {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+  
+.products-grid.row {
+    margin: 0 -5px;
+}
+  
+div#featured-products-1b1dad2d-b1e0-4581-9074-1e2dee510f89 span.title {
+    padding-bottom: 20px!important;
+}
+  
+.influencer_div .box-title {
+    font-size: 12vw;
+}
+  
+.influencer_div .box-title+span {
+    font-size: 5.75vw;
+    margin-bottom: 30px;
+}
+  
+.influencer_div .row + .row {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+  
+.influencer_div .col-4 {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 15px;
+}
+  
+.influencer_div h3.influencer_name {
+    font-size: 20px;
+    font-size: 5.4vw;
+}
+  
+div#shopify-section-bday_offer_third:before {
+    display: block;
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-Left-side-ballon.png?v=1655802145');
+    top: -12vw;
+    width: 102px;
+    height: 212px;
+    width: 15vw;
+    height: 33vw;
+}
+  
+div#shopify-section-bday_offer_third .container-fluid .widget-title+.row .grid-item.col-6.col-md-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+  
+#shopify-section-bday_offer_third #teaser-spotlight-2-bday_offer_third {
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/upded-mobile-secnd-Section-BG.jpg') !important;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+}
+  
+div#shopify-section-bday_offer_third:after {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/senter-ballon_top_bg.png');
+    background-repeat: no-repeat;
+    width: 15vw;
+    height: 35vw;
+    top: 92vw;
+}
+  
+div#featured-products-49c82c19-ef1f-44be-8faa-12927a0733dd {
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-just-landed-BG.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+  
+div#featured-products-49c82c19-ef1f-44be-8faa-12927a0733dd:after {
+    height: 90vh;
+}
+  
+div#featured-products-49c82c19-ef1f-44be-8faa-12927a0733dd:before {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-left-side-line.png');
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 34vw;
+    height: 100vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+  
+ 
+  
+  div#featured-products-c80d4b01-0f14-4644-b157-86ba0be62185 {
+    background: url(https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-deals-like-never-before-BG.png?v=1655805102);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+     padding-top: 40px;
+    position: relative; 
+     z-index: 1;
+}
+  
+div#featured-products-c80d4b01-0f14-4644-b157-86ba0be62185:before {
+    display: none;
+}
+  
+div#featured-products-c80d4b01-0f14-4644-b157-86ba0be62185:after {
+    content: "";
+    background: #eacefe;
+    top: auto;
+    bottom: 0;
+    height: 60vh;
+    width: 100%;
+    z-index: -1;
+}
+  
+div#influencer-1de341cd-71ad-41d1-90a2-a5181a265590 {
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/updated-mobile-influencer-faves-BG.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 0;
+    padding-top: 30px;
+}
+  
+div#influencer-1de341cd-71ad-41d1-90a2-a5181a265590:before {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-influence-Left-side-ballons.png?v=1655806263');
+    position: absolute;
+    left: 0;
+    top: -29vw;
+    width: 20vw;
+    height: 46vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+}
+  
+div#influencer-1de341cd-71ad-41d1-90a2-a5181a265590:after {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-influence-right-side-liness.png?v=1655806263');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 17vw;
+    height: 68vw;
+    top: -15vw;
+}
+  
+  div#featured-products-c80d4b01-0f14-4644-b157-86ba0be62185:after{display:none !important;}
+  
+div#featured-products-429f84c7-1424-420b-807b-ecf5985c5aac {
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-skincare-_BG.png?v=1655807237');
+    background-size: cover;
+    padding-top: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+  
+div#featured-products-429f84c7-1424-420b-807b-ecf5985c5aac span.title {
+    padding-bottom: 10px !important;
+    display: block;
+}
+  
+div#featured-products-429f84c7-1424-420b-807b-ecf5985c5aac:before {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-skincare-right-side-ballonsss.png?v=1655807462');
+    width: 15vw;
+    height: 38vw;
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -10vw;
+    right: 0;
+}
+  
+ 
+  
+div#featured-products-429f84c7-1424-420b-807b-ecf5985c5aac:after {
+    content: "";
+    background: url(https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-skincare-affair-lines.png);
+    width: 16vw;
+    height: 60vw;
+    position: absolute;
+    bottom: auto;
+    top: -25vw;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+  
+div#featured-products-429f84c7-1424-420b-807b-ecf5985c5aac {
+    padding-bottom: 80px;
+}
+  
+  
+  div#featured-products-f537e12f-69d8-40c8-9b5e-85775301aead {
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-body-lovin-BG.png?v=1655808104');
+    background-size: cover;
+    background-position: center;
+    margin-top: -40px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+  
+div#featured-products-f537e12f-69d8-40c8-9b5e-85775301aead:before {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-Body-lovin-left-lines.png?v=1655808397');
+    position: absolute;
+    top: -47vw;
+    left: 0;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15vw;
+    height: 96vw;
+}
+  
+div#featured-products-f537e12f-69d8-40c8-9b5e-85775301aead:after {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-Body-lovin-lines.png?v=1655808396');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: auto;
+    top: -45vw;
+    right: 0;
+    width: 18vw;
+    height: 80vw;
+    z-index: -1;
+    margin-top: 0;
+}
+  
+.slide-mobile {
+    display: block !important;
+}
+  
+img.slide-pc {
+    display: none !important;
+}
+  
+div#banner-6f547a96-67e8-416e-8df8-d41e77dd4f61 {
+    margin-top: -41px;
+}
+  
+div#featured-products-49c82c19-ef1f-44be-8faa-12927a0733dd {
+    margin-top: -30px;
+}
+  
+div#shopify-section-product-section-featured {
+    margin-top: 7px;
+}
+  
+div#featured-products-f3bd50d3-a819-4ef3-9565-9d8b7472a5e9 h3.box-title {
+    margin-bottom: 0;
+}
+  
+div#featured-products-f3bd50d3-a819-4ef3-9565-9d8b7472a5e9 {
+    background: url(https://cdn.shopify.com/s/files/1/0390/2985/files/min-mobile-glam-gangBG.png?v=1655809528);
+    margin-top: -38px;
+    /* background-position: center; */
+    background-size: contain;
+    z-index: 11;
+    padding-top: 30px;
+    background-repeat: no-repeat;
+}
+  
+div#featured-products-f3bd50d3-a819-4ef3-9565-9d8b7472a5e9:after {
+    content: "";
+    background: #ffe1e2;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50vh;
+    z-index: -1;
+}
+  
+div#featured-products-7db726e3-d042-4e1c-b65b-28298a210107 {
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-hair-hair-for-all-BG.png?v=1655809862');
+    z-index: 11;
+    background-position: center;
+    background-size: cover;
+    margin-top: -75px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+  
+div#featured-products-7db726e3-d042-4e1c-b65b-28298a210107 h3.box-title {
+    margin-bottom: 0;
+}
+  
+div#featured-products-7db726e3-d042-4e1c-b65b-28298a210107:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -11vw;
+    left: 0;
+    width: 131px;
+    height: 409px;
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-Hair-for-all-ballons.png?v=1655810054');
+    width: 20vw;
+    height: 43vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+}
+  
+div#featured-products-7db726e3-d042-4e1c-b65b-28298a210107:after {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-hair_for_all_the_fun.png?v=1655810054');
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -29vw;
+    width: 137px;
+    height: 886px;
+    background-repeat: no-repeat;
+    background-size: contain;
+   width: 13vw;
+    height: 63vw;
+  z-index: -1;
+}
+  
+div#banner-9eb9954a-3696-45a2-85ac-94c6756d5201 {
+    margin-top: -30px;
+}
+div#shopify-section-product-section-featured h3.box-title img.slide-mobile {
+    width: 100%;
+}
+  
+.influencer_div .box-title+span {
+   width:100%;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+div#influencer-6d716329-2d6e-4331-9d05-8ac6a7cb6f33 {
+    background: #fff;
+    padding-top: 30px;
+}
+  
+  
+  div#influencer-6d716329-2d6e-4331-9d05-8ac6a7cb6f33:before {
+    left: 0;
+    top: 20px;
+    background: url(https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-top-plumster-picks-ballon.png?v=1655812816);
+    width: 12vw;
+    height: 39vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+  
+div#influencer-6d716329-2d6e-4331-9d05-8ac6a7cb6f33:after {
+    right: 0;
+    top: -6vw;
+    display: block;
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-top-plumster-picks-linee.png?v=1655812816');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 12vw;
+    height: 63vw;
+}
+  
+img.bottom_image {
+    margin-top: 10px;
+}
+  
+div#featured-products-1b1dad2d-b1e0-4581-9074-1e2dee510f89 {
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-for-her.png?v=1655813104');
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    margin-top: -45px;
+}
+  
+div#featured-products-1b1dad2d-b1e0-4581-9074-1e2dee510f89 .grid-item.col-6.col-md-4.col-lg-3:nth-of-type(3) {
+    display: none !important;
+}
+  
+  div#featured-products-1b1dad2d-b1e0-4581-9074-1e2dee510f89 .grid-item.col-6.col-md-4.col-lg-3:nth-of-type(4) {
+    display: none !important;
+}
+  
+div#shopify-section-product-section-featured h3.box-title span.title {
+    padding-bottom: 0 !important;
+}
+  
+div#featured-products-81994d46-16f8-47c6-9b19-ea4d2fbef379 {
+    padding-top: 30px;
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-for-him.png?v=1655813383');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+  
+div#featured-products-1b1dad2d-b1e0-4581-9074-1e2dee510f89:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 100%;
+    height: 45vh;
+    background: #ffe1e2;
+    z-index: -1;
+}
+  
+.influencer_div .box-title+span {
+    line-height: 1.2;
+}
+
+  
+div#featured-products-1b1dad2d-b1e0-4581-9074-1e2dee510f89:before {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/mobile-scent-new.png?v=1655814019');
+    position: absolute;
+    left: 0;
+    top: -5vw;
+    width: 14vw;
+    height: 33vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+  
+div#featured-products-81994d46-16f8-47c6-9b19-ea4d2fbef379 span.title {
+    font-family: Segoe Pro;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 28px;
+}
+  
+div#featured-products-1b1dad2d-b1e0-4581-9074-1e2dee510f89 {
+    padding-bottom: 20px;
+}
+  
+ div#featured-products-81994d46-16f8-47c6-9b19-ea4d2fbef379 {
+    padding-top: 20px;
+}
+  
+ .content.aa a.btn {
+    z-index: 111;
+}
+  
+#shopify-section-product-section-featured .Offer-images-contain img.slide-mobile {
+    box-shadow: 0 10px 25px rgb(101 73 113 / 55%);
+    border-radius: 15px;
+    width: 100%;
+}
+  
+#shopify-section-product-section-featured .Offer-images-contain {
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 45px;
+}
+  
+div#banner-73447d74-4d08-49f2-a209-ff3d28449e7b .Offer-images-contain {
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 11;
+    margin-top: 20px;
+}
+  
+div#influencer-1de341cd-71ad-41d1-90a2-a5181a265590 {
+    padding-bottom: 0;
+}
+  
+div#banner-89c9c37a-f28d-443a-ab41-d802d7d97741 .Offer-images-contain {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+  
+div#featured-products-f537e12f-69d8-40c8-9b5e-85775301aead {
+    padding-bottom: 60px;
+}
+  
+div#banner-f201510c-6ac1-4283-8f25-df566c567b1b .Offer-images-contain {
+    margin-top: 35px;
+}
+  
+  div#banner-73447d74-4d08-49f2-a209-ff3d28449e7b {
+    position: relative;
+}
+  
+div#banner-73447d74-4d08-49f2-a209-ff3d28449e7b:before {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/balls_new_sing_e_birthday.png');
+    position: absolute;
+    bottom: -13vw;
+    left: 11vw;
+    width: 4vw;
+    height: 3.5vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+  
+div#banner-73447d74-4d08-49f2-a209-ff3d28449e7b:after {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/balls_new_sing_e_birthday.png');
+    position: absolute;
+    bottom: -13vw;
+    right: 11vw;
+    width: 4vw;
+    height: 3.5vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+  
+  div#featured-products-f3bd50d3-a819-4ef3-9565-9d8b7472a5e9 {
+     position: relative;
+    z-index: 11;
+}
+
+  
+div#featured-products-c80d4b01-0f14-4644-b157-86ba0be62185 {
+    padding-bottom: 60px;
+}
+  
+.Offer-images-contain {
+    max-width: 100%;
+}
+  
+div#featured-products-7db726e3-d042-4e1c-b65b-28298a210107 {
+    position: relative;
+    z-index: 11;
+}
+  
+div#banner-f201510c-6ac1-4283-8f25-df566c567b1b {
+    margin-top: 0;
+    padding-top: 0;
+}
+  
+div#influencer-6d716329-2d6e-4331-9d05-8ac6a7cb6f33 {
+    padding-top: 30px;
+}
+  
+div#influencer-6d716329-2d6e-4331-9d05-8ac6a7cb6f33 {
+    margin-top: 0;
+  margin-bottom: 70px;
+}
+div#banner-89c9c37a-f28d-443a-ab41-d802d7d97741 {
+    margin-top: 0;
+  margin-bottom: 30px;
+}  
+div#influencer-6d716329-2d6e-4331-9d05-8ac6a7cb6f33 {
+    padding-bottom: 0;
+}
+  
+  div#banner-6f547a96-67e8-416e-8df8-d41e77dd4f61 {
+    margin-top: 0;
+}
+  .tandc {
+    margin-bottom: 59px;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+
+
+@media (max-width: 540px) {
+.featured-products .widget-title .box-title{margin-bottom:25px}
+.products-grid .grid-item{margin-bottom:10px!important;margin-top:0!important}
+.featured-products .grid-item{display:block!important;margin-top:0;-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%;padding-left:5px;padding-right:5px}
+.product-item .jdgm-preview-badge .jdgm-star.jdgm-star{font-size:12px;padding-right:2px!important}
+.product-item .jdgm-prev-badge__text{font-size:11px}
+.product-item .action{left:0;width:93%;right:0;margin:7px auto 0 auto;}
+.inner.product-item .btn{font-size:16px;width:100%;min-width:inherit;max-width:100%;padding:8px}
+.inner.product-item .price-box{margin-left:-5px;margin-right:-5px;margin-bottom:0;font-size:14px}
+.grid-item .inner.product-item .price-box:before{width:50px;margin:2px auto}
+.product-item .product-bottom .product-title{max-height:32px;min-height:32px;line-height:1.3;font-size:12.5px}
+.content.aa a.btn i.fa{font-size:35px}
+.product-item .product-label{padding-top:0;width:30px;top:-3px}
+.product-item .product-label .label{font-size:11px}
+div#shopify-section-Best-sellers-bday{padding-top:5px}
+div#shopify-section-product-section-featured h3.box-title img{margin-top:10px}
+  
+.product-item .product-bottom {
+    min-height: inherit;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+  
+.featured-products .action a.btn {
+    font-size: 15px;
+}
+  
+.inner.product-item .btn {
+    font-size: 15px;
+    padding: 8px 10px!important;
+}
+  
+#shopify-section-bday_offer_third a.button {
+    padding: 9px 12px 10px;
+    font-size: 22px;
+}
+  
+#shopify-section-bday_offer_third a.button i {
+    right: 20px;
+    top: 12px;
+}
+  
+#shopify-section-bday_offer_third .box-title {
+    margin-bottom: 20px;
+}
+  
+div#featured-products-81994d46-16f8-47c6-9b19-ea4d2fbef379 .widget-product .grid-item.col-6.col-md-4.col-lg-3:nth-of-type(3), 
+  div#featured-products-81994d46-16f8-47c6-9b19-ea4d2fbef379 .widget-product .grid-item.col-6.col-md-4.col-lg-3:nth-of-type(4) {
+    display: none !important;
+}
+  
+}
+
+@media (max-width: 479px) {
+  
+  div#featured-products-1b1dad2d-b1e0-4581-9074-1e2dee510f89 {
+    margin-top: -35px;
+}
+  
+#shopify-section-bday_offer_third .box-title span.title, .featured-products .box-title span.title {
+    font-size: 12vw;
+}
+  
+  
+div#featured-products-f3bd50d3-a819-4ef3-9565-9d8b7472a5e9 {
+    margin-top: -30px;
+}
+  
+ main.main-content {
+    padding-top: 180px;
+}
+  
+  
+}
+
+
+@media (max-width: 400px) {
+  
+  
+div#featured-products-f3bd50d3-a819-4ef3-9565-9d8b7472a5e9 {
+    margin-top: -24px;
+}
+  
+.influencer_div h3.influencer_name {
+    font-size: 7.4vw;
+    line-height: 1;
+}
+  
+div#banner-73447d74-4d08-49f2-a209-ff3d28449e7b:before {
+    bottom: -16vw;
+}
+  
+div#banner-73447d74-4d08-49f2-a209-ff3d28449e7b:after {
+    bottom: -16vw;
+}
+  
+}
+
+
+
+
+@media (max-width: 360px) {
+ 
+.inner.product-item .price-box{font-size:13px}
+.product-item .jdgm-prev-badge__text{display:block}
+  
+.featured-products .action a.btn {
+    font-size: 13px;
+}
+.inner.product-item .btn {
+    font-size: 13px;
+}
+  
+}
+
+
+.row.text.center.tandc .widget-title {
+    font-size: 40px;
+    color: #5c1487;
+    font-family: candy_chicksregular;
+    width: 100%;
+    line-height: 40px;
+}.row.text.center.tandc p {
+    width: 100%;
+    text-align: center;
+    line-height: 25px;
+    font-size: 13px;
+    margin-bottom: 0;
+}

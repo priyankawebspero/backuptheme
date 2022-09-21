@@ -1,0 +1,35 @@
+{% if section.settings.image_1 != blank %}
+<div class="uns_hero_static">
+  <img src="{{ section.settings.image_1 | img_url:'master' }}" class="slide-desktop">
+   <img src="{{ section.settings.image_picker_mobile | img_url:'master' }}" class="slide-mobile" style="display:none;">
+</div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Image Section 2",
+  "settings": [
+   {
+      "id": "image_1",
+      "type": "image_picker",
+      "label": "Background Image Desktop"
+    },{
+      "id": "image_picker_mobile",
+      "type": "image_picker",
+      "label": "Background Image Mobile"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Section 2",
+      "category": "Hero"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

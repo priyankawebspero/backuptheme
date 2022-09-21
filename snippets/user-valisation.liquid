@@ -1,0 +1,25 @@
+{% comment %}
+{{settings.user_validation_heading}}
+{{settings.user_validation_discount_coupon}}
+{{settings.redirection_url}}
+{% endcomment %}
+<div class="pop-out_main_cd">
+  	<div class="pop-out_main_cd_inner">
+<!--       <div class="close">X</div> -->
+      <div id="loader"></div>
+ 	 	<div class="cs_popup_em_cs">
+         <div class="popup_top">
+          <h3>Enter your details below to get access</h3>
+          <p>applicable only for new customers</p>
+          </div>
+          <form id="customers_form" method="post" action="">
+          <input type="email" text="Email" id="customers_email" class="form_fields" pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*" Placeholder="Enter your email" required />
+          <input type="hidden" name="user_validation" id="user_validation" value="">
+          <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" text="Phone Number" id="customers_phone_number" Placeholder="Phone number" maxlength="10"  class="form_fields" required />
+           <input type="hidden" name="url" id="url" value="">
+            <input type="submit" text="Submit"/>
+          </form>
+  		</div>
+  
+  </div>
+</div>

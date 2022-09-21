@@ -1,0 +1,34 @@
+<style>
+main.main-content {
+    padding-bottom: 0;
+}
+
+</style>
+
+ {{ 'plum-diwali-teaser.css' | asset_url | stylesheet_tag }} 
+<div class="page-teaser">
+  <div class="container-fluid">
+
+    {% section 'teaser-top-banner-diwali' %}
+    {% comment %}{% section 'teaser-second-section-diwali' %}
+    {% section 'counter-section-diwali' %}{% endcomment %}
+    {% section 'counter-bottom-diwali' %}
+
+    {% comment %}
+    Regular page content goes here.
+    {% endcomment %}
+
+    {% if settings.enable_multilang and page.content contains '[lang2]' %}
+    <div class="rte lang1">
+      {{ page.content | split: '[lang2]' | first }}
+    </div>
+    <div class="rte lang2">
+      {{ page.content | split: '[lang2]' | last }}
+    </div>
+    {% else %}
+    <div class="rte">
+      {{ page.content | split: '[lang2]' | first }}
+    </div>
+    {% endif %}
+  </div>
+</div>

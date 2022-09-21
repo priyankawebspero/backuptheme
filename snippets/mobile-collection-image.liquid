@@ -1,0 +1,5 @@
+{% assign collection_handle = collection.handle %}
+{% assign mobile_img = collection_handle | append:'-mobile.jpg' | file_url %}
+{% if collection.metafields.custom.collection_banner_link %}<a href="{{collection.metafields.custom.collection_banner_link}}">{% endif %}      
+<img class="mobile-collection-banner lazyload {{ settings.image_loading_style }} mobile-xs" src="{{ collection_handle | append:'-mobile.jpg' | file_url }}"/>
+{% if collection.metafields.custom.collection_banner_link %}</a>{% endif %}

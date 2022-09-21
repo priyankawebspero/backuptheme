@@ -1,0 +1,34 @@
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "{{ store.name }}",
+        "Description": "{{ page_description | escape | split: '[/countdown]' | last | strip_html }}",
+        "url": "{{ store.url }}",
+        "Logo": "https://cdn.shopify.com/s/files/1/0390/2985/files/Plum-Logo_199x70_da06b642-013f-4039-ba22-5660a5082cf0.png?v=1656583695",
+        "sameAs": [
+            "https://twitter.com/plumspeak?lang=en",
+            "hhttps://www.youtube.com/channel/UC6tQtwAuADVKuxIRKfwMZfw",
+            "https://www.facebook.com/PlumGoodness/",
+            "https://www.instagram.com/plumgoodness/"
+        ],
+        "Founder": [{ "@type": "Person", "name": "Shankar Prasad" }],
+        "foundingDate": "2013",
+        "contactPoint": [{ "@type": "ContactPoint", "telephone": "+91-750-649-6604", "contactType": "customer service", "email": "hello@plumgoodness.com" }],
+        "Address": { "type": "PostalAddress", "streetAddress": "1st Floor, Lodha i-Think Techno Campus, A Wing, Chirak Nagar", "addressLocality": "Thane", "addressRegion": "Maharashtra", "postalCode": "400607 ", "addressCountry": "INDIA" }
+    }
+</script>
+{% if template contains 'index' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Plum paraben-free natural skincare, kajal. Sensitive, oily skin types & Plum Goodness",
+    "description": "Plum: Delightful, safe, paraben-free, phthalate-free, SLS-free skincare with rich natural ingredients like sea buckthorn, aloe, green tea, macadamia, chamomile",
+    "thumbnailUrl": "https://cdn.shopify.com/s/files/1/0390/2985/files/gt-adapt-768x350.jpg?v=1659357544",
+    "uploadDate": "2022-08-09",
+    "duration": "PT0M35S",
+    "embedUrl": "https://www.youtube.com/embed/sxCoJPealQI"
+  }
+  </script>
+{% endif %}

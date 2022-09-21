@@ -1,0 +1,175 @@
+{% if settings.enable_discount_script %}
+<script>  
+let free_product=[];  // cart sku list
+let lineItemlength = 0; // cart total count
+
+{% for line_items in checkout.line_items %} 
+free_product.push('{{line_items.sku}}');
+lineItemlength = lineItemlength +1;
+{% endfor %} 
+ 
+let discount_json =  [
+{% if settings.enable_free_product %}
+{
+
+	"couponCode": "{{settings.discount_coupon | downcase }}",
+	"sku":"{{ settings.product_sku_free }}",
+	"id":"{{settings.product_id_free}}",
+	"total":"{{settings.cartTotal | times:100}}",
+	"quantity":"{{settings.quantityTotal | plus: 0}}",
+    "product_json": {{ settings.product_id_free | json }}
+},
+{% endif %}  
+{% if settings.enable_free_product_2 %}
+{
+
+	"couponCode": "{{settings.discount_coupon_2 | downcase }}",
+	"sku":"{{ settings.product_sku_free_2 }}",
+	"id":"{{settings.product_id_free_2}}",
+	"total":"{{settings.cartTotal_2 | times:100}}",
+	"quantity":"{{settings.quantityTotal_2 | plus: 0}}"
+},
+{% endif %}  
+{% if settings.enable_free_product_3 %}
+{
+
+	"couponCode": "{{settings.discount_coupon_3 | downcase }}",
+	"sku":"{{ settings.product_sku_free_3 }}",
+	"id":"{{settings.product_id_free_3}}",
+	"total":"{{settings.cartTotal_3 | times:100}}",
+	"quantity":"{{settings.quantityTotal_3 | plus: 0}}"
+},
+{% endif %}
+{% if settings.enable_free_product_4 %}
+{
+
+	"couponCode": "{{settings.discount_coupon_4 | downcase }}",
+	"sku":"{{ settings.product_sku_free_4 }}",
+	"id":"{{settings.product_id_free_4}}",
+	"total":"{{settings.cartTotal_4 | times:100}}",
+	"quantity":"{{settings.quantityTotal_4 | plus: 0}}"
+},
+{% endif %}
+{% if settings.enable_free_product_5 %}
+{
+
+	"couponCode": "{{settings.discount_coupon_5 | downcase }}",
+	"sku":"{{ settings.product_sku_free_5 }}",
+	"id":"{{settings.product_id_free_5}}",
+	"total":"{{settings.cartTotal_5 | times:100}}",
+	"quantity":"{{settings.quantityTotal_5 | plus: 0}}"
+},
+{% endif %}
+{% if settings.enable_free_product_6 %}
+{
+
+	"couponCode": "{{settings.discount_coupon_6 | downcase }}",
+	"sku":"{{ settings.product_sku_free_6 }}",
+	"id":"{{settings.product_id_free_6}}",
+	"total":"{{settings.cartTotal_6 | times:100}}",
+	"quantity":"{{settings.quantityTotal_6 | plus: 0}}"
+}
+{% endif %} 
+  {% if settings.enable_free_product_7 %}
+{
+
+	"couponCode": "{{settings.discount_coupon_7 | downcase }}",
+	"sku":"{{ settings.product_sku_free_7 }}",
+	"id":"{{settings.product_id_free_7}}",
+	"total":"{{settings.cartTotal_7 | times:100}}",
+	"quantity":"{{settings.quantityTotal_7 | plus: 0}}"
+}
+{% endif %} 
+];
+ // console.log(discount_json);
+
+
+
+  
+  // add to cart free product  
+  $('#checkout_submit').on('click', function(ev){ 
+    ev.preventDefault();           
+    let discountCode = $('input[name="checkout[reduction_code]"]').val().toLowerCase();     // get discount enter by user
+     // console.log('found',discountCode);
+    
+    let found = discount_json.find(e => e.couponCode === discountCode.toLowerCase());       // check if discount is exist or not.
+    if (found && found.quantity <= lineItemlength && ($.inArray(found.sku, free_product) === -1)){ 
+        $(this).addClass('btn--loading'); 
+       addto_cart(found.id, found.couponCode); // add product to cart
+     }  
+  else
+    {
+    if (discountCode){
+       $("#checkout_submit").unbind('click').click();
+        window.location.href = '/checkout?discount='+discountCode;
+    }
+    else {
+       $("#checkout_submit").unbind('click').click();
+       window.location.href = '/checkout'; 
+    }
+}
+});
+
+
+// add to cart freebie function
+ function addto_cart(id, couponCode){
+   $.ajax({
+          type: 'POST',
+          url: '/cart/add.js',
+          data: 'quantity=1&id='+ id,
+          dataType: 'json', 
+          success: function(){
+            setTimeout(function () { 
+              window.location.href = '/checkout?discount='+ couponCode;
+            }, 1000);
+          }          
+        });
+     } 
+
+// $('.tag__wrapper').on('click', function(ev){
+//    ev.preventDefault();
+//  let discountCode_rm = $('.tags-list .reduction-code__text').text().toLowerCase();
+//  let found_rm = discount_json.find(e => e.couponCode == discountCode_rm.toLowerCase()); 
+//   if (found_rm){settings.product_sku_free
+//   $(this).addClass('btn--loading'); 
+//   var params = {
+//     type: 'POST',
+//     url: '/cart/update.js',
+//     data: 'quantity=0&id='+found_rm['productIdFree'],
+//     dataType: 'json', 
+//     success: function(){
+//       setTimeout(function () { 
+//         window.location.href = '/checkout';
+//       }, 2000);
+//     }
+//   };
+//   jQuery.ajax(params);
+// }
+// });
+
+
+
+  
+// $('.tag__wrapper').on('click', function(ev){
+//    ev.preventDefault();
+//  let discountCode_rm = $('.tags-list .reduction-code__text').text().toLowerCase();
+//  let found_rm = discount_json.find(e => e.couponCode == discountCode_rm.toLowerCase()); 
+//   if (found_rm){settings.product_sku_free
+//   $(this).addClass('btn--loading'); 
+//   var params = {
+//     type: 'POST',
+//     url: '/cart/update.js',
+//     data: 'quantity=0&id='+found_rm['productIdFree'],
+//     dataType: 'json', 
+//     success: function(){
+//       setTimeout(function () { 
+//         window.location.href = '/checkout';
+//       }, 2000);
+//     }
+//   };
+//   jQuery.ajax(params);
+// }
+// });
+  
+</script>
+{% endif %}

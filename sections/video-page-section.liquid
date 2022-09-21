@@ -1,0 +1,146 @@
+<div class="video_blocks">
+ 
+      <ul class="list-vlog row"> 
+         {% for block in section.blocks %}
+       <li class="listing-vlog col-md-4 col-sm-6">         
+         {% if block.settings.image != blank%}
+         <div class="video_image">
+         <img src="{{ block.settings.image | img_url: "large" }}" />
+         </div>
+         {% endif %}
+
+         {% if block.settings.description != blank%}
+         <div class="video_desc">
+         {{ block.settings.description }} 
+         </div>
+         {% endif %}
+
+         {% if block.settings.link != blank%}
+         <input class="videourl" type="hidden" data-url="{{ block.settings.link }}"> 
+         {% endif %}
+
+         {% comment %}    
+         {% if block.settings.product != blank%}
+         {% assign product = block.settings.product %}
+         {% include 'product-item-video-cart' with product%}   
+         {% endif %}
+         {% endcomment %} 
+       </li>
+        {% endfor %}
+    </ul>
+
+  
+ <div id="pagination-page"></div>
+</div>
+
+
+<div class="popup-tbl-pg"><div class="popup-tbl-pg-inner">
+  <button class="close">X</button>
+<div class="video_ration_custom"> <iframe class="youtube_frame_popup" width="100%" height="420" src="https://www.youtube.com/embed/5Peo-ivmupE" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+</div></div></div>
+
+<div class="overlay_popup"></div>
+
+{% schema %}
+  {
+    "name": "Add Videos",
+   "max_blocks": 100,
+    "settings": [
+    ]
+       ,
+    "blocks": [
+        {
+            "type": "Video",
+            "name": "Video",
+            "settings": [		  	
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type" : "textarea",
+                    "id" : "description",
+                    "label" : "Description",
+                    "default" : "Lorem De Dorus"
+                },
+                {
+                    "type" : "url",
+                    "id" : "link",
+                    "label" : "Add Video link Here"
+                }
+            ]
+        }
+    ],
+    "presets": [
+      {
+        "name": "Videos",
+        "category": "Advanced layout",
+        "blocks": [
+          {
+            "type": "Video"
+          },
+          {
+            "type": "Video"
+          },
+	      {
+            "type": "Video"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+
+  
+<script>
+  $('.listing-vlog').on('click', function(){
+    let videoUrl = $(this).find('.videourl').data('url');
+    $('.popup-tbl-pg').addClass('open-popup');
+    $('body').addClass('popup-opened');
+    $('.popup-tbl-pg iframe').attr('src', videoUrl);
+  });
+  
+  $('button.close').on('click', function(){
+    $('.popup-tbl-pg').removeClass('open-popup');
+    $('iframe').attr('src', $('iframe').attr('src'));
+    $('body').removeClass('popup-opened');
+  });
+  
+  $(document).click(function (e) {
+    if (!$(e.target).parents().andSelf().is('.listing-vlog')) {
+        $(".popup-tbl-pg").removeClass('open-popup');
+        $('iframe').attr('src', $('iframe').attr('src'));
+        $('body').removeClass('popup-opened');
+    }
+});
+ 	var items = $(".listing-vlog");
+    var numItems = items.length;
+    if (numItems <= 9){
+      $('#pagination-page').hide();
+    }else{
+     $('#pagination-page').show();
+    }
+    var perPage = 9;
+
+    items.slice(perPage).hide();
+
+    jQuery('#pagination-page').pagination({
+      items: numItems,
+      itemsOnPage: perPage,
+      prevText: "{{ 'collections.toolbar.previous' | t }}",
+      nextText: "{{ 'collections.toolbar.next' | t }}",
+      onPageClick: function (pageNumber) {
+      var showFrom = perPage * (pageNumber - 1);
+      var showTo = showFrom + perPage;
+      items.hide().slice(showFrom, showTo).show();
+    }
+    });
+</script>

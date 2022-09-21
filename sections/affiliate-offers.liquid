@@ -1,0 +1,169 @@
+<div class="col-12" id="affiliate_top_banner">
+  <img class="desktop" src="{{ section.settings.top_banner_image_desktop | img_url: 'master' , format: 'pjpg'}}"  alt="{{section.settings.top_banner_image_desktop.alt}}">
+  <img class="mobile" src="{{ section.settings.top_banner_image_mobile | img_url: 'master' , format: 'pjpg'}}"  alt="{{section.settings.top_banner_image_mobile.alt}}">
+</div>
+
+<div class="affiliate-products">
+  <div class="container">
+    <div class="row">
+      <div class="col-12"> 
+        <h4 class="text-center">{{section.settings.collection_title}}</h4>
+        <div class="widget-product">
+          <div class="products-grid row four-items" data-row="4">
+            {% paginate collections[section.settings.show_slider_featured_collection].products by 250 %}
+            {% for product in collections[section.settings.show_slider_featured_collection].products%}
+            <div class="grid-item col-6 col-md-4 col-lg-3 small--one-half">
+              {% include 'product-grid-item' %}
+            </div>
+            {% endfor %}
+          {% endpaginate %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="customer_review_affiliates">
+<div class="container">
+  <div class="row">
+<div class="col-12">
+  <h4 class="text-center">Customer reviews</h4>
+  <div id="affiliate_reviews">
+    {% for block in section.blocks %}
+    <div class="col-4">
+      <div class="review-inner_des">
+      <h5 class="review-title">{{block.settings.review_heading}}</h5>
+      {% if block.settings.start_select == '1'%}
+      <span class="fa fa-star checked"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>
+      {% elsif block.settings.start_select == '2' %}
+      <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>    
+      {% elsif block.settings.start_select == '3' %}
+      <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span>       
+      {% elsif block.settings.start_select == '4' %}
+      <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-o"></span>       
+      {% else %}
+      <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>       
+      {% endif %}
+      <div class="review-body">{{block.settings.review_text}}</div>
+    </div></div>
+    {% endfor %}
+  </div>
+</div>
+  
+   </div>
+   </div>
+  
+  </div>
+
+{% schema %}
+{
+  "name": "Affiliate banner Section",
+  "class": "affiliate-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "top_banner_image_desktop",
+      "label": "Add Top Banner Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "top_banner_image_mobile",
+      "label": "Add Top Banner Image"
+    },
+    {
+        "type": "text",
+        "id": "collection_title",
+        "label": "Collection Title",
+        "default": "Products"
+    },
+    {
+        "type": "collection",
+        "id": "show_slider_featured_collection",
+        "label": "Best Gift Set Collection"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Customer Review",
+       "type": "Reviews",
+       "settings": [
+         {
+           "type": "text",
+           "id": "review_heading",
+           "label": "Add Review heading"
+         },
+        {
+            "type": "select",
+            "id": "start_select",
+            "label": "Review Count",
+            "options": [
+                {
+                    "value": "1",
+                    "label": "1" 
+                },
+                { 
+                    "value": "2",
+                    "label": "2" 
+                },
+                { 
+                    "value": "3",
+                    "label": "3" 
+                },
+                { 
+                    "value": "4",
+                    "label": "4" 
+                },
+                { 
+                    "value": "5",
+                    "label": "5" 
+                }          
+            ],
+            "default": "5"
+        },
+         {
+           "type": "richtext",
+           "id": "review_text",
+           "label": "Add Review Body"
+         }
+       ]
+     }
+   ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+
+<script async>
+  $(document).ready(function(){
+  $('#affiliate_reviews').slick({
+  slidesToShow: 3,
+  arrows:true,
+  dots:true,
+  centerMode: false,
+  responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            adaptiveHeight: true,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+  });
+});
+
+</script>

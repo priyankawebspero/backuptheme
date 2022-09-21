@@ -1,0 +1,87 @@
+@font-face {
+    font-family:'Candy Chicks';
+    src: url('../fonts/Candy Chicks.eot');
+  src: url('../fonts/Candy Chicks.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Candy Chicks.woff2') format('woff2'),
+    url('../fonts/Candy Chicks.woff') format('woff'),
+    url('../fonts/Candy Chicks.svg#Candy Chicks') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+
+@font-face {
+    font-family:'Segoe Pro Black';
+    src: url('../fonts/Segoe Pro Black.eot');
+  src: url('../fonts/Segoe Pro Black.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Segoe Pro Black.woff2') format('woff2'),
+    url('../fonts/Segoe Pro Black.woff') format('woff'),
+    url('../fonts/Segoe Pro Black.svg#Segoe Pro Black') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2215;
+}
+@font-face {
+    font-family:'Segoe Pro Cond';
+    src: url('../fonts/Segoe Pro Cond Bold.eot');
+  src: url('../fonts/Segoe Pro Cond Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Segoe Pro Cond Bold.woff2') format('woff2'),
+    url('../fonts/Segoe Pro Cond Bold.woff') format('woff'),
+    url('../fonts/Segoe Pro Cond Bold.svg#Segoe Pro Cond Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2215;
+}
+@font-face {
+    font-family:'Segoe Pro Semibold';
+    src: url('../fonts/Segoe Pro Semibold.eot');
+  src: url('../fonts/Segoe Pro Semibold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Segoe Pro Semibold.woff2') format('woff2'),
+    url('../fonts/Segoe Pro Semibold.woff') format('woff'),
+    url('../fonts/Segoe Pro Semibold.svg#Segoe Pro Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2215;
+}
+@font-face {
+    font-family:'Segoe UI Semibold';
+    src: url('../fonts/Segoe UI Semibold.eot');
+  src: url('../fonts/Segoe UI Semibold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Segoe UI Semibold.woff2') format('woff2'),
+    url('../fonts/Segoe UI Semibold.woff') format('woff'),
+    url('../fonts/Segoe UI Semibold.svg#Segoe UI Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-02DC;
+}
+
+@font-face {
+    font-family:'Segoe UI';
+    src: url('../fonts/Segoe UI.eot');
+  src: url('../fonts/Segoe UI.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Segoe UI.woff2') format('woff2'),
+    url('../fonts/Segoe UI.woff') format('woff'),
+    url('../fonts/Segoe UI.svg#Segoe UI') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-02DC;
+}
+
+@font-face {
+    font-family:'Segoe UI';
+    src: url('../fonts/Segoe UI Bold.eot');
+  src: url('../fonts/Segoe UI Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Segoe UI Bold.woff2') format('woff2'),
+    url('../fonts/Segoe UI Bold.woff') format('woff'),
+    url('../fonts/Segoe UI Bold.svg#Segoe UI Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-02DC;
+}

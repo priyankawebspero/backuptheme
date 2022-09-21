@@ -1,0 +1,28 @@
+{{ 'slick.min.js' | asset_url | script_tag }}
+{{ 'plum-affiliate.css' | asset_url | stylesheet_tag }}
+<div class="page-affiliate-landing">
+  <div class="container-fluid">
+    {% comment %}
+    Regular page content goes here.
+    {% endcomment %}
+    {% section 'affiliate-top-banner' %}
+    {% section 'affiliate-first-section' %}
+    {% section 'affiliate-second-section' %}
+    {% section 'affiliate-slider-section' %}
+    {% section 'affiliate-third-section' %}    
+    {% section 'affiliate-fourth-section' %}
+
+    {% if settings.enable_multilang and page.content contains '[lang2]' %}
+    <div class="rte lang1">
+      {{ page.content | split: '[lang2]' | first }}
+    </div>
+    <div class="rte lang2">
+      {{ page.content | split: '[lang2]' | last }}
+    </div>
+    {% else %}
+    <div class="rte">
+      {{ page.content | split: '[lang2]' | first }}
+    </div>
+    {% endif %}
+  </div>
+</div>

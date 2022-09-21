@@ -1,0 +1,138 @@
+
+    <div class="col-12" id="valentine_top_banner">
+      {% if section.settings.top_banner_url != blank%}
+      <a href="{{ section.settings.top_banner_url }}">
+        <img class="desktop_valentine" src="{{ section.settings.top_banner_image_desktop | img_url: 'master' }}"  alt="{{section.settings.top_banner_image_desktop.alt}}">
+        <img class="mobile_valentine" src="{{ section.settings.top_banner_image_mobile | img_url: 'master' }}"  alt="{{section.settings.top_banner_image_mobile.alt}}">
+      </a>
+      {% endif %}
+    </div>
+
+  <div class="section_divide">
+    <div class="container">
+       <div class="row">
+  <div class="col-md-6" id="valentine_her_banner">
+    {% if section.settings.for_her_url != blank%}
+    <a href="{{ section.settings.for_her_url }}">
+      <img class="desktop_valentine" src="{{ section.settings.for_her_dek | img_url: 'master' }}"  alt="{{section.settings.for_her_dek.alt}}">
+      <img class="mobile_valentine" src="{{ section.settings.for_her_mob | img_url: 'master' }}"  alt="{{section.settings.for_her_mob.alt}}">
+    </a>
+    {% endif %}
+  </div>
+  <div class="col-md-6" id="valentine_him_banner">
+    {% if section.settings.for_him_url != blank%}
+    <a href="{{ section.settings.for_him_url }}">
+      <img class="desktop_valentine" src="{{ section.settings.for_him_dek | img_url: 'master' }}"  alt="{{section.settings.for_him_dek.alt}}">
+      <img class="mobile_valentine" src="{{ section.settings.for_him_mob | img_url: 'master' }}"  alt="{{section.settings.for_him_mob.alt}}">
+    </a>
+    {% endif %}
+  </div>
+         </div>
+       </div>
+  </div>
+<div class="cs-featured-products">
+  <h3>Best Selling Gift Set</h3>
+  <div class="container">
+ <div class="row">
+  <div class="col-12 featured-products" data-featured-products-home>        
+    <div class="widget-product">
+      <div class="products-grid row four-items" data-row="4">
+        {% for product in collections[section.settings.show_slider_featured_collection].products limit:10 %}
+        <div class="grid-item col-6 col-md-4 col-lg-3 small--one-half">
+          {% include 'product-grid-item' %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div></div></div>
+  
+  </div>
+  
+  <div class="col-12" id="valentine_bottom_banner">
+    {% if section.settings.btm_banner_url != blank%}
+    <a href="{{ section.settings.btm_banner_url }}">
+      <img class="desktop_valentine" src="{{ section.settings.btm_banner_image_desktop | img_url: 'master' }}"  alt="{{section.settings.btm_banner_image_desktop.alt}}">
+      <img class="mobile_valentine" src="{{ section.settings.btm_banner_image_mobile | img_url: 'master' }}"  alt="{{section.settings.btm_banner_image_mobile.alt}}">
+    </a>
+    {% endif %}
+  </div>
+
+{% schema %}
+{
+  "name": "Valetine banner Section",
+  "class": "valetine-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "top_banner_image_desktop",
+      "label": "Add Top Banner Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "top_banner_image_mobile",
+      "label": "Add Top Banner Image"
+    },
+    {
+      "type": "url",
+      "id": "top_banner_url",
+      "label": "Top Banner Url"
+    },
+    {
+        "type": "collection",
+        "id": "show_slider_featured_collection",
+        "label": "Best Gift Set Collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "for_her_dek",
+      "label": "For Her Desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "for_her_mob",
+      "label": "For Her Mobile"
+    },
+    {
+      "type": "url",
+      "id": "for_her_url",
+      "label": "For Her Url"
+    },
+    {
+      "type": "image_picker",
+      "id": "for_him_dek",
+      "label": "For Him Desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "for_him_mob",
+      "label": "For Him Mobile"
+    },
+    {
+      "type": "url",
+      "id": "for_him_url",
+      "label": "For Him Url"
+    },
+    {
+      "type": "image_picker",
+      "id": "btm_banner_image_desktop",
+      "label": "Add Bottom Banner Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "btm_banner_image_mobile",
+      "label": "Add Bottom Banner Image"
+    },
+    {
+      "type": "url",
+      "id": "btm_banner_url",
+      "label": "Bottom Banner Url"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

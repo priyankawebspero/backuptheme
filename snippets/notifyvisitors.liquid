@@ -1,0 +1,186 @@
+<script>var nv=nv||function(){(window.nv.q=window.nv.q||[]).push(arguments)};nv.l=new Date;var notify_visitors=notify_visitors||function(){        var e={initialize:!1,ab_overlay:!1,auth:{ bid_e:"881F140CC3762731E62A1DC3F9072BDF",bid:"8196",t:"420"}};        return e.data={bid_e:e.auth.bid_e,bid:e.auth.bid,t:e.auth.t,iFrame:window!==window.parent,trafficSource:document.referrer,link_referrer:document.referrer,pageUrl:document.location,path:location.pathname,domain:location.origin,gmOffset:60*(new Date).getTimezoneOffset()*-1,screenWidth:screen.width,screenHeight:screen.height,isPwa:window.matchMedia&&window.matchMedia("(display-mode: standalone)").matches?1:0,cookieData:document.cookie},e.options=function(t){t&&"object"==typeof t?e.ab_overlay=t.ab_overlay:console.log("Not a valid option")},e.tokens=function(t){e.data.tokens=t&&"object"==typeof t?JSON.stringify(t):""},e.ruleData=function(t){e.data.ruleData=t&&"object"==typeof t?JSON.stringify(t):""},e.getParams=function(e){url=window.location.href.toLowerCase(),e=e.replace(/[\[\]]/g,"\\$&").toLowerCase();var t=new RegExp("[?&]"+e+"(=([^&#]*)|&|#|$)").exec(url);return t&&t[2]?decodeURIComponent(t[2].replace(/\+/g," ")):""},e.init=function(){if(e.auth&&!e.initialize&&(e.data.storage=e.browserStorage(),e.js_callback="nv_json1",!e.data.iFrame&&"noapi"!==e.getParams("nvcheck"))){var t="?";if(e.ab_overlay){var o=document.createElement("style"),n="body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}",a=document.getElementsByTagName("head")[0];o.setAttribute("id","_nv_hm_hidden_element"),o.setAttribute("type","text/css"),o.styleSheet?o.styleSheet.cssText=n:o.appendChild(document.createTextNode(n)),a.appendChild(o),setTimeout(function(){var e=this.document.getElementById("_nv_hm_hidden_element");if(e)try{e.parentNode.removeChild(e)}catch(t){e.remove()}},2e3)}for(var i in e.data)e.data.hasOwnProperty(i)&&(t+=encodeURIComponent(i)+"="+encodeURIComponent(e.data[i])+"&");e.load("https://www.notifyvisitors.com/ext/v1/settings"+t),e.initialize=!0}},e.browserStorage=function(){var t={session:e.storage("sessionStorage"),local:e.storage("localStorage")};return JSON.stringify(t)},e.storage=function(e){var t={};return window[e]&&window[e].length>0&&Object.keys(window[e]).forEach(function(o){-1!==o.indexOf("_nv_")&&(t[o]=window[e][o])}),t},e.load=function(e){var t=document,o=t.createElement("script");o.src=e,o.type="text/javascript",t.body?t.body.appendChild(o):t.head.appendChild(o)},e}();notify_visitors.init();</script>
+
+<script>
+{% if template.name == 'product' %}
+//product view event
+var _nv_shopify_product = {
+        product_name : '{{product.title}}',
+        product_id : '{{product.id}}',
+        product_collection : '{{product.collections}}',
+        product_image_url : 'https:{{product.featured_image.src | img_url: 'grande'}}',
+        product_url : '{{shop.secure_url}}{{product.url}}',
+        product_brand : '{{product.vendor}}',
+        product_price : '{{product.price}}'/100,
+        product_type : '{{product.type}}'
+}
+nv('event', 'nv_shop_product_viewed', _nv_shopify_product, 10, 1);
+{% endif %}
+
+
+//	Search Event
+
+{% if template.name == 'search' %}
+//search result event
+var _nv_shopify_search_result = [];
+{% for item in search.results %}
+_nv_shopify_search_result.push({product_name:'{{ item.title}}', product_url:'{{ shop.domain }}{{item.url}}'});
+{% endfor %}
+var _nv_shopify_product_search = {
+        search_result_count: {{search.results_count}},
+        search_terms: '{{search.terms}}',
+        search_type: '{{search.types}}',
+        search_data: _nv_shopify_search_result
+}
+nv('event', 'nv_shop_search_result', _nv_shopify_product_search, 10, 1);
+{% endif %}
+
+// Collection
+  
+{% if template.name == 'collection' %}
+//collection
+var _nv_shopify_collection_list = [];
+{% for product_type in collection.all_types %}
+  _nv_shopify_collection_list.push('{{ product_type}}');
+{% endfor %}
+var _nv_shopify_collection = {
+    collection_id : '{{collection.id}}',
+    collection_name : '{{collection.title}}',
+    collection_product_count : {{ collection.all_products_count }},
+    collection_product_type : _nv_shopify_collection_list
+}
+nv('event', 'nv_shop_collection', _nv_shopify_collection, 10, 1);
+{% endif %}
+
+
+// Cart Page
+{% if template.name == 'cart' %}
+//cart page
+var _nv_shopify_cart_list = [];
+{% for item in cart.items %}
+_nv_shopify_cart_list.push({
+        product_id:'{{ item.product.id }}',
+        product_quantity:{{ item.quantity }},
+        product_name:'{{item.product.title}}',
+        product_price:'{{ item.original_price}}'/100,
+        product_url:'{{shop.secure_url}}{{ item.url }}',
+        product_image_url:'{{ item | img_url: 'medium' }}',
+        product_total_price:'{{ item.original_line_price }}'/100
+});
+{% endfor %}
+var _nv_shopify_cart = {
+  cart_product_list : _nv_shopify_cart_list,
+  cart_total_price:'{{ cart.total_price }}'/100
+}
+nv('event', 'nv_shop_cart_item', _nv_shopify_cart, 10, 1);
+{% endif %}
+
+//add to cart ajax
+// var _nv_atc_buttons = document.querySelectorAll('.add-to-cart-btn,[name=add],#product-add-to-cart,.ProductForm__AddToCart,#AddToCart-product-template');
+// for (var i = 0; i < _nv_atc_buttons.length; i++) {
+//     var _nv_self = _nv_atc_buttons[i];
+//     _nv_self.addEventListener('click', function (event) {
+        
+//         var _nv_f = new FormData(this.form);
+//         console.log(event,"checked",_nv_f);
+//         $.ajax({
+//             url: '{{shop.secure_url}}/cart/add.js',
+//             dataType: 'json',
+//             type : 'post',
+//             data: _nv_f,
+//             async: false,
+//             processData: false, 
+//             contentType: false,
+//             success: function(product){
+//                 nv('event', 'nv_shop_add_to_cart', product, 10, 1);
+//             }
+//         });
+//     }, false);
+// }
+
+console.log("check it pleas",'{{ {shop.secure_url }}');
+//user subscribe
+var _nv_subscribe_buttons = document.querySelectorAll('#contact_form,#Subscribe');
+for (var i = 0; i < _nv_subscribe_buttons.length; i++) {
+    var _nv_subs_self = _nv_subscribe_buttons[i];
+    _nv_subs_self.addEventListener('click', function (event) {
+        var _subs_data = new FormData(this.form);
+        var _subs_object = {};
+        _subs_data.forEach(function(value, key){
+            _subs_object[key] = value;
+        });
+        nv('event', 'nv_shop_user_subscribe', _subs_object, 10, 2);
+    }, false);
+}
+
+// Code wwritten by Tejash Shah(BI01)
+$(function() {
+	console.log( "BI01 - ready!" );
+  // at time of Sign In
+	$( "#customer_login" ).submit(function( event ) {
+    'use strict';
+		// event.stopPropagation();
+		// event.preventDefault();
+    var useremail = $("#customer_email").val();
+    var _nv_shopify_user = {
+        name: "",
+        email: useremail,
+        mobile: ""
+    }
+    nv('user', useremail, _nv_shopify_user);
+    console.log("BI01 - notifyeventsignup Clicked", useremail);
+
+	});
+  // at time of Sign Up
+	$( "#create_customer" ).submit(function( event ) {
+    'use strict';
+		// event.stopPropagation();
+		// event.preventDefault();
+    var first_name = document.querySelectorAll("#first_name")[1].value;
+    var last_name = document.querySelectorAll("#last_name")[1].value;
+    var useremail = document.querySelectorAll("#email")[1].value;
+    var _nv_shopify_user = {
+        first_name : first_name,
+        last_name : last_name,
+        user_email : useremail
+    }
+    nv('user', useremail, _nv_shopify_user);
+    console.log("BI01 - create_customer Clicked");
+    // $("#customer_login").trigger("submit");
+	});
+  // Checkout Page Logic
+  // nv('event', ‘nv_checkout’, {‘orderId’:'123456' , ‘totalAmount’:'499'}, 10,2);
+
+  $("#btncheckout, #total_order_Price").click(function(event){
+    var total_price = $("#total_order_Price").data("total-price") / 100;
+    // console.log("BI01 - Total Price is ", total_price);
+    var _nv_shopify_user = {
+        total_price : total_price
+    }
+    nv('event', 'nv_checkout', _nv_shopify_user, 10, 1);
+    console.log("BI01 - Checkout Clicked");
+  });
+    // Check all Step
+    current_step = $(".step").attr("data-step");
+    $("#continue_button, .payment-due__price").click(function(event){
+      var total_price = $(".payment-due__price").data("checkout-payment-due-target") / 100;
+      var emailid = $("#checkout_email").val();
+      var phone = $("#checkout_shipping_address_phone").val();
+      var first_name = $("#checkout_shipping_address_first_name").val();
+      var last_name = $("#checkout_shipping_address_last_name").val();
+      var full_name = first_name + " " + last_name;
+      console.log("EMail ", emailid, "OPhone ",phone, "Total Value ",total_price);
+      var _nv_shopify_user = {
+        name : full_name,
+        emailid : emailid,
+        mobile : phone,
+        total_price : total_price
+      }
+      nv('event', 'nv_checkout', _nv_shopify_user, 10, 1);
+      nv('user', emailid, _nv_shopify_user);
+      console.log("BI01 - Checkout Clicked");      
+    });
+
+});
+
+
+</script>

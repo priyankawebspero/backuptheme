@@ -1,0 +1,212 @@
+{% assign file_extension = 'png' %}
+
+
+<!-- Capturing list -->
+{% capture tag_list_swatches %}
+{% for tag in product.tags %}
+            {% if tag contains 'combo_product_handel' %}
+            {% assign remove_handel = "combo_product_handel-" %}
+            {% assign product_tags = tag | remove_first:remove_handel | split: '_flavourname_' %}
+            
+            {% assign delimeter = "-" %}
+            {% assign product_handel = product_tags[0]  | handleize %}
+            {% assign flavour_value = product_tags[1]  | capitalize %}         
+             <li data-id="{{product_handel}}" class="swatch_list {% if product.handle contains product_handel %}active_li{% endif %}"><span class="image_box_min"><img src="{{ flavour_value | handle | prepend: 'fl_' | append: '.' | append: file_extension | file_url }}" alt="{{flavour_value}}" width="40px"></span><span class="flavour_tooltip">{{flavour_value}}</span></li>
+            {% endif %}
+   {% endfor %}
+{% endcapture %}
+
+
+
+<!-- Capturing Options -->
+{% capture tag_list_options %}
+ {% for tag in product.tags %}
+            {% if tag contains 'combo_product_handel' %}
+            {% assign remove_handel = "combo_product_handel-" %}
+            {% assign product_tags = tag | remove_first:remove_handel | split: '_flavourname_' %}
+            
+            {% assign delimeter = "-" %}
+            {% assign product_handel = product_tags[0]  | handleize %}
+            {% assign flavour_value = product_tags[1]  | replace: "-", " " | capitalize %}        
+          
+            <option value="{{ shop.url }}/{{product_handel}}" data-id="{{product_handel}}"  class="options {% if product.handle contains product_handel %}active_option{% endif %}" >{{flavour_value}}</option>
+            {% endif %}
+   {% endfor %}
+{% endcapture %}
+
+
+{%- if tag_list_swatches != blank or tag_list_options != blank -%}
+      <div class="options_bodywash">
+        <p>Fab fragrances to choose from : <span class="flavour_tooltip_info"></span></p>        
+        {% comment %}
+        {%- if tag_list_options != blank -%}
+          <select class="swatches_select" id="swatch_ins">
+            {{tag_list_options}}
+          </select>
+        {% endif %}
+        {% endcomment %}
+        {%- if tag_list_swatches != blank -%}
+<!--            <div class="swatch-options left">
+             <span class="flavour_details">
+             <span class="image_box_max"></span>
+             
+             </span>
+           </div> -->
+          <div class="swatch-options right"  id="swatch_lis">
+            <ul>{{tag_list_swatches}}</ul>
+          </div>
+        {% endif %}
+      </div>
+
+<script> 
+    // Adding the Active box Info
+    var flavour_image = $('.swatch-options ul').find('.active_li .image_box_min').html();
+    var flavour_info = $('.swatch-options ul').find('.active_li .flavour_tooltip').html();
+    $('.image_box_max').html(flavour_image);
+    $('.flavour_tooltip_info').html(flavour_info);
+    
+  
+  // On Click Swatch
+   $('#swatch_lis li').click(function() {
+     
+     $('li').removeClass('active_li');
+     $(this).addClass('active_li');
+
+     // Fetching the url of product 
+    let active_option = $(this).data('id'); 
+   
+
+    // Changing the Info of the active swatch
+     var flavour_image = $('.swatch-options ul').find('.active_li .image_box_min').html();
+    var flavour_info = $('.swatch-options ul').find('.active_li .flavour_tooltip').html();
+    $('.image_box_max').html(flavour_image);
+    $('.flavour_tooltip_info').html(flavour_info);
+     
+    // Changing the product url
+         window.history.pushState("Plumgoodness", active_option, "/products/" + active_option);
+     
+     
+     // Fetching and replacing the product url
+         (function worker() {
+          $.ajax({
+            url: '/products/' + active_option,
+            dataType : 'html',
+            beforeSend: function() {
+               $('.loading-modal').show();
+               $('body').addClass('loader_product');
+            },
+            success: function(data) {
+              let Title = $(data).find('.product_title_box');
+              let productVariants = $(data).find('#product-variants');
+              let priceInfoBox = $(data).find('.price_info_box');
+              let mobileDesacription = $(data).find('.visible_mobile .short-desc-datas');
+              let wishList = $(data).find('.cart_wish');
+              let gallery = $(data).find('.product-photos');
+              let tab1 = $(data).find('#collapse-tab1 .inside_tab');
+              let tab2 = $(data).find('#collapse-tab2 .inside_tab');
+              let tab3 = $(data).find('#collapse-tab3 .inside_tab');
+              let reviews = $(data).find('.tab-content #judgeme_product_reviews');
+              let qusetionBlcok = $(data).find('.tab-content #simpAskQuestion');
+              
+              
+              
+              $('.product_title_box').replaceWith(Title);
+              $('#product-variants').replaceWith(productVariants);
+              $('.price_info_box').html(priceInfoBox);
+              $('.cart_wish').replaceWith(wishList);
+              $('.product-photos').replaceWith(gallery);
+              $('.visible_mobile .short-desc-datas').replaceWith(mobileDesacription);
+              $('#collapse-tab1 .inside_tab').replaceWith(tab1);
+              $('#collapse-tab2 .inside_tab').replaceWith(tab2);
+              $('#collapse-tab3 .inside_tab').replaceWith(tab3);
+              $('.tab-content #judgeme_product_reviews').html(reviews);
+              $('.tab-content #simpAskQuestion').replaceWith(qusetionBlcok);
+              
+
+              $('.p-slider-s').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+                asNavFor: '.p-slider-n',
+                prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+                nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
+              });
+              $('.p-slider-n').slick({
+                slidesToShow: 5, /* reduce this number */
+                slideToScroll: 1,
+                asNavFor: '.p-slider-s',
+                dots: false,
+                focusOnSelect: true,
+                prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+                nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
+                responsive: [{
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 4
+                  }
+                },
+                             {
+                               breakpoint: 480,
+                               settings: {
+                                 slidesToShow: 4
+                               }
+                             }
+                            ]
+              });
+              var customerView = $('.product-shop [data-customer-view]');   
+                  if (customerView.length) {
+                    customerView.each(function () {
+                      var self = $(this);
+                      var views = self.data('customer-view').split(","),
+                       i = Math.floor(Math.random() * views.length);          
+                       self.find('label').text(views[i]);                      
+                      setInterval(function () {
+                        var views = self.data('customer-view').split(","),
+                            i = Math.floor(Math.random() * views.length);
+              
+                        self.find('label').text(views[i]);
+                      }, 100000);
+                    });
+                  }
+              
+             // ella.doAddOrRemoveWishlish();
+              setTimeout(() => {
+            console.log('jdgInit');
+          setTimeout(() => {
+                     jdgmCacheServer.reloadAll();
+                }, 1000)
+              jdgmCacheServer.reloadAll();
+            }, 100);
+            },
+            complete: function() {
+              $('.loading-modal').hide();
+              $('body').removeClass('loader_product');
+            }
+          });
+        })();
+
+   // });
+
+ });
+
+</script>
+
+{% endif %}
+
+<style>
+  li.swatch_list.active_li {
+    pointer-events: none;
+}.price_info_box .price_info_box {
+    border: none !important;
+    margin: 0;
+    padding: 0;
+}
+.jdgm-paginate__last-page:before {
+    content: '\e006';
+    font-size: 0;
+}.jdgm-paginate__first-page:before {
+    content: '\e004';
+    font-size: 0;
+}
+  </style>

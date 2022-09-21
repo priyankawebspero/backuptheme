@@ -1,0 +1,40 @@
+<div class="faqs-page">
+  <div class="container">
+    {% include 'breadcrumb' %}
+
+    <header class="page-header">
+      <h1 class="blog-headline">
+        <span class="blog-read">Frequently asked</span>
+        <span class="blog-page-title">questions</span>
+      </h1>  
+    </header>
+
+    {% section 'faq-page' %}
+    {% section 'faq-page2' %}
+    {% section 'faq-page3' %}
+    {% section 'faq-page4' %}
+  </div>
+</div>
+<style>
+  .des_faqs span {
+    font-size: 40px;
+    text-transform: initial;
+    color: #450466;
+  }
+  h4.panel-title span {
+    width: 100%;
+    font-weight: 600;
+  }
+  @media ( max-width: 786px ) {
+    .faqs-page .panel-group .panel-title a:before {
+      position: absolute;
+      top: 12px;
+      min-width: inherit;
+      margin-right: 0;
+      right: 0;
+    }
+     .des_faqs span {
+    font-size: 28px;
+     }
+  }
+</style>

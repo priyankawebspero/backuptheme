@@ -1,0 +1,253 @@
+{%- if section.settings.section_margin_top != blank or section.settings.section_margin_bottom != blank or section.settings.section_border != blank -%}
+{%- assign s_margin_top = section.settings.section_margin_top | remove: ' ' | join: ' ' -%}
+{%- assign s_margin_bottom = section.settings.section_margin_bottom | remove: ' ' | join: ' ' -%}
+{%- assign s_border = section.settings.section_border | remove: ' ' | split: '-' | join: ' ' -%}
+{%- endif -%}
+{%- capture style_block_section -%}
+   {%- if section.settings.section_margin_top != blank or section.settings.section_margin_bottom != blank or section.settings.section_padding_top != blank or section.settings.section_padding_right != blank or section.settings.section_padding_left != blank or section.settings.section_padding_bottom != blank or section.settings.section_bg_color != blank or section.settings.section_bg_image != blank or section.settings.section_border != blank -%}
+   <style type="text/css">.gl_custom_{{section.id}}{ {%- if section.settings.section_margin_top != blank -%} margin-top: {{s_margin_top}} !important;{%- endif -%}{%- if section.settings.section_margin_bottom != blank -%} margin-bottom: {{s_margin_bottom}} !important;{%- endif -%}{%- if section.settings.section_padding_top != blank -%}padding-top: {{section.settings.section_padding_top}} !important;{%- endif-%}{%- if section.settings.section_padding_right != blank -%}padding-right: {{section.settings.section_padding_right}} !important;{%- endif-%}{%- if section.settings.section_padding_bottom != blank -%}padding-bottom: {{section.settings.section_padding_bottom}} !important;{%- endif-%}{%- if section.settings.section_padding_left != blank -%}padding-left: {{section.settings.section_padding_left}} !important; {%- endif -%}{%- if section.settings.section_bg_color != blank -%}background-color: {{ section.settings.section_bg_color }} !important;{%- endif -%}{%- if section.settings.section_bg_image != blank -%}background-position: center !important; background-repeat: no-repeat !important; background-size: cover !important;{%- endif -%}{%- if section.settings.section_border != blank and section.settings.section_border_color != blank -%}border-width: {{ s_border }} !important; border-color: {{section.settings.section_border_color}} !important; border-style: {{section.settings.section_border_style}} !important{%- endif -%} }</style>
+   {%- endif -%}
+{%- endcapture -%}
+{{ style_block_section }}
+<div class="gl_custom_{{section.id}}"{%- if section.settings.section_bg_image != blank %} data-bgset="{%- include 'bgset', image: section.settings.section_bg_image -%}" data-sizes="auto" data-parent-fit="cover" style="background-image: url('{{ section.settings.section_bg_image | img_url: '50x50' }}')"{%- endif -%}>
+	{%- if section.settings.head_title != blank -%}
+		<div class="heading"><h3>{{ section.settings.head_title }}</h3></div>
+	{%- endif -%}
+<div class="row">
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'image' -%}
+      <div class="spb_column gl_column_container col-md-6">
+          <div class="gl_column-inner gl_mb_4">
+            <div class="spb_wrapper gl_figure">
+              <div class="spb_single_image gl_mb_0 spb_content_element gl_align_{{ block.settings.image_alignment_one }}">
+                <figure class="spb_wrapper gl_figure">
+                  <div class="pr gl_single_image-wrapper gl_box_border_grey {{ block.settings.image_style_one }}">
+                    {%- if block.settings.block_image != blank -%}
+                    {%- assign image = block.settings.block_image -%}
+                    {%- assign img_url = image | img_url: '600x', crop: 'center' -%}
+                    <img data-src="{{ img_url }}" src="{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" class="lazyautosizes lazyloaded" data-sizes="auto">
+                    {%- else -%}
+                    <img width="600" height="442" src="https://cdn.shopify.com/s/files/1/1933/6253/files/portfolio-placeholder_555x555_crop_center.jpg?12790048884060573015">                            
+                    {%- endif -%}
+                  </div>
+                </figure>
+              </div>
+            </div>
+          </div>
+       </div>
+      {%- when 'text' -%}
+      <div class="spb_column gl_column_container col-md-6">
+      <div class="gl_column-inner gl_mb_4">
+         <div class="spb_wrapper">
+           {%- if block.settings.text_title != blank -%}
+             <p style="font-size: 16px;color: #9b9b9b;line-height: 1;text-align: left" class="gl_custom_heading gl_mb_15">{{block.settings.text_title}}</p>
+            {%- endif -%}
+            {%- if block.settings.text_heading != blank -%}
+            <h2 style="font-size: 80px;color: #333333;line-height: 1;text-align: left" class="gl_custom_heading hidden-sm hidden-xs">{{block.settings.text_heading}}</h2>
+            {%- endif -%}
+            {%- if block.settings.text_heading != blank -%}
+            <h2 style="font-size: 45px;color: #333333;line-height: 1;text-align: left" class="gl_custom_heading hidden-lg hidden-md">{{block.settings.text_heading}}</h2>
+            {%- endif -%}
+            {%- if block.settings.content != blank -%}
+            <div class="spb_text_column spb_content_element gl_mb_25">
+               <div class="spb_wrapper">
+                  <p><span class="text-larger" style="color: #b1b1b1;">{{block.settings.content}}</span></p>
+               </div>
+            </div>
+            {%- endif -%}
+           {%- if block.settings.button_label != blank and block.settings.button_link != blank -%}
+           <div class="basel-button-wrapper text-center btn-inline"><a target="" rel="" title="" href="{{block.settings.button_link}}" class="btn btn-color-primary btn-style-default btn-size-default">{{block.settings.button_label}}</a></div>
+           {%- endif -%}
+           {%- if block.settings.button_label_2 != blank and block.settings.button_link_2 != blank -%}
+           <div class="basel-button-wrapper text-center btn-inline"><a target="" rel="" title="" href="{{block.settings.button_link_2}}" class="btn btn-color-default btn-style-bordered btn-size-default">{{block.settings.button_label_2}}</a></div>
+           {%- endif -%}
+        </div>
+         <div class="spb_wrapper">
+            {%- for block in section.blocks -%}
+               {%- if block.type == 'text' -%}
+                 {{block.settings.text_block}}
+               {%- endif -%}
+            {%- endfor -%}
+            {%- if section.settings.use_countdown -%}
+            <div class="basel-countdown-timer color-scheme-{{section.settings.countdown_color_scheme}} timer-align-{{section.settings.align}} timer-size-{{section.settings.size}} timer-style-{{section.settings.style}}">
+               <div class="basel-timer" data-end-date="{{section.settings.date}}"></div>
+            </div>
+            {%- endif -%}
+            {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
+            <div class="gl_empty_space" style="height: 25px"><span class="gl_empty_space_inner"></span></div>
+             <div class="basel-button-wrapper text-{{ section.settings.text_alignment }}">
+                <a href="{{ section.settings.button_link }}" class="btn btn-color-{{ section.settings.button_color }} btn-style-{{ section.settings.button_style }} btn-size-{{ section.settings.button_size }}">{{ section.settings.button_label }}</a>
+             </div>
+             {%- endif -%}
+         </div>
+      </div>
+   </div>
+      {%- if forloop.first -%}
+      <div class="spb_column gl_column_container gl_col-sm-1 gl_hidden-sm gl_hidden-xs"><div class="gl_column-inner "><div class="spb_wrapper"></div></div></div>
+      {%- endif -%}
+    {%- endcase -%}
+  {%- endfor -%}
+</div>
+</div>
+{%- unless section.settings.row_stretch == 'default' -%}
+  <div class="gl_row-full-width gl_clearfix"></div>
+  {%- endunless -%}
+{%- schema -%}
+  {
+    "name": "Image with text",
+    "class": "index-section section_image_text_4 container-padd60",
+    "settings": [
+     {
+        "type": "header",
+        "content": "== Design Options"
+     },
+	{
+	  "type": "text",
+	  "id": "head_title",
+	  "label": "Title",
+	  "default":"Heading"
+	},
+     {
+        "type": "image_picker",
+        "id": "section_bg_image",
+        "label": "Background Image"
+      },
+      {
+        "type": "color",
+        "id": "section_bg_color",
+        "label": "Background color"
+      },
+      {
+        "type": "text",
+        "id": "section_margin_top",
+        "label": "Margin top",
+        "info": "60px"
+      },
+      {
+        "type": "text",
+        "id": "section_margin_bottom",
+        "label": "Margin bottom",
+        "info": "60px"
+      },
+      {
+        "type": "text",
+        "id": "section_padding_top",
+        "label": "Padding top",
+        "info": "60px"
+      },
+{
+        "type": "text",
+        "id": "section_padding_right",
+        "label": "Padding right",
+        "info": "60px"
+      },
+{
+        "type": "text",
+        "id": "section_padding_bottom",
+        "label": "Padding bottom",
+        "info": "60px"
+      },
+{
+        "type": "text",
+        "id": "section_padding_left",
+        "label": "Padding left",
+        "info": "60px"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Images gallery",
+        "limit": 1,
+        "settings": [
+             {
+              "type": "image_picker",
+              "id": "block_image",
+              "label": "Image"
+            },
+            {
+           "type": "select",
+           "id": "image_alignment_one",
+           "options": [
+             {
+               "value": "left",
+               "label": "Left"
+             },
+             {
+               "value": "right",
+               "label": "Right"
+             },
+             {
+               "value": "center",
+               "label": "Center"
+             }
+           ],
+           "label": "___ Image alignment",
+           "default": "center",
+           "info": "Select image alignment."
+         }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "Text Block",
+        "limit": 1,
+        "settings": [
+            {
+              "type": "text",
+              "id": "text_title",
+              "label": "Title",
+              "default":"AN EDIT OF OUR LATEST FAVOURITES"
+            },
+{
+              "type": "text",
+              "id": "text_heading",
+              "label": "Heading",
+              "default":"Contrasting<br>Red Shirt"
+            },
+{
+              "type": "textarea",
+              "id": "content",
+              "label": "Content",
+              "default":"There are many variations of passages of lorem ipsum available, but the majority have suffered alteration."
+            },
+            {
+              "type": "text",
+              "id": "button_label",
+              "label": "___ Button label"
+            },
+            {
+              "type": "url",
+              "id": "button_link",
+              "label": "___ Button link"
+            },
+            {
+              "type": "text",
+              "id": "button_label_2",
+              "label": "___ Button label 2"
+            },
+            {
+              "type": "url",
+              "id": "button_link_2",
+              "label": "___ Button link 2"
+            }
+         ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image with text (fashion 4.0)",
+        "category": "Image",
+        "blocks": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "text"
+          }
+         ]
+      }
+    ]
+  }
+{% endschema %}

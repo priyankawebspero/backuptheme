@@ -1,0 +1,447 @@
+{% if section.blocks.size > 0 %}
+<div class="concern-crg-block" id="concern-spotlight-slider-{{section.id}}">
+  {% if section.settings.heading != blank and section.settings.text != blank %}
+  <div class="widget-title">   
+    <h3 class="box-title">
+      <span class="title"> 
+        <span>
+          {{section.settings.heading}}
+        </span>
+      </span>
+    </h3>            
+    <div class="description"><p> {{section.settings.text}}</p> <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/Desk_Curvy_Arrow.png?v=1640585650" ></div>
+  </div>
+  {% endif %}
+  <div id="top_scroll" class="{% if section.settings.layout == 'default' %}container{% elsif section.settings.layout == 'padd_50' %}container-padd60{% else %}container-fluid{% endif %}">
+    <div class="tabs_upper_cs row spotlight-{{ section.blocks.size }}-blocks"{% if section.blocks.size > 1 %} data-blogs-slider-new{% endif %} data-rows="5">
+      {% for block in section.blocks %}       
+
+      <div class="col-md-3 col-sm-6">
+        <div class="spotlight-item" data-id="{% if block.settings.link_text != blank%}{{block.settings.link_text | strip | handleize}}{% endif %}">
+          <div class="img-box">
+            {% if block.settings.link != blank or block.settings.link_text != blank %}
+            <div class="content spotlight-inner">
+              <h3 class="title">
+                {% include 'multilang' with block.settings.link_text %} 
+              </h3>
+            </div>
+            {% endif %}
+            <div class="img-box-ratio">
+              {% if block.settings.image != blank %}
+
+              {%- assign img_url = block.settings.image | img_url: '100x', format: 'pjpg'-%}
+
+              <img data-src="{{ img_url }}"
+                   src="https:{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"
+                   class="lazyautosizes lazyloaded" data-sizes="auto">
+
+              {% else %}
+              <div class="not_img">
+                100 x 100px
+              </div>   
+              {% endif %}
+            </div>                      
+            <i class="fa fa-angle-down"></i>
+          </div> 
+        </div>
+      </div>
+      {% endfor %}     
+
+    </div>
+    {% for block in section.blocks %}
+    <div class="concern_tab" id="{% if block.settings.heading != blank%}{{block.settings.link_text | strip | handleize}}{%endif%}">
+      <div class="prod_area">
+      <div class="left_area col-lg-6 col-md-6 col-sm-12">
+        {% if block.settings.heading != blank%}
+        <h2 class="heading_serum">
+          {{ block.settings.heading }}
+        </h2>
+        {% endif %}
+        {% if block.settings.image_1 != blank %}
+
+        {%- assign img_url = block.settings.image_1 | img_url: 'master'-%}
+        {%- assign img_url_mob = block.settings.image_1_mob | img_url: 'master'-%}
+
+        <img data-src="{{ img_url }}"
+             src="https:{{ img_url }}" alt="{{ block.settings.image_1.alt | default: shop.name }}" itemprop="logo"
+             class="lazyautosizes lazyloaded" data-sizes="auto">
+        <img data-src="{{ img_url_mob }}"
+             src="https:{{ img_url_mob }}" alt="{{ block.settings.image_2.alt | default: shop.name }}" itemprop="logo"
+             class="lazyautosizes lazyloaded mobile" data-sizes="auto">
+        {% else %}
+        <div class="not_img">
+          400 x 400px
+        </div>   
+        {% endif %}
+        {% if block.settings.image_2 != blank %}
+
+        {%- assign img_url = block.settings.image_2 | img_url: 'master'-%}
+        {%- assign img_url_mob = block.settings.image_2_mob | img_url: 'master'-%}
+
+        <img data-src="{{ img_url }}"
+             src="https:{{ img_url }}" alt="{{ block.settings.image_2.alt | default: shop.name }}" itemprop="logo"
+             class="lazyautosizes lazyloaded desktop" data-sizes="auto">
+        <img data-src="{{ img_url_mob }}"
+             src="https:{{ img_url_mob }}" alt="{{ block.settings.image_2.alt | default: shop.name }}" itemprop="logo"
+             class="lazyautosizes lazyloaded mobile" data-sizes="auto">
+        {% else %}
+        <div class="not_img">
+          200 x 200px
+        </div>   
+        {% endif %}
+        {% if block.settings.heading != blank%}
+        <div class="richtext">{{block.settings.richtext}}</div>
+        {% endif %}
+      </div>
+      <div class="right_area col-lg-6 col-md-6 col-sm-12">
+        {% if block.settings.product != blank%}
+        {% assign product = block.settings.product %}
+        {% include 'product-grid-item' id:product%}
+        {% endif %}
+        {% if block.settings.image_video != blank %}
+        <div class="popup_video_link">
+          {%- assign img_url = block.settings.image_video | img_url: 'master'-%}
+
+          <img data-src="{{ img_url }}"
+               src="https:{{ img_url }}" alt="{{ block.settings.image_video.alt | default: shop.name }}" itemprop="logo"
+               class="lazyautosizes lazyloaded desktop" data-sizes="auto">
+          {% else %}
+          <div class="not_img">
+            200 x 200px
+          </div>   
+          {% endif %}
+          {% if block.settings.video_link != blank%}
+          <input class="videourl" type="hidden" data-url="{{ block.settings.video_link }}"> 
+          {% endif %}
+         </div>  
+      </div>    
+     </div>
+        {% include 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, product: product %}
+      
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="concern-products" id="featured-products-{{block.id}}">
+          <div class="container-padd60">
+            <div class="row">        
+              <div class="col-md-12 column-product">       
+
+                {% if block.settings.featured_products_title != blank %}
+                <div class="widget-title">   
+                  <h3 class="box-title">
+                    <span class="title"> 
+                      {{block.settings.featured_products_title}}
+                    </span>
+                  </h3>
+                </div>
+                {% endif %}
+
+                <div class="widget-product ">
+                  <div class="products-grid row four-items" data-row="4" slider-featured-products>
+                    {% for product in collections[block.settings.show_slider_featured_collection].products limit:8 %}
+                    <div class="grid-item col-6 col-md-4 col-lg-3">
+                      {% include 'product-grid-item' %}
+                    </div>
+                    {% else %}
+                    {% for product in (1..8) %}
+                    <div class="grid-item col-6 col-md-4 col-lg-3">
+                      <div class="grid-view-item no-product">
+                        <div class="product-top">
+                          <div class="not_img">
+                            Product Img
+                          </div>
+                        </div>
+
+                        <div class="product-bottom">
+                          <div class="product-title">
+                            <span>
+                              Your product's name
+                            </span>`
+                          </div>
+
+                          <div class="price-box">
+                            <span> $250.00 </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {% endfor %}
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>        
+      </div>
+     
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="popup-tbl-pg"><div class="popup-tbl-pg-inner">
+  <button class="close">X</button>
+<div class="video_ration_custom"> <iframe class="youtube_frame_popup" width="100%" height="420" src="https://www.youtube.com/embed/5Peo-ivmupE" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+</div></div></div>
+
+<div class="overlay_popup"></div>
+<style>
+  {% assign margin_bottom =  section.settings.margin_bottom %}
+
+  {% if section.settings.display_padding %}
+  #home-spotlight-slider-{{ section.id }} {
+    padding: 50px 0 90px;
+  }
+
+  @media (max-width: 1199px) and (min-width: 768px) {
+    #home-spotlight-slider-{{ section.id }} {
+      padding: 40px 0 70px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    #home-spotlight-slider-{{ section.id }} {
+      padding: 30px 0 50px;
+    }
+  }
+  {% endif %}
+
+  #home-spotlight-slider-{{ section.id }} {
+    background-color: {{ section.settings.bg_color }};    
+  }
+
+  #home-spotlight-slider-{{ section.id }} .widget-title .box-title .title {
+    background-color: {{ section.settings.bg_color }};    
+  }
+
+  @media (max-width: 1199px) {
+    #home-spotlight-slider-{{ section.id }} {
+      margin-bottom: {{ section.settings.margin_bottom_mb }}px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    #home-spotlight-slider-{{ section.id }} {
+      margin-bottom: {{ margin_bottom }}px;
+    }
+  } 
+</style>
+{% endif %}
+
+
+{% schema %}
+{
+"name": "Concern Flipbox",
+"class": "concern-flipbox-slider-sections",
+"max_blocks": 5,
+"settings": [      
+{
+"type": "select",
+"id": "layout",
+"label": "Layout:",
+"options": [
+{
+"value": "default",
+"label": "Default"
+},
+{
+"value": "padd_50",
+"label": "Boxed"
+},
+{
+"value": "full",
+"label": "Full Width"
+}
+],
+"default": "default"
+},
+{
+"type": "checkbox",
+"id": "display_padding",
+"label": "Display Padding?",
+"default": true
+},
+{
+"type" : "color",
+"id" : "bg_color",
+"label" : "Background Color",
+"default" : "#f5f5f5"
+} ,
+{
+"type" : "text",
+"id" : "heading",
+"label" : "Add Heading"
+} ,
+{
+"type" : "text",
+"id" : "text",
+"label" : "Add Text"
+} 
+],
+"blocks": [
+{
+"type": "image",
+"name": "Image",
+"settings": [       
+{
+"type": "image_picker",
+"id": "image",
+"label": "Front Icon"
+},
+{
+"type" : "text",
+"id" : "link_text",
+"label" : "Concern Front Title",
+"default" : "Concern Front Title"
+},{
+"type" : "text",
+"id" : "heading",
+"label" : "Concern Heading",
+"default" : "Concern Heading"
+},
+{
+"type" : "image_picker",
+"id" : "image_1",
+"label" : "Image for Desktop"
+},
+{
+"type" : "image_picker",
+"id" : "image_1_mob",
+"label" : "Image for Mobile"
+},
+{
+"type" : "image_picker",
+"id" : "image_2",
+"label" : "Image for Desktop"
+},
+{
+"type" : "image_picker",
+"id" : "image_2_mob",
+"label" : "Image for Mobile"
+},
+{
+"type" : "richtext",
+"id" : "richtext",
+"label" : "Concern Textarea",
+"default" : "<p>Concern Textarea</p>"
+},
+{
+"type": "product",
+"id": "product",
+"label": "Select your Product"
+},
+{
+"type": "image_picker",
+"id": "image_video",
+"label": "Add Video Image"
+},
+{
+"type" : "url",
+"id" : "video_link",
+ "label" : "Add Video link"
+},
+{
+"type": "collection",
+"id": "show_slider_featured_collection",
+"label": "Collection to use"
+},
+{
+"type": "text",
+"id": "featured_products_title",
+"label": "Product Slider Heading"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Concern Slider",
+"category": "Advanced layout",
+"blocks": [
+{
+"type": "image"
+},
+{
+"type": "image"
+},
+{
+"type": "image"
+}
+]
+}
+]
+}
+{% endschema %}
+
+
+<script>
+  $('#scroll_top').on('click', function(){
+    $('html,body').animate({scrollTop: $("#top_scroll").offset().top},'slow');
+  })
+
+  var blogBlock = $('[data-blogs-slider-new]');
+
+  blogBlock.each(function() {
+    var self = $(this),
+        rows = self.data('rows');
+
+    if(self.not('.slick-initialized')) {
+      self.slick({
+        slidesToShow: rows,
+        slidesToScroll: 1,
+        dots: true,
+        autoplay: false,
+        infinite: false,
+        arrows: true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToScroll:1,
+              slidesToShow: 5
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToScroll: 1,
+              slidesToShow: 2
+            }
+          }
+        ]
+      });
+    };
+  });
+
+   $('div[data-id="dullness-pigmentation"]').addClass("active");
+  $("#dullness-pigmentation" ).addClass("active");
+  
+  $('.popup_video_link').on('click', function(){
+    let videoUrl = $(this).find('.videourl').data('url');
+    $('.popup-tbl-pg').addClass('open-popup');
+    $('body').addClass('popup-opened');
+    $('.popup-tbl-pg iframe').attr('src', videoUrl);
+  });
+
+  $('button.close').on('click', function(){
+    $('.popup-tbl-pg').removeClass('open-popup');
+    $('iframe').attr('src', $('iframe').attr('src'));
+    $('body').removeClass('popup-opened');
+  });
+
+  $(document).click(function (e) {
+    if (!$(e.target).parents().andSelf().is('.popup_video_link')) {
+      $(".popup-tbl-pg").removeClass('open-popup');
+      $('iframe').attr('src', $('iframe').attr('src'));
+      $('body').removeClass('popup-opened');
+    }
+  });
+
+
+  $(".spotlight-item").on("click", function(){
+    var concern_id = $(this).data("id");
+    $("body").find(".concern_tab" ).removeClass("active");
+    $("body").find(".spotlight-item" ).removeClass("active");
+    $(this).addClass("active");
+    $("body").find("#" + concern_id ).addClass("active");
+  });
+</script>

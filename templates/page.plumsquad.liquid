@@ -1,0 +1,12 @@
+{{ 'plum-squad.css' | asset_url | stylesheet_tag }}
+<div class="page-plum-squad">
+  <div class="container-fluid">
+    {% comment %}
+    Regular page content goes here.
+    {% endcomment %}
+    {% section 'plum-squad-image-sec' %}
+    {% section 'video-image-banner' %}
+    {% section 'step-section' %}
+    {% section 'squad-last-section' %}    
+  </div>
+</div>

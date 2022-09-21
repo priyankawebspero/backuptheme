@@ -1,0 +1,35 @@
+.page-affiliate-landing .container-fluid{max-width:100%;padding:0}
+.page-affiliate-landing .container-fluid .row{margin-left:0;margin-right:0}
+#shopify-section-diwali-top-banner .images-contain img{width:100%}
+.img-box-ratio img{width:100%;height:auto}
+#offer-diwali main.main-content{padding-bottom:0}
+div#shopify-section-diwali-second-section{display:none!important}
+#shopify-section-diwali-slider-section #home-spotlight-slider-diwali-slider-section:after{background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/desktop_bottom_im.jpg);background-position:bottom;content:"";display:block;width:100%;height:345px}
+#shopify-section-diwali-slider-section #home-spotlight-slider-diwali-slider-section ul.slick-dots{position:absolute;bottom:-80px;width:100%;left:0}
+#shopify-section-diwali-slider-section .slick-dots li{width:28px;height:28px;margin:0 14px}
+#shopify-section-diwali-slider-section .slick-dots li button{width:100%;height:100%;background:#fdf1c4}
+#shopify-section-diwali-slider-section .slick-dots li.slick-active button{background:#7806ac}
+.img-box-ratio img{border-radius:0!important}
+div#shopify-section-diwali-slider-section{margin-top:-1px}
+#shopify-section-diwali-slider-section .slick-arrow.slick-next{font-size:0;right:20px;background:none;height:auto;box-shadow:none!important}
+#shopify-section-diwali-slider-section .slick-arrow.slick-prev{font-size:0;left:20px;background:none;height:auto;box-shadow:none!important}
+#shopify-section-diwali-slider-section .slick-arrow.slick-next:after{content:"\f105";display:inline-block;font:normal normal normal 14px/1 FontAwesome;color:#5c0f8b;font-size:47px}
+#shopify-section-diwali-slider-section .slick-arrow.slick-prev:after{content:"\f104";display:inline-block;font:normal normal normal 14px/1 FontAwesome;color:#5c0f8b;font-size:47px}
+@media only screen and (min-width:640px) {
+#shopify-section-diwali-slider-section .img-box-ratio img.mobile{display:none!important}
+}
+@media only screen and (max-width:1250px) {
+#shopify-section-diwali-slider-section #home-spotlight-slider-diwali-slider-section:after{height:200px;background-size:cover}
+#shopify-section-diwali-slider-section #home-spotlight-slider-diwali-slider-section ul.slick-dots{bottom:-50px;padding:0 15px}
+#shopify-section-diwali-slider-section .slick-dots li{width:22px;height:22px;margin:0 10px}
+}
+@media only screen and (max-width:639px) {
+#shopify-section-diwali-slider-section .slick-arrow.slick-next{right:0}
+#shopify-section-diwali-slider-section .slick-arrow.slick-prev{left:0}
+#shopify-section-diwali-top-banner img.slide-mobile{display:block!important}
+#shopify-section-diwali-top-banner img.slide-desktop{display:none!important}
+#shopify-section-diwali-slider-section .img-box-ratio img.desktop{display:none!important}
+#shopify-section-diwali-slider-section .slick-dots li{width:15px;height:15px;margin:0 7px}
+#shopify-section-diwali-slider-section #home-spotlight-slider-diwali-slider-section:after{height:125px;background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/mobile_landingpage_bottom.jpg);background-position:bottom;background-size:cover}
+#shopify-section-diwali-slider-section #home-spotlight-slider-diwali-slider-section ul.slick-dots{bottom:-35px;padding:0 15px}
+}

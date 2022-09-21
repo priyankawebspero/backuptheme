@@ -1,0 +1,71 @@
+
+<div class="homepage-find-your-custom-fit container">
+  <div class="col-sm-12">
+    {% if section.settings.title_name != blank %}
+    <div class="widget-title not-before">   
+      <h3 class="box-title">
+        <span class="title"> 
+          {% include 'multilang' with section.settings.title_name %}
+        </span>
+      </h3>
+    </div>
+    {% endif %}
+    <div class="skin-fit-data ">
+      <div class="form-infos">
+        <div class="form-data">
+          <select>
+            <option value="Daily Routine">Daily Routine</option>
+            <option value="Daily Routine1">Daily Routine1</option>
+            <option value="Daily Routine2">Daily Routine2</option>
+            <option value="Daily Routine3">Daily Routine3</option>
+          </select>
+        </div>
+        <div class="form-data">
+          <select>
+            <option value="Skin Type">Skin Type</option>
+            <option value="Skin Type1">Skin Type1</option>
+            <option value="Skin Type2">Skin Type2</option>
+            <option value="Skin Type3">Skin Type3</option>
+          </select>
+        </div>
+        <div class="form-data">
+          <select>
+            <option value="Skin Concern">Skin Concern</option>
+            <option value="Skin Concern1">Skin Concern1</option>
+            <option value="Skin Concern2">Skin Concern2</option>
+            <option value="Skin Concern3">Skin Concern3</option>
+          </select>
+        </div>
+        <div class="form-data">
+          <button type="button" class="btn get-regime-btn">get your regime now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+"name": "Find Your Fit Skin",
+"settings": [
+{
+"type": "header",
+"content": "Header"
+},
+{
+"type": "text",
+"id": "title_name",
+"label": "Title Name",
+"default": "find your custom-fit skin regime"
+}	  	  
+],
+"presets": [
+{
+"name": "Find Your Fit Skin"   
+}
+]
+}
+{% endschema %}
+
+

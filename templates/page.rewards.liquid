@@ -1,0 +1,243 @@
+<style>
+  .top-banner img {
+    width: 100%;
+      cursor: initial;
+  }
+  .widget-title .box-title, .page-header .blog-headline {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+  #home-spotlight-home-custom-block-spotlight {
+  	margin-top: 50px;
+  }
+  .multiple-ways.container h2 {
+    font-weight: 400;
+    font-family: roboto;
+        color: #5e0d8b;
+}
+  .content.spotlight-inner .title {
+     font-size: 26px;
+    color: #5e0d8b;
+    text-transform: none;
+    font-family: roboto;
+    margin-bottom: 9px;
+    font-weight: 400;
+  }
+  .content.spotlight-inner .des {
+  	font-weight: 400;
+  }
+  .rewards-points, .rewards-faq {
+    background: #fafafa;
+  }
+  .rewards-points .widget-title {
+  	margin-bottom: 30px;
+  }
+  #home-lookbook-home-lookbook {
+  	padding-top: 45px;
+    margin-bottom: 0;
+  }
+  .multiple-ways.container {
+  	padding-bottom: 0;
+  }
+  .multiple-ways .widget-title .box-title:before {display: none;}
+  .multiple-ways.container h3.box-title {
+    margin: 43px 0 38px;
+  }
+  .multiple-ways .widget-title {margin-bottom: 0;}
+  .multiple-ways .first_row {
+  	margin-bottom: 55px;
+  }
+  .multiple-ways .first_row p {
+  	color: #000;
+    font-weight: 300;
+  }
+  .rewards-faq {
+    padding: 19px 0 40px;
+  }
+  .rewards-faq .page-header {
+  	border-color: #ccc !important;
+  }
+  .rewards-faq .page-header .blog-headline {
+      margin-bottom: 20px;
+    font-weight: 400;
+    font-family: roboto;
+    color: #5e0d8b;
+  }
+  section#faqs_page {
+    padding: 0 34px;
+  }
+  .rewards-faq .panel-title {
+  	font-size: 18px;
+    margin-bottom: 0;
+  }
+  .rewards-faq .panel-title a {
+  	padding: 15px 15px 6px 7px !important;
+    border-color: #ebebeb !important;
+  }
+
+  .rewards-faq .panel-title a:before {
+  	width: 12px;
+    height: 2px;
+    right: 0;
+    top: 20px;
+  }
+  .rewards-faq .panel-title a:after {
+  	width: 2px !important;
+    height: 12px;
+    right: 5px;
+    top: 15px;
+    opacity: 0;
+  }
+  .rewards-faq .panel-title a.collapsed:after {opacity: 1;}
+  .rewards-faq .panel-title a span {font-weight: 400; color: #5e0d8b;}
+  .rewards-faq .panel:last-child .panel-title a {border-bottom: none !important;}
+  
+  @media only screen and (min-width: 768px) {
+    .multiple-ways .first_row:nth-of-type(2) .left_content {
+      float: right;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    #home-spotlight-home-custom-block-spotlight {
+    margin-top: 25px;
+}
+    #plum-rewards .widget-title .box-title .title {
+    padding:0;
+    }
+    .widget-title .box-title, .page-header .blog-headline {
+      font-size: 24px;
+    }
+    .home-spotlight-block .widget-title.no-des {margin-bottom: 10px;}
+    .spotlight-3-blocks {
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+    }
+    .content.spotlight-inner {padding-top: 11px;}
+    .content.spotlight-inner .title {
+      max-height: initial;
+      font-size: 22px;
+      margin-bottom: 3px;
+    }
+    .content.spotlight-inner .des {
+      color: #777;
+      line-height: 21px;
+    }
+    #home-lookbook-home-lookbook {
+      padding: 22px 0 35px;
+      margin-bottom: 0 !important;
+    }
+    .rewards-points .widget-title {
+    margin-bottom: 18px;
+}
+    .home-lookbook .lookbook-custom .item {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .multiple-ways.container h3.box-title {
+      margin: 25px 0 22px;
+    }
+    .multiple-ways .first_row {
+      margin-bottom: 28px;
+    }
+    .multiple-ways .first_row .left_content {
+      float: none;
+    }
+    .multiple-ways .first_row .right_content {
+      margin-top: 20px;
+    }
+    .multiple-ways .first_row h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .rewards-faq {
+      padding: 19px 0 30px;
+    }
+    .rewards-faq .page-header .blog-headline {
+      text-transform: initial;
+      margin-bottom: 23px;
+    }
+    .rewards-faq .page-header {
+      margin-bottom: 10px !important;
+    }
+    section#faqs_page {
+      padding: 0;
+    }
+    .rewards-faq .panel-title {
+      font-size: 16px;
+    }
+    .rewards-faq .panel-title a {padding-left: 0 !important;}
+  }
+</style>
+
+<div class="page-tpl">
+  <div class="top-banner">
+    {% section 'simple-banner' %}
+  </div>
+
+  <div class="rewards-work container">
+    {% section 'home-custom-block-spotlight' %}
+  </div>
+
+  <div class="rewards-points">
+    <div class="container">
+      {% section 'home-lookbook' %}
+    </div>
+  </div>
+
+  <div class="multiple-ways container">
+
+    <div class="widget-title">   
+      <h3 class="box-title">
+        <span class="title"> 
+          Here are the multiple ways you can get plum reward points
+        </span>
+      </h3>
+      <div class="first_row">
+        <div class="text-center left_content">
+          <img src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/birthday_delight.png?v=1577444630">
+        </div>
+        <div class="text-center right_content paddinft30">
+          <h2>Birthday delight!</h2>
+          <p>Your birthday is an extremely special day and we want to make sure Plum has a ‘good’ role in making it even more special!</p>
+          <p>Get 1000 Plum reward points on your birthday i.e. Rs.100 for you to redeem at your next order on our website! </p>
+        </div>
+      </div>
+
+      <div class="first_row">
+        <div class="text-center left_content">
+          <img src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/referral_joy.png?v=1577444630">
+        </div>
+        <div class="text-center right_content paddinft30">
+          <h2>Referral joy!</h2>
+          <p>Spreading goodness often comes at a cost. At Plum, that means Plum Products at a lower cost :)</p>
+          <p>Get 1000 Plum reward points i.e. Rs.100/- off every time your referred person’s first purchase on the website is realised. What’s more? Your friend gets 10% off on their first order too.</p>
+        </div>
+      </div>
+
+      <div class="first_row">
+        <div class="text-center left_content">
+          <img src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/Empties4Good.png?v=1577444630">
+        </div>
+        <div class="text-center right_content paddinft30">
+          <h2>#Empties4Good just got better</h2>
+          <p>Our unique #Empties4Good  feature, allows you to not only reduce environmental damage but also reduces how much you’d spend on your next purchase.</p>
+          <p>For every empty you send us, we reward you with 500 Plum reward points i.e. Rs. 50 in shopping credits on plumgoodness.com!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rewards-faq">
+    <div class="container">
+      {% section 'rewards-faq' %}
+    </div>
+  </div>
+
+</div>

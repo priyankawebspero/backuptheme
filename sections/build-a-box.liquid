@@ -1,0 +1,190 @@
+{% if section.settings.banner_image != blank %}            
+  {%- assign img_url = section.settings.banner_image | img_url: 'master' , format: 'pjpg'-%}
+  {%- assign img_url_mobile = section.settings.banner_image_mb | img_url: 'master' , format: 'pjpg'-%}
+  <img data-src="{{ img_url }}"
+       src="https:{{ img_url }}" alt="{{ section.settings.image.alt | default: shop.name }}" itemprop="logo"
+       class="lazyautosizes lazyload desktop" data-sizes="auto">
+  <img data-src="{{ img_url_mobile }}"
+       src="https:{{ img_url_mobile }}" alt="{{ section.settings.image.alt | default: shop.name }}" itemprop="logo"
+       class="lazyautosizes lazyload mobile" data-sizes="auto" style="display:none;">
+
+{% endif %}
+
+{% if section.blocks.size > 0 %}
+<div class="affiliate-spotlight-block home-spotlight-2">
+  <div class="container-padd60 colx-box-swap"> 
+   {% for block in section.blocks %}
+   {% case block.type %}
+    {% when 'image' %}
+    <div class="row">                 
+      <div class="col-5 col-md-5">
+        <div class="spotlight-item">
+          <div class="img-box">
+              {% if block.settings.image != blank %}            
+            {%- assign img_url = block.settings.image | img_url: 'master' , format: 'pjpg'-%}
+            {%- assign img_url_mobile = block.settings.image_mob | img_url: 'master' , format: 'pjpg'-%}
+              <img data-src="{{ img_url }}"
+                   src="https:{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"
+                   class="lazyautosizes lazyload desktop" data-sizes="auto">
+            <img data-src="{{ img_url_mobile }}"
+                 src="https:{{ img_url_mobile }}" alt="{{ block.settings.image_mob.alt | default: shop.name }}" itemprop="logo"
+                 class="lazyautosizes lazyload mobile" data-sizes="auto" style="display:none;">
+              {% else %}
+              <div class="not_img">
+                370 x 440px
+              </div>   
+              {% endif %}
+         </div>
+        </div>
+      </div>
+      <div class="col-7 col-md-7">
+        {% if block.settings.builder_title != blank %}
+        <h3>{{block.settings.builder_title}}</h3>
+        {% endif %}
+        {% if block.settings.builder_area != blank %}
+        <div>{{block.settings.builder_area}}</div>
+       {% endif %}
+        {% if block.settings.builder_button != blank %}
+        <a href="{{block.settings.builder_url}}">{{block.settings.builder_button}}</a>
+       {% endif %}
+      </div>      
+    </div>
+    {% when 'text' %}
+     <div class="row">          
+      <div class="col-7 col-md-7">
+        {% if block.settings.builder_title_2 != blank %}
+        <h3>{{block.settings.builder_title_2}}</h3>
+        {% endif %}
+        {% if block.settings.builder_area_2 != blank %}
+        <div>{{block.settings.builder_area_2}}</div>
+       {% endif %}
+        {% if block.settings.builder_button_2 != blank %}
+        <a href="{{block.settings.builder_url_2}}">{{block.settings.builder_button_2}}</a>
+       {% endif %}
+      </div>  
+        <div class="col-5 col-md-5">
+         <div class="spotlight-item">
+          <div class="img-box">
+              {% if block.settings.image_2 != blank %}            
+              {%- assign img_url = block.settings.image_2 | img_url: 'master' -%}
+              {%- assign img_url_mobile = block.settings.image_mob_new | img_url: 'master' -%}
+              <img data-src="{{ img_url }}"
+                   src="https:{{ img_url }}" alt="{{ block.settings.image_2.alt | default: shop.name }}" itemprop="logo"
+                   class="lazyautosizes lazyload desktop" data-sizes="auto">
+            <img data-src="{{ img_url_mobile }}"
+                 src="https:{{ img_url_mobile }}" alt="{{ block.settings.image_mob_new.alt | default: shop.name }}" itemprop="logo"
+                 class="lazyautosizes lazyload mobile" data-sizes="auto" style="display:none;">
+              {% else %}
+              <div class="not_img">
+                370 x 440px
+              </div>   
+              {% endif %}
+         </div>
+        </div>
+      </div>
+    </div>
+
+    {% endcase %}
+{% endfor %}    
+    
+  </div>
+</div>
+{% endif %}
+
+
+{% schema %}
+  {
+    "name": "Builder banner",
+    "class": "builder-banner",
+    "max_blocks": 10,
+    "settings": [      
+          {
+            "type": "image_picker",
+            "id": "banner_image",
+            "label": "Banner Image Desktop"
+          },{
+            "type": "image_picker",
+            "id": "banner_image_mb",
+            "label": "Banner Image Mobile"
+          }
+    ],
+    "blocks" : [
+            {
+                "type": "image",
+                "name": "Builder Style-1",
+                "settings":[
+                      {
+                      "type": "image_picker",
+                      "id": "image",
+                      "label": "Image"
+                      },{
+                      "type": "image_picker",
+                      "id": "image_mob",
+                      "label": "Image Mobile"
+                      },{
+                      "type": "text",
+                      "id": "builder_title",
+                      "label": "Builder Title"
+                      },{
+                      "type": "textarea",
+                      "id": "builder_area",
+                      "label": "Builder Text"
+                      },{
+                      "type": "text",
+                      "id": "builder_button",
+                      "label": "Builder Button"
+                      },{
+                      "type": "url",
+                      "id": "builder_url",
+                      "label": "Builder URL"
+                      }
+                ]
+            },
+            {
+                "type": "text",
+                "name": "Builder Style-2",
+                "settings":[
+                      {
+                      "type": "text",
+                      "id": "builder_title_2",
+                      "label": "Builder Title"
+                      },{
+                      "type": "textarea",
+                      "id": "builder_area_2",
+                      "label": "Builder Text"
+                      },{
+                      "type": "text",
+                      "id": "builder_button_2",
+                      "label": "Builder Button"
+                      },{
+                      "type": "url",
+                      "id": "builder_url_2",
+                      "label": "Builder URL"
+                      },
+                      {
+                      "type": "image_picker",
+                      "id": "image_2",
+                      "label": "Image"
+                      },{
+                      "type": "image_picker",
+                      "id": "image_mob_new",
+                      "label": "Image Mobile"
+                      }
+                ]
+            }
+        ],
+        "presets": [{
+            "name": "Banner",
+            "category": "Banner",
+            "blocks": [
+                {
+                    "type": "image"
+                },
+                {
+                    "type": "text"
+                }
+            ]
+        }]
+
+  }
+{% endschema %}

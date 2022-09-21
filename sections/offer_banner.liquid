@@ -1,0 +1,57 @@
+<section class="sub-page-banner-section" id="sub-{{section.id}}">
+  <a href="{{ block.settings.link }}" class="">
+  <img class="banner-image desktop-xs lazyautosizes lazyloaded" data-src="{{ section.settings.banner-id | img_url: 'master' }}" src="{{ section.settings.banner-id | img_url: 'master' }}">
+
+  <img class="banner-image mobile-xs lazyautosizes lazyloaded" data-src="{{ section.settings.image_mobile | img_url: 'master' }}" src="{{ section.settings.image_mobile | img_url: 'master' }}">
+  </a>
+   <div class="container banner-title">
+    <h1>{{ section.settings.banner-title }}</h1>
+  </div> 
+
+</section>
+<style>  
+  section#sub-offer_banner .container.banner-title {
+    position: absolute;
+    top: 8%;
+    left: 60%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+</style>
+
+{% schema %}
+{
+"name": "Banner Section",
+"settings": [
+{
+"type": "image_picker",
+"id": "banner-id",
+"label": "image"
+},
+{
+"type": "image_picker",
+"id": "image_mobile",
+"label": "Mobile Image"
+},
+{
+"type": "url",
+"id": "link",
+"label": "Link",
+"info": "Optional"
+},
+{
+"type": "text",
+"id": "banner-title",
+"label": "Banner Title"
+},
+{
+"type" : "textarea",
+"id" : "des",
+"label" : "Description",
+"default": "Phasellus lorem malesuada ligula pulvino commodo maecenas"
+}
+]
+}
+{% endschema %}

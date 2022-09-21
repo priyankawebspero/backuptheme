@@ -1,0 +1,159 @@
+<div class="teaser-spotlight-block" id="teaser-spotlight-3-{{section.id}}" style="background-image:url({{ section.settings.bg-image | img_url: 'master'}}); background-size:cover;">
+  <div class="{% if section.settings.layout == 'default' %}container-padd60{% else %}container-fluid{% endif %}">
+  
+    <div class="row">
+      <div class="col-12 col-md-12 col-lg-12 text-center">
+        {% if section.settings.gift_image != blank %} 
+          
+              {% if section.settings.text_image != blank %}            
+              {%- assign img_url_gift = section.settings.text_image | img_url: 'original', crop: 'center' , format: 'pjpg'-%}
+              {%- assign img_url_gift_mobile = section.settings.text_image_mobile | img_url: 'original', crop: 'center' , format: 'pjpg'-%}
+              <img data-src="{{ img_url_gift }}"
+                   src="https:{{ img_url_gift }}" alt="{{ section.settings.text_image.alt | default: shop.name }}" itemprop="logo"
+                   class="lazyautosizes lazyloaded teaser_desktop" data-sizes="auto">
+              <img data-src="{{ img_url_gift_mobile }}"
+                   src="https:{{ img_url_gift_mobile }}" alt="{{ section.settings.text_image_mobile.alt | default: shop.name }}" itemprop="logo"
+                   class="lazyautosizes lazyloaded teaser_mobile" data-sizes="auto" style="display:none;">
+              {% else %}
+
+              <div class="not_img">
+                370 x 440px
+              </div>   
+              {% endif %}
+           
+      <a href="{{ section.settings.link_git }}" >
+         {% if section.settings.gift_image != blank %}            
+              {%- assign img_url_gift = section.settings.gift_image | img_url: 'original', crop: 'center' , format: 'pjpg'-%}
+              {%- assign img_url_gift_mobile = section.settings.gift_image_mobile | img_url: 'original', crop: 'center' , format: 'pjpg'-%}
+              <img data-src="{{ img_url_gift }}"
+                   src="https:{{ img_url_gift }}" alt="{{ section.settings.gift_image.alt | default: shop.name }}" itemprop="logo"
+                   class="lazyautosizes lazyloaded teaser_desktop" data-sizes="auto">
+              <img data-src="{{ img_url_gift_mobile }}"
+                   src="https:{{ img_url_gift_mobile }}" alt="{{ section.settings.gift_image_mobile.alt | default: shop.name }}" itemprop="logo"
+                   class="lazyautosizes lazyloaded teaser_mobile" data-sizes="auto" style="display:none;">
+              {% else %}
+
+              <div class="not_img">
+                370 x 440px
+              </div>   
+              {% endif %}
+         </a>
+        {% endif %}
+        <div class="text_box">{{ section.settings.text_box }}</div>
+     </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  {% assign margin_bottom =  section.settings.margin_bottom %}
+  
+  @media (min-width: 1200px) {
+    #teaser-spotlight-3-{{section.id}} {
+      margin-bottom: {{ margin_bottom }}px;
+    }
+  }	
+  @media (max-width: 768px) {
+    #teaser-spotlight-3-{{section.id}} {
+      background-image: url('{{ section.settings.bg-image-mob | img_url: 'original'}}') !important;
+    }
+  }	  
+  
+</style>
+{% schema %}
+{
+    "name": "Teaser Sale Banner",
+	"class": "teaser-custom-block",
+    "settings": [      
+        {
+            "type": "select",
+            "id": "layout",
+            "label": "Teaser 3 Layout:",
+            "options": [
+                {
+                    "value": "default",
+                    "label": "Default"
+                },
+                {
+                    "value": "full",
+                    "label": "Full Width"
+                }
+            ],
+            "default": "default"
+        },
+        {
+            "type": "checkbox",
+            "id": "display_padding",
+            "label": "Display Padding?",
+            "default": false
+        },{
+            "type": "image_picker",
+            "id": "bg-image",
+            "label": "Background Image Desktop"
+          },{
+            "type": "image_picker",
+            "id": "bg-image-mob",
+            "label": "Background Image Mobile"
+          },{
+            "type": "image_picker",
+            "id": "text_image",
+            "label": "Text Image Desktop"
+          },{
+            "type": "image_picker",
+            "id": "text_image_mobile",
+            "label": "Text Image Mobile"
+          },{
+            "type": "image_picker",
+            "id": "gift_image",
+            "label": "Gift Image Desktop"
+          },{
+            "type": "image_picker",
+            "id": "gift_image_mobile",
+            "label": "Gift Image Mobile"
+          },
+         {
+            "type": "text",
+            "id": "text_box",
+            "label": "Enter Text",
+            "default": "takes just 30 secs!"
+          },{
+            "type": "url",
+            "id": "link_git",
+            "label": "Gift Link",
+            "info": "Optional"
+          },        
+        {
+            "type": "select",
+            "id": "title_style",
+            "label": "Title Style:",
+
+            "options": [
+                {
+                    "value": "style_1",
+                    "label": "Style 1" 
+                },
+                { 
+                    "value": "style_2",
+                    "label": "Style 2" 
+                }          
+            ],
+            "default": "style_1"
+        },
+        {
+            "type": "range",
+            "id": "margin_bottom",
+            "label": "Margin Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 0
+        }	
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

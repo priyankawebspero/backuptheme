@@ -1,0 +1,100 @@
+<div class="col-12 col-md-12">
+
+{% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'slide' %}
+      <div class="slide " {{ block.shopify_attributes }}>
+        {% if  block.settings.image != blank %}
+        <img class="slide aff_desktop" src="{{ block.settings.image | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.image.alt}}">
+        {% endif %}
+        {% if  block.settings.image_mob != blank %}
+         <img class="slide aff_mobile" src="{{ block.settings.image_mob | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.image_mob.alt}}" style="display:none;">
+        {% endif %}
+      </div>
+  {% endcase %}
+{% endfor %}
+</div>
+
+<div class="bottom_btn">
+    <div class="col-12 col-md-12 col-lg-12 text-center">
+      <div class="btns-outer-main">
+        <div class="btn_half_bottom">
+         <a href="{{ section.settings.link_apply }}" >
+           <span>apply now </span>
+           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 17 33" xml:space="preserve"><g id="e4eb89a6-f885-43b8-9259-0d6b1516fab0"><g id="_x38_e584754-6657-46f1-a9d8-2cfd6623b552"><g><polygon points="14.9,14.5 0,0 0,3.7 11.1,14.5 13.2,16.5 11.1,18.5 0,29.3 0,33 14.9,18.5 17,16.5 "></polygon></g></g></g></svg>
+          </a>
+        </div>
+        
+         <div class="btn_half_bottom">
+         <a href="{{ section.settings.link_login }}" >
+           <span>login </span>
+           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 17 33" xml:space="preserve"><g id="e4eb89a6-f885-43b8-9259-0d6b1516fab0"><g id="_x38_e584754-6657-46f1-a9d8-2cfd6623b552"><g><polygon points="14.9,14.5 0,0 0,3.7 11.1,14.5 13.2,16.5 11.1,18.5 0,29.3 0,33 14.9,18.5 17,16.5 "></polygon></g></g></g></svg>
+          </a>
+        </div>
+        
+	</div>
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Affiliate Third Section",
+  "class": "affiliate-third-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "gift_image",
+      "label": "Apply now Image Descktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "gift_image_mobile",
+      "label": "Apply now Image Mobile"
+    },
+    {
+      "type": "url",
+      "id": "link_apply",
+      "label": "Apply now Link"
+    },{
+      "type": "image_picker",
+      "id": "login_image_desktop",
+      "label": "Login now Image Descktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "login_image_mobile",
+      "label": "Login now Image Descktop"
+    },
+    {
+      "type": "url",
+      "id": "link_login",
+      "label": "Login now Link"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         },{
+           "type": "image_picker",
+           "id": "image_mob",
+           "label": "Image"
+         }
+       ]
+     }
+   ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

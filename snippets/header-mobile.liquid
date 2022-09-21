@@ -1,0 +1,133 @@
+<div class="header-mb">          
+  <div class="header-mb-left header-mb-items">
+    <div class="hamburger-icon svg-mb">
+      <a href="#" class="icon-nav" title="Menu Mobile Icon" data-menu-mb-toogle>
+        <span class="icon-line"></span>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="header-mb-middle header-mb-items">
+    <h1 class="header-logo">
+      {% if section.settings.brand_type == 'image' and section.settings.logo != bank %}
+      <a class="logo-img left" href="/" title="Logo">
+        <img data-src="{{ section.settings.logo | img_url: 'master' , format: 'pjpg'}}"
+             src="{{ section.settings.logo | img_url: 'master' , format: 'pjpg'}}"
+             alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo" class="lazyautosizes  header-sticky-logo" data-sizes="auto" width="119" height="70">
+      </a>
+      {% endif %}
+    </h1>
+    <nav class="nav-bar" role="navigation">
+                    {% include 'site-nav-desk' %}
+                  </nav> 
+    <div class="search-mbs svg-mb hidden-mobile">
+      <!-- Searchtap Mobile Searchbar  -->
+
+      <div class="st-search-bar ">
+        <input type="text" name="s" placeholder="Search..." value="" autocapitalize="off" autocomplete="off" autocorrect="off">
+        <span class="input-close-btn"></span>
+      </div>
+
+    </div> 
+  </div>
+
+  <div class="header-mb-right header-mb-items">
+   <div class="search-mb svg-mb">
+            <span class="show-search hidden-desktop">
+              <svg data-icon="search" viewBox="0 0 512 512" width="100%" height="100%">
+                <path d="M495,466.2L377.2,348.4c29.2-35.6,46.8-81.2,46.8-130.9C424,103.5,331.5,11,217.5,11C103.4,11,11,103.5,11,217.5   S103.4,424,217.5,424c49.7,0,95.2-17.5,130.8-46.7L466.1,495c8,8,20.9,8,28.9,0C503,487.1,503,474.1,495,466.2z M217.5,382.9   C126.2,382.9,52,308.7,52,217.5S126.2,52,217.5,52C308.7,52,383,126.3,383,217.5S308.7,382.9,217.5,382.9z"></path>
+              </svg>
+            </span>
+      <!-- Searchtap Searchbar  -->
+		  	<div class="st-search-bar hidden-mobile">
+                                    <input type="text" name="s" placeholder="Search..." value="" autocapitalize="off" autocomplete="off" autocorrect="off">
+
+                                </div>
+
+      <a href="javascript:void(0)" title="close" class="close close-search">
+      {% include 'icon-close' %}
+      </a>
+
+      {% include 'search-bar' %}
+   </div> 
+	
+         <div class="plum_basket_icon">
+         <a href="/pages/plum-basket"><img class="" src="https://cdn.shopify.com/s/files/1/0390/2985/files/shopping-basket.png" alt="Your Basket"></a>
+       </div>
+    <div class="iwish-icon svg-mb mobile-wishlist">
+      {% include 'iwish_v2' with 'iwishlink' %}
+    </div>
+    
+  <div class="tracking_order">
+           <div class="tracking_div">
+       <span class="tooltip">track your order</span>
+      <a href="https://plumgoodness.com/pages/track-your-order-2"  class="tracking" style="display:none;"><img class="lazyload" src="https://cdn.shopify.com/s/files/1/0390/2985/files/tracking_0e413f26-64e7-49e4-accb-52517c44e705.png?v=1645607517" data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/tracking_0e413f26-64e7-49e4-accb-52517c44e705.png?v=1645607517"></a>
+    </div>
+     <div class="account_div">
+         {% if customer %}<span class="tooltip">account</span>{% else %}<span class="tooltip">login / register </span>{% endif %}
+      <a href="/account/"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="fill: #5e0d8b;" xml:space="preserve">
+         <g>
+            <g>
+               <path d="M437.02,330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521,243.251,404,198.548,404,148    C404,66.393,337.607,0,256,0S108,66.393,108,148c0,50.548,25.479,95.251,64.262,121.962    c-36.21,12.495-69.398,33.136-97.281,61.018C26.629,379.333,0,443.62,0,512h40c0-119.103,96.897-216,216-216s216,96.897,216,216    h40C512,443.62,485.371,379.333,437.02,330.98z M256,256c-59.551,0-108-48.448-108-108S196.449,40,256,40    c59.551,0,108,48.448,108,108S315.551,256,256,256z"></path>
+            </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></a>
+         
+    </div>
+       
+
+    </div>
+  <div class="cart-icon svg-mb">
+      <a href="#" title="Cart Icon" data-cart-toggle>       
+        <img class="" src="https://cdn.shopify.com/s/files/1/0390/2985/files/cart_icon.svg?v=1620044145" data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/cart_icon.svg?v=1620044145">
+
+        <span class="cartCount" data-cart-count>
+          {{ cart.item_count }}
+        </span>
+      </a>
+    </div>
+    
+  </div>    
+
+</div>
+      <div class="search-mbs svg-mb mobile">
+      <!-- Searchtap Mobile Searchbar  -->
+
+      <div class="st-search-bar hidden-desktop">
+        <input type="text" name="s" placeholder="Search..." value="" autocapitalize="off" autocomplete="off" autocorrect="off">
+        <span class="input-close-btn"></span>
+      </div>
+
+    </div> 
+<!-- <div class="head_bottom">
+    <h1 class="header-logo">
+      {% if section.settings.brand_type == 'image' and section.settings.logo != bank %}
+      <a class="logo-img left" href="/" title="Logo">
+        <img data-src="{{ section.settings.logo | img_url: 'master' }}"
+             src="{{ section.settings.logo | img_url: 'master' }}"
+             alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo" class="lazyautosizes  header-sticky-logo" data-sizes="auto" width="80" height="50">
+      </a>
+      {% if section.settings.logo_body != bank %}
+      <a class="logo-img right" href="{{section.settings.logo_body_url}}" title="Logo">
+        <img data-src="{{ section.settings.logo_body | img_url: 'master'  }}"
+             src="{{ section.settings.logo_body | img_url: 'master'  }}"
+             alt="{{ section.settings.logo_body.alt | default: shop.name }}" itemprop="logo" class="lazyautosizes  header-sticky-logo" data-sizes="auto" width="80" height="50">
+      </a>
+      {% endif %}
+       {% if section.settings.logo_phy != bank %}
+      <a class="logo-img phy-logo" href="{{section.settings.logo_phy_url}}" title="Logo">
+        <img data-src="{{ section.settings.logo_phy | img_url: 'master' }}"
+             src="{{ section.settings.logo_phy | img_url: 'master'}}"
+             alt="{{ section.settings.logo_phy.alt | default: shop.name }}" itemprop="logo" class="lazyautosizes  header-sticky-logo" data-sizes="auto" width="80" height="50">
+      </a>
+      {% endif %}
+      {% elsif section.settings.brand_text != '' %}
+      <a class="logo-title" href="/">
+        {{ section.settings.brand_text }}
+      </a>
+      {% else %}
+      <a class="logo-title" href="/">
+        {{ shop.name }}
+      </a>
+      {% endif %}
+    </h1>
+</div> -->

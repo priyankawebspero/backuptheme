@@ -1,0 +1,3 @@
+<script>
+function getURLParameter(e){for(var t=window.location.search.substring(1).split("&"),o=0;o<t.length;o++){var n=t[o].split("=");if(n[0]==e)return n[1]}return null}function getCookie(e){for(var t=e+"=",o=decodeURIComponent(document.cookie).split(";"),n=0;n<o.length;n++){for(var i=o[n];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(t))return i.substring(t.length,i.length)}return""}document.setCookie=function(e,t){var o=new Date;o.setTime(o.getTime()+2592e6);var n="expires="+o.toUTCString();document.cookie=e+"="+t+";"+n+";path=/",console.log(getCookie("medium"))};var medium=getURLParameter("utm_medium").toUpperCase();medium&&(console.log("See here"),console.log(medium),document.setCookie("medium",medium));
+</script>

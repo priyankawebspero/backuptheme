@@ -1,0 +1,18 @@
+{{ 'newlanding.css' | asset_url | stylesheet_tag }}
+{{ 'slick.min.js' | asset_url | script_tag }}
+<div class="page-teaser">
+  <div class="container-fluid">
+    {% section 'new-landing-icons-list' %} 
+    {% section 'product-section-featured' %}    
+ </div>
+</div>
+<script>
+$(document).ready(function(){
+    $('#shopify-section-new-landing-icons-list .img-box.banner-item').on('click', function(event) {
+        event.preventDefault();
+        var hash = $(this).attr('section');
+        console.log(hash)
+        $('html, body').animate({scrollTop: $(hash).offset().top - 130}, 900);
+    });
+})
+</script>

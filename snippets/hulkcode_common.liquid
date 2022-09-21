@@ -1,0 +1,80 @@
+      <script>
+        {% assign hulkapps_page_type = "" %}
+          window.hulkapps = {
+            shop_slug: "{{shop.permanent_domain | remove: '.myshopify.com' }}",
+            store_id: "{{shop.permanent_domain}}",
+            money_format: "{{shop.money_format | replace: '"', "'"}}",
+            cart: null,
+            product: null,
+            product_collections: null,
+            product_variants: null,
+            is_volume_discount: null,
+            product_id: null,
+            page_type: null,
+            po_url: "https://productoption.hulkapps.com",
+            vd_url: "https://volumediscount.hulkapps.com",
+            customer: null
+          }
+          {% if customer %}
+            {% assign tags = "" %}
+            {% for tag in customer.tags %}
+              {% if forloop.index == 1 %}
+                {% assign tags = tags | append : tag %}
+              {% else %}
+                {% assign tags = tags | append : ","| append : tag %}
+              {% endif %}
+            {% endfor %}
+          
+            window.hulkapps.customer = {
+              id: {{customer.id}},
+              tags: "{{tags}}"
+            }
+          {% endif %}
+        {% if template contains "cart" %}
+          window.hulkapps.page_type = "cart";
+          window.hulkapps.cart = {{ cart | json }}
+          if (typeof window.hulkapps.cart.items == "object") {
+            for (var i=0; i<window.hulkapps.cart.items.length; i++) {
+              ["sku", "grams", "vendor", "url", "image", "handle", "requires_shipping", "product_type", "product_description"].map(function(a) {
+                delete window.hulkapps.cart.items[i][a]
+              })
+            }
+          }
+          window.hulkapps.cart_collections = {}
+          {% for item in cart.items %}
+            window.hulkapps.cart_collections["{{item.variant_id}}"] = []
+            {% for c in item.product.collections %}
+              window.hulkapps.cart_collections["{{item.variant_id}}"].push({{c.id}})
+            {% endfor %}
+          {% endfor %}
+        {% endif %}
+
+        {% if template contains "product" %}
+          window.hulkapps.page_type = "product"
+          window.hulkapps.product_id = "{{ product.id }}";
+          window.hulkapps.product = {{ product | json }} 
+                                             
+                                             
+          window.hulkapps.product_collection = []
+          {% for collection in product.collections %}
+            window.hulkapps.product_collection.push({{collection.id}})
+          {% endfor %}
+                                   
+          window.hulkapps.product_variant = []
+          {% for variant in product.variants %}
+            window.hulkapps.product_variant.push({{variant.id}})
+          {% endfor %}
+            
+          window.hulkapps.product_collections = window.hulkapps.product_collection.toString();
+          window.hulkapps.product_variants = window.hulkapps.product_variant.toString();                          
+                                             
+        {% endif %}
+      </script>
+
+      {% if template contains "cart" %}
+        <div class="edit_popup" style="display: none;">
+          <form method="post" action="/cart/add" id="edit_cart_popup" class="edit_form" enctype="multipart/form-data">
+          </form>
+        </div>
+      {% endif %}
+    

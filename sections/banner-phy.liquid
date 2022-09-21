@@ -1,0 +1,31 @@
+<section class="sub-page-banner-section">
+  <a href="{{ section.settings.link }}" class="">
+  <img class="banner-image desktop-xs lazyautosizes lazyload" data-src="{{ section.settings.banner-id | img_url: 'master' , format: 'pjpg'}}" src="{{ section.settings.banner-id | img_url: 'master' , format: 'pjpg'}}">
+
+  <img class="banner-image teaser_mobile lazyautosizes lazyload" data-src="{{ section.settings.image_mobile | img_url: 'master' , format: 'pjpg'}}" src="{{ section.settings.image_mobile | img_url: 'master' , format: 'pjpg'}}">
+  </a>
+</section>
+
+{% schema %}
+{
+"name": "Banner Section",
+"settings": [
+    {
+      "type": "image_picker",
+      "id": "banner-id",
+      "label": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link",
+      "info": "Optional"
+    }
+  ]
+}
+{% endschema %}

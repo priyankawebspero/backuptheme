@@ -1,0 +1,74 @@
+<li class="blog-item">
+  <div class="article-details">
+    {% if article.image %}
+    {% assign image_alt = article.title | escape %}
+    <div class="article-img">
+      {{ article | img_url: '370x' | img_tag: image_alt, 'article__image' | link_to: article.url | replace: '<a', '<a class="animate-scale"' }}
+    </div>
+
+    {% else %}
+    <div class="article-img">
+      <img data-src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/blog.png?v=1576997571" src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/blog.png?v=1576997571" class="lazyautosizes lazyloaded">
+    </div>
+    {% endif %}
+
+    <h3 class="article-title">
+      <a href="{{ article.url }}">
+        {% include 'multilang' with article.title %}
+      </a>
+      <div class="author_details">
+                 {% capture date %}
+                    <time datetime='{{ article.published_at | date: '%d-%m-%Y' }}'>{{ article.published_at | date: '%d %b %Y' }}</time>
+                  {% endcapture %}
+
+                  {% assign today_date = article.published_at | date: '%s' %}
+                  {% assign pre_date =  '01 Sep 2021' | date: '%s' %}
+
+                  {% if today_date < pre_date %}
+                  {% capture author %}<i class="fa fa-user-circle-o"></i> Plum People{% endcapture %}
+                  {% else %}
+                  {% capture author %}<i class="fa fa-user-circle-o"></i> {{ article.author }}{% endcapture %}
+                  {% endif %}
+
+                <span class="article__author">
+                  {{ author }}
+                </span>
+
+                <span class="article__date">
+                  | {{ date }}
+                </span>
+                </div>
+    </h3> 
+    <div class="rte article-excerpt">
+      <div class="des">
+        {% if settings.enable_multilang and article.excerpt_or_content contains '[lang2]' %}
+        <div class="lang1">
+          {{ article.excerpt_or_content | strip_html | truncatewords: 25 | split: "[lang2]" | first | split: "|" | first}}
+        </div>
+        <div class="lang2">
+          {{ article.excerpt_or_content | strip_html | truncatewords: 25 | split:"[lang2]" | last | split: "|" | last }}
+        </div>
+        {% else %}
+        {{ article.excerpt_or_content | strip_html | truncatewords: 25  | split:"[lang2]" | first | split: "|" | first }}
+        {% endif %}
+      </div>
+      <div class="share-icons-and-readmore">
+        <div class="actions">
+          <a href="{{ article.url }}" {% if settings.enable_multilang %}data-translate="blogs.article.read_more"{% endif %} class="btn">
+            {{ 'blogs.article.read_more' | t }}
+          </a>
+        </div>
+        {% comment %}
+        <div class="blog-share-icon">
+          <div class="share_toolbox"> 
+            <span>Share:</span> 
+            <!----- www.addthis.com/dashboard ----->
+            <div class="addthis_inline_share_toolbox"></div>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-595b0ea2fb9c5869"></script>
+          </div>
+        </div>
+        {% endcomment %}
+      </div>
+    </div>
+  </div>
+</li>

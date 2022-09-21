@@ -1,0 +1,521 @@
+{% for block in section.blocks %}
+{% case block.type %}
+  {% when 'image' %} 
+<div class="item" id="banner-{{block.settings.id_img | handle}}">
+  <div class="images-contain">
+    {% if block.settings.image_slide != blank %}
+    {%- assign img_url = block.settings.image_slide | img_url: 'master'  , format: 'pjpg'-%}                       
+    <img data-src="{{ img_url }}"
+         src="https:{{ img_url }}" alt="{{ block.settings.image_slide.alt | default: shop.name }}" 
+         class="lazyautosizes lazyload{% if block.settings.image_slide_mb != blank %} slide-pc{% endif %}" data-sizes="auto">
+
+    {% if block.settings.image_slide_mb != blank %}
+    {%- assign img_url_mb = block.settings.image_slide_mb | img_url: 'master'  , format: 'pjpg'-%}
+    <img data-src="{{ img_url_mb }}"
+         src="https:{{ img_url_mb }}" alt="{{ block.settings.image_slide_mb.alt | default: shop.name }}" 
+         class="lazyautosizes lazyload slide-mobile" data-sizes="auto" style="display:none;">
+    {% endif %}                  
+    {% else %}
+    {% endif %}
+  </div>
+</div>
+  {% when 'text' %} 
+<div class="item" id="banner-{{block.settings.id_gmb | handle}}">
+  <div class="Offer-images-contain">
+    {% if block.settings.link_to_play %}<a href="{{block.settings.link_to_play}}">{% endif %} 
+    {% if block.settings.image_offer != blank %}
+    {%- assign img_url = block.settings.image_offer | img_url: 'master' -%}                       
+    <img data-src="{{ img_url }}"
+         src="https:{{ img_url }}" alt="{{ block.settings.image_offer.alt | default: shop.name }}" 
+         class="lazyautosizes lazyload{% if block.settings.image_offer_mb != blank %} slide-pc{% endif %}" data-sizes="auto">
+
+    {% if block.settings.image_offer_mb != blank %}
+    {%- assign img_url_mb = block.settings.image_offer_mb | img_url: 'master' -%}
+    <img data-src="{{ img_url_mb }}"
+         src="https:{{ img_url_mb }}" alt="{{ block.settings.image_offer_mb.alt | default: shop.name }}" 
+         class="lazyautosizes lazyload slide-mobile" data-sizes="auto" style="display:none;">
+    {% endif %}                  
+    {% else %}
+    {% endif %}
+    {% if block.settings.link_to_play %}</a>{% endif %} 
+  </div>
+</div>
+
+{% when 'product' %}
+{% case block.settings.collection_results_per_row1 %}
+  {% when '2' %}
+    {%- assign grid_item_width = 'col-6' -%}
+  {%- assign row = 'two-items' -%}
+  {% when '3' %}
+    {%- assign grid_item_width = 'col-6 col-md-4' -%}
+  {%- assign row = 'three-items' -%}
+  {% when '4' %}
+    {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3' -%}
+  {%- assign row = 'four-items' -%}
+  {% when '5' %}
+    {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3 col5' -%}
+  {%- assign row = 'five-items' -%}
+  {% when '6' %}
+    {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3 col-xl-2' -%}
+  {%- assign row = 'six-items' -%}
+{% endcase %}
+<div class="featured-products{% if block.settings.display_banner %} has-banner{% endif %}{% if block.settings.banner_is == 'right'%} banner-right{% endif %}" id="banner-{{block.settings.id_pro | handle}}">
+  <div class="{% if block.settings.display_banner %}container-fluid{% else %}container-padd60{% endif %}">
+    <div class="row{% if block.settings.banner_is == 'right'%} flex-row-reverse{% endif %}">
+    <div class="col-12{% if block.settings.display_banner %} col-md-12 col-lg-6 column-product{% else %} col-md-12{% endif %}">
+        {% if block.settings.display_banner %}
+        <div class="column-product-inner">
+        {% endif %}        
+        <div class="widget-title{% if block.settings.title_style == 'style_2' %} not-before{% endif %}">   
+          <h3 class="box-title">
+            {% if block.settings.featured_products_title != blank %}
+            <span class="title">{% include 'multilang' with block.settings.featured_products_title %} </span>
+            {% endif %}
+
+            {% if block.settings.featured_products_sub_title != blank %}
+            <span>{{block.settings.featured_products_sub_title}}</span>
+            {% endif %}
+              {%- assign img_url = block.settings.image | img_url: 'master' -%}
+              {%- assign img_url_mobile = block.settings.image_mobile | img_url: 'large' -%}
+              {% if block.settings.image != blank %}
+              <img data-src="{{ img_url }}"
+                   src="{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"
+                   class="lazyautosizes lazyloaded" data-sizes="auto">
+              <img data-src="{{ img_url_mobile }}"
+                   src="{{ img_url_mobile }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"
+                   class="lazyautosizes lazyloaded slide-mobile" data-sizes="auto"  style="display:none;">
+                {% endif %}           
+           
+          </h3>
+          {% if block.settings.featured_products_des != blank %}
+          <p>
+            {% include 'multilang' with block.settings.featured_products_des %}
+          </p>        
+          {% endif %}
+        </div>
+        <div class="widget-product">
+          <div class="products-grid row {{ row }}" data-row="{{ block.settings.collection_results_per_row1 }}">
+            {% for product in collections[block.settings.show_slider_featured_collection].products limit:block.settings.slider_featured_limit_all %}
+            <div class="grid-item {{ grid_item_width }}{% if settings.product_image_border %} grid-item-border{% endif %} small--one-half">
+              {% include 'product-grid-item' %}
+            </div> 
+            {% else %}
+            {% endfor %}
+          </div>
+        </div>
+           <div class="content aa">
+              <a href="{{ block.settings.link1 }}" class="btn">{{ block.settings.shop_now_button }} <i class="fa fa-angle-right"></i></a>
+            </div>
+          
+        {% if block.settings.display_banner %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% when 'collection' %}
+<div class="influencer_div" id="banner-{{block.settings.id_inf | handle}}">
+  <div class="container-padd60">
+    <div class="row">
+    <div class="col-12">
+     <div class="widget-title">   
+          <h3 class="box-title">             
+            {% if block.settings.influncer_title != blank %}
+                <span class="title">{% include 'multilang' with block.settings.influncer_title %} </span>
+            {% endif %}
+          </h3>    
+          {% if block.settings.influncer_sub_title != blank %}
+          <span>{{block.settings.influncer_sub_title}}</span>
+          {% endif %}   
+     </div>
+      </div>
+    </div>
+     <div class="row"> 
+       <div class="col-4"><a href="{{block.settings.infulencer_link_1}}"><img src="{{block.settings.image_slide_1 | img_url: 'master'}}" alt="{{block.settings.image_slide_1.alt}}"><h3 class="influencer_name">{{block.settings.influncer_name_1}}</h3></a></div>
+       <div class="col-4"><a href="{{block.settings.infulencer_link_2}}"><img src="{{block.settings.image_slide_2 | img_url: 'master'}}" alt="{{block.settings.image_slide_2.alt}}"><h3 class="influencer_name">{{block.settings.influncer_name_2}}</h3></a></div>
+       <div class="col-4"><a href="{{block.settings.infulencer_link_3}}"><img src="{{block.settings.image_slide_3 | img_url: 'master'}}" alt="{{block.settings.image_slide_3.alt}}"><h3 class="influencer_name">{{block.settings.influncer_name_3}}</h3></a></div>
+       <div class="col-4"><a href="{{block.settings.infulencer_link_4}}"><img src="{{block.settings.image_slide_4 | img_url: 'master'}}" alt="{{block.settings.image_slide_4.alt}}"><h3 class="influencer_name">{{block.settings.influncer_name_4}}</h3></a></div>
+       <div class="col-4"><a href="{{block.settings.infulencer_link_5}}"><img src="{{block.settings.image_slide_5 | img_url: 'master'}}" alt="{{block.settings.image_slide_5.alt}}"><h3 class="influencer_name">{{block.settings.influncer_name_5}}</h3></a></div>
+       <div class="col-4"><a href="{{block.settings.infulencer_link_6}}"><img src="{{block.settings.image_slide_6 | img_url: 'master'}}" alt="{{block.settings.image_slide_6.alt}}"><h3 class="influencer_name">{{block.settings.influncer_name_6}}</h3></a></div>
+       <div class="content aa">
+        <a href="{{ block.settings.link_all }}" class="btn">{{ block.settings.view_all_button }} <i class="fa fa-angle-right"></i></a>
+      </div>
+       {% if block.settings.Image_influencer != blank %}<img  class="bottom_image" src="{{ block.settings.Image_influencer | img_url: 'master'}}">{% endif %}
+    </div>
+  </div>
+</div>
+{% endcase %}
+{% endfor %}
+<!--     <div class="row text container center tandc">
+      <div class="widget-title">  
+          <span class="title">Terms and Conditions for Lucky Winners of iPhone 13</span>
+      </div>
+      <p> Winners will be chosen randomly each day</p>
+      <p> Only prepaid orders are eligible</p>
+      <p> Cancellation or modification of order is not allowed</p>
+      <p> Not applicable for Plum Goodness employees</p>
+      <p> Iphones will be dispatched on 31st July 2022</p>
+      <p> Offer applicable on orders from 1st - 4th July only</p>
+      
+    </div> -->
+{% schema %}
+  {
+    "name": "Featured Products",
+  "class": "offer-featured-products-sections",
+    "settings": [ 
+   
+   ],
+   "blocks": [
+   {
+    "type": "product",
+    "name": "product",
+    "settings": [
+    {
+    "type": "header",
+    "content": "Featured Products"
+      },    
+      {
+        "type": "text",
+        "id": "id_pro",
+        "label" : "Enter Id for Block"
+      },    
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label" : "Select Header Image"
+      },    
+      {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label" : "Select Header Image Mobile"
+      },
+      {
+        "type": "text",
+        "id": "featured_products_title",
+        "label": "Title",
+        "default": "Trending Now"
+      },
+      {
+        "type": "text",
+        "id": "featured_products_sub_title",
+        "label": "Sub Title",
+        "default": "Trending Now"
+      },
+    {
+        "type": "select",
+        "id": "title_style",
+        "label": "Title Style:",
+
+        "options": [
+          {
+            "value": "style_1",
+            "label": "Style 1" 
+          },
+      { 
+            "value": "style_2",
+            "label": "Style 2" 
+          }          
+        ],
+        "default": "style_1"
+      },
+      {
+        "type": "collection",
+        "id": "show_slider_featured_collection",
+        "label": "Collection to use"
+      },
+      {
+        "type": "range",
+        "id": "slider_featured_limit_all",
+        "label": "Number of new products to show",
+        "min": 4,
+        "max": 20,
+        "step": 1,
+        "default": 10
+      },
+      {
+        "type" : "text",
+        "id" : "shop_now_button",
+        "label" : "shop now Banner",
+        "default" : "Shop Now"
+      },
+      {
+        "type" : "url",
+        "id" : "link1",
+        "label" : "shop now Link"
+      },
+      {
+        "type": "select",
+        "id": "collection_results_per_row1",
+        "label": "Products per row",
+        "options": [
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          },
+          {
+            "value": "5",
+            "label": "5"
+          },
+      {
+            "value": "6",
+            "label": "6"
+          }
+        ],
+        "default": "5"
+      },
+      {
+            "type": "header",
+            "content": "Margin Bottom:"
+        },
+        {
+            "type": "range",
+            "id": "margin_bottom_mb",
+            "label": "Mobile",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "margin_bottom_tab",
+            "label": "Tablet",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 40
+        },             
+        {
+            "type": "range",
+            "id": "margin_bottom",
+            "label": "Margin Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 0
+        }   
+  ]
+  },{
+                "type": "image",
+                "name": "Image Banner",
+                "settings":[
+                    {
+                      "type": "text",
+                      "id": "id_img",
+                      "label" : "Enter Id for Block"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image_slide",
+                        "label" : "Select Image",
+                        "info": "Recommended Image: Width x Height (1880 x 720)px"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image_slide_mb",
+                        "label" : "Select Image Mobile",
+                        "info": "Recommended Image: Width x Height (450 x 300)px"
+                    }
+                ]
+            },{
+                "type": "collection",
+                "name": "Influencer",
+                "settings":[
+                    {
+                      "type": "text",
+                      "id": "id_inf",
+                      "label" : "Enter Id for Block"
+                    },
+                      {
+                          "type": "text",
+                          "id": "influncer_title",
+                          "label": "Title",
+                          "default": "Influncer"
+                      },
+                        {
+                          "type": "text",
+                          "id": "influncer_sub_title",
+                          "label": "Influncer Text",
+                          "default": "Influncer Text"
+                        },
+                      {
+                          "type": "image_picker",
+                          "id": "image_slide_1",
+                          "label" : "Select Image",
+                          "info": "Image for Influencer"
+                      },
+                        {
+                          "type": "text",
+                          "id": "influncer_name_1",
+                          "label": "Influncer Text",
+                          "default": "Influncer text"
+                        },
+                        {
+                          "type" : "url",
+                          "id" : "infulencer_link_1",
+                          "label" : "Influncer Link"
+                        },
+                      {
+                          "type": "image_picker",
+                          "id": "image_slide_2",
+                          "label" : "Select Image",
+                          "info": "Image for Influencer"
+                      },
+                        {
+                          "type": "text",
+                          "id": "influncer_name_2",
+                          "label": "Influncer Text",
+                          "default": "Influncer text"
+                        },
+                        {
+                          "type" : "url",
+                          "id" : "infulencer_link_2",
+                          "label" : "Influncer Link"
+                        },
+                      {
+                          "type": "image_picker",
+                          "id": "image_slide_3",
+                          "label" : "Select Image",
+                          "info": "Image for Influencer"
+                      },
+                        {
+                          "type": "text",
+                          "id": "influncer_name_3",
+                          "label": "Influncer Text",
+                          "default": "Influncer text"
+                        },
+                        {
+                          "type" : "url",
+                          "id" : "infulencer_link_3",
+                          "label" : "Influncer Link"
+                        },
+                      {
+                          "type": "image_picker",
+                          "id": "image_slide_4",
+                          "label" : "Select Image",
+                          "info": "Image for Influencer"
+                      },
+                        {
+                          "type": "text",
+                          "id": "influncer_name_4",
+                          "label": "Influncer Text",
+                          "default": "Influncer text"
+                        },
+                        {
+                          "type" : "url",
+                          "id" : "infulencer_link_4",
+                          "label" : "Influncer Link"
+                        },
+                      {
+                          "type": "image_picker",
+                          "id": "image_slide_5",
+                          "label" : "Select Image",
+                          "info": "Image for Influencer"
+                      },
+                        {
+                          "type": "text",
+                          "id": "influncer_name_5",
+                          "label": "Influncer Text",
+                          "default": "Influncer text"
+                        },
+                        {
+                          "type" : "url",
+                          "id" : "infulencer_link_5",
+                          "label" : "Influncer Link"
+                        },
+                      {
+                          "type": "image_picker",
+                          "id": "image_slide_6",
+                          "label" : "Select Image",
+                          "info": "Image for Influencer"
+                      },
+                        {
+                          "type": "text",
+                          "id": "influncer_name_6",
+                          "label": "Influncer Text",
+                          "default": "Influncer text"
+                        },
+                        {
+                          "type" : "url",
+                          "id" : "infulencer_link_6",
+                          "label" : "Influncer Link"
+                        },
+                        {
+                          "type" : "text",
+                          "id" : "view_all_button",
+                          "label" : "view All Banner",
+                          "default" : "View All "
+                        },
+                        {
+                          "type" : "url",
+                          "id" : "link_all",
+                          "label" : "View all Link"
+                        },
+                        {
+                          "type" : "image_picker",
+                          "id" : "Image_influencer",
+                          "label" : "Add bottom Image"
+                        }
+                ]
+            },{
+                "type": "text",
+                "name": "Games offers",
+                "settings":[
+                    {
+                      "type": "text",
+                      "id": "id_gmb",
+                      "label" : "Enter Id for Block"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image_offer",
+                        "label" : "Select Offer Image",
+                        "info": "Recommended Image: Width x Height (1880 x 720)px"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image_offer_mb",
+                        "label" : "Select Offer Image Mobile",
+                        "info": "Recommended Image: Width x Height (450 x 300)px"
+                    },
+                    {
+                       "type":"url",
+                       "id": "link_to_play",
+                       "label" : "Enter Play to win link"
+                    }
+                ]
+            }
+  ],
+  "presets": [
+      {
+        "name": "Featured Products",
+        "category": "Collection" ,
+        "blocks": [
+         {
+           "type": "product"
+         },
+        {
+        "type": "image"
+        },
+        {
+        "type": "collection"
+        },
+        {
+        "type": "text"
+        }
+       ]
+      }
+    ]
+  }
+{% endschema %}
+
+

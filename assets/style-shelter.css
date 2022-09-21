@@ -1,0 +1,1871 @@
+
+@font-face {
+    font-family: 'Segoe Condensed';
+    src: url('//cdn.shopify.com/s/files/1/0390/2985/t/150/assets/SegoeCondensed-Bold.woff2') format('woff2'),
+        url('//cdn.shopify.com/s/files/1/0390/2985/t/150/assets/SegoeCondensed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.homewrap .bannerwrap .col-lg-12.col-xs-12 {
+    padding: 0;
+}
+p.limited {
+    position: absolute;
+    top: -25px;
+    left: 16%;
+    color: wheat;
+}
+span.tandc {
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 70px;
+}
+section.about-us .col-lg-12 {
+    padding: 0;
+}
+
+.col-lg-12 {
+    padding: 0 !important;
+}
+
+body {
+    margin: 0;
+    /*font-family: 'sohogothicspecsaversregular';*/
+    padding: 0px 0 0;
+}
+
+.submit-style img {
+    vertical-align: middle;
+}
+.slick-dots li.slick-active button {
+    background: #fdc438;
+    border-color: transparent;
+}
+
+img {
+    vertical-align: super;
+    border-style: none;
+}
+
+.homewrap {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+}
+.about-us {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+}
+.slick-slider img {
+    margin-left: 0;
+    margin-right: auto;
+}
+.homewrap .bannerwrap {
+    max-width: 100%;
+    width: 100%;
+}
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.banner{
+  background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/dog.png?v=1651823557), url(https://cdn.shopify.com/s/files/1/0390/2985/files/3clouds.png?v=1651823602), url(https://cdn.shopify.com/s/files/1/0390/2985/files/Sun-Cloud2.png?v=1651823646), url(https://cdn.shopify.com/s/files/1/0390/2985/files/3-birds.png?v=1651823675), url(https://cdn.shopify.com/s/files/1/0390/2985/files/banner-bottom.png?v=1651823701), url(https://cdn.shopify.com/s/files/1/0390/2985/files/apple.png?v=1651823727), url(https://cdn.shopify.com/s/files/1/0390/2985/files/home.png?v=1651823768), url(https://cdn.shopify.com/s/files/1/0390/2985/files/banner-bg.png?v=1651823791);
+  background-position: right bottom, left 100px top 80px, left 460px top 10px, right 50px top 50px, left 140px bottom -5px, left 255px bottom -32px, left 215px bottom, left top;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+  padding: 15px;
+  height: 600px;
+}
+.banner .banner-copy{
+  /*top: 190px;*/
+  position: relative;
+}
+.text11 {
+  font-size: 46px;
+  /*font-family: "Segoe Pro Semibold";*/
+  color: rgb(91, 16, 139);
+  text-transform: uppercase;
+  line-height: 0.926;
+  -moz-transform: matrix( 0.89937798704747,0,0,0.89937798704747,0,0);
+  -webkit-transform: matrix( 0.89937798704747,0,0,0.89937798704747,0,0);
+  -ms-transform: matrix( 0.89937798704747,0,0,0.89937798704747,0,0);
+  position: relative;
+  top: 150px;
+  z-index: 9;
+  font-weight:600;
+}
+.text12{
+  font-size: 46px;
+  /*font-family: "Segoe Pro Black";*/
+  color: rgb(91, 16, 139);
+  text-transform: uppercase;
+  line-height: 0.926;
+  -moz-transform: matrix( 0.89937798704747,0,0,0.89937798704747,0,0);
+  -webkit-transform: matrix( 0.89937798704747,0,0,0.89937798704747,0,0);
+  -ms-transform: matrix( 0.89937798704747,0,0,0.89937798704747,0,0);
+  position: relative;
+  z-index: 9;
+  font-weight: 900;
+}
+.text2 {
+  font-size: 30px;
+  /*font-family: "Segoe UI";*/
+  font-weight: 400;
+  color: rgb(91, 16, 139);
+  text-transform: uppercase;
+  line-height: 2.125;
+  -moz-transform: matrix( 0.91033374028554,0,0,0.91033374028554,0,0);
+  -webkit-transform: matrix( 0.91033374028554,0,0,0.91033374028554,0,0);
+  -ms-transform: matrix( 0.91033374028554,0,0,0.91033374028554,0,0);
+  position: relative;
+  top: 130px;
+  z-index: 10;
+}
+.text2 img {
+    vertical-align: middle;
+    width: 20%;
+}
+.about-us .contact-deatils-copy {
+    background-color: #5b108b;
+    position: relative;
+    padding-top: 100px;
+    height: 1200px;
+}
+.about-us .contact-deatils-copy{
+  background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home1.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home2.png?v=1651824248), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home3.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-apple.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home4.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape1.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape2.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape3.png?v=1651824005), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-heart.png?v=1651824032);
+  background-position: left bottom ,right bottom, right 89px bottom, right 420px bottom -160px, right 420px bottom, right 350px bottom, left 230px top, left 630px top 305px, center top 670px, right 360px bottom 210px;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+}
+.about-text1 {
+  font-size: 28px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  line-height: 1.367;
+  text-align: center;
+  -moz-transform: matrix( 0.8265351549051,0,0,0.77810385931648,0,0);
+  -webkit-transform: matrix( 0.8265351549051,0,0,0.77810385931648,0,0);
+  -ms-transform: matrix( 0.8265351549051,0,0,0.77810385931648,0,0);
+  position: relative;
+  z-index: 46;
+  margin-block-start: 0;
+    margin-block-end: 0;
+}
+.text-style{
+  font-family:'candy_chicksregular';
+  color: #fbc337;
+  font-size: 42px;
+  line-height: 1.367;
+  text-align: center;
+  -moz-transform: matrix( 0.8265351549051,0,0,0.77810385931648,0,0);
+  -webkit-transform: matrix( 0.8265351549051,0,0,0.77810385931648,0,0);
+  -ms-transform: matrix( 0.8265351549051,0,0,0.77810385931648,0,0);
+  position: relative;
+  top: -5px;
+  z-index: 46;
+}
+.about-text1-style{
+    font-size: 28px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    line-height: 1.367;
+    text-align: center;
+    -moz-transform: matrix( 0.8265351549051,0,0,0.77810385931648,0,0);
+    -webkit-transform: matrix( 0.8265351549051,0,0,0.77810385931648,0,0);
+    -ms-transform: matrix( 0.8265351549051,0,0,0.77810385931648,0,0);
+    position: relative;
+    z-index: 46;
+}
+.help-box {
+  border-radius: 100px;
+  background-color: rgb(255, 252, 245);
+  box-shadow: 0px 31px 25.23px 3.77px rgb(42 41 41 / 47%);
+  position: relative;
+  z-index: 35;
+  margin: 0 10%;
+  top: 65px;
+}
+.help-box-title {
+  font-size: 36px;
+  color: rgb(91, 16, 139);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 0.742;
+  text-align: center;
+  -moz-transform: matrix( 0.82962937969955,0,0,0.82962937969955,0,0);
+  -webkit-transform: matrix( 0.82962937969955,0,0,0.82962937969955,0,0);
+  -ms-transform: matrix( 0.82962937969955,0,0,0.82962937969955,0,0);
+  position: relative;
+  z-index: 45;
+  padding-top: 50px;
+  padding-bottom: 20px;
+    margin: 0 15%;
+}
+.about-us .help-box ul li p {
+  font-size: 19px;
+  font-family: 'Segoe Condensed';
+  color: rgb(91, 16, 139);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.038;
+  text-align: left;
+  -moz-transform: matrix( 0.98714341339835,0,0,1.04504349375131,0,0);
+  -webkit-transform: matrix( 0.98714341339835,0,0,1.04504349375131,0,0);
+  -ms-transform: matrix( 0.98714341339835,0,0,1.04504349375131,0,0);
+  position: relative;
+  z-index: 37;
+  margin-left: 15px;
+  top: 0%;
+}
+.about-us .help-box ul{
+  display: flex;
+    padding-bottom: 50px;
+    padding-inline-start: 35px;
+    padding-inline-end: 20px;
+}
+.about-us .help-box ul li {
+    display: flex;
+    margin: 0px 20px;
+}
+.about-us .help-box ul li img{
+  width: 90px;
+  height: 100px;
+}
+.fill-details{
+  position: relative;
+  top: 80px;
+  margin: 0 10%;
+}
+.fill-details-title {
+  font-size: 31px;
+  color: rgb(251, 195, 55);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.396;
+  text-align: center;
+  -moz-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  -webkit-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  -ms-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  position: relative;
+  z-index: 48;
+}
+.fill-details-title2 {
+  font-size: 27px;
+  color: rgb(255 255 255);
+  font-weight: 400;
+  text-transform: lowercase;
+  line-height: 1.396;
+  text-align: center;
+  -moz-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  -webkit-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  -ms-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  position: relative;
+  z-index: 48;
+}
+
+.input-from {
+  display: inline-flex;
+    width: 100%;
+}
+.input-filds{
+  width: 22%;
+    margin: 10px 10px;
+    padding: 0 10px;
+}
+.input-filds .form-control {
+  display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 15px;
+    line-height: 1.42857143;
+    color: #f1bd0d;
+    background-color: #5b108b;
+    background-image: none;
+    border: 0px solid #ccc;
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    border-bottom: 2px solid #fff;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.input-filds .form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    font-size: 19px;
+  color: rgb(241, 189, 13);
+  font-weight: bold;
+  line-height: 0;
+  text-align: left;
+  text-transform: lowercase;
+  position: relative;
+  z-index: 53;
+  top: 10px;
+}
+input:focus-visible {
+    outline-offset: 0px;
+    outline: -webkit-focus-ring-color auto 0px;
+}
+.submit-btn {
+  font-size: 26px;
+    color: rgb(91, 16, 139);
+    line-height: 1.075;
+    -moz-transform: matrix( 0.64541335330427,0,0,0.64541335330427,0,0);
+    -webkit-transform: matrix( 0.64541335330427,0,0,0.64541335330427,0,0);
+    -ms-transform: matrix( 0.64541335330427,0,0,0.64541335330427,0,0);
+    border-radius: 10px;
+    background-color: rgb(251, 195, 55);
+    box-shadow: 0px 22px 25.23px 3.77px rgb(0 0 0 / 25%);
+    position: relative;
+    z-index: 36;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.submit-style{
+  text-align: center;
+    position: relative;
+    top: 25px;
+}
+.about-note {
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    left: 140px;
+    top: 310px;
+    z-index: 57;
+    width: 323px;
+}
+.we-did-it {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    position: relative;
+}
+.we-did-it-without-media {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    position: relative;
+}
+.we-did-it-title {
+  font-size: 67px;
+  font-family:'candy_chicksregular';
+  color: rgb(91, 16, 139);
+  line-height: 0.904;
+  text-align: center;
+  font-weight: 400;
+  -moz-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  -webkit-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  -ms-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  position: relative;
+  top: 25px;
+  z-index: 49;
+}
+.we-did-it-style{
+  position: relative;
+  top: 200px;
+   background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape2.png?v=1651824919);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.we-did-it-vedio {
+  border-radius: 50px;
+    background-color: rgb(242, 227, 252);
+    position: relative;
+    width: 70%;
+    height: 250px;
+    z-index: 69;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575), url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-dit-it-vedio.png?v=1651824958);
+    background-position: center center, center center;
+    background-repeat: no-repeat, no-repeat;
+}
+.we-did-it-vedio-no-media {
+  border-radius: 50px;
+    background-color: #f2e3fc00;
+    position: relative;
+    width: 43%;
+    height: 250px;
+    z-index: 69;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575), url(https://cdn.shopify.com/s/files/1/0390/2985/files/6_33bea314-7133-4d44-90b6-e3ab675715a7.jpg?v=1652101389);
+    background-position: center center, center center;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.we-did-it {
+  background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog.png?v=1651824247) ,url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape1.png?v=1651825826 ), url(../images/we-did-it-shape3.png);
+  background-position: right 420px top -139px, right 520px top 120px, left 120px top 620px;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+}
+.we-did-it-without-media {
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog.png?v=1651824247) ,url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape1.png?v=1651825826 );
+    background-position: right 420px top -139px, right 515px top 110px;
+    background-repeat: no-repeat, no-repeat;
+    top: -3px;
+    margin-bottom: -50px;
+}
+.about {
+  font-size: 48px;
+  color: rgb(91, 16, 139);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.396;
+  text-align: center;
+  -moz-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  -webkit-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  -ms-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  position: relative;
+  z-index: 87;
+      margin-block-start: 0.83em;
+    margin-block-end: -0.2em;
+}
+.about img {
+  position: relative;
+    top: -10px;
+}
+.we-did-it-text {
+  font-size: 21px;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  line-height: 1.396;
+  text-align: center;
+  -moz-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  -webkit-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  -ms-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  position: relative;
+  z-index: 87;
+  top: -20px;
+}
+.we-did-it-text-style {
+  font-size: 31px;
+  font-family:'candy_chicksregular';
+  color: rgb(91, 16, 139);
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  -moz-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  -webkit-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  -ms-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  position: relative;
+  z-index: 87;
+  top: -3px;
+    left: 3px;
+    margin-right: 5px;
+}
+.we-did-it-text-style1 {
+    font-size: 21px;
+    color: rgb(91, 16, 139);
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    -moz-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+    -webkit-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+    -ms-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+    position: relative;
+    z-index: 87;
+}
+.we-did-it-about{
+  position: relative;
+  top: -20px;
+}
+.how-its-work {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-bg.png?v=1651825083);
+    background-position: top right;
+    background-repeat: repeat;
+    height: 550px;
+    position: relative;
+    top: 235px;
+}
+.how-its-work-style{
+  position: relative;
+  top: 60px;
+}
+.how-its-work-title {
+  font-size: 41px;
+  color: rgb(91, 16, 139);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.612;
+  text-align: center;
+  -moz-transform: matrix( 0.89794427271238,0,0,0.89794427271238,0,0);
+  -webkit-transform: matrix( 0.89794427271238,0,0,0.89794427271238,0,0);
+  -ms-transform: matrix( 0.89794427271238,0,0,0.89794427271238,0,0);
+  position: relative;
+  z-index: 92;
+}
+.step_1 {
+  font-size: 51px;
+ font-family:'candy_chicksregular';
+  color: rgb(255, 255, 255);
+  line-height: 0.853;
+  text-align: center;
+  -moz-transform: matrix( 0.77363058157516,0,0,0.77363058157515,0,0);
+  -webkit-transform: matrix( 0.77363058157516,0,0,0.77363058157515,0,0);
+  -ms-transform: matrix( 0.77363058157516,0,0,0.77363058157515,0,0);
+  position: relative;
+  z-index: 95;
+  top: -20px;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+.step_2 {
+ font-size: 51px;
+  font-family:'candy_chicksregular';
+  color: rgb(255, 255, 255);
+  line-height: 0.853;
+  text-align: center;
+  -moz-transform: matrix( 0.77363058157516,0,0,0.77363058157515,0,0);
+  -webkit-transform: matrix( 0.77363058157516,0,0,0.77363058157515,0,0);
+  -ms-transform: matrix( 0.77363058157516,0,0,0.77363058157515,0,0);
+  position: relative;
+  z-index: 95;
+  top: -60px;
+  margin-right: 5px;
+  white-space: nowrap;
+}
+.step_3 {
+ font-size: 51px;
+ font-family:'candy_chicksregular';
+  color: rgb(255, 255, 255);
+  line-height: 0.853;
+  text-align: center;
+  -moz-transform: matrix( 0.77363058157516,0,0,0.77363058157515,0,0);
+  -webkit-transform: matrix( 0.77363058157516,0,0,0.77363058157515,0,0);
+  -ms-transform: matrix( 0.77363058157516,0,0,0.77363058157515,0,0);
+  position: relative;
+  z-index: 95;
+  top: -10px;
+  margin-right: 5px;
+  white-space: nowrap;
+}
+.step_4 {
+ font-size: 51px;
+ font-family:'candy_chicksregular';
+  color: rgb(255, 255, 255);
+  line-height: 0.853;
+  text-align: center;
+  -moz-transform: matrix( 0.77363058157516,0,0,0.77363058157515,0,0);
+  -webkit-transform: matrix( 0.77363058157516,0,0,0.77363058157515,0,0);
+  -ms-transform: matrix( 0.77363058157516,0,0,0.77363058157515,0,0);
+  position: relative;
+  z-index: 95;
+  top: -60px;
+  margin-right: 5px;
+  white-space: nowrap;
+}
+
+.how-its-work-box{
+    position: relative;
+    z-index: 35;
+    margin: 0 8%;
+}
+.how-its-work-box ul{
+  position: relative;
+  display: inline-flex;
+  list-style-type: none;
+}
+.how-its-work-box ul li{
+    margin: 0px 10px;
+    width: 35%;
+    text-align: -webkit-center;
+}
+.how-its-work-box ul li p{
+font-size: 21px;
+  color: rgb(0, 0, 0);
+  line-height: 1.209;
+  text-align: center;
+  -moz-transform: matrix( 0.86155745415947,0,0,0.86155745415947,0,0);
+  -webkit-transform: matrix( 0.86155745415947,0,0,0.86155745415947,0,0);
+  -ms-transform: matrix( 0.86155745415947,0,0,0.86155745415947,0,0);
+  position: relative;
+  z-index: 105;
+  top: 0px;
+}
+.how-its-work-box ul li .text-color{
+  color: rgb(91, 16, 139);
+  font-weight: bold;
+  text-decoration: none;
+}
+.how-its-work{
+  background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-3birds-mb.png?v=1651824984), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-clouds.png?v=1651825915), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-clouds2.png?v=1651825956), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-bottom.png?v=1651826083), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-bg.png?v=1651825083);
+  background-position: right 90px top 70px, right 150px bottom 140px, left 60px top 70px, left 40px bottom -10px, left top;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+}
+.how-its-work-box ul .desktop {
+    display: block;
+  }
+  .how-its-work-box ul .mb {
+    display: none;
+  }
+.how-its-work-vedio {
+  border-radius: 50px;
+    background-color: rgb(242, 227, 252);
+    position: relative;
+    width: 43%;
+    height: 300px;
+    z-index: 69;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575), url(https://cdn.shopify.com/s/files/1/0390/2985/files/yt-thumb-mb.jpg?v=1651825136);
+    background-position: center center, center center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, cover;
+}
+.know-more-at{
+  width: 100%;
+    padding: 0px 0px 0px 0px;
+    height: 450px;
+    position: relative;
+    top: 230px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/know-more-dog-mb.png?v=1651825181);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    margin-bottom: 160px;
+}
+.know-more-at-title {
+  font-size: 76px;
+ font-family:'candy_chicksregular';
+  color: rgb(91, 16, 139);
+  line-height: 0.99;
+  text-align: center;
+  font-weight: 400;
+  -moz-transform: matrix( 0.89794427271238,0,0,0.89794427271238,0,0);
+  -webkit-transform: matrix( 0.89794427271238,0,0,0.89794427271238,0,0);
+  -ms-transform: matrix( 0.89794427271238,0,0,0.89794427271238,0,0);
+  position: relative;
+  z-index: 93;
+  top: 200px;
+}
+.know-more-at-link {
+  font-size: 31px;
+  color: rgb(0, 0, 0)!important;
+  line-height: 2.257;
+  font-weight: 400;
+  text-align: center;
+  -moz-transform: matrix( 0.89794427271238,0,0,0.89794427271238,0,0);
+  -webkit-transform: matrix( 0.89794427271238,0,0,0.89794427271238,0,0);
+  -ms-transform: matrix( 0.89794427271238,0,0,0.89794427271238,0,0);
+  position: relative;
+  z-index: 94;
+   top: 135px;
+  text-decoration: none;
+}
+.know-more-at-link a{
+  color: rgb(0, 0, 0)!important;
+}
+.know-more-at-link a{
+  text-decoration: none;
+}
+
+.media-box-symbol {
+  font-size: 14px;
+    font-family: "GeometosRounded";
+    color: rgb(251, 195, 55);
+    line-height: 1.424;
+    text-align: center;
+    -moz-transform: matrix( 15.0525261761561,0,0,15.0525261761562,0,0);
+    -webkit-transform: matrix( 15.0525261761561,0,0,15.0525261761562,0,0);
+    -ms-transform: matrix( 15.0525261761561,0,0,15.0525261761562,0,0);
+    position: relative;
+    z-index: 43;
+    top: 197px;
+}
+.vedio-media-box{
+  width: 95%;
+    display: inline-flex;
+    position: relative;
+    top: 0px;
+    margin: 0 30px;
+    border-bottom: 3px dotted #fdc438;
+    padding-bottom: 20px;
+}
+.vedio-box{
+  width: 60%;
+    display: inline-block;
+}
+.media-box{
+  width: 30%;
+    display: inline-block;
+}
+.media-box p {
+ font-size: 24px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 1.25;
+    text-align: center;
+    -moz-transform: matrix( 0.78457196294026,0,0,0.78457196294026,0,0);
+    -webkit-transform: matrix( 0.78457196294026,0,0,0.78457196294026,0,0);
+    -ms-transform: matrix( 0.78457196294026,0,0,0.78457196294026,0,0);
+    position: relative;
+    z-index: 83;
+    top: 120px;
+}
+
+.media-box img{
+  position: relative;
+    top: 115px;
+    left: 50%;
+    transform: translate(-50%);
+    height: 110px;
+    width: auto;
+}
+.vedio-media-box .slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 375px;
+}
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #fbc337;
+    border: none;
+}
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 60px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .25;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li button:before {
+   font-family: 'slick';
+    font-size: 60px;
+    line-height: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    content: '•';
+    text-align: center;
+    opacity: 1;
+    color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border: 1px solid #fbc337;
+    border-radius: 50%;
+}
+
+.l1{
+  position: relative;
+  top: -35px;
+}
+.l3{
+position: relative;
+top: 15px;
+}
+.l4{
+position: relative;
+top: -30px;
+}
+.fill-details-text1 {
+  font-size: 36px;
+  color: rgb(251, 195, 55);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.396;
+  text-align: center;
+  -moz-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  -webkit-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  -ms-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  position: relative;
+  z-index: 48;
+  top: 50px;
+}
+.fill-details-text2 {
+  font-size: 26px;
+  color: rgb(255 255 255);
+  font-weight: 400;
+  text-transform: lowercase;
+}
+.submit-style img{
+  padding-left: 10px;
+    padding-right: 10px;
+    height: 18px;
+    width: 12px;
+}
+.media-box .colon-img {
+    position: relative;
+    top: -7px;
+    height: 5px;
+    width: 8px;
+}
+.about-us .help-box ul li p {
+    margin-left: 27px;
+    padding-bottom: 15px;
+    border-right: 3px dotted #fbc337;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 15px;
+    margin-inline-end: 15px;
+}
+.about-us .help-box ul li:last-child p{
+  border-right: none;
+}
+.we-did-it-about .for-mb{
+  display: none;
+}
+.we-did-it-about .for-desktop{
+  display: block;
+}
+.img1{
+  width: 100px;
+  height: 90px;
+}
+.img2{
+  width: 100px;
+  height: 62px;
+}
+.img3{
+  width: 110px;
+  height: 60px;
+}
+.img4{
+  width: 100px;
+  height: 90px;
+}
+@media only screen and (max-width: 767px){
+  .we-did-it-about .for-mb{
+  display: block;
+  top: -60px;
+}
+.we-did-it-about .for-desktop{
+  display: none;
+}
+  .about-us .help-box ul li p {
+    margin-left: 27px;
+    padding-bottom: 15px;
+    border-bottom: 3px dotted #fbc337;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    border-right: none;
+    margin-inline-start: 15px;
+    margin-inline-end: 15px;
+}
+.about-us .help-box ul li:last-child p{
+  border-bottom: none;
+}
+.about-us .help-box ul li {
+    display: flex;
+    margin: 15px 20px;
+}
+  .media-box .colon-img {
+    position: relative;
+    top: -4px;
+    height: 5px;
+    width: 8px;
+}
+  .l1{
+  position: relative;
+  top: 0px;
+}
+.l3{
+position: relative;
+top: 0px;
+}
+.l4{
+position: relative;
+top: 0px;
+}
+
+.submit-style {
+    text-align: center;
+    position: relative;
+    top: 70px;
+}
+  .align-style{
+  text-align: -webkit-center;
+}
+  .banner {
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/dog-mb.png?v=1651825238), url(https://cdn.shopify.com/s/files/1/0390/2985/files/3clouds-mb.png?v=1651823580), url(https://cdn.shopify.com/s/files/1/0390/2985/files/Sun-Cloud-mb.png?v=1651824408), url(https://cdn.shopify.com/s/files/1/0390/2985/files/3-birds-mb.png?v=1651824435), url(https://cdn.shopify.com/s/files/1/0390/2985/files/banner-bottom-mb.png?v=1651824461), url(https://cdn.shopify.com/s/files/1/0390/2985/files/apple-mb.png?v=1651824492), url(https://cdn.shopify.com/s/files/1/0390/2985/files/home-mb.png?v=1651824524), url(https://cdn.shopify.com/s/files/1/0390/2985/files/banner-bg.png?v=1651823791);
+    background-position:right bottom, left 120px bottom 120px, right 5px top 30px, left 10px bottom 120px, left -115px bottom -1px, left 52px bottom -18px, left 20px bottom, left top;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+    padding: 15px;
+    height: 440px;
+  }
+  .text11 {
+    font-size: 30px;
+    top: 10px;
+    width: 75%;
+}
+     .text12 {
+    font-size: 30px;
+}
+  .text2 {
+    font-size: 20px;
+    line-height: 1.125;
+    top: 6px;
+    width: 75%;
+}
+  .text2 img {
+      vertical-align: middle;
+      width: 45%;
+  }
+   .about-us .contact-deatils-copy {
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-apple-mb.png?v=1651823844),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home4-mb.png?v=1651823870),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home1-mb.png?v=1651823889),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home2-mb.png?v=1651823928),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home3-mb.png?v=1651823928),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape1-mb.png?v=1651823969),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape2-mb.png?v=1651823928),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape3aa.png?v=1651824005),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-heart.png?v=1651824032);
+    background-position: left 130px bottom -100px,left 110px bottom -10px,left 70px bottom,right bottom,left bottom,left 67px bottom,left 65px top,left 160px top 515px,center top 1190px,left 242px bottom 160px;
+    background-repeat: no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
+}
+    .fill-details-text1 {
+    font-size: 30px;
+    line-height: 1;
+    top: 80px;
+}
+.fill-details-text2 {
+    font-size: 18px;
+}
+  .about-us .contact-deatils-copy {
+    padding-top: 85px;
+   height: 1690px;
+  }
+  .submit-style img {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 11px;
+    width: 8px;
+    padding-left:0;
+    padding-right:0;
+}
+  .help-box {
+    border-radius: 40px;
+    margin: 0 7%;
+    padding: 15px;
+  }
+  .about-us .help-box ul {
+    display: initial;
+  }
+  .about-us .help-box ul li img {
+    width: 70px;
+    height: 82px;
+  }
+  .help-box-title {
+    font-size: 28px;
+    line-height: 1.2;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    margin: 0 9%;
+  }
+
+  .fill-details-title {
+    font-size: 21px;
+  }
+  .fill-details {
+    position: relative;
+    top: 65px;
+    margin: 0 3%;
+  }
+  .fill-details-title2 {
+    font-size: 18px;
+  }
+  .input-from {
+    display: initial;
+  }
+  .input-filds {
+    width: 75%;
+    padding: 0 14px;
+  }
+  .form-group label {
+    font-size: 16px;
+  }
+  .about-note {
+    font-size: 15px;
+    text-align: center;
+    top: 50px;
+    left: 0px;
+  }
+  .we-did-it {
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822) ,url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape1-mb.png?v=1651824701), url(../images/we-did-it-shape3.png);
+    background-position: left 130px top -100px, left 35px top 75px, left 20px top 860px;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+  }
+    .we-did-it-without-media {
+
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822),url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape1-mb.png?v=1651824701),url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape3-mb.png);
+    background-position: left 130px top -100px, left 35px top 75px ,left 20px top 860px;
+    background-repeat: no-repeat,no-repeat,no-repeat;
+    top: -1px;
+    }
+  .we-did-it-style {
+    position: relative;
+    top: 130px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape2.png?v=1651824919);
+    background-position: center bottom 41px;
+    background-repeat: no-repeat;
+}
+  .vedio-media-box {
+    width: 90%;
+    display: block;
+    position: relative;
+    top: 0px;
+    margin: 0 7%;
+  }
+  .vedio-box {
+    width: 90%;
+    display: inline-block;
+  }
+  .we-did-it-title {
+    font-size: 48px;
+  }
+  .we-did-it-vedio {
+    border-radius: 50px;
+    background-color: rgb(242, 227, 252);
+    position: relative;
+    width: 300px;
+    height: 200px;
+    z-index: 69;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon-mb.png?v=1651824943), url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-dit-it-vedio.png?v=1651824958);
+    background-position: center center, center center;
+    background-repeat: no-repeat, no-repeat;
+  }
+  .slick-dotted.slick-slider {
+    margin-bottom: 0px;
+}
+.slick-dots {
+    bottom: -10px;
+}
+  .media-box {
+    width: 90%;
+    display: inline-block;
+  }
+  .media-box-symbol {
+    top: 134px;
+  }
+  .media-box p {
+    top: 97px;
+  }
+  .media-box img {
+    top: 110px;
+    height: 140px;
+  }
+  .how-its-work {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-3birds-mb.png?v=1651824984), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-clouds-mb.png?v=1651824996), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-clouds2-mb.png?v=1651825018), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-bottom-mb.png?v=1651825045), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-bg.png?v=1651825083);
+    background-position: right 237px bottom 123px, right 40px bottom 140px, left 55px top 40px, left 1px bottom -6px, left top;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+    height: 1000px;
+    position: relative;
+    top: 75px;
+}
+  .how-its-work-box ul {
+    display: block;
+    padding-inline-start: 10px;
+  }
+  .how-its-work-box ul li {
+    margin: 0px 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  /*.how-its-work-box ul li img {
+    height: 45px;
+  }*/
+  .how-its-work-box {
+    position: relative;
+    z-index: 35;
+    margin: 0 1%;
+  }
+   .how-its-work-box ul .desktop {
+    display: none;
+  }
+  .how-its-work-box ul .mb {
+    display: flex;
+  }
+  .step_1, .step_2, .step_3, .step_4 {
+    top: 0px;
+  }
+  .how-its-work-vedio {
+    width: 300px;
+    height: 200px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon-mb.png?v=1651824943), url(https://cdn.shopify.com/s/files/1/0390/2985/files/yt-thumb-mb.jpg?v=1651825136);
+    background-position: center center, center center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, cover;
+  }
+  
+  .how-its-work-box ul li p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+  
+  .we-did-it-about .for-mb {
+    margin-bottom: 80px;
+}
+  
+  .know-more-at-link {
+    font-size: 18px;
+    top: 100px;
+  }
+  .know-more-at {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    height: 450px;
+    position: relative;
+    top: 70px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/know-more-dog-mb.png?v=1651825181);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+  }
+  .we-did-it-vedio-no-media {
+    border-radius: 50px;
+    background-color: #f2e3fc00;
+    position: relative;
+    width: 300px;
+    height: 170px;
+    z-index: 69;
+    left: 48%;
+    transform: translateX(-52%);
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon-mb.png?v=1651824943), url(https://cdn.shopify.com/s/files/1/0390/2985/files/6_1_88070043-8e64-4af2-9ac6-7a887a4093dc.jpg?v=1652101389);
+    background-position: center center, center center;
+    background-repeat: no-repeat, no-repeat;
+}
+  .know-more-at-title {
+      font-size: 55px;
+      top: 155px;
+    }
+    .about img{
+      width: 310px;
+    }
+    .submit-btn {
+    font-size: 14px;
+}
+.img1{
+  width: 100px;
+  height: 70px;
+}
+.img2-mb{
+  width: 100px;
+  height: 70px;
+}
+.img3{
+  width: 100px;
+  height: 55px;
+}
+.img4-mb{
+  width: 100px;
+  height: 70px;
+}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait) {
+
+  .banner {
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/dog-mb.png?v=1651825238), url(https://cdn.shopify.com/s/files/1/0390/2985/files/3clouds-mb.png?v=1651823580), url(https://cdn.shopify.com/s/files/1/0390/2985/files/Sun-Cloud-mb.png?v=1651824408), url(https://cdn.shopify.com/s/files/1/0390/2985/files/3-birds-mb.png?v=1651824435), url(https://cdn.shopify.com/s/files/1/0390/2985/files/banner-bottom-mb.png?v=1651824461), url(https://cdn.shopify.com/s/files/1/0390/2985/files/apple-mb.png?v=1651824492), url(https://cdn.shopify.com/s/files/1/0390/2985/files/home-mb.png?v=1651824524), url(https://cdn.shopify.com/s/files/1/0390/2985/files/banner-bg.png?v=1651823791);
+    background-position:right bottom, left 120px bottom 120px, right 5px top 40px, left 10px bottom 120px, left -115px bottom -1px, left 52px bottom -18px, left 20px bottom, left top;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+    padding: 15px;
+    height: 415px;
+  }
+  .text11 {
+      font-size: 26px;
+      top: 10px;
+     }
+     .text12 {
+    font-size: 37px;
+    }
+    .text2 {
+    font-size: 22px;
+    line-height: 1.125;
+    top: -11px;
+    }
+  .text2 img {
+      vertical-align: middle;
+      width: 45%;
+  }
+    .about-us .contact-deatils-copy{
+  background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-apple-mb.png?v=1651823844), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home4-mb.png?v=1651823870), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home1-mb.png?v=1651823889), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home2-mb.png?v=1651823928), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home3-mb.png?v=1651823928), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape1.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape2.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape3.png?v=1651824005), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-heart.png?v=1651824032);
+   background-position: left 430px bottom -100px, left 410px bottom -10px, left 370px bottom, right bottom ,left bottom, left 67px bottom, left 10px top -20px, left 315px top 320px, center top 845px, left 560px bottom 160px;
+   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  }
+  .about-us .contact-deatils-copy {
+    padding-top: 75px;
+    height: 1330px;
+  }
+  .help-box {
+    border-radius: 40px;
+    margin: 0 7%;
+    padding: 30px;
+}
+.about-us .help-box ul li p {
+    margin-left: 27px;
+    padding-bottom: 15px;
+    border-bottom: 3px dotted #fbc337;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 15px;
+    margin-inline-end: 15px;
+    border-right: none;
+}
+.about-us .help-box ul li:last-child p {
+    border-bottom: none;
+    border-right: none;
+}
+  .about-us .help-box ul {
+    display: initial;
+  }
+  .about-us .help-box ul li img {
+    width: 70px;
+    height: 82px;
+  }
+  .help-box-title {
+    font-size: 28px;
+    line-height: 1.2;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    margin: 0 9%;
+  }
+
+  .fill-details-title {
+    font-size: 21px;
+  }
+  .fill-details {
+    position: relative;
+    top: 70px;
+    margin: 0 3%;
+  }
+  .fill-details-title2 {
+    font-size: 18px;
+  }
+  .input-from {
+    display: initial;
+  }
+  .input-filds {
+    width: 75%;
+    padding: 0 14px;
+  }
+  .form-group label {
+    font-size: 16px;
+  }
+  .about-note {
+    font-size: 15px;
+    text-align: center;
+    top: 60px;
+    left: 0px;
+  }
+  .we-did-it {
+        background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822) ,url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape1-mb.png?v=1651824701), url(../images/we-did-it-shape3.png);
+    background-position: left 430px top -100px, left 330px top 80px, left 20px top 900px;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+  }
+  .we-did-it-without-media {
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822) ,url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape1-mb.png?v=1651824701);
+    background-position: left 430px top -100px, left 330px top 80px;
+    background-repeat: no-repeat, no-repeat;
+    top: -42px;
+  }
+  .we-did-it-style {
+    position: relative;
+    top: 130px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape2.png?v=1651824919);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+  .vedio-media-box {
+    width: 90%;
+    display: block;
+    position: relative;
+    top: -30px;
+    margin: 0 7%;
+  }
+  .vedio-box {
+    width: 90%;
+    display: inline-block;
+  }
+  .we-did-it-title {
+    font-size: 48px;
+  }
+  .we-did-it-vedio {
+    border-radius: 50px;
+    background-color: rgb(242, 227, 252);
+    position: relative;
+    z-index: 69;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon2.png?v=1651825527), url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575), url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-dit-it-vedio.png?v=1651824958);
+    background-position: center center, center center, center center;
+    background-repeat: no-repeat ,no-repeat, no-repeat;
+        top: 20px;
+  }
+  .media-box {
+    width: 90%;
+    display: inline-block;
+  }
+  .media-box-symbol {
+    top: 134px;
+  }
+  .media-box p {
+    top: 97px;
+  }
+  .media-box img {
+    top: 76px;
+  }
+  .how-its-work {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-bg.png?v=1651825083);
+    background-position: top right;
+    background-repeat: repeat;
+    height: 590px;
+    position: relative;
+    top: 120px;
+}
+  .how-its-work-box ul {
+    display: block;
+    padding-inline-start: 10px;
+  }
+  .how-its-work-box ul li {
+    margin: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .how-its-work-box ul li img {
+    width: 60px;
+    height: 45px;
+  }
+  .how-its-work-box {
+    position: relative;
+    z-index: 35;
+    margin: 0 1%;
+  }
+   .how-its-work-box ul .desktop {
+    display: none;
+  }
+  .how-its-work-box ul .mb {
+    display: flex;
+  }
+  .step_1, .step_2, .step_3, .step_4 {
+    top: 0px;
+  }
+  .know-more-at-link {
+    font-size: 18px;
+    top: 100px;
+  }
+  .know-more-at {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    height: 450px;
+    position: relative;
+    top: 100px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/know-more-dog-mb.png?v=1651825181);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+  }
+  .know-more-at-title {
+      font-size: 55px;
+      top: 155px;
+    }
+    .about img{
+      width: 310px;
+    }
+    .submit-btn {
+    font-size: 14px;
+  }
+  .align-style{
+  text-align: -webkit-center;
+}
+.about-us .help-box ul li {
+    display: flex;
+    margin: 30px 20px;
+}
+
+.submit-style {
+    text-align: center;
+    position: relative;
+    top: 50px;
+}
+.l1{
+  position: relative;
+  top: 0px;
+}
+.l3{
+position: relative;
+top: 0px;
+}
+.l4{
+position: relative;
+top: 0px;
+}
+}
+
+
+@media only screen and (min-width: 1500px){
+  .text11 {
+    font-size: 90.483px;
+    top: 110px;
+  }
+.text12 {
+    font-size: 90.483px;
+  }
+
+  .text2 {
+    font-size: 51.686px;
+    /*font-family: "Segoe UI";*/
+    font-weight: 400;
+    color: rgb(91, 16, 139);
+    text-transform: uppercase;
+    line-height: 1.5;
+    -moz-transform: matrix( 0.91033374028554,0,0,0.91033374028554,0,0);
+    -webkit-transform: matrix( 0.91033374028554,0,0,0.91033374028554,0,0);
+    -ms-transform: matrix( 0.91033374028554,0,0,0.91033374028554,0,0);
+    position: relative;
+    top: 30px;
+    z-index: 10;
+  }
+  .text2 img {
+    vertical-align: middle;
+    width: auto;
+  }
+  .banner {
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/dog.png?v=1651823557), url(https://cdn.shopify.com/s/files/1/0390/2985/files/3clouds.png?v=1651823602), url(https://cdn.shopify.com/s/files/1/0390/2985/files/Sun-Cloud2.png?v=1651823646), url(https://cdn.shopify.com/s/files/1/0390/2985/files/3-birds.png?v=1651823675), url(https://cdn.shopify.com/s/files/1/0390/2985/files/banner-bottom.png?v=1651823701), url(https://cdn.shopify.com/s/files/1/0390/2985/files/apple.png?v=1651823727), url(https://cdn.shopify.com/s/files/1/0390/2985/files/home.png?v=1651823768), url(https://cdn.shopify.com/s/files/1/0390/2985/files/banner-bg.png?v=1651823791);
+    background-position: right 60px bottom, left 152px top 45px, left 945px top 10px, right 50px top 50px, left 140px bottom -5px, left 255px bottom -32px, left 215px bottom, left top;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+    padding: 15px;
+    height: 650px;
+}
+.we-did-it-vedio-no-media {
+    border-radius: 100px;
+    background-color: #f2e3fc00;
+    position: relative;
+    width: 45%;
+    height: 485px;
+    z-index: 69;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575), url(https://cdn.shopify.com/s/files/1/0390/2985/files/6_33bea314-7133-4d44-90b6-e3ab675715a7.jpg?v=1652101389);
+    background-position: center center, center center;
+    background-repeat: no-repeat, no-repeat;
+}
+.how-its-work-vedio {
+    border-radius: 100px;
+    background-color: rgb(242, 227, 252);
+    position: relative;
+    width: 45%;
+    height: 485px;
+    z-index: 69;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575), url(https://cdn.shopify.com/s/files/1/0390/2985/files/yt-thumb2.jpg?v=1651826313);
+    background-position: center center, center center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, cover;
+}
+.know-more-at {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    height: 450px;
+    position: relative;
+    top: 330px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/know-more-dog.png?v=1651826371);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    margin-bottom: 260px;
+}
+.how-its-work {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-3birds.png?v=1651826397), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-clouds.png?v=1651825915), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-clouds2.png?v=1651825956 ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-bottom.png?v=1651826083 ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-bg.png?v=1651825083);
+    background-position: right 90px top 70px, right 150px bottom 140px, left 60px top 70px, left 40px bottom -10px, left top;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+    height: 650px;
+    position: relative;
+    top: 235px;
+  }
+  .about-text1 {
+      font-size: 44px;
+  }
+  .text-style {
+    font-size: 58px;
+  }
+  .about-text1-style {
+    font-size: 44px;
+  }
+  .help-box-title {
+    font-size: 58px;
+  }
+  .about-us .help-box ul li p {
+    font-size: 32px;
+    top: -10%;
+  }
+  .about-us .help-box ul li img {
+    width: 115px;
+    height: 116px;
+  }
+  .about-us .contact-deatils-copy {
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home1.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home2.png?v=1651824248), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home3.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-apple.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home4.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape1-max.png?v=1651826570), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape2-max.png?v=1651826598), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape3-max.png?v=1651826625), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-heart.png?v=1651824032);
+    background-position: left bottom ,right bottom, right 89px bottom, right 600px bottom -160px, right 600px bottom, right 530px bottom, left 180px top -38px, left 949px top 415px, center top 879px, right 540px bottom 210px;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  }
+.about-us .contact-deatils-copy {
+   padding-top: 125px;
+    height: 1600px;
+}
+.help-box {
+    top: 90px;
+}
+.submit-style {
+    top: 100px;
+}
+.submit-style img{
+  padding-left: 20px;
+  padding-right: 10px;
+  height: auto;
+    width: auto;
+}
+.we-did-it-without-media {
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog.png?v=1651824247),url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape1.png?v=1651825826), url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape3-max.png);
+    background-position: right 600px top -139px,right 695px top 110px, left 120px top 885px;
+    background-repeat: no-repeat,no-repeat, no-repeat;
+    top: -1px;
+    margin-bottom: -50px;
+}
+.we-did-it-title {
+    font-size: 75px;
+  }
+  .we-did-it-text {
+    font-size: 32px;
+  }
+  .about {
+    font-size: 60px;
+  }
+  .we-did-it-text-style {
+    font-size: 42px;
+    top: -6px;
+    left: 3px;
+}
+.we-did-it-text-style1 {
+    font-size: 32px;
+    }
+    .how-its-work-title {
+    font-size: 52px;
+  }
+  .how-its-work-box ul li {
+    margin: 0px 10px;
+    width: auto;
+    text-align: -webkit-center;
+}
+.step_1 {
+    font-size: 91px;
+    }
+    .how-its-work-box ul li p {
+    font-size: 32px;
+  }
+  .step_2 {
+    font-size: 91px;
+  }
+  .step_3 {
+    font-size: 91px;
+  }
+  .step_4 {
+    font-size: 91px;
+  }
+  .know-more-at-title {
+    font-size: 85px;
+  }
+  .know-more-at-link {
+    font-size: 37px;
+  }
+  .we-did-it-vedio {
+    border-radius: 100px;
+    background-color: rgb(242, 227, 252);
+    position: relative;
+    width: 70%;
+    height: 485px;
+    z-index: 69;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIJ8Wg79rw$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-dit-it-vedio.png?v=1651824958__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIK_fYdJXg$ );
+    background-position: center center, center center;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.we-did-it {
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog.png?v=1651824247__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIJRAs3CzQ$ ) ,url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape1.png?v=1651825826__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhILQgvEwAA$ ), url(../images/we-did-it-shape3-max.png);
+    background-position: right 600px top -139px, right 699px top 120px, left 120px top 885px;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+}
+.vedio-media-box .slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 600px;
+}
+.vedio-media-box {
+    padding-bottom: 50px;
+}
+.media-box-symbol {
+    font-size: 26px;
+    top: 250px;
+}
+.media-box p {
+    font-size: 42px;
+    top: 150px;
+  }
+  .media-box {
+    width: 35%;
+    display: inline-block;
+    top: 50px;
+}
+.media-box img {
+   position: relative;
+    top: 170px;
+    left: 50%;
+    transform: translate(-50%);
+    width: auto;
+    height: 180px;
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 70px;
+}
+.slick-dots {
+    bottom: 50px;
+}
+.submit-btn {
+    font-size: 45px;
+    padding: 15px;
+}
+.fill-details-text1 {
+  font-size: 60px;
+  color: rgb(251, 195, 55);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.396;
+  text-align: center;
+  -moz-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  -webkit-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  -ms-transform: matrix( 0.80583610971196,0,0,0.80583610971196,0,0);
+  position: relative;
+  top: 125px;
+  z-index: 48;
+}
+.fill-details-text2 {
+    font-size: 60px;
+    color: rgb(255 255 255);
+    font-weight: 400;
+    text-transform: lowercase;
+}
+.media-box .colon-img{
+ position: absolute;
+    top: -17px;
+    height: 8px;
+    width: 14px;
+}
+}
+
+.slick-dots {
+    bottom: 20px;
+}
+@media only screen and (min-device-width: 361px) and (max-device-width: 375px) {
+  .text11 {
+    font-size: 32px;
+    top: -10px;
+    width: 79%;
+}
+.text12 {
+    font-size: 32px;
+}
+.text2 {
+    font-size: 20px;
+    line-height: 1.125;
+    top: -10px;
+    width: 70%;
+}
+.how-its-work{
+  height: 954px;
+}
+.know-more-at{
+  top: 70px;
+  margin-bottom: 20px;
+}
+}
+@media only screen and (min-device-width: 376px) and (max-device-width: 393px) {
+  .text11 {
+    font-size: 32px;
+    top: -10px;
+    width: 75%;
+}
+.text12 {
+    font-size: 32px;
+}
+.text2 {
+    font-size: 22px;
+    line-height: 1.125;
+    top: -11px;
+    width: 79%;
+}
+.know-more-at{
+  top: 70px;
+  margin-bottom: 20px;
+}
+.how-its-work{
+  height: 925px;
+  top: 75px;
+}
+
+.about-us .contact-deatils-copy {
+    padding-top: 85px;
+    height: 1635px;
+}
+.about-us .contact-deatils-copy {
+background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-apple-mb.png?v=1651823844),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home4-mb.png?v=1651823870),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home1-mb.png?v=1651823889),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home2-mb.png?v=1651823928),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home3-mb.png?v=1651823928),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape1-mb.png?v=1651823969),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape2-mb.png?v=1651823928),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape3.png?v=1651824005),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-heart.png?v=1651824032);
+    background-position: left 130px bottom -100px,left 110px bottom -10px,left 70px bottom,right bottom,left bottom,left 67px bottom,left 65px top,left 160px top 477px,center top 1135px,left 242px bottom 160px;
+    background-repeat: no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
+  }
+}
+@media only screen and (min-device-width: 400px) and (max-device-width: 414px) {
+  .text11 {
+    font-size: 32px;
+    top: -2px;
+    width: 75%;
+}
+.text2 {
+    font-size: 24px;
+    line-height: 1.125;
+    top: -10px;
+    width: 75%;
+}
+.text12 {
+    font-size: 32px;
+}
+.about-us .contact-deatils-copy {
+    padding-top: 85px;
+    height: 1630px;
+}
+.about-us .contact-deatils-copy {
+    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIJ36Vr53Q$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-apple-mb.png?v=1651823844__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIJLoI3FSA$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home4-mb.png?v=1651823870__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIIU0Do07A$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home1-mb.png?v=1651823889__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhII5EF6DWw$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home2-mb.png?v=1651823928__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIK2YvfIug$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home3-mb.png?v=1651823928__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIJrEwYxSA$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape1-mb.png?v=1651823969__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIK_MFg9rw$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape2-mb.png?v=1651823928__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhILRfcO8mA$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape3.png?v=1651824005__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIKynIaUmg$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-heart.png?v=1651824032__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIK47Z6ByA$ );
+    background-position: left 130px bottom -100px, left 110px bottom -10px, left 70px bottom, right bottom ,left bottom, left 67px bottom, left 65px top, left 160px top 477px, center top 1095px, left 242px bottom 160px;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+}
+.how-its-work{
+  height: 930px;
+  background-position: right 237px bottom 123px, right 40px bottom 140px, left 55px top 40px, left 12px bottom -4px, left top;
+}
+.know-more-at{
+  top: 70px;
+}
+}
+
+/*------------new-css-added------------*/
+
+
+@media only screen and (max-width:1500px){
+  
+p.limited {
+    left: 6%;
+    top: -46px;
+    max-width: 38%;
+}
+  
+}
+
+@media only screen and (min-width:1500px) and (max-width:1820px){
+  
+p.limited {
+    left: 14%;
+    top: -46px;
+    max-width: 33%;
+}
+  
+}
+
+
+@media only screen and (max-width: 1199px){
+p.limited {
+    left: 11.5%;
+    width: 100%;
+    max-width: 230px;
+    top: -98px;
+}
+  
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 375px) {
+  
+ .about-us .contact-deatils-copy {
+  background-position:left 130px bottom -100px,left 110px bottom -10px,left 70px bottom,right bottom,left bottom,left 67px bottom,left 65px top,left 160px top 517px,center top 1245px,left 242px bottom 160px
+}
+  
+}
+
+
+
+
+@media only screen and (max-width:767px){
+
+
+.about-us .contact-deatils-copy .fill-details:before {
+    content: "";
+    background: url("https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape3.png");
+    display: block;
+    width: 3px;
+    height: 50px;
+    margin: 0 auto;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+ 
+p.limited {
+    left: 15px;
+    width: auto;
+    max-width: 100%;
+    top: -347px;
+    right: 15px;
+  text-align:center;
+}
+
+}
+
+@media only screen and (max-width:414px){
+  
+  p.limited {
+    left: 15px;
+    width: auto;
+    max-width: 270px;
+    top: -297px;
+    right: 15px;
+    text-align: center;
+    margin: 0 auto;
+}
+  
+}
+
+
+@media only screen and (max-width:350px){
+  
+p.limited {
+    top: -252px;
+}
+  
+}
+
+

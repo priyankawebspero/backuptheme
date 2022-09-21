@@ -1,0 +1,54 @@
+<style>
+.cart-icon.svg-mb {
+    background: #ffffff;
+    border-radius: 50%;
+    width: 55px;
+    height: 52px;
+    line-height: 20px;
+    left: 0px;
+    padding-right: 0 !important;
+    justify-content: center !important;
+}header.site-header.header-parallax {
+    background: transparent!important;
+}.close-menu-mb {
+    display: none;
+}.header-mb-left.header-mb-items {
+    display: none;
+}.header-mb-middle.header-mb-items {
+    display: none;
+}.search-mb.svg-mb {
+    display: none;
+}
+.iwish-icon.svg-mb.mobile-wishlist {
+    display: none;
+}.tracking_order {
+    display: none;
+}.header-top {
+    display: none;
+}header.site-header.header-parallax.stickyHeader {
+    background: transparent;
+}main.main-content {
+    padding-top: 0 !important;
+}footer#footer {
+    display: none;
+}.head_bottom {
+    display: none;
+}.header-bottom {
+    background: transparent;
+    border: none !important;
+    box-shadow: none;
+}.header-mb .header-mb-right {
+    width: 100%;
+}.a-button {
+    display: none !important;
+}.special_offer_p {
+    display: none;
+}
+</style>
+{{ 'affiliate-and-landing-pages.css' | asset_url | stylesheet_tag }} 
+<div class="page-tpl">
+  <div class="container-fuild">
+    {% section 'affiliate-offers' %}
+    {% section 'affiliate-brands' %}
+  </div>
+</div>

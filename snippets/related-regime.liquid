@@ -1,0 +1,26 @@
+{% if regime_collection.products_count > 1 %}
+
+  {% if section.settings.regime_products_title %}
+  <div class="widget-title not-before">   
+    <h3 class="box-title">
+      <span class="title"> 
+        {% include 'multilang' with section.settings.regime_products_title %}
+      </span>
+    </h3>    
+  </div>
+  {% endif %}
+
+  <div class="widget-product">
+    <div id="slider-regime" class="grid-item four-items" data-row="3">
+      {% for product in regime_collection.products limit: number_of_regime_products %}
+      <div class="grid-item col-6 col-md-4 col-lg-4">
+        {% include 'product-grid-item' %}
+      </div>      
+      {% endfor %}
+    </div>
+  </div>  
+ {% endif %}
+
+<script async>
+$(document).ready(function(){$("#slider-regime").slick({centerMode:!1,slidesToShow:3,dots:!0,arrows:!0,swipe:!0,swipeToSlide:!0,responsive:[{breakpoint:1024,settings:{slidesToShow:3,slidesToScroll:3,infinite:!0,dots:!0}},{breakpoint:990,settings:{slidesToShow:2,slidesToScroll:2}},{breakpoint:768,settings:{slidesToShow:1,slidesToScroll:1}}]})});
+</script>

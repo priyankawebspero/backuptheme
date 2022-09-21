@@ -1,0 +1,84 @@
+<a name="pagecontent" id="pagecontent"></a>
+
+<div class="clearfix">
+  <div class="">
+    
+
+<div class="clearfix account-top-heading text-center">
+  <h3 class="title-name  text-center">{{ 'customer.register.title' | t }}</h3>
+<!--   <span>New User</span> -->
+</div>
+<!--     <br class="clear" /> -->
+    <div id="customer">
+      <!-- Create Customer -->
+      <div id="create-customer">
+
+        {% form 'create_customer' %}
+          {{ form.errors | default_errors }}
+
+          <div id="first_name" class="clearfix large_form">
+<!--             <label for="first_name" class="login">{{ 'customer.register.first_name' | t }}</label> -->
+            <input type="text" value="" name="customer[first_name]" id="first_name" placeholder="{{ 'customer.register.first_name' | t }}" class="large" size="30" required />
+          </div>
+
+          <div id="last_name" class="clearfix large_form">
+<!--             <label for="last_name" class="login">{{ 'customer.register.last_name' | t }}</label> -->
+            <input type="text" value="" name="customer[last_name]" id="last_name" placeholder="{{ 'customer.register.last_name' | t }}" class="large" size="30" required />
+          </div>
+        
+<!--         <div id="mobile_no" class="clearfix large_form">
+                      <label for="last_name" class="login">Mobile</label>
+          <input type="text" value="" name="customer[mobile_no]" id="mobile_no" placeholder="Mobile" class="large" required >
+        </div> -->
+
+          <div id="email" class="clearfix large_form">
+<!--             <label for="email" class="login">{{ 'customer.register.email' | t }}</label> -->
+            <input type="email" value="" name="customer[email]" id="email" placeholder="{{ 'customer.register.email' | t }}" class="large" size="30" required />
+          </div>
+
+          <div id="password" class="clearfix large_form">
+<!--             <label for="password" class="login">{{ 'customer.register.password' | t }}</label> -->
+            <input type="password" value="" name="customer[password]" id="password" placeholder="{{ 'customer.register.password' | t }}" class="large password" size="30" required />
+          </div>
+        
+         <div id="cpassword" class="clearfix large_form">
+<!--             <label for="password" class="login">{{ 'customer.register.password' | t }}</label> -->
+            <input type="password" value="" name="customer[cpassword]" id="cpassword" placeholder="Confirm Password" class="large password" size="30" required />
+          </div>
+
+          {% if section.settings.text %}
+            {{ section.settings.text }}
+          {% endif %}
+
+<!--           <div class="acceptsMarketing">
+            <input type="checkbox" id="customer[accepts_marketing]" name="customer[accepts_marketing]">
+            <label for="customer[accepts_marketing]">{{ 'customer.register.accepts_marketing' | t }}</label>
+          </div> -->
+
+          <div class="action_bottom">
+            <p class="login_btnss"><input class="btn action_button yellow-btn" type="submit" value="{{ 'customer.register.submit' | t }}" id="notifyeventsignup" /></p>
+<!--             <p class="right" style="padding-top: 8px;">
+              {{ 'customer.register.returning_customer_label' | t }} {{ 'customer.register.sign_in_html' | t | customer_login_link }}
+            </p> -->
+          </div>
+<!--         <p class="dont-account hidden-xs">Already signed account? <a href="#sign-in">Sign In</a></p> -->
+
+        {% endform %}
+      </div><!-- /#create-customer -->
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Register",
+    "class": "register-section",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+      }
+    ]
+  }
+{% endschema %}

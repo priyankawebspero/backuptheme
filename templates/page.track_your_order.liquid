@@ -1,0 +1,73 @@
+<div class="page-tpl">
+  <div class="container trackorder">
+    {% include 'breadcrumb' %} .
+    <header class="page-header">
+      <h2 class="track_title">
+        {% include 'multilang' with page.title %}
+      </h2>
+    </header>
+    <div class="track-order_form">
+      <select id="order_type" onchange="getval(this);">
+        <option value="http://www.bluedarttrackings.co.in/tracking?option=waybill&trackingnumber=">Blue Dart</option>
+        <option value="https://ecomexpress.in/tracking/?awb_field="
+          >Ecom express</option
+        >
+        <option value="https://www.delhivery.com/track/package/">Delhivery</option>
+      </select>
+      <input
+        type="text"
+        id="track-id"
+        name="track-id"
+        placeholder="Tracking Number"
+      />
+      <button onclick="track_order()" class="btn" type="button">Track</button>
+    </div>
+    <label class="error_msg"></label>
+    <iframe src=""></iframe>
+  </div>
+  <style>
+    .track-order_form {
+      display: flex;
+text-align: center;
+margin: 16px auto;
+    }
+    .track_title span {  text-transform: none; }
+  
+    #order_type {
+      width: 250px;
+      margin: 0 16px;
+    }
+    #track-id {
+      width: 250px;
+      margin: 0 16px;
+    }
+    .trackorder iframe {
+      display:none;
+      width: 100%;
+      height: 100vh;
+      border: 0;
+    }
+      @media only screen and (max-width:1200px){
+      .track-order_form{
+        display:block;
+      } 
+      #track-id{ margin: 16px auto;  }
+      #order_type{ margin: 16px auto; }
+    }
+  </style>
+</div>
+
+<script>
+function track_order() {
+  var track_id = $("#track-id").val();
+  var order_type = $("#order_type").val();
+  if(track_id.length !=0){
+    var url = order_type + track_id;
+    window.open(url,'_blank' );
+    $(".trackorder .error_msg").html("");           
+  }else{
+      console.log("Input value");
+      $(".trackorder .error_msg").html("Please Enter the Order Id.");
+  }
+}
+</script>

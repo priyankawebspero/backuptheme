@@ -1,0 +1,24 @@
+{% if settings.show_cart_best_sellers_product %}
+<section class="related-products best-sell-product {% if cart.total_price < 100 %}disable{% endif %}">
+  {% if settings.title_b != blank %}
+  <div class="widget-title not-before">
+    <h3 class="box-title">
+      <span class="title"> 
+        {% include 'multilang' with settings.title_b %}
+      </span>
+    </h3>
+  </div>
+  {% endif %}
+
+  <div class="widget-product">
+    <div class="products-upsell-grid" data-row="4">
+      {% for product in collections[settings.show_slider_featured_collection].products limit:settings.slider_featured_limit_all %}
+      <div class="grid-item">
+        {% include 'product-grid-item-cart' %}
+      </div>
+      {% else %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %} 

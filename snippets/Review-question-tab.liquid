@@ -1,0 +1,21 @@
+<div class="product_bottom product-pge-tabs container-padd60"> 
+  <div class="tabs">
+    <ul class="tabs">
+      <li class="tab-link current" data-tab="tab-1">Reviews</li>
+      <li class="tab-link" data-tab="tab-2">Questions</li>
+    </ul>
+
+    <div id="tab-1" class="tab-content current">
+      <div class="review">
+        {% include 'judgeme_widgets', widget_type: 'judgeme_review_widget', concierge_install: true, product: product %}
+           
+
+      </div>
+    </div>
+    <div id="tab-2" class="tab-content">
+      <div class="question-simp">
+       {% include 'questions-answers' %}
+      </div>
+    </div>
+  </div>
+</div>

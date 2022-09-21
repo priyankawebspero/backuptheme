@@ -1,0 +1,796 @@
+main.main-content {padding-bottom: 0;}
+.page-teaser>.container-fluid{max-width:100%;padding:0}
+
+div#shopify-section-teaser-second-section {
+    padding: 30px 0 20px 0;
+}
+
+div#shopify-section-teaser-second-section .container-fluid {
+    max-width: 650px;
+}
+
+.ads_cs_teaser img {
+    width: 100%;
+    max-width: 350px;
+}
+
+#shopify-section-counter-bottom h2 {
+    font-weight: 600;
+    color: #5e0d8b;
+    margin-bottom: 0;
+    font-size: 30px;
+    margin-top: -15px;
+}
+
+#shopify-section-counter-bottom h3 {
+  font-family: 'serifabold';
+    letter-spacing: 0;
+    color: #5e0d8b;
+    font-size: 37px;
+    margin-bottom: 9px;
+}
+
+
+.counter_text {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    /* max-width: 500px; */
+    /* margin: 0 auto; */
+}
+
+.counter_text p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    color: #fff;
+    padding-bottom: 0;
+}
+
+.counter_text p hr {
+    display: none;
+}
+
+.counter_text p .countdown {
+    font-size: 0;
+    margin: 0 20px;
+    position: relative;
+}
+
+.counter_text p .countdown .ocount {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1;
+    display: block;
+}
+.counter_text p .countdown .ocount .text_cunt {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    display: block;
+    margin-top: -9px;
+} 
+.counter_text p span.inner {
+    display: block;
+    font-size: 18px;
+    font-family: 'serifabold';
+    letter-spacing: 1px;
+}
+
+.counter_text + p {
+    margin-top: 15px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+section.teaser-page-banner-section .container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+section.teaser-page-banner-section h3 {
+    background: #5e0d8b;
+    color: #fff;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+.teaser-page-banner-section .desktop-form.right br {
+    display: none;
+}
+
+.teaser-page-banner-section .desktop-form.right button {
+    background: #5e0d8b;
+    color: #fff;
+    border: 1px solid #5e0d8b;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 9px 25px;
+    border-radius: 7px;
+    text-transform: lowercase;
+    line-height: 1.2;
+    min-width: 125px;
+}
+
+.teaser-page-banner-section .desktop-form.right input {
+    margin: 0 auto 15px;
+    max-width: 350px;
+    background: #4472c4;
+    border-color: #4472c4;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+}
+
+.teaser-page-banner-section .desktop-form.right input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+   color: #fff;
+}
+.teaser-page-banner-section .desktop-form.right input::-moz-placeholder { /* Firefox 19+ */
+   color: #fff;
+}
+.teaser-page-banner-section .desktop-form.right input:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+.teaser-page-banner-section .desktop-form.right input:-moz-placeholder { /* Firefox 18- */
+  color: #fff;
+}
+
+.teaser-page-banner-section .signup-mail-outer {
+    margin-bottom: 50px;
+}
+
+  .signup-mail-outer .desktop_view input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color:#5b108b;
+}
+.signup-mail-outer .desktop_view input::-moz-placeholder { /* Firefox 19+ */
+  color:#5b108b;
+}
+.signup-mail-outer .desktop_view input:-ms-input-placeholder { /* IE 10+ */
+  color:#5b108b;
+}
+.signup-mail-outer .desktop_view input:-moz-placeholder { /* Firefox 18- */
+ color:#5b108b;
+}
+
+  
+
+.signup-mail-outer .desktop_view {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    max-width: 56vw;
+}
+
+.signup-mail-outer .desktop_view button:hover{
+background: #8901bd;
+
+}
+
+ .counter_text p .countdown:nth-of-type(4):after {
+    display: none;
+}
+
+.confirm {
+    font-size: 22px;
+    color: #5e0d8b;
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+@media only screen and (min-width:768px){
+  
+  .counter_text p {
+    width: 100%;
+    display: flex;
+    padding: 15px 15px 0;
+    color: #fff;
+    justify-content: space-between;
+    max-width: 720px;
+    margin-top: 120px;
+    margin-left: auto;
+    max-width: 40vw;
+    margin-top: 7vw;
+    margin-right: auto;
+    position: relative;
+    left: -1vw;
+}
+ 
+.counter_text p .countdown .ocount {
+    line-height: 1.2;
+    color: #5b108b;
+    font-weight: 700;
+    font-size: 91px;
+  font-size: 4.8vw;
+}
+  
+
+  
+.counter_text p .countdown:after {
+    content: ":";
+    font-size: 4.8vw;
+    position: absolute;
+    right: -3vw;
+    top: 1.5vw;
+    color: #5b108b;
+    font-weight: 700;
+}
+  
+  .counter_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 94.15%;
+    max-width: 1166px;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    height: 52vw;
+    margin: 80px auto 0 auto;
+    width: 61vw;
+    margin-top: 4vw
+    
+}
+  
+img.mobile-xs {
+    display: none !important;
+}
+  
+div#shopify-section-counter-bottom {
+    height: 104.5vw;
+    background-size: 100% !important;
+}
+  
+div#shopify-section-counter-bottom .teaser-spotlight-block .signup-mail-outer+p {
+    margin-top: 30px;
+    line-height: normal;
+    color: #5b108b;
+    font-family: candy_chicksregular;
+    font-size: 8vw;
+    line-height: 1;
+}
+  
+.signup-mail-outer .desktop_view input {
+    float: left;
+    width: calc(33% - 22px);
+    margin: 0 10px 17px;
+    font-size: 25px;
+    height: 65px;
+    padding: 15px 20px;
+    color: #5b108b;
+    background: #e7dcfa;
+    border-radius: 5px;
+    border: none;
+    max-width: 100%;
+}
+  
+.signup-mail-outer .desktop_view button {
+    background: #5b108b;
+    border: none;
+    color: #fff;
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    padding: 0 15px;
+    font-size: 35px;
+    border-radius: 7px;
+    margin: 15px 0 15px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px #9e9d9e99;
+    text-shadow: 0 0 4px #f6b2c3;
+    max-width: 330px;
+}
+  
+#shopify-section-counter-bottom h3 {
+    font-size: 50px;
+    text-align: center;
+    font-family: Segoe Pro;
+    font-weight: 700;
+    margin: 40px auto 60px;
+    width: 100%;
+   max-width: 40vw;
+    font-size: 2.6vw;
+}
+  
+  div#shopify-section-counter-bottom {
+    position: relative;
+}
+  
+div#shopify-section-counter-bottom:before {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/teaser-left-side-ballon.png');
+    display: block;
+    width: 222px;
+    height: 676px;
+    position: absolute;
+    top: -14vw;
+    width: 10vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 28vw;
+  left:0;
+}
+  
+div#shopify-section-counter-bottom:after {
+    content: "";
+    background: url(https://cdn.shopify.com/s/files/1/0390/2985/files/teaser-right-side-ballons.png);
+    display: block;
+    width: 222px;
+    height: 676px;
+    position: absolute;
+    top: -23vw;
+    width: 8vw;
+    background-size: contain;
+    background-repeat: no;
+    height: 28vw;
+    eight: 28vw;
+    right: 0;
+}
+
+}
+
+@media only screen and (max-width:1475px) and (min-width:768px) {
+  
+  .signup-mail-outer .desktop_view {
+    max-width: 70vw;
+}
+  div#shopify-section-counter-bottom .teaser-spotlight-block .signup-mail-outer+p {
+    margin-top: 10px;
+}
+  
+#shopify-section-counter-bottom h3 {
+
+    margin: 20px auto 40px;
+}
+  
+.signup-mail-outer .desktop_view button {
+    font-size: 3vw;
+  max-width: 28vw
+}
+  
+}
+
+@media only screen and (max-width:1100px) and (min-width:768px) {
+  
+.signup-mail-outer .desktop_view input {
+    font-size: 20px;
+    height: 55px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+  
+.signup-mail-outer .desktop_view button {
+    height: 65px;
+    line-height: 65px;
+    margin-bottom: 5px;
+}
+  
+div#shopify-section-counter-bottom .teaser-spotlight-block .signup-mail-outer+p {
+    font-size: 7vw;
+}
+   
+}
+
+
+@media only screen and (max-width:991px) and (min-width:768px) {
+  
+#shopify-section-counter-bottom h3 {
+    margin: 13px auto 20px;
+    font-size: 3vw;
+    max-width: 40vw;
+}
+  
+.signup-mail-outer .desktop_view button {
+    height: 60px;
+    line-height: 60px;
+    margin-bottom: 5px;
+}
+  
+div#shopify-section-counter-bottom .teaser-spotlight-block .signup-mail-outer+p {
+    font-size: 6vw;
+}
+  
+ 
+.counter_text p {
+    left: -3vw;
+}
+  
+.signup-mail-outer .desktop_view input {
+    margin-bottom: 0;
+    font-size: 18px;
+}
+  
+.signup-mail-outer .desktop_view {
+    max-width: 80vw;
+}
+  
+}
+
+@media only screen and (max-width:1300px) {
+  
+ .counter_text p .countdown:after {
+    right: -2.5vw;
+}
+  
+}
+
+@media only screen and (max-width:1199px) {
+  
+  .counter_text p .countdown .ocount .text_cunt {
+    font-size: 20px;
+    margin-top: -6px;
+}
+
+div#shopify-section-teaser-second-section .col-12.col-md-6.col-lg-5 {
+   
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+}
+
+div#shopify-section-teaser-second-section .col-12.col-md-7{
+ -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+
+}
+
+div#shopify-section-teaser-second-section .container-fluid {
+    max-width: 530px;
+}
+}
+
+
+
+@media only screen and (max-width:767px) {
+  
+  .ads_cs_teaser img {
+    max-width: 250px;
+    margin-top: -8px;
+}
+  
+  section.teaser-page-banner-section h3 {
+    font-size: 18px;
+}
+  
+  .teaser-page-banner-section .signup-mail-outer {
+    margin-bottom: 25px;
+}
+  
+  #shopify-section-counter-bottom h2 {
+    font-size: 22px;
+}
+  
+  .teaser-page-banner-section img.teaser_desktop {
+    display: none;
+}
+  
+#shopify-section-counter-bottom h3 {
+    font-size: 23px;
+    text-align: center;
+    font-family: Segoe Pro;
+    font-weight: 700;
+    margin: 10px auto 30px auto;
+    width: 100%;
+    max-width: 300px;
+}
+  
+ .counter_text p .countdown .ocount {
+    font-size: 34px;
+    line-height: 1.2;
+    color: #5b108b;
+    font-weight: bold;
+}
+  
+.counter_text p span.inner {
+    font-size: 17px;
+    letter-spacing: 0;
+}
+  
+div#shopify-section-teaser-second-section .img-box img.teaser_mobile {
+    display: block !important;
+}
+  
+div#shopify-section-teaser-second-section .img-box img.teaser_desktop {
+    display: none !important;
+}
+  
+.signup-mail-outer .desktop_view {
+    width: 100%;
+    max-width: 310px;
+    margin: 0 auto;
+}
+  
+.signup-mail-outer .desktop_view input {
+    width: 100%;
+    max-width: 100%;
+    background: #e7dcfa;
+    border: none;
+    height: 55px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 15px;
+    color: #5b108b;
+    font-size: 18px;
+}
+  
+  
+  
+  
+.signup-mail-outer .desktop_view button {
+    background: #5b108b;
+    border: none;
+    color: #fff;
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    padding: 0 10px;
+    font-size: 24px;
+    border-radius: 5px;
+    margin: 5px 0 15px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(158,157,158,0.6);
+  text-shadow: 0 0 4px #f6b2c3;
+}
+  
+div#shopify-section-counter-bottom .teaser-spotlight-block {
+    padding-bottom: 55px;
+    /* background-size: 100%!important; */
+    background-repeat: no-repeat;
+}
+  
+div#shopify-section-counter-bottom .teaser-spotlight-block .signup-mail-outer + p {
+    font-family: 'candy_chicksregular';
+    font-size: 50px;
+    margin-top: 15px;
+    line-height: 50px;
+    color: #5b108b;
+}
+  
+.counter_text {
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 354px;
+    margin: 40px auto 0;
+    align-items: center;
+}
+  
+  
+.counter_text p {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    justify-content: center;
+    background: none;
+    padding: 15px 15px 0;
+    color: #fff;
+    margin-top: 60px;
+    margin-left: -30px;
+}
+  
+.counter_text p .countdown {
+    margin: 0 15px;
+}
+  
+.counter_text p .countdown:after {
+    content: ":";
+    font-size: 36px;
+    position: absolute;
+    right: -18px;
+    top: 4px;
+    color: #5b108b;
+    font-weight: bold;
+}
+ .counter_text p .countdown:nth-of-type(4):after {
+    display: none;
+} 
+  
+div#shopify-section-counter-bottom:before {
+    content: "";
+    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/ballon_teaser_page.png');
+    display: block;
+    width: 148px;
+    height: 207px;
+    position: absolute;
+    top: -90px;
+    z-index: 9;
+    left: -40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+  div#shopify-section-counter-bottom {
+    position: relative;
+}
+  
+.counter_text p .countdown .ocount .text_cunt {
+    font-size: 14px;
+}
+  
+}
+
+@media only screen and (max-width: 767px) and (min-width:480px){
+div#shopify-section-counter-bottom .teaser-spotlight-block {
+    padding-bottom: 55px;
+    background-repeat: no-repeat;
+    background-position: inherit !important;
+    background-size: 100% !important;
+}
+
+}
+
+@media only screen and (max-width: 479px){
+  
+main.main-content {
+    padding-top: 135px;
+}
+  
+.counter_text {
+    height: 285px;
+}
+  
+.counter_text p .countdown .ocount {
+    font-size: 26px;
+}
+  
+.counter_text p .countdown:after {
+    font-size: 28px;
+    top: 0px;
+}
+  
+#shopify-section-counter-bottom h3 {
+    font-size: 20px;
+    margin: 10px auto 20px;
+}
+  
+.signup-mail-outer .desktop_view {
+    max-width: 290px;
+}
+  
+.signup-mail-outer .desktop_view button {
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+    margin: 0px 0 10px;
+}
+  
+.counter_text {
+    margin: 30px auto 0;
+}
+  
+div#shopify-section-counter-bottom .teaser-spotlight-block .signup-mail-outer+p {
+    font-size: 45px;
+    margin-top: 5px;
+}
+  
+div#shopify-section-counter-bottom:before {
+    width: 138px;
+    height: 147px;
+    top: -70px;
+    left: -40px;
+}
+  
+.counter_text p {
+    margin-left: -20px;
+}
+  
+.counter_text p {
+    margin-top: 45px;
+}
+
+}
+
+
+@media only screen and (max-width: 400px){
+  
+  .counter_text p {
+    margin-left: -17px;
+}
+  
+.counter_text {
+    position: relative;
+    left: 5px;
+}
+  
+.counter_text p .countdown {
+    margin: 0 12px;
+}
+.counter_text p .countdown .ocount {
+    font-size: 22px;
+}
+  
+.counter_text p .countdown:after {
+    font-size: 22px;
+    top: -2px;
+    right: -15px;
+}
+  
+.signup-mail-outer .desktop_view input {
+    height: 50px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+  
+.signup-mail-outer .desktop_view button {
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+    margin: 0 0 10px;
+}
+  
+div#shopify-section-counter-bottom .teaser-spotlight-block .signup-mail-outer+p {
+    font-size: 40px;
+    margin-top: 0;
+}
+  
+.counter_text {
+    height: 255px;
+}
+  
+div#shopify-section-counter-bottom .teaser-spotlight-block {
+    padding-bottom: 25px;
+}
+  
+.signup-mail-outer .desktop_view {
+    max-width: 260px;
+}
+  
+
+  
+}
+
+@media only screen and (max-width: 350px){
+  
+  div#shopify-section-counter-bottom .teaser-spotlight-block {
+    background-position: center !important;
+}
+  
+div#shopify-section-counter-bottom:before {
+    width: 98px;
+    height: 117px;
+    top: -50px;
+    left: -30px;
+}
+  
+.signup-mail-outer .desktop_view input {
+    height: 44px;
+    padding: 10px 10px;
+    font-size: 15px;
+}
+  
+#shopify-section-counter-bottom h3 {
+    font-size: 18px;
+    margin: 0px auto 15px;
+    max-width: 250px;
+}
+  
+.signup-mail-outer .desktop_view button {
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+div#shopify-section-counter-bottom .teaser-spotlight-block .signup-mail-outer+p {
+    font-size: 35px;
+}
+  
+div#shopify-section-counter-bottom .teaser-spotlight-block .signup-mail-outer+p {
+    font-size: 35px;
+    margin-top: 2px;
+    line-height: 1;
+}
+  
+.counter_text {
+    height: 245px;
+    margin-top: 20px;
+}
+  
+}

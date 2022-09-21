@@ -1,0 +1,94 @@
+
+   {% for block in section.blocks %}
+     {% assign collection_to_check = block.settings.collection %}     
+     {% assign blog = block.settings.collection_blog %}
+
+       {% if collection_to_check.id == collection.id %}
+         <div class="container">
+          <div class="row">
+           <section id="{{ section.id }}" class="related-blogs">
+            <div class="col-12">
+              <h3>{{ section.settings.title }}</h3>
+            <div class="related blog {{ collection.id }}">
+            <div class="image"><img src="{{ blog.image | img_url:'600x' , format: 'pjpg'}}" alt="{{ blog.image.alt }}"></div>
+                 
+            <div class="blog_upper_cltion">
+                <h4 class="title">{{ blog.title }}</h4>
+                   <div class="author_details">
+                 {% capture date %}
+                    <time datetime='{{ blog.published_at | date: '%d-%m-%Y' }}'>{{ blog.published_at | date: '%d %b %Y' }}</time>
+                  {% endcapture %}
+
+                  {% assign today_date = blog.published_at | date: '%s' %}
+                  {% assign pre_date =  '01 Sep 2021' | date: '%s' %}
+
+                  {% if today_date < pre_date %}
+                  {% capture author %}<i class="fa fa-user-circle-o"></i> Plum People{% endcapture %}
+                  {% else %}
+                  {% capture author %}<i class="fa fa-user-circle-o"></i> {{ blog.author }}{% endcapture %}
+                  {% endif %}
+
+                <span class="article__author">
+                  {{ author }}
+                </span>
+
+                <span class="article__date">
+                  | {{ date }}
+                </span>
+            </div>
+            <div class="excert">{{ blog.excerpt_or_content | strip_html | truncatewords: 50 | split: "[lang2]" | first | split: "|" | first}}</div>
+            <a href="{{ article.handle }}">Read more..</a>
+          </div></div>
+               </div>  
+</section>
+      </div>
+</div>        
+       {% endif %}
+       
+   {% endfor %}
+   
+
+
+{% schema %}
+  {
+    "name": "Collection related blogs",
+    "settings": [
+     {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      }
+    ],  
+    "blocks": [
+     {
+       "name": "Text",
+       "type": "Text",
+       "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Select Collection"
+        },
+        {
+          "type": "article",
+          "id": "collection_blog",
+          "label": "Select Blog for collection"
+        }
+       ]
+     }
+   ],
+    "presets": [
+    {
+      "name": "Collection related blogs",
+      "settings": {
+        "title": "Collection related blogs"
+      },
+      "blocks": [
+        {
+          "type": "Text"
+        }
+      ]
+    }
+  ]
+  }
+{% endschema %}

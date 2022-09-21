@@ -1,0 +1,103 @@
+<div id="crm_customers_v" class="pop-out_main_cd" style="display:none;">
+  	<div class="pop-out_main_cd_inner">
+      <div class="close">X</div>
+      <div id="loader"></div>
+ 	 	<div class="cs_popup_em_cs">
+          <div class="crm_popup_top">
+          <h3>Festive treat - extra 10% off</h3>
+          <p>applicable on first order only</p>
+          </div>
+          <form id="crm_customers_form" method="post" action="">
+          <input type="email" text="Email" id="customers_email" class="form_fields" pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*" Placeholder="Enter your email" required />
+          <input type="hidden" name="user_validation" id="user_validation" value="">
+          <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" text="Phone Number" id="customers_phone_number" Placeholder="Phone number" maxlength="10"  class="form_fields" required />
+           <input type="hidden" name="url" id="url" value="">
+            <input type="submit" text="Submit"/>
+          </form>
+  		</div>
+  
+  </div>
+</div>
+
+<script>
+  function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+  var customer_email = getCookie("customer_email");
+  if (!customer_email) {
+    $(window).load(function(){
+      setTimeout(function(){
+        $('#crm_customers_v').show()
+      }, 1000);
+    });
+  }
+//   function ValidateEmail(email){
+//     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+//     if (regex.test(email)){
+//       return (true);
+//     }else{
+//       return (false)  
+//     }
+//   }
+//   $('#crm_customers_form').submit(function(e){
+//     e.preventDefault();
+//     var form = $(this);
+//     var email = $(this).find('#customers_email').val();
+//     var phone = $(this).find('#customers_phone_number').val();
+//     var discount_code = $(this).find('#user_validation').val();
+//     var redirect_url = $(this).find('#url').val();
+//     var emailcheck = ValidateEmail(email);            
+//     if (!emailcheck) {
+//       $("#crm_customers_form").find('.message').remove();
+//       return $(form).append('<div class="message"><p class="error">This email is not vaild!</p><div>');
+//     }
+//     $('.pop-out_main_cd div#loader').show();
+//     var AppUrl = "https://order.plumgoodness.com/customers/"+email
+//     $.ajax({
+//       type: 'POST',
+//       url: AppUrl,
+//       dataType: 'json', 
+//       success: function (data) {
+//         $('body').addClass('customer_found');
+//         $("#crm_customers_form").find('.message').remove();
+//         $(form).trigger("reset");
+//         $('#crm_customers_v.pop-out_main_cd div#loader').hide();
+//         $(form).append('<div class="message"><p>Oops this offer is only valid for new users!</p><div>');
+//         // if (!redirect_url) {redirect_url = "/";}
+//        // window.location.href = 'https://plumgoodness.com/'
+
+//       },
+//       error: function(error){
+//         $("#crm_customers_form").find('.message').remove();
+//         $('#crm_customers_v.pop-out_main_cd div#loader').hide();
+//         $(form).trigger("reset");
+//          clevertap.event.push("CRM_PM New Users", {
+//                 	email: email,
+//                 	phone: phone
+//              	 });
+//         $('.crm_popup_top').hide();
+//       }
+//     });
+//   }); 
+// </script>
+
+<style>
+.crm_popup_top {
+    margin-bottom: 15px;
+}
+  #crm_customers_form .message {
+    margin-top: 15px;
+}
+</style>

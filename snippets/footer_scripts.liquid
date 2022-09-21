@@ -1,0 +1,109 @@
+<!-- Footer scripts -->
+<script src="{{ 'vendor.min.js' | asset_url }}" defer></script>
+<script src="{{ 'api.jquery.js' | shopify_asset_url }}" async></script>
+<script src="{{ 'common-plum.js' | asset_url }}" ></script>
+<script src="{{ 'halo.js' | asset_url }}" defer></script>
+
+
+{% include 'translator' %}
+  <script>
+  $(".header-pramotion").on("click",function(){$(".promopopup").addClass("active"),$("body").addClass("promoverlay")}),$(".closepromo").on("click",function(){$(".promopopup").removeClass("active"),$("body").removeClass("promoverlay")});
+  $(document).ready(function(){window.location.href.indexOf("bodylovin")>-1||window.location.href.indexOf("bodywash")>-1?($("a.logo-img.left").removeClass("active"),$("a.logo-img.phy-logo").removeClass("active"),$("a.logo-img.right").addClass("active")):window.location.href.indexOf("phy-x-plum")>-1?($("a.logo-img.left").removeClass("active"),$("a.logo-img.right").removeClass("active"),$("a.logo-img.phy-logo").addClass("active")):($("a.logo-img.right").removeClass("active"),$("a.logo-img.phy-logo").removeClass("active"),$("a.logo-img.left").addClass("active"))});
+  </script>
+
+{% if template != 'collection' and template != 'index' %}
+  <script>
+    $(document).ready(function(){
+      $(".accordion_head").click(function() {
+        if ($('.accordion_body').is(':visible')) {
+          $(".accordion_body").slideUp(300);
+          $(".plusminus").text('+');
+        }
+        if ($(this).next(".accordion_body").is(':visible')) {
+          $(this).next(".accordion_body").slideUp(300);
+          $(this).children(".plusminus").text('+');
+        } else {
+          $(this).next(".accordion_body").slideDown(300);
+          $(this).children(".plusminus").text('-');
+        }
+      });
+    });
+
+  //   window.onload=function(){
+  //    $('#slider-promo-wrap').show();
+  //    $('.header-promo-banner-slider').slick({
+  //     dots:true,
+  //     autoplay:true,
+  //     arrows:true,
+  //     prevArrow:'<button type="button" class="slick-prev"></button>',
+  //     nextArrow:'<button type="button" class="slick-next"></button>',
+  //     slidesToShow:1,
+  //     slidesToScroll:1
+  //   });
+   
+  // };
+
+    $(document).ready(function(){  
+      // tabbed content
+      // http://www.entheosweb.com/tutorials/css/tabs.asp
+      $(".tab_content").hide();
+      $(".tab_content:first").show();
+      /* if in tab mode */
+      $("ul.tabs li").click(function() {
+        $(".tab_content").hide();
+        var activeTab = $(this).attr("rel"); 
+        $("#"+activeTab).fadeIn();    
+
+        $("ul.tabs li").removeClass("active");
+        $(this).addClass("active");
+
+        $(".tab_drawer_heading").removeClass("d_active");
+        $(".tab_drawer_heading[rel^='"+activeTab+"']").addClass("d_active");
+
+      });
+      /* if in drawer mode */
+      $(".tab_drawer_heading").click(function() {
+
+        $(".tab_content").hide();
+        var d_activeTab = $(this).attr("rel"); 
+        $("#"+d_activeTab).fadeIn();
+
+        $(".tab_drawer_heading").removeClass("d_active");
+        $(this).addClass("d_active");
+
+        $("ul.tabs li").removeClass("active");
+        $("ul.tabs li[rel^='"+d_activeTab+"']").addClass("active");
+      });
+
+
+      /* Extra class "tab_last" 
+     to add border to right side
+     of last tab */
+      $('ul.tabs li').last().addClass("tab_last");
+
+
+      //     
+    })
+  </script>
+{% endif %}
+<script type="text/javascript">
+  $("#searchIcon").click(function(){$(this).hasClass("fa-search")?($(this).removeClass("fa-search"),$(this).addClass("fa-times")):($(this).addClass("fa-search"),$(this).removeClass("fa-times")),$(this).next().toggle()});
+</script>
+{% if template != 'collection' and template!= 'index' and template != 'product'%}
+<script type="text/javascript">
+  $(document).ready(function(){$("#testimonials").slick({dots:!1,arrows:!0,infinite:!0,autoplay:!1,slidesToShow:3,slidesToScroll:1,autoplaySpeed:1500,swipe:!0,swipeToSlide:!0,touchMove:!0,nextArrow:'<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 17 33" xml:space="preserve"><g id="e4eb89a6-f885-43b8-9259-0d6b1516fab0"><g id="_x38_e584754-6657-46f1-a9d8-2cfd6623b552"><g><polygon points="14.9,14.5 0,0 0,3.7 11.1,14.5 13.2,16.5 11.1,18.5 0,29.3 0,33 14.9,18.5 17,16.5 "></polygon></g></g></g></svg></button>',prevArrow:'<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 33"><g id="7f9a1925-e8c7-4614-8787-3c6095a9f6e1" data-name="Layer 2"><g id="c9b7920a-81fa-4bfe-ad13-4da717c6854b" data-name="Layer 1"><g id="c2d982ff-0cf6-4220-b365-47f30d708fea" data-name="e4eb89a6-f885-43b8-9259-0d6b1516fab0"><g id="f51d455e-6b9c-4c4e-96db-a5004582beda" data-name="8e584754-6657-46f1-a9d8-2cfd6623b552"><polygon points="0 16.5 2.1 18.5 17 33 17 29.3 5.9 18.5 3.8 16.5 5.9 14.5 17 3.7 17 0 2.1 14.5 0 16.5"></polygon></g></g></g></g></svg></button>',responsive:[{breakpoint:768,settings:{arrows:!0,slidesToShow:2}},{breakpoint:480,settings:{arrows:!0,slidesToShow:1}}]})});
+</script>
+
+{% endif %}
+<script >
+  $(document).ready(function(){var o=$("#accept-cookies");o.show(),"closed"==$.cookie("cookieMessage")&&o.remove(),o.find("[data-accept-cookie]").on("click",function(e){e.preventDefault(),o.remove(),$.cookie("cookieMessage","closed",{expires:1,path:"/"})})});
+ $('.col-footer-outer a').each(function()
+    		{
+    		   var reg_exp = new RegExp('/' + window.location.host + '/');
+    		   if (!reg_exp.test(this.href))
+    		   {
+    		     // External Link Found  
+    		     $(this).attr('rel','nofollow');
+    		   }
+    		});
+</script>
