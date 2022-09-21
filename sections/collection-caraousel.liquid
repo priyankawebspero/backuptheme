@@ -189,8 +189,8 @@
     ],
     "blocks": [
       {
-        "type": "image",
-        "name": "Image",
+        "type": "collection",
+        "name": "Collection list",
         "settings": [		  	
           {
             "type": "image_picker",
@@ -226,8 +226,14 @@
 	"presets": [
       {
         "name": "Collection Carousel",
-        "category": "Collection"     
+        "category": "Collection",
+          "blocks": [
+          {
+            "type": "collection"
+          }
+        ]
       }
+      
     ]
   }
 {% endschema %}
