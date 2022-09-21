@@ -8867,22 +8867,49 @@
           "003653b0-67ff-45af-89f3-7b71b9f80572": {
             "type": "collection",
             "settings": {
+              "image_desk": "shopify:\/\/shop_images\/HP-banner_Mobile.jpg",
               "title": "Lorem De Dorus",
-              "collection": ""
+              "collection": "bodylovin-body-butters"
             }
           },
           "15306b23-c219-40e0-bd14-328c5bb1eeac": {
             "type": "collection",
             "settings": {
+              "image_desk": "shopify:\/\/shop_images\/HP-banner_Mobile.jpg",
               "title": "Lorem De Dorus",
-              "collection": ""
+              "collection": "ananaya-pandey"
             }
           },
           "1bdbecdc-a0ce-47af-9a67-af5b9ca22557": {
             "type": "collection",
             "settings": {
+              "image_desk": "shopify:\/\/shop_images\/HP-banner_Mobile.jpg",
               "title": "Lorem De Dorus",
-              "collection": ""
+              "collection": "best-sellers"
+            }
+          },
+          "d7b7a3b1-5b60-40ac-9ac1-791529f96517": {
+            "type": "collection",
+            "settings": {
+              "image_desk": "shopify:\/\/shop_images\/HP-banner_Mobile.jpg",
+              "title": "Lorem De Dorus",
+              "collection": "plum-bodylovin-single-products"
+            }
+          },
+          "6f054d88-91ee-4602-8ac6-a47fe6168898": {
+            "type": "collection",
+            "settings": {
+              "image_desk": "shopify:\/\/shop_images\/HP-mattrific-M.gif",
+              "title": "Lorem De Dorus",
+              "collection": "plum-bodylovin-single-products"
+            }
+          },
+          "ac3e4bbb-102b-473b-822d-6e2446ba1dce": {
+            "type": "collection",
+            "settings": {
+              "image_desk": "shopify:\/\/shop_images\/HP-mattrific-M.gif",
+              "title": "Lorem De Dorus",
+              "collection": "avocado"
             }
           }
         },
@@ -8890,7 +8917,10 @@
           "1663757291e65bffaf-0",
           "003653b0-67ff-45af-89f3-7b71b9f80572",
           "15306b23-c219-40e0-bd14-328c5bb1eeac",
-          "1bdbecdc-a0ce-47af-9a67-af5b9ca22557"
+          "1bdbecdc-a0ce-47af-9a67-af5b9ca22557",
+          "d7b7a3b1-5b60-40ac-9ac1-791529f96517",
+          "6f054d88-91ee-4602-8ac6-a47fe6168898",
+          "ac3e4bbb-102b-473b-822d-6e2446ba1dce"
         ],
         "settings": {
           "banner_heading": "#CAMPAIGNS"
