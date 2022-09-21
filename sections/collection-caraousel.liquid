@@ -1,42 +1,8 @@
-{% case section.settings.collection_results_per_row1 %}
-  {% when '2' %}
-  	{%- assign grid_item_width = 'col-6' -%}
-	{%- assign row = 'two-items' -%}
-  {% when '3' %}
-  	{%- assign grid_item_width = 'col-6 col-md-4' -%}
-	{%- assign row = 'three-items' -%}
-  {% when '4' %}
-  	{%- assign grid_item_width = 'col-6 col-md-4 col-lg-3' -%}
-	{%- assign row = 'four-items' -%}
-  {% when '5' %}
-  	{%- assign grid_item_width = 'col-6 col-md-4 col-lg-3 col5' -%}
-	{%- assign row = 'five-items' -%}
-  {% when '6' %}
-  	{%- assign grid_item_width = 'col-6 col-md-4 col-lg-3 col-xl-2' -%}
-	{%- assign row = 'six-items' -%}
-{% endcase %}
-
-<div class="featured-products{% if section.settings.display_banner %} has-banner{% endif %}{% if section.settings.banner_is == 'right'%} banner-right{% endif %}" id="featured-products-{{section.id}}" data-featured-products>
-  <div class="{% if section.settings.display_banner %}container-fluid{% else %}container-padd60{% endif %}">
-    <div class="row{% if section.settings.banner_is == 'right'%} flex-row-reverse{% endif %}">
-      {% if section.settings.display_banner %}
+<div class="featured-collection" id="featured-collection-{{section.id}}" data-collection-products>
+  <div class="container-padd60">
+    <div class="row">
       <div class="no-padd col-12 col-md-12 col-lg-6 column-banner">
         <div class="column-banner-inner">
-          <div class="img-box">
-            <a href="{{ section.settings.link }}">
-              {%- assign img_url = section.settings.image | img_url: '400x' , format: 'pjpg'-%}
-              {% if section.settings.image != blank %}
-              <img data-src="{{ img_url }}"
-                   src="{{ img_url }}" alt="{{ section.settings.image.alt | default: shop.name }}" itemprop="logo"
-                   class="lazyautosizes lazyloaded" data-sizes="auto">
-              {% else %}
-              <div class="not_img">
-                725 x 640px
-              </div>   
-              {% endif %}
-            </a>
-          </div>
-
           {% if section.settings.banner_heading != blank or section.settings.banner_sub_heading != blank or section.settings.banner_des != blank or section.settings.banner_button != blank %}
           <div class="custom-block-imgs">
             {% if section.settings.banner_heading != blank %}
@@ -50,115 +16,10 @@
               {% include 'multilang' with section.settings.banner_heading  %}
             </h3>
             {% endif %}
-
-            {% if section.settings.banner_sub_heading != blank %}
-            <h5 class="banner-sub-heading"
-                style="{% if section.settings.font_size_banner_sub_heading != blank %}
-                       font-size: {{ section.settings.font_size_banner_sub_heading }};
-                       {% endif %}
-                       {% if section.settings.color_banner_sub_heading != blank %}
-                       color:{{ section.settings.color_banner_sub_heading }};
-                       {% endif %}">            
-              {% include 'multilang' with section.settings.banner_sub_heading  %}
-            </h5>
-            {% endif %}
-
-            {% if section.settings.banner_des != blank %}
-            <p class="banner-des"
-               style="{% if section.settings.font_size_banner_des != blank %}
-                      font-size: {{ section.settings.font_size_banner_des }};
-                      {% endif %}
-                      {% if section.settings.color_banner_des != blank %}
-                      color: {{ section.settings.color_banner_des }};
-                      {% endif %}">
-              {% include 'multilang' with section.settings.banner_des  %}
-            </p>
-            {% endif %}
-
-            {% if section.settings.banner_button != blank %}
-            <a href="{{ section.settings.link }}" class="banner-button btn"
-               style="{% if section.settings.bg_banner_button != blank %}
-                      background-color:{{ section.settings.bg_banner_button }};
-                      {% endif %}
-                      {% if section.settings.border_banner_button != blank %}
-                      border-color:{{ section.settings.border_banner_button }};
-                      {% endif %}
-                      {% if section.settings.color_banner_button != blank %}
-                      color:{{ section.settings.color_banner_button }};
-                      {% endif %}">
-              {% include 'multilang' with section.settings.banner_button %}
-            </a>
-            {% endif %}
           </div>
           {% endif %}
         </div>        
-      </div>
-      {% endif %}
-      
-      <div class="col-12{% if section.settings.display_banner %} col-md-12 col-lg-6 column-product{% else %} col-md-12{% endif %}">
-        
-        {% if section.settings.display_banner %}
-        <div class="column-product-inner">
-        {% endif %}
-          
-      	{% if section.settings.featured_products_title != blank %}
-        <div class="widget-title{% if section.settings.title_style == 'style_2' %} not-before{% endif %}">   
-          <h3 class="box-title">
-            <span class="title"> 
-              {% include 'multilang' with section.settings.featured_products_title %}
-            </span>
-          </h3>
-          {% if section.settings.featured_products_des != blank %}
-          <p>
-            {% include 'multilang' with section.settings.featured_products_des %}
-          </p>        
-          {% endif %}
-        </div>
-        {% endif %}
-
-        <div class="widget-product ">
-          <div class="products-grid row {{ row }}" data-row="{{ section.settings.collection_results_per_row1 }}">
-            {% for product in collections[section.settings.show_slider_featured_collection].products limit:section.settings.slider_featured_limit_all %}
-            <div class="grid-item {{ grid_item_width }}{% if settings.product_image_border %} grid-item-border{% endif %} ">
-              {% include 'product-grid-item' %}
-            </div>
-            {% else %}
-            {% for product in (1..section.settings.slider_featured_limit_all) %}
-            <div class="grid-item {{ grid_item_width }}">
-              <div class="grid-view-item no-product">
-                <div class="product-top">
-                  <div class="not_img">
-                    Product Img
-                  </div>
-                </div>
-
-                <div class="product-bottom">
-                  <div class="product-title">
-                    <span>
-                      Your product's name
-                    </span>`
-                  </div>
-
-                  <div class="price-box">
-                    <span> $250.00 </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-            {% endfor %}
-          </div>
-        </div>
-        {% if section.section.settings.link1 %}
-           <div class="content aa">
-              <a href="{{ section.settings.link1 }}" class="btn">{{ section.settings.shop_now_button }}</a>
-            </div>
-        {% endif %} 
-        {% if section.settings.display_banner %}
-        </div>
-        {% endif %}
-      </div>
-    </div>
+      </div>  
   </div>
 </div>
 {% schema %}
