@@ -1,4 +1,4 @@
-<div class="featured-collection" id="featured-collection-{{section.id}}">
+<div class="featured-collection" id="featured-collection-{{section.id}}" data-featured-products-home>
   <div class="container-padd60">
     <div class="row">
             {% if section.settings.banner_heading != blank %}
@@ -12,7 +12,7 @@
               {% include 'multilang' with section.settings.banner_heading  %}
             </h3>
             {% endif %}
-          <div class="widget-product"  data-collection-products>
+          <div class="widget-product">
           <div class="collection-grid row" data-row="4">
             {% for block in section.blocks %}
             <div class="grid-item col-3">
