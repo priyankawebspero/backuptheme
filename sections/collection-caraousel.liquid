@@ -12,6 +12,37 @@
               {% include 'multilang' with section.settings.banner_heading  %}
             </h3>
             {% endif %}
+          <div class="widget-product ">
+          <div class="products-grid row" data-row="4">
+            {% for block in section.blocks %}
+            <div class="grid-item col-3">
+             <div class="block-wrapper">
+            <div class="image-wrapper">
+              {% assign collection = block.settings.collection %}
+              <a href="{{ collection.url }}">
+                {%- assign img_url = block.settings.image_desk | img_url: '200x' , format: 'pjpg'-%}
+                {%- assign img_url_mob = block.settings.image_mob | img_url: '200x' , format: 'pjpg'-%}
+                {% if section.settings.image_desk != blank %}
+                <img data-src="{{ img_url }}"
+                     src="{{ img_url }}" alt="{{ block.settings.image_desk.alt | default: shop.name }}" itemprop="logo"
+                     class="lazyautosizes lazyload desktop" data-sizes="auto">
+                <img data-src="{{ img_url_mob }}"
+                     src="{{ img_url_mob }}" alt="{{ block.settings.image_mob.alt | default: shop.name }}" itemprop="logo"
+                     class="lazyautosizes lazyload mobile" data-sizes="auto">
+                {% else %}
+                <div class="not_img">
+                  725 x 640px
+                </div>   
+                {% endif %}
+              </a>
+              <span class="title_block">{{ collection.title }}</span>
+            </div>            
+            </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+    </div>
   </div>
 </div>
 {% schema %}
@@ -61,12 +92,6 @@
             "id" : "title",
             "label" : "Title",
             "default" : "Lorem De Dorus"
-          },
-		  {
-            "type" : "text",
-            "id" : "sub_title",
-            "label" : "Sub Title",
-            "default" : "NULLAM DAPIBUS LIBEROS "
           },
           {
             "type": "collection",
