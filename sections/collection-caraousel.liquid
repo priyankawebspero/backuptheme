@@ -1,9 +1,6 @@
 <div class="featured-collection" id="featured-collection-{{section.id}}" data-collection-products>
   <div class="container-padd60">
     <div class="row">
-      <div class="no-padd col-12 col-md-12 col-lg-6 column-banner">
-        <div class="column-banner-inner">
-          <div class="custom-block-imgs">
             {% if section.settings.banner_heading != blank %}
             <h3 class="banner-heading"
                 style="{% if section.settings.font_size_banner_heading != blank %}
@@ -15,9 +12,6 @@
               {% include 'multilang' with section.settings.banner_heading  %}
             </h3>
             {% endif %}
-          </div>
-        </div>        
-      </div>  
   </div>
 </div>
 {% schema %}
