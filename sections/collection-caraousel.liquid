@@ -1,4 +1,4 @@
-<div class="featured-collection" id="featured-collection-{{section.id}}" data-collection-products>
+<div class="featured-collection" id="featured-collection-{{section.id}}">
   <div class="container-padd60">
     <div class="row">
             {% if section.settings.banner_heading != blank %}
@@ -13,7 +13,7 @@
             </h3>
             {% endif %}
           <div class="widget-product ">
-          <div class="products-grid row" data-row="4">
+          <div class="collection-grid row" data-row="4" data-collection-products>
             {% for block in section.blocks %}
             <div class="grid-item col-3">
              <div class="block-wrapper">
@@ -106,3 +106,47 @@
     ]
   }
 {% endschema %}
+
+<script>
+        var blogBlock = $('[data-collection-products]');
+
+      blogBlock.each(function() {
+        var self = $(this),
+            rows = self.data('rows');
+
+        if(self.not('.slick-initialized')) {
+          self.slick({
+            slidesToShow: rows,
+            slidesToScroll: 1,
+            dots: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            pauseOnHover: false,
+            infinite: true,
+            arrows: true,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToScroll:3,
+                  slidesToShow: 4
+                }
+              },
+              {
+                breakpoint: 991,
+                settings: {
+                  slidesToScroll: 2,
+                  slidesToShow: 3
+                },
+              {
+                breakpoint: 767,
+                settings: {
+                  slidesToScroll: 1,
+                  slidesToShow: 2
+                }
+              }
+            ]
+          });
+        };
+      });
+</script>
