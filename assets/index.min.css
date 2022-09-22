@@ -1248,6 +1248,14 @@ body #dropdown-cart .btn.btn-checkout {
     box-shadow: 0 0 5px #00000059;
 }
 
+.home-collection-carousel .widget-product .block-wrapper span.title_block {
+    display: block;
+    text-align: center;
+    padding: 7px;
+    font-weight: 600;
+    border-top: 1px solid #000;
+}
+
 @media only screen and (min-width: 1200px){
 .influencer_div h3.influencer_name {
     font-size: 45px;
