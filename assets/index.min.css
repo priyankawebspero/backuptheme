@@ -1225,6 +1225,7 @@ body #dropdown-cart .btn.btn-checkout {
 /*---home-section-added---------*/
 .home-collection-carousel .banner-heading {
     font-size: 50px;
+    font-family: 'serifabold';
     letter-spacing: 1px;
     color: #5e0d8b;
     text-align: center;
