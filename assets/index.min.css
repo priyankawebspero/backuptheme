@@ -1292,6 +1292,10 @@ body #dropdown-cart .btn.btn-checkout {
 .influencer_div .box-title {
     font-size: 6.8vw;
 }
+.home-collection-carousel {
+    padding-top: 30px;
+}
+  
 }
 
 @media only screen and (max-width: 991px){
