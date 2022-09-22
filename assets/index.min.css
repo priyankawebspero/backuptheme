@@ -1268,6 +1268,16 @@ body #dropdown-cart .btn.btn-checkout {
     top: 50%;
 }
 
+.home-collection-carousel ul.slick-dots {
+    margin-top: 25px;
+    padding: 0 15px;
+}
+
+.home-collection-carousel ul.slick-dots li button {
+    width: 12px;
+    height: 12px;
+}
+
 @media only screen and (min-width: 1200px){
   
   .influencer_div h3.influencer_name {
