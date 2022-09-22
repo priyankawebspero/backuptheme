@@ -1255,7 +1255,7 @@ body #dropdown-cart .btn.btn-checkout {
     font-weight: 600;
     border-top: 1px solid #5b0c8b;
     text-transform: capitalize;
-    color: #000;
+    color: #5b0c8b;
 }
 
 .home-collection-carousel .slick-prev.slick-arrow {
