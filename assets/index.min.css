@@ -1278,6 +1278,11 @@ body #dropdown-cart .btn.btn-checkout {
     height: 12px;
 }
 
+.home-collection-carousel ul.slick-dots li {
+    width: 12px;
+    height: 12px;
+}
+
 @media only screen and (min-width: 1200px){
   
   .influencer_div h3.influencer_name {
