@@ -1319,6 +1319,13 @@ body #dropdown-cart .btn.btn-checkout {
 }
 
 @media only screen and (max-width: 991px){
+.home-collection-carousel .slick-prev.slick-arrow {
+    display:none !important;
+  }
+  .home-collection-carousel .slick-next.slick-arrow {
+      display:none !important;
+  }
+  
 .influencer_div h3.influencer_name {
     font-size: 4.1vw;
 }
