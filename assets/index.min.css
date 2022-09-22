@@ -1258,10 +1258,33 @@ body #dropdown-cart .btn.btn-checkout {
     color: #000;
 }
 
-@media only screen and (min-width: 1200px){
-.influencer_div h3.influencer_name {
-    font-size: 45px;
+.home-collection-carousel .slick-prev.slick-arrow {
+    left:0;
+    top: 50%;
 }
+
+.home-collection-carousel .slick-next.slick-arrow {
+    left:0;
+    top: 50%;
+}
+
+@media only screen and (min-width: 1200px){
+  
+  .influencer_div h3.influencer_name {
+      font-size: 45px;
+  }
+  
+}
+
+@media only screen and (min-width: 1300px){
+  
+  .home-collection-carousel .slick-prev.slick-arrow {
+      left: -40px;
+  }
+  .home-collection-carousel .slick-next.slick-arrow {
+      right: -40px;
+  }
+  
 }
 
 
