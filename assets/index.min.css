@@ -1328,6 +1328,10 @@ body #dropdown-cart .btn.btn-checkout {
 }
 
 @media only screen and (max-width: 767px){
+.home-collection-carousel .slick-arrow {
+    display: none !important;
+}
+  
 .home-collection-carousel .banner-heading {
     font-size: 28px;
     letter-spacing: 0;
