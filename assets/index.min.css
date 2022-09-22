@@ -1240,7 +1240,7 @@ body #dropdown-cart .btn.btn-checkout {
     width: 100%;
 }
 .home-collection-carousel .widget-product .block-wrapper {
-    background: #d9c4e3;
+    
     border-radius: 5px;
     position: relative;
     overflow: hidden;
@@ -1251,6 +1251,7 @@ body #dropdown-cart .btn.btn-checkout {
 .home-collection-carousel .widget-product .block-wrapper span.title_block {
     display: block;
     text-align: center;
+  background: #d9c4e3;
     padding: 10px 7px;
     font-weight: 600;
     border-top: 1px solid #5b0c8b;
