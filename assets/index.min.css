@@ -1328,6 +1328,16 @@ body #dropdown-cart .btn.btn-checkout {
 }
 
 @media only screen and (max-width: 767px){
+.home-collection-carousel .banner-heading {
+    font-size: 28px;
+    letter-spacing: 0;
+}
+
+.home-collection-carousel {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+  
 .home-game-banner-section {
     padding: 15px 5px 0 5px;
 }
