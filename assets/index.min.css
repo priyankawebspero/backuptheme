@@ -1232,7 +1232,21 @@ body #dropdown-cart .btn.btn-checkout {
     text-align: center;
     margin-bottom: 30px;
 }
+.home-collection-carousel {
+    padding-bottom: 60px;
+}
 
+.home-collection-carousel .widget-product .block-wrapper img {
+    width: 100%;
+}
+.home-collection-carousel .widget-product .block-wrapper {
+    background: #d9c4e3;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    /* box-shadow: 0px 0px 5px rgb(0 0 0 / 30%); */
+    box-shadow: 0 0 5px #00000059;
+}
 
 @media only screen and (min-width: 1200px){
 .influencer_div h3.influencer_name {
