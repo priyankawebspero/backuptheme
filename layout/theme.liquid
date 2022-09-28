@@ -25,6 +25,9 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="dns-prefetch" href="https://platform.loyaltylion.com">
     <link rel="dns-prefetch" href="https://q.quora.com"> 
+    <meta http-equiv="Accept-CH" content="DPR, Width, Viewport-Width, Save-Data">
+    <link rel="preconnect" href="https://yourimageenginedeliveryaddress">
+
   
     <!-- Header hook for plugins ================================ -->
       {% include 'sca.freegifts' %}
@@ -155,24 +158,24 @@
             {% if settings.image_promo1 != blank %}
             <div class="slide">
               <a href="{{settings.image_promo_url}}">
-              <img class="desktop" src="{{ settings.image_promo1 | img_url: 'master' }}" alt="{{ settings.image_promo1.alt}}">
-              <img class="mobile" src="{{ settings.image_promo_mob1 | img_url: 'master' }}" alt="{{ settings.image_promo_mob1 .alt}}" style="display:none;">
+              <img class="desktop" src="{{ settings.image_promo1 | img_url: 'master' | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in' }}" alt="{{ settings.image_promo1.alt}}">
+              <img class="mobile" src="{{ settings.image_promo_mob1 | img_url: 'master' | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in'}}" alt="{{ settings.image_promo_mob1 .alt}}" style="display:none;">
               </a>
              </div>
             {% endif %}
             {% if settings.image_promo2 != blank %}
             <div class="slide">
                <a href="{{settings.image_promo_url1}}">
-              <img class="desktop"  src="{{ settings.image_promo2 | img_url: 'master' }}" alt="{{ settings.image_promo2.alt}}">
-              <img class="mobile" src="{{ settings.image_promo_mob2 | img_url: 'master' }}" alt="{{ settings.image_promo_mob2.alt}}" style="display:none;">
+              <img class="desktop"  src="{{ settings.image_promo2 | img_url: 'master' | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in' }}" alt="{{ settings.image_promo2.alt}}">
+              <img class="mobile" src="{{ settings.image_promo_mob2 | img_url: 'master' | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in' }}" alt="{{ settings.image_promo_mob2.alt}}" style="display:none;">
               </a>
                  </div>
             {% endif %}
             {% if settings.image_promo3 != blank %}
             <div class="slide">
                <a href="{{settings.image_promo_url2}}">
-              <img class="desktop" src="{{ settings.image_promo3 | img_url: 'master' }}" alt="{{ settings.image_promo3.alt}}">
-              <img class="mobile" src="{{ settings.image_promo_mob3 | img_url: 'master' }}" alt="{{ settings.image_promo_mob3.alt}}" style="display:none;">
+              <img class="desktop" src="{{ settings.image_promo3 | img_url: 'master' | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in' }}" alt="{{ settings.image_promo3.alt}}">
+              <img class="mobile" src="{{ settings.image_promo_mob3 | img_url: 'master' | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in' }}" alt="{{ settings.image_promo_mob3.alt}}" style="display:none;">
               </a>
                  </div>
             {% endif %}            

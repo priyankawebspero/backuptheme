@@ -12,8 +12,8 @@
     <h1 class="header-logo">
       {% if section.settings.brand_type == 'image' and section.settings.logo != bank %}
       <a class="logo-img left" href="/" title="Logo">
-        <img data-src="{{ section.settings.logo | img_url: 'master' , format: 'pjpg'}}"
-             src="{{ section.settings.logo | img_url: 'master' , format: 'pjpg'}}"
+        <img data-src="{{ section.settings.logo | img_url: 'master' , format: 'pjpg' | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in' }}"
+             src="{{ section.settings.logo | img_url: 'master' , format: 'pjpg' | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in' }}"
              alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo" class="lazyautosizes  header-sticky-logo" data-sizes="auto" width="119" height="70">
       </a>
       {% endif %}
@@ -53,7 +53,7 @@
    </div> 
 	
          <div class="plum_basket_icon">
-         <a href="/pages/plum-basket"><img class="" src="https://cdn.shopify.com/s/files/1/0390/2985/files/shopping-basket.png" alt="Your Basket"></a>
+         <a href="/pages/plum-basket"><img class="" src="https://ps4301vt.cdn.imgeng.in/s/files/1/0390/2985/files/shopping-basket.png" alt="Your Basket"></a>
        </div>
     <div class="iwish-icon svg-mb mobile-wishlist">
       {% include 'iwish_v2' with 'iwishlink' %}
@@ -62,7 +62,7 @@
   <div class="tracking_order">
            <div class="tracking_div">
        <span class="tooltip">track your order</span>
-      <a href="https://plumgoodness.com/pages/track-your-order-2"  class="tracking" style="display:none;"><img class="lazyload" src="https://cdn.shopify.com/s/files/1/0390/2985/files/tracking_0e413f26-64e7-49e4-accb-52517c44e705.png?v=1645607517" data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/tracking_0e413f26-64e7-49e4-accb-52517c44e705.png?v=1645607517"></a>
+      <a href="https://plumgoodness.com/pages/track-your-order-2"  class="tracking" style="display:none;"><img class="lazyload" src="https://ps4301vt.cdn.imgeng.in/s/files/1/0390/2985/files/tracking_0e413f26-64e7-49e4-accb-52517c44e705.png?v=1645607517" data-src="https://ps4301vt.cdn.imgeng.in/s/files/1/0390/2985/files/tracking_0e413f26-64e7-49e4-accb-52517c44e705.png?v=1645607517"></a>
     </div>
      <div class="account_div">
          {% if customer %}<span class="tooltip">account</span>{% else %}<span class="tooltip">login / register </span>{% endif %}
@@ -78,7 +78,7 @@
     </div>
   <div class="cart-icon svg-mb">
       <a href="#" title="Cart Icon" data-cart-toggle>       
-        <img class="" src="https://cdn.shopify.com/s/files/1/0390/2985/files/cart_icon.svg?v=1620044145" data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/cart_icon.svg?v=1620044145">
+        <img class="" src="https://ps4301vt.cdn.imgeng.in/s/files/1/0390/2985/files/cart_icon.svg?v=1620044145" data-src="https://ps4301vt.cdn.imgeng.in/s/files/1/0390/2985/files/cart_icon.svg?v=1620044145">
 
         <span class="cartCount" data-cart-count>
           {{ cart.item_count }}
