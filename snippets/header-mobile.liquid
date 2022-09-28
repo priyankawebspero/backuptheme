@@ -12,8 +12,8 @@
     <h1 class="header-logo">
       {% if section.settings.brand_type == 'image' and section.settings.logo != bank %}
       <a class="logo-img left" href="/" title="Logo">
-        <img data-src="{{ section.settings.logo | img_url: 'master' , format: 'pjpg' | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in' }}"
-             src="{{ section.settings.logo | img_url: 'master' , format: 'pjpg' | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in' }}"
+        <img data-src="{{ section.settings.logo | img_url: 'master' | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in' }}"
+             src="{{ section.settings.logo | img_url: 'master' | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in' }}"
              alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo" class="lazyautosizes  header-sticky-logo" data-sizes="auto" width="119" height="70">
       </a>
       {% endif %}

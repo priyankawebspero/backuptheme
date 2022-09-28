@@ -118,8 +118,8 @@
         <a href="{{block.settings.promo_link}}">
           {% if block.settings.promo_image != blank %}
           <div class="image_block">
-            <img data-src="{{ block.settings.promo_image | img_url: 'large' , format: 'pjpg' | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in' }}"
-                     src="{{ block.settings.promo_image | img_url: 'large' , format: 'pjpg' | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in' }}"
+            <img data-src="{{ block.settings.promo_image | img_url: 'large' | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in' }}"
+                     src="{{ block.settings.promo_image | img_url: 'large' | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in' }}"
                      alt="{{ block.settings.promo_image.alt | default: shop.name }}" class="lazyautosizes lazyloaded" data-sizes="auto">
           </div>
           {% endif %}
@@ -134,8 +134,8 @@
        <div class="promobanner slide">
          {% if block.settings.promo_image_slide != blank %}
          <a href="{{block.settings.promo_link_slide}}">         
-          <img data-src="{{ block.settings.promo_image_slide | img_url: 'large' , format: 'pjpg'  | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in' }}"
-               src="{{ block.settings.promo_image_slide | img_url: 'large' , format: 'pjpg'  | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in' }}"
+          <img data-src="{{ block.settings.promo_image_slide | img_url: 'large'  | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in' }}"
+               src="{{ block.settings.promo_image_slide | img_url: 'large'  | replace:'cdn.shopify.com', 'ps4301vt.cdn.imgeng.in' }}"
                alt="{{ block.settings.promo_image_slide.alt | default: shop.name }}" class="lazyautosizes lazyloaded" data-sizes="auto">
          </a>
          {% endif %}
