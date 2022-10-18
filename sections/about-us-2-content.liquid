@@ -17,7 +17,7 @@
       {% if block.settings.display_banner %}
       <div class="col banner">
         {% if block.settings.banner != blank %}
-        <div class="background" style="background-image: url({{block.settings.banner | img_url:'800x800'}})"></div>
+        <div class="background" style="background-image: url({{block.settings.banner | img_url:'800x800' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}})"></div>
         {% else %}
         <div class="not_img">
           800 x 800px
@@ -71,7 +71,7 @@
       <div class="col-xs-12 col-sm-4 item">
         {% if block.settings.image != blank %}
         <div class="image">
-          <img data-src="{{block.settings.image | img_url:'800x800'}}" src="{{block.settings.image | img_url:'800x800'}}" alt="{{block.settings.title}}" class="lazyautosizes lazyloaded">
+          <img data-src="{{block.settings.image | img_url:'800x800' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" src="{{block.settings.image | img_url:'800x800' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{block.settings.title}}" class="lazyautosizes lazyload">
         </div>
         {% else %}
         <div class="image not_img">

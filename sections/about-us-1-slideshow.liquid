@@ -21,7 +21,7 @@
           <div class="info">
             {% if block.settings.profile_picture != blank %}
             <div class="profile-picture">
-              <img data-src="{{block.settings.profile_picture | img_url:'200x200' }}" src="{{block.settings.profile_picture | img_url:'200x200' }}" alt="{{block.settings.name}}" class="lazyautosizes lazyloaded">
+              <img data-src="{{block.settings.profile_picture | img_url:'200x200' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' }}" src="{{block.settings.profile_picture | img_url:'200x200' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' }}" alt="{{block.settings.name}}" class="lazyautosizes lazyload">
             </div>
             {% endif %}
             <div class="text">
@@ -48,7 +48,7 @@
 <style>
 {% if section.settings.background_image != blank %}
 .about-us-slideshow{
-  background-image: url({{section.settings.background_image | img_url:'2000x2000'}});
+  background-image: url({{section.settings.background_image | img_url:'2000x2000' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}});
   background-size: cover;
   color:{{section.settings.text_color}}; 
 }
