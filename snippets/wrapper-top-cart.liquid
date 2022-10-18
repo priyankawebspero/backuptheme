@@ -100,32 +100,14 @@
       {% endfor %}
     </ol>
   </div>
-  {% if handle contains 'exclusive-deals' %}
+    {% if handle contains 'exclusive-deals' %}
   {%else%}
   {% include 'cart-best-sellers'%}
   {%endif%}
-     {% if settings.show_flash_sale %}
-      {% include 'flash-sale-counter'%}
-    {%endif%}
-    <div class="actions">
+  <div class="actions">
     <div class="summary">
       
         <div class="total_cs_custom_dropcart">
-      <div class="sub total">
-        <span class="label">
-          <span {% if settings.enable_multilang %}data-translate="cart.label.total"{% endif %}>
-            Subtotal
-          </span>
-        </span> 
-        <span class="price" data-subtotal-price="{{ total_saving | plus: cart.total_price}}">
-          <span class="price-cart"> </span>
-          {{ total_saving | plus: cart.total_price | money}}
-        </span>
-      </div>
-      <div class="drop-cart_discount">
-        <span class="savings_label">Savings:</span>
-        <span class="savings_price">- {{ total_saving | money }}</span></div>
-      </div>
       <div class="total">
         <span class="label">
           <span {% if settings.enable_multilang %}data-translate="cart.label.total"{% endif %}>
@@ -136,6 +118,9 @@
           <span class="price-cart"> </span>
           {{cart.total_price | money}}
         </span>
+      </div>
+      <div class="drop-cart_discount"> <span class="savings_label">Savings:</span>
+        <span class="savings_price">{{ total_saving | money }}</span></div>
       </div>
       {% include 'special_offer' %}
     </div>
@@ -152,7 +137,7 @@
       </div>
       {% render 'gokwik-checkout' %}
       <button class="btn btn-checkout {% if cart.total_price > 1400000 %} disable {%- endif -%}" id="btncheckout" name="checkout" onclick="window.location='/checkout'" {% if settings.enable_multilang %}data-translate="cart.general.checkout"{% endif %}>
-        {% if settings.btnTxt%}{{settings.gk-merchant-btnText}}{%else%}Pay Via COD/Cards/Netbanking{%endif%}
+        {% if settings.btnTxt%}{{settings.gk-merchant-btnText}}{%else%}PAY VIA CREDIT/DEBIT CARDS/OTHERS{%endif%}
       </button>
     </div>
   </div>

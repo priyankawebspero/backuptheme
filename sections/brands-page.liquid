@@ -1,11 +1,20 @@
-{% if section.settings.display_brand and section.blocks.size > 0 %}
+<div class="brands-page">
+  <div class="container">
+    {% include 'breadcrumb' %}
+    
+    <header class="page-header">
+      <h2>
+        {% include 'multilang' with page.title %}
+      </h2>  
+    </header>
+    {% if section.settings.display_brand and section.blocks.size > 0 %}
 <div class="logo-brands">
   <div class="row brands-slider" data-brands-slider data-rows="5">
     {% for block in section.blocks %}
     <div class="item col-12 col-sm-6 col-md-4 col-lg-3 col5">
       <a title="{{ block.settings.title }}" href="{{ block.settings.link }}">
         {% if block.settings.image != blank %}
-        <img data-src="{{ block.settings.image | img_url : "200x" , format: 'pjpg' }}" src="{{ block.settings.image | img_url : "200x"  , format: 'pjpg'}}" alt="{{ block.settings.image.alt }}" class="lazyautosizes lazyloaded"/>
+        <img data-src="{{ block.settings.image | img_url : "200x" }}" src="{{ block.settings.image | img_url : "200x" }}" alt="{{ block.settings.image.alt }}" class="lazyautosizes lazyloaded"/>
         {% else %}
         <div class="not_img" style="font-size: 16px;">
           186 x 74px
@@ -62,7 +71,8 @@
   </div>
   {% endfor %}  
 </div>
-
+</div>
+</div>
 
 {% schema %}
   {
@@ -109,5 +119,70 @@
   }
 {% endschema %}
 
+<script>
+  $(document).ready(function() {
+    var brandsList = $('[data-brands-list]'),
+        brand = brandsList.find('.brand');
 
+    brand.each(function() {
+      var self = $(this),
+          brandTitle = self.find('.azbrands-title h3').text().trim(),
+          character = self.find("ul.brand-grid li:eq(0) a").text().charAt(0).toLowerCase(),
+          alphabet = brandsList.prev(),
+          alphabetChild = alphabet.children();
 
+      alphabetChild.each(function() {
+        var aElm = $(this).find('a');
+        
+        if(aElm.text().trim().toLowerCase() == brandTitle) {
+          if(!aElm.hasClass('readonly')) 
+            aElm.addClass('readonly');
+          return; 
+        }; 
+      });
+      if(!self.find('.azbrands-title').length) {
+        console.log(character)
+        self.find('.brand-grid').children().appendTo('.brand-' + character + " ul.brand-grid");
+        self.remove();
+      }      
+    });
+
+    var vendorItem = brandsList.prev().find('.vendor-letter a.readonly');
+    
+    vendorItem.on('click', function() {
+      var selfText = $(this).text().trim().toLowerCase();
+      
+      brand.hide().filter(function(e){
+        var title =  $(this).find('.azbrands-title h3').text().trim().toLowerCase();
+        
+        if(title == selfText) {
+          $(this).show();          
+          return;
+        };        
+      });
+      
+      $('.azbrandstable .all-brand a').click(function(){
+        brand.show();
+      });
+    });
+    
+    var allVendor = brandsList.prev().find('a.readonly');
+    
+    allVendor.on('click', function() {
+      brandsList.prev().find('a').removeClass('active');
+      
+      var self = $(this);
+      
+      if(!self.hasClass('active')) {
+      	self.addClass('active');
+      };
+      
+      var offsetTop = brandsList.prev('.azbrandstable').offset().top;
+      
+      $('body,html').animate({
+        scrollTop: offsetTop
+      }, 600);
+    });            
+  });
+
+</script>

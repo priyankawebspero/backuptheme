@@ -17,7 +17,7 @@
                     <div class="images-contain">
                         {% if block.settings.image_slide != blank %}
 
-                        {%- assign img_url = block.settings.image_slide | img_url: 'master' , format: 'pjpg'-%}
+                        {%- assign img_url = block.settings.image_slide | img_url: 'master' -%}
 
                         <a {% if block.settings.link != blank %} href="{{ block.settings.link }}"{% endif %} class="slide-image">
                             <img data-src="{{ img_url }}"
@@ -26,7 +26,7 @@
 
                             {% if block.settings.image_slide_mb != blank %}
 
-                            {%- assign img_url_mb = block.settings.image_slide_mb | img_url: 'master' , format: 'pjpg'-%}
+                            {%- assign img_url_mb = block.settings.image_slide_mb | img_url: 'master' -%}
 
                             <img data-src="{{ img_url_mb }}"
                                 src="https:{{ img_url_mb }}" alt="{{ block.settings.image_slide_mb.alt | default: shop.name }}" itemprop="logo"

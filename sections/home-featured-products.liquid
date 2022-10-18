@@ -24,7 +24,7 @@
         <div class="column-banner-inner">
           <div class="img-box">
             <a href="{{ section.settings.link }}">
-              {%- assign img_url = section.settings.image | img_url: '800x' , format: 'pjpg' -%}
+              {%- assign img_url = section.settings.image | img_url: '800x' -%}
               {% if section.settings.image != blank %}
               <img data-src="{{ img_url }}"
                    src="{{ img_url }}" alt="{{ section.settings.image.alt | default: shop.name }}" itemprop="logo"
@@ -115,8 +115,8 @@
           {% endif %}
           {% endif %}
           
-          {% if section.settings.image_1 != blank %}  <a href="{{ section.settings.link1 }}"><img src="{{ section.settings.image_1 | img_url:'master' }}" class="slide-desktop"></a>{% endif %}
-           {% if section.settings.image_picker_mobile != blank %} <a href="{{ section.settings.link1 }}"><img src="{{ section.settings.image_picker_mobile | img_url:'master' }}" class="slide-mobile" style="display:none;"></a>{% endif %}
+          {% if section.settings.image_1 != blank %}  <img src="{{ section.settings.image_1 | img_url:'master' }}" class="slide-desktop">{% endif %}
+           {% if section.settings.image_picker_mobile != blank %} <img src="{{ section.settings.image_picker_mobile | img_url:'master' }}" class="slide-mobile" style="display:none;">{% endif %}
           
         </div>
 <!--           <a href="{{ section.settings.link1 }}" class="btn desktop">{{ section.settings.shop_now_button }}</a>

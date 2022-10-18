@@ -11,8 +11,7 @@
 <!-- new product -->
 {% assign custom_label = false %}
 {% assign new_label = false %}
-{% assign discount_on = false %}
-{% assign product_show_tag = '' %}
+
 
 {% for tag in product.tags %}
 {% assign tag_handle = tag | handle %}
@@ -21,14 +20,8 @@
 {% endif %}
 
 {% if tag_handle == 'new' %}
-{% assign new_label = false %}
+{% assign new_label = true %}
 {% endif %}
-{% assign product_tag = tag | downcase %}
-{% if product_tag == 'bestseller' or product_tag == 'recommended' or product_tag == 'just launched' %}
-        {% assign discount_on = true %}
-        {% assign product_show_tag = tag %}
-{% endif %}
-  
 {% endfor %}
 
 {% assign bundle_label = false %}
@@ -38,7 +31,7 @@
 
 
 
-{% if on_sale or sold_out or custom_label or bundle_label or new_label or discount_on %}
+{% if on_sale or sold_out or custom_label or bundle_label or new_label %}
 {% if template != 'collection' %}
  {% if new_label %}
   <strong class="label new-label" {% if settings.enable_multilang %}data-translate="products.product.new_label"{% endif %} >
@@ -46,9 +39,7 @@
   </strong>
   {% endif %}
 {% endif %}
-{%- if discount_on -%}
-    <span class="discount-tag-col"> {{ product_show_tag | capitalize }} </span>
-{% endif %}
+
 
 <div class="product-label {% if on_sale %}{% else %}deactive{% endif %}">
 

@@ -16,13 +16,13 @@
 
                     <div class="images-contain">
                         {% if block.settings.image_slide_1 != blank %}
-                        {%- assign img_url_1 = block.settings.image_slide_1 | img_url: 'master' , format: 'pjpg'-%}                       
+                        {%- assign img_url_1 = block.settings.image_slide_1 | img_url: 'master' -%}                       
                             <img data-src="{{ img_url_1 }}"
                                 src="https:{{ img_url_1 }}" alt="{{ block.settings.image_slide_1.alt | default: shop.name }}" itemprop="logo"
                                 class="lazyautosizes lazyloaded{% if block.settings.image_slide_1 != blank %} slide-desktop{% endif %}" data-sizes="auto">
 
                             {% if block.settings.image_slide_mb_1 != blank %}
-                            {%- assign img_url_mb_1 = block.settings.image_slide_mb_1 | img_url: 'master' , format: 'pjpg'-%}
+                            {%- assign img_url_mb_1 = block.settings.image_slide_mb_1 | img_url: 'master' -%}
 
                             <img data-src="{{ img_url_mb_1 }}"
                                 src="https:{{ img_url_mb_1 }}" alt="{{ block.settings.img_url_mb_1.alt | default: shop.name }}" itemprop="logo"
@@ -40,13 +40,13 @@
                   </div>
                   <div class="images-contain">
                     {% if block.settings.image_slide != blank %}
-                    {%- assign img_url = block.settings.image_slide | img_url: 'master' , format: 'pjpg'-%}                       
+                    {%- assign img_url = block.settings.image_slide | img_url: 'master' -%}                       
                     <img data-src="{{ img_url }}"
                          src="https:{{ img_url }}" alt="{{ block.settings.image_slide.alt | default: shop.name }}" itemprop="logo"
                          class="lazyautosizes lazyloaded{% if block.settings.image_slide_mb != blank %} slide-desktop{% endif %}" data-sizes="auto">
 
                     {% if block.settings.image_slide_mb != blank %}
-                    {%- assign img_url_mb = block.settings.image_slide_mb | img_url: 'master' , format: 'pjpg'-%}
+                    {%- assign img_url_mb = block.settings.image_slide_mb | img_url: 'master' -%}
 
                     <img data-src="{{ img_url_mb }}"
                          src="https:{{ img_url_mb }}" alt="{{ block.settings.image_slide_mb.alt | default: shop.name }}" itemprop="logo"
@@ -74,7 +74,7 @@
 {% schema %}
     {
         "name": "Affiliate Top Banner",
-        "class": "affiliate-slideshow-sections",
+        "class": "affiliate-slideshow-sections squad-main-banner",
         "max_blocks": 1,
         "settings": [
             {

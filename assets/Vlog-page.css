@@ -206,8 +206,30 @@ overflow:hidden
 z-index:22
 }
 
+
 @media only screen and (min-width: 1400px) {
 .page-tpl .container {
 max-width:1270px
 }
+}
+
+
+@media only screen and (max-width: 767px) {
+.page-header h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    padding-top: 10px !important;
+}
+
+.breadcrumb {
+    padding: 10px 0 0;
+}
+
+main.main-content {
+    padding-bottom: 0px;
+}
+.video_blocks li.listing-vlog {
+    margin-bottom: 15px;
+}
+  
 }

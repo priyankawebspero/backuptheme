@@ -5,8 +5,8 @@
       <div class="col-12 col-md-12 col-lg-12 text-center">
         {% if section.settings.gift_image != blank %} 
               {% if section.settings.gift_image != blank %}            
-              {%- assign img_url_gift = section.settings.gift_image | img_url: 'original', crop: 'center' , format: 'pjpg'-%}
-              {%- assign img_url_gift_mobile = section.settings.gift_image_mobile | img_url: 'original', crop: 'center' , format: 'pjpg'-%}
+              {%- assign img_url_gift = section.settings.gift_image | img_url: 'original', crop: 'center' -%}
+              {%- assign img_url_gift_mobile = section.settings.gift_image_mobile | img_url: 'original', crop: 'center' -%}
               <img data-src="{{ img_url_gift }}"
                    src="https:{{ img_url_gift }}" alt="{{ section.settings.gift_image.alt | default: shop.name }}" itemprop="logo"
                    class="lazyautosizes lazyloaded teaser_desktop" data-sizes="auto">
@@ -36,7 +36,7 @@
   }	
   @media (max-width: 768px) {
     #teaser-spotlight-33-{{section.id}} {
-      background-image: url('{{ section.settings.bg-image-mob | img_url: 'original', format: 'pjpg'}}') !important;
+      background-image: url('{{ section.settings.bg-image-mob | img_url: 'original'}}') !important;
     }
   }	  
   

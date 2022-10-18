@@ -24,8 +24,8 @@ have permission of us.
       <div class="f-fix"><span class="sca-product-title" style="white-space: nowrap;color:#000;{{showfgTitle}}">{{productTitle}}</span>
           <div id="product-variants-{{productID}}">
             <div class="sca-price" id="price-field-{{productID}}">
-              <span class="sca-old-price">{{variant_compare_at_price}}</span>
-              <span class="sca-special-price">{{variant_price}}</span>
+              <span class="sca-old-price"><span class="money">{{variant_compare_at_price}}</span></span>
+              <span class="sca-special-price"><span class="money">{{variant_price}}<span class="money"></span>
             </div>
             <div id="stay-content-sca-freegift-{{productID}}" class="sca-fg-cart-item">
               <a class="close_box" style="display: none;position: absolute;top:5px;right: 10px;font-size: 22px;font-weight: bold;cursor: pointer;text-decoration:none;color: #aaa;">×</a>
@@ -204,8 +204,8 @@ have permission of us.
       <div class="f-fix">
         <span class="sca-product-title" style="white-space: nowrap;color:#000;">{{variantTitle}}</span>
         <div class="sca-price">
-          <span class="sca-old-price">{{variant_compare_at_price}}</span>
-          <span class="sca-special-price">{{variant_price}}</span>
+          <span class="sca-old-price"><span class="money">{{variant_compare_at_price}}</span></span>
+          <span class="sca-special-price"><span class="money">{{variant_price}}</span></span>
         </div>
         <button type="button" id="sca-btn{{variantID}}" class="sca-button" onclick="SECOMAPP.addGiftToCart({{variantID}},1);">
           <span>{{AddToCartButton}}</span>
@@ -289,7 +289,6 @@ have permission of us.
     //enable checking free gifts condition when checkout clicked
     if ((typeof SECOMAPP) === 'undefined') { window.SECOMAPP = {}; };
     SECOMAPP.enableOverrideCheckout = true;
-    SECOMAPP.add_offer_names_above_gift_list = true;
     //    SECOMAPP.preStopAppCallback = function(cart){
     //        if(typeof yotpo!=='undefined' && typeof yotpo.initWidgets==='function'){
     //            yotpo.initWidgets();

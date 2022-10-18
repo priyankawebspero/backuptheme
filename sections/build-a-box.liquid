@@ -1,6 +1,8 @@
-{% if section.settings.banner_image != blank %}            
-  {%- assign img_url = section.settings.banner_image | img_url: 'master' , format: 'pjpg'-%}
-  {%- assign img_url_mobile = section.settings.banner_image_mb | img_url: 'master' , format: 'pjpg'-%}
+{{ 'build-a-box.css' | asset_url | stylesheet_tag }} 
+<div class="page-tpl">
+  <div class="container-fluid">{% if section.settings.banner_image != blank %}            
+  {%- assign img_url = section.settings.banner_image | img_url: 'master' -%}
+  {%- assign img_url_mobile = section.settings.banner_image_mb | img_url: 'master' -%}
   <img data-src="{{ img_url }}"
        src="https:{{ img_url }}" alt="{{ section.settings.image.alt | default: shop.name }}" itemprop="logo"
        class="lazyautosizes lazyload desktop" data-sizes="auto">
@@ -21,8 +23,8 @@
         <div class="spotlight-item">
           <div class="img-box">
               {% if block.settings.image != blank %}            
-            {%- assign img_url = block.settings.image | img_url: 'master' , format: 'pjpg'-%}
-            {%- assign img_url_mobile = block.settings.image_mob | img_url: 'master' , format: 'pjpg'-%}
+            {%- assign img_url = block.settings.image | img_url: 'master' -%}
+            {%- assign img_url_mobile = block.settings.image_mob | img_url: 'master' -%}
               <img data-src="{{ img_url }}"
                    src="https:{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"
                    class="lazyautosizes lazyload desktop" data-sizes="auto">
@@ -90,11 +92,12 @@
   </div>
 </div>
 {% endif %}
-
+  </div>
+</div>
 
 {% schema %}
   {
-    "name": "Builder banner",
+    "name": "build-a-box",
     "class": "builder-banner",
     "max_blocks": 10,
     "settings": [      

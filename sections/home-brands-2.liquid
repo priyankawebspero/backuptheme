@@ -39,7 +39,7 @@
         <div class="item ">
           <a title="{{ block.settings.title }}" href="{{ block.settings.link }}">
             {% if block.settings.image != blank %}
-            <img data-src="{{ block.settings.image }}" src="{{ block.settings.image | img_url : '250x'  , format: 'pjpg'}}" alt="{{ block.settings.image.alt }}" class="lazyautosizes lazyloaded"/>
+            <img data-src="{{ block.settings.image }}" src="{{ block.settings.image | img_url : '250x' }}" alt="{{ block.settings.image.alt }}" class="lazyautosizes lazyloaded"/>
             {% endif %}
             <p class="fs11">
               {% include 'multilang' with block.settings.title %}

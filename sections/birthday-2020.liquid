@@ -1,0 +1,923 @@
+{% case section.settings.collection_results_per_row1 %}
+  {% when '2' %}
+  	{%- assign grid_item_width = 'col-6' -%}
+	{%- assign row = 'two-items' -%}
+  {% when '3' %}
+  	{%- assign grid_item_width = 'col-6 col-md-4' -%}
+	{%- assign row = 'three-items' -%}
+  {% when '4' %}
+  	{%- assign grid_item_width = 'col-6 col-md-4 col-lg-3' -%}
+	{%- assign row = 'four-items' -%}
+  {% when '5' %}
+  	{%- assign grid_item_width = 'col-6 col-md-4 col-lg-3 col5' -%}
+	{%- assign row = 'five-items' -%}
+  {% when '6' %}
+  	{%- assign grid_item_width = 'col-6 col-md-4 col-lg-3 col-xl-2' -%}
+	{%- assign row = 'six-items' -%}
+{% endcase %}
+
+<script>
+  $('#carousel-example').on('slide.bs.carousel', function (e) {
+    /*
+        CC 2.0 License Iatek LLC 2018 - Attribution required
+    */
+    var $e = $(e.relatedTarget);
+    var idx = $e.index();
+    var itemsPerSlide = 5;
+    var totalItems = $('.carousel-item').length;
+ 
+    if (idx >= totalItems-(itemsPerSlide-1)) {
+        var it = itemsPerSlide - (totalItems - idx);
+        for (var i=0; i<it; i++) {
+            // append slides to end
+            if (e.direction=="left") {
+                $('.carousel-item').eq(i).appendTo('.carousel-inner');
+            }
+            else {
+                $('.carousel-item').eq(0).appendTo('.carousel-inner');
+            }
+        }
+    }
+});
+</script>
+<style>
+  @media (min-width: 768px) and (max-width: 991px) {
+    /* Show 4th slide on md if col-md-4*/
+    .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.3333%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    /* Show 3rd slide on sm if col-sm-6*/
+    .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -50%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+@media (min-width: 576px) {
+    .carousel-item {
+        margin-right: 0;
+    }
+    /* show 2 items */
+    .carousel-inner .active + .carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+        transition: none;
+    }
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    /* left or forward direction */
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* farthest right hidden item must be also positioned for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* right or prev direction */
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+/* MD */
+@media (min-width: 768px) {
+    /* show 3rd of 3 item slide */
+    .carousel-inner .active + .carousel-item + .carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    /* left or forward direction */
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* right or prev direction */
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+/* LG */
+@media (min-width: 991px) {
+    /* show 4th item */
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    /* Show 5th slide on lg if col-lg-3 */
+    .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* left or forward direction */
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* right or prev direction //t - previous slide direction last item animation fix */
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+  .carousel-control-prev-icon {
+    background-image: url("https://cdn3.iconfinder.com/data/icons/social-productivity-line-art-3/128/arrow-left-512.png");
+}
+  .carousel-control-next-icon {
+    background-image: url("https://cdn3.iconfinder.com/data/icons/social-productivity-line-art-3/128/arrow-right-512.png");
+}
+ 
+</style>
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+  .column1 {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+<style>
+  .img-responsive {
+    display: block;
+  }
+  .img-responsive.mobile {
+  display: none;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .img-responsive {
+    display: none;
+  }
+  .img-responsive.mobile {
+    display: block;
+  }
+}
+  @media only screen and (max-width: 749px) {
+     .featured-collection .card{ width:50%;float: left;    padding-left: 5px;}
+.featured-collection .card:nth-child(2n+1) {clear: both;}
+}
+ 
+</style>
+<div class="img-responsive">
+  <a href="https://plumgoodness.com"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/DESKTOP_OLP_BANNER-copy_v2_1.gif?v=1599471751"></a>
+<img src="https://cdn.shopify.com/s/files/1/0390/2985/files/DESKTOP_OLP_OFFER-UNIT-_V3_1.gif?v=1599471812">
+<img src="https://cdn.shopify.com/s/files/1/0390/2985/files/DESKTOP_OLP_NS_GT_v4_02c73789-240e-4bf3-877d-c375f8f577ac.jpg?v=1599471995">
+  <a href="https://plumgoodness.com/collections/all-in-stock"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/DESKTOP_OLP_PARTY_STARTED_OPTIMISED_1.jpg?v=1599472195"></a>
+<div style="text-align:center;background:url('https://cdn.shopify.com/s/files/1/0390/2985/files/05_BACKGROUND.png?v=1599468008');backgroung-size:cover">
+<img src="https://cdn.shopify.com/s/files/1/0390/2985/files/DEAL_OF_THE_DAY_LOGO.png?v=1599468746">
+<div class="row" style="margin:10px;margin-bottom:0px">
+  <div class="column">
+    <a href="https://plumgoodness.com/collections/goodness-combos"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/DEAL_1.png?v=1599468009" alt="Snow" style="width:100%">
+    </a></div>
+  <div class="column">
+    <a href="https://plumgoodness.com/collections/999-store"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/DEAL_2.png?v=1599468009" alt="Forest" style="width:100%">
+    </a></div>
+  <div class="column">
+    <a href="https://plumgoodness.com/collections/bestsellers"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/DEAL_3.png?v=1599468008" alt="Mountains" style="width:100%">
+    </a></div>
+  <div class="column">
+    <a href="https://plumgoodness.com/collections/flat-20-off"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/DEAL_4_1aa2aeb9-9f20-4d34-9a43-148cff2a4d99.png?v=1600236025" alt="Mountains" style="width:100%">
+    </a> </div>
+       
+</div>
+</div>
+<div style="text-align:center;background:url('https://cdn.shopify.com/s/files/1/0390/2985/files/06_BACKGROUND.png?v=1599469388');backgroung-size:cover">
+<img src="https://cdn.shopify.com/s/files/1/0390/2985/files/PLUM_PICKS_LOGO.png?v=1599469387">
+
+  <div class="row" style="margin:10px;margin-bottom:0px">
+  <div class="column">
+    <a href="https://plumgoodness.com/collections/green-tea"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/PICK_1.png?v=1599469391" alt="Snow" style="width:100%">
+    </a></div>
+  <div class="column">
+    <a href="https://plumgoodness.com/collections/eye-make-up"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/PICK_2.png?v=1599469391" alt="Forest" style="width:100%">
+    </a></div>
+  <div class="column">
+    <a href="https://plumgoodness.com/collections/plum-bodylovin"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/PICK_3.png?v=1599469390" alt="Mountains" style="width:100%">
+    </a></div>
+  <div class="column">
+    <a href="https://plumgoodness.com/collections/bright-years-age-specialists"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/PICK_4.png?v=1599469390" alt="Mountains" style="width:100%">
+    </a></div>
+       
+</div>
+  <div class="row" style="margin:10px;margin-bottom:0px">
+  <div class="column">
+    <a href="https://plumgoodness.com/collections/green-tea"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/CTA_1.png?v=1599469387" alt="Snow" style="width:100%">
+    </a></div>
+  <div class="column">
+    <a href="https://plumgoodness.com/collections/eye-make-up"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/CTA_2.png?v=1599469387" alt="Forest" style="width:100%">
+    </a></div>
+  <div class="column">
+    <a href="https://plumgoodness.com/collections/plum-bodylovin"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/CTA_3.png?v=1599469387" alt="Mountains" style="width:100%">
+    </a></div>
+  <div class="column">
+    <a href="https://plumgoodness.com/collections/bright-years-age-specialists"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/CTA_4.png?v=1599469387" alt="Mountains" style="width:100%">
+    </a></div>
+       
+</div>
+</div>
+
+  <a href="https://www.instagram.com/plumgoodness/"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/PART2_SOCIAL_MEDIA_OPTIMISED.jpg?v=1599472339"></a>
+  <div class="featured-products{% if section.settings.display_banner %} has-banner{% endif %}{% if section.settings.banner_is == 'right'%} banner-right{% endif %}" id="featured-products-{{section.id}}" data-featured-products>
+    <div class="{% if section.settings.display_banner %}container-fluid{% else %}container-padd60{% endif %}">
+      <div class="row{% if section.settings.banner_is == 'right'%} flex-row-reverse{% endif %}">
+        {% if section.settings.display_banner %}
+        <div class="no-padd col-12 col-md-12 col-lg-6 column-banner">
+          <div class="column-banner-inner">
+            <div class="img-box">
+              <a href="{{ section.settings.link }}">
+                {%- assign img_url = section.settings.image | img_url: '800x' -%}
+                {% if section.settings.image != blank %}
+                <img data-src="{{ img_url }}"
+                     src="{{ img_url }}" alt="{{ section.settings.image.alt | default: shop.name }}" itemprop="logo"
+                     class="lazyautosizes lazyloaded" data-sizes="auto">
+                {% else %}
+                <div class="not_img">
+                  725 x 640px
+                </div>   
+                {% endif %}
+              </a>
+            </div>
+  
+            {% if section.settings.banner_heading != blank or section.settings.banner_sub_heading != blank or section.settings.banner_des != blank or section.settings.banner_button != blank %}
+            <div class="custom-block-imgs">
+              {% if section.settings.banner_heading != blank %}
+              <h3 class="banner-heading"
+                  style="{% if section.settings.font_size_banner_heading != blank %}
+                         font-size: {{ section.settings.font_size_banner_heading }};
+                         {% endif %}
+                         {% if section.settings.color_banner_heading != blank %}
+                         color:{{ section.settings.color_banner_heading }};
+                         {% endif %}">
+                {% include 'multilang' with section.settings.banner_heading  %}
+              </h3>
+              {% endif %}
+  
+              {% if section.settings.banner_sub_heading != blank %}
+              <h5 class="banner-sub-heading"
+                  style="{% if section.settings.font_size_banner_sub_heading != blank %}
+                         font-size: {{ section.settings.font_size_banner_sub_heading }};
+                         {% endif %}
+                         {% if section.settings.color_banner_sub_heading != blank %}
+                         color:{{ section.settings.color_banner_sub_heading }};
+                         {% endif %}">            
+                {% include 'multilang' with section.settings.banner_sub_heading  %}
+              </h5>
+              {% endif %}
+  
+              {% if section.settings.banner_des != blank %}
+              <p class="banner-des"
+                 style="{% if section.settings.font_size_banner_des != blank %}
+                        font-size: {{ section.settings.font_size_banner_des }};
+                        {% endif %}
+                        {% if section.settings.color_banner_des != blank %}
+                        color: {{ section.settings.color_banner_des }};
+                        {% endif %}">
+                {% include 'multilang' with section.settings.banner_des  %}
+              </p>
+              {% endif %}
+  
+              {% if section.settings.banner_button != blank %}
+              <a href="{{ section.settings.link }}" class="banner-button btn"
+                 style="{% if section.settings.bg_banner_button != blank %}
+                        background-color:{{ section.settings.bg_banner_button }};
+                        {% endif %}
+                        {% if section.settings.border_banner_button != blank %}
+                        border-color:{{ section.settings.border_banner_button }};
+                        {% endif %}
+                        {% if section.settings.color_banner_button != blank %}
+                        color:{{ section.settings.color_banner_button }};
+                        {% endif %}">
+                {% include 'multilang' with section.settings.banner_button %}
+              </a>
+              {% endif %}
+            </div>
+            {% endif %}
+          </div>        
+        </div>
+        {% endif %}
+        
+        <div class="col-12{% if section.settings.display_banner %} col-md-12 col-lg-6 column-product{% else %} col-md-12{% endif %}">
+          
+          {% if section.settings.display_banner %}
+          <div class="column-product-inner">
+          {% endif %}
+            
+          {% if section.settings.featured_products_title != blank %}
+          <!--div class="widget-title{% if section.settings.title_style == 'style_2' %} not-before{% endif %}">   
+            <h3 class="box-title">
+              <span class="title"> 
+                {% include 'multilang' with section.settings.featured_products_title %}
+              </span>
+            </h3>
+            {% if section.settings.featured_products_des != blank %}
+            <p>
+              {% include 'multilang' with section.settings.featured_products_des %}
+            </p>        
+            {% endif %}
+          </div-->
+          {% endif %}
+  
+          <div class="widget-product">
+            <div class="products-grid row {{ row }}" data-row="{{ section.settings.collection_results_per_row1 }}">
+              {% for product in collections[section.settings.show_slider_featured_collection].products limit:section.settings.slider_featured_limit_all %}
+              <div class="grid-item {{ grid_item_width }}{% if settings.product_image_border %} grid-item-border{% endif %} small--one-half">
+                {% include 'product-grid-item' %}
+  
+              </div>
+   
+              {% else %}
+              {% for product in (1..section.settings.slider_featured_limit_all) %}
+              <div class="grid-item {{ grid_item_width }} small--one-half">
+                <div class="grid-view-item no-product">
+                  <div class="product-top">
+                    <div class="not_img">
+                      Product Img
+                    </div>
+                  </div>
+  
+                  <div class="product-bottom">
+                    <div class="product-title">
+                      <span>
+                        Your product's name
+                      </span>`
+                    </div>
+  
+                    <div class="price-box">
+                      <span> $250.00 </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+              {% endfor %}
+            </div>
+          </div>
+             <!--div class="content aa">
+                <a href="{{ section.settings.link1 }}" class="btn">{{ section.settings.shop_now_button }}</a>
+              </div-->
+            
+          {% if section.settings.display_banner %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+<img src="https://cdn.shopify.com/s/files/1/0390/2985/files/PART3_CLOSURE_OPTIMISED.jpg?v=1599472591">
+</div>
+
+<div class="img-responsive mobile">
+  <a href=""><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/MOBILE_OLP_BANNER.gif?v=1599473162"></a>
+  <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/MOBILE_OLP_OFFER_UNIT.gif?v=1599473162">
+  <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/MOBILE_OLP_NS_GT_v2.jpg?v=1599473162">
+  <a href="https://plumgoodness.com/collections/all-in-stock"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/MOBILE_OLP_PARTY_STARTED.jpg?v=1599473161"></a>
+  <div style="text-align:center;background:url('https://cdn.shopify.com/s/files/1/0390/2985/files/BACKGROUND_DEALS.png?v=1599474419');background-size:cover">
+  	  <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/LOGO_DEALS_OF_THE_DAY_f1f96cd9-bc8b-4885-a142-7d0246a9faea.png?v=1600239018">
+
+    <div class="row" style="margin-right:3px;margin-left:3px">
+  <div class="column1">
+    <a href="https://plumgoodness.com/collections/goodness-combos"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/DEAL_1_1.png?v=1599474419" alt="Snow" style="width:100%"></a>
+  </div>
+  <div class="column1">
+    <a href="https://plumgoodness.com/collections/999-store"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/DEAL_2_1.png?v=1599474419" alt="Forest" style="width:100%"></a>
+  </div>
+      </div>
+<div class="row" style="margin-right:3px;margin-left:3px">
+  <div class="column1">
+    <a href="https://plumgoodness.com/collections/bestsellers"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/DEAL_3_1.png?v=1599474419" alt="Mountains" style="width:100%"></a>
+  </div>
+  <div class="column1">
+    <a href="flat-20-off"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/DEAL_4_1aa2aeb9-9f20-4d34-9a43-148cff2a4d99.png?v=1600236025" alt="Mountains" style="width:100%"></a>
+  </div>
+       
+</div>
+  </div>
+  
+  
+    
+  <div style="text-align:center;background:url('https://cdn.shopify.com/s/files/1/0390/2985/files/BACKGROUND_DEALS.png?v=1599474419');background-size:cover">
+    <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/LOGO_PLUM_PICKS_79219b74-1783-46a6-9754-7b8a24a792ca.png?v=1600239017">
+    <div class="row" style="margin-right:3px;margin-left:3px">
+    <div class="column1">
+      <a href="https://plumgoodness.com/collections/green-tea"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/PICK_1_1.png?v=1599475203"></a>
+    </div>
+    <div class="column1">
+      <a href="https://plumgoodness.com/collections/eye-make-up"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/PICK_2_1.png?v=1599475203"></a>
+    </div>
+    
+      </div>
+      <div class="row" style="margin-right:3px;margin-left:3px">
+    <div class="column1">
+      <a href="https://plumgoodness.com/collections/plum-bodylovin"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/CTA_1_1.png?v=1599475202"></a>
+    </div>
+    <div class="column1">
+      <a href="https://plumgoodness.com/collections/bright-years-age-specialists"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/CTA_2_1.png?v=1599475202"></a>
+    </div>
+    
+      </div>
+      <div class="row" style="margin-right:3px;margin-left:3px">
+    <div class="column1">
+      <a href="https://plumgoodness.com/collections/green-tea"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/PICK_3_1.png?v=1599475203"></a>
+    </div>
+    <div class="column1">
+      <a href="https://plumgoodness.com/collections/eye-make-up"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/PICK_4_1.png?v=1599475203"></a>
+    </div>
+    
+      </div>
+      <div class="row" style="margin-right:3px;margin-left:3px">
+    <div class="column1">
+      <a href="https://plumgoodness.com/collections/plum-bodylovin"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/CTA_3_1.png?v=1599475203"></a>
+    </div>
+    <div class="column1">
+      <a href="https://plumgoodness.com/collections/bright-years-age-specialists"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/CTA_4_1.png?v=1599475202"></a>
+    </div>
+    
+      </div>
+  
+  </div>
+  <a href="https://www.instagram.com/plumgoodness/"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/PART2_SOCIAL_MEDIA.jpg?v=1599475665"></a>
+  <div class="featured-products{% if section.settings.display_banner %} has-banner{% endif %}{% if section.settings.banner_is == 'right'%} banner-right{% endif %}" id="featured-products-{{section.id}}" data-featured-products>
+    <div class="{% if section.settings.display_banner %}container-fluid{% else %}container-padd60{% endif %}">
+      <div class="row{% if section.settings.banner_is == 'right'%} flex-row-reverse{% endif %}">
+        {% if section.settings.display_banner %}
+        <div class="no-padd col-12 col-md-12 col-lg-6 column-banner">
+          <div class="column-banner-inner">
+            <div class="img-box">
+              <a href="{{ section.settings.link }}">
+                {%- assign img_url = section.settings.image | img_url: '800x' -%}
+                {% if section.settings.image != blank %}
+                <img data-src="{{ img_url }}"
+                     src="{{ img_url }}" alt="{{ section.settings.image.alt | default: shop.name }}" itemprop="logo"
+                     class="lazyautosizes lazyloaded" data-sizes="auto">
+                {% else %}
+                <div class="not_img">
+                  725 x 640px
+                </div>   
+                {% endif %}
+              </a>
+            </div>
+  
+            {% if section.settings.banner_heading != blank or section.settings.banner_sub_heading != blank or section.settings.banner_des != blank or section.settings.banner_button != blank %}
+            <div class="custom-block-imgs">
+              {% if section.settings.banner_heading != blank %}
+              <h3 class="banner-heading"
+                  style="{% if section.settings.font_size_banner_heading != blank %}
+                         font-size: {{ section.settings.font_size_banner_heading }};
+                         {% endif %}
+                         {% if section.settings.color_banner_heading != blank %}
+                         color:{{ section.settings.color_banner_heading }};
+                         {% endif %}">
+                {% include 'multilang' with section.settings.banner_heading  %}
+              </h3>
+              {% endif %}
+  
+              {% if section.settings.banner_sub_heading != blank %}
+              <h5 class="banner-sub-heading"
+                  style="{% if section.settings.font_size_banner_sub_heading != blank %}
+                         font-size: {{ section.settings.font_size_banner_sub_heading }};
+                         {% endif %}
+                         {% if section.settings.color_banner_sub_heading != blank %}
+                         color:{{ section.settings.color_banner_sub_heading }};
+                         {% endif %}">            
+                {% include 'multilang' with section.settings.banner_sub_heading  %}
+              </h5>
+              {% endif %}
+  
+              {% if section.settings.banner_des != blank %}
+              <p class="banner-des"
+                 style="{% if section.settings.font_size_banner_des != blank %}
+                        font-size: {{ section.settings.font_size_banner_des }};
+                        {% endif %}
+                        {% if section.settings.color_banner_des != blank %}
+                        color: {{ section.settings.color_banner_des }};
+                        {% endif %}">
+                {% include 'multilang' with section.settings.banner_des  %}
+              </p>
+              {% endif %}
+  
+              {% if section.settings.banner_button != blank %}
+              <a href="{{ section.settings.link }}" class="banner-button btn"
+                 style="{% if section.settings.bg_banner_button != blank %}
+                        background-color:{{ section.settings.bg_banner_button }};
+                        {% endif %}
+                        {% if section.settings.border_banner_button != blank %}
+                        border-color:{{ section.settings.border_banner_button }};
+                        {% endif %}
+                        {% if section.settings.color_banner_button != blank %}
+                        color:{{ section.settings.color_banner_button }};
+                        {% endif %}">
+                {% include 'multilang' with section.settings.banner_button %}
+              </a>
+              {% endif %}
+            </div>
+            {% endif %}
+          </div>        
+        </div>
+        {% endif %}
+        
+        <div class="col-12{% if section.settings.display_banner %} col-md-12 col-lg-6 column-product{% else %} col-md-12{% endif %}">
+          
+          {% if section.settings.display_banner %}
+          <div class="column-product-inner">
+          {% endif %}
+            
+          {% if section.settings.featured_products_title != blank %}
+          <!--div class="widget-title{% if section.settings.title_style == 'style_2' %} not-before{% endif %}">   
+            <h3 class="box-title">
+              <span class="title"> 
+                {% include 'multilang' with section.settings.featured_products_title %}
+              </span>
+            </h3>
+            {% if section.settings.featured_products_des != blank %}
+            <p>
+              {% include 'multilang' with section.settings.featured_products_des %}
+            </p>        
+            {% endif %}
+          </div-->
+          {% endif %}
+  
+          <div class="widget-product">
+            <div class="products-grid row {{ row }}" data-row="{{ section.settings.collection_results_per_row1 }}">
+              {% for product in collections[section.settings.show_slider_featured_collection].products limit:section.settings.slider_featured_limit_all %}
+              <div class="grid-item {{ grid_item_width }}{% if settings.product_image_border %} grid-item-border{% endif %} small--one-half">
+                {% include 'product-grid-item' %}
+  
+              </div>
+   
+              {% else %}
+              {% for product in (1..section.settings.slider_featured_limit_all) %}
+              <div class="grid-item {{ grid_item_width }} small--one-half">
+                <div class="grid-view-item no-product">
+                  <div class="product-top">
+                    <div class="not_img">
+                      Product Img
+                    </div>
+                  </div>
+  
+                  <div class="product-bottom">
+                    <div class="product-title">
+                      <span>
+                        Your product's name
+                      </span>`
+                    </div>
+  
+                    <div class="price-box">
+                      <span> $250.00 </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+              {% endfor %}
+            </div>
+          </div>
+             <!--div class="content aa">
+                <a href="{{ section.settings.link1 }}" class="btn">{{ section.settings.shop_now_button }}</a>
+              </div-->
+            
+          {% if section.settings.display_banner %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/PART3_CLOSURE.jpg?v=1599475665">
+  
+</div>
+<div class="powr-comments" id="7cc6c681_1600059482"></div><script src="https://www.powr.io/powr.js?platform=shopify"></script>
+
+
+
+
+<style>
+  {% assign margin_bottom =  section.settings.margin_bottom %} 
+
+  @media only screen and (max-width: 767px) {
+     .featured-collection .card{ width:50%;float: left;    padding-left: 5px;}
+.featured-collection .card:nth-child(2n+1) {clear: both;}
+}
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+        #featured-products-{{section.id}} {
+            margin-bottom: {{ section.settings.margin_bottom_tab }}px;
+        }
+    }
+
+  @media (min-width: 1200px) {
+    #featured-products-{{section.id}} {
+      margin-bottom: {{ margin_bottom }}px;
+    }
+  }	
+</style>
+
+{% schema %}
+  {
+    "name": "birthday-2020",
+	"class": "home-featured-products-sections",
+    "settings": [ 
+	  {
+		"type": "header",
+		"content": "Banner Image"
+      },
+	  {
+        "type" : "checkbox",
+        "id" : "display_banner",
+        "label" : "Display Banner",
+        "default" : false
+      }, 
+      {
+        "type": "select",
+        "id": "banner_is",
+        "label": "Banner is:",
+        "default": "left",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },              
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      }, 	  
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label" : "Select Image"
+      },
+      {
+        "type" : "text",
+        "id" : "banner_heading",
+        "label" : "Banner Heading",
+        "default" : "#CAMPAIGNS"
+      },
+      {
+        "type" : "text",
+        "id" : "font_size_banner_heading",
+        "label" : "Heading Font Size ",
+        "default" : "40px"
+      },
+      {
+        "type" : "color",
+        "id" : "color_banner_heading",
+        "label" : "Heading Color",
+        "default" : "#fff"
+      },
+	  {
+        "type" : "textarea",
+        "id" : "banner_sub_heading",
+        "label" : "Banner Sub Heading",
+        "default" : "Spring Summer’08"
+      },
+      {
+        "type" : "text",
+        "id" : "font_size_banner_sub_heading",
+        "label" : "Heading Font Size ",
+        "default" : "13px"
+      },
+      {
+        "type" : "color",
+        "id" : "color_banner_sub_heading",
+        "label" : "Heading Color",
+        "default" : "#fff"
+      },
+      {
+        "type" : "textarea",
+        "id" : "banner_des",
+        "label" : "Banner Description",
+        "default": "Phasellus lorem malesuada ligula pulvinar de cosmopolis"
+      },
+      {
+        "type" : "text",
+        "id" : "font_size_banner_des",
+        "label" : "Description Font Size",
+        "default" : "12px"
+      },
+      {
+        "type" : "color",
+        "id" : "color_banner_des",
+        "label" : "Description Color",
+        "default" : "#fff"
+      },
+      {
+        "type" : "text",
+        "id" : "banner_button",
+        "label" : "Button Banner",
+        "default" : "Shop Now"
+      },
+      {
+        "type" : "url",
+        "id" : "link",
+        "label" : "Banner Link"
+      },
+      {
+        "type" : "color",
+        "id" : "bg_banner_button",
+        "label" : "Background Button",
+        "default" : "#fff"
+      },
+      {
+        "type" : "color",
+        "id" : "border_banner_button",
+        "label" : "Border Button",
+        "default" : "#fff"
+      },
+      {
+        "type" : "color",
+        "id" : "color_banner_button",
+        "label" : "Button Color",
+        "default" : "#232323"
+      },
+
+	  {
+		"type": "header",
+		"content": "Featured Products"
+      },
+      {
+        "type": "text",
+        "id": "featured_products_title",
+        "label": "Title",
+        "default": "Trending Now"
+      },
+  	  {
+  		"type" : "textarea",
+  	    "id" : "featured_products_des",
+  		"label" : "Description"
+  	  },
+	  {
+        "type": "select",
+        "id": "title_style",
+        "label": "Title Style:",
+
+        "options": [
+          {
+            "value": "style_1",
+            "label": "Style 1" 
+          },
+		  { 
+            "value": "style_2",
+            "label": "Style 2" 
+          }          
+        ],
+        "default": "style_1"
+      },
+      {
+        "type": "collection",
+        "id": "show_slider_featured_collection",
+        "label": "Collection to use"
+      },
+      {
+        "type": "range",
+        "id": "slider_featured_limit_all",
+        "label": "Number of new products to show",
+        "min": 3,
+        "max": 20,
+        "step": 1,
+        "default": 10
+      },
+      {
+        "type" : "text",
+        "id" : "shop_now_button",
+        "label" : "shop now Banner",
+        "default" : "Shop Now"
+      },
+      {
+        "type" : "url",
+        "id" : "link1",
+        "label" : "shop now Link"
+      },
+      {
+        "type": "select",
+        "id": "collection_results_per_row1",
+        "label": "Products per row",
+        "options": [
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          },
+          {
+            "value": "5",
+            "label": "5"
+          },
+		  {
+            "value": "6",
+            "label": "6"
+          }
+        ],
+        "default": "5"
+      },
+	    {
+            "type": "header",
+            "content": "Margin Bottom:"
+        },
+        {
+            "type": "range",
+            "id": "margin_bottom_mb",
+            "label": "Mobile",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "margin_bottom_tab",
+            "label": "Tablet",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 40
+        },             
+        {
+            "type": "range",
+            "id": "margin_bottom",
+            "label": "Margin Bottom",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "default": 0
+        }	  
+	],
+	"presets": [
+      {
+        "name": "birthday-2020",
+        "category": "Collection"     
+      }
+    ]
+  }
+{% endschema %}
+
+

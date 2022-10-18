@@ -1,4 +1,26 @@
-{% if section.settings.blog_post != blank %}
+<div class="blog-template blog-template-default blog-page-info">
+  <div  class="page-top-sec">
+    <div class="container">
+      {% comment %}
+      {% include 'breadcrumb' %}
+      {% endcomment %}
+      <div class="page-header">
+        {% if current_tags %}    
+        <h2>
+          <a href="{{ blog.url }}">{% include 'multilang' with page_title %}</a> &raquo; {{ current_tags.first }}
+        </h2>
+        {% else %}    
+        <h2>
+          {% include 'multilang' with page_title %}
+        </h2>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="halo-blog-content">
+      <div class="row">
+        {% if section.settings.blog_post != blank %}
 {% assign limit = 12 %}
 {% else %}
 {% assign limit = 12 %}
@@ -18,7 +40,10 @@
   {% endif %}
 </div>
 {% endpaginate %}
-
+</div>      
+</div>
+</div>
+</div>
 
 <style>
   .blog-page-info{
@@ -33,7 +58,7 @@
     font-family: roboto;
   }
   .blog-page-info .homepage-blog-tab-sec{
-    padding:25px 0 40px; 
+    padding:25px 0 0px; 
   }
   .blog-page-info .list-blog{
     flex-wrap:wrap !important; 
@@ -103,7 +128,7 @@
 
 {% schema %}
 {
-"name": "Blog Default",
+"name": "blog-template",
 "class": "col-12 col-xl-12",
 "settings": [      
 {

@@ -24,7 +24,7 @@
             <div class="tooltip"> {{block.settings.description_band}} </div>
           <a title="{{ block.settings.title }}" href="{{ block.settings.link }}">
             {% if block.settings.image != blank %}
-            <img data-src="{{ block.settings.image }}" src="{{ block.settings.image | img_url : "200x" , format: 'pjpg'}}" alt="{{ block.settings.image.alt }}" class="lazyautosizes lazyloaded"/>
+            <img data-src="{{ block.settings.image }}" src="{{ block.settings.image | img_url : "200x" }}" alt="{{ block.settings.image.alt }}" class="lazyautosizes lazyloaded"/>
             {% else %}
             <div class="not_img">
               186 x 74px

@@ -26,7 +26,7 @@
   <div class="cart {% if not_in_cart %}disable{% endif %}">
   <input type="hidden" name="id" value="{{ productP.variants[0].id }}" />
   <input type="hidden" name="quantity" value="1" />
-  <button data-btn-addToCart class="btn add-to-cart-btn cartbutton add-to-cart-btnload" type="submit" data-form-id="#{{id}}-{{ productP.id }}" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{% endif %} onclick="myFunction6('{{productP.title}}',{{productP.id}},'{{product.variants[0].price | divided_by:100}}','{{productP.variants[0].compare_at_price}}','{{productP.variants[0].inventory_quantity}}','{{ productP |  img_url:"medium"}}');quoraPixel(); scq('Add to cart', 'pre_defined');">
+  <button data-btn-addToCart class="btn add-to-cart-btn cartbutton" type="submit" data-form-id="#{{id}}-{{ productP.id }}" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{% endif %} onclick="myFunction6('{{productP.title}}',{{productP.id}},'{{product.variants[0].price | divided_by:100}}','{{productP.variants[0].compare_at_price}}','{{productP.variants[0].inventory_quantity}}','{{ productP |  img_url:"medium"}}');quoraPixel(); scq('Add to cart', 'pre_defined');">
     {{ 'products.product.add_to_cart' | t }}
   </button>
   </div>

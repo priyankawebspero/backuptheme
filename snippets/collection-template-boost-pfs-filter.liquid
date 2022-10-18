@@ -6,8 +6,8 @@
   <div class="container collection_inner_content">
 	  <div class="halo-collection-content">
       <div class="row">
-        {% section 'sidebar-filter' %}
-        {% section 'collection-template-default' %}
+        {% include 'sidebar-filter' %}
+        {% include 'collection-template-default' %}
       </div>
         {% comment %}
         {% if settings.style_product_grid == 'style_product_grid_2' %}
@@ -18,6 +18,4 @@
         {% endcomment %}
     </div>
   </div>
-  
-  {% render 'collection_bottom_banner' %}
 </div>

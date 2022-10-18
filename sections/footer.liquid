@@ -80,19 +80,11 @@
               {% if linklists[footer_linklist].links.size > 0 %}
               <ul>
                 {% for link in linklists[footer_linklist].links %}
-                  {% if link.title contains 'Careers' %}
                 <li>
-                  <a  rel="nofollow" href="{{ link.url}}" title="{{ link.title }}" class="foot-link">
+                  <a href="{{ link.url}}" title="{{ link.title }}" class="foot-link">
                     {% include 'multilang' with link.title %}
                   </a>
                 </li>
-                 {% else %}
-                  <li>
-                  <a  href="{{ link.url}}" title="{{ link.title }}" class="foot-link">
-                    {% include 'multilang' with link.title %}
-                  </a>
-                </li>
-                {% endif %}
                 {% endfor %}
               </ul>
               {% endif %}
@@ -238,6 +230,7 @@
 <script async>
 $(window).scroll(function(){var e=$(window).scrollTop();e>=50?$(".site-header").addClass("stickyHeader"):$(".site-header").removeClass("stickyHeader")});
 </script>
+
 {% schema %}
 {
 "name": "Footer Default",

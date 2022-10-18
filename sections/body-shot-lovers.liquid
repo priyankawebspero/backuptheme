@@ -91,8 +91,8 @@
           <h3 class="box-title">
             <span class="title"> 
               {% include 'multilang' with section.settings.featured_products_title %}
-              {%- assign img_url = section.settings.image | img_url: 'master' , format: 'pjpg'-%}
-              {%- assign img_url_mobile = section.settings.image_mobile | img_url: 'large' , format: 'pjpg'-%}
+              {%- assign img_url = section.settings.image | img_url: 'master' -%}
+              {%- assign img_url_mobile = section.settings.image_mobile | img_url: 'large' -%}
               {% if section.settings.image != blank %}
               <img data-src="{{ img_url }}"
                    src="{{ img_url }}" alt="{{ section.settings.image.alt | default: shop.name }}" itemprop="logo"

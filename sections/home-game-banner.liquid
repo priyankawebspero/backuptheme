@@ -1,9 +1,9 @@
-<section class="home-game-banner-section text-center {{section.settings.banner-class}}" id="game-{{section.id}}">
-  {% if section.settings.link != blank %}<a href="{{ section.settings.link }}" class=""> {% endif %}
-    <img class="banner-image desktop-xs" data-src="{{ section.settings.banner-id | img_url: 'master' , format: 'pjpg'}}" src="{{ section.settings.banner-id | img_url: 'master' }}">
+<section class="home-game-banner-section text-center" id="game-{{section.id}}">
+  <a href="{{ section.settings.link }}" class="">
+    <img class="banner-image desktop-xs" data-src="{{ section.settings.banner-id | img_url: 'master' }}" src="{{ section.settings.banner-id | img_url: 'master' }}">
 
-    <img class="banner-image mobile-xs" data-src="{{ section.settings.image_mobile | img_url: 'master' , format: 'pjpg'}}" src="{{ section.settings.image_mobile | img_url: 'master' }}">
-    {% if section.settings.link != blank %}</a>{% endif %}
+    <img class="banner-image mobile-xs" data-src="{{ section.settings.image_mobile | img_url: 'master' }}" src="{{ section.settings.image_mobile | img_url: 'master' }}">
+  </a>
 </section>
 
 {% schema %}
@@ -25,10 +25,6 @@
 "id": "link",
 "label": "Link",
 "info": "Optional"
-},{
-"type": "text",
-"id": "banner-class",
-"label": "Class"
 }
 ], "presets": [
       {

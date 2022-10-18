@@ -12,12 +12,12 @@
 {% endfor %}
 {% if regimebanner_desk != blank %}
 <div class="product-desktop-img">
- <img src="{{ regimebanner_desk | img_url: 'master' , format: 'pjpg'}}" alt="{{ regimebanner_desk.alt | escape }}" class="lazyautosizes lazyload">
+ <img src="{{ regimebanner_desk | img_url: 'master' }}" alt="{{ regimebanner_desk.alt | escape }}" class="lazyautosizes lazyload">
 </div>
  {% endif %}
 {% if regimebanner_mob != blank %}
 <div class="product-mob-img">
- <img src="{{ regimebanner_mob | img_url: 'master' , format: 'pjpg'}}" alt="{{ regimebanner_mob.alt | escape }}" class="lazyautosizes lazyload">
+ <img src="{{ regimebanner_mob | img_url: 'master' }}" alt="{{ regimebanner_mob.alt | escape }}" class="lazyautosizes lazyload">
 </div>
  {% endif %}
 <div data-section-id="{{ section.id }}" data-section-type="product" id="ProductSection-{{ section.id }}" data-enable-history-state="true" data-collections-related="/collections/{{collection.handle}}?view=related">
@@ -25,7 +25,7 @@
     {%- assign current_variant = product.selected_or_first_available_variant -%}
     {% assign variantCount = sca_product_variantCount %}
     <div class="product-upper-section container-padd60">
-       {% include 'breadcrumb' %}
+      {% include 'breadcrumb' %}
       <div class="row product_top{% if section.settings.show_tab == 'horizontal' or section.settings.show_tab == 'horizontal_center' %} horizontal-tabs{% else %} vertical-tabs has-sticky-product-img{% endif %}">
          <div class="col-md-5 product-photos {% if product.tags contains 'birthday20' %} birthday20{% endif %} {% if product.tags contains 'birthday40' %} birthday40{% endif %} {% if product.tags contains 'birthday50' %} birthday50{% endif %} {% if product.tags contains 'Plum 999' %} plum_999{% endif %}" data-more-view-product>
           <div {% if section.settings.show_tab == 'vertical' %} data-sticky-product-img{% endif %} class="product-img-box{% if section.settings.style_moreview == 'horizontal' %} horizontal-moreview{% elsif section.settings.style_moreview == 'left_vertical' %} left-vertical-moreview vertical-moreview{% else %} right-vertical-moreview vertical-moreview{% endif %}{% if settings.product_image_border%} grid-item-border{% endif %}">
@@ -33,10 +33,10 @@
               <div class="product-photo-container p-slider-s">
                 {% for image in product.images %}
                 <div class="thumb filter-{{ image.alt | handle }}">
-                  <a data-zoom class="fancybox" rel="gallery1" href="{{ image | img_url: 'original' , format: 'pjpg'}}" data-fancybox="images">
-                    <img id="product-featured-image-{{image.id}}" src="{{ image | img_url: 'original' , format: 'pjpg'}}" alt="{{ image.alt | escape }}"
+                  <a data-zoom class="fancybox" rel="gallery1" href="{{ image | img_url: 'original' }}" data-fancybox="images">
+                    <img id="product-featured-image-{{image.id}}" src="{{ image | img_url: 'original' }}" alt="{{ image.alt | escape }}"
                          class="lazyload"
-                         data-src="{{ image | img_url: 'original' , format: 'pjpg'}}"
+                         data-src="{{ image | img_url: 'original' }}"
                          data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
                          data-aspectratio="{{ image | img_url: 'original' }}"
                          data-sizes="auto">
@@ -51,8 +51,8 @@
             <div class="p-slider-n" data-rows="5" data-vertical="{% if section.settings.style_moreview == 'horizontal' %}false{% else %}true{% endif %}">
               {% for image in product.images %}
               <div class="item filter-{{ image.alt | handle }}">
-                <a href="javascript:void(0)" data-image="{{ image.src | product_img_url: 'original' , format: 'pjpg'}}" data-zoom-image="{{ image.src | product_img_url: 'original' , format: 'pjpg'}}">
-                  <img src="{{ image.src | product_img_url: 'compact' , format: 'pjpg'}}" alt="{{ image.alt | escape }}" class="lazyautosizes lazyloaded">
+                <a href="javascript:void(0)" data-image="{{ image.src | product_img_url: 'original' }}" data-zoom-image="{{ image.src | product_img_url: 'original' }}">
+                  <img src="{{ image.src | product_img_url: 'compact' }}" alt="{{ image.alt | escape }}" class="lazyautosizes lazyloaded">
                 </a>
               </div>
               {% endfor %}
@@ -98,12 +98,7 @@
               <label>Available in: {{ Grammage }}</label>       
               {% endif %}
             </div>
-            </h1>      
-             {% if section.settings.dpl_customers_view %}
-            <div id="customers_view" data-customer-view="{{ section.settings.number_view }}">
-            <i class="fa fa-line-chart" aria-hidden="true"></i> currently in <label></label> carts
-            </div>
-          {% endif %}
+            </h1>            
           </div>
 
           <div class="product_form_desciption">       
@@ -118,98 +113,6 @@
             <div class="review_div">
             {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
             </div>
-            <div class="price_info_box mobile">
-            <div class="price-manufacturer">
-            <div class="price-review price-manufacturer1" style="display:block">
-                <div class="prices" style="display:block">
-                  
-                  <span class="mrp {% if compare_at_price_max == blank %}color_black{% endif %}">MRP</span>             
-                  {% if sca_compare_at_price > sca_price %}
-                  {% if compare_at_price_max != blank %}
-                  <span class="compare-price">
-                   {{ product.variants[0].compare_at_price | money }}
-                  </span>
-                  {% else %}
-                   <span class="compare-price">  {{ product.variants[0].compare_at_price | money }}</span>                
-                {% endif %}
-                <p class="now_at"><span class="price on-sale" itemprop="price">
-                    {{ product.variants[0].price | money }}
-                  </span>   
-                </p>
-                  
-                  
-                {% else %}
-                <span class="price" itemprop="price">{{ product.variants[0].price | money }}</span>
-                {% endif %}
-                  <!--        Information icon        -->
-              {% assign name_address_of_manufacturer = product.metafields.product['name address of manufacturer'] %}
-              {% if name_address_of_manufacturer != 0 and name_address_of_manufacturer != blank %}
-              <div class="tooltip price-manufacturer2">
-                <img class="lazyautosizes lazyload" data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/info-basic_ea3ba2.svg?v=1645702976" src="https://cdn.shopify.com/s/files/1/0390/2985/files/info-basic_ea3ba2.svg?v=1645702976" class="info-icon">
-                <span class="tooltiptext">
-
-                  <div class="manufacturer-box">
-                    <p class="manufact-text">Name & address of manufacturer</p>
-                    <p class="manufact-add">{{ name_address_of_manufacturer }}</p>
-                  </div>
-
-
-                  {% assign countries_of_origin = product.metafields.product['countries of origin'] %}
-                  {% if countries_of_origin != 0 and countries_of_origin != blank %}
-                  <div class="manufacturer-box">
-                    <p class="manufact-text">Country of origin</p>
-                    <p class="manufact-add">{{ countries_of_origin }}</p>
-                  </div>
-                  {% endif %}
-
-                  {% assign category = product.metafields.product['category'] %}
-                  {% if category != 0 and category != blank %}
-                  <div class="manufacturer-box">
-                    <p class="manufact-text">Category</p>
-                    <p class="manufact-add">{{ category }}</p>
-                  </div>
-                  {% endif %}
-
-                  {% assign number_of_items = product.metafields.product['number of items'] %}
-                  {% if number_of_items != 0 and number_of_items != blank %}
-                  <div class="manufacturer-box">
-                    <p class="manufact-text">No of items</p>
-                    <p class="manufact-add">{{ number_of_items }}</p>
-                  </div>
-                  {% endif %}
-
-                  {% assign expiry_date = product.metafields.product['expiry date'] %}
-                  {% if expiry_date != 0 and expiry_date != blank %}
-                  <div class="manufacturer-box">
-                    <p class="manufact-text">Best Before Date</p>
-                    <p class="manufact-add">{{ expiry_date }}</p>
-                  </div>
-                  {% endif %}
-
-                  {% assign dimension_of_product = product.metafields.product['dimension of product'] %}
-                  {% if dimension_of_product != 0 and dimension_of_product != blank %}
-                  <div class="manufacturer-box">
-                    <p class="manufact-text">Product dimensions</p>
-                    <p class="manufact-add">{{ dimension_of_product }}</p>
-                  </div>
-                  {% endif %}
-                  {% comment %}
-                  {% if Grammage != 0 and Grammage != blank %}
-                  <div class="manufacturer-box">
-                    <p class="manufact-text">Grammage </p>    
-                    <p class="manufact-add">{{ Grammage }}</p>
-                  </div>
-                  {% endif %}
-                  {% endcomment %}
-                </span>
-              </div>
-              {% endif %}
-              <!--        Information icon        -->
-                  <span class="span_taxes"> (inclusive of taxes)</span>
-               </div>
-              </div>
-             </div>  
-          </div>
             {% if variantCount > 1  or product.variants[0].title != 'Default Title'  %}
             <div class="quantity_varients{% for option in product.options %}{% if option contains 'Color' %} color{% endif %}{% endfor %}">
                {% for option in product.options %}
@@ -222,7 +125,7 @@
                 {% unless variant.metafields.secomapp.freegifts %}
                 {% unless variant.title contains '(Freegifts)' %}
                 {% if variant.available %}
-                <option data-imge="{% if variant.image.size != blank %}{{ variant.image.src | product_img_url: 'compact' , format: 'pjpg'}}{% else  %}{{ product.featured_image.src | product_img_url: 'compact' }}{% endif %}" {% if variant == current_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+                <option data-imge="{% if variant.image.size != blank %}{{ variant.image.src | product_img_url: 'compact' }}{% else  %}{{ product.featured_image.src | product_img_url: 'compact' }}{% endif %}" {% if variant == current_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
                   {{ variant.title }}
                 </option>
                 {% else %}
@@ -395,24 +298,24 @@
         <div class='cart_wish gb'>
           <div class="groups-btn visible-xs">           
               {% if current_variant.inventory_quantity>0 %}
-              <input data-btn-addToCart type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{%endif%} id="product-add-to-cart" value="{{ 'products.product.add_to_cart' | t }}" data-form-id="#add-to-cart-form" onclick="scq('Add to cart', 'pre_defined'); snaptr('track', 'ADD_CART');">
+              <input data-btn-addToCart type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{%endif%} id="product-add-to-cart" value="{{ 'products.product.add_to_cart' | t }}" data-form-id="#add-to-cart-form" onclick="scq('Add to cart', 'pre_defined');">
               {% elsif current_variant.inventory_management != "shopify"  %}  
-               <input data-btn-addToCart type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{%endif%} id="product-add-to-cart" value="{{ 'products.product.add_to_cart' | t }}" data-form-id="#add-to-cart-form" onclick="scq('Add to cart', 'pre_defined'); snaptr('track', 'ADD_CART');">
+               <input data-btn-addToCart type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{%endif%} id="product-add-to-cart" value="{{ 'products.product.add_to_cart' | t }}" data-form-id="#add-to-cart-form" onclick="scq('Add to cart', 'pre_defined');">
               {% else %}
-              <input type="submit" name="add" class="btn cart" {% if settings.enable_multilang %}data-translate="products.product.unavailable"{%endif%} id="product-add-to-cart" disabled value="{{ 'products.product.unavailable' | t }}" onclick="scq('Add to cart', 'pre_defined'); snaptr('track', 'ADD_CART');">
-              {% endif %}     
-{% comment %}
+              <input type="submit" name="add" class="btn cart" {% if settings.enable_multilang %}data-translate="products.product.unavailable"{%endif%} id="product-add-to-cart" disabled value="{{ 'products.product.unavailable' | t }}" onclick="scq('Add to cart', 'pre_defined');">
+              {% endif %}           
+              {% include 'iwish_v2' with 'iwishproduct' %}
+              {% include 'wishlist-product' %}
+             <div class="share icons">
+                {% include 'share' %}
+            </div>
               {% if section.settings.enable_payment_button and current_variant.available %}
               {{ form | payment_button }}
               {% endif %}
-            {% endcomment %}
-              {% include 'iwish_v2' with 'iwishproduct' %}
-              {% include 'wishlist-product' %}
-            
           </div>
 
 
-        </div> 
+        </div>  
 
           <div class="section-3">
            <div class="delivery-time-infos">
@@ -1006,26 +909,6 @@ $("#product-selectors-option-0 option").each(function(i,el){var color=$(this).va
 "content" : "Customers viewing"
 },
 {
-"type" : "checkbox",
-"id" : "dpl_customers_view",
-"label" : "Display Currently In cart",
-"default" : false
-},
-{
-"type" : "text",
-"id" : "title_view",
-"label" : "Title",
-"default" : "are already in cart."
-},
-{
-"type" : "textarea",
-"id" : "number_view",
-"label" : "Number of customers viewing",
-"default" : "683, 600, 659, 711, 714, 785, 793, 765, 650, 638, 699, 712, 646, 710, 625, 800, 850, 818",
-"info" : "Please enter the number"
-},
-
-{
 "type": "radio",
 "id": "show_desc",
 "label": "Short description",
@@ -1050,30 +933,6 @@ $("#product-selectors-option-0 option").each(function(i,el){var color=$(this).va
 "type": "checkbox",
 "id": "display_subtotal",
 "label": "Display Subtotal?",
-"default": true
-},
-{
-"type": "checkbox",
-"id": "display_product_detail_tag",
-"label": "Display Tags?",
-"default": true
-},
-{
-"type": "checkbox",
-"id": "display_product_detail_share",
-"label": "Display Product Share?",
-"default": true
-},
-{
-"type": "text",
-"id": "share_text",
-"label": "Share Text",
-"default": "Share"
-},
-{
-"type": "checkbox",
-"id": "display_trust_img",
-"label": "Display Trust Image?",
 "default": true
 },
 {
@@ -1153,12 +1012,6 @@ $("#product-selectors-option-0 option").each(function(i,el){var color=$(this).va
 "type": "image_picker",
 "id": "image_melt",
 "label" : "Display Image For Melt Section"
-},
-{
-"type" : "text",
-"id" : "melt_text",
-"label" : "Add Text To Melt Section",
-"default" : "Add Text Here"
 },
 {
 "type": "header",

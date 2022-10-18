@@ -29,7 +29,7 @@
             <a href="{{ block.settings.link }}" class="animate-scale">
               {% if block.settings.image != blank %}
             
-              {%- assign img_url = block.settings.image | img_url: 'original', crop: 'center' , format: 'pjpg'-%}
+              {%- assign img_url = block.settings.image | img_url: 'original', crop: 'center' -%}
 
               <img data-src="{{ img_url }}"
                    src="https:{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"

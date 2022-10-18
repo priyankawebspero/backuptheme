@@ -3,8 +3,8 @@
     {% case block.type %}
     {% when 'image-slide' %}
     <div class="sale_banner" id="section-{{block.id}}">
-      <img class="desktop" src="{{ block.settings.top_banner_image_desktop | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.top_banner_image_desktop.alt}}">
-      <img class="mobile" src="{{ block.settings.top_banner_image_mobile | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.top_banner_image_mobile.alt}}">
+      <img class="desktop" src="{{ block.settings.top_banner_image_desktop | img_url: 'master' }}"  alt="{{block.settings.top_banner_image_desktop.alt}}">
+      <img class="mobile" src="{{ block.settings.top_banner_image_mobile | img_url: 'master' }}"  alt="{{block.settings.top_banner_image_mobile.alt}}">
     </div>
     {% when 'product-slide' %} 
     <div class="sale-products" id="section-{{block.id}}">
@@ -73,20 +73,20 @@
               <div class="products-grid row four-items" data-row="3">
                 {%if block.settings.first_desk != 'blank' %}
                 <div class="grid-item col-6 col-md-4 small--one-half">
-                  <img class="desktop" src="{{ block.settings.first_desk | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.first_desk.alt}}">
-                  <img class="mobile" src="{{ block.settings.first_mob | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.first_mob.alt}}">
+                  <img class="desktop" src="{{ block.settings.first_desk | img_url: 'master' }}"  alt="{{block.settings.first_desk.alt}}">
+                  <img class="mobile" src="{{ block.settings.first_mob | img_url: 'master' }}"  alt="{{block.settings.first_mob.alt}}">
                 </div>
                 {% endif %}
                 {%if block.settings.sec_desk != 'blank' %}
                 <div class="grid-item col-6 col-md-4 small--one-half">
-                  <img class="desktop" src="{{ block.settings.sec_desk | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.sec_desk.alt}}">
-                  <img class="mobile" src="{{ block.settings.sec_mob | img_url: 'master', format: 'pjpg' }}"  alt="{{block.settings.sec_mob.alt}}">
+                  <img class="desktop" src="{{ block.settings.sec_desk | img_url: 'master' }}"  alt="{{block.settings.sec_desk.alt}}">
+                  <img class="mobile" src="{{ block.settings.sec_mob | img_url: 'master' }}"  alt="{{block.settings.sec_mob.alt}}">
                 </div>
                  {% endif %}
                {%if block.settings.third_desk != 'blank' %}
                 <div class="grid-item col-6 col-md-4 small--one-half">
-                  <img class="desktop" src="{{ block.settings.third_desk | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.third_desk.alt}}">
-                  <img class="mobile" src="{{ block.settings.third_mob | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.third_mob.alt}}">
+                  <img class="desktop" src="{{ block.settings.third_desk | img_url: 'master' }}"  alt="{{block.settings.third_desk.alt}}">
+                  <img class="mobile" src="{{ block.settings.third_mob | img_url: 'master' }}"  alt="{{block.settings.third_mob.alt}}">
                 </div>
                 {% endif %}
               </div>

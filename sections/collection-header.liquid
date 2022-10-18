@@ -2,8 +2,8 @@
   {% if section.settings.display_collection_image %}
 
   {% if collection.image %}
-  {%- assign img_url = collection.image | img_url: 'master' , format: 'pjpg'-%}
-  {%- assign img_url_mobile = collection.image | img_url: '768x' , format: 'pjpg'-%}
+  {%- assign img_url = collection.image | img_url: 'master' -%}
+  {%- assign img_url_mobile = collection.image | img_url: '768x' -%}
 
   {% elsif collection.description contains 'img' %}
   {%- assign img_url = collection.description | split: '<img' | last | split: '>' | first -%}
@@ -11,18 +11,11 @@
 
   {% endif %}
 
-
   <div class="collection-image">
     <div class="collection-desktop-img">
       {% if collection.image or collection.description contains 'img' or section.settings.collection_image != blank  %}
       {% if collection.image %}
-      {% if collection.metafields.custom.collection_banner_link %}
-          <a href="{{collection.metafields.custom.collection_banner_link}}">
-      {% endif %}      
-              <img data-src="{{ img_url }}" src="{{ img_url }}" alt="{{ collection_title }}" class="lazyautosizes lazyloaded" data-sizes="auto"/>
-      {% if collection.metafields.custom.collection_banner_link %}
-          </a>    
-      {% endif %}
+      <img data-src="{{ img_url }}" src="{{ img_url }}" alt="{{ collection_title }}" class="lazyautosizes lazyloaded" data-sizes="auto"/>
       {% else %}
       {% include 'mobile-collection-image', id:collection.handle %}
       {% endif %}
@@ -40,9 +33,7 @@
    <div class="collection-mobile-img {% if collection_mobile_banner != 0 and collection_mobile_banner != blank %}{% else %}no-meta-image{% endif %}{% if section.settings.collection_image != blank %}style="height:0;"{% else %}style="height:0;"{% endif %}  " {% if collection_mobile_banner != 0 and collection_mobile_banner != blank %}{% else %}style="background-image:url('{{ img_url_mobile }}')"{% endif %} >     
 
      {% if collection_mobile_banner != 0 and collection_mobile_banner != blank %}
-     {% if collection.metafields.custom.collection_banner_link %}<a href="{{collection.metafields.custom.collection_banner_link}}">{% endif %}
       <img data-src="{{ collection_mobile_banner }}" src="{{ collection_mobile_banner }}" class="lazyautosizes lazyloaded">
-      {% if collection.metafields.custom.collection_banner_link %}</a>{% endif %}
       {% endif %}
     </div>    
   </div>
@@ -94,7 +85,7 @@
 
 {% schema %}
 {
-"name": "Collection Header",
+"name": "collection-header",
 "settings": [
 {
 "type": "checkbox",

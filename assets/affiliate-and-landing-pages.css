@@ -14,6 +14,7 @@ div#shopify-section-affiliate-offers #affiliate_top_banner {
     background: #EBE0F0;
     padding: 60px 0;
 }
+
 .affiliate-products h4 {
     font-family: serifabold;
     font-size: 60px;
@@ -428,14 +429,14 @@ a.range-link {
 }
 
 .deal-of-the-day .pro_shop_now {
-    background: #5e0d8b;
+    background: #fff;
      font-size: 20px;
     border-radius: 7px;
     padding: 15px;
     min-width: 195px;
     font-weight: 700;
     display: inline-block;
-    color: #fff;
+    color: #5e0d8b;
 }
 
 .deal-of-the-day-banner {
@@ -524,14 +525,12 @@ a.pro_shop_feature {
     background: #5e0d8b;
     font-size: 20px;
     border-radius: 7px;
-    padding: 15px;
+    padding: 12px;
     min-width: 155px;
     font-weight: 700;
     display: inline-block;
     color: #fff;
     margin-top: 20px;
-    font-family: Segoe Pro;
-    min-width: 195px;
 }
 /* .review-inner_des {
     text-align: center;
@@ -653,10 +652,14 @@ a.pro_shop_feature {
     padding: 0!important;
 }
 
-
-    img.mobile {
-        display: none !important;
-    }
+.sub-page-banner-section img.banner-image.desktop-xs {
+    display: block !important;
+}
+.sub-page-banner-section img.banner-image.teaser_mobile {
+    display: none !important;
+}
+  
+img.mobile {display: none !important;}
   
   .sale-products .featured-products .widget-product .slick-arrow {
     top: -moz-calc(50% - 35px);
@@ -753,7 +756,7 @@ a.pro_shop_feature {
     
     
     .affiliate-products h4 {
-    font-size: 35px;
+    font-size: 30px;
     padding-bottom: 25px;
 }
     
@@ -771,7 +774,7 @@ a.pro_shop_feature {
 }
     
  .customer_review_affiliates h4 {
-    font-size: 35px;
+    font-size: 30px;
     padding-bottom: 15px;
 }
     
@@ -854,9 +857,14 @@ a.pro_shop_feature {
     padding-left: 0 !important;
 }
 
-  a.pro_shop_feature {
-    font-size: 18px;
-    padding: 13px;
+  .sale-products .text-center {
+    font-size: 30px;
+    letter-spacing: 0;
+}
+
+  .deal-of-the-day h3 {
+    font-size: 30px;
+    letter-spacing: 0;
 }
     
   }
@@ -900,7 +908,7 @@ a.pro_shop_feature {
 }
   
 .sale-products .text-center {
-    font-size: 35px;
+    font-size: 30px;
  
 }
   
@@ -1054,7 +1062,7 @@ a.pro_shop_feature {
 }
    
 .sale-products .product-item .product-bottom, .deal-of-the-day .product-item .product-bottom {
-    padding: 5px 5px 15px;
+    padding: 5px 5px 0px 5px;
     justify-content: flex-start;
     min-height: 185px;
 }

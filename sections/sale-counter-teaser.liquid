@@ -19,7 +19,7 @@
   </div>
     <div class="row" id="flash-sale">
       <div class="col-12 col-md-12 col-lg-12 text-center">
-        <div class="counter_text"><!--<span class="side_text">Flash Sale!</span> --> <p id="demo"></p><!--<span class="side_text"> Hurry up!</span>--></div>
+        <div class="counter_text"><span class="side_text">Flash Sale!</span> <p id="demo"></p><span class="side_text"> Hurry up!</span></div>
       </div>
     </div>
     
@@ -37,7 +37,7 @@
           </div>
           </div>
     </div>
-     {% if section.settings.display_bottom %} 
+    
       <div class="bottom_sec">
         {% if section.settings.bottom_image != blank %}            
         {%- assign img_url_gift = section.settings.bottom_image | img_url: 'master'-%}
@@ -57,58 +57,6 @@
         </div>   
         {% endif %}   
       </div>
-{% endif %}
-
-{% if section.settings.display_product %}  
-<div class="widget-title no-des">  
-<h3 class="box-title">{{ section.settings.heading_text }}</h3>
-</div>
-    <div class="sale-products">
-      <div class="container">
-        <div class="row">
-          <div class="col-12  featured-products" data-featured-products-slide> 
-            <div class="widget-product">
-              <div class="products-grid row four-items" data-row="4">
-                {% for product in collections[section.settings.show_slider_featured_collection].products limit:16%}
-                <div class="grid-item col-6 col-md-4 col-lg-3 small--one-half">
-                  {% include 'product-grid-item' %}
-                </div>
-                {% endfor %}
-              </div>
-            </div>
-            <div class="text-center">
-              <a class="pro_shop_feature" href="/collections/{{section.settings.show_slider_featured_collection}}" class="btn">view more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-{% endif %}
-{% if section.settings.display_product1 %}  
-<div class="widget-title no-des">  
-<h3 class="box-title">{{ section.settings.heading_text1 }}</h3>
-</div>
-    <div class="sale-products">
-      <div class="container">
-        <div class="row">
-          <div class="col-12  featured-products" data-featured-products-slide> 
-            <div class="widget-product">
-              <div class="products-grid row four-items" data-row="4">
-                {% for product in collections[section.settings.show_slider_featured_collection1].products limit:16%}
-                <div class="grid-item col-6 col-md-4 col-lg-3 small--one-half">
-                  {% include 'product-grid-item' %}
-                </div>
-                {% endfor %}
-              </div>
-            </div>
-            <div class="text-center">
-              <a class="pro_shop_feature" href="/collections/{{section.settings.show_slider_featured_collection1}}" class="btn">view more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-{% endif %}
   </div>
 
 <style>
@@ -291,12 +239,6 @@
 "id": "form_text_head",
 "label": "Enter Text For Form",
 "default": "Allow notification access and enter your details below to get Exclusive access to B2G2 SALE"
-},
-{
-  "type": "checkbox",
-  "id": "display_bottom",
-  "label": "Display Footer image",
-  "default": true
 },{
 "type": "image_picker",
 "id": "bottom_image",
@@ -313,39 +255,7 @@
 "max": 100,
 "step": 1,
 "default": 0
-},
-{
-  "type": "checkbox",
-  "id": "display_product",
-  "label": "Display Product Carousel",
-  "default": true
-},
-{
-  "type": "text",
-  "id": "heading_text",
-  "label": "Heading"
-},
-{
-  "type": "collection",
-  "id": "show_slider_featured_collection",
-  "label": "Collection product"
-},
-{
-  "type": "checkbox",
-  "id": "display_product1",
-  "label": "Display Product Carousel",
-  "default": true
-},
-{
-  "type": "text",
-  "id": "heading_text1",
-  "label": "Heading"
-},
-{
-  "type": "collection",
-  "id": "show_slider_featured_collection1",
-  "label": "Collection product"
-}
+}	
 ]
 }
 {% endschema %}

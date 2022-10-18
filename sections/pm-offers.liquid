@@ -1,10 +1,18 @@
-<div class="offers">
+{{ 'slick.min.js' | asset_url | script_tag }}
+{{ 'affiliate-and-landing-pages.css' | asset_url | stylesheet_tag }} 
+<div class="page-tpl">
+  <div class="container-fuild">
+    <div class="offers">
     {% for block in section.blocks %}
     {% case block.type %}
     {% when 'image-slide' %}
     <div class="sale_banner" id="section-{{block.id}}">
-      <img class="desktop" src="{{ block.settings.top_banner_image_desktop | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.top_banner_image_desktop.alt}}">
-      <img class="mobile" src="{{ block.settings.top_banner_image_mobile | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.top_banner_image_mobile.alt}}">
+      <img class="desktop" src="{{ block.settings.top_banner_image_desktop | img_url: 'master' }}"  alt="{{block.settings.top_banner_image_desktop.alt}}">
+      {% if block.settings.top_banner_image_mobile != blank %}
+      <img class="mobile" src="{{ block.settings.top_banner_image_mobile | img_url: 'master' }}"  alt="{{block.settings.top_banner_image_mobile.alt}}">
+        {% else %}
+      <img class="mobile" src="{{ block.settings.top_banner_image_desktop | img_url: 'master' }}"  alt="{{block.settings.top_banner_image_mobile.alt}}">
+        {% endif %}
     </div>
     {% when 'product-slide' %} 
     <div class="sale-products" id="section-{{block.id}}">
@@ -98,7 +106,8 @@
     {% endfor %}
  
 </div>
-
+</div>
+</div>
 {% schema %}
 {
   "name": "Offers Section",

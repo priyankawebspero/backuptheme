@@ -3,7 +3,7 @@ var boostPFSFilterConfig = {
 	general: {
       limit: boostPFSConfig.custom.products_per_page,
       // Optional
-      loadProductFirst: false,
+      loadProductFirst: true,
       showLimitList: '12,16,20,24,50',
       filterTreeMobileStyle: 'style1',
       stickyFilterOnDesktop: true,
@@ -54,11 +54,11 @@ var boostPFSTemplate = {
 												'{{itemVendor}}' +
 												'{{itemCompare}}' +
 											'</div>' +
-											'<h3 class="collection_product_title"><a class="product-title" href="{{itemUrl}}">{{itemTitleMultilang}}</a></h3>' +
+											'<a class="product-title" href="{{itemUrl}}">{{itemTitleMultilang}}</a>' +
 											'{{shades}}' +
 											'{{sizes}}' +
 											'<div class="price-box">{{itemPrice}}</div>' +
-                                            '{{itemReviews}}' +
+  											'{{itemReviews}}' +
                                             '{{itemWishlist}}' +
                                             '{{itemAddToCart}}' +
 											'<a href="{{itemUrl}}" style="text-decoration: none;"></a>' +
@@ -67,7 +67,7 @@ var boostPFSTemplate = {
 										// Product Detail
 										'<div class="product-details">' +
 											'{{itemVendor}}' +
-											'<h3 class="collection_product_title"><a class="product-title" href="{{itemUrl}}">{{itemTitleMultilang}}</a></h3>' +
+											'<a class="product-title" href="{{itemUrl}}">{{itemTitleMultilang}}</a>' +
 											'{{itemReview}}' +
 											'<div class="short-description">{{itemDescription}}</div>' +
 											'<div class="price-box">{{itemPrice}}</div>' +
@@ -106,7 +106,7 @@ var boostPFSTemplate = {
 											'<div class="wrapper-compare">' +
 												'{{itemColorSwatches}}' + 
 											'</div>' +
-											'<h3 class="collection_product_title"><a class="product-title" href="{{itemUrl}}">{{itemTitleMultilang}}</a></h3>' +
+											'<a class="product-title" href="{{itemUrl}}">{{itemTitleMultilang}}</a>' +
 											'<div class="price-box">{{itemPrice}}</div>' +
 											'<div class="wrapper-size">' + 
 												'{{itemSizeSwatches}}' +
@@ -117,7 +117,7 @@ var boostPFSTemplate = {
 										// Product Detail
 										'<div class="product-details">' +
 											'{{itemVendor}}' +
-											'<h3 class="collection_product_title"><a class="product-title" href="{{itemUrl}}">{{itemTitleMultilang}}</a></h3>' +
+											'<a class="product-title" href="{{itemUrl}}">{{itemTitleMultilang}}</a>' +
 											'{{itemReview}}' +
 											'<div class="short-description">{{itemDescription}}</div>' +
 											'<div class="price-box">{{itemPrice}}</div>' +
@@ -140,7 +140,7 @@ var boostPFSTemplate = {
 								'</div>' +
 
 								'<div class="product-details">' +
-									'<h3 class="collection_product_title"><a class="product-title" href="{{itemUrl}}">{{itemTitle}}</a></h3>' +
+									'<a class="product-title" href="{{itemUrl}}">{{itemTitle}}</a>' +
 									'{{itemVendor}}' +
 									'{{itemReview}}' +
 									'<div class="short-description">{{itemDescription}}</div>' +
@@ -189,7 +189,6 @@ var boostPFSTemplate = {
 		// Displaying price base on the policy of Shopify, have to multiple by 100
 		var soldOut = !data.available; // Check a product is out of stock
 		var onSale = data.compare_at_price_min > data.price_min; // Check a product is on sale
-        var tags = data.tags; // Check a product is on sale
 		var priceVaries = data.price_min != data.price_max; // Check a product has many prices
 		// Get First Variant (selected_or_first_available_variant)
 		var firstVariant = data['variants'][0];
@@ -274,58 +273,27 @@ var boostPFSTemplate = {
 		itemHtml = itemHtml.replace(/{{itemFlipImageUrl}}/g, itemFlipImageUrl);
 
 		// Add Label
-		// var itemLabelsHtml = '';
-		// if (onSale || soldOut) {
-  //         var percentSale = (firstVariant.compare_at_price - firstVariant.price) * 100 / firstVariant.compare_at_price;
-  //         if (percentSale == 0  || percentSale == 'Infinity') {
+		var itemLabelsHtml = '';
+		if (onSale || soldOut) {
+          var percentSale = (firstVariant.compare_at_price - firstVariant.price) * 100 / firstVariant.compare_at_price;
+          if (percentSale == 0  || percentSale == 'Infinity') {
           
-  //         } else {
-		// 	itemLabelsHtml += '<div class="product-label two">';
-  //           if (onSale) {
-  //             if (boostPFSThemeConfig.custom.type_label_sale == 'label_sale') {
-  //               itemLabelsHtml += '<strong class="label sale-label">' + boostPFSConfig.label.sale + '</strong>';
-  //             } else {                	
-  //               itemLabelsHtml += '<img src="https://cdn.shopify.com/s/files/1/0390/2985/files/sale_new.png?v=1579003407">';
-  //               itemLabelsHtml += '<strong class="label sale-label">' + Math.floor(percentSale) + '% Off</strong>';
-  //             }
-  //           }
-  //         }
-		// 	if (soldOut) {
-		// 		itemLabelsHtml += '<strong class="label sold-out-label">' + boostPFSConfig.label.sold_out + '</strong>';
-		// 	}
-		// 	itemLabelsHtml += '</div>';
-		// }
-		// itemHtml = itemHtml.replace(/{{itemLabels}}/g, itemLabelsHtml);
-
-         var itemLabelsHtml = '';
-
-        var percentSale = (firstVariant.compare_at_price - firstVariant.price) * 100 / firstVariant.compare_at_price;
-        
-        if (onSale) {
-          itemLabelsHtml += '<div class="product-label two">';
-          if (boostPFSThemeConfig.custom.type_label_sale == 'label_sale') {
-            itemLabelsHtml += '<strong class="label sale-label">' + boostPFSConfig.label.sale + '</strong>';
-          } else {                	
-            itemLabelsHtml += '<img src="https://cdn.shopify.com/s/files/1/0390/2985/files/sale_new.png?v=1579003407">';
-            itemLabelsHtml += '<strong class="label sale-label">' + Math.floor(percentSale) + '% Off</strong>';
+          } else {
+			itemLabelsHtml += '<div class="product-label two">';
+            if (onSale) {
+              if (boostPFSThemeConfig.custom.type_label_sale == 'label_sale') {
+                itemLabelsHtml += '<strong class="label sale-label">' + boostPFSConfig.label.sale + '</strong>';
+              } else {                	
+                itemLabelsHtml += '<img src="https://cdn.shopify.com/s/files/1/0390/2985/files/sale_new.png?v=1579003407">';
+                itemLabelsHtml += '<strong class="label sale-label">' + Math.floor(percentSale) + '% Off</strong>';
+              }
+            }
           }
-          itemLabelsHtml += '</div>';
-        }
-		else {
-            if(data.tags.includes('bestseller') || data.tags.includes('Bestseller')) {
-              itemLabelsHtml += '<span class="discount-tag-col"> bestseller </span>';
-            }
-            if(data.tags.includes('recommended') || data.tags.includes('Recommended')) {
-              itemLabelsHtml += '<span class="discount-tag-col"> recommended </span>';
-            }
-            if(data.tags.includes('just launched') || data.tags.includes('Just launched')) {
-              itemLabelsHtml += '<span class="discount-tag-col"> just launched </span>';
-            }
-        }
-        if (soldOut) {
-		  itemLabelsHtml += '<strong class="label sold-out-label">' + boostPFSConfig.label.sold_out + '</strong>';
-    	}	
-		
+			if (soldOut) {
+				itemLabelsHtml += '<strong class="label sold-out-label">' + boostPFSConfig.label.sold_out + '</strong>';
+			}
+			itemLabelsHtml += '</div>';
+		}
 		itemHtml = itemHtml.replace(/{{itemLabels}}/g, itemLabelsHtml);
 
 		// Add Price
@@ -386,7 +354,7 @@ var boostPFSTemplate = {
 		if (boostPFSConfig.custom.display_button) {
 			var itemAddToCartHtml = '<div class="action"><form action="/cart/add" method="post" class="variants grid-product-form--{{itemId}}" data-id="product-actions-{{itemId}}"  id="grid-product-form--{{itemId}}" enctype="multipart/form-data" style="padding:0px;">';
 			if (soldOut) {
-				itemAddToCartHtml += '<input class="btn add-to-cart-btn add-to-cart-btnload" type="submit" value="' + boostPFSConfig.label.unavailable + '" disabled="disabled"/>';
+				itemAddToCartHtml += '<input class="btn add-to-cart-btn" type="submit" value="' + boostPFSConfig.label.unavailable + '" disabled="disabled"/>';
 			} else {
 				if (data.variants.length > 1) {
 					itemAddToCartHtml += '<input class="btn" type="button" onclick="window.location.href=\'{{itemUrl}}\'" value="' + boostPFSConfig.label.select_options + '" />';
@@ -394,7 +362,7 @@ var boostPFSTemplate = {
                   	itemAddToCartHtml += '<div class="cart">'
 					itemAddToCartHtml += '<input type="hidden" name="id" value="' + firstVariant.id + '" />';
                     itemAddToCartHtml +=  '<input type="hidden" name="quantity" value="1" tabindex="0" />';
-					itemAddToCartHtml += '<button data-btn-addToCart class="btn add-to-cart-btn add-to-cart-btnload cartbutton" type="submit" data-form-id="#grid-product-form--'+ data.id +'" data-translate="products.product.add_to_cart" onclick="myFunction6(\'' + data.title + '\', ' + data.id + ', \'' + data.variants[0].price + '\', \'' + data.variants[0].compare_at_price + '\', \'' + data.variants[0].inventory_quantity + '\', \'' + itemThumbUrl + '\');quoraPixel(); scq(\'Add to cart\', \'pre_defined\');">' + boostPFSConfig.label.add_to_cart + '</button>';
+					itemAddToCartHtml += '<button data-btn-addToCart class="btn add-to-cart-btn cartbutton" type="submit" data-form-id="#grid-product-form--'+ data.id +'" data-translate="products.product.add_to_cart" onclick="myFunction6(\'' + data.title + '\', ' + data.id + ', \'' + data.variants[0].price + '\', \'' + data.variants[0].compare_at_price + '\', \'' + data.variants[0].inventory_quantity + '\', \'' + itemThumbUrl + '\');quoraPixel(); scq(\'Add to cart\', \'pre_defined\');">' + boostPFSConfig.label.add_to_cart + '</button>';
 					itemAddToCartHtml += '</div>';
                 }
 			}
@@ -579,14 +547,14 @@ var boostPFSTemplate = {
 		// Add to cart
 		var itemAddToCartHtml = '<form action="/cart/add" method="post" class="variants" id="product-actions-{{itemId}}" enctype="multipart/form-data" style="padding:0px;">';
 		if (soldOut) {
-			itemAddToCartHtml += '<input class="btn add-to-cart-btn add-to-cart-btnload" type="submit" value="' + boostPFSConfig.label.unavailable + '" disabled="disabled"/>';
+			itemAddToCartHtml += '<input class="btn add-to-cart-btn" type="submit" value="' + boostPFSConfig.label.unavailable + '" disabled="disabled"/>';
 		} else {
 			if (data.variants.length > 1) {
 				itemAddToCartHtml += '<input class="btn" type="button" onclick="window.location.href=\'{{itemUrl}}\'" value="' + boostPFSConfig.label.select_options + '" />';
 			} else {
 				itemAddToCartHtml += '<input type="hidden" name="id" value="' + firstVariant.id + '" />';
                 itemAddToCartHtml +=  '<input type="hidden" name="quantity" value="1" />';
-				itemAddToCartHtml += '<input class="btn add-to-cart-btn add-to-cart-btnload" data-form-id="#product-actions-{{itemId}}" type="submit" value="' + boostPFSConfig.label.add_to_cart + '" />';
+				itemAddToCartHtml += '<input class="btn add-to-cart-btn" data-form-id="#product-actions-{{itemId}}" type="submit" value="' + boostPFSConfig.label.add_to_cart + '" />';
 			}
 		}
 		itemAddToCartHtml += '</form>';
@@ -1028,7 +996,6 @@ var boostPFSTemplate = {
       }else if($('#build-your-own-regime-exfoliate').length){
       }else if($('#build-your-own-regime-toner').length){
       }else if($('#build-your-own-regime-facewash').length){
-      }else if($('#flat-50').length){
       }
       else{
         $.each(productsIn, function(key, templateProduct) {
@@ -1053,13 +1020,6 @@ var boostPFSTemplate = {
             //console.log(productID);
             //console.log('data-id="['+ productID +']"');
             $('div[data-id="'+ productID +'"] .product-item').addClass('birthday20');
-          }
-            if(jQuery.inArray("Plum 999", myarray) !== -1)
-          {
-            let productID = templateProduct.id;
-            //console.log(productID);
-            //console.log('data-id="['+ productID +']"');
-            $('div[data-id="'+ productID +'"] .product-item').addClass('plum_999');
           }
            if(jQuery.inArray("birthday40", myarray) !== -1)
           {
@@ -1120,27 +1080,6 @@ var boostPFSTemplate = {
         }
         return price;
     }
-
-    /* start-boost-custom */
-    /* #boost-139047: remove button not working when navigating back from product page */    
-    jQ(document).on('click', '.btn-remove-item', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        var productIdNew = jQ(this).parents('form').attr('data-id');
-        var productIdE = jQ(this).attr('data-id');
-        productIdE = $.trim(productIdE);
-        productIdE = productIdE.match(/\d+/g);
-        Shopify.removeItem(productIdE, function (cart) {
-          bcElla.doUpdateDropdownCart(cart);
-        });
-         
-        productIdNew = productIdNew.replace("product-actions-","");
-        console.log(productIdNew);
-        $('.variants.grid-product-form--'+productIdNew+' .qty-group.newtab').remove();
-        $('.variants.grid-product-form--'+productIdNew+' .cart').show();
-        $('.variants.grid-product-form--'+productIdNew+' .cart').removeClass('disable');
-      });
-     /* end-boost-custom */
 
     
 })();

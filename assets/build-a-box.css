@@ -112,4 +112,9 @@ img.desktop {
     order: 1;
 }
 
+.colx-box-swap .row h3 {
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
 }

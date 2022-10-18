@@ -1,13 +1,3 @@
-{% assign total_saving = 0 %} 
-{%- for item in cart.items -%} 
-  {% if item.variant.compare_at_price > item.variant.price %}
-    {% assign saving = item.variant.compare_at_price | minus: item.variant.price %}
-    {% if item.quantity > 1 %}
-      {% assign saving = saving | times: item.quantity %}
-    {% endif %}
-      {% assign total_saving = saving | plus: total_saving %}
-    {% endif %}
-{% endfor %}
 {% include 'breadcrumb' %}
 <header class="page-header">
   {% if cart.item_count > 0 %}
@@ -38,7 +28,7 @@
         <div class="details">
           <div class="cart-thumb">
             <a class="product-img {% if item.product.tags contains 'Plum 999' %} plum_999{% endif %}  {% if item.product.tags contains 'Lipstick' %} Lipstick{% endif %}" href="{%if item.variant.metafields.secomapp.freegifts%}{{ item.product.url }}{%else%}{{ item.url | within: collections.all }}{%endif%}">
-              <img data-src="{{ item | img_url: '160x' , format: 'pjpg'}}" src="{{ item | img_url: '160x' , format: 'pjpg'}}"  alt="{{ item.title | remove: '/ Default Title'| remove: 'Default Title' | remove: '/ Default' | remove: 'Default' | replace: '(Freegifts)', ''  | escape }}" class="lazyautosizes lazyloaded"/>
+              <img data-src="{{ item | img_url: '160x' }}" src="{{ item | img_url: '160x' }}"  alt="{{ item.title | remove: '/ Default Title'| remove: 'Default Title' | remove: '/ Default' | remove: 'Default' | replace: '(Freegifts)', ''  | escape }}" class="lazyautosizes lazyloaded"/>
             </a>
           </div>
 
@@ -174,7 +164,7 @@
 
         {% include 'multilang' with settings.secure_text %}
       </div>
-      <img data-src="{{ settings.img_trust | img_url: '800x'  , format: 'pjpg'}}" src="{{ settings.img_trust | img_url: '800x' , format: 'pjpg' }}" class="lazyautosizes lazyloaded">
+      <img data-src="{{ settings.img_trust | img_url: '800x'  }}" src="{{ settings.img_trust | img_url: '800x'  }}" class="lazyautosizes lazyloaded">
     </div>
     {% endif %}
   </div>
@@ -184,33 +174,7 @@
       {{ 'cart.label.order_summary' | t }}
     </div>
     <div class="right-col-infos">
-      <div class="sub total">
-        <span class="label">
-          <span {% if settings.enable_multilang %}data-translate="cart.label.total"{% endif %}>
-            Subtotal:
-          </span>
-        </span>
-        <span class="price">
-
-          <span class="saso-cart-original-total"><span class='hulkapps-cart-original-total'>{{ total_saving | plus:cart.total_price | money }}</span></span>
-          <span class="saso-cart-total"></span>
-
-        </span>
-      </div>
-     <div class="total_saving">
-        <span class="label">
-          <span {% if settings.enable_multilang %}data-translate="cart.label.total"{% endif %}>
-            Savings:
-          </span>
-        </span>
-        <span class="price">
-
-          <span class="saso-cart-original-total"><span class='hulkapps-cart-original-total'>- {{ total_saving | money }}</span></span>
-          <span class="saso-cart-total"></span>
-
-        </span>
-      </div>
-     <div class="total">
+      <div class="total">
         <span class="label">
           <span {% if settings.enable_multilang %}data-translate="cart.label.total"{% endif %}>
             {{ 'cart.label.total' | t }}:
@@ -283,7 +247,7 @@ Your surprise gifts have been added to your order 🥳
         {% if cart.total_price >=1400000 %} 
         <input class="btn btn-checkout disable" type="submit"  name="checkout" {% if settings.enable_multilang %}data-translate="cart.general.button_checkout"{% endif %} value="{% if settings.btnTxt%}{{settings.gk-merchant-btnText}}{%else%}{{ 'cart.general.button_checkout' | t }}{%endif%}" onclick="window.location='/checkout'">
         {% else %}
-        <input class="btn btn-checkout checkout_btn_se" type="submit"  name="checkout" {% if settings.enable_multilang %}data-translate="cart.general.button_checkout"{% endif %} value="{% if settings.btnTxt%}{{settings.gk-merchant-btnText}}{%else%}Pay Via COD/Cards/Netbanking{%endif%}" onclick="window.location='/checkout'">
+        <input class="btn btn-checkout checkout_btn_se" type="submit"  name="checkout" {% if settings.enable_multilang %}data-translate="cart.general.button_checkout"{% endif %} value="{% if settings.btnTxt%}{{settings.gk-merchant-btnText}}{%else%}PAY VIA CREDIT/DEBIT CARDS/OTHERS{%endif%}" onclick="window.location='/checkout'">
         {% endif %}
 
         {% if additional_checkout_buttons %}
@@ -344,7 +308,6 @@ Your surprise gifts have been added to your order 🥳
     width:100%;
     font-weight:bold;
   }
- 
 </style>
 
 

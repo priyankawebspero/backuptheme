@@ -94,10 +94,6 @@ h3.sidebar-heading::after{content:"\f107";font-family:FontAwesome;float:right;fo
 .cart-show div#shopify-section-sidebar-filter .sidebar .filter_area{z-index:1}
 .collection-template .grid-item .inner.product-item:before{display:none!important}
 .collection-template .grid-item .inner.product-item{position:relative}
-.template-collection div#back-top {
-    display:none !important;
-}
-
 @media (min-width: 768px) {
 .products-grid .grid-item.col5{-webkit-box-flex:0;-ms-flex:0 0 33.33%;flex:0 0 33.33%;max-width:33.33%}
 }

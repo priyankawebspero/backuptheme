@@ -1,0 +1,482 @@
+<style>
+
+
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Staya in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      top:12%;
+    }
+    header.page-header h2 {
+        color: #5c248c;
+    }
+      div#text-error2 {
+        padding-top: 10px;
+        margin-bottom:10px;
+    }
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+      .cancel-order-outer input[type=text], .cancel-order-oute select, .cancel-order-oute textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    
+    .cancel-order-oute label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
+    
+    .cancel-order-oute input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+    
+    .cancel-order-oute input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    /*.container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }*/
+    
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+    }
+    
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+      
+      div#text-error1 {
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+      
+      
+    /*--------------order-cancel-page---------------*/
+    
+    #cancel-order .main-content input[type=text] {
+        background: none !important;
+        border-radius: 5px !important;
+        border: 1px solid #ccc;
+        color: #000;
+        padding: 10px 15px;
+       max-width: 500px;
+      width: 92%;
+    }
+    select#cancellation_reason {
+        z-index: 0;
+    }
+    #cancel-order .main-content select {
+        background: none !important;
+          border-radius: 5px !important;
+        border: 1px solid #ccc;
+        color: #000;
+        padding: 10px 15px;
+        width: 92%;
+        max-width: 500px;
+      background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/drop_select_icons.png) !important;
+        background-repeat: no-repeat !important;
+        background-position: 96% 18px !important;
+        padding-right: 45px;
+    }
+    
+    #cancel-order .main-content textarea {
+        background: none !important;
+          border-radius: 5px !important;
+        border: 1px solid #ccc;
+        color: #000;
+        padding: 10px 15px;
+       max-width: 500px;
+      width: 92%;
+      height:118px;
+    }
+    
+    #cancel-order main.main-content button.btn {
+      padding:12px 15px;
+        text-transform: lowercase;
+       border-radius: 5px !important;
+    }
+    button.btn.loading img {
+        width: 20px;
+        margin-left: 7px;
+        display: inline-block !important;
+    }
+    
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+      #cancel-order main.main-content button.btn {
+        margin-left: 0 !important;
+        width: 100%;
+        margin-right: 0 !important;
+        float: none !important;
+    }
+    }
+    </style>
+    
+    
+    <header class="page-header">
+          <h2>
+            {% include 'multilang' with page.title %}
+          </h2>      
+        </header>
+    
+    <!-- Trigger/Open The Modal -->
+    <!--button id="myBtn">Open Modal</button-->
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    
+      <!-- Modal content -->
+      <div class="modal-content" style="text-align:center">
+        
+        <p>We're sorry you want to cancel your order! If there is anything we can do to help make your experience smoother, please do reach out to our customer service team.</p>
+        <p>Are you sure you want to cancel?</p>
+        <p>
+          <button class="btn" style="background:rgb(92,16,140);float:left;border-radius:40px;color:white;margin-left:25%" onclick="closeModel()">Changed my mind</button>
+          <button class="btn" style="background:rgb(92,16,140);float:right;border-radius:40px;color:white;margin-right:7%"  onclick="cancelOrder()">Yes, i want to cancel the order</button>
+        </p>
+      </div>
+    
+    </div>
+    <div id="myModalFulfilled" class="modal">
+    
+      <!-- Modal content -->
+      <div class="modal-content" style="text-align:center">
+        
+        <p>We're sorry you want to cancel your order! If there is anything we can do to help make your experience better, do let us know. We will attempt to cancel this at our end, and will reach out to you with confirmation once we do.</p>
+        <p>Are you sure you want to proceed?</p>
+        <p>
+          <button class="btn" style="background:rgb(92,16,140);float:left;border-radius:40px;color:white;margin-left:18%" onclick="closeModel1()">Changed my mind</button>
+          <button class="btn" id="submit_bt" style="background:rgb(92,16,140);float:right;border-radius:40px;color:white;margin-right:7%" onclick="submit2()">Yes, attempt cancellation <img id="loading-image" src="https://cdn.shopify.com/s/files/1/0390/2985/files/loading_112729a5-01d5-4013-a39e-11375d9d4d6a.gif?v=1633414770" alt="Loading..." width="100px" style="display:none"></button>
+        </p>
+      </div>
+    
+    </div>
+    <div style="display:flex;justify-content:center">
+      <!--lable style="font-size:20px;color:rgb(92, 16, 140)" for="order_id" >Order Id</lable-->
+      <br>
+        <input id="order_id" style="background:#f8f8f8;border-radius:20px" type="text" value="" name="Order_id" id="first_name" placeholder="Enter order id">
+      <!--lable style="font-size:20px;color:rgb(92, 16, 140)" for="cno">Enter Contact Number</lable-->
+      <br>
+      </div>
+    <div style="display:flex;justify-content:center;color:red;font-weight:bold" id="text-error">
+            
+        </div>
+      <br>
+    <div style="display:flex;justify-content:center">
+        <input type="text" style="background:#f8f8f8;border-radius:20px;" id="cno" name="Contact No." placeholder="Enter shipping contact number">
+      <br>
+      </div>
+      <br> 
+    <p style="text-align: center;padding-bottom: 6px;color: #5c108c;font-weight: 600;">please select your reason to cancel</p>
+    <div style="display:flex;justify-content:center">
+        <select size="1" name="cancellation_reason" id="cancellation_reason" style="background:#f8f8f8;border-radius:20px;color: grey;">
+                    <option value="placing a new order">placing a new order</option>
+                    <option value="changed my mind">changed my mind</option>
+                    <option value="didn't like the offers/discount">didn't like the offers/discount</option>
+                    <option value="ordered my plums from another website">ordered my plums from somewhere else</option>
+                    <option value="freebies not added to the cart">freebies not added to the cart</option>
+                    <option value="order not dispatched">delayed dispatch/ delivery</option>
+                    <option value="Other">Other</option>
+                </select>
+      </div>
+     <br>
+    <div style="display:flex;justify-content:center" id="hidden_feild" class="hidden">
+      <textarea name="other" id="other" class="hidden" placeholder="please enter you reason to cancel" required  maxlength="180"></textarea><br>
+      </div>
+    
+    <div style="display:flex;justify-content:center;color: #5c248c;font-weight: 500;" id="text-error1">
+            
+        </div>
+    <div style="display:flex;justify-content:center;color:red;font-weight:bold" id="text-error2">
+            
+        </div>
+    
+    <div style="display:flex;justify-content:center">
+      <button class="btn" style="background:rgb(92, 16, 140);border-radius:5px;color:white" onclick="submit()">Cancel</button>
+    </div>
+    
+    <style>
+     .hidden {
+        display: none !important;
+    } 
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       $('#other').val('placing a new order');
+       $('#cancellation_reason').on("change", function() {
+        if ($(this).val() == 'Other'){
+        $('#other').val('');
+        $('#other').removeClass('hidden');
+        $('#hidden_feild').removeClass('hidden');      
+        }
+        else{
+         $('#other').addClass('hidden');
+         $("#other").val($(this).val());
+         $('#hidden_feild').addClass('hidden'); 
+        }
+        
+      });
+    
+    
+    
+    
+    
+      // Get the modal
+      var modal = document.getElementById("myModal");
+      var modal1 = document.getElementById("myModalFulfilled");
+    
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+    
+      // Get the <span> element that closes the modal
+      var span = document.getElementById("close");
+    
+      // When the user clicks the button, open the modal 
+      function submit2(){
+        var btn_sub = document.getElementById("submit_bt");
+        btn_sub.classList.add("loading");
+        var order_id=$('#order_id').val()
+        var cno=$('#cno').val()
+        var status=financial_status;
+        var p_status=payment_status
+        var cancel_reason = $('#other').val()
+        console.log(cancel_reason);
+        //alert(order_id+cno+status+p_status)
+        $.ajax({
+            url:"https://order.plumgoodness.com/updateSheet/"+order_id+"/"+cno+"/"+p_status+"/"+status+"/"+cancel_reason,
+            contentType: "application/json",
+            dataType: 'json',
+      
+            success: function(data){         
+              
+              var id=$('#order_id').val()
+              var cono=$('#cno').val()
+              if(data.message=='Excel sheet updated succesfully'){
+                      
+                      $('#order_id').val('');
+                      $('#cno').val('')
+                      //alert("Cancellation Ticket is successfully generated")
+                      modal1.style.display = "none";
+                      btn_sub.classList.remove("loading");
+                      $('#text-error').text('')
+                      $('#text-error1').text('')
+                      $('#text-error2').text('')
+                      $('#text-error2').text('Cancellation Ticket is successfully generated')
+    
+                  
+              }
+              else if(data.message=='Order alredy canceled'){
+                //alert(data.status)
+                modal1.style.display = "none";
+                btn_sub.classList.remove("loading");
+                $('#text-error').text('')
+                $('#text-error1').text('')
+                $('#text-error2').text('')
+                $('#text-error2').text('Cancellation Ticket is already generated')
+              }
+              else
+                  modal1.style.display = "none";
+              btn_sub.classList.remove("loading");
+              
+            },
+              error:function(){
+              $('#text-error').text('')
+                $('#text-error1').text('')
+                $('#text-error2').text('ops, looks like something went wrong! Please double check your order ID & contact number and try again.')
+            $('#text-error').text('Please Enter Valid Order Number')
+            }
+        });
+      }
+      
+      var financial_status='';
+      var payment_status='';
+      var email_id='';
+      var user_name='';
+      function submit() {
+        var order_id=$('#order_id').val()
+        var cno=$('#cno').val()
+        var cancel_reason = $('#other').val()
+        
+        if(order_id=='' && cno==''){
+          
+          $('#text-error').text('')
+                $('#text-error1').text('')
+                $('#text-error2').text('')
+            $('#text-error2').text('ops, looks like something went wrong! Please double check your order ID & contact number and try again.')
+            return
+        }
+        else if(order_id=='' && cno!=''){
+          $('#text-error').text('')
+                $('#text-error1').text('')
+                $('#text-error2').text('')
+            $('#text-error2').text('ops, looks like something went wrong! Please double check your order ID & contact number and try again.')
+            return
+        }
+        else if(order_id!='' && cno==''){
+          $('#text-error').text('')
+                $('#text-error1').text('')
+                $('#text-error2').text('')
+            $('#text-error2').text('ops, looks like something went wrong! Please double check your order ID & contact number and try again.')
+            return
+        }
+        else if(order_id=='' && cno==''){
+          $('#text-error').text('')
+                $('#text-error1').text('')
+                $('#text-error2').text('')
+            $('#text-error2').text('ops, looks like something went wrong! Please double check your order ID & contact number and try again.')
+            return
+        }
+    
+        else{
+        $.ajax({
+            url:"https://order.plumgoodness.com/order/verifyDetails/"+order_id+"/"+cno ,
+            contentType: "application/json",
+            dataType: 'json',
+      
+            success: function(data){
+              financial_status=data.financial_status;
+              payment_status=data.status
+              email_id=data.email
+              user_name=data.name
+    //           alert(payment_status)
+    //           alert(financial_status)
+              if(data.status=='unfulfilled'){
+                  
+                //alert(financial_status)
+                modal1.style.display = "block";
+              }
+              else if(data.status=='fulfilled'){
+                  
+                //alert(financial_status)
+                $('#order_id').val('');
+                $('#cno').val('')
+                $('#text-error').text('')
+                $('#text-error1').text('')
+                $('#text-error2').text('')
+                $('#text-error1').html('Your order is dispatched. If you want to cancel this order, talk to our support on &nbsp; <a style="color: #5c248c;font-weight: bold;" href="mailto:hello@plumgoodness.com"> hello@plumgoodness.com</a>') 
+              }
+              else if(data.status=='Not Valid Order Number'){
+                //alert(data.status)
+                $('#order_id').val('');
+                $('#cno').val('')
+                $('#text-error').text('')
+                $('#text-error1').text('')
+                $('#text-error2').text('')
+                $('#text-error1').text('Already Cancelled or Not a Valid Order Number')
+              }
+              else if(data.status=='Not authorized'){
+                $('#order_id').val('');
+                $('#cno').val('')
+                $('#text-error').text('')
+                $('#text-error1').text('')
+                $('#text-error2').text('')
+                $('#text-error2').text('ops, looks like something went wrong! Please double check your order ID & contact number and try again.')
+              }
+              else if(data.status=='Already Cancelled'){
+                $('#order_id').val('');
+                $('#cno').val('')
+                $('#text-error').text('')
+                $('#text-error1').text('')
+                $('#text-error2').text('')
+                $('#text-error2').text('Already Cancelled')
+              }
+              else
+                  modal.style.display = "block";
+              
+            },
+              error:function(){
+              $('#text-error').text('')
+                $('#text-error1').text('')
+                $('#text-error2').text('ops, looks like something went wrong! Please double check your order ID & contact number and try again.')
+            $('#text-error').text('Please Enter Valid Order Number')
+            }
+        });
+      }
+        
+      }
+    
+      function closeModel(){
+          modal.style.display = "none";
+      }
+      function closeModel1(){
+          modal1.style.display = "none";
+      }
+      function cancelOrder(){
+          var order_id=$('#order_id').val()
+        var cno=$('#cno').val()
+        var phoneno = /^\d{10}$/;
+        //alert(order_id+""+cno)
+        
+        
+      }
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+{% schema %}
+{
+"name": "cancel-order",
+"settings": [
+]
+}
+{% endschema %}    

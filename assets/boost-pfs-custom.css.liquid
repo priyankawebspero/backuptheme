@@ -102,7 +102,7 @@
 .grid-item .inner.product-item .inner-top{width:100%}
 .grid-item .inner.product-item .price-box:before{content:"";width:70px;height:2px;background:#5c0f8b;display:block;margin:0 auto 10px;bottom:0;left:0;right:0}
 .inner.product-item .price-box{font-size:18px;font-weight:500;margin-top:5px;margin-bottom:5px}
-.inner.product-item .btn{background:#5e0d8b!important;color:#fff!important;font-size:18px;border-radius:5px;padding:10px 15px;min-width:inherit;font-weight:700;min-height:inherit;width:auto;box-shadow:none;margin-top:7px;text-transform:lowercase!important;min-width:165px;margin-bottom:0}
+.inner.product-item .btn{border:none;background:#5e0d8b!important;color:#fff!important;font-size:18px;border-radius:5px;padding:10px 15px;min-width:inherit;font-weight:700;min-height:inherit;width:auto;box-shadow:none;margin-top:7px;text-transform:lowercase!important;min-width:165px;margin-bottom:0}
 .product-item .product-bottom{text-align:center;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-moz-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;flex-direction:column;width:100%}
 .inner.product-item .btn:hover{color:#fff!important;background:#8901bd!important}
 .product-item a.product-title{width:100%}
@@ -201,7 +201,7 @@ div#shopify-section-sidebar-filter .sidebar .filter_area .sidebar-filter.boost{p
 div#shopify-section-sidebar-filter .sidebar .filter_area .close-sidebar.close{display:none!important}
 }
 @media (min-width: 769px) and (max-width:991px) {
-.collection-template div#shopify-section-sidebar-filter{width:33%;max-width:33%!important}
+.collection-template div#shopify-section-sidebar-filter{width:33%;}
 .collection-template div#shopify-section-collection-template-default{width:67%!important;max-width:67%!important}
 .collection-template .products-grid .grid-item.col5{-ms-flex:0 0 50%!important;flex:0 0 50%!important;max-width:50%!important}
 }
@@ -212,8 +212,8 @@ div#shopify-section-sidebar-filter .sidebar .sorting_order .boost-pfs-filter-too
 .products-grid .grid-item{margin-bottom:30px}
 }
 @media (min-width: 1400px) {
-.products-grid .grid-item{margin-bottom:40px;padding-left:20px;padding-right:20px}
-.product-collection.products-grid.row{margin-right:-20px;margin-left:0}
+.products-grid .grid-item{margin-bottom:40px;padding-left:25px;padding-right:25px}
+.product-collection.products-grid.row{margin-right:-25px;margin-left:0}
 }
 @media (max-width: 1199px) {
 .translate-overlay .sidebar{z-index:1;position:relative}
@@ -409,7 +409,23 @@ div[data-id="6663979597884"]{display:none}
     min-height: inherit;
 }
 
+@media (max-width: 769px){
+
+.boost-pfs-filter-left-col {
+    padding-bottom: 0 !important;
+}
+
+}
+
 @media (max-width: 767px){
+div#shopify-section-sidebar-filter .sidebar .filter_area .sidebar-filter.boost .boost-pfs-filter-tree-v {
+    overflow: scroll;
+    height: 100%;
+    max-height: calc(100vh - 200px) !important;
+    padding-bottom: 20px;
+    border: none;
+}
+  
 .template-collection .product-item .action {
     margin-bottom: 0;
     margin-top: 0;
@@ -523,316 +539,3 @@ body#kritika-khurana h1.collection_title, body#shreya-jain h1.collection_title, 
 body#gunjan-chandra h1.collection_title, body#riddhi-chakraborty h1.collection_title, body#amanpreet-hayer h1.collection_title, body#avani-jain h1.collection_title, body#nancy-lun h1.collection_title {
     display: none;
 }
-
-
-/*-----------collecttion-blog-css----*/
-
-div#shopify-section-collection-related-blogs {
-    width: 100%;
-}
-
-.related-blogs {
-    padding: 30px 0 50px;
-}
-
-.related-blogs h3 {
-    text-align: center;
-    padding: 20px 0;
-    text-transform: lowercase;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #5e0c8c;
-    font-weight: 400;
-    font-family: 'serifabold';
-    font-size: 50px;
-}
-
-.related-blogs .related.blog {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-  align-items: center;
-}
-
-.related-blogs .related.blog .image {
-    float: left;
-    width: 53%;
-    padding: 0 15px;
-  margin-bottom: 20px;
-}
-.related-blogs .related.blog .blog_upper_cltion {
-    float: left;
-    width: 47%;
-    padding: 25px 35px;
-  margin-bottom: 20px;
-}
-.related-blogs .related.blog .blog_upper_cltion .excert {
-    padding: 15px 0;
-}
-
-.blog_upper_cltion a {
-    background: #5b0c8b!important;
-    padding: 10px 25px;
-    color: #fff;
-    display: inline-block;
-    margin-top: 10px;
-    border-radius: 5px;
-    text-transform: capitalize;
-    text-decoration: none !important;
-}
-
-.blog_upper_cltion a:hover {
-    color: #fff!important;
-    background: #8901bd!important;
-}
-
-.blog_upper_cltion h4.title {
-    color: #5b0c8b;
-    font-weight: 600;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.boost-pfs-filter-tree-v .boost-pfs-filter-option .boost-pfs-filter-option-content .boost-pfs-filter-option-content-inner {
-    margin-top: 0;
-}
-
-.container.collection_inner_content {
-    max-width: 1200px;
-}
-
-@media only screen and (max-width:1100px){
-  .related-blogs .related.blog .blog_upper_cltion {
-    padding: 25px 15px;
-}
-}
-
-@media only screen and (max-width:849px){
- .related-blogs .related.blog .image {
-    width: 100%;
-}
-.related-blogs .related.blog .blog_upper_cltion {
-    padding: 25px 15px;
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-.related-blogs {
-    padding: 10px 0 50px;
-}
-.related-blogs h3 {
-    margin-bottom: 5px;
-    font-size: 35px;
-}
-
-.related-blogs .related.blog .image img {
-    width: 100%;
-}
-  
-}
-
-@media only screen and (max-width:769px){
-
-div#shopify-section-sidebar-filter {
-    padding-bottom: 0;
-}
-.shopify-section.boost-pfs-filter-left-col.boost-pfs-filter-stick, #shopify-section-sidebar-filter.shopify-section.boost-pfs-filter-left-col.boost-pfs-filter-absolute {
-    top: 155px !important;
-}
-
-}
-
-@media only screen and (max-width:767px){
-.template-collection .main-content h1 {
-    padding-top: 10px;
-}
-
-.collection_header {
-    padding-bottom: 14px;
-}
-
-.sidebar .filter_area .boost-pfs-filter-option-category .boost-pfs-filter-option-content .boost-pfs-filter-option-content-inner ul {
-    justify-content: center;
-}
-div#shopify-section-sidebar-filter .sidebar .filter_area .sidebar-filter.boost .boost-pfs-filter-tree-v {
-    overflow: scroll;
-    height: 100%;
-    max-height: calc(100vh - 200px) !important;
-  padding-bottom: 20px;
-}
-
-.boost-pfs-filter-option.boost-pfs-filter-has-scrollbar .boost-pfs-filter-option-content .boost-pfs-filter-option-content-inner {
-    width: 100%;
-}
-  
-}
-
-@media only screen and (max-width:485px){
-#boost-pfs-filter-tree {
-    top: 200px!important;
-}
-}
-@media (min-width: 768px) {
-  div#shopify-section-sidebar-filter .sidebar {
-      max-height: calc(100vh - 150px);
-      overflow: auto;
-  }
-}
-
-
-/*---scroll-var--css---*/
-
-div#shopify-section-sidebar-filter .sidebar::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
-	background-color: #F5F5F5;
-   border-radius: 10px 10px 0 0;
-}
-
-div#shopify-section-sidebar-filter .sidebar::-webkit-scrollbar
-{
-	width: 5px;
-	background-color: #F5F5F5;
-  border-radius: 10px 10px 0 0;
-}
-
-div#shopify-section-sidebar-filter .sidebar::-webkit-scrollbar-thumb
-{
-	background-color: #cbcbcb;
-   border-radius: 10px 10px 0 0;
-}
-
-/*----------product-share-button---------*/
-.product-shop .share.icons span.share {
-    font-style: normal;
-    padding-bottom: 0;
-    padding-right: 10px;
-    font-weight: 600;
-}
-
-.product-shop .share.icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0;
-}
-
-span.discount-tag-col {
-    position: absolute;
-    top: 0;
-    left: 10px;
-    background: #5c0f8b;
-    color: #fff;
-    padding: 6px 10px 5px;
-    line-height: normal;
-    margin-top: 10px;
-    margin-right: 10px;
-    font-size: 12px;
-    border-radius: 3px;
-  z-index: 1;
-      text-transform: capitalize;
-}
-
-
-/*----------currently-cart-custom-css-----*/
-
-div#customers_view label {
-    color: #4c722d;
-    font-size: 16px;
-    margin-bottom: 0 !important;
-    line-height: 1;
-    vertical-align: middle;
-    padding-right: 5px;
-    font-weight: 700;
-  padding-left: 5px;
-}
-
-
-div#customers_view i {
-    color: #4c722d;
-    padding: 0 5px 0 0;
-    font-size: 19px;
-  margin-right: 0 !important;
-}
-
-
-div#customers_view {
-    font-size: 16px;
-    color: #4c722d;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-
-/*-----remove-header-title----------*/
-#chetali-chadha .collection-wrapper.page-header, #deepika-joshi .collection-wrapper.page-header  {
-    display: none !important;
-}
-
-#shweta-vijay .collection-wrapper.page-header, #jovita-george .collection-wrapper.page-header  {
-     display: none !important;
-}
-
-#shreya-jain .collection-wrapper.page-header, #kritika-khurana .collection-wrapper.page-header  {
-     display: none !important;
-}
-
-#ananaya-pandey .collection-wrapper.page-header, #rashmika-mandanna .collection-wrapper.page-header  {
-     display: none !important;
-}
-
-#mithila-palkar .collection-wrapper.page-header{
-     display: none !important;
-}
-
-.main-content img.desktop {
-    margin: 40px 0;
-}
-
-.main-content img.mobile {
-    margin: 40px 0;
-}
-
-span.discount-tag-col {
-    top: -15px;
-    left: -15px;
-  margin-top: 0;
-    margin-right: 0;
-  padding: 4px 10px 5px;
-}
-
-@media only screen and (min-width:768px){
-.main-content img.mobile {
-    display: none;
-}
-  
-}
-
-@media only screen and (max-width:767px){
-.main-content img.desktop {
-    display: none !important;
-}
-
-.halo-collection-content .infinite-scrolling {
-    margin-bottom: 0;
-}
-  
-}
-
-@media only screen and (max-width:540px){
-span.discount-tag-col {
-    left: -5px;
-  top: -3px;
-}
-}
-
-

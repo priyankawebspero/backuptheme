@@ -29,19 +29,19 @@
       });
     });
 
-  //   window.onload=function(){
-  //    $('#slider-promo-wrap').show();
-  //    $('.header-promo-banner-slider').slick({
-  //     dots:true,
-  //     autoplay:true,
-  //     arrows:true,
-  //     prevArrow:'<button type="button" class="slick-prev"></button>',
-  //     nextArrow:'<button type="button" class="slick-next"></button>',
-  //     slidesToShow:1,
-  //     slidesToScroll:1
-  //   });
+    window.onload=function(){
+     $('#slider-promo-wrap').show();
+     $('.header-promo-banner-slider').slick({
+      dots:true,
+      autoplay:true,
+      arrows:true,
+      prevArrow:'<button type="button" class="slick-prev"></button>',
+      nextArrow:'<button type="button" class="slick-next"></button>',
+      slidesToShow:1,
+      slidesToScroll:1
+    });
    
-  // };
+  };
 
     $(document).ready(function(){  
       // tabbed content
@@ -97,13 +97,4 @@
 {% endif %}
 <script >
   $(document).ready(function(){var o=$("#accept-cookies");o.show(),"closed"==$.cookie("cookieMessage")&&o.remove(),o.find("[data-accept-cookie]").on("click",function(e){e.preventDefault(),o.remove(),$.cookie("cookieMessage","closed",{expires:1,path:"/"})})});
- $('.col-footer-outer a').each(function()
-    		{
-    		   var reg_exp = new RegExp('/' + window.location.host + '/');
-    		   if (!reg_exp.test(this.href))
-    		   {
-    		     // External Link Found  
-    		     $(this).attr('rel','nofollow');
-    		   }
-    		});
 </script>

@@ -21,7 +21,7 @@
                        <div class="img-box-ratio">
                             {% if block.settings.image != blank %}
                             
-                            {%- assign img_url = block.settings.image | img_url: '340x', format: 'pjpg' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+                            {%- assign img_url = block.settings.image | img_url: '340x'-%}
 
                             <img data-src="{{ img_url }}"
                                 src="https:{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"
@@ -241,7 +241,7 @@
     ],
     "presets": [
       {
-        "name": "Affiliate CRG Slider",
+        "name": "Bodywash Slider",
         "category": "Advanced layout",
         "blocks": [
           {

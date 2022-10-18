@@ -24,7 +24,7 @@
         <div class="column-banner-inner">
           <div class="img-box">
             <a href="{{ section.settings.link }}">
-              {%- assign img_url = section.settings.image | img_url: '800x', format: 'pjpg' -%}
+              {%- assign img_url = section.settings.image | img_url: '800x' -%}
               {% if section.settings.image != blank %}
               <img data-src="{{ img_url }}"
                    src="{{ img_url }}" alt="{{ section.settings.image.alt | default: shop.name }}" itemprop="logo"

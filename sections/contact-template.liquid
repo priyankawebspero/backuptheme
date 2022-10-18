@@ -12,14 +12,11 @@ Google Map
 {% endcomment %}
 <style>
   /*--------------------------------------------------contact-us-page--------------------------------------------*/
-
-  .page-contact .container {
-    max-width: 1200px;
-}
   .contact-banner{display:flex; max-width:100%;}
-  .small-banner{display:flex; align-item:center; justify-content:center; flex:0 0 100%; padding:50px 0 25px 0; text-align:center; line-height:100%; margin:0;}
+  .small-banner{display:flex; align-item:center; justify-content:center; flex:0 0 100%; padding:50px 0; text-align:center; line-height:100%; margin:0;}
   .small-banner h2 {
     color: #5e0d8d;
+    font-family: Segoe Pro;
     font-weight: 400;
     font-size: 52px;
     margin-bottom: 0;
@@ -31,7 +28,7 @@ Google Map
   .contact-grid{padding:50px 0;}
   .contact-grid .text-wrap{margin-bottom:40px;}
 
-  .contact-grid .text-wrap h4{color:#5e0d8d;  font-weight:600; font-size:22px; margin:0 0 5px; display:block;}
+  .contact-grid .text-wrap h4{color:#5e0d8d;  font-family: Segoe Pro; font-weight:400; font-size:22px; margin:0 0 5px; display:block;}
   .contact-grid .text-wrap span, .contact-grid .text-wrap a{display:block; color:#505050; font-family:'Nunito', sans-serif; font-weight:500; font-size:16px;}
   .contact-grid .text-wrap a:hover{color:#5e0d8d}
 
@@ -47,13 +44,30 @@ Google Map
     width: 100%; padding-bottom:0px; margin-bottom:0px;
   }
 
-  ul.social li{display:inline-block; margin:0 15px;}
-  ul.social li a, ul.social li a i{font-size:22px; color:#505050;}
-  ul.social li a:hover, ul.social li a:hover i{color:#5e0d8d;}
+  ul.social li{display:inline-block; margin:0 5px;}
+  ul.social li a {
+    background: #333;
+    width: 36px;
+    height: 36px;
+    display: block;
+    line-height: 36px;
+    border-radius: 30px;
+    color: #fff!important;
+    font-size: 18px!important;
+}
+
+ul.social li a i{
+    color: #fff!important;
+    font-size: 18px;}
+
+ul.social li a:hover {
+    background: #5e0c8c;
+}
 
 
   .formbox h2{
     color: #5e0d8d;
+    font-family: roboto;
     font-weight: 400;
     font-size: 36px;
     margin: 0 0 30px;
@@ -70,6 +84,8 @@ Google Map
     width: 100%;
   }
 
+  element.style {
+  }
   .assistance-form textarea {
     resize: none;
     height: 160px;
@@ -121,10 +137,6 @@ Google Map
   @media only screen and (max-width: 1199px) {
     .grid-tab{max-width:100%;}
     .gridbox{margin:30px 25px 20px;}
-.page-contact .container {
-    max-width: 970px;
-}
-    
   }
   @media only screen and (max-width: 767px) {
     .formbox h2 {
@@ -144,21 +156,6 @@ Google Map
     .page-careers .content .text-wrap{max-width:100%;}
     .formbox{padding: 0 10px;} 
   }
-  .small-banner p {
-    line-height: 24px;
-    padding-top: 20px;
-    margin: auto;
-    font-size: 15px;
-}
-@media (min-width: 767px) {
-  .small-banner p {
-    line-height: 24px;
-    padding-top: 20px;
-    width: 70%;
-    margin: auto;
-     font-size: 18px;
-}
-}
 </style>
 
 <div class="inner-page page-contact">
@@ -166,8 +163,6 @@ Google Map
     <div class="small-banner">
       <div class="container">
         <h2>Contact us</h2>
-<!--         <p>Hello Plumster! Our support executives are on a short office break until Saturday EOD. We regret being unable to get back to you immediately and apologise for the inconvenience this may cause. Rest assured, we will reply to your concern as soon as we are back. Love, Plum People💜 </p>
-     -->
       </div>
     </div>
   </div>
@@ -232,20 +227,20 @@ Google Map
             <p><span>U74120MH2013PTC248969</span></p>
           </div>
         </div>
-         <div class="col-md-4">
+        <div class="col-md-4">
            <div class="text-wrap CIN">
             <h4>Request A Call Back</h4>
-            <p><span><a href="https://plumgoodness.com/pages/request-a-call-back">Click here for call back</a></span></p>
+            <p><span><a href="/pages/request-a-call-back">Click here for call back</a></span></p>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="w-100 d-flex justify-content-center">
           <ul class="social">
-            <li class="fb"><a rel="nofollow" href="https://www.facebook.com/PlumGoodness/" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li class="yt"><a rel="nofollow" href="https://www.youtube.com/channel/UC6tQtwAuADVKuxIRKfwMZfw?sub_confirmation=1" title="YouTube" target="_blank"><i class="fa fa-youtube"></i></a></li>
-            <li class="tw"><a rel="nofollow" href="https://twitter.com/plumspeak?lang=en" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li class="in"><a rel="nofollow" href="https://www.instagram.com/plumgoodness/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li class="fb"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li class="yt"><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+            <li class="tw"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li class="in"><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
           </ul>
         </div>
       </div>
@@ -287,6 +282,7 @@ Google Map
   {% endform %}
    {% endcomment %}
 </div>
+
 
 {% schema %}
 {

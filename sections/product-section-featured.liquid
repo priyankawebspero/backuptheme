@@ -1,16 +1,16 @@
 {% for block in section.blocks %}
 {% case block.type %}
   {% when 'image' %} 
-<div class="item" id="banner-{{block.settings.id_img | handle}}">
+<div class="item" id="banner-{{block.id}}">
   <div class="images-contain">
     {% if block.settings.image_slide != blank %}
-    {%- assign img_url = block.settings.image_slide | img_url: 'master'  , format: 'pjpg'-%}                       
+    {%- assign img_url = block.settings.image_slide | img_url: 'master' -%}                       
     <img data-src="{{ img_url }}"
          src="https:{{ img_url }}" alt="{{ block.settings.image_slide.alt | default: shop.name }}" 
          class="lazyautosizes lazyload{% if block.settings.image_slide_mb != blank %} slide-pc{% endif %}" data-sizes="auto">
 
     {% if block.settings.image_slide_mb != blank %}
-    {%- assign img_url_mb = block.settings.image_slide_mb | img_url: 'master'  , format: 'pjpg'-%}
+    {%- assign img_url_mb = block.settings.image_slide_mb | img_url: 'master' -%}
     <img data-src="{{ img_url_mb }}"
          src="https:{{ img_url_mb }}" alt="{{ block.settings.image_slide_mb.alt | default: shop.name }}" 
          class="lazyautosizes lazyload slide-mobile" data-sizes="auto" style="display:none;">
@@ -20,7 +20,7 @@
   </div>
 </div>
   {% when 'text' %} 
-<div class="item" id="banner-{{block.settings.id_gmb | handle}}">
+<div class="item" id="banner-{{block.id}}">
   <div class="Offer-images-contain">
     {% if block.settings.link_to_play %}<a href="{{block.settings.link_to_play}}">{% endif %} 
     {% if block.settings.image_offer != blank %}
@@ -59,7 +59,7 @@
     {%- assign grid_item_width = 'col-6 col-md-4 col-lg-3 col-xl-2' -%}
   {%- assign row = 'six-items' -%}
 {% endcase %}
-<div class="featured-products{% if block.settings.display_banner %} has-banner{% endif %}{% if block.settings.banner_is == 'right'%} banner-right{% endif %}" id="banner-{{block.settings.id_pro | handle}}">
+<div class="featured-products{% if block.settings.display_banner %} has-banner{% endif %}{% if block.settings.banner_is == 'right'%} banner-right{% endif %}" id="featured-products-{{block.id}}">
   <div class="{% if block.settings.display_banner %}container-fluid{% else %}container-padd60{% endif %}">
     <div class="row{% if block.settings.banner_is == 'right'%} flex-row-reverse{% endif %}">
     <div class="col-12{% if block.settings.display_banner %} col-md-12 col-lg-6 column-product{% else %} col-md-12{% endif %}">
@@ -115,7 +115,7 @@
   </div>
 </div>
 {% when 'collection' %}
-<div class="influencer_div" id="banner-{{block.settings.id_inf | handle}}">
+<div class="influencer_div" id="influencer-{{block.id}}">
   <div class="container-padd60">
     <div class="row">
     <div class="col-12">
@@ -147,7 +147,7 @@
 </div>
 {% endcase %}
 {% endfor %}
-<!--     <div class="row text container center tandc">
+    <div class="row text container center tandc">
       <div class="widget-title">  
           <span class="title">Terms and Conditions for Lucky Winners of iPhone 13</span>
       </div>
@@ -158,7 +158,7 @@
       <p> Iphones will be dispatched on 31st July 2022</p>
       <p> Offer applicable on orders from 1st - 4th July only</p>
       
-    </div> -->
+    </div>
 {% schema %}
   {
     "name": "Featured Products",
@@ -174,11 +174,6 @@
     {
     "type": "header",
     "content": "Featured Products"
-      },    
-      {
-        "type": "text",
-        "id": "id_pro",
-        "label" : "Enter Id for Block"
       },    
       {
         "type": "image_picker",
@@ -309,11 +304,6 @@
                 "name": "Image Banner",
                 "settings":[
                     {
-                      "type": "text",
-                      "id": "id_img",
-                      "label" : "Enter Id for Block"
-                    },
-                    {
                         "type": "image_picker",
                         "id": "image_slide",
                         "label" : "Select Image",
@@ -330,11 +320,6 @@
                 "type": "collection",
                 "name": "Influencer",
                 "settings":[
-                    {
-                      "type": "text",
-                      "id": "id_inf",
-                      "label" : "Enter Id for Block"
-                    },
                       {
                           "type": "text",
                           "id": "influncer_title",
@@ -470,11 +455,6 @@
                 "type": "text",
                 "name": "Games offers",
                 "settings":[
-                    {
-                      "type": "text",
-                      "id": "id_gmb",
-                      "label" : "Enter Id for Block"
-                    },
                     {
                         "type": "image_picker",
                         "id": "image_offer",

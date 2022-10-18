@@ -268,16 +268,3 @@ qvTitle
     </style>
   {%- endif -%}
 {%- endif -%}
-
-{%- assign disableCrawlDataFromBoostOriginal = true %}
-{% if disableCrawlDataFromBoostOriginal %}
-  {%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
-  {%- assign boostPFSPageUrl = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'.myshopify.com' | last |
-      replace:'\/','/' |
-      replace:'%20',' ' |
-      replace:'\u0026','&'
-  -%}
-  {% if boostPFSPageUrl contains 'view=boost-pfs-original' %}
-    <meta name="robots" content="noindex, nofollow" />
-  {% endif %}
-{% endif %}

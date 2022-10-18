@@ -73,31 +73,33 @@
     background: #f8f5ff;
 }
 
-#shopify-section-Serum-banner .col-12.col-md-12 {
+.serum-first-new .col-12.col-md-12 {
     padding: 0;
 }
 
-div#shopify-section-serum-concern-section {
+.serum_con_section {
     background: #f8f5ff;
     padding: 55px 0 50px;
     margin: 0 auto;
     text-align: center;
 }
 
-#shopify-section-concern-flipbox h3 .title {
-    background: none;
+.concern-flipbox-slider-sections h3 .title {
+    background: none !important;
     display: block;
     font-size: 50px;
     margin-bottom: 10px;
     font-family: serifabold;
     letter-spacing: 1px;
 }
-
-#shopify-section-concern-flipbox h3.box-title {
+.featured-products .widget-title .box-title {
+    margin-bottom: 20px;
+}
+.concern-flipbox-slider-sections h3.box-title {
     margin-bottom: 15px;
 }
 
-#shopify-section-concern-flipbox .description {
+.concern-flipbox-slider-sections .description {
     padding: 0 15px;
     display: flex;
     align-items: center;
@@ -105,7 +107,7 @@ div#shopify-section-serum-concern-section {
     padding-bottom: 20px;
 }
 
-#shopify-section-concern-flipbox .description p {
+.concern-flipbox-slider-sections .description p {
     color: #5e0c8c;
     font-size: 28px;
     line-height: normal;
@@ -122,13 +124,13 @@ div#shopify-section-serum-concern-section {
     padding-right: 8px;
 }
 
-#shopify-section-concern-flipbox .container {
+.concern-flipbox-slider-sections .container {
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;
 }
 
-#shopify-section-concern-flipbox .container .row.slick-slider {
+.concern-flipbox-slider-sections .container .row.slick-slider {
     width: 100%;
     max-width: 1200px;
     margin-left: auto;
@@ -137,12 +139,12 @@ div#shopify-section-serum-concern-section {
     padding-right: 15px;
 }
 
-#shopify-section-concern-flipbox .container .row.slick-slider .slick-list {
+.concern-flipbox-slider-sections .container .row.slick-slider .slick-list {
     margin-left: -15px;
     margin-right: -15px;
 }
 
-#shopify-section-concern-flipbox .container .row.slick-slider .spotlight-item {
+.concern-flipbox-slider-sections .container .row.slick-slider .spotlight-item {
     margin: 30px 0 45px 0;
     background: #fff;
     box-shadow: 7px 6px 10px 0px rgb(51 16 74 / 15%);
@@ -157,11 +159,11 @@ div#shopify-section-serum-concern-section {
 }
 
 
-#shopify-section-concern-flipbox .container .row.slick-slider .spotlight-item .content.spotlight-inner {
+.concern-flipbox-slider-sections .container .row.slick-slider .spotlight-item .content.spotlight-inner {
     padding: 0 0 10px 0;
 }
 
-#shopify-section-concern-flipbox .container .row.slick-slider .spotlight-item i.fa {
+.concern-flipbox-slider-sections .container .row.slick-slider .spotlight-item i.fa {
     position: absolute;
     right: 10px;
     font-size: 40px;
@@ -170,72 +172,72 @@ div#shopify-section-serum-concern-section {
     transition: all .5s ease-in-out;
 }
 
-#shopify-section-concern-flipbox .container .row.slick-slider .spotlight-item:hover {
+.concern-flipbox-slider-sections .container .row.slick-slider .spotlight-item:hover {
     box-shadow: 5px 13px 10px 0px rgb(51 16 74 / 15%);
 }
 
-#shopify-section-concern-flipbox .container .row.slick-slider .slick-slide:first-child .spotlight-item:hover {
+.concern-flipbox-slider-sections .container .row.slick-slider .slick-slide:first-child .spotlight-item:hover {
   background: #ffe0cc;
 }
 
-#shopify-section-concern-flipbox .container .row.slick-slider .slick-list .slick-slide:first-child .spotlight-item.active {
+.concern-flipbox-slider-sections .container .row.slick-slider .slick-list .slick-slide:first-child .spotlight-item.active {
     background: #ffe0cc;
     box-shadow: none;
 }
 
-#shopify-section-concern-flipbox .container .row.slick-slider .slick-slide:nth-of-type(2) .spotlight-item:hover {
+.concern-flipbox-slider-sections .container .row.slick-slider .slick-slide:nth-of-type(2) .spotlight-item:hover {
 
  background: #fccfee;
 }
 
-#shopify-section-concern-flipbox .container .row.slick-slider .slick-list .slick-slide:nth-of-type(2) .spotlight-item.active {
+.concern-flipbox-slider-sections .container .row.slick-slider .slick-list .slick-slide:nth-of-type(2) .spotlight-item.active {
     background: #fccfee;
     box-shadow: none;
 }
 
-#shopify-section-concern-flipbox .container .row.slick-slider .slick-slide:nth-of-type(3) .spotlight-item:hover {
+.concern-flipbox-slider-sections .container .row.slick-slider .slick-slide:nth-of-type(3) .spotlight-item:hover {
  
   background: #d8e8ff;
 }
 
-#shopify-section-concern-flipbox .container .row.slick-slider .slick-list .slick-slide:nth-of-type(3) .spotlight-item.active {
+.concern-flipbox-slider-sections .container .row.slick-slider .slick-list .slick-slide:nth-of-type(3) .spotlight-item.active {
     background: #d8e8ff;
     box-shadow: none;
 }
 
-#shopify-section-concern-flipbox .container .row.slick-slider .slick-slide:nth-of-type(4) .spotlight-item:hover {
+.concern-flipbox-slider-sections .container .row.slick-slider .slick-slide:nth-of-type(4) .spotlight-item:hover {
   
    background: #ebd0f3;
 }
 
-#shopify-section-concern-flipbox .container .row.slick-slider .slick-list .slick-slide:nth-of-type(4) .spotlight-item.active {
+.concern-flipbox-slider-sections .container .row.slick-slider .slick-list .slick-slide:nth-of-type(4) .spotlight-item.active {
     background: #ebd0f3;
     box-shadow: none;
 }
 
-#shopify-section-concern-flipbox .container .row.slick-slider .slick-slide:nth-of-type(5) .spotlight-item:hover {
+.concern-flipbox-slider-sections .container .row.slick-slider .slick-slide:nth-of-type(5) .spotlight-item:hover {
 
   background: #e2e6cd;
 }
 
-#shopify-section-concern-flipbox .container .row.slick-slider .slick-list .slick-slide:nth-of-type(5) .spotlight-item.active {
+.concern-flipbox-slider-sections .container .row.slick-slider .slick-list .slick-slide:nth-of-type(5) .spotlight-item.active {
     background: #e2e6cd;
     box-shadow: none;
 }
 
 
-#shopify-section-concern-flipbox .container .row.slick-slider .slick-list .spotlight-item.active {
+.concern-flipbox-slider-sections .container .row.slick-slider .slick-list .spotlight-item.active {
   
     box-shadow: none;
 }
 
-#shopify-section-concern-flipbox .container .row.slick-slider .slick-list .spotlight-item.active i.fa {
+.concern-flipbox-slider-sections .container .row.slick-slider .slick-list .spotlight-item.active i.fa {
     transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
 }
 
-#shopify-section-concern-flipbox .container .row.slick-slider .col-md-3.col-sm-6 {
+.concern-flipbox-slider-sections .container .row.slick-slider .col-md-3.col-sm-6 {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -248,26 +250,26 @@ div#shopify-section-serum-concern-section {
     margin: 0 auto;
 }
 
-div#shopify-section-serum-concern-section img.slide {
+.serum_con_section img.slide {
     border-radius: 10px;
 }
 
 
-div#shopify-section-slider-product {
+.all-specialists-products-sections {
     padding: 30px 0;
 }
 
-div#shopify-section-slider-product .container-padd60 {
+.all-specialists-products-sections .container-padd60 {
     max-width: 100%!important;
     width: 100%;
 }
 
-div#shopify-section-slider-product .row {
+.all-specialists-products-sections .row {
     margin-right: -15px;
     margin-left: -15px;
 }
 
-div#shopify-section-slider-product .widget-product {
+.all-specialists-products-sections .widget-product {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -444,7 +446,7 @@ div#shopify-section-slider-product .widget-product {
     height: auto !important;
 }
 
-div#shopify-section-slider-product {
+.all-specialists-products-sections {
     padding: 40px 0 !important;
 }
 
@@ -461,7 +463,7 @@ div#shopify-section-slider-product {
 }
 
 
-#shopify-section-concern-flipbox .container .tabs_upper_cs.row.slick-slider .slick-list {
+.concern-flipbox-slider-sections .container .tabs_upper_cs.row.slick-slider .slick-list {
     margin-left: -15px;
     margin-right: -15px;
     /* display: -webkit-box; */
@@ -476,7 +478,7 @@ div#shopify-section-slider-product {
 }
 
 
-#shopify-section-concern-flipbox .concern_tab {
+.concern-flipbox-slider-sections .concern_tab {
     background: #f0ddf3;
     padding: 0px 0 30px 0;
 }
@@ -552,7 +554,7 @@ div#shopify-section-slider-product {
 }
 
 
-#shopify-section-concern-flipbox .concern_tab .row {
+.concern-flipbox-slider-sections .concern_tab .row {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -803,7 +805,7 @@ body .right_area .inner.product-item .inner-top .product-image .product-grid-ima
 
 /*--------------revie-design-----------*/
 
-#shopify-section-concern-flipbox .jdgm-widget.jdgm-widget {
+.concern-flipbox-slider-sections .jdgm-widget.jdgm-widget {
     width: 100%;
     max-width: 1200px;
     margin-left: auto;
@@ -814,31 +816,31 @@ body .right_area .inner.product-item .inner-top .product-image .product-grid-ima
     /* padding: 40px 0; */
 }
 
-#shopify-section-concern-flipbox .jdgm-widget.jdgm-widget .jdgm-rev-widg {
+.concern-flipbox-slider-sections .jdgm-widget.jdgm-widget .jdgm-rev-widg {
     margin: 50px 0;
     background: #fff;
     border: none;
     border-radius: 10px;
 }
 
-#shopify-section-concern-flipbox .jdgm-rev-widg__header {
+.concern-flipbox-slider-sections .jdgm-rev-widg__header {
     margin-bottom: 10px!important;
 }
 
-#shopify-section-concern-flipbox .jdgm-rev-widg .jdgm-rev-widg__title {
+.concern-flipbox-slider-sections .jdgm-rev-widg .jdgm-rev-widg__title {
     display: none;
 }
 
-#shopify-section-concern-flipbox .jdgm-histogram.jdgm-temp-hidden {
+.concern-flipbox-slider-sections .jdgm-histogram.jdgm-temp-hidden {
     display: none;
 }
 
-#shopify-section-concern-flipbox .jdgm-rev-widg .jdgm-rev-widg__summary-stars {
+.concern-flipbox-slider-sections .jdgm-rev-widg .jdgm-rev-widg__summary-stars {
     display: inline-block;
     vertical-align: middle;
 }
 
-#shopify-section-concern-flipbox .jdgm-rev-widg .jdgm-rev-widg__summary-text {
+.concern-flipbox-slider-sections .jdgm-rev-widg .jdgm-rev-widg__summary-text {
     visibility: unset;
     display: inline-block;
     vertical-align: middle;
@@ -848,7 +850,7 @@ body .right_area .inner.product-item .inner-top .product-image .product-grid-ima
     color: #666;
 }
 
-#shopify-section-concern-flipbox .jdgm-rev-widg a.jdgm-write-rev-link {
+.concern-flipbox-slider-sections .jdgm-rev-widg a.jdgm-write-rev-link {
     color: #fff;
     border-color: transparent;
     width: 100%;
@@ -863,35 +865,35 @@ body .right_area .inner.product-item .inner-top .product-image .product-grid-ima
     text-transform: lowercase;
 }
 
-#shopify-section-concern-flipbox .jdgm-rev-widg__reviews .jdgm-rev {
+.concern-flipbox-slider-sections .jdgm-rev-widg__reviews .jdgm-rev {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
 
-#shopify-section-concern-flipbox .jdgm-quest, #shopify-section-concern-flipbox .jdgm-rev {
+.concern-flipbox-slider-sections .jdgm-quest, .concern-flipbox-slider-sections .jdgm-rev {
     border-top: 1px solid #ccc;
     padding-top: 15px;
     margin-top: 15px;
 }
 
-#shopify-section-concern-flipbox .jdgm-rev-widg__reviews .jdgm-rev .jdgm-rev__header {
+.concern-flipbox-slider-sections .jdgm-rev-widg__reviews .jdgm-rev .jdgm-rev__header {
     float: left;
     width: 25%;
 }
 
-#shopify-section-concern-flipbox .jdgm-rev-widg__reviews .jdgm-rev .jdgm-rev__content {
+.concern-flipbox-slider-sections .jdgm-rev-widg__reviews .jdgm-rev .jdgm-rev__content {
     float: left;
     padding-left: 45px;
     width: 75%;
     border-left: 1px solid #ccc;
 }
 
-#shopify-section-concern-flipbox .jdgm-rev-widg__reviews .jdgm-rev .jdgm-rev__actions {
+.concern-flipbox-slider-sections .jdgm-rev-widg__reviews .jdgm-rev .jdgm-rev__actions {
     width: 100%;
 }
 
-#shopify-section-concern-flipbox .jdgm-rev__content .jdgm-rev__title {
+.concern-flipbox-slider-sections .jdgm-rev__content .jdgm-rev__title {
     font-weight: 600;
     font-size: 16px;
 }
@@ -901,11 +903,11 @@ body .right_area .inner.product-item .inner-top .product-image .product-grid-ima
     font-size: 14px;
 }
 
-#shopify-section-concern-flipbox .jdgm-rev-widg .jdgm-star {
+.concern-flipbox-slider-sections .jdgm-rev-widg .jdgm-star {
     color: #5e0d8b;
 }
 
-#shopify-section-concern-flipbox span.jdgm-rev__timestamp {
+.concern-flipbox-slider-sections span.jdgm-rev__timestamp {
     opacity: 1;
     font-size: 14px;
 }
@@ -946,22 +948,22 @@ a.jdgm-paginate__page.jdgm-paginate__prev-page::before {
     content: 'Prev';
 }
 
-#shopify-section-concern-flipbox .jdgm-rev-widg__reviews .jdgm-rev:last-child {
+.concern-flipbox-slider-sections .jdgm-rev-widg__reviews .jdgm-rev:last-child {
     padding-bottom: 15px;
     margin-bottom: 15px;
     border-bottom: 1px solid #ccc;
 }
 
-#shopify-section-concern-flipbox .jdgm-rev-widg .jdgm-rev-widg__header .jdgm-star {
+.concern-flipbox-slider-sections .jdgm-rev-widg .jdgm-rev-widg__header .jdgm-star {
     font-size: 15px;
 }
 
-#shopify-section-concern-flipbox .jdgm-form-wrapper .jdgm-form label {
+.concern-flipbox-slider-sections .jdgm-form-wrapper .jdgm-form label {
     font-size: 14px;
     text-transform: uppercase;
 }
 
-#shopify-section-concern-flipbox .jdgm-form-wrapper input[type=submit] {
+.concern-flipbox-slider-sections .jdgm-form-wrapper input[type=submit] {
     color: #fff;
     border-color: transparent;
     width: 100%;
@@ -976,17 +978,17 @@ a.jdgm-paginate__page.jdgm-paginate__prev-page::before {
     text-transform: lowercase;
 }
 
-#shopify-section-concern-flipbox .jdgm-form-wrapper input[type=submit]:hover{
+.concern-flipbox-slider-sections .jdgm-form-wrapper input[type=submit]:hover{
 color: #fff!important;
     background: #8901bd!important;
 
 }
 
-#shopify-section-concern-flipbox .jdgm-rev-widg__sort-wrapper .jdgm-sort-dropdown-wrapper {
+.concern-flipbox-slider-sections .jdgm-rev-widg__sort-wrapper .jdgm-sort-dropdown-wrapper {
     display: none;
 }
 
-#shopify-section-concern-flipbox .jdgm-form-wrapper .jdgm-form {
+.concern-flipbox-slider-sections .jdgm-form-wrapper .jdgm-form {
     width: 100%;
     max-width: 760px;
     margin: 0 auto;
@@ -1060,13 +1062,13 @@ color: #fff!important;
     padding-bottom: 0;
 }
 
-#shopify-section-concern-flipbox .concern-products .row {
+.concern-flipbox-slider-sections .concern-products .row {
     display: block;
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
 
-#shopify-section-concern-flipbox .concern-products span.jdgm-prev-badge__text {
+.concern-flipbox-slider-sections .concern-products span.jdgm-prev-badge__text {
     display: none;
 }
 
@@ -1084,7 +1086,7 @@ color: #fff!important;
     padding-right: 0;
 }
 
-#shopify-section-Serum-banner .slide.desktop img + img {
+.serum-first-new .slide.desktop img + img {
     padding: 0 15px;
 }
 
@@ -1169,7 +1171,7 @@ color: #fff!important;
     background: #620c92;
 }
 
-#shopify-section-concern-flipbox .container .row.slick-slider .col-md-3.col-sm-6 {
+.concern-flipbox-slider-sections .container .row.slick-slider .col-md-3.col-sm-6 {
     height: auto;
 }
 
@@ -1372,7 +1374,7 @@ a.range-link {
 
 @media only screen and (max-width: 1399px){
 
-div#shopify-section-slider-product .widget-product {
+.all-specialists-products-sections .widget-product {
     max-width: 1200px;
 }
  
@@ -1387,12 +1389,12 @@ div#shopify-section-slider-product .widget-product {
     white-space: normal;
 }
   
-#shopify-section-concern-flipbox .container .row.slick-slider .spotlight-item {
+.concern-flipbox-slider-sections .container .row.slick-slider .spotlight-item {
     padding: 25px 15px;
     min-height: 201px;
 }
  
-#shopify-section-concern-flipbox .jdgm-widget.jdgm-widget {
+.concern-flipbox-slider-sections .jdgm-widget.jdgm-widget {
     width: 97%;
 }
 
@@ -1414,17 +1416,17 @@ div#shopify-section-slider-product .widget-product {
 
 @media only screen and (max-width: 1200px) and (min-width:768px){
   
-  #shopify-section-concern-flipbox .container .row.slick-slider .spotlight-item {
+  .concern-flipbox-slider-sections .container .row.slick-slider .spotlight-item {
     box-shadow: 4px 6px 4px 0 rgb(51 16 74 / 15%);
 }
   
-  #shopify-section-concern-flipbox .container .row.slick-slider .col-md-3.col-sm-6 {
+  .concern-flipbox-slider-sections .container .row.slick-slider .col-md-3.col-sm-6 {
     height: auto;
     width: 20% !important;
     padding: 0 10px;
 }
   
-#shopify-section-concern-flipbox .container .tabs_upper_cs.row.slick-slider .slick-list {
+.concern-flipbox-slider-sections .container .tabs_upper_cs.row.slick-slider .slick-list {
     margin-left: -10px;
     margin-right: -10px;
 }
@@ -1498,11 +1500,11 @@ div#shopify-section-slider-product .widget-product {
     display: none !important;
 }
   
-#shopify-section-concern-flipbox .jdgm-rev-widg__reviews .jdgm-rev .jdgm-rev__header {
+.concern-flipbox-slider-sections .jdgm-rev-widg__reviews .jdgm-rev .jdgm-rev__header {
     width: 100%;
 }
   
-#shopify-section-concern-flipbox .jdgm-rev-widg__reviews .jdgm-rev .jdgm-rev__content {
+.concern-flipbox-slider-sections .jdgm-rev-widg__reviews .jdgm-rev .jdgm-rev__content {
     padding-left: 0;
     width: 100%;
     border-left: none;
@@ -1542,11 +1544,11 @@ div#shopify-section-slider-product .widget-product {
     bottom: 10px;
 }
   
-  #shopify-section-concern-flipbox .jdgm-widget.jdgm-widget {
+  .concern-flipbox-slider-sections .jdgm-widget.jdgm-widget {
     width: 100%;
 }
   
-  #shopify-section-concern-flipbox .jdgm-widget.jdgm-widget .jdgm-rev-widg {
+  .concern-flipbox-slider-sections .jdgm-widget.jdgm-widget .jdgm-rev-widg {
     border-radius: 0;
 }
   
@@ -1563,13 +1565,13 @@ div#shopify-section-slider-product .widget-product {
     display: none !important;
 }
   
-#shopify-section-concern-flipbox .jdgm-rev-widg .jdgm-rev-widg__summary {
+.concern-flipbox-slider-sections .jdgm-rev-widg .jdgm-rev-widg__summary {
     width: 100%;
     text-align: center;
     margin-bottom: 15px;
 }
   
- #shopify-section-concern-flipbox .jdgm-widget-actions-wrapper {
+ .concern-flipbox-slider-sections .jdgm-widget-actions-wrapper {
     width: 100%;
     text-align: center;
 }
@@ -1584,7 +1586,7 @@ div#shopify-section-slider-product .widget-product {
     margin: 0 auto;
 }
   
-#shopify-section-Serum-banner .slide.desktop {
+.serum-first-new .slide.desktop {
     display: none;
 }
   
@@ -1592,7 +1594,7 @@ div#shopify-section-slider-product .widget-product {
     display: block !important;
 }
   
-#shopify-section-Serum-banner .slide.mobile img.slide + img.slide {
+.serum-first-new .slide.mobile img.slide + img.slide {
     padding: 25px;
 }
   
@@ -1604,17 +1606,17 @@ img.slide.aff_mobile {
     display: block !important;
 }
  
-#shopify-section-concern-flipbox h3.box-title {
+.concern-flipbox-slider-sections h3.box-title {
     margin-bottom: 15px;
     line-height: normal;
 }
   
-#shopify-section-concern-flipbox h3 .title {
+.concern-flipbox-slider-sections h3 .title {
     font-size: 37px;
     padding: 0 15px;
 }
   
-#shopify-section-concern-flipbox .description p {
+.concern-flipbox-slider-sections .description p {
     color: #5e0c8c;
     font-size: 22px;
     
@@ -1626,7 +1628,7 @@ img.slide.aff_mobile {
     margin-bottom: 30px;
 }
   
-#shopify-section-concern-flipbox .concern_tab {
+.concern-flipbox-slider-sections .concern_tab {
     padding: 0px 0 30px 0;
 }
   
@@ -1638,12 +1640,12 @@ img.slide.aff_mobile {
     display: block;
 }
   
-#shopify-section-concern-flipbox .container .row.slick-slider .col-md-3.col-sm-6 {
+.concern-flipbox-slider-sections .container .row.slick-slider .col-md-3.col-sm-6 {
     height: auto;
     float: left;
 }
   
-#shopify-section-concern-flipbox .container .tabs_upper_cs.row.slick-slider .slick-list {
+.concern-flipbox-slider-sections .container .tabs_upper_cs.row.slick-slider .slick-list {
     display: block;
 }
   
@@ -1663,17 +1665,16 @@ img.slide.aff_mobile {
     min-height: inherit;
 }
   
-  #shopify-section-concern-flipbox .concern-products h3 .title {
-    padding: 0;
-    font-size: 35px;
+  .concern-flipbox-slider-sections .concern-products h3 .title {
+   padding: 0;
+    font-size: 30px;
+    letter-spacing: 0;
 }
   
  
   
-#shopify-section-Serum-banner .slide.mobile img.slide+img.slide {
-    padding: 25px;
-    padding-bottom: 0;
-    padding-top: 20px;
+.serum-first-new .slide.mobile img.slide+img.slide {
+    padding: 20px 25px 0 25px;
 }  
   
   .concern-products {
@@ -1689,12 +1690,13 @@ img.slide.aff_mobile {
     margin-top: 40px;
 }
   
-  #shopify-section-concern-flipbox h3 .title {
-    font-size: 35px;
+  .concern-flipbox-slider-sections h3 .title {
+    font-size: 30px;
     padding: 0;
+     letter-spacing: 0;
 }
   
-  #shopify-section-concern-flipbox .description {
+  .concern-flipbox-slider-sections .description {
     padding-bottom: 0;
 }
   
@@ -1702,12 +1704,13 @@ div#concern-spotlight-slider-concern-flipbox>.widget-title h3.box-title {
     padding: 0 15px;
 }
   
-  #shopify-section-concern-flipbox .container .tabs_upper_cs .slick-arrow {
+  .concern-flipbox-slider-sections .container .tabs_upper_cs .slick-arrow {
     display: none !important;
 }
   
   .featured-products h3.box-title span.title {
-    font-size: 35px;
+    font-size: 30px;
+    letter-spacing: 0;
 }
   
   div#featured-products-slider-product .col-12.col-md-12 {
@@ -1715,16 +1718,16 @@ div#concern-spotlight-slider-concern-flipbox>.widget-title h3.box-title {
     padding-right: 0;
 }
  
- #shopify-section-Serum-banner .slide.mobile img.slide {
+ .serum-first-new .slide.mobile img.slide {
     display: block;
     margin: 0 auto;
 }
 
-  #shopify-section-Serum-banner .slide.mobile img.slide:first-child {
+  .serum-first-new .slide.mobile img.slide:first-child {
     width: 100%;
 }
   
-div#shopify-section-serum-concern-section img.slide {
+.serum_con_section img.slide {
     margin: 0 auto;
 }
   
@@ -1732,31 +1735,41 @@ div#shopify-section-serum-concern-section img.slide {
     padding-bottom: 40px;
 }
   
-#shopify-section-concern-flipbox .container .row.slick-slider .col-md-3.col-sm-6 {
+.concern-flipbox-slider-sections .container .row.slick-slider .col-md-3.col-sm-6 {
     padding-left: 10px;
     padding-right: 10px;
 }
   
-#shopify-section-concern-flipbox .container .tabs_upper_cs.row.slick-slider .slick-list {
+.concern-flipbox-slider-sections .container .tabs_upper_cs.row.slick-slider .slick-list {
     margin-left: -10px;
     margin-right: -10px;
 }
   
-#shopify-section-concern-flipbox .container .row.slick-slider .spotlight-item {
+.concern-flipbox-slider-sections .container .row.slick-slider .spotlight-item {
     margin: 30px 0 35px 0;
     box-shadow: 4px 5px 5px 0 rgb(51 16 74 / 15%);
 }
   
- #shopify-section-concern-flipbox .jdgm-widget.jdgm-widget .jdgm-rev-widg {
-    margin: 45px 0 50px 0;
+ .concern-flipbox-slider-sections .jdgm-widget.jdgm-widget .jdgm-rev-widg {
+    margin: 45px 0 20px 0;
 }
-  
+.col-md-12.column-product .widget-product {
+    padding-bottom: 0;
+} 
+
+.all-specialists-products-sections {
+    padding: 25px 0 !important;
+}
   
 }
 
 
 
 @media (max-width: 575px){
+
+  .inner.product-item .btn, .featured-products .action a.btn {
+    margin: 0;
+}
   
   .tabs_upper_cs {
     padding-bottom: 30px;
@@ -1776,7 +1789,7 @@ div#shopify-section-serum-concern-section img.slide {
     margin-left: 0;
 }
   
-  div#shopify-section-slider-product .widget-product {
+  .all-specialists-products-sections .widget-product {
     padding: 0;
 }
   
@@ -1878,8 +1891,8 @@ div#shopify-section-serum-concern-section img.slide {
     vertical-align: middle;
 }
   
-div#shopify-section-serum-concern-section {
-    padding: 45px 0 40px;
+.serum_con_section {
+    padding: 45px 0 20px;
 }
   
 .popup_video_link:after {
@@ -1934,6 +1947,11 @@ div#shopify-section-serum-concern-section {
  .inner.product-item .price-box:before {
     margin: 0 auto 3px;
 }
+
+.all-specialists-products-sections .container-padd60 {
+    padding-left: 2px;
+    padding-right: 2px;
+}
   
 }
 
@@ -1941,7 +1959,7 @@ div#shopify-section-serum-concern-section {
 
 @media (max-width: 355px){
   
-  #shopify-section-concern-flipbox .container .row.slick-slider .spotlight-item {
+  .concern-flipbox-slider-sections .container .row.slick-slider .spotlight-item {
     padding: 20px 10px;
 }
  

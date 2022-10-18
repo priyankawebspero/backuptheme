@@ -5,10 +5,10 @@
     {% when 'slide' %}
       <div class="slide " {{ block.shopify_attributes }}>
         {% if  block.settings.image != blank %}
-        <img class="slide aff_desktop" src="{{ block.settings.image | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.image.alt}}">
+        <img class="slide aff_desktop" src="{{ block.settings.image | img_url: 'master' }}"  alt="{{block.settings.image.alt}}">
         {% endif %}
         {% if  block.settings.image_mob != blank %}
-         <img class="slide aff_mobile" src="{{ block.settings.image_mob | img_url: 'master' , format: 'pjpg'}}"  alt="{{block.settings.image_mob.alt}}" style="display:none;">
+         <img class="slide aff_mobile" src="{{ block.settings.image_mob | img_url: 'master' }}"  alt="{{block.settings.image_mob.alt}}" style="display:none;">
         {% endif %}
       </div>
   {% endcase %}

@@ -29,7 +29,7 @@
                     <div class="images-contain">
                         {% if block.settings.image_slide != blank %}
 
-                        {%- assign img_url = block.settings.image_slide | img_url: 'master' , format: 'pjpg'-%}
+                        {%- assign img_url = block.settings.image_slide | img_url: 'master' -%}
  
                         <a {% if block.settings.lb_product_1 != blank or block.settings.lb_product_2 != blank or block.settings.lb_product_3 != blank %}href="javascript:void(0)"{% else %}href="{{ block.settings.link }}"{% endif %} class="slide-image home_banner">
                             <img data-src="{{ img_url }}"
@@ -38,7 +38,7 @@
 
                             {% if block.settings.image_slide_mb != blank %}
 
-                            {%- assign img_url_mb = block.settings.image_slide_mb | img_url: 'master' , format: 'pjpg'-%}
+                            {%- assign img_url_mb = block.settings.image_slide_mb | img_url: 'master' -%}
 
                             <img data-src="{{ img_url_mb }}"
                                 src="https:{{ img_url_mb }}" alt="{{ block.settings.image_slide_mb.alt | default: shop.name }}" itemprop="logo"
@@ -63,23 +63,7 @@
         </div>
     </div>
 </section>
-{% if template contains 'index'%}
-  {% include 'count-down-b2g2' %}
-<script>
-$(".slide-image").click(function() {
-window.dataLayer = window.dataLayer || [];
-var bannerSrc = $(this).find("img").attr("src");
-var bannerTitle = $(this).find("img").attr("alt");
-var dhref = $(this).attr('href');
-  window.dataLayer.push({
-            'event':'home_banner_click',
-            'bannerSrc':bannerSrc,
-            'bannerTitle':bannerTitle,
-            'dhref':dhref
-          })
-});
-</script>
-{% endif %}
+{% include 'count-down-b2g2' %}
 {% endif %}
 
 {% schema %}
@@ -317,6 +301,26 @@ var dhref = $(this).attr('href');
                         "type" : "url",
                         "id" : "link",
                         "label" : "Slide link"
+                    },
+                    {
+                        "type": "select",
+                        "id": "alignment",
+                        "label": "Text alignment",
+                        "default": "left",
+                        "options": [
+                        {
+                            "value": "left",
+                            "label": "Left"
+                        },
+                        {
+                            "value": "center",
+                            "label": "Center"
+                        },
+                        {
+                            "value": "right",
+                            "label": "Right"
+                        }
+                        ]
                     }
                 ]
             }
@@ -333,3 +337,22 @@ var dhref = $(this).attr('href');
         }]
     }
 {% endschema %}
+
+<script>
+$(".slide-image").click(function() {
+// ev.preventDefault();
+window.dataLayer = window.dataLayer || [];
+var bannerSrc = $(this).find("img").attr("src");
+var bannerTitle = $(this).find("img").attr("alt");
+var dhref = $(this).attr('href');
+
+  window.dataLayer.push({
+            'event':'home_banner_click',
+            'bannerSrc':bannerSrc,
+            'bannerTitle':bannerTitle,
+            'dhref':dhref
+          })
+//$(location).prop('href', dhref);
+});
+
+</script>

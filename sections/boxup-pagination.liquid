@@ -84,22 +84,22 @@
                                             {%- for image in product.images -%}
                                                 <div class="bxp-owl-item">
                                                     <img 
-                                                        data-src="{{image.src | img_url: '300x', format: 'pjpg'}}" 
+                                                        data-src="{{image.src | img_url: '300x'}}" 
                                                         alt="{{image.alt}}" 
                                                         class="bxp-bldr-img-fluid owl-lazy bxp-lazyload"
-                                                        data-srcset="{{image.src | img_url: '500x', format: 'pjpg'}} 500w,{{image.src | img_url: '700x', format: 'pjpg'}} 700w,{{image.src | img_url: '800x', format: 'pjpg'}} 800w"
+                                                        data-srcset="{{image.src | img_url: '500x'}} 500w,{{image.src | img_url: '700x'}} 700w,{{image.src | img_url: '800x'}} 800w"
                                                     />
                                                 </div>
                                             {%- endfor -%}
                                         {%- else -%}
                                             {%- for image in product.images -%}
                                                 <div class="bxp-owl-item">
-                                                    <a image="{{image.src | img_url: '800x', format: 'pjpg'}}" title-strip="{{ product.description | strip_html }}" title-desc="{{ product.description | escape }}">
+                                                    <a image="{{image.src | img_url: '800x'}}" title-strip="{{ product.description | strip_html }}" title-desc="{{ product.description | escape }}">
                                                         <img 
-                                                            data-src="{{image.src | img_url: '300x', format: 'pjpg'}}" 
+                                                            data-src="{{image.src | img_url: '300x'}}" 
                                                             alt="{{image.alt}}" 
                                                             class="bxp-bldr-img-fluid owl-lazy bxp-lazyload"
-                                                            data-srcset="{{image.src | img_url: '500x', format: 'pjpg'}} 500w,{{image.src | img_url: '700x', format: 'pjpg'}} 700w,{{image.src | img_url: '800x', format: 'pjpg'}} 800w"
+                                                            data-srcset="{{image.src | img_url: '500x'}} 500w,{{image.src | img_url: '700x'}} 700w,{{image.src | img_url: '800x'}} 800w"
                                                         />
                                                     </a>
                                                 </div>
@@ -108,17 +108,17 @@
                                     {% else %}
                                         <div class="bxp-owl-item">
                                             <img 
-                                                data-src="{{product.featured_image.src | img_url: '300x', format: 'pjpg'}}" 
+                                                data-src="{{product.featured_image.src | img_url: '300x'}}" 
                                                 alt="{{product.title}}" 
                                                 class="bxp-bldr-img-fluid owl-lazy bxp-lazyload"
-                                                data-srcset="{{product.featured_image.src | img_url: '500x', format: 'pjpg'}} 500w,{{product.featured_image.src | img_url: '700x', format: 'pjpg'}} 700w,{{product.featured_image.src | img_url: '800x', format: 'pjpg'}} 800w"
+                                                data-srcset="{{product.featured_image.src | img_url: '500x'}} 500w,{{product.featured_image.src | img_url: '700x'}} 700w,{{product.featured_image.src | img_url: '800x'}} 800w"
                                             />
                                         </div>
                                     {%- endif -%}
                                 </div>
                             </div>
                             <div id="bxp-select_{{product.id}}_fig" class="bxp-sel-figure">
-                                <img id="bxp-select_{{product.id}}_img" src="{{product.featured_image.src | img_url: '300x', format: 'pjpg'}}" alt="{{escapedTitle}}" class="bxp-bldr-img-fluid"/>
+                                <img id="bxp-select_{{product.id}}_img" src="{{product.featured_image.src | img_url: '300x'}}" alt="{{escapedTitle}}" class="bxp-bldr-img-fluid"/>
                             </div>
                             {%- if showQty == 'true' -%}
                             <div class="bldr-dark-btn">
@@ -130,7 +130,7 @@
                                 <span class="bxp-bldr-item_price"><span class="bxp-bldr-add-text"></span> {{product.price | money}}</span>
                             {%- endif -%}
                             <strong>{{product.title}}</strong>
-                            <select class="bxp-bldr-form-control bxp-mt-10" img="{{product.featured_image.src | img_url: '300x', format: 'pjpg'}}" name="bxp-select_{{product.id}}" id="bxp-select_{{product.id}}">
+                            <select class="bxp-bldr-form-control bxp-mt-10" img="{{product.featured_image.src | img_url: '300x'}}" name="bxp-select_{{product.id}}" id="bxp-select_{{product.id}}">
                                 {%- if product.options.size > 1 -%}
                                     {%- assign label = "{{translate_select}}..." -%}
                                 {%- else -%}
@@ -138,7 +138,7 @@
                                 {%- endif -%}
                                 <option value="">{{label}}</option>
                                 {%- if product.images.size > 0 -%}
-                                    {%- assign useImage = product.featured_image.src | img_url: '300x' , format: 'pjpg'-%}
+                                    {%- assign useImage = product.featured_image.src | img_url: '300x' -%}
                                 {%- else -%}
                                     {%- assign useImage = 'https://builder-front.boxup.io/img/placeholder.png' -%}
                                 {%- endif -%}
@@ -150,7 +150,7 @@
                                         {%- assign title = product.title | append: " - " | append: variant.title | escape -%}
                                     {%- endif -%}
                                     {%- if variant.image.src -%}
-                                        {%- assign useImage = variant.image.src | img_url: '300x' , format: 'pjpg'-%}
+                                        {%- assign useImage = variant.image.src | img_url: '300x' -%}
                                     {%- endif -%} 
                                     {%- if variant.available or variant.inventory_policy == 'continue' -%}
                                         {%- if variant.inventory_management == 'shopify' -%}
@@ -174,7 +174,7 @@
             {% else %}
                 {% if product.images.size > 0 %}
                     {% assign useImage = product.featured_image.src %}
-                    {% assign useMaster = product.featured_image.src | img_url: '800x' , format: 'pjpg'%}
+                    {% assign useMaster = product.featured_image.src | img_url: '800x' %}
                     {% assign useImageId = product.featured_image.id %}
                 {% else %}
                     {% assign useImage = 'https://builder-front.boxup.io/img/placeholder.png' %}
@@ -189,7 +189,7 @@
                 {%- endif -%}
                 {%- if variant.image.src -%}
                     {%- assign useImage = variant.image.src -%}
-                    {%- assign useMaster = variant.image.src | img_url: '800x' , format: 'pjpg'-%}
+                    {%- assign useMaster = variant.image.src | img_url: '800x' -%}
                     {%- assign useImageId = variant.image.id -%}
                 {%- endif -%} 
                 {%- if variant.inventory_management == 'shopify' -%}
@@ -212,18 +212,18 @@
                                 <div class="bxp-owl-item">
                                     {%- if useLightbox == 'false' -%}
                                         <img 
-                                            data-src="{{useImage | img_url: '300x' , format: 'pjpg'}}" 
+                                            data-src="{{useImage | img_url: '300x' }}" 
                                             alt="{{title}}" 
                                             class="bxp-bldr-img-fluid owl-lazy bxp-lazyload"
-                                            data-srcset="{{useImage | img_url: '500x', format: 'pjpg'}} 500w,{{useImage | img_url: '700x', format: 'pjpg'}} 700w,{{useImage | img_url: '800x', format: 'pjpg'}} 800w"
+                                            data-srcset="{{useImage | img_url: '500x'}} 500w,{{useImage | img_url: '700x'}} 700w,{{useImage | img_url: '800x'}} 800w"
                                         />
                                     {%- else -%}
                                         <a href="#" image="{{useMaster}}" title-strip="{{ product.description | strip_html }}" title-desc="{{ product.description | escape }}">
                                             <img 
-                                                data-src="{{ useImage | img_url: '300x' , format: 'pjpg'}}" 
+                                                data-src="{{ useImage | img_url: '300x' }}" 
                                                 alt="{{title}}" 
                                                 class="bxp-bldr-img-fluid owl-lazy bxp-lazyload"
-                                                data-srcset="{{useImage | img_url: '500x', format: 'pjpg'}} 500w,{{useImage | img_url: '700x', format: 'pjpg'}} 700w,{{useImage | img_url: '800x', format: 'pjpg'}} 800w"
+                                                data-srcset="{{useImage | img_url: '500x'}} 500w,{{useImage | img_url: '700x'}} 700w,{{useImage | img_url: '800x'}} 800w"
                                             />
                                         </a>
                                     {%- endif -%}
@@ -234,18 +234,18 @@
                                             <div class="bxp-owl-item">
                                                 {%- if useLightbox == 'false' -%}
                                                 <img 
-                                                    data-src="{{image.src | img_url: '300x', format: 'pjpg'}}" 
+                                                    data-src="{{image.src | img_url: '300x'}}" 
                                                     alt="{{image.alt}}" 
                                                     class="bxp-bldr-img-fluid owl-lazy bxp-lazyload"
-                                                    data-srcset="{{image.src | img_url: '500x', format: 'pjpg'}} 500w,{{image.src | img_url: '700x', format: 'pjpg'}} 700w,{{image.src | img_url: '800x', format: 'pjpg'}} 800w"
+                                                    data-srcset="{{image.src | img_url: '500x'}} 500w,{{image.src | img_url: '700x'}} 700w,{{image.src | img_url: '800x'}} 800w"
                                                 />
                                                 {%- else -%}
-                                                    <a image="{{image.src | img_url: '800x', format: 'pjpg'}}">
+                                                    <a image="{{image.src | img_url: '800x'}}">
                                                         <img 
-                                                            data-src="{{image.src | img_url: '300x', format: 'pjpg'}}" 
+                                                            data-src="{{image.src | img_url: '300x'}}" 
                                                             alt="{{image.alt}}" 
                                                             class="bxp-bldr-img-fluid owl-lazy bxp-lazyload"
-                                                            data-srcset="{{image.src | img_url: '500x', format: 'pjpg'}} 500w,{{image.src | img_url: '700x', format: 'pjpg'}} 700w,{{image.src | img_url: '800x', format: 'pjpg'}} 800w"
+                                                            data-srcset="{{image.src | img_url: '500x'}} 500w,{{image.src | img_url: '700x'}} 700w,{{image.src | img_url: '800x'}} 800w"
                                                         />
                                                     </a>
                                                 {%- endif -%}
@@ -293,12 +293,12 @@
                 {% assign image = variant.image.src %}
                 {% if image %}
                     {% assign useImage = variant.image.src %}
-                    {% assign useMaster = variant.image.src | img_url: '800x' , format: 'pjpg'%}
+                    {% assign useMaster = variant.image.src | img_url: '800x' %}
                     {% assign useImageId = variant.image.id %}
                 {% else %}
                     {% if product.images.size > 0 %}
                         {% assign useImage = product.featured_image.src %}
-                        {% assign useMaster = product.featured_image.src | img_url: '800x' , format: 'pjpg'%}
+                        {% assign useMaster = product.featured_image.src | img_url: '800x' %}
                         {% assign useImageId = product.featured_image.id %}
                     {% else %}
                         {% assign useImage = 'https://builder-front.boxup.io/img/placeholder.png' %}
@@ -324,19 +324,19 @@
                           <div class="bxp-owl-item">
                             {% if useLightbox == 'false' %}
                             <img 
-                                 data-src="{{useImage | img_url: '300x', format: 'pjpg'}}" 
+                                 data-src="{{useImage | img_url: '300x'}}" 
                                  alt="{{title}}" 
                                  class="bxp-bldr-img-fluid owl-lazy bxp-lazyload"
-                                 data-srcset="{{useImage | img_url: '500x', format: 'pjpg'}} 500w,{{useImage | img_url: '700x', format: 'pjpg'}} 700w,{{useImage | img_url: '800x', format: 'pjpg'}} 800w"
+                                 data-srcset="{{useImage | img_url: '500x'}} 500w,{{useImage | img_url: '700x'}} 700w,{{useImage | img_url: '800x'}} 800w"
                                  />
                             {% else %}
                             <div class="bxp-overlay-icon"><span class='bxp-icon'></span></div>
                             <a href="#" image="{{useMaster}}" title-strip="{{ product.description | strip_html | escape }}" title-desc="{{ product.description | escape }}">
                               <img 
-                                   data-src="{{useImage | img_url: '300x', format: 'pjpg'}}" 
+                                   data-src="{{useImage | img_url: '300x'}}" 
                                    alt="{{title}}" 
                                    class="bxp-bldr-img-fluid owl-lazy bxp-lazyload"
-                                   data-srcset="{{useImage | img_url: '500x', format: 'pjpg'}} 500w,{{useImage | img_url: '700x', format: 'pjpg'}} 700w,{{useImage | img_url: '800x', format: 'pjpg'}} 800w"
+                                   data-srcset="{{useImage | img_url: '500x'}} 500w,{{useImage | img_url: '700x'}} 700w,{{useImage | img_url: '800x'}} 800w"
                                    />
                             </a>
                             {% endif %}
@@ -347,19 +347,19 @@
                           <div class="bxp-owl-item">
                             {% if useLightbox == 'false' %}
                             <img 
-                                 data-src="{{image.src | img_url: '300x', format: 'pjpg'}}" 
+                                 data-src="{{image.src | img_url: '300x'}}" 
                                  alt="{{image.alt}}" 
                                  class="bxp-bldr-img-fluid owl-lazy bxp-lazyload"
-                                 data-srcset="{{image.src | img_url: '500x', format: 'pjpg'}} 500w,{{image.src | img_url: '700x', format: 'pjpg'}} 700w,{{image.src | img_url: '800x', format: 'pjpg'}} 800w"
+                                 data-srcset="{{image.src | img_url: '500x'}} 500w,{{image.src | img_url: '700x'}} 700w,{{image.src | img_url: '800x'}} 800w"
                                  />
                             {% else %}
                             <div class="bxp-overlay-icon"><span class='bxp-icon'></span></div>
-                            <a href="#" image="{{image.src | img_url: '800x', format: 'pjpg'}}" title-strip="{{ product.description | strip_html }}" title-desc="{{ product.description | escape }}">
+                            <a href="#" image="{{image.src | img_url: '800x'}}" title-strip="{{ product.description | strip_html }}" title-desc="{{ product.description | escape }}">
                               <img 
-                                   data-src="{{image.src | img_url: '300x', format: 'pjpg'}}" 
+                                   data-src="{{image.src | img_url: '300x'}}" 
                                    alt="{{image.alt}}" 
                                    class="bxp-bldr-img-fluid owl-lazy bxp-lazyload"
-                                   data-srcset="{{image.src | img_url: '500x', format: 'pjpg'}} 500w,{{image.src | img_url: '700x', format: 'pjpg'}} 700w,{{image.src | img_url: '800x', format: 'pjpg'}} 800w"
+                                   data-srcset="{{image.src | img_url: '500x'}} 500w,{{image.src | img_url: '700x'}} 700w,{{image.src | img_url: '800x'}} 800w"
                                    />
                             </a>
                             {% endif %}
@@ -412,18 +412,18 @@
                                             <div class="bxp-owl-item">
                                                 {% if useLightbox == 'false' %}
                                                     <img 
-                                                        data-src="{{image.src | img_url: '300x', format: 'pjpg'}}" 
+                                                        data-src="{{image.src | img_url: '300x'}}" 
                                                         alt="{{image.alt}}" 
                                                         class="bxp-bldr-img-fluid owl-lazy bxp-lazyload"
-                                                        data-srcset="{{image.src | img_url: '500x', format: 'pjpg'}} 500w,{{image.src | img_url: '700x', format: 'pjpg'}} 700w,{{image.src | img_url: '800x', format: 'pjpg'}} 800w"
+                                                        data-srcset="{{image.src | img_url: '500x'}} 500w,{{image.src | img_url: '700x'}} 700w,{{image.src | img_url: '800x'}} 800w"
                                                     />
                                                 {% else %}
-                                                    <a href="#" image="{{image.src | img_url: '800x', format: 'pjpg'}}" title-strip="{{ product.description | strip_html }}" title-desc="{{ product.description | escape }}">
+                                                    <a href="#" image="{{image.src | img_url: '800x'}}" title-strip="{{ product.description | strip_html }}" title-desc="{{ product.description | escape }}">
                                                         <img 
-                                                            data-src="{{image.src | img_url: '300x', format: 'pjpg'}}" 
+                                                            data-src="{{image.src | img_url: '300x'}}" 
                                                             alt="{{image.alt}}" 
                                                             class="bxp-bldr-img-fluid owl-lazy bxp-lazyload"
-                                                            data-srcset="{{image.src | img_url: '500x', format: 'pjpg'}} 500w,{{image.src | img_url: '700x', format: 'pjpg'}} 700w,{{image.src | img_url: '800x', format: 'pjpg'}} 800w"
+                                                            data-srcset="{{image.src | img_url: '500x'}} 500w,{{image.src | img_url: '700x'}} 700w,{{image.src | img_url: '800x'}} 800w"
                                                         />
                                                     </a>
                                                 {% endif %}
@@ -433,18 +433,18 @@
                                     <div class="bxp-owl-item">
                                         {% if useLightbox == 'false' %}
                                             <img 
-                                                data-src="{{product.featured_image.src | img_url: '300x', format: 'pjpg'}}" 
+                                                data-src="{{product.featured_image.src | img_url: '300x'}}" 
                                                 alt="{{product.title}}" 
                                                 class="bxp-bldr-img-fluid owl-lazy bxp-lazyload"
-                                                data-srcset="{{product.featured_image.src | img_url: '500x', format: 'pjpg'}} 500w,{{product.featured_image.src | img_url: '700x', format: 'pjpg'}} 700w,{{product.featured_image.src | img_url: '800x', format: 'pjpg'}} 800w"
+                                                data-srcset="{{product.featured_image.src | img_url: '500x'}} 500w,{{product.featured_image.src | img_url: '700x'}} 700w,{{product.featured_image.src | img_url: '800x'}} 800w"
                                             />
                                         {% else %}
-                                            <a image="{{product.featured_image.src | img_url: '800x', format: 'pjpg'}}" title-strip="{{ product.description | strip_html }}" title-desc="{{ product.description | escape }}">
+                                            <a image="{{product.featured_image.src | img_url: '800x'}}" title-strip="{{ product.description | strip_html }}" title-desc="{{ product.description | escape }}">
                                                 <img 
-                                                    data-src="{{product.featured_image.src | img_url: '300x', format: 'pjpg'}}" 
+                                                    data-src="{{product.featured_image.src | img_url: '300x'}}" 
                                                     alt="{{product.title}}" 
                                                     class="bxp-bldr-img-fluid owl-lazy bxp-lazyload"
-                                                    data-srcset="{{product.featured_image.src | img_url: '500x', format: 'pjpg'}} 500w,{{product.featured_image.src | img_url: '700x', format: 'pjpg'}} 700w,{{product.featured_image.src | img_url: '800x', format: 'pjpg'}} 800w"
+                                                    data-srcset="{{product.featured_image.src | img_url: '500x'}} 500w,{{product.featured_image.src | img_url: '700x'}} 700w,{{product.featured_image.src | img_url: '800x'}} 800w"
                                                 />
                                             </a>
                                         {% endif %}
@@ -453,7 +453,7 @@
                                 </div>
                             </figure>
                             <figure id="bxp-select_{{product.id}}_fig" class="bxp-sel-figure">
-                                <img id="bxp-select_{{product.id}}_img" src="{{product.featured_image.src | img_url: '300x', format: 'pjpg'}}" alt="{{product.title}}" class="bxp-bldr-img-fluid"/>
+                                <img id="bxp-select_{{product.id}}_img" src="{{product.featured_image.src | img_url: '300x'}}" alt="{{product.title}}" class="bxp-bldr-img-fluid"/>
                             </figure>
                             {% if showQty == 'true' %}
                             <div class="bldr-dark-btn">
@@ -476,7 +476,7 @@
                                 {% endif %}
                                 <option value="">{{label}}</option>
                                 {% if product.images.size > 0 %}
-                                    {% assign useImage = product.featured_image.src | img_url: '300x' , format: 'pjpg'%}
+                                    {% assign useImage = product.featured_image.src | img_url: '300x' %}
                                 {% else %}
                                     {% assign useImage = 'https://builder-front.boxup.io/img/placeholder.png' %}
                                 {% endif %}
@@ -488,7 +488,7 @@
                                         {% assign title = product.title | append: " - " | append: variant.title %}
                                     {% endif %}
                                     {% if variant.image.src %}
-                                        {% assign useImage = variant.image.src | img_url: '300x' , format: 'pjpg'%}
+                                        {% assign useImage = variant.image.src | img_url: '300x' %}
                                     {% endif %} 
                                     {% if variant.available or variant.inventory_policy == 'continue' %}
                                         {% if variant.inventory_management == 'shopify' %}
@@ -510,8 +510,8 @@
                     </div> 
                 {% else %}
                     {% if product.images.size > 0 %}
-                        {% assign useImage = product.featured_image.src | img_url: '300x' , format: 'pjpg'%}
-                        {% assign useMaster = product.featured_image.src | img_url: '800x' , format: 'pjpg'%}
+                        {% assign useImage = product.featured_image.src | img_url: '300x' %}
+                        {% assign useMaster = product.featured_image.src | img_url: '800x' %}
                         {% assign useImageId = product.featured_image.id %}
                     {% else %}
                         {% assign useImage = 'https://builder-front.boxup.io/img/placeholder.png' %}
@@ -525,8 +525,8 @@
                         {% assign title = product.title | append: " - " | append: variant.title %}
                     {% endif %}
                     {% if variant.image.src %}
-                        {% assign useImage = variant.image.src | img_url: '300x' , format: 'pjpg'%}
-                        {% assign useMaster = variant.image.src | img_url: '800x' , format: 'pjpg'%}
+                        {% assign useImage = variant.image.src | img_url: '300x' %}
+                        {% assign useMaster = variant.image.src | img_url: '800x' %}
                         {% assign useImageId = variant.image.id %}
                     {% endif %} 
                     {% if variant.inventory_management == 'shopify' %}
@@ -558,10 +558,10 @@
                                         {% if useImageId != image.id %}
                                             <div class="bxp-owl-item">
                                                 {% if useLightbox == 'false' %}
-                                                    <img data-src="{{image.src | img_url: '300x', format: 'pjpg'}}" alt="{{image.alt}}" class="bxp-bldr-img-fluid owl-lazy"/>
+                                                    <img data-src="{{image.src | img_url: '300x'}}" alt="{{image.alt}}" class="bxp-bldr-img-fluid owl-lazy"/>
                                                 {% else %}
-                                                    <a href="#" image="{{image.src | img_url: '800x', format: 'pjpg'}}" title-strip="{{ product.description | strip_html }}" title-desc="{{ product.description | escape }}">
-                                                        <img src="{{image.src | img_url: '300x', format: 'pjpg'}}" alt="{{image.alt}}" class="bxp-bldr-img-fluid owl-lazy"/>
+                                                    <a href="#" image="{{image.src | img_url: '800x'}}" title-strip="{{ product.description | strip_html }}" title-desc="{{ product.description | escape }}">
+                                                        <img src="{{image.src | img_url: '300x'}}" alt="{{image.alt}}" class="bxp-bldr-img-fluid owl-lazy"/>
                                                     </a>
                                                 {% endif %}
                                             </div>
@@ -611,13 +611,13 @@
                     {% endif %}
                     {% assign image = variant.image.src %}
                     {% if image %}
-                        {% assign useImage = variant.image.src | img_url: '300x', format: 'pjpg' %}
-                        {% assign useMaster = variant.image.src | img_url: '800x' , format: 'pjpg'%}
+                        {% assign useImage = variant.image.src | img_url: '300x' %}
+                        {% assign useMaster = variant.image.src | img_url: '800x' %}
                         {% assign useImageId = variant.image.id %}
                     {% else %}
                         {% if product.images.size > 0 %}
-                            {% assign useImage = product.featured_image.src | img_url: '300x' , format: 'pjpg'%}
-                            {% assign useMaster = product.featured_image.src | img_url: '800x' , format: 'pjpg'%}
+                            {% assign useImage = product.featured_image.src | img_url: '300x' %}
+                            {% assign useMaster = product.featured_image.src | img_url: '800x' %}
                             {% assign useImageId = product.featured_image.id %}
                         {% else %}
                             {% assign useImage = 'https://builder-front.boxup.io/img/placeholder.png' %}
@@ -654,10 +654,10 @@
                                             {% if useImageId != image.id %}
                                                 <div class="bxp-owl-item">
                                                     {% if useLightbox == 'false' %}
-                                                        <img data-src="{{image.src | img_url: '300x', format: 'pjpg'}}" alt="{{image.alt}}" class="bxp-bldr-img-fluid owl-lazy"/> 
+                                                        <img data-src="{{image.src | img_url: '300x'}}" alt="{{image.alt}}" class="bxp-bldr-img-fluid owl-lazy"/> 
                                                     {% else %}
-                                                        <a href="#" image="{{image.src | img_url: '800x', format: 'pjpg'}}" title-strip="{{ product.description | strip_html }}" title-desc="{{ product.description | escape }}">
-                                                            <img data-src="{{image.src | img_url: '300x', format: 'pjpg'}}" alt="{{image.alt}}" class="bxp-bldr-img-fluid owl-lazy"/>
+                                                        <a href="#" image="{{image.src | img_url: '800x'}}" title-strip="{{ product.description | strip_html }}" title-desc="{{ product.description | escape }}">
+                                                            <img data-src="{{image.src | img_url: '300x'}}" alt="{{image.alt}}" class="bxp-bldr-img-fluid owl-lazy"/>
                                                         </a>
                                                     {% endif %}
                                                 </div>

@@ -28,16 +28,16 @@
 <!-- <a href="https://plumgoodness.com/pages/candy-crush" style="float:left;"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/Game-zone_LP_Desktop.jpg?v=1656231181" alt"sale"></a> -->
 <style>
   div#shopify-section-counter-bottom{
-  background-image:url({{ section.settings.bg-image | img_url: 'master', format: 'pjpg'}}); background-size:cover;
+  background-image:url({{ section.settings.bg-image | img_url: 'master'}}); background-size:cover;
   }.counter_text{
-  background-image:url({{section.settings.gif_image | img_url: 'master', format: 'pjpg'}}); background-size:cover;
+  background-image:url({{section.settings.gif_image | img_url: 'master'}}); background-size:cover;
   }
   
   @media (max-width:767px){
     div#shopify-section-counter-bottom{
-      background-image:url({{ section.settings.bg-image-mob | img_url: 'master', format: 'pjpg'}}); background-size:cover;
+      background-image:url({{ section.settings.bg-image-mob | img_url: 'master'}}); background-size:cover;
     }.counter_text{
-      background-image:url({{section.settings.gif_image_mob | img_url: 'master', format: 'pjpg'}}); background-size:cover;
+      background-image:url({{section.settings.gif_image_mob | img_url: 'master'}}); background-size:cover;
     }  
   }
   

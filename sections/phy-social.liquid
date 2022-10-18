@@ -7,9 +7,9 @@
   <div class="row">
   {% for block in section.blocks %}
  <div class="col-sm-2 col-lg-2 col-md-2">
-    <a rel="nofollow" href="{{ block.settings.link }}" class="">
-    <img class="banner-image desktop-xs lazyautosizes lazyload" data-src="{{ block.settings.image_desk | img_url: 'master' , format: 'pjpg'}}" src="{{ block.settings.image_desk | img_url: 'master' , format: 'pjpg'}}">
-    <img class="banner-image mobile-xs lazyautosizes lazyload" data-src="{{ block.settings.image_mobile | img_url: 'master' , format: 'pjpg'}}" src="{{ block.settings.image_mobile | img_url: 'master' , format: 'pjpg'}}">
+    <a href="{{ block.settings.link }}" class="">
+    <img class="banner-image desktop-xs lazyautosizes lazyload" data-src="{{ block.settings.image_desk | img_url: 'master' }}" src="{{ block.settings.image_desk | img_url: 'master' }}">
+    <img class="banner-image mobile-xs lazyautosizes lazyload" data-src="{{ block.settings.image_mobile | img_url: 'master' }}" src="{{ block.settings.image_mobile | img_url: 'master' }}">
     </a>
   </div>
   {% endfor %}

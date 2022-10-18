@@ -1,5 +1,16 @@
-<div class="video_blocks">
- 
+
+{{ 'pagination-Vlog.js' | asset_url | script_tag }}
+{{'Vlog-page.css' | asset_url | stylesheet_tag}}
+<div class="page-tpl">
+  <div class="container">
+    {% include 'breadcrumb' %}
+
+    <header class="page-header">
+      <h2>
+        {% include 'multilang' with page.title %}
+      </h2>      
+    </header>
+<div class="video_blocks"> 
       <ul class="list-vlog row"> 
          {% for block in section.blocks %}
        <li class="listing-vlog col-md-4 col-sm-6">         
@@ -18,13 +29,6 @@
          {% if block.settings.link != blank%}
          <input class="videourl" type="hidden" data-url="{{ block.settings.link }}"> 
          {% endif %}
-
-         {% comment %}    
-         {% if block.settings.product != blank%}
-         {% assign product = block.settings.product %}
-         {% include 'product-item-video-cart' with product%}   
-         {% endif %}
-         {% endcomment %} 
        </li>
         {% endfor %}
     </ul>
@@ -40,7 +44,8 @@
 </div></div></div>
 
 <div class="overlay_popup"></div>
-
+ </div>
+</div>
 {% schema %}
   {
     "name": "Add Videos",
@@ -74,7 +79,7 @@
     ],
     "presets": [
       {
-        "name": "Videos",
+        "name": "Vlog Videos Blocks",
         "category": "Advanced layout",
         "blocks": [
           {

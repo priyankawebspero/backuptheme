@@ -58,7 +58,9 @@
         {% endif %}
       </div>
 
-<script> 
+<script>
+  
+  
     // Adding the Active box Info
     var flavour_image = $('.swatch-options ul').find('.active_li .image_box_min').html();
     var flavour_info = $('.swatch-options ul').find('.active_li .flavour_tooltip').html();
@@ -112,14 +114,14 @@
               
               $('.product_title_box').replaceWith(Title);
               $('#product-variants').replaceWith(productVariants);
-              $('.price_info_box').html(priceInfoBox);
+              $('.price_info_box').replaceWith(priceInfoBox);
               $('.cart_wish').replaceWith(wishList);
               $('.product-photos').replaceWith(gallery);
               $('.visible_mobile .short-desc-datas').replaceWith(mobileDesacription);
               $('#collapse-tab1 .inside_tab').replaceWith(tab1);
               $('#collapse-tab2 .inside_tab').replaceWith(tab2);
               $('#collapse-tab3 .inside_tab').replaceWith(tab3);
-              $('.tab-content #judgeme_product_reviews').html(reviews);
+              $('.tab-content #judgeme_product_reviews').replaceWith(reviews);
               $('.tab-content #simpAskQuestion').replaceWith(qusetionBlcok);
               
 
@@ -154,30 +156,11 @@
                              }
                             ]
               });
-              var customerView = $('.product-shop [data-customer-view]');   
-                  if (customerView.length) {
-                    customerView.each(function () {
-                      var self = $(this);
-                      var views = self.data('customer-view').split(","),
-                       i = Math.floor(Math.random() * views.length);          
-                       self.find('label').text(views[i]);                      
-                      setInterval(function () {
-                        var views = self.data('customer-view').split(","),
-                            i = Math.floor(Math.random() * views.length);
-              
-                        self.find('label').text(views[i]);
-                      }, 100000);
-                    });
-                  }
+
               
              // ella.doAddOrRemoveWishlish();
-              setTimeout(() => {
-            console.log('jdgInit');
-          setTimeout(() => {
-                     jdgmCacheServer.reloadAll();
-                }, 1000)
-              jdgmCacheServer.reloadAll();
-            }, 100);
+              jdgm.initializeWidgets();
+              
             },
             complete: function() {
               $('.loading-modal').hide();
@@ -197,16 +180,6 @@
 <style>
   li.swatch_list.active_li {
     pointer-events: none;
-}.price_info_box .price_info_box {
-    border: none !important;
-    margin: 0;
-    padding: 0;
 }
-.jdgm-paginate__last-page:before {
-    content: '\e006';
-    font-size: 0;
-}.jdgm-paginate__first-page:before {
-    content: '\e004';
-    font-size: 0;
-}
+
   </style>

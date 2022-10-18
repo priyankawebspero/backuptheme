@@ -20,10 +20,10 @@
        {% for block in section.blocks %}             
      {%- if block.settings.columns == 'one half size' -%}
           {%- assign column_size = 'col-12 col-md-8' -%}
-         {% if block.settings.image_desk != blank %}{%- assign img_url = block.settings.image_desk | img_url: '770x' , format: 'pjpg'-%}{%- assign img_url_1 = block.settings.image_mob | img_url: '800x' -%}{% endif %}
+         {% if block.settings.image_desk != blank %}{%- assign img_url = block.settings.image_desk | img_url: '770x' -%}{%- assign img_url_1 = block.settings.image_mob | img_url: '800x' -%}{% endif %}
         {% else %}
           {%- assign column_size = 'col-6 col-md-6 col-lg-4' -%}
-         {% if block.settings.image_desk != blank %}{%- assign img_url = block.settings.image_desk | img_url: '400x' , format: 'pjpg'-%}{%- assign img_url_1 = block.settings.image_mob | img_url: '400x' -%}{% endif %}
+         {% if block.settings.image_desk != blank %}{%- assign img_url = block.settings.image_desk | img_url: '400x' -%}{%- assign img_url_1 = block.settings.image_mob | img_url: '400x' -%}{% endif %}
         {%- endif -%}
       <div class="{{ column_size }}">
         <div class="spotlight-item">

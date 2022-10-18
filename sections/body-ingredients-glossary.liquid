@@ -6,9 +6,9 @@
           <div class="col-md-4">
             <div class="img-wrap"> 
               {% if block.settings.image != blank %}
-              <img class="img-fluid lazyautosizes lazyloaded" data-src="{{ block.settings.image | img_url:"148x" , format: 'pjpg'}}" src="{{ block.settings.image | img_url:"148x" , format: 'pjpg'}}" alt="{{ block.settings.title }}" /> 
+              <img class="img-fluid lazyautosizes lazyloaded" data-src="{{ block.settings.image | img_url:"148x" }}" src="{{ block.settings.image | img_url:"148x" }}" alt="{{ block.settings.title }}" /> 
               {% else %}
-              <img class="img-fluid lazyautosizes lazyloaded" data-src="{{ block.settings.image | img_url:"148x" , format: 'pjpg'}}" src="{{ "tea.png" | file_img_url:"148x" , format: 'pjpg'}}" alt="{{ block.settings.title }}" /> 
+              <img class="img-fluid lazyautosizes lazyloaded" data-src="{{ block.settings.image | img_url:"148x" }}" src="{{ "tea.png" | file_img_url:"148x" }}" alt="{{ block.settings.title }}" /> 
               {% endif %}
             </div>
           </div>

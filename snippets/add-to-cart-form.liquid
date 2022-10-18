@@ -26,7 +26,7 @@
   <div class="cart {% if not_in_cart %}disable{% endif %}">
   <input type="hidden" name="id" value="{{ product.variants[0].id }}" />
   <input type="hidden" name="quantity" value="1" />
-  <button data-btn-addToCart class="btn add-to-cart-btn cartbutton add-to-cart-btnload" type="submit" data-form-id="#{{id}}-{{ product.id }}" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{% endif %} onclick="quoraPixel(); scq('Add to cart', 'pre_defined'); pixelCode();">
+  <button data-btn-addToCart class="btn add-to-cart-btn cartbutton" type="submit" data-form-id="#{{id}}-{{ product.id }}" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{% endif %} onclick="quoraPixel(); scq('Add to cart', 'pre_defined'); pixelCode();">
     {{ 'products.product.add_to_cart' | t }}
   </button>
   </div>
