@@ -1,7 +1,7 @@
 {% if section.settings.image_1 != blank %}
 <div class="uns_hero_static">
-  <img src="{{ section.settings.image_1 | img_url:'master' }}" class="slide-desktop">
-   <img src="{{ section.settings.image_picker_mobile | img_url:'master' }}" class="slide-mobile" style="display:none;">
+  <img src="{{ section.settings.image_1 | img_url:'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" class="slide-desktop">
+   <img src="{{ section.settings.image_picker_mobile | img_url:'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" class="slide-mobile" style="display:none;">
 </div>
 {% endif %}
 

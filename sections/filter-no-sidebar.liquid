@@ -108,7 +108,7 @@
                     {% capture color %}color_img_{{ i }}{% endcapture %}
 
                     {% if block.settings[color] != blank %}
-                    {%- assign img_url = block.settings[color] | img_url: '30x30' -%}
+                    {%- assign img_url = block.settings[color] | img_url: '30x30'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
                     {% else %}
                     {%- assign img_url = '' -%}
                     {% endif %}

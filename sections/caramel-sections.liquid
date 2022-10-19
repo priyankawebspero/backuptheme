@@ -3,7 +3,7 @@
     {% case block.type %}
     {% when 'video-slide' %}
     {% when 'image-slide' %}
-    <div class="second section" id="section-{{block.id}}" style="background-image:url('https://cdn.shopify.com/s/files/1/0390/2985/files/caramel_liquid_lo_min.png?v=1647341544');background-size: cover;" >
+    <div class="second section" id="section-{{block.id}}" style="background-image:url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/caramel_liquid_lo_min.png?v=1647341544');background-size: cover;" >
       <div class="cs_container">
       <div class="first_inner">
         <div class="caramel-video">  
@@ -12,13 +12,13 @@
           </div>  
         </div> 
     
-       {% if block.settings.heading != blank%} <img class="im_p_cs_text" src="{{ block.settings.heading | img_url: 'master' }}"  alt="{{block.settings.heading.alt}}"> {% endif %}
-       {% if block.settings.top_img != blank%} <img class="im_p_cs_sale" src="{{ block.settings.top_img | img_url: 'master' }}"  alt="{{block.settings.top_img.alt}}"> {% endif %}
+       {% if block.settings.heading != blank%} <img class="im_p_cs_text" src="{{ block.settings.heading | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{block.settings.heading.alt}}"> {% endif %}
+       {% if block.settings.top_img != blank%} <img class="im_p_cs_sale" src="{{ block.settings.top_img | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{block.settings.top_img.alt}}"> {% endif %}
       <div class="pro-quality_im_pl">
         <div class="row">
-          {% if block.settings.col_first != blank%} <div class="col-md-4 col-sm-4"><a href="{{ block.settings.col_f_url}}"><img src="{{ block.settings.col_first | img_url: 'master' }}"  alt="{{block.settings.col_first.alt}}"></a></div> {% endif %}
-          {% if block.settings.col_second != blank%} <div class="col-md-4 col-sm-4"><a href="{{ block.settings.col_s_url}}"><img src="{{ block.settings.col_second | img_url: 'master' }}"  alt="{{block.settings.col_second.alt}}"></a></div> {% endif %}
-          {% if block.settings.col_third != blank%} <div class="col-md-4 col-sm-4"><a href="{{ block.settings.col_t_url}}"><img src="{{ block.settings.col_third | img_url: 'master' }}"  alt="{{block.settings.col_third.alt}}"></a></div> {% endif %}
+          {% if block.settings.col_first != blank%} <div class="col-md-4 col-sm-4"><a href="{{ block.settings.col_f_url}}"><img src="{{ block.settings.col_first | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{block.settings.col_first.alt}}"></a></div> {% endif %}
+          {% if block.settings.col_second != blank%} <div class="col-md-4 col-sm-4"><a href="{{ block.settings.col_s_url}}"><img src="{{ block.settings.col_second | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{block.settings.col_second.alt}}"></a></div> {% endif %}
+          {% if block.settings.col_third != blank%} <div class="col-md-4 col-sm-4"><a href="{{ block.settings.col_t_url}}"><img src="{{ block.settings.col_third | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{block.settings.col_third.alt}}"></a></div> {% endif %}
       </div></div>
       </div></div>
     </div>
@@ -26,8 +26,8 @@
     <div class="sale-products" id="section-{{block.id}}">
       <div class="sale-products_cs_contain">
          <div class="products_cs_contain-inner">
-     {% if block.settings.banner_img != blank%} <img class="pd-sal_bn" src="{{ block.settings.banner_img | img_url: 'master' }}"  alt="{{block.settings.banner_img.alt}}">{% endif %}
-      {% if block.settings.offer_image != blank%}<img class="pd-sal_bn-text" src="{{ block.settings.offer_image | img_url: 'master' }}"  alt="{{block.settings.offer_image.alt}}">{% endif %}
+     {% if block.settings.banner_img != blank%} <img class="pd-sal_bn" src="{{ block.settings.banner_img | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{block.settings.banner_img.alt}}">{% endif %}
+      {% if block.settings.offer_image != blank%}<img class="pd-sal_bn-text" src="{{ block.settings.offer_image | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{block.settings.offer_image.alt}}">{% endif %}
       {{block.settings.offer_text}}
       <div class="container">        
         <div class="row">
@@ -51,8 +51,8 @@
     <div class="popcorn-inner-sec">
       <div class="popcorn">
         {% if block.settings.Gif_image_before != blank%}
-        <img class="before" src="{{ block.settings.Gif_image_before | img_url: 'master' }}"  alt="{{block.settings.Gif_image_before.alt}}">
-        <img class="after" src="{{ block.settings.Gif_image_after | img_url: 'master' }}"  alt="{{block.settings.Gif_image_after.alt}}">
+        <img class="before" src="{{ block.settings.Gif_image_before | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{block.settings.Gif_image_before.alt}}">
+        <img class="after" src="{{ block.settings.Gif_image_after | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{block.settings.Gif_image_after.alt}}">
         {% endif %}
       </div>
     </div>
@@ -75,7 +75,7 @@
   </div>
     {% endcase %}
     {% endfor %}
-  <div class="bottom-popcorn" style="background-image:url('https://cdn.shopify.com/s/files/1/0390/2985/files/popcorn_bottom_caramel_pl_bg_1.png?v=1647341824');background-size: cover;" ></div>
+  <div class="bottom-popcorn" style="background-image:url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/popcorn_bottom_caramel_pl_bg_1.png?v=1647341824');background-size: cover;" ></div>
 </div>
 
 {% schema %}

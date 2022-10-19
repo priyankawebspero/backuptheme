@@ -29,7 +29,7 @@
                     <div class="images-contain">
                         {% if block.settings.image_slide != blank %}
 
-                        {%- assign img_url = block.settings.image_slide | img_url: 'master' -%}
+                        {%- assign img_url = block.settings.image_slide | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
  
                         <a {% if block.settings.lb_product_1 != blank or block.settings.lb_product_2 != blank or block.settings.lb_product_3 != blank %}href="javascript:void(0)"{% else %}href="{{ block.settings.link }}"{% endif %} class="slide-image home_banner">
                             <img data-src="{{ img_url }}"
@@ -38,7 +38,7 @@
 
                             {% if block.settings.image_slide_mb != blank %}
 
-                            {%- assign img_url_mb = block.settings.image_slide_mb | img_url: 'master' -%}
+                            {%- assign img_url_mb = block.settings.image_slide_mb | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
 
                             <img data-src="{{ img_url_mb }}"
                                 src="https:{{ img_url_mb }}" alt="{{ block.settings.image_slide_mb.alt | default: shop.name }}" itemprop="logo"

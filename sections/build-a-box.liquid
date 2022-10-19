@@ -1,8 +1,8 @@
 {{ 'build-a-box.css' | asset_url | stylesheet_tag }} 
 <div class="page-tpl">
   <div class="container-fluid">{% if section.settings.banner_image != blank %}            
-  {%- assign img_url = section.settings.banner_image | img_url: 'master' -%}
-  {%- assign img_url_mobile = section.settings.banner_image_mb | img_url: 'master' -%}
+  {%- assign img_url = section.settings.banner_image | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+  {%- assign img_url_mobile = section.settings.banner_image_mb | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
   <img data-src="{{ img_url }}"
        src="https:{{ img_url }}" alt="{{ section.settings.image.alt | default: shop.name }}" itemprop="logo"
        class="lazyautosizes lazyload desktop" data-sizes="auto">
@@ -23,8 +23,8 @@
         <div class="spotlight-item">
           <div class="img-box">
               {% if block.settings.image != blank %}            
-            {%- assign img_url = block.settings.image | img_url: 'master' -%}
-            {%- assign img_url_mobile = block.settings.image_mob | img_url: 'master' -%}
+            {%- assign img_url = block.settings.image | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+            {%- assign img_url_mobile = block.settings.image_mob | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
               <img data-src="{{ img_url }}"
                    src="https:{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"
                    class="lazyautosizes lazyload desktop" data-sizes="auto">
@@ -68,8 +68,8 @@
          <div class="spotlight-item">
           <div class="img-box">
               {% if block.settings.image_2 != blank %}            
-              {%- assign img_url = block.settings.image_2 | img_url: 'master' -%}
-              {%- assign img_url_mobile = block.settings.image_mob_new | img_url: 'master' -%}
+              {%- assign img_url = block.settings.image_2 | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+              {%- assign img_url_mobile = block.settings.image_mob_new | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
               <img data-src="{{ img_url }}"
                    src="https:{{ img_url }}" alt="{{ block.settings.image_2.alt | default: shop.name }}" itemprop="logo"
                    class="lazyautosizes lazyload desktop" data-sizes="auto">

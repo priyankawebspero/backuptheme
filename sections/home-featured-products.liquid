@@ -24,11 +24,11 @@
         <div class="column-banner-inner">
           <div class="img-box">
             <a href="{{ section.settings.link }}">
-              {%- assign img_url = section.settings.image | img_url: '800x' -%}
+              {%- assign img_url = section.settings.image | img_url: '800x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
               {% if section.settings.image != blank %}
               <img data-src="{{ img_url }}"
                    src="{{ img_url }}" alt="{{ section.settings.image.alt | default: shop.name }}" itemprop="logo"
-                   class="lazyautosizes lazyloaded" data-sizes="auto">
+                   class="lazyautosizes lazyload" data-sizes="auto">
               {% else %}
               <div class="not_img">
                 725 x 640px

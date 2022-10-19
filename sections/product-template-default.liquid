@@ -15,8 +15,8 @@
             <div class="product-photo-container p-slider-s">
               {% for image in product.images %}
               <div class="thumb filter-{{ image.alt | handle }}">
-                <a data-zoom class="fancybox" rel="gallery1" href="{{ image | img_url: 'original' }}" data-fancybox="images">
-                  <img id="product-featured-image-{{image.id}}" src="{{ image | img_url: '750x' }}" alt="{{ image.alt | escape }}"
+                <a data-zoom class="fancybox" rel="gallery1" href="{{ image | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" data-fancybox="images">
+                  <img id="product-featured-image-{{image.id}}" src="{{ image | img_url: '750x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ image.alt | escape }}"
                         class="lazyautosizes lazyload"
                         data-src="{{ image | img_url: '750x' }}"
                         data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
@@ -32,8 +32,8 @@
           <div class="p-slider-n" data-rows="5" data-vertical="{% if section.settings.style_moreview == 'horizontal' %}false{% else %}true{% endif %}">
             {% for image in product.images %}
             <div class="item filter-{{ image.alt | handle }}">
-              <a href="javascript:void(0)" data-image="{{ image.src | product_img_url: '80x' }}" data-zoom-image="{{ image.src | product_img_url: 'original' }}">
-                <img data-src="{{ image.src | product_img_url: '80x' }}" src="{{ image.src | product_img_url: '80x' }}" alt="{{ image.alt | escape }}" class="lazyautosizes lazyload">
+              <a href="javascript:void(0)" data-image="{{ image.src | product_img_url: '80x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" data-zoom-image="{{ image.src | product_img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}">
+                <img data-src="{{ image.src | product_img_url: '80x' }}" src="{{ image.src | product_img_url: '80x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ image.alt | escape }}" class="lazyautosizes lazyload">
               </a>
             </div>
             {% endfor %}

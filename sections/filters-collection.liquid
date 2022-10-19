@@ -155,7 +155,7 @@
                     {% capture color %}color_img_{{ i }}{% endcapture %}
 
                     {% if block.settings[color] != blank %}
-                    {%- assign img_url = block.settings[color] | img_url: '30x30' -%}
+                    {%- assign img_url = block.settings[color] | img_url: '30x30' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' -%}
                     {% else %}
                     {%- assign img_url = '' -%}
                     {% endif %}
@@ -168,7 +168,7 @@
                         <input type="checkbox" value="{{ tag_value }}" {% if current_tags contains tag %}checked{% endif %}/>
 
                         <a href="javascript:void(0)" {% if current_tags contains tag %}class="active"{% endif %} title="{{tag}}">
-                            <img data-src="{{ img_url }}" src="{{ img_url }}" alt="" class="lazyautosizes lazyloaded">
+                            <img data-src="{{ img_url }}" src="{{ img_url }}" alt="" class="lazyautosizes lazyload">
                         </a>
                     </li>
                     {% endif %}
@@ -308,14 +308,14 @@
     {% if section.settings.enable_img_1 %}
     <div class="widget sidebar-banner">
         {% if section.settings.image_img_1 != blank %}
-        {%- assign img_url = section.settings.image_img_1 | img_url: 'original', crop: 'center' -%}
+        {%- assign img_url = section.settings.image_img_1 | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' -%}
 
         {% if section.settings.link_img_1 != blank %}
         <a class="animate-scale" href="{{ section.settings.link_img_1 }}">
         {% endif %}
         <img data-src="{{ img_url }}"
             src="{{ img_url }}" alt="{{ section.settings.image_img_1.alt | default: shop.name }}"
-            class="lazyautosizes lazyloaded" data-sizes="auto">
+            class="lazyautosizes lazyload" data-sizes="auto">
         {% if section.settings.link_img_1 != blank %}
         </a>
         {% endif %}
@@ -331,14 +331,14 @@
     {% if section.settings.enable_img_2 %}
     <div class="widget sidebar-banner">
         {% if section.settings.image_img_2 != blank %}
-        {%- assign img_url = section.settings.image_img_2 | img_url: 'original', crop: 'center' -%}
+        {%- assign img_url = section.settings.image_img_2 | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' -%}
 
         {% if section.settings.link_img_2 != blank %}
         <a class="animate-scale" href="{{ section.settings.link_img_2 }}">
         {% endif %}
         <img data-src="{{ img_url }}"
             src="{{ img_url }}" alt="{{ section.settings.image_img_2.alt | default: shop.name }}"
-            class="lazyautosizes lazyloaded" data-sizes="auto">
+            class="lazyautosizes lazyload" data-sizes="auto">
         {% if section.settings.link_img_2 != blank %}
         </a>
         {% endif %}

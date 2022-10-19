@@ -17,11 +17,11 @@
         <div class="custom-block-image">
           <div class="img-box">
             <a href="{{ block.settings.link }}" class="animate-scale">
-              {%- assign img_url = block.settings.image | img_url: '600x', crop: 'center' -%}
+              {%- assign img_url = block.settings.image | img_url: '600x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' -%}
               {% if block.settings.image != blank %}
               <img data-src="{{ img_url }}"
                    src="{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"
-                   class="lazyautosizes lazyloaded" data-sizes="auto">
+                   class="lazyautosizes lazyload" data-sizes="auto">
               {% else %}
               <div class="not_img">
                 320 x 420px

@@ -52,12 +52,12 @@
           {%- for i in (1..10) -%}
           {%- capture imageGallery %}image_{{i}}{% endcapture -%}
           {%- if block.settings[imageGallery] != blank -%}
-            {%- unless forloop.first -%},{%- endunless -%}{{block.settings[imageGallery] | img_url:'master'}}
+            {%- unless forloop.first -%},{%- endunless -%}{{block.settings[imageGallery] | img_url:'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' }}
           {%- endif -%}
           {%- endfor -%}
         ">
           {% if block.settings.thumbernail != blank %}
-          <img data-src="{{block.settings.thumbernail | img_url:'800x800'}}" src="{{block.settings.thumbernail | img_url:'800x800'}}" alt="{{block.settings.title}}" class="lazyautosizes lazyloaded">
+          <img data-src="{{block.settings.thumbernail | img_url:'800x800'}}" src="{{block.settings.thumbernail | img_url:'800x800' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{block.settings.title}}" class="lazyautosizes lazyload">
           {% else %}
           <div class="not_img">
             300 x 400 px

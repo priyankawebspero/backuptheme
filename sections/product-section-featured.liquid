@@ -4,13 +4,13 @@
 <div class="item" id="banner-{{block.id}}">
   <div class="images-contain">
     {% if block.settings.image_slide != blank %}
-    {%- assign img_url = block.settings.image_slide | img_url: 'master' -%}                       
+    {%- assign img_url = block.settings.image_slide | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}                       
     <img data-src="{{ img_url }}"
          src="https:{{ img_url }}" alt="{{ block.settings.image_slide.alt | default: shop.name }}" 
          class="lazyautosizes lazyload{% if block.settings.image_slide_mb != blank %} slide-pc{% endif %}" data-sizes="auto">
 
     {% if block.settings.image_slide_mb != blank %}
-    {%- assign img_url_mb = block.settings.image_slide_mb | img_url: 'master' -%}
+    {%- assign img_url_mb = block.settings.image_slide_mb | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
     <img data-src="{{ img_url_mb }}"
          src="https:{{ img_url_mb }}" alt="{{ block.settings.image_slide_mb.alt | default: shop.name }}" 
          class="lazyautosizes lazyload slide-mobile" data-sizes="auto" style="display:none;">
@@ -24,13 +24,13 @@
   <div class="Offer-images-contain">
     {% if block.settings.link_to_play %}<a href="{{block.settings.link_to_play}}">{% endif %} 
     {% if block.settings.image_offer != blank %}
-    {%- assign img_url = block.settings.image_offer | img_url: 'master' -%}                       
+    {%- assign img_url = block.settings.image_offer | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}                       
     <img data-src="{{ img_url }}"
          src="https:{{ img_url }}" alt="{{ block.settings.image_offer.alt | default: shop.name }}" 
          class="lazyautosizes lazyload{% if block.settings.image_offer_mb != blank %} slide-pc{% endif %}" data-sizes="auto">
 
     {% if block.settings.image_offer_mb != blank %}
-    {%- assign img_url_mb = block.settings.image_offer_mb | img_url: 'master' -%}
+    {%- assign img_url_mb = block.settings.image_offer_mb | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
     <img data-src="{{ img_url_mb }}"
          src="https:{{ img_url_mb }}" alt="{{ block.settings.image_offer_mb.alt | default: shop.name }}" 
          class="lazyautosizes lazyload slide-mobile" data-sizes="auto" style="display:none;">
@@ -75,8 +75,8 @@
             {% if block.settings.featured_products_sub_title != blank %}
             <span>{{block.settings.featured_products_sub_title}}</span>
             {% endif %}
-              {%- assign img_url = block.settings.image | img_url: 'master' -%}
-              {%- assign img_url_mobile = block.settings.image_mobile | img_url: 'large' -%}
+              {%- assign img_url = block.settings.image | img_url: 'master'| replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+              {%- assign img_url_mobile = block.settings.image_mobile | img_url: 'large' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
               {% if block.settings.image != blank %}
               <img data-src="{{ img_url }}"
                    src="{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"

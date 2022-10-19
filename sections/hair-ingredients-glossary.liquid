@@ -6,9 +6,9 @@
           <div class="col-md-4">
             <div class="img-wrap"> 
               {% if block.settings.image != blank %}
-              <img class="img-fluid" src="{{ block.settings.image | img_url:"148x" }}" alt="{{ block.settings.title }}" /> 
+              <img class="img-fluid" src="{{ block.settings.image | img_url:"148x"  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ block.settings.title }}" /> 
               {% else %}
-              <img class="img-fluid" src="{{ "tea.png" | file_img_url:"148x" }}" alt="{{ block.settings.title }}" /> 
+              <img class="img-fluid" src="{{ "tea.png" | file_img_url:"148x"  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ block.settings.title }}" /> 
               {% endif %}
             </div>
           </div>

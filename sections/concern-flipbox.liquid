@@ -9,7 +9,7 @@
         </span>
       </span>
     </h3>            
-    <div class="description"><p> {{section.settings.text}}</p> <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/Desk_Curvy_Arrow.png?v=1640585650" ></div>
+    <div class="description"><p> {{section.settings.text}}</p> <img src="https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/Desk_Curvy_Arrow.png?v=1640585650" ></div>
   </div>
   {% endif %}
   <div id="top_scroll" class="{% if section.settings.layout == 'default' %}container{% elsif section.settings.layout == 'padd_50' %}container-padd60{% else %}container-fluid{% endif %}">
@@ -29,11 +29,11 @@
             <div class="img-box-ratio">
               {% if block.settings.image != blank %}
 
-              {%- assign img_url = block.settings.image | img_url: '100x'-%}
+              {%- assign img_url = block.settings.image | img_url: '100x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
 
               <img data-src="{{ img_url }}"
                    src="https:{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"
-                   class="lazyautosizes lazyloaded" data-sizes="auto">
+                   class="lazyautosizes lazyload" data-sizes="auto">
 
               {% else %}
               <div class="not_img">
@@ -59,15 +59,15 @@
         {% endif %}
         {% if block.settings.image_1 != blank %}
 
-        {%- assign img_url = block.settings.image_1 | img_url: 'master'-%}
-        {%- assign img_url_mob = block.settings.image_1_mob | img_url: 'master'-%}
+        {%- assign img_url = block.settings.image_1 | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+        {%- assign img_url_mob = block.settings.image_1_mob | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
 
         <img data-src="{{ img_url }}"
              src="https:{{ img_url }}" alt="{{ block.settings.image_1.alt | default: shop.name }}" itemprop="logo"
-             class="lazyautosizes lazyloaded" data-sizes="auto">
+             class="lazyautosizes lazyload" data-sizes="auto">
         <img data-src="{{ img_url_mob }}"
              src="https:{{ img_url_mob }}" alt="{{ block.settings.image_2.alt | default: shop.name }}" itemprop="logo"
-             class="lazyautosizes lazyloaded mobile" data-sizes="auto">
+             class="lazyautosizes lazyload mobile" data-sizes="auto">
         {% else %}
         <div class="not_img">
           400 x 400px
@@ -75,15 +75,15 @@
         {% endif %}
         {% if block.settings.image_2 != blank %}
 
-        {%- assign img_url = block.settings.image_2 | img_url: 'master'-%}
-        {%- assign img_url_mob = block.settings.image_2_mob | img_url: 'master'-%}
+        {%- assign img_url = block.settings.image_2 | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+        {%- assign img_url_mob = block.settings.image_2_mob | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
 
         <img data-src="{{ img_url }}"
              src="https:{{ img_url }}" alt="{{ block.settings.image_2.alt | default: shop.name }}" itemprop="logo"
-             class="lazyautosizes lazyloaded desktop" data-sizes="auto">
+             class="lazyautosizes lazyload desktop" data-sizes="auto">
         <img data-src="{{ img_url_mob }}"
              src="https:{{ img_url_mob }}" alt="{{ block.settings.image_2.alt | default: shop.name }}" itemprop="logo"
-             class="lazyautosizes lazyloaded mobile" data-sizes="auto">
+             class="lazyautosizes lazyload mobile" data-sizes="auto">
         {% else %}
         <div class="not_img">
           200 x 200px
@@ -100,11 +100,11 @@
         {% endif %}
         {% if block.settings.image_video != blank %}
         <div class="popup_video_link">
-          {%- assign img_url = block.settings.image_video | img_url: 'master'-%}
+          {%- assign img_url = block.settings.image_video | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
 
           <img data-src="{{ img_url }}"
                src="https:{{ img_url }}" alt="{{ block.settings.image_video.alt | default: shop.name }}" itemprop="logo"
-               class="lazyautosizes lazyloaded desktop" data-sizes="auto">
+               class="lazyautosizes lazyload desktop" data-sizes="auto">
           {% else %}
           <div class="not_img">
             200 x 200px

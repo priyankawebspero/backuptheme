@@ -102,8 +102,8 @@
                           <meta itemprop="url" content="{{ shop.url }}">
                             {% if section.settings.brand_type == 'image' and section.settings.logo_pc != bank %}
                             <a class="logo-img" href="/" title="Logo">
-                                <img itemprop="logo" data-src="{{ section.settings.logo_pc | img_url: 'master' }}"
-                                    src="{{ section.settings.logo_pc | img_url: 'master' }}"
+                                <img itemprop="logo" data-src="{{ section.settings.logo_pc | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' }}"
+                                    src="{{ section.settings.logo_pc | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' }}"
                                     alt="{{ section.settings.logo_pc.alt | default: shop.name }}" itemprop="logo" class="lazyautosizes lazyloaded" data-sizes="auto">
                             </a>
                             {% elsif section.settings.brand_text != '' %}

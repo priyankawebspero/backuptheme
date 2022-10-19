@@ -17,20 +17,20 @@
                     <div class="images-contain">
                         {% if block.settings.image_slide != blank %}
 
-                        {%- assign img_url = block.settings.image_slide | img_url: 'master' -%}
+                        {%- assign img_url = block.settings.image_slide | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
 
                         <a {% if block.settings.link != blank %} href="{{ block.settings.link }}"{% endif %} class="slide-image">
                             <img data-src="{{ img_url }}"
                                 src="https:{{ img_url }}" alt="{{ block.settings.image_slide.alt | default: shop.name }}" itemprop="logo"
-                                class="lazyautosizes lazyloaded{% if block.settings.image_slide_mb != blank %} slide-desktop{% endif %}" data-sizes="auto">
+                                class="lazyautosizes lazyload{% if block.settings.image_slide_mb != blank %} slide-desktop{% endif %}" data-sizes="auto">
 
                             {% if block.settings.image_slide_mb != blank %}
 
-                            {%- assign img_url_mb = block.settings.image_slide_mb | img_url: 'master' -%}
+                            {%- assign img_url_mb = block.settings.image_slide_mb | img_url: 'master'   | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
 
                             <img data-src="{{ img_url_mb }}"
                                 src="https:{{ img_url_mb }}" alt="{{ block.settings.image_slide_mb.alt | default: shop.name }}" itemprop="logo"
-                                class="lazyautosizes lazyloaded slide-mobile" data-sizes="auto" style="display:none;">
+                                class="lazyautosizes lazyload slide-mobile" data-sizes="auto" style="display:none;">
                             {% endif %}
                         </a>
 

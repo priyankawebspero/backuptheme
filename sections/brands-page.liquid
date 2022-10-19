@@ -14,7 +14,7 @@
     <div class="item col-12 col-sm-6 col-md-4 col-lg-3 col5">
       <a title="{{ block.settings.title }}" href="{{ block.settings.link }}">
         {% if block.settings.image != blank %}
-        <img data-src="{{ block.settings.image | img_url : "200x" }}" src="{{ block.settings.image | img_url : "200x" }}" alt="{{ block.settings.image.alt }}" class="lazyautosizes lazyloaded"/>
+        <img data-src="{{ block.settings.image | img_url : "200x" | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" src="{{ block.settings.image | img_url : "200x" | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ block.settings.image.alt }}" class="lazyautosizes lazyload"/>
         {% else %}
         <div class="not_img" style="font-size: 16px;">
           186 x 74px

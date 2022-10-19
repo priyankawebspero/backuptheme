@@ -8,26 +8,26 @@
     </div>
     <div class="caramel-gif">
       {% if section.settings.title_image_dsk != blank%}
-      <img class="desktop caramel_im_main" src="{{ section.settings.title_image_dsk | img_url: 'master' }}"  alt="{{section.settings.title_image_dsk.alt}}">
-      <img class="mobile caramel_im_main" src="{{ section.settings.title_image_mob | img_url: 'master' }}"  alt="{{section.settings.title_image_mob.alt}}">
+      <img class="desktop caramel_im_main" src="{{ section.settings.title_image_dsk | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.title_image_dsk.alt}}">
+      <img class="mobile caramel_im_main" src="{{ section.settings.title_image_mob | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.title_image_mob.alt}}">
       {% endif %}
       <div class="gift-sec">
         <div class="col-nml">
           {% if section.settings.gif_one_dsk != blank%}
-          <img class="desktop" src="{{ section.settings.gif_one_dsk | img_url: 'master' }}"  alt="{{section.settings.gif_one_dsk.alt}}">
-          <img class="mobile" src="{{ section.settings.gif_one_mob | img_url: 'master' }}"  alt="{{section.settings.gif_one_mob.alt}}">
+          <img class="desktop" src="{{ section.settings.gif_one_dsk | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.gif_one_dsk.alt}}">
+          <img class="mobile" src="{{ section.settings.gif_one_mob | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.gif_one_mob.alt}}">
           {% endif %}
         </div>
         <div class="col-nml">
           {% if section.settings.gif_sec_dsk != blank%}
-          <img class="desktop" src="{{ section.settings.gif_sec_dsk | img_url: 'master' }}"  alt="{{section.settings.gif_sec_dsk.alt}}">
-          <img class="mobile" src="{{ section.settings.gif_sec_mob | img_url: 'master' }}"  alt="{{section.settings.gif_sec_mob.alt}}">
+          <img class="desktop" src="{{ section.settings.gif_sec_dsk | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.gif_sec_dsk.alt}}">
+          <img class="mobile" src="{{ section.settings.gif_sec_mob | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.gif_sec_mob.alt}}">
           {% endif %}
         </div>
         <div class="col-nml">
           {% if section.settings.gif_third_dsk != blank%}
-          <img class="desktop" src="{{ section.settings.gif_third_dsk | img_url: 'master' }}"  alt="{{section.settings.gif_third_dsk.alt}}">
-          <img class="mobile" src="{{ section.settings.gif_third_mob | img_url: 'master' }}"  alt="{{section.settings.gif_third_mob.alt}}">
+          <img class="desktop" src="{{ section.settings.gif_third_dsk | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.gif_third_dsk.alt}}">
+          <img class="mobile" src="{{ section.settings.gif_third_mob | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.gif_third_mob.alt}}">
           {% endif %}
         </div>
       </div>
@@ -35,17 +35,17 @@
     </div></div></div>
   <div class="gift-guaranty">
     {% if section.settings.guaranty_dsk != blank%}
-    <img class="desktop" src="{{ section.settings.guaranty_dsk | img_url: 'master' }}"  alt="{{section.settings.guaranty_dsk.alt}}">
-    <img class="mobile" src="{{ section.settings.guaranty_mob | img_url: 'master' }}"  alt="{{section.settings.guaranty_mob.alt}}">
+    <img class="desktop" src="{{ section.settings.guaranty_dsk | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' }}"  alt="{{section.settings.guaranty_dsk.alt}}">
+    <img class="mobile" src="{{ section.settings.guaranty_mob | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.guaranty_mob.alt}}">
     {% endif %}
   </div>
   <div class="third-section_main_outer">
-    <div class="third-section" {% if section.settings.bg_footer != blank%}style="background-image:url('{{ section.settings.bg_footer | img_url: 'master' }}'); background-size: cover;"  {% endif %}>
-    <div class="popcorn-inner-sec" {% if section.settings.bg_third_dsk != blank%}style="background-image:url('{{ section.settings.bg_third_dsk | img_url: 'master' }}'); background-size: cover;"{% endif %}>
+    <div class="third-section" {% if section.settings.bg_footer != blank%}style="background-image:url('{{ section.settings.bg_footer | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}'); background-size: cover;"  {% endif %}>
+    <div class="popcorn-inner-sec" {% if section.settings.bg_third_dsk != blank%}style="background-image:url('{{ section.settings.bg_third_dsk | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}'); background-size: cover;"{% endif %}>
       <div class="popcorn">
         {% if section.settings.Gif_image_before != blank%}
-        <img class="before" src="{{ section.settings.Gif_image_before | img_url: 'master' }}"  alt="{{section.settings.Gif_image_before.alt}}">
-        <img class="after" src="{{ section.settings.Gif_image_after | img_url: 'master' }}"  alt="{{section.settings.Gif_image_after.alt}}">
+        <img class="before" src="{{ section.settings.Gif_image_before | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.Gif_image_before.alt}}">
+        <img class="after" src="{{ section.settings.Gif_image_after | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.Gif_image_after.alt}}">
         {% endif %}
       </div>
      
@@ -53,7 +53,7 @@
       
        <div class="text_caramel_cs">
         {% if section.settings.image_above_text != blank%}
-        <img class="desktop" src="{{ section.settings.image_above_text | img_url: 'master' }}"  alt="{{section.settings.image_above_text.alt}}">
+        <img class="desktop" src="{{ section.settings.image_above_text | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.image_above_text.alt}}">
         {% endif %}
         <h3 class="date_cs">{{section.settings.date}}</h3>
       </div>

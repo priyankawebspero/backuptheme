@@ -91,15 +91,15 @@
           <h3 class="box-title">
             <span class="title"> 
               {% include 'multilang' with section.settings.featured_products_title %}
-              {%- assign img_url = section.settings.image | img_url: 'master' -%}
-              {%- assign img_url_mobile = section.settings.image_mobile | img_url: 'large' -%}
+              {%- assign img_url = section.settings.image | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+              {%- assign img_url_mobile = section.settings.image_mobile | img_url: 'large'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
               {% if section.settings.image != blank %}
               <img data-src="{{ img_url }}"
                    src="{{ img_url }}" alt="{{ section.settings.image.alt | default: shop.name }}" itemprop="logo"
-                   class="lazyautosizes lazyloaded" data-sizes="auto">
+                   class="lazyautosizes lazyload" data-sizes="auto">
               <img data-src="{{ img_url_mobile }}"
                    src="{{ img_url_mobile }}" alt="{{ section.settings.image_mobile.alt | default: shop.name }}" itemprop="logo"
-                   class="lazyautosizes lazyloaded slide-mobile" data-sizes="auto"  style="display:none;">
+                   class="lazyautosizes lazyload slide-mobile" data-sizes="auto"  style="display:none;">
               {% else %}
               <div class="not_img">
                 725 x 340px

@@ -46,8 +46,8 @@
     <div data-gridItem class="grid-item banner-img {{ grid_item_width }}">
       <a class="animate-scale" href="{{section.settings.link_banner_1}}">
         {% if section.settings.img_banner1 != blank %}
-        <img data-src="{{ section.settings.img_banner1 | img_url: '800x' }}"
-             src="{{ section.settings.img_banner1 | img_url: '300x' }}" alt="{{ section.settings.img_banner1.alt }}"
+        <img data-src="{{ section.settings.img_banner1 | img_url: '800x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"
+             src="{{ section.settings.img_banner1 | img_url: '300x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ section.settings.img_banner1.alt }}"
              class="lazyautosizes lazyloaded" data-sizes="auto">
         {% else %}
         <div class="not_img">
@@ -68,8 +68,8 @@
     <div data-gridItem class="grid-item banner-img {{ grid_item_width }}">
       <a class="animate-scale" href="{{section.settings.link_banner_2 }}">
         {% if section.settings.img_banner2 != blank %}
-        <img data-src="{{ section.settings.img_banner21 | img_url: '800x' }}"
-             src="{{ section.settings.img_banner2 | img_url: '300x' }}" alt="{{ section.settings.img_banner2.alt }}"
+        <img data-src="{{ section.settings.img_banner21 | img_url: '800x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"
+             src="{{ section.settings.img_banner2 | img_url: '300x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ section.settings.img_banner2.alt }}"
              class="lazyautosizes lazyloaded" data-sizes="auto">
         {% else %}
         <div class="not_img">
@@ -90,9 +90,9 @@
     <div data-gridItem class="grid-item banner-img {{ grid_item_width }}">
       <a class="animate-scale" href="{{section.settings.link_banner_3 }}">
         {% if section.settings.img_banner3 != blank %}
-        <img data-src="{{ section.settings.img_banner3 | img_url: '800x' }}"
-             src="{{ section.settings.img_banner3 | img_url: '300x' }}" alt="{{ section.settings.img_banner3.alt }}"
-             class="lazyautosizes lazyloaded" data-sizes="auto">
+        <img data-src="{{ section.settings.img_banner3 | img_url: '800x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"
+             src="{{ section.settings.img_banner3 | img_url: '300x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ section.settings.img_banner3.alt }}"
+             class="lazyautosizes lazyload" data-sizes="auto">
         {% else %}
         <div class="not_img">
           210 x 360px
@@ -112,9 +112,9 @@
     <div data-gridItem class="grid-item banner-img {{ grid_item_width }}">
       <a class="animate-scale" href="{{section.settings.link_banner_4 }}">
         {% if section.settings.img_banner4 != blank %}
-        <img data-src="{{ section.settings.img_banner4 | img_url: '800x' }}"
-             src="{{ section.settings.img_banner4 | img_url: '300x' }}" alt="{{ section.settings.img_banner4.alt }}"
-             class="lazyautosizes lazyloaded" data-sizes="auto">
+        <img data-src="{{ section.settings.img_banner4 | img_url: '800x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"
+             src="{{ section.settings.img_banner4 | img_url: '300x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ section.settings.img_banner4.alt }}"
+             class="lazyautosizes lazyload" data-sizes="auto">
         {% else %}
         <div class="not_img">
           210 x 360px

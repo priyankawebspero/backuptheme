@@ -28,7 +28,7 @@
         <div class="details">
           <div class="cart-thumb">
             <a class="product-img {% if item.product.tags contains 'Plum 999' %} plum_999{% endif %}  {% if item.product.tags contains 'Lipstick' %} Lipstick{% endif %}" href="{%if item.variant.metafields.secomapp.freegifts%}{{ item.product.url }}{%else%}{{ item.url | within: collections.all }}{%endif%}">
-              <img data-src="{{ item | img_url: '160x' }}" src="{{ item | img_url: '160x' }}"  alt="{{ item.title | remove: '/ Default Title'| remove: 'Default Title' | remove: '/ Default' | remove: 'Default' | replace: '(Freegifts)', ''  | escape }}" class="lazyautosizes lazyloaded"/>
+              <img data-src="{{ item | img_url: '160x' }}" src="{{ item | img_url: '160x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{ item.title | remove: '/ Default Title'| remove: 'Default Title' | remove: '/ Default' | remove: 'Default' | replace: '(Freegifts)', ''  | escape }}" class="lazyautosizes lazyloaded"/>
             </a>
           </div>
 
@@ -164,7 +164,7 @@
 
         {% include 'multilang' with settings.secure_text %}
       </div>
-      <img data-src="{{ settings.img_trust | img_url: '800x'  }}" src="{{ settings.img_trust | img_url: '800x'  }}" class="lazyautosizes lazyloaded">
+      <img data-src="{{ settings.img_trust | img_url: '800x'   | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" src="{{ settings.img_trust | img_url: '800x'   | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" class="lazyautosizes lazyload">
     </div>
     {% endif %}
   </div>

@@ -2,8 +2,8 @@
   {% if section.settings.display_collection_image %}
 
   {% if collection.image %}
-  {%- assign img_url = collection.image | img_url: 'master' -%}
-  {%- assign img_url_mobile = collection.image | img_url: '768x' -%}
+  {%- assign img_url = collection.image | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+  {%- assign img_url_mobile = collection.image | img_url: '768x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
 
   {% elsif collection.description contains 'img' %}
   {%- assign img_url = collection.description | split: '<img' | last | split: '>' | first -%}

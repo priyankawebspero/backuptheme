@@ -21,11 +21,11 @@
                             <a href="{{ block.settings.link }}" class="animate-scale">
                                 {% if block.settings.image != blank %}
 
-                                {%- assign img_url = block.settings.image | img_url: '2000x', crop: 'center' -%}
+                                {%- assign img_url = block.settings.image | img_url: '2000x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' -%}
 
                                 <img data-src="{{ img_url }}"
                                     src="{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"
-                                    class="lazyautosizes lazyloaded desktop-xs" data-sizes="auto">
+                                    class="lazyautosizes lazyload desktop-xs" data-sizes="auto">
 
                               
                               <img class="banner-image mobile-xs lazyautosizes lazyloaded" data-src="{{ block.settings.image_mobile1 | img_url: 'master' }}" src="{{ block.settings.image_mobile1 | img_url: 'master' }}">

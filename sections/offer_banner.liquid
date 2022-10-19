@@ -1,8 +1,8 @@
 <section class="sub-page-banner-section" id="sub-{{section.id}}">
   <a href="{{ block.settings.link }}" class="">
-  <img class="banner-image desktop-xs lazyautosizes lazyloaded" data-src="{{ section.settings.banner-id | img_url: 'master' }}" src="{{ section.settings.banner-id | img_url: 'master' }}">
+  <img class="banner-image desktop-xs lazyautosizes lazyload" data-src="{{ section.settings.banner-id | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" src="{{ section.settings.banner-id | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}">
 
-  <img class="banner-image mobile-xs lazyautosizes lazyloaded" data-src="{{ section.settings.image_mobile | img_url: 'master' }}" src="{{ section.settings.image_mobile | img_url: 'master' }}">
+  <img class="banner-image mobile-xs lazyautosizes lazyload" data-src="{{ section.settings.image_mobile | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" src="{{ section.settings.image_mobile | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}">
   </a>
    <div class="container banner-title">
     <h1>{{ section.settings.banner-title }}</h1>

@@ -24,7 +24,7 @@
                         <div class="images-contain">
                         {% if block.settings.image_slide != blank %}
 
-                        {%- assign img_url = block.settings.image_slide | img_url: 'master' -%}
+                        {%- assign img_url = block.settings.image_slide | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
                           
 
                         <a class="slide-image abc">

@@ -10,10 +10,10 @@
           <div class="img-box banner-item">
             <a href="{%- if collection == blank -%} {{ block.settings.url }} {%- else -%} {{ collection.url }} {%- endif -%}" title="{{ collection_title }}">
               {% if block.settings.image != blank %}
-              {%- assign img_url = block.settings.image | img_url: 'orignal' -%}
+              {%- assign img_url = block.settings.image | img_url: 'orignal'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
               <img data-src="{{ img_url }}"
                    src="{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"
-                   class="lazyautosizes lazyloaded" data-sizes="auto">
+                   class="lazyautosizes lazyload" data-sizes="auto">
               {% endif %}
             </a>
             <p class="title-collection">

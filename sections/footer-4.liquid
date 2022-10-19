@@ -11,7 +11,7 @@
                     {% if section.settings.display_store_location %}
                         {% if section.settings.footer_logo != blank %}
                         <a href="/" class="logo-ft">
-                            <img src="{{ section.settings.footer_logo | img_url:'master' }}">            
+                            <img src="{{ section.settings.footer_logo | img_url:'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}">            
                         </a>
                         {% endif %}
 
@@ -105,7 +105,7 @@
 
                         {% if section.settings.guarantee_img != blank %}
                         <a href="javascript:void(0)" class="guarantee-img">
-                            <img src="{{ section.settings.guarantee_img | img_url:'master' }}">            
+                            <img src="{{ section.settings.guarantee_img | img_url:'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}">            
                         </a>
                         {% endif %}
                     </div>
@@ -152,7 +152,7 @@
                         {% if section.settings[display_current_method] %}
                         {%- assign current_method_icon = method | prepend: 'icon_' -%}
                         <li>
-                            <img src="{{ section.settings[current_method_icon] | img_url: 'x32', format: 'jpg' }}" alt="{{ method }}">
+                            <img src="{{ section.settings[current_method_icon] | img_url: 'x32', format: 'jpg'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ method }}">
                         </li>
                         {% endif %}
                         {% endfor %}

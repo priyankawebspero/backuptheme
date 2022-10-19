@@ -1,8 +1,8 @@
 <section class="home-game-banner-section text-center" id="game-{{section.id}}">
   <a href="{{ section.settings.link }}" class="">
-    <img class="banner-image desktop-xs" data-src="{{ section.settings.banner-id | img_url: 'master' }}" src="{{ section.settings.banner-id | img_url: 'master' }}">
+    <img class="banner-image desktop-xs" data-src="{{ section.settings.banner-id | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" src="{{ section.settings.banner-id | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}">
 
-    <img class="banner-image mobile-xs" data-src="{{ section.settings.image_mobile | img_url: 'master' }}" src="{{ section.settings.image_mobile | img_url: 'master' }}">
+    <img class="banner-image mobile-xs" data-src="{{ section.settings.image_mobile | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" src="{{ section.settings.image_mobile | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}">
   </a>
 </section>
 

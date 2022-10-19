@@ -6,14 +6,14 @@
         {% if section.settings.gift_image != blank %} 
           
               {% if section.settings.text_image != blank %}            
-              {%- assign img_url_gift = section.settings.text_image | img_url: 'original', crop: 'center' -%}
-              {%- assign img_url_gift_mobile = section.settings.text_image_mobile | img_url: 'original', crop: 'center' -%}
+              {%- assign img_url_gift = section.settings.text_image | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' -%}
+              {%- assign img_url_gift_mobile = section.settings.text_image_mobile | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' -%}
               <img data-src="{{ img_url_gift }}"
                    src="https:{{ img_url_gift }}" alt="{{ section.settings.text_image.alt | default: shop.name }}" itemprop="logo"
-                   class="lazyautosizes lazyloaded teaser_desktop" data-sizes="auto">
+                   class="lazyautosizes lazyload teaser_desktop" data-sizes="auto">
               <img data-src="{{ img_url_gift_mobile }}"
                    src="https:{{ img_url_gift_mobile }}" alt="{{ section.settings.text_image_mobile.alt | default: shop.name }}" itemprop="logo"
-                   class="lazyautosizes lazyloaded teaser_mobile" data-sizes="auto" style="display:none;">
+                   class="lazyautosizes lazyload teaser_mobile" data-sizes="auto" style="display:none;">
               {% else %}
 
               <div class="not_img">
@@ -23,14 +23,14 @@
            
       <a href="{{ section.settings.link_git }}" >
          {% if section.settings.gift_image != blank %}            
-              {%- assign img_url_gift = section.settings.gift_image | img_url: 'original', crop: 'center' -%}
-              {%- assign img_url_gift_mobile = section.settings.gift_image_mobile | img_url: 'original', crop: 'center' -%}
+              {%- assign img_url_gift = section.settings.gift_image | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' -%}
+              {%- assign img_url_gift_mobile = section.settings.gift_image_mobile | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' -%}
               <img data-src="{{ img_url_gift }}"
                    src="https:{{ img_url_gift }}" alt="{{ section.settings.gift_image.alt | default: shop.name }}" itemprop="logo"
-                   class="lazyautosizes lazyloaded teaser_desktop" data-sizes="auto">
+                   class="lazyautosizes lazyload teaser_desktop" data-sizes="auto">
               <img data-src="{{ img_url_gift_mobile }}"
                    src="https:{{ img_url_gift_mobile }}" alt="{{ section.settings.gift_image_mobile.alt | default: shop.name }}" itemprop="logo"
-                   class="lazyautosizes lazyloaded teaser_mobile" data-sizes="auto" style="display:none;">
+                   class="lazyautosizes lazyload teaser_mobile" data-sizes="auto" style="display:none;">
               {% else %}
 
               <div class="not_img">
@@ -55,7 +55,7 @@
   }	
   @media (max-width: 768px) {
     #teaser-spotlight-3-{{section.id}} {
-      background-image: url('{{ section.settings.bg-image-mob | img_url: 'original'}}') !important;
+      background-image: url('{{ section.settings.bg-image-mob | img_url: 'original'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}') !important;
     }
   }	  
   

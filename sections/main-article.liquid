@@ -157,7 +157,7 @@
               {% if block.settings.enable %}	
               <div class="widget sidebar-banner">
                 {% if block.settings.image != blank %}
-                {%- assign img_url = block.settings.image | img_url: 'original', crop: 'center' -%}
+                {%- assign img_url = block.settings.image | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' -%}
             
                 {% if block.settings.link != blank %}
                 <a class="animate-scale" href="{{ block.settings.link }}">
@@ -211,7 +211,7 @@
                 {% if actual_price != 0 and actual_price != blank %}
             
                 <a href="{{ product_url }}" class="product-title">
-                  <img data-src="{{ product_image | img_url: '200x' }}" src="{{ product_image | img_url: '200x' }}" class="lazyautosizes lazyloaded">
+                  <img data-src="{{ product_image | img_url: '200x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" src="{{ product_image | img_url: '200x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" class="lazyautosizes lazyload">
                   <span>{{ product_name }}</span>
             
                   <div class="price-box">
@@ -302,9 +302,9 @@
                 {% assign pre_date =  'Sep 01 2021' | date: '%s' %}
 
                 {% if today_date < pre_date %}
-                {% capture author %}<img src="https://cdn.shopify.com/s/files/1/0390/2985/files/user_2.png?v=1631167893"> Plum People{% endcapture %}
+                {% capture author %}<img src="https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/user_2.png?v=1631167893"> Plum People{% endcapture %}
                 {% else %}
-                {% capture author %}<img src="https://cdn.shopify.com/s/files/1/0390/2985/files/user_2.png?v=1631167893"> {{ article.author }}{% endcapture %}
+                {% capture author %}<img src="https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/user_2.png?v=1631167893"> {{ article.author }}{% endcapture %}
                 {% endif %}
                 
                 {% if section.settings.blog_show_author %}
@@ -546,7 +546,7 @@
       
                   {% else %}
                   <div class="article-img">
-                    <img data-src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/blog.png?v=1576997571" src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/blog.png?v=1576997571" class="lazyautosizes lazyload">
+                    <img data-src="https://47vuve1w.cdn.imgeng.in/s/files/1/0257/8766/2417/files/blog.png?v=1576997571" src="https://47vuve1w.cdn.imgeng.in/s/files/1/0257/8766/2417/files/blog.png?v=1576997571" class="lazyautosizes lazyload">
                   </div>
                   {% endif %}
       

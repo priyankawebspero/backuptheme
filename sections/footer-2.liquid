@@ -78,13 +78,13 @@
                     <div class="typography">
                         {% if section.settings.img_1 != blank %}
                         <a href="javascript:void(0)">
-                            <img src="{{ section.settings.img_1 | img_url: 'x36' }}">
+                            <img src="{{ section.settings.img_1 | img_url: 'x36'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}">
                         </a>
                         {% endif %}
                         
                         {% if section.settings.img_2 != blank %}
                         <a href="javascript:void(0)">
-                            <img src="{{ section.settings.img_2 | img_url: 'x36' }}">
+                            <img src="{{ section.settings.img_2 | img_url: 'x36'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}">
                         </a>
                         {% endif %}
                     </div>
@@ -130,7 +130,7 @@
                         {% if section.settings[display_current_method] %}
                         {%- assign current_method_icon = method | prepend: 'icon_' -%}
                         <li>
-                            <img src="{{ section.settings[current_method_icon] | img_url: 'x32', format: 'jpg' }}" alt="{{ method }}">
+                            <img src="{{ section.settings[current_method_icon] | img_url: 'x32', format: 'jpg'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ method }}">
                         </li>
                         {% endif %}
                         {% endfor %}
