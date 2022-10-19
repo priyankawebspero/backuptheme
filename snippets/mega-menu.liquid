@@ -63,7 +63,7 @@
             {% if banner_first_style != blank %}
             <div class="mega-col {% if featured_product != blank %}col-right{% else %}no-feature-product{% endif %}">
                 <a class="animate-scale" href="{{ link_banner_first_style }}" title="">
-                    <img src="{{ banner_first_style | img_url : '250x' }}" alt="" />
+                    <img src="{{ banner_first_style | img_url : '250x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="" />
                 </a>
             </div>
             {% endif %}
@@ -123,13 +123,13 @@
             <div class="mega-col{% if banner_third_style != blank %} col-left{% endif %}">
                 {% if banner_first_style != blank %}
                 <a class="animate-scale" href="{{ link_banner_first_style }}" title="">
-                    <img src="{{ banner_first_style | img_url : "250x" }}" alt="" />
+                    <img src="{{ banner_first_style | img_url : "250x"  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="" />
                 </a>
                 {% endif %}
 
                 {% if banner_second_style != blank %}
                 <a class="animate-scale" href="{{ link_banner_second_style }}" title="">
-                    <img src="{{ banner_second_style | img_url : "250x" }}" alt="" />
+                    <img src="{{ banner_second_style | img_url : "250x"  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="" />
                 </a>
                 {% endif %}
             </div>
@@ -138,7 +138,7 @@
             {% if banner_third_style != blank %}
             <div class="mega-col{% if banner_first_style != blank or banner_second_style != blank %} col-right{% endif %}">
                 <a class="animate-scale" href="{{ link_banner_third_style }}" title="">
-                    <img src="{{ banner_third_style | img_url : '250x' }}" alt="" />
+                    <img src="{{ banner_third_style | img_url : '250x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="" />
                 </a>
             </div>
             {% endif %}
@@ -161,7 +161,7 @@
             {% endif %}
         </a>
         <a {%if linklists[link.handle] != empty %}class="menu__moblie"{% endif %} href="{{ l.url }}" class="current">
-            {% assign imgColl = l.object.image | img_url :"210x", format: 'jpg' %}
+            {% assign imgColl = l.object.image | img_url :"210x", format: 'jpg'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'%}
 
             {% if l.object %}
             <img src="{{ imgColl }}" alt="{{ l.title }}">
@@ -244,7 +244,7 @@
             {% if banner_first_style != blank %}
             <div class="mega-col col-right">
                 <a class="animate-scale" href="{{ link_banner_first_style }}" title="">
-                    <img src="{{ banner_first_style | img_url : "250x" }}" alt="" />
+                    <img src="{{ banner_first_style | img_url : "250x"  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="" />
                 </a>
             </div>
             {% endif %}
@@ -303,7 +303,7 @@
             <div class="mega-col">
                 {% if banner_first_style != blank %}
                 <a class="animate-scale" href="{{ link_banner_first_style }}" title="">
-                    <img src="{{ banner_first_style | img_url : '250x' }}" alt="" />
+                    <img src="{{ banner_first_style | img_url : '250x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="" />
                 </a>
                 {% endif %}
             </div>
@@ -320,7 +320,7 @@
                     {% if banner_second_style != blank %}
                     <div class="mega-col">
                         <a class="animate-scale" href="{{ link_banner_second_style }}" title="">
-                            <img src="{{ banner_second_style | img_url : '250x' }}" alt="" />
+                            <img src="{{ banner_second_style | img_url : '250x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="" />
                         </a>
                     </div>
                     {% endif %}
@@ -328,7 +328,7 @@
                     {% if banner_third_style != blank %}
                     <div class="mega-col">
                         <a class="animate-scale" href="{{ link_banner_third_style }}" title="">
-                            <img src="{{ banner_third_style | img_url : '250x' }}" alt="" />
+                            <img src="{{ banner_third_style | img_url : '250x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="" />
                         </a>
                     </div>
                     {% endif %}

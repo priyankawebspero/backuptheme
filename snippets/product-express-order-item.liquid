@@ -5,9 +5,9 @@
             <div class="product-top">
                 <div class="product-image{% if product.images.size > 1 and settings.image_swap %} image-swap{% endif %}">
                     <a href="{{ product.url | within: collection }}" class="product-grid-image" data-collections-related="/collections/{{collection.handle}}?view=related">
-                        {%- assign img_pr = product.featured_image.src | product_img_url: '200x' -%}
-                        {%- assign img_0 = product.images[0].src | product_img_url: '200x' -%}
-                        {%- assign img_1 = product.images[1].src | product_img_url: '200x' -%}
+                        {%- assign img_pr = product.featured_image.src | product_img_url: '200x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+                        {%- assign img_0 = product.images[0].src | product_img_url: '200x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+                        {%- assign img_1 = product.images[1].src | product_img_url: '200x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
 
                         {% if product.images.size > 1 and settings.image_swap %}
                         <img src="{{ img_0 }}" alt="{{ product.images[0].alt | escape }}"

@@ -1,9 +1,9 @@
 {% if img_1 != blank %}
 <div class="item {{ col_grid }}">
   <div class="images-contain">
-    <a class="fancybox" rel="gallery" href="{{ img_1 | img_url: 'original' }}" data-fancybox="lookbook-gallery">
-      <img data-src="{{ img_1 | img_url: 'original' }}"
-           src="{{ img_1 | img_url: 'original' }}" alt="{{ block.settings.image_1.alt }}"
+    <a class="fancybox" rel="gallery" href="{{ img_1 | img_url: 'original'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" data-fancybox="lookbook-gallery">
+      <img data-src="{{ img_1 | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' }}"
+           src="{{ img_1 | img_url: 'original'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ block.settings.image_1.alt }}"
            class="lazyautosizes lazyloaded" data-sizes="auto">
     </a>
 
@@ -72,9 +72,9 @@
 {% if img_2 != blank %}
 <div class="item {{ col_grid }}">
   <div class="images-contain">
-    <a class="fancybox" rel="gallery" href="{{ img_2 | img_url: 'original' }}" data-fancybox="lookbook-gallery">
-      <img data-src="{{ img_2 | img_url: 'original' }}"
-           src="{{ img_2 | img_url: 'original' }}" alt="{{ block.settings.image_2.alt }}"
+    <a class="fancybox" rel="gallery" href="{{ img_2 | img_url: 'original'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" data-fancybox="lookbook-gallery">
+      <img data-src="{{ img_2 | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' }}"
+           src="{{ img_2 | img_url: 'original'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ block.settings.image_2.alt }}"
            class="lazyautosizes lazyloaded" data-sizes="auto">
     </a>
 
@@ -143,9 +143,9 @@
 {% if img_3 != blank %}
 <div class="item {{ col_grid }}">
   <div class="images-contain">
-    <a class="fancybox" rel="gallery" href="{{ img_3 | img_url: 'original' }}" data-fancybox="lookbook-gallery">
-      <img data-src="{{ img_3 | img_url: 'original' }}"
-           src="{{ img_3 | img_url: 'original' }}" alt="{{ block.settings.image_3.alt }}"
+    <a class="fancybox" rel="gallery" href="{{ img_3 | img_url: 'original'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" data-fancybox="lookbook-gallery">
+      <img data-src="{{ img_3 | img_url: 'original'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"
+           src="{{ img_3 | img_url: 'original'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ block.settings.image_3.alt }}"
            class="lazyautosizes lazyloaded" data-sizes="auto">
     </a>
 

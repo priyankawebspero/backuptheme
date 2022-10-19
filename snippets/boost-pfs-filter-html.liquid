@@ -62,15 +62,15 @@
 {% assign show_product_label_image = section.settings.show_product_label_image %}
 {% assign product_label_image_sold_out = section.settings.product_label_image_sold_out %}
 
-<span class="soldout boost-pfs-filter-label">{% if show_product_label_image %}<img src="{{ product_label_image_sold_out | img_url: 'small' }}" alt="{{ product_label_image_sold_out.alt }}" />{% else %}{{ label_soldout | default: 'Sold Out' }}{% endif %}</span>
+<span class="soldout boost-pfs-filter-label">{% if show_product_label_image %}<img src="{{ product_label_image_sold_out | img_url: 'small' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ product_label_image_sold_out.alt }}" />{% else %}{{ label_soldout | default: 'Sold Out' }}{% endif %}</span>
 
 {%- when 'saleLabelHtml' -%}
 {% assign show_product_label_image = section.settings.show_product_label_image %}
 {% assign product_label_image_sale = section.settings.product_label_image_sale %}
-<span class="sale boost-pfs-filter-label">{% if show_product_label_image %}<img src="{{ product_label_image_sale | img_url: 'small' }}" alt="{{ product_label_image_sale.alt }}" />{% else %}
+<span class="sale boost-pfs-filter-label">{% if show_product_label_image %}<img src="{{ product_label_image_sale | img_url: 'small' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ product_label_image_sale.alt }}" />{% else %}
   {{ label_sale | default: 'Sale' }}
   <div class="product-label">
-    <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/sale_new.png?v=1579003407">
+    <img src="https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/sale_new.png?v=1579003407">
   <strong class="label sale-label"> off </strong>
   <br>
   </div>

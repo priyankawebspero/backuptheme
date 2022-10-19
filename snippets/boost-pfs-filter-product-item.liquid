@@ -223,9 +223,9 @@
                   {%- assign file_name = swatch_name | handleize | append: '.' | append: file_extension -%}
                   {%- assign swatch_img_url = filter_swatch_option_title | append: '-' | append: file_name | file_url -%}
                 {%- when 'swatch_color_display_type_image_product' -%}
-                  {%- assign swatch_img_url = preview_image | img_url: bg_size -%}
+                  {%- assign swatch_img_url = preview_image | img_url: bg_size  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
                   {%- if variant.image != null -%}
-                  {%- assign swatch_img_url = variant.image.src | img_url: bg_size -%}
+                  {%- assign swatch_img_url = variant.image.src | img_url: bg_size  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
                   {%- endif -%}
                 {%- else -%}
                 {%- assign swatch_img_url = '' -%}

@@ -10,7 +10,7 @@
       {% assign current_method_icon = method | prepend: 'icon-cc-' | append: '.png' %}
       <span class="payment-method">
         <a href="/cart" title="{{ method | replace: '-', ' ' | downcase | capitalize }}">
-          {{ current_method_icon | asset_url | img_tag: method }}
+          {{ current_method_icon | asset_url | img_tag: method  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}
         </a>
       </span>
     {% endif %}

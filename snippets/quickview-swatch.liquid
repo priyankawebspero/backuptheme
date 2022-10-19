@@ -62,7 +62,8 @@
     </div>
 
     {% assign values = '' %}
-    {% for variant in product.variants %}
+    {% for variant in product.variants %}
+
     {% unless variant.metafields.secomapp.freegifts %}
     {% unless variant.title contains '(Freegifts)' %}
 
@@ -89,7 +90,7 @@
 
             {% elsif settings.color_swatch_style == 'variant' or settings.color_swatch_style == 'variant_grouped' %}
             <label class="swatch_variant_img" for="quickview-swatch-{{ option_index }}-{{ value | handle }}">
-                <span class="bgImg" {% if variant.image.src != blank %}style="background-image: url({{ variant.image.src | product_img_url: '50x' }}); background-size: contain;"{% else %}style="background-color: {{ value | split: ' ' | last | handle }}; background-image: url({{ value | handle | append: '.' | append: file_extension | file_url }})"{% endif %}>
+                <span class="bgImg" {% if variant.image.src != blank %}style="background-image: url({{ variant.image.src | product_img_url: '50x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}); background-size: contain;"{% else %}style="background-color: {{ value | split: ' ' | last | handle }}; background-image: url({{ value | handle | append: '.' | append: file_extension | file_url  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}})"{% endif %}>
                 </span>
             </label>
             {% endif %}

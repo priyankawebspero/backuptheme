@@ -15,7 +15,7 @@
 			<div class="column column-1">
                 <div class="thumb">
                     <a class="product-img" href="{{ pro.url | within: collections.all }}" title="{{ pro.title }}">
-                        <img src="{{ pro.featured_image.src | img_url: '160x' }}"  alt="{{ pro.title | escape }}" />
+                        <img src="{{ pro.featured_image.src | img_url: '160x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{ pro.title | escape }}" />
                     </a>
 
                     {% unless pro.available %}
@@ -51,7 +51,7 @@
               {% unless variant.title contains '(Freegifts)' %}
 
 
-							<option {% if variant == current_variant %} selected="selected" {% endif %}data-price="{{ variant.price }}"{% unless variant.available %} class="sold-out" disabled{% endunless %} value="{{ variant.id }}"{% if variant.image != null %} data-img="{{ variant.image.src | product_img_url: '200x' }}"{% endif %}>
+							<option {% if variant == current_variant %} selected="selected" {% endif %}data-price="{{ variant.price }}"{% unless variant.available %} class="sold-out" disabled{% endunless %} value="{{ variant.id }}"{% if variant.image != null %} data-img="{{ variant.image.src | product_img_url: '200x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"{% endif %}>
 								{{ variant.title }}
 							</option>
 

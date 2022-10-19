@@ -6,7 +6,7 @@
         <a class="logo-img" href="/" title="Logo">
             <img data-src="{{ section.settings.logo_fix | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" 
                 src="{{ section.settings.logo_fix | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' }}"
-                alt="{{ section.settings.logo_fix.alt | default: shop.name }}" itemprop="logo" class="lazyautosizes lazyloaded" data-sizes="auto">
+                alt="{{ section.settings.logo_fix.alt | default: shop.name }}" itemprop="logo" class="lazyautosizes lazyload" data-sizes="auto">
         </a>
     </div>
     {% endif %}

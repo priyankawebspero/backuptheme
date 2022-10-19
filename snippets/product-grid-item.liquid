@@ -7,17 +7,17 @@
         <span id="secomapp-fg-image-{{ product.id }}" style="display: none;"> {{ "icon-freegift.png" | asset_url | img_tag: "", "sca-fg-img-collect" }} </span>
         <span class="sca-fg-cat-list prod-show-list" style="display:none;" id="secomapp-fg-data-{{ product.id }}"> </span>
         <a href="{{ product.url | within: collection }}" class="product-grid-image" data-collections-related="/collections/{{collection.handle}}?view=related">
-          {%- assign img_pr = product.featured_image.src | product_img_url: '277x' -%}
-          {%- assign img_pr_1 = product.featured_image.src | product_img_url: '277x' -%}
-          {%- assign img_pr_2 = product.featured_image.src | product_img_url: '277x' -%}
+          {%- assign img_pr = product.featured_image.src | product_img_url: '277x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+          {%- assign img_pr_1 = product.featured_image.src | product_img_url: '277x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+          {%- assign img_pr_2 = product.featured_image.src | product_img_url: '277x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
 
-          {%- assign img_0 = product.images[0].src | product_img_url: '277x' -%}
-          {%- assign img_01 = product.images[0].src | product_img_url: '277x' -%}
-          {%- assign img_02 = product.images[0].src | product_img_url: '277x' -%}
+          {%- assign img_0 = product.images[0].src | product_img_url: '277x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+          {%- assign img_01 = product.images[0].src | product_img_url: '277x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+          {%- assign img_02 = product.images[0].src | product_img_url: '277x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
 
-          {%- assign img_1 = product.images[1].src | product_img_url: '277x' -%}
-          {%- assign img_11 = product.images[1].src | product_img_url: '277x' -%}
-          {%- assign img_12 = product.images[1].src | product_img_url: '277x' -%}
+          {%- assign img_1 = product.images[1].src | product_img_url: '277x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+          {%- assign img_11 = product.images[1].src | product_img_url: '277x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+          {%- assign img_12 = product.images[1].src | product_img_url: '277x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
 
           {% if product.images.size > 1 and settings.image_swap %}
           <img alt="{{ product.images[0].alt | escape }}"

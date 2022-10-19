@@ -7,17 +7,17 @@
     {%- assign img_url = collection.description | split: '<img' | last | split: '>' | first -%}
 
     {% elsif section.settings.collection_image != blank %}
-    {%- assign img_url = section.settings.collection_image | img_url: 'master' -%}
+    {%- assign img_url = section.settings.collection_image | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
 
     {% elsif collection.image %}
-    {%- assign img_url = collection.image | img_url: 'master' -%}
+    {%- assign img_url = collection.image | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
     {% endif %}
     
     {% if collection.description contains 'img' %}
-    <img {{ img_url }} alt="{{ collection_title }}" class="lazyautosizes lazyloaded" data-sizes="auto"/>
+    <img {{ img_url }} alt="{{ collection_title }}" class="lazyautosizes lazyload" data-sizes="auto"/>
     {% else %}
     <img data-src="{{ img_url }}"
-         src="{{ img_url }}" class="lazyautosizes lazyloaded" data-sizes="auto">
+         src="{{ img_url }}" class="lazyautosizes lazyload" data-sizes="auto">
     {% endif %}
     
     {% else %}

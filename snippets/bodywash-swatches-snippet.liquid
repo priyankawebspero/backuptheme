@@ -11,7 +11,7 @@
             {% assign delimeter = "-" %}
             {% assign product_handel = product_tags[0]  | handleize %}
             {% assign flavour_value = product_tags[1]  | capitalize %}         
-             <li data-id="{{product_handel}}" class="swatch_list {% if product.handle contains product_handel %}active_li{% endif %}"><span class="image_box_min"><img src="{{ flavour_value | handle | prepend: 'fl_' | append: '.' | append: file_extension | file_url }}" alt="{{flavour_value}}" width="40px"></span><span class="flavour_tooltip">{{flavour_value}}</span></li>
+             <li data-id="{{product_handel}}" class="swatch_list {% if product.handle contains product_handel %}active_li{% endif %}"><span class="image_box_min"><img src="{{ flavour_value | handle | prepend: 'fl_' | append: '.' | append: file_extension | file_url | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{flavour_value}}" width="40px"></span><span class="flavour_tooltip">{{flavour_value}}</span></li>
             {% endif %}
    {% endfor %}
 {% endcapture %}

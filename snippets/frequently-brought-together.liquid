@@ -8,7 +8,7 @@
         <div class="fbt-title-image">
           <a href="javascript:void(0);" >
             <div class="product-imgae">
-              <img src="{{ product.featured_image.src | product_img_url: '100x' }}">
+              <img src="{{ product.featured_image.src | product_img_url: '100x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}">
             </div>
           </a>
           <span class="product-info">
@@ -24,7 +24,7 @@
       <div class="plus-sign">{% include 'plus-icon-svg' %}</div>
       <div class="item-{{ forloop.index | plus:1 }} item-list freq-product-{{ forloop.index | plus:1 }}">
         <div class="fbt-title-image">
-          <div class="product-imgae"><img src="{{ productNew.featured_image.src | product_img_url: '100x' }}"></div>
+          <div class="product-imgae"><img src="{{ productNew.featured_image.src | product_img_url: '100x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"></div>
           <span class="product-info"><a href="{{ productNew.url }}">{{ productNew.title }}</a></span>
         </div>
       </div>
@@ -36,7 +36,7 @@
         <li class="freq-descriptions current-product">
           <input type="checkbox" id="freq-product-0" data-product-price="{{ product.variants[0].price }}" data-product-id="{{ product.variants.first.id }}" checked>
           <label class="checkbox-wrapper" for="freq-product-0">check</label>
-          <img src="{{ product.featured_image.src | product_img_url: '100x' }}">
+          <img src="{{ product.featured_image.src | product_img_url: '100x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}">
           <label class="freq-products" for="freq-product-0">
             <a href="javascript:void(0);" >
               <span class="current-item">
@@ -56,7 +56,7 @@
         <li class="freq-descriptions">
           <input type="checkbox" id="freq-product-{{ forloop.index | plus:1 }}" data-product-price="{{ productNew.variants[0].price }}"  data-product-id="{{ productNew.variants.first.id }}" checked>
           <label class="checkbox-wrapper" for="freq-product-{{ forloop.index | plus:1 }}">check</label>
-          <img src="{{ productNew.featured_image.src | product_img_url: '100x' }}">
+          <img src="{{ productNew.featured_image.src | product_img_url: '100x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}">
           <label class="freq-products" for="freq-product-{{ forloop.index | plus:1 }}">
             <a href="{{ productNew.url }}" >
               <span class="product-info">{{ productNew.title }}</span>
