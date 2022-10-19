@@ -25,7 +25,7 @@
                     <div class="row{% if block.settings.banner_is == 'right'%} flex-md-row-reverse{% endif %}">
                         <div class="img-box col-12 col-md-6 column">
                             <a class="animate-scale" href="{{ block.settings.link }}">
-                                {%- assign img_url = block.settings.image | img_url: 'original', crop: 'center' -%}
+                                {%- assign img_url = block.settings.image | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' -%}
                                 {% if block.settings.image != blank %}
                                 <img data-src="{{ img_url }}"
                                     src="{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"
@@ -95,7 +95,7 @@
                 <div class="custom-block-banner banner-large-img{% if block.settings.display_parallax %} banner-parallax{% endif %}">
                     <div class="img-box">
                         <a href="{{ block.settings.link }}">
-                            {%- assign img_url = block.settings.image | img_url: 'master' -%}
+                            {%- assign img_url = block.settings.image | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
 
                             {% if block.settings.display_parallax %}
                             <div class="parallax-image" style="background-image: url({{img_url}});"></div> 

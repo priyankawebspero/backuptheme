@@ -83,7 +83,7 @@
                            <div class="testimonial-avatar">
                               {%- if block.settings.avatar != blank -%}
                               {%- assign image = block.settings.avatar -%}
-                                 <img class="testimonial-avatar-image" src="{{ image | img_url: '200x', crop: 'center' }}" width="{{ image.width }}" height="{{ image.height }}" alt="{{ image.alt }}" title="{{ image.alt }}">                 
+                                 <img class="testimonial-avatar-image" src="{{ image | img_url: '200x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' }}" width="{{ image.width }}" height="{{ image.height }}" alt="{{ image.alt }}" title="{{ image.alt }}">                 
                               {%- endif -%}
                               {%- if block.settings.author != blank -%}
                               		<header>
