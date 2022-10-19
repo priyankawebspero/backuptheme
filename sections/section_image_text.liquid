@@ -25,10 +25,10 @@
                   <div class="pr gl_single_image-wrapper gl_box_border_grey {{ block.settings.image_style_one }}">
                     {%- if block.settings.block_image != blank -%}
                     {%- assign image = block.settings.block_image -%}
-                    {%- assign img_url = image | img_url: '600x', crop: 'center' -%}
+                    {%- assign img_url = image | img_url: '600x'| replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' -%}
                     <img data-src="{{ img_url }}" src="{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" class="lazyautosizes lazyloaded" data-sizes="auto">
                     {%- else -%}
-                    <img width="600" height="442" src="https://cdn.shopify.com/s/files/1/1933/6253/files/portfolio-placeholder_555x555_crop_center.jpg?12790048884060573015">                            
+                    <img width="600" height="442" src="https://47vuve1w.cdn.imgeng.in/s/files/1/1933/6253/files/portfolio-placeholder_555x555_crop_center.jpg?12790048884060573015">                            
                     {%- endif -%}
                   </div>
                 </figure>

@@ -19,19 +19,19 @@
                 {% assign altToCheck = image.alt %}
                 {% if altToCheck contains 'youtube' %}
                 <div class="thumb filter-{{ image.alt }}">                 
-                  <img id="product-featured-image-{{image.id}}" src="{{ image | img_url: 'original' }}" alt="{{ image.alt | escape }}"
+                  <img id="product-featured-image-{{image.id}}" src="{{ image | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ image.alt | escape }}"
                          class="lazyload"
                          data-src="{{ image | img_url: 'original' }}"
                          data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
                          data-aspectratio="{{ image | img_url: 'original' }}"
                          data-sizes="auto">
-                  <span class="play_li_video_top" onclick="onVideoClick(this)"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/video_icon_bg.png" alt="{{ image.alt | remove: "youtube-" }}" ></span>
+                  <span class="play_li_video_top" onclick="onVideoClick(this)"><img src="https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/video_icon_bg.png" alt="{{ image.alt | remove: "youtube-" }}" ></span>
 
                 </div>
                 {% else %}
                 <div class="thumb filter-{{ image.alt | handle }}">
-                  <a data-zoom class="fancybox" rel="gallery1" href="{{ image | img_url: 'original' }}" data-fancybox="images">
-                    <img id="product-featured-image-{{image.id}}" src="{{ image | img_url: 'original' }}" alt="{{ image.alt | escape }}"
+                  <a data-zoom class="fancybox" rel="gallery1" href="{{ image | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" data-fancybox="images">
+                    <img id="product-featured-image-{{image.id}}" src="{{ image | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ image.alt | escape }}"
                          class="lazyload"
                          data-src="{{ image | img_url: 'original' }}"
                          data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
@@ -51,9 +51,9 @@
                 {% assign altToCheck = image.alt %}
                 {% if altToCheck contains 'youtube' %}
                     <div data-image-id="{{image.id}}" data-thumnail-color="{{ image.alt | handle }}" class="item filter-{{ image.alt | handle }}">
-                      <a href="javascript:void(0)" data-image="{{ image.src | product_img_url: 'original' }}" data-zoom-image="{{ image.src | product_img_url: 'original' }}">
-                        <img src="{{ image.src | product_img_url: 'compact' }}" alt="{{ image.alt | escape }}" class="lazyautosizes lazyloaded">
-                        <span class="play_li_video" onclick="onVideoClick(this)"><img src="https://cdn.shopify.com/s/files/1/0390/2985/files/video_icon_bg.png" alt="{{ image.alt | remove: "youtube-" }}" ></span>
+                      <a href="javascript:void(0)" data-image="{{ image.src | product_img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" data-zoom-image="{{ image.src | product_img_url: 'original'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}">
+                        <img src="{{ image.src | product_img_url: 'compact' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ image.alt | escape }}" class="lazyautosizes lazyload">
+                        <span class="play_li_video" onclick="onVideoClick(this)"><img src="https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/video_icon_bg.png" alt="{{ image.alt | remove: "youtube-" }}" ></span>
 
                       </a>
                       <script>
@@ -70,8 +70,8 @@
                     </div>
                 {% else %}
                     <div data-image-id="{{image.id}}" data-thumnail-color="{{ image.alt | handle }}" class="item filter-{{ image.alt | handle }}">
-                      <a href="javascript:void(0)" data-image="{{ image.src | product_img_url: 'original' }}" data-zoom-image="{{ image.src | product_img_url: 'original' }}">
-                        <img  src="{{ image.src | product_img_url: 'compact' }}" alt="{{ media.alt }}" class="lazyautosizes lazyloaded">
+                      <a href="javascript:void(0)" data-image="{{ image.src | product_img_url: 'original'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" data-zoom-image="{{ image.src | product_img_url: 'original'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}">
+                        <img  src="{{ image.src | product_img_url: 'compact'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ media.alt }}" class="lazyautosizes lazyload">
                         <script>
 //                         function onVideoClickStop(elem){
 //                           var youTubeId = $(elem).children('img').attr('alt');
@@ -226,7 +226,7 @@
               {% assign name_address_of_manufacturer = product.metafields.product['name address of manufacturer'] %}
               {% if name_address_of_manufacturer != 0 and name_address_of_manufacturer != blank %}
               <div class="tooltip price-manufacturer2">
-                <img class="lazyautosizes lazyload" data-src="https://cdn.shopify.com/s/files/1/0390/2985/files/info-basic_ea3ba2.svg?v=1645702976" src="https://cdn.shopify.com/s/files/1/0390/2985/files/info-basic_ea3ba2.svg?v=1645702976" class="info-icon">
+                <img class="lazyautosizes lazyload" data-src="https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/info-basic_ea3ba2.svg?v=1645702976" src="https://cdn.shopify.com/s/files/1/0390/2985/files/info-basic_ea3ba2.svg?v=1645702976" class="info-icon">
                 <span class="tooltiptext">
 
                   <div class="manufacturer-box">
@@ -380,7 +380,7 @@
 
           {% if section.settings.display_trust_img and settings.img_trust != blank %}
           <div class="secure-shopping-guarantee">
-            <img data-src="{{ settings.img_trust | img_url: '800x'  }}" src="{{ settings.img_trust | img_url: '800x'  }}" class="lazyautosizes lazyloaded">
+            <img data-src="{{ settings.img_trust | img_url: '800x'  }}" src="{{ settings.img_trust | img_url: '800x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' }}" class="lazyautosizes lazyloaded">
           </div>
           {% endif %}
 

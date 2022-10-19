@@ -6,8 +6,8 @@
  <div class="row">
     <div class="col-md-12 column-product re_cols_product">
         <div class="widget-title">
-           {% if section.settings.image_1 != blank %}  <img src="{{ section.settings.image_1 | img_url:'master' }}" class="slide-desktop">{% endif %}
-           {% if section.settings.image_picker_mobile != blank %} <img src="{{ section.settings.image_picker_mobile | img_url:'master' }}" class="slide-mobile" style="display:none;">{% endif %}
+           {% if section.settings.image_1 != blank %}  <img src="{{ section.settings.image_1 | img_url:'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" class="slide-desktop">{% endif %}
+           {% if section.settings.image_picker_mobile != blank %} <img src="{{ section.settings.image_picker_mobile | img_url:'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" class="slide-mobile" style="display:none;">{% endif %}
         </div>
         <div class="widget-product">
               <div class="products-grid"></div>

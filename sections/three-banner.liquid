@@ -21,14 +21,14 @@
                             <a href="{{ block.settings.link }}" class="">
                                 {% if block.settings.image != blank %}
 
-                                {%- assign img_url = block.settings.image | img_url: '2000x', crop: 'center' -%}
+                                {%- assign img_url = block.settings.image | img_url: '2000x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' -%}
 
                                 <img data-src="{{ img_url }}"
                                     src="{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"
                                     class="lazyautosizes lazyloaded desktop-xs" data-sizes="auto">
 
                               
-                              <img class="banner-image mobile-xs lazyautosizes lazyloaded" data-src="{{ block.settings.image_mobile1 | img_url: 'master' }}" src="{{ block.settings.image_mobile1 | img_url: 'master' }}">
+                              <img class="banner-image mobile-xs lazyautosizes lazyloaded" data-src="{{ block.settings.image_mobile1 | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" src="{{ block.settings.image_mobile1 | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}">
                               
                                 {% else %}
 
@@ -74,7 +74,7 @@
                     <div class="sub-banner banner-item">
                         <div class="img-box">
                             <a href="{{ block.settings.link_2 }}" class="">
-                                {%- assign img_url = block.settings.image_2 | img_url: '2000x', crop: 'center' -%}
+                                {%- assign img_url = block.settings.image_2 | img_url: '2000x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' -%}
 
                                 <img data-src="{{ img_url }}"
                                     src="{{ img_url }}" alt="{{ block.settings.image_2.alt | default: shop.name }}" itemprop="logo"

@@ -4,8 +4,8 @@
     <div class="col-12" id="valentine_top_banner">
       {% if section.settings.top_banner_url != blank%}
       <a href="{{ section.settings.top_banner_url }}">
-        <img class="desktop_valentine" src="{{ section.settings.top_banner_image_desktop | img_url: 'master' }}"  alt="{{section.settings.top_banner_image_desktop.alt}}">
-        <img class="mobile_valentine" src="{{ section.settings.top_banner_image_mobile | img_url: 'master' }}"  alt="{{section.settings.top_banner_image_mobile.alt}}">
+        <img class="desktop_valentine" src="{{ section.settings.top_banner_image_desktop | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.top_banner_image_desktop.alt}}">
+        <img class="mobile_valentine" src="{{ section.settings.top_banner_image_mobile | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.top_banner_image_mobile.alt}}">
       </a>
       {% endif %}
     </div>
@@ -16,16 +16,16 @@
   <div class="col-md-6" id="valentine_her_banner">
     {% if section.settings.for_her_url != blank%}
     <a href="{{ section.settings.for_her_url }}">
-      <img class="desktop_valentine" src="{{ section.settings.for_her_dek | img_url: 'master' }}"  alt="{{section.settings.for_her_dek.alt}}">
-      <img class="mobile_valentine" src="{{ section.settings.for_her_mob | img_url: 'master' }}"  alt="{{section.settings.for_her_mob.alt}}">
+      <img class="desktop_valentine" src="{{ section.settings.for_her_dek | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.for_her_dek.alt}}">
+      <img class="mobile_valentine" src="{{ section.settings.for_her_mob | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.for_her_mob.alt}}">
     </a>
     {% endif %}
   </div>
   <div class="col-md-6" id="valentine_him_banner">
     {% if section.settings.for_him_url != blank%}
     <a href="{{ section.settings.for_him_url }}">
-      <img class="desktop_valentine" src="{{ section.settings.for_him_dek | img_url: 'master' }}"  alt="{{section.settings.for_him_dek.alt}}">
-      <img class="mobile_valentine" src="{{ section.settings.for_him_mob | img_url: 'master' }}"  alt="{{section.settings.for_him_mob.alt}}">
+      <img class="desktop_valentine" src="{{ section.settings.for_him_dek | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.for_him_dek.alt}}">
+      <img class="mobile_valentine" src="{{ section.settings.for_him_mob | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.for_him_mob.alt}}">
     </a>
     {% endif %}
   </div>
@@ -53,8 +53,8 @@
   <div class="col-12" id="valentine_bottom_banner">
     {% if section.settings.btm_banner_url != blank%}
     <a href="{{ section.settings.btm_banner_url }}">
-      <img class="desktop_valentine" src="{{ section.settings.btm_banner_image_desktop | img_url: 'master' }}"  alt="{{section.settings.btm_banner_image_desktop.alt}}">
-      <img class="mobile_valentine" src="{{ section.settings.btm_banner_image_mobile | img_url: 'master' }}"  alt="{{section.settings.btm_banner_image_mobile.alt}}">
+      <img class="desktop_valentine" src="{{ section.settings.btm_banner_image_desktop | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.btm_banner_image_desktop.alt}}">
+      <img class="mobile_valentine" src="{{ section.settings.btm_banner_image_mobile | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{section.settings.btm_banner_image_mobile.alt}}">
     </a>
     {% endif %}
   </div>

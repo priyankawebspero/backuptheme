@@ -12,12 +12,12 @@
 {% endfor %}
 {% if regimebanner_desk != blank %}
 <div class="product-desktop-img">
- <img src="{{ regimebanner_desk | img_url: 'master' }}" alt="{{ regimebanner_desk.alt | escape }}" class="lazyautosizes lazyload">
+ <img src="{{ regimebanner_desk | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ regimebanner_desk.alt | escape }}" class="lazyautosizes lazyload">
 </div>
  {% endif %}
 {% if regimebanner_mob != blank %}
 <div class="product-mob-img">
- <img src="{{ regimebanner_mob | img_url: 'master' }}" alt="{{ regimebanner_mob.alt | escape }}" class="lazyautosizes lazyload">
+ <img src="{{ regimebanner_mob | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ regimebanner_mob.alt | escape }}" class="lazyautosizes lazyload">
 </div>
  {% endif %}
 <div data-section-id="{{ section.id }}" data-section-type="product" id="ProductSection-{{ section.id }}" data-enable-history-state="true" data-collections-related="/collections/{{collection.handle}}?view=related">
@@ -33,8 +33,8 @@
               <div class="product-photo-container p-slider-s">
                 {% for image in product.images %}
                 <div class="thumb filter-{{ image.alt | handle }}">
-                  <a data-zoom class="fancybox" rel="gallery1" href="{{ image | img_url: 'original' }}" data-fancybox="images">
-                    <img id="product-featured-image-{{image.id}}" src="{{ image | img_url: 'original' }}" alt="{{ image.alt | escape }}"
+                  <a data-zoom class="fancybox" rel="gallery1" href="{{ image | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" data-fancybox="images">
+                    <img id="product-featured-image-{{image.id}}" src="{{ image | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ image.alt | escape }}"
                          class="lazyload"
                          data-src="{{ image | img_url: 'original' }}"
                          data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
@@ -51,8 +51,8 @@
             <div class="p-slider-n" data-rows="5" data-vertical="{% if section.settings.style_moreview == 'horizontal' %}false{% else %}true{% endif %}">
               {% for image in product.images %}
               <div class="item filter-{{ image.alt | handle }}">
-                <a href="javascript:void(0)" data-image="{{ image.src | product_img_url: 'original' }}" data-zoom-image="{{ image.src | product_img_url: 'original' }}">
-                  <img src="{{ image.src | product_img_url: 'compact' }}" alt="{{ image.alt | escape }}" class="lazyautosizes lazyloaded">
+                <a href="javascript:void(0)" data-image="{{ image.src | product_img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" data-zoom-image="{{ image.src | product_img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}">
+                  <img src="{{ image.src | product_img_url: 'compact' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ image.alt | escape }}" class="lazyautosizes lazyloaded">
                 </a>
               </div>
               {% endfor %}

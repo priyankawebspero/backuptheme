@@ -8,8 +8,8 @@
                     <div class="img-box">
                        <div class="img-box-ratio">
                             {% if block.settings.desk_image != blank %}                            
-                            {%- assign img_url_desk = block.settings.desk_image | img_url: 'master'-%}
-                            {%- assign img_url_mob = block.settings.mob_image | img_url: 'master'-%}
+                            {%- assign img_url_desk = block.settings.desk_image | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+                            {%- assign img_url_mob = block.settings.mob_image | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
                             <a {% if block.settings.slideurl != blank %} href="{{ block.settings.slideurl }}"{% endif %} class="slide-image">
                             <img data-src="{{ img_url_desk }}"
                                 src="https:{{ img_url_desk }}" alt="{{ block.settings.desk_image.alt | default: shop.name }}" itemprop="logo"

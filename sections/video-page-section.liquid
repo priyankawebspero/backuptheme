@@ -16,7 +16,7 @@
        <li class="listing-vlog col-md-4 col-sm-6">         
          {% if block.settings.image != blank%}
          <div class="video_image">
-         <img src="{{ block.settings.image | img_url: "large" }}" />
+         <img src="{{ block.settings.image | img_url: "large" | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" />
          </div>
          {% endif %}
 

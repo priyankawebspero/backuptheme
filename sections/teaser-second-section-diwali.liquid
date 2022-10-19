@@ -14,8 +14,8 @@
           <div class="img-box">
             <a href="{{ block.settings.link }}" >
               {% if block.settings.image != blank %}            
-              {%- assign img_url = block.settings.image | img_url: 'original', crop: 'center' -%}
-              {%- assign img_url_mobile = block.settings.image_mob | img_url: 'original', crop: 'center' -%}
+              {%- assign img_url = block.settings.image | img_url: 'original', crop: 'center' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+              {%- assign img_url_mobile = block.settings.image_mob | img_url: 'original', crop: 'center' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
               <img data-src="{{ img_url }}"
                    src="https:{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"
                    class="lazyautosizes lazyloaded teaser_desktop" data-sizes="auto">

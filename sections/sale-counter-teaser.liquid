@@ -1,8 +1,8 @@
 <div class="teaser-spotlight-block" id="teaser-spotlight-33-{{section.id}}">
 <div class="">
   {% if section.settings.gift_image != blank %}            
-    {%- assign img_url_gift = section.settings.gift_image | img_url: 'master'-%}
-    {%- assign img_url_gift_mobile = section.settings.gift_image_mobile | img_url: 'master'-%}
+    {%- assign img_url_gift = section.settings.gift_image | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+    {%- assign img_url_gift_mobile = section.settings.gift_image_mobile | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
     <img data-src="{{ img_url_gift }}"
          src="https:{{ img_url_gift }}" alt="{{ section.settings.gift_image.alt | default: shop.name }}" itemprop="logo"
          class="lazyautosizes lazyloaded teaser_desktop" data-sizes="auto">
@@ -40,8 +40,8 @@
     
       <div class="bottom_sec">
         {% if section.settings.bottom_image != blank %}            
-        {%- assign img_url_gift = section.settings.bottom_image | img_url: 'master'-%}
-        {%- assign img_url_gift_mobile = section.settings.bottom_image_mobile | img_url: 'master'-%}
+        {%- assign img_url_gift = section.settings.bottom_image | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+        {%- assign img_url_gift_mobile = section.settings.bottom_image_mobile | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
         <a href="/collections/single-products-offer">
         <img data-src="{{ img_url_gift }}"
              src="https:{{ img_url_gift }}" alt="{{ section.settings.bottom_image.alt | default: shop.name }}" itemprop="logo"
