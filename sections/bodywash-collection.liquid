@@ -20,10 +20,10 @@
        {% for block in section.blocks %}             
      {%- if block.settings.columns == 'one half size' -%}
           {%- assign column_size = 'col-12 col-md-8' -%}
-         {% if block.settings.image_desk != blank %}{%- assign img_url = block.settings.image_desk | img_url: '770x' -%}{%- assign img_url_1 = block.settings.image_mob | img_url: '800x' -%}{% endif %}
+         {% if block.settings.image_desk != blank %}{%- assign img_url = block.settings.image_desk | img_url: '770x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}{%- assign img_url_1 = block.settings.image_mob | img_url: '800x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}{% endif %}
         {% else %}
           {%- assign column_size = 'col-6 col-md-6 col-lg-4' -%}
-         {% if block.settings.image_desk != blank %}{%- assign img_url = block.settings.image_desk | img_url: '400x' -%}{%- assign img_url_1 = block.settings.image_mob | img_url: '400x' -%}{% endif %}
+         {% if block.settings.image_desk != blank %}{%- assign img_url = block.settings.image_desk | img_url: '400x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}{%- assign img_url_1 = block.settings.image_mob | img_url: '400x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}{% endif %}
         {%- endif -%}
       <div class="{{ column_size }}">
         <div class="spotlight-item">
@@ -33,12 +33,12 @@
               {% if block.settings.image_desk != blank %}
               <img data-src="{{ img_url_1 }}"
                    src="https:{{ img_url_1 }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"
-                   class="lazyautosizes lazyloaded mobile_collection_image" data-sizes="auto">
+                   class="lazyautosizes lazyload mobile_collection_image" data-sizes="auto">
               {% endif %}
               {% if block.settings.image_mob != blank %}
               <img data-src="{{ img_url }}"
                    src="https:{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"
-                   class="lazyautosizes lazyloaded desktop_collection_image" data-sizes="auto">
+                   class="lazyautosizes lazyload desktop_collection_image" data-sizes="auto">
               {% endif %}
               {% else %}
 

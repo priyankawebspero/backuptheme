@@ -63,9 +63,9 @@
               <meta itemprop="url" content="{{ shop.url }}">
               {% if section.settings.brand_type == 'image' and section.settings.logo_pc != bank %}
               <a class="logo-img" href="/" title="plum">
-                <img itemprop="logo" data-src="{{ section.settings.logo_pc | img_url: 'master' }}"
-                     src="{{ section.settings.logo_pc | img_url: 'master' }}"
-                     alt="{{ section.settings.logo_pc.alt | default: shop.name }}" itemprop="logo" class="lazyautosizes lazyloaded" data-sizes="auto">
+                <img itemprop="logo" data-src="{{ section.settings.logo_pc | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' }}"
+                     src="{{ section.settings.logo_pc | img_url: 'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' }}"
+                     alt="{{ section.settings.logo_pc.alt | default: shop.name }}" itemprop="logo" class="lazyautosizes lazyload" data-sizes="auto">
 
                 {% if section.settings.display_parallax %}
                 {% comment %}
@@ -164,8 +164,8 @@
         {%comment%}
          <!--   <div class="nav-search svg-mb">                    
               <a href="#" title="Search Icon" class="icon-search" data-search-mobile-toggle>
-                {% comment %} {% include 'icon-search' %} {% endcomment %}
-                <img src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/seach.png?v=1576688973">
+                {% comment %} {% include 'icon-search' %} {% endcomment %} 
+                <img src="https://47vuve1w.cdn.imgeng.in/s/files/1/0257/8766/2417/files/seach.png?v=1576688973">
                 <span>search</span>
               </a>
               {% include 'search-bar' %}
@@ -186,7 +186,7 @@
             {% if settings.enable_wishlist %}
             <div class="svg-mb wishlist-icon">
               <a class="wishlist" href="/pages/wish-list" title='{% if settings.enable_multilang %}data-translate="wishlist.general.my_wishlist"{% endif %}'>
-                <img src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/wishlist.png?v=1576688973">
+                <img src="https://47vuve1w.cdn.imgeng.in/s/files/1/0257/8766/2417/files/wishlist.png?v=1576688973">
                 <span>wishlist</span>
               </a>                   
             </div>
@@ -198,7 +198,7 @@
             <div class="acc-mb svg-mb">
 
               <a href="/account" title="User Icon" class="icon-user">
-                <img src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/account.png?v=1576688973">
+                <img src="https://47vuve1w.cdn.imgeng.in/s/files/1/0257/8766/2417/files/account.png?v=1576688973">
                 <span>account</span>
               </a>
               {% if shop.customer_accounts_enabled != blank %}

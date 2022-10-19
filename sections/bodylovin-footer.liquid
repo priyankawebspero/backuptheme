@@ -192,7 +192,7 @@
               {% if section.settings[display_current_method] %}
               {%- assign current_method_icon = method | prepend: 'icon_' -%}
               <li>
-                <img data-src="{{ section.settings[current_method_icon] | img_url: 'x32', format: 'jpg' }}" src="{{ section.settings[current_method_icon] | img_url: 'x32', format: 'jpg' }}" alt="{{ method }}" class="lazyautosizes lazyloaded">
+                <img data-src="{{ section.settings[current_method_icon] | img_url: 'x32', format: 'jpg' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' }}" src="{{ section.settings[current_method_icon] | img_url: 'x32', format: 'jpg' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' }}" alt="{{ method }}" class="lazyautosizes lazyload">
               </li>
               {% endif %}
               {% endfor %}

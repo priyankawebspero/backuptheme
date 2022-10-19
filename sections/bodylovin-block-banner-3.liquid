@@ -104,7 +104,7 @@
                             {% if block.settings.image != blank %}
                             <img data-src="{{ img_url }}"
                                 src="https:{{ img_url }}" alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo"
-                                class="lazyautosizes lazyloaded" data-sizes="auto">
+                                class="lazyautosizes lazyload" data-sizes="auto">
                             {% else %}
                             <div class="not_img">
                             1880 x 720px
