@@ -1242,12 +1242,12 @@ div#slider-promo-wrap .slick-slider img.mobile{display:block!important}
 main.main-content{padding-top:114px}
 }
 body#all-in-stock div#slider-promo-wrap{display:none!important}
-.plum-999 .inner-top{position:relative}
+/*.plum-999 .inner-top{position:relative}
 .plum-999 .inner-top:after{content:"";background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/dpa_icon_999.png);display:block;position:absolute;left:0;top:0;width:91px;height:48px;background-repeat:no-repeat;background-size:100%}
 .plum-999 strong.label.new-label{display:none!important}
 .plum-999 .new_bge_cs .inner-top:after{display:none}
 .template-collection .plum-999 .plum-999-inner .inner-top:after{content:"";background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/dpa_icon_999.png);display:block!important;position:absolute;left:0;top:0;width:91px;height:48px;background-repeat:no-repeat;background-size:100%}
-.template-collection .plum-999 .inner-top:after{left:-10px;top:-10px}
+.template-collection .plum-999 .inner-top:after{left:-10px;top:-10px}*/
 #buy3-999-sale-is-live div#slider-promo-wrap,#plum-bodylovin div#slider-promo-wrap{display:none!important}
 .cancel-order-outer{border-top:1px solid #ccc;padding:40px 15px}
 .cancel-order-outer h2{color:#5e0c8c}
