@@ -20,9 +20,9 @@
                   <a data-zoom class="fancybox" rel="gallery1" href="{{ image | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" data-fancybox="images">
                     <img id="product-featured-image-{{image.id}}" src="{{ image | img_url: '750x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ image.alt | escape }}"
                          class="lazyload"
-                         data-src="{{ image | img_url: '750x' }}"
+                         data-src="{{ image | img_url: '750x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"
                          data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
-                         data-aspectratio="{{ image | img_url: '750x' }}"
+                         data-aspectratio="{{ image | img_url: '750x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"
                          data-sizes="auto">
                   </a>
                 </div>

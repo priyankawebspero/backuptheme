@@ -33,14 +33,14 @@
         <a href="{{ product.url | within: collection }}" class="product-grid-image" data-collections-related="/collections/{{collection.handle}}?view=related">
           <span id="secomapp-fg-image-{{ product.id }}" style="display: none;"> {{ "icon-freegift.png" | asset_url | img_tag: "", "sca-fg-img-collect" }} </span>
           <span class="sca-fg-cat-list prod-show-list" style="display:none;" id="secomapp-fg-data-{{ product.id }}"> </span>
-          {%- assign img_pr = product.featured_image.src | product_img_url: 'large' -%}
+          {%- assign img_pr = product.featured_image.src | product_img_url: 'large' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
 
-          {%- assign img_0 = product.images[0].src | product_img_url: 'large' -%}
+          {%- assign img_0 = product.images[0].src | product_img_url: 'large' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
 
-          {%- assign img_1 = product.images[1].src | product_img_url: 'large' -%}
+          {%- assign img_1 = product.images[1].src | product_img_url: 'large' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
 
           {% if product.images.size > 1 and settings.image_swap %}
-          <img src="{{ product.images[0].src | product_img_url: 'large' }}" alt="{{ product.images[0].alt | escape }}"
+          <img src="{{ product.images[0].src | product_img_url: 'large' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ product.images[0].alt | escape }}"
                class="images-one lazyload"
                data-src="{{ img_0 }}"
                data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
@@ -48,7 +48,7 @@
                data-sizes="auto">
 
           <span class="images-two">
-            <img src="{{ product.images[1].src | product_img_url: 'large'}}" alt="{{ product.images[1].alt | escape }}"
+            <img src="{{ product.images[1].src | product_img_url: 'large' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ product.images[1].alt | escape }}"
                  class="lazyload"
                  data-src="{{ img_1 }}"
                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
@@ -57,7 +57,7 @@
 
           </span>
           {% else %}
-          <img src="{{ product.featured_image.src | product_img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}"
+          <img src="{{ product.featured_image.src | product_img_url: 'large' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ product.featured_image.alt | escape }}"
                data-src="{{ img_pr }}"
                class="lazyload"
                data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"

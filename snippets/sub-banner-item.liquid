@@ -3,7 +3,7 @@
         <a href="{{ block.settings.link }}" class="animate-scale">
         {% if block.settings.image != blank %}
         
-        {%- assign img_url = block.settings.image | img_url: 'original', crop: 'center' -%}
+        {%- assign img_url = block.settings.image | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' -%}
 
         <img data-src="{{ img_url }}" {% include 'lazyload' %}
              alt="{{ block.settings.image.alt | default: shop.name }}" itemprop="logo">

@@ -70,7 +70,7 @@ More info on linklists:
 
     <li class="menu-lv-1 item{% if linklists[link.handle] != empty %} dropdown{% if is_megamenu %} mega-menu{% else %} no-mega-menu{% endif %}{% endif %}">
         <a class="{%if linklists[link.handle] != empty %}menu__moblie {% endif %}{% if link.active %}current{% endif %}"  href="{{ link.url }}">
-            {% assign img = link.handle | downcase | replace: ' ', '-' | append: '.png' | file_url %}
+            {% assign img = link.handle | downcase | replace: ' ', '-' | append: '.png' | file_url | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'%}
 
             <span class="icon-img">
                 <img src="{{ img }}" alt="{{ link.title }}" onError="style.display = 'none';">

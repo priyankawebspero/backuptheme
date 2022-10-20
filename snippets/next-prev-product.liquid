@@ -20,7 +20,7 @@
     <div id="prev-product-modal" class="next-prev-content" data-next-prev-content>
       <div class="content">
         <a class="product-image" href="{{ collection.previous_product }}">
-          <img src="{{ collection.previous_product.images[0] | img_url: 'compact' }}" alt="{{ collection.previous_product.title }}">
+          <img src="{{ collection.previous_product.images[0] | img_url: 'compact'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ collection.previous_product.title }}">
         </a>
         <div class="column-right">
           <a class="product-name" href="{{ collection.previous_product }}">
@@ -72,7 +72,7 @@
     <div id="next-product-modal" class="next-prev-content" data-next-prev-content>
       <div class="content">
         <a class="product-image" href="{{ collection.next_product }}">
-          <img src="{{ collection.next_product.images[0] | img_url: 'compact' }}" alt="{{ collection.next_product.title }}">
+          <img src="{{ collection.next_product.images[0] | img_url: 'compact'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ collection.next_product.title }}">
         </a>
         <div class="column-right">
           <a class="product-name" href="{{ collection.next_product }}">

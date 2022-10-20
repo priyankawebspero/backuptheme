@@ -21,7 +21,7 @@
                     <div class="row align-items-center">
                         <div class=" col-img-title">
                             <div class="pr-img sticky-item">
-                                <img src="{{ product.featured_image.src  | product_img_url: 'compact' }}" alt="">
+                                <img src="{{ product.featured_image.src  | product_img_url: 'compact' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="">
 
                                 <div class="product-title">
                                     {% include 'multilang' with product.title %}
@@ -46,7 +46,7 @@
 
                                         {% assign value = variant.options[option_index] %}
                                         <li>
-                                            <a {% if variant.image != null %} data-img="{{ variant.image.src | product_img_url: 'compact' }}"{% else %} data-img="{{ product.featured_image.src | product_img_url: 'compact' }}"{% endif %} data-value="{{ variant.id }}" class="pr-swatch {% if variant.available == false %}sold-out{% endif %}" {% if variant.available == false %}disabled="disabled"{% endif %} href="javascript:void(0)">
+                                            <a {% if variant.image != null %} data-img="{{ variant.image.src | product_img_url: 'compact' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"{% else %} data-img="{{ product.featured_image.src | product_img_url: 'compact' }}"{% endif %} data-value="{{ variant.id }}" class="pr-swatch {% if variant.available == false %}sold-out{% endif %}" {% if variant.available == false %}disabled="disabled"{% endif %} href="javascript:void(0)">
                                                 {{ variant.title }} - {{ variant.price | money }}
                                             </a>
                                         </li>

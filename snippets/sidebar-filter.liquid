@@ -104,7 +104,7 @@
     {% if section.settings.enable_img_1 %}
     <div class="widget sidebar-banner">
         {% if section.settings.image_img_1 != blank %}
-        {%- assign img_url = section.settings.image_img_1 | img_url: 'original', crop: 'center' -%}
+        {%- assign img_url = section.settings.image_img_1 | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' -%}
 
         {% if section.settings.link_img_1 != blank %}
         <a class="animate-scale" href="{{ section.settings.link_img_1 }}">
@@ -127,7 +127,7 @@
     {% if section.settings.enable_img_2 %}
     <div class="widget sidebar-banner">
         {% if section.settings.image_img_2 != blank %}
-        {%- assign img_url = section.settings.image_img_2 | img_url: 'original', crop: 'center' -%}
+        {%- assign img_url = section.settings.image_img_2 | img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' -%}
 
         {% if section.settings.link_img_2 != blank %}
         <a class="animate-scale" href="{{ section.settings.link_img_2 }}">
