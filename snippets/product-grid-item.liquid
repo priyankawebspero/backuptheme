@@ -90,11 +90,11 @@
         </span>
       </a>
        <div class="advantage">
-          {% assign advantage = product.metafields.product['Benefits'] %}
+        {% assign advantage = product.metafields.product['Benefits'] %}
           {% if advantage != 0 and advantage != blank %}
             <label>{{ advantage }}</label>       
             {% endif %}
-         </div>
+        </div>
             {% assign variantCounts = product.variants | size %}
       {% if variantCounts > 1 %}
       {% assign producTemplate =  product.template_suffix %}
