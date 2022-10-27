@@ -115,8 +115,8 @@
           {% endif %}
           {% endif %}
           
-          {% if section.settings.image_1 != blank %}  <img src="{{ section.settings.image_1 | img_url:'master' }}" class="slide-desktop">{% endif %}
-           {% if section.settings.image_picker_mobile != blank %} <img src="{{ section.settings.image_picker_mobile | img_url:'master' }}" class="slide-mobile" style="display:none;">{% endif %}
+          {% if section.settings.image_1 != blank %}  <img src="{{ section.settings.image_1 | img_url:'master' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" class="slide-desktop">{% endif %}
+           {% if section.settings.image_picker_mobile != blank %} <img src="{{ section.settings.image_picker_mobile | img_url:'master'| replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' }}" class="slide-mobile" style="display:none;">{% endif %}
           
         </div>
 <!--           <a href="{{ section.settings.link1 }}" class="btn desktop">{{ section.settings.shop_now_button }}</a>
