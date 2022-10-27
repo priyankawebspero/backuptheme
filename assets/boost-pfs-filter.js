@@ -284,7 +284,7 @@ var boostPFSTemplate = {
               if (boostPFSThemeConfig.custom.type_label_sale == 'label_sale') {
                 itemLabelsHtml += '<strong class="label sale-label">' + boostPFSConfig.label.sale + '</strong>';
               } else {                	
-                itemLabelsHtml += '<img src="https://cdn.shopify.com/s/files/1/0390/2985/files/sale_new.png?v=1579003407">';
+                itemLabelsHtml += '<img src="https://cdn.shopify.com/s/files/1/0390/2985/files/47vuve1w.cdn.imgeng.in.png?v=1579003407">';
                 itemLabelsHtml += '<strong class="label sale-label">' + Math.floor(percentSale) + '% Off</strong>';
               }
             }
