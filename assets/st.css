@@ -103,7 +103,7 @@ div#searchModalContainer{width:100%}
 #searchModal .st-product-inner .st-price .price{font-size:16px;position:relative;display:block;color:#333;font-weight:600;overflow:hidden}
 #searchModal .st-product-inner:hover .st-main-img{opacity:0}
 .st-search-bar .input-close-btn{width:20px;height:25px!important;display:block;cursor:pointer;background-image:url(cross.svg)!important;background-position-y:center!important;background-position-x:center;background-repeat:no-repeat!important;background-size:12px!important;position:absolute;top:0;right:0;margin-right:25px;margin-top:8px;color:#000}
-.st-search-bar input{border-radius:10px;border:1px solid #5e0c8c;padding:8px 14px;padding-left:35px;width:100%;font-size:16px;min-width:250px;font-weight:500;background-image:url(https://cdn.shopify.com/s/files/1/0390/2985/files/seach_icon.svg);background-size:18px;background-position-x:12px;background-position-y:center;background-repeat:no-repeat;color:#232323;letter-spacing:0;text-transform:capitalize;line-height:normal}
+.st-search-bar input{border-radius:10px;border:1px solid #5e0c8c;padding:8px 14px;padding-left:35px;width:100%;font-size:16px;min-width:250px;font-weight:500;background-image:url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/seach_icon.svg);background-size:18px;background-position-x:12px;background-position-y:center;background-repeat:no-repeat;color:#232323;letter-spacing:0;text-transform:capitalize;line-height:normal}
 .st-search-bar input:focus{outline:none}
 #searchModalContainer h2.page-heading{display:flex;justify-content:center;width:100%;margin-bottom:.1em;font-size:26px}
 .st-brand-outer:hover .st-brand-txt{color:#47b475}
