@@ -33,7 +33,7 @@
             {% for image in product.images %}
             <div class="item filter-{{ image.alt | handle }}">
               <a href="javascript:void(0)" data-image="{{ image.src | product_img_url: '80x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" data-zoom-image="{{ image.src | product_img_url: 'original' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}">
-                <img data-src="{{ image.src | product_img_url: '80x' }}" src="{{ image.src | product_img_url: '80x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ image.alt | escape }}" class="lazyautosizes lazyload">
+                <img data-src="{{ image.src | product_img_url: '80x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" src="{{ image.src | product_img_url: '80x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="{{ image.alt | escape }}" class="lazyautosizes lazyload">
               </a>
             </div>
             {% endfor %}
