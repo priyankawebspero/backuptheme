@@ -64,7 +64,7 @@
           <div class="details">
             <div class="cart-thumb">
               <a class="product-img" href="{%if item.variant.metafields.secomapp.freegifts%}{{ item.product.url }}{%else%}{{ item.url | within: collections.all }}{%endif%}">
-                <img src="{{ item | img_url: '160x' }}"  alt="{{ item.title | remove: '/ Default Title'| remove: 'Default Title' | remove: '/ Default' | remove: 'Default' | replace: '(Freegifts)', ''  | escape }}" />
+                <img src="{{ item | img_url: '160x' , format: 'pjpg' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}"  alt="{{ item.title | remove: '/ Default Title'| remove: 'Default Title' | remove: '/ Default' | remove: 'Default' | replace: '(Freegifts)', ''  | escape }}" />
               </a>
             </div>
 

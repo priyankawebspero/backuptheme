@@ -32,7 +32,7 @@ Cart helper for Quantity Breaks Now (https://apps.shopify.com/quantity-breaks-no
 "product_id":{{ item.product_id }},
 "key":"{{ item.key }}",
 "url":"{{ item.url }}",
-"image":"{{ item | img_url: 'medium' }}",
+"image":"{{ item | img_url: 'medium' , format: 'pjpg' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}",
 "quantity":{{ item.quantity }},
 "price":{{ item.price }},
 "properties":{ {% for property in item.properties %}
