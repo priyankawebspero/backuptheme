@@ -17,9 +17,9 @@
     
       {%- assign product_main = all_products[block.settings.main_pr_look] -%}    
       
-      {%- assign img_1 = block.settings.image_1 -%}
-      {%- assign img_2 = block.settings.image_2 -%}
-      {%- assign img_3 = block.settings.image_3 -%} 
+      {%- assign img_1 = block.settings.image_1 | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+      {%- assign img_2 = block.settings.image_2 | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%}
+      {%- assign img_3 = block.settings.image_3 | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'-%} 
       
       {% if img_1 != blank and img_2 != blank and img_3 != blank %}
       {%- assign col_grid = 'col-6 col-sm-6 col-md-4' -%}

@@ -7,7 +7,7 @@ var _nv_shopify_product = {
         product_name : '{{product.title}}',
         product_id : '{{product.id}}',
         product_collection : '{{product.collections}}',
-        product_image_url : 'https:{{product.featured_image.src | img_url: 'grande'}}',
+        product_image_url : 'https:{{product.featured_image.src | img_url: 'grande' , format: 'pjpg' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}',
         product_url : '{{shop.secure_url}}{{product.url}}',
         product_brand : '{{product.vendor}}',
         product_price : '{{product.price}}'/100,

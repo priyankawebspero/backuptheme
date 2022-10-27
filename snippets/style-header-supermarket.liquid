@@ -30,7 +30,7 @@
     {% comment %}/*  Header Top  */{% endcomment %}   
     .header-top {
         {% if section.settings.header_top_image != blank %}
-        background: url({{ section.settings.header_top_image | img_url: '2048x' }});
+        background: url({{ section.settings.header_top_image | img_url: '2048x' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in' }});
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;

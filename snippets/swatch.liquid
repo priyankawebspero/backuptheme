@@ -75,11 +75,11 @@
             {% if is_color %}
             {% if settings.color_swatch_style == 'normal' %}
             <label for="swatch-{{ option_index }}-{{ value | handle }}">
-                <span class="bgImg" style="background-color: {{ value | split: ' ' | last | handle }}; background-image: url({{ value | handle | prepend: 'swatch-' | append: '.' | append: file_extension | file_url }})"></span>
+                <span class="bgImg" style="background-color: {{ value | split: ' ' | last | handle }}; background-image: url({{ value | handle | prepend: 'swatch-' | append: '.' | append: file_extension | file_url  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}})"></span>
             </label>
             {% elsif settings.color_swatch_style == 'variant' or settings.color_swatch_style == 'variant_grouped' %}
             <label class="swatch_variant_img" for="swatch-{{ option_index }}-{{ value | handle }}">
-              <span class="bgImg" style="background-color: {{ value | split: ' ' | last | handle }}; background-image: url({{ value | handle | prepend: 'swatch-' | append: '.' | append: file_extension | file_url }})"></span>
+              <span class="bgImg" style="background-color: {{ value | split: ' ' | last | handle }}; background-image: url({{ value | handle | prepend: 'swatch-' | append: '.' | append: file_extension | file_url  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}})"></span>
             </label>
             {% endif %}
 

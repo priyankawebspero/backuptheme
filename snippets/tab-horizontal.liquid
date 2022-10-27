@@ -84,13 +84,13 @@
                 </div> 
                 {% else %}
                  <div class="benefit-unit">
-                  <img src="{{ iconWithExtension | file_url }}" class="benefit-icon">
+                  <img src="{{ iconWithExtension | file_url  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" class="benefit-icon">
                   <p class="benefit-title">{{ benefitText }}</p>                 
                 </div> 
                 {% endif %}
                 {% else %}
                  <div class="benefit-unit">
-                  <img src="{{ iconWithExtension | file_url }}" class="benefit-icon">
+                  <img src="{{ iconWithExtension | file_url  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" class="benefit-icon">
                   <p class="benefit-title">{{ benefitText }}</p>                 
                 </div> 
                 {% endif %} 

@@ -5,7 +5,7 @@
    <meta name="facebook-domain-verification" content="pmg3hvg1n8xz9n6uke5yl4agok1xsv" />    
   <!-- Favicon -->
     {% if settings.favicon != blank %}
-    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" type="image/png">
     {% endif %}
   
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />

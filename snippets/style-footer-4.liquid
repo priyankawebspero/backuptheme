@@ -5,7 +5,7 @@
         {% endif %}
         
         {% if section.settings.bg_footer_img == 'bg-footer' %}
-        background: url({{ section.settings.bg-footer-img | img_url: '2048x' }});
+        background: url({{ section.settings.bg-footer-img | img_url: '2048x'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}});
         background-position: {{ section.settings.bg_footer_position_x }} {{ section.settings.bg_footer_position_y }};
         background-repeat: {{ section.settings.bg_footer_repeat }};
         background-attachment: {{ section.settings.bg_footer_attachment }};
