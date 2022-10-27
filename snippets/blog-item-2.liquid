@@ -2,7 +2,7 @@
   {% if article.image %}
   {% assign image_alt = article.title | escape %}
   <div class="article-img">
-    {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url | replace: '<a', '<a class="animate-scale1"' }}
+    {{ article | img_url: '1024x1024' | img_tag: image_alt, 'article__image' | link_to: article.url | replace: '<a', '<a class="animate-scale1"' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}
   </div>
   {% endif %}
   

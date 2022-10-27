@@ -3,12 +3,12 @@
     {% if article.image %}
     {% assign image_alt = article.title | escape %}
     <div class="article-img">
-      {{ article | img_url: '370x' | img_tag: image_alt, 'article__image' | link_to: article.url | replace: '<a', '<a class="animate-scale"' }}
+      {{ article | img_url: '370x' | img_tag: image_alt, 'article__image' | link_to: article.url | replace: '<a', '<a class="animate-scale"' | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}
     </div>
 
     {% else %}
     <div class="article-img">
-      <img data-src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/blog.png?v=1576997571" src="https://cdn.shopify.com/s/files/1/0257/8766/2417/files/blog.png?v=1576997571" class="lazyautosizes lazyloaded">
+      <img data-src="https://47vuve1w.cdn.imgeng.in/s/files/1/0257/8766/2417/files/blog.png?v=1576997571" src="https://47vuve1w.cdn.imgeng.in/s/files/1/0257/8766/2417/files/blog.png?v=1576997571" class="lazyautosizes lazyloaded">
     </div>
     {% endif %}
 
