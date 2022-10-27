@@ -15,7 +15,7 @@
        {% if section.settings.image_product_mob != blank %}
       <img class="lazyload"  data-src="{{ section.settings.image_product_mob | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" src="{{ section.settings.image_product_mob | img_url: 'master'  | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="clean real good" data-sizes="auto">
         {% else %}
-      <img class="lazyload"  data-src="{{ section.settings.image_product_mob_svg }}" src="{{ section.settings.image_product_mob_svg }}" alt="clean real good" data-sizes="auto">
+      <img class="lazyload"  data-src="{{ section.settings.image_product_mob_svg | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" src="{{ section.settings.image_product_mob_svg | replace:'cdn.shopify.com', '47vuve1w.cdn.imgeng.in'}}" alt="clean real good" data-sizes="auto">
       {% endif %}
     </div>
   </div></div>
