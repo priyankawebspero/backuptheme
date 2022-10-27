@@ -73,6 +73,12 @@
             <span class="lang1">
               {{ product.title }}
             </span>
+          <div class="advantage">
+          {% assign advantage = product.metafields.product['Benefits'] %}
+          {% if advantage != 0 and advantage != blank %}
+            <label>{{ advantage }}</label>       
+            {% endif %}
+          </div>
           <div class="grammage">
             {% assign Grammage = product.metafields.product['grammage'] %}
             {% if Grammage != 0 and Grammage != blank %}
