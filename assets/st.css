@@ -266,7 +266,7 @@ div#new_tags{margin-top:15px}
 .sort-by .form-group{display:flex;margin-bottom:0}
 #st-sort-web{background-color:#ebeff0;font-family:'Nunito',sans-serif;outline:none;cursor:pointer;border-radius:0;display:inline-block;font-size:12px;min-width:225px;text-align:left;padding:12px 20px;padding-right:20px;border:2px hidden #f6f6f6!important;color:#333;font-weight:500;text-transform:uppercase}
 .sort-by select{font-family:'Nunito',sans-serif;border:none!important;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-image:url(select-down.svg);background-size:12px;background-repeat:no-repeat;background-position-x:90%;background-position-y:center;font-weight:700;max-width:160px;font-size:12px;cursor:pointer}
-#searchModal .toolbar .grid,#searchModal .toolbar .list{background:url(https://cdn.shopify.com/s/files/1/0042/4384/9314/t/6/assets/icons_new14.png) 0 0 no-repeat!important}
+#searchModal .toolbar .grid,#searchModal .toolbar .list{background:url(https://47vuve1w.cdn.imgeng.in/s/files/1/0042/4384/9314/t/6/assets/icons_new14.png) 0 0 no-repeat!important}
 #searchModal .toolbar span.grid.active,#searchModal .toolbar span.grid:hover{background-position:0 -600px!important}
 #searchModal .toolbar span.list{background-position:0 -727px!important}
 .resut-summary-t span{color:#232323;font-size:12px;text-transform:uppercase;letter-spacing:0}

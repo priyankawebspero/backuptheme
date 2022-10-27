@@ -4,7 +4,7 @@
 .img-box-ratio img{width:100%;height:auto}
 #offer-diwali main.main-content{padding-bottom:0}
 div#shopify-section-diwali-second-section{display:none!important}
-#shopify-section-diwali-slider-section #home-spotlight-slider-diwali-slider-section:after{background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/desktop_bottom_im.jpg);background-position:bottom;content:"";display:block;width:100%;height:345px}
+#shopify-section-diwali-slider-section #home-spotlight-slider-diwali-slider-section:after{background:url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/desktop_bottom_im.jpg);background-position:bottom;content:"";display:block;width:100%;height:345px}
 #shopify-section-diwali-slider-section #home-spotlight-slider-diwali-slider-section ul.slick-dots{position:absolute;bottom:-80px;width:100%;left:0}
 #shopify-section-diwali-slider-section .slick-dots li{width:28px;height:28px;margin:0 14px}
 #shopify-section-diwali-slider-section .slick-dots li button{width:100%;height:100%;background:#fdf1c4}
@@ -30,6 +30,6 @@ div#shopify-section-diwali-slider-section{margin-top:-1px}
 #shopify-section-diwali-top-banner img.slide-desktop{display:none!important}
 #shopify-section-diwali-slider-section .img-box-ratio img.desktop{display:none!important}
 #shopify-section-diwali-slider-section .slick-dots li{width:15px;height:15px;margin:0 7px}
-#shopify-section-diwali-slider-section #home-spotlight-slider-diwali-slider-section:after{height:125px;background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/mobile_landingpage_bottom.jpg);background-position:bottom;background-size:cover}
+#shopify-section-diwali-slider-section #home-spotlight-slider-diwali-slider-section:after{height:125px;background:url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/mobile_landingpage_bottom.jpg);background-position:bottom;background-size:cover}
 #shopify-section-diwali-slider-section #home-spotlight-slider-diwali-slider-section ul.slick-dots{bottom:-35px;padding:0 15px}
 }

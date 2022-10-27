@@ -1001,10 +1001,10 @@ div#bxp-steps .bxp-step.bxp-step-current .bxp-progress-title{color:#5e0c8c}
 .bxp-bldr-step .bxp-table-cell{float:left!important;width:25%;padding:0 10px;text-align:center;margin:15px 0 0}
 .bxp-bldr-step .bxp-table-cell .bxp-swatch-color{width:90px!important;height:90px!important;border:1px solid #ccc;margin:0 auto!important}
 .bxp-bldr-step .bxp-table-cell span{font-size:16px!important;font-weight:600;display:block;padding-top:3px;color:#5e0d8b}
-.bxp-bldr-step .bxp-table-cell .bxp-swatch-color[data-color="one"]{background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/ea5406b7-beda-41d3-8a67-53cec51c1882.jpg?v=1634104909)!important;background-size:170px 90px!important;background-position:center!important;background-repeat:no-repeat!important}
-.bxp-bldr-step .bxp-table-cell .bxp-swatch-color[data-color="two"]{background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/4de736f8-e50f-41eb-af59-30b67048d08e.jpg?v=1634104909)!important;background-size:165px 90px!important;background-position:-60px 0!important;background-repeat:no-repeat!important}
-.bxp-bldr-step .bxp-table-cell .bxp-swatch-color[data-color="three"]{background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/5759f29d-b0c7-4c6c-819c-ae33d755702a.jpg?v=1634104909)!important;background-size:95px 90px!important;background-repeat:no-repeat!important;background-position:center!important}
-.bxp-bldr-step .bxp-table-cell .bxp-swatch-color[data-color="none"]{background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/87aac207-5e30-4c7c-8967-1d87a9e9e2ea.jpg?v=1634104909)!important;background-size:90px 90px!important;background-repeat:no-repeat!important;background-position:center!important}
+.bxp-bldr-step .bxp-table-cell .bxp-swatch-color[data-color="one"]{background:url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/ea5406b7-beda-41d3-8a67-53cec51c1882.jpg?v=1634104909)!important;background-size:170px 90px!important;background-position:center!important;background-repeat:no-repeat!important}
+.bxp-bldr-step .bxp-table-cell .bxp-swatch-color[data-color="two"]{background:url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/4de736f8-e50f-41eb-af59-30b67048d08e.jpg?v=1634104909)!important;background-size:165px 90px!important;background-position:-60px 0!important;background-repeat:no-repeat!important}
+.bxp-bldr-step .bxp-table-cell .bxp-swatch-color[data-color="three"]{background:url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/5759f29d-b0c7-4c6c-819c-ae33d755702a.jpg?v=1634104909)!important;background-size:95px 90px!important;background-repeat:no-repeat!important;background-position:center!important}
+.bxp-bldr-step .bxp-table-cell .bxp-swatch-color[data-color="none"]{background:url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/87aac207-5e30-4c7c-8967-1d87a9e9e2ea.jpg?v=1634104909)!important;background-size:90px 90px!important;background-repeat:no-repeat!important;background-position:center!important}
 .bxp-bldr-step .bxp-table-cell .bxp-swatch-color.bxp-swatch-selected{border-color:#5e0d8b;box-shadow:0 2px 10px rgba(0 0 0 / 32%)}
 .bxp-bldr-step .bxp-table-cell .bxp-swatch-color.bxp-swatch-selected:before{color:#5e0d8b}
 @media (min-width: 992px) {
@@ -1102,10 +1102,10 @@ main.main-content{padding-top:114px}
 }
 body#all-in-stock div#slider-promo-wrap{display:none!important}
 /* .plum-Lipstick .inner-top{position:relative}
-.plum-Lipstick .inner-top:after{content:"";background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/dpa_icon_999.png);display:block;position:absolute;left:0;top:0;width:91px;height:48px;background-repeat:no-repeat;background-size:100%}
+.plum-Lipstick .inner-top:after{content:"";background:url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/dpa_icon_999.png);display:block;position:absolute;left:0;top:0;width:91px;height:48px;background-repeat:no-repeat;background-size:100%}
 .plum-Lipstick strong.label.new-label{display:none!important}
 .plum-Lipstick .new_bge_cs .inner-top:after{display:none}
-.template-collection .plum-Lipstick .inner-top:after{content:"";background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/dpa_icon_999.png);display:block!important;position:absolute;left:0;top:0;width:91px;height:48px;background-repeat:no-repeat;background-size:100%}
+.template-collection .plum-Lipstick .inner-top:after{content:"";background:url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/dpa_icon_999.png);display:block!important;position:absolute;left:0;top:0;width:91px;height:48px;background-repeat:no-repeat;background-size:100%}
 .template-collection .plum-Lipstick .inner-top:after{left:-10px;top:-10px} */
 #buy3-999-sale-is-live div#slider-promo-wrap,#plum-bodylovin div#slider-promo-wrap{display:none!important}
 .cancel-order-outer{border-top:1px solid #ccc;padding:40px 15px}
@@ -1180,10 +1180,10 @@ main.main-content{padding-top:100px}
 .site-nav .menu-lv-3 > a,.site-nav .no-mega-menu .menu-lv-2 > a{color:#3c3c3c}
 .menu-mb-title li.menu-lv-3 a span{color:#3c3c3c}
 ul.site-nav-dropdown li.menu-lv-3 a span{color:#3c3c3c}
-#valentine-39-s-special-gifts-for-her .grid-item .inner.product-item .inner-top:before{content:"";display:block;background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/Valentines-day-offer-unit-icon.png);position:absolute;left:-12px;top:-12px;width:65px;height:60px;z-index:1;background-repeat:no-repeat;background-size:contain}
+#valentine-39-s-special-gifts-for-her .grid-item .inner.product-item .inner-top:before{content:"";display:block;background:url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/Valentines-day-offer-unit-icon.png);position:absolute;left:-12px;top:-12px;width:65px;height:60px;z-index:1;background-repeat:no-repeat;background-size:contain}
 #valentine-39-s-special-gifts-for-her .grid-item .inner.product-item .inner-top{position:relative}
 #valentine-gifts-for-him .grid-item .inner.product-item .inner-top{position:relative}
-#valentine-gifts-for-him .grid-item .inner.product-item .inner-top:before{content:"";display:block;background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/Valentines-day-offer-unit-icon.png);position:absolute;left:-12px;top:-12px;width:65px;height:60px;z-index:1;background-repeat:no-repeat;background-size:contain}
+#valentine-gifts-for-him .grid-item .inner.product-item .inner-top:before{content:"";display:block;background:url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/Valentines-day-offer-unit-icon.png);position:absolute;left:-12px;top:-12px;width:65px;height:60px;z-index:1;background-repeat:no-repeat;background-size:contain}
 footer.Cart__Footer{display:none}
 .template-collection .wrapper-newsletter.halo-modal{display:none!important}
 @media only screen and (min-width: 768px) {
@@ -1243,10 +1243,10 @@ main.main-content{padding-top:114px}
 }
 body#all-in-stock div#slider-promo-wrap{display:none!important}
 /*.plum-999 .inner-top{position:relative}
-.plum-999 .inner-top:after{content:"";background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/dpa_icon_999.png);display:block;position:absolute;left:0;top:0;width:91px;height:48px;background-repeat:no-repeat;background-size:100%}
+.plum-999 .inner-top:after{content:"";background:url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/dpa_icon_999.png);display:block;position:absolute;left:0;top:0;width:91px;height:48px;background-repeat:no-repeat;background-size:100%}
 .plum-999 strong.label.new-label{display:none!important}
 .plum-999 .new_bge_cs .inner-top:after{display:none}
-.template-collection .plum-999 .plum-999-inner .inner-top:after{content:"";background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/dpa_icon_999.png);display:block!important;position:absolute;left:0;top:0;width:91px;height:48px;background-repeat:no-repeat;background-size:100%}
+.template-collection .plum-999 .plum-999-inner .inner-top:after{content:"";background:url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/dpa_icon_999.png);display:block!important;position:absolute;left:0;top:0;width:91px;height:48px;background-repeat:no-repeat;background-size:100%}
 .template-collection .plum-999 .inner-top:after{left:-10px;top:-10px}*/
 #buy3-999-sale-is-live div#slider-promo-wrap,#plum-bodylovin div#slider-promo-wrap{display:none!important}
 .cancel-order-outer{border-top:1px solid #ccc;padding:40px 15px}
@@ -1360,10 +1360,10 @@ main.main-content{padding-top:125px}
 .site-nav .menu-lv-3 > a,.site-nav .no-mega-menu .menu-lv-2 > a{color:#3c3c3c}
 .menu-mb-title li.menu-lv-3 a span{color:#3c3c3c}
 ul.site-nav-dropdown li.menu-lv-3 a span{color:#3c3c3c}
-#valentine-39-s-special-gifts-for-her .grid-item .inner.product-item .inner-top:before{content:"";display:block;background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/Valentines-day-offer-unit-icon.png);position:absolute;left:-12px;top:-12px;width:65px;height:60px;z-index:1;background-repeat:no-repeat;background-size:contain}
+#valentine-39-s-special-gifts-for-her .grid-item .inner.product-item .inner-top:before{content:"";display:block;background:url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/Valentines-day-offer-unit-icon.png);position:absolute;left:-12px;top:-12px;width:65px;height:60px;z-index:1;background-repeat:no-repeat;background-size:contain}
 #valentine-39-s-special-gifts-for-her .grid-item .inner.product-item .inner-top{position:relative}
 #valentine-gifts-for-him .grid-item .inner.product-item .inner-top{position:relative}
-#valentine-gifts-for-him .grid-item .inner.product-item .inner-top:before{content:"";display:block;background:url(https://cdn.shopify.com/s/files/1/0390/2985/files/Valentines-day-offer-unit-icon.png);position:absolute;left:-12px;top:-12px;width:65px;height:60px;z-index:1;background-repeat:no-repeat;background-size:contain}
+#valentine-gifts-for-him .grid-item .inner.product-item .inner-top:before{content:"";display:block;background:url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/Valentines-day-offer-unit-icon.png);position:absolute;left:-12px;top:-12px;width:65px;height:60px;z-index:1;background-repeat:no-repeat;background-size:contain}
 span.old-price span{color:darkgrey;font-weight:600!important;text-decoration:line-through!important;width:100%;float:left}
 span.price.dgdfdh span span{color:darkgrey;font-weight:600!important;text-decoration:line-through!important;width:100%;float:left}
 @media only screen and (min-width: 768px) {
@@ -1422,7 +1422,7 @@ span.promo-code.active p:after{position:absolute;content:"Copied";font-size:13px
 
 /*#dropdown-cart .mini-products-list .product-image:before {
     content: "";
-    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/b2b.png');
+    background: url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/b2b.png');
     display: block;
     position: absolute;
     left: 0;
@@ -1436,7 +1436,7 @@ span.promo-code.active p:after{position:absolute;content:"Copied";font-size:13px
 
 #dropdown-cart .mini-products-list .product-image.Lipstick:before {
     content: "";
-    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/thumbnail-min.png');
+    background: url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/thumbnail-min.png');
     display: block;
     position: absolute;
     left: 0;
@@ -1462,7 +1462,7 @@ span.promo-code.active p:after{position:absolute;content:"Copied";font-size:13px
 
 /*.inner-top:after {
     content: "";
-    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/b2b.png');
+    background: url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/b2b.png');
     display: block;
     position: absolute;
     left: 3px;
@@ -1475,7 +1475,7 @@ span.promo-code.active p:after{position:absolute;content:"Copied";font-size:13px
 
 /*.plum-Lipstick .inner-top:after {
     content: "";
-    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/thumbnail-min.png');
+    background: url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/thumbnail-min.png');
     display: block;
     position: absolute;
     left: 0;
@@ -1490,7 +1490,7 @@ span.promo-code.active p:after{position:absolute;content:"Copied";font-size:13px
 
 /*.template-product .product-upper-section .product-photos .product-img-box:before {
     content: "";
-    background: url(https://cdn.shopify.com/s/files/1/0390/2985/files/b2b.png);
+    background: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/b2b.png);
     display: block;
     position: absolute;
     left: 0;
@@ -1504,7 +1504,7 @@ span.promo-code.active p:after{position:absolute;content:"Copied";font-size:13px
 
 /*.template-product .product-upper-section .product-photos.Lipstick .product-img-box:before {
    content: "";
-    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/thumbnail-min.png');
+    background: url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/thumbnail-min.png');
     display: block;
     position: absolute;
     left: 0;
@@ -1532,7 +1532,7 @@ a.product-img {
 
 /*.cart-template .product-img:before {
     content: "";
-    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/b2b.png');
+    background: url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/b2b.png');
     display: block;
     position: absolute;
     left: 0;
@@ -1546,7 +1546,7 @@ a.product-img {
 
 /*.cart-template .product-img.Lipstick:before {
     content: "";
-    background: url(https://cdn.shopify.com/s/files/1/0390/2985/files/thumbnail-min.png);
+    background: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/thumbnail-min.png);
     display: block;
     position: absolute;
     left: 0;
@@ -1561,7 +1561,7 @@ a.product-img {
 
 /*.template-search .inner.product-item[data-product-id="product-6797464928316"] .inner-top:after {
    content: "";
-    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/thumbnail-min.png');
+    background: url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/thumbnail-min.png');
     display: block;
     position: absolute;
     left: 3px;
@@ -1575,7 +1575,7 @@ a.product-img {
 
 .template-collection .product-item.plum-Lipstick .inner-top:after {
    content: "";
-    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/thumbnail-min.png');
+    background: url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/thumbnail-min.png');
     display: block;
     position: absolute;
     left: 3px;
@@ -1588,7 +1588,7 @@ a.product-img {
 
 .product-item.plum-Lipstick .inner-top:after {
    content: "";
-    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/thumbnail-min.png');
+    background: url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/thumbnail-min.png');
     display: block;
     position: absolute;
     left: 3px;
@@ -2768,7 +2768,7 @@ div#dropdown-cart {
 }
 
 .inner.product-item.plum_999 .inner-top:before {
-    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/DPA_V1.png');
+    background: url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/DPA_V1.png');
     content: "";
     display: block;
     background-repeat: no-repeat;
@@ -2790,7 +2790,7 @@ div#dropdown-cart {
 }
 
 .product-photos.plum_999 .product-photo-container.p-slider-s:before {
-    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/DPA_V1.png');
+    background: url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/DPA_V1.png');
     content: "";
     display: block;
     background-repeat: no-repeat;
@@ -2804,7 +2804,7 @@ div#dropdown-cart {
 }
 
 #dropdown-cart .mini-products-list .product-image.plum_999:after {
-    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/DPA_V1.png');
+    background: url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/DPA_V1.png');
     content: "";
     display: block;
     background-repeat: no-repeat;
@@ -2820,7 +2820,7 @@ div#dropdown-cart {
 .cart-template .wrapper-cart-template .cart-thumb .product-img.plum_999:after
 {
 
-background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/DPA_V1.png');
+background: url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/DPA_V1.png');
     content: "";
     display: block;
     background-repeat: no-repeat;
@@ -3544,7 +3544,7 @@ div#shopify-section-165657527665cfd359 img.slide-pc {
 .inner.product-item.birthday20 .inner-top .product-top:after {
     content: "";
     display: block !important;
-    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/Template_Wbsite_20_OFF_03_1.png?v=1656490859');
+    background: url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/Template_Wbsite_20_OFF_03_1.png?v=1656490859');
     background-repeat: no-repeat;
     background-size: contain;
     width: 40px;
@@ -3557,7 +3557,7 @@ div#shopify-section-165657527665cfd359 img.slide-pc {
 .inner.product-item.birthday40 .inner-top .product-top:after {
     content: "";
     display: block !important;
-    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/Template_Wbsite_40_OFF_03_857213ed-a6ec-413d-ac62-22cdc6d539e9.png?v=1656490859');
+    background: url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/Template_Wbsite_40_OFF_03_857213ed-a6ec-413d-ac62-22cdc6d539e9.png?v=1656490859');
     background-repeat: no-repeat;
     background-size: contain;
     width: 40px;
@@ -3570,7 +3570,7 @@ div#shopify-section-165657527665cfd359 img.slide-pc {
 .inner.product-item.birthday50 .inner-top .product-top:after {
     content: "";
     display: block !important;
-    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/Template_Wbsite_50_OFF_V3_7ee33a39-d871-4a73-9afc-7bbf4ddc9c57.png?v=1656490859');
+    background: url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/Template_Wbsite_50_OFF_V3_7ee33a39-d871-4a73-9afc-7bbf4ddc9c57.png?v=1656490859');
     background-repeat: no-repeat;
     background-size: contain;
     width: 40px;
@@ -3606,7 +3606,7 @@ left: -9px;
 /* .birthday40.product-photos .product-photo-container.p-slider-s .thumb:before {
     content: "";
     display: block !important;
-    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/Template_Wbsite_40_OFF_03_857213ed-a6ec-413d-ac62-22cdc6d539e9.png?v=1656490859');
+    background: url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/Template_Wbsite_40_OFF_03_857213ed-a6ec-413d-ac62-22cdc6d539e9.png?v=1656490859');
     background-repeat: no-repeat;
     background-size: contain;
      width: 60px;
@@ -3620,7 +3620,7 @@ left: -9px;
 .birthday20.product-photos .product-photo-container.p-slider-s .thumb:before {
     content: "";
     display: block !important;
-    background: url('https://cdn.shopify.com/s/files/1/0390/2985/files/Template_Wbsite_20_OFF_03_1.png?v=1656490859');
+    background: url('https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/Template_Wbsite_20_OFF_03_1.png?v=1656490859');
     background-repeat: no-repeat;
     background-size: contain;
      width: 60px;

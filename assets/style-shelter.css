@@ -71,7 +71,7 @@ img {
   margin-right: 0px;
 }
 .banner{
-  background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/dog.png?v=1651823557), url(https://cdn.shopify.com/s/files/1/0390/2985/files/3clouds.png?v=1651823602), url(https://cdn.shopify.com/s/files/1/0390/2985/files/Sun-Cloud2.png?v=1651823646), url(https://cdn.shopify.com/s/files/1/0390/2985/files/3-birds.png?v=1651823675), url(https://cdn.shopify.com/s/files/1/0390/2985/files/banner-bottom.png?v=1651823701), url(https://cdn.shopify.com/s/files/1/0390/2985/files/apple.png?v=1651823727), url(https://cdn.shopify.com/s/files/1/0390/2985/files/home.png?v=1651823768), url(https://cdn.shopify.com/s/files/1/0390/2985/files/banner-bg.png?v=1651823791);
+  background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/dog.png?v=1651823557), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/3clouds.png?v=1651823602), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/Sun-Cloud2.png?v=1651823646), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/3-birds.png?v=1651823675), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/banner-bottom.png?v=1651823701), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/apple.png?v=1651823727), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/home.png?v=1651823768), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/banner-bg.png?v=1651823791);
   background-position: right bottom, left 100px top 80px, left 460px top 10px, right 50px top 50px, left 140px bottom -5px, left 255px bottom -32px, left 215px bottom, left top;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
   padding: 15px;
@@ -133,7 +133,7 @@ img {
     height: 1200px;
 }
 .about-us .contact-deatils-copy{
-  background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home1.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home2.png?v=1651824248), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home3.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-apple.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home4.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape1.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape2.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape3.png?v=1651824005), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-heart.png?v=1651824032);
+  background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home1.png?v=1651824247), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home2.png?v=1651824248), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home3.png?v=1651824247), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-dog.png?v=1651824247), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-apple.png?v=1651824247), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home4.png?v=1651824247), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-shape1.png?v=1651824247), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-shape2.png?v=1651824247), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-shape3.png?v=1651824005), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-heart.png?v=1651824032);
   background-position: left bottom ,right bottom, right 89px bottom, right 420px bottom -160px, right 420px bottom, right 350px bottom, left 230px top, left 630px top 305px, center top 670px, right 360px bottom 210px;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
 }
@@ -368,7 +368,7 @@ input:focus-visible {
 .we-did-it-style{
   position: relative;
   top: 200px;
-   background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape2.png?v=1651824919);
+   background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/we-did-it-shape2.png?v=1651824919);
   background-position: center bottom;
   background-repeat: no-repeat;
 }
@@ -381,7 +381,7 @@ input:focus-visible {
     z-index: 69;
     left: 50%;
     transform: translateX(-50%);
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575), url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-dit-it-vedio.png?v=1651824958);
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/we-dit-it-vedio.png?v=1651824958);
     background-position: center center, center center;
     background-repeat: no-repeat, no-repeat;
 }
@@ -394,18 +394,18 @@ input:focus-visible {
     z-index: 69;
     left: 50%;
     transform: translateX(-50%);
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575), url(https://cdn.shopify.com/s/files/1/0390/2985/files/6_33bea314-7133-4d44-90b6-e3ab675715a7.jpg?v=1652101389);
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/6_33bea314-7133-4d44-90b6-e3ab675715a7.jpg?v=1652101389);
     background-position: center center, center center;
     background-repeat: no-repeat, no-repeat;
 }
 
 .we-did-it {
-  background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog.png?v=1651824247) ,url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape1.png?v=1651825826 ), url(../images/we-did-it-shape3.png);
+  background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-dog.png?v=1651824247) ,url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/we-did-it-shape1.png?v=1651825826 ), url(../images/we-did-it-shape3.png);
   background-position: right 420px top -139px, right 520px top 120px, left 120px top 620px;
   background-repeat: no-repeat, no-repeat, no-repeat;
 }
 .we-did-it-without-media {
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog.png?v=1651824247) ,url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape1.png?v=1651825826 );
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-dog.png?v=1651824247) ,url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/we-did-it-shape1.png?v=1651825826 );
     background-position: right 420px top -139px, right 515px top 110px;
     background-repeat: no-repeat, no-repeat;
     top: -3px;
@@ -476,14 +476,14 @@ input:focus-visible {
   top: -20px;
 }
 .how-its-work {
-    width: 100%;
-    padding: 0px 0px 0px 0px;
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-bg.png?v=1651825083);
-    background-position: top right;
-    background-repeat: repeat;
-    height: 550px;
-    position: relative;
-    top: 235px;
+  width: 100%;
+  padding: 0px 0px 0px 0px;
+  background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/how-its-work-bg.png?v=1651825083);
+  background-position: top right;
+  background-repeat: repeat;
+  height: 550px;
+  position: relative;
+  top: 235px;
 }
 .how-its-work-style{
   position: relative;
@@ -596,7 +596,7 @@ font-size: 21px;
   text-decoration: none;
 }
 .how-its-work{
-  background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-3birds-mb.png?v=1651824984), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-clouds.png?v=1651825915), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-clouds2.png?v=1651825956), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-bottom.png?v=1651826083), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-bg.png?v=1651825083);
+  background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/how-its-work-3birds-mb.png?v=1651824984), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/how-its-work-clouds.png?v=1651825915), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/how-its-work-clouds2.png?v=1651825956), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/how-its-work-bottom.png?v=1651826083), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/how-its-work-bg.png?v=1651825083);
   background-position: right 90px top 70px, right 150px bottom 140px, left 60px top 70px, left 40px bottom -10px, left top;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
 }
@@ -606,31 +606,31 @@ font-size: 21px;
   .how-its-work-box ul .mb {
     display: none;
   }
-.how-its-work-vedio {
-  border-radius: 50px;
-    background-color: rgb(242, 227, 252);
-    position: relative;
-    width: 43%;
-    height: 300px;
-    z-index: 69;
-    left: 50%;
-    transform: translateX(-50%);
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575), url(https://cdn.shopify.com/s/files/1/0390/2985/files/yt-thumb-mb.jpg?v=1651825136);
-    background-position: center center, center center;
-    background-repeat: no-repeat, no-repeat;
-    background-size: auto, cover;
-}
-.know-more-at{
-  width: 100%;
-    padding: 0px 0px 0px 0px;
-    height: 450px;
-    position: relative;
-    top: 230px;
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/know-more-dog-mb.png?v=1651825181);
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    margin-bottom: 160px;
-}
+  .how-its-work-vedio {
+    border-radius: 50px;
+      background-color: rgb(242, 227, 252);
+      position: relative;
+      width: 43%;
+      height: 300px;
+      z-index: 69;
+      left: 50%;
+      transform: translateX(-50%);
+      background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/yt-thumb-mb.jpg?v=1651825136);
+      background-position: center center, center center;
+      background-repeat: no-repeat, no-repeat;
+      background-size: auto, cover;
+  }
+  .know-more-at{
+    width: 100%;
+      padding: 0px 0px 0px 0px;
+      height: 450px;
+      position: relative;
+      top: 230px;
+      background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/know-more-dog-mb.png?v=1651825181);
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      margin-bottom: 160px;
+  }
 .know-more-at-title {
   font-size: 76px;
  font-family:'candy_chicksregular';
@@ -897,13 +897,13 @@ top: 0px;
   .align-style{
   text-align: -webkit-center;
 }
-  .banner {
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/dog-mb.png?v=1651825238), url(https://cdn.shopify.com/s/files/1/0390/2985/files/3clouds-mb.png?v=1651823580), url(https://cdn.shopify.com/s/files/1/0390/2985/files/Sun-Cloud-mb.png?v=1651824408), url(https://cdn.shopify.com/s/files/1/0390/2985/files/3-birds-mb.png?v=1651824435), url(https://cdn.shopify.com/s/files/1/0390/2985/files/banner-bottom-mb.png?v=1651824461), url(https://cdn.shopify.com/s/files/1/0390/2985/files/apple-mb.png?v=1651824492), url(https://cdn.shopify.com/s/files/1/0390/2985/files/home-mb.png?v=1651824524), url(https://cdn.shopify.com/s/files/1/0390/2985/files/banner-bg.png?v=1651823791);
-    background-position:right bottom, left 120px bottom 120px, right 5px top 30px, left 10px bottom 120px, left -115px bottom -1px, left 52px bottom -18px, left 20px bottom, left top;
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
-    padding: 15px;
-    height: 440px;
-  }
+.banner {
+  background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/dog-mb.png?v=1651825238), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/3clouds-mb.png?v=1651823580), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/Sun-Cloud-mb.png?v=1651824408), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/3-birds-mb.png?v=1651824435), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/banner-bottom-mb.png?v=1651824461), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/apple-mb.png?v=1651824492), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/home-mb.png?v=1651824524), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/banner-bg.png?v=1651823791);
+  background-position:right bottom, left 120px bottom 120px, right 5px top 30px, left 10px bottom 120px, left -115px bottom -1px, left 52px bottom -18px, left 20px bottom, left top;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+  padding: 15px;
+  height: 440px;
+}
   .text11 {
     font-size: 30px;
     top: 10px;
@@ -922,8 +922,8 @@ top: 0px;
       vertical-align: middle;
       width: 45%;
   }
-   .about-us .contact-deatils-copy {
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-apple-mb.png?v=1651823844),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home4-mb.png?v=1651823870),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home1-mb.png?v=1651823889),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home2-mb.png?v=1651823928),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home3-mb.png?v=1651823928),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape1-mb.png?v=1651823969),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape2-mb.png?v=1651823928),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape3aa.png?v=1651824005),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-heart.png?v=1651824032);
+  .about-us .contact-deatils-copy {
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-apple-mb.png?v=1651823844),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home4-mb.png?v=1651823870),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home1-mb.png?v=1651823889),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home2-mb.png?v=1651823928),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home3-mb.png?v=1651823928),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-shape1-mb.png?v=1651823969),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-shape2-mb.png?v=1651823928),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-shape3aa.png?v=1651824005),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-heart.png?v=1651824032);
     background-position: left 130px bottom -100px,left 110px bottom -10px,left 70px bottom,right bottom,left bottom,left 67px bottom,left 65px top,left 160px top 515px,center top 1190px,left 242px bottom 160px;
     background-repeat: no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
 }
@@ -995,13 +995,13 @@ top: 0px;
     left: 0px;
   }
   .we-did-it {
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822) ,url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape1-mb.png?v=1651824701), url(../images/we-did-it-shape3.png);
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822) ,url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/we-did-it-shape1-mb.png?v=1651824701), url(../images/we-did-it-shape3.png);
     background-position: left 130px top -100px, left 35px top 75px, left 20px top 860px;
     background-repeat: no-repeat, no-repeat, no-repeat;
   }
     .we-did-it-without-media {
 
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822),url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape1-mb.png?v=1651824701),url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape3-mb.png);
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/we-did-it-shape1-mb.png?v=1651824701),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/we-did-it-shape3-mb.png);
     background-position: left 130px top -100px, left 35px top 75px ,left 20px top 860px;
     background-repeat: no-repeat,no-repeat,no-repeat;
     top: -1px;
@@ -1009,7 +1009,7 @@ top: 0px;
   .we-did-it-style {
     position: relative;
     top: 130px;
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape2.png?v=1651824919);
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/we-did-it-shape2.png?v=1651824919);
     background-position: center bottom 41px;
     background-repeat: no-repeat;
 }
@@ -1036,7 +1036,7 @@ top: 0px;
     z-index: 69;
     left: 50%;
     transform: translateX(-50%);
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon-mb.png?v=1651824943), url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-dit-it-vedio.png?v=1651824958);
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/vedio-payler-icon-mb.png?v=1651824943), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/we-dit-it-vedio.png?v=1651824958);
     background-position: center center, center center;
     background-repeat: no-repeat, no-repeat;
   }
@@ -1063,7 +1063,7 @@ top: 0px;
   .how-its-work {
     width: 100%;
     padding: 0px 0px 0px 0px;
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-3birds-mb.png?v=1651824984), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-clouds-mb.png?v=1651824996), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-clouds2-mb.png?v=1651825018), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-bottom-mb.png?v=1651825045), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-bg.png?v=1651825083);
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/how-its-work-3birds-mb.png?v=1651824984), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/how-its-work-clouds-mb.png?v=1651824996), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/how-its-work-clouds2-mb.png?v=1651825018), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/how-its-work-bottom-mb.png?v=1651825045), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/how-its-work-bg.png?v=1651825083);
     background-position: right 237px bottom 123px, right 40px bottom 140px, left 55px top 40px, left 1px bottom -6px, left top;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
     height: 1000px;
@@ -1100,7 +1100,7 @@ top: 0px;
   .how-its-work-vedio {
     width: 300px;
     height: 200px;
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon-mb.png?v=1651824943), url(https://cdn.shopify.com/s/files/1/0390/2985/files/yt-thumb-mb.jpg?v=1651825136);
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/vedio-payler-icon-mb.png?v=1651824943), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/yt-thumb-mb.jpg?v=1651825136);
     background-position: center center, center center;
     background-repeat: no-repeat, no-repeat;
     background-size: auto, cover;
@@ -1125,7 +1125,7 @@ top: 0px;
     height: 450px;
     position: relative;
     top: 70px;
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/know-more-dog-mb.png?v=1651825181);
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/know-more-dog-mb.png?v=1651825181);
     background-position: left bottom;
     background-repeat: no-repeat;
     margin-bottom: 20px;
@@ -1139,7 +1139,7 @@ top: 0px;
     z-index: 69;
     left: 48%;
     transform: translateX(-52%);
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon-mb.png?v=1651824943), url(https://cdn.shopify.com/s/files/1/0390/2985/files/6_1_88070043-8e64-4af2-9ac6-7a887a4093dc.jpg?v=1652101389);
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/vedio-payler-icon-mb.png?v=1651824943), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/6_1_88070043-8e64-4af2-9ac6-7a887a4093dc.jpg?v=1652101389);
     background-position: center center, center center;
     background-repeat: no-repeat, no-repeat;
 }
@@ -1174,7 +1174,7 @@ top: 0px;
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait) {
 
   .banner {
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/dog-mb.png?v=1651825238), url(https://cdn.shopify.com/s/files/1/0390/2985/files/3clouds-mb.png?v=1651823580), url(https://cdn.shopify.com/s/files/1/0390/2985/files/Sun-Cloud-mb.png?v=1651824408), url(https://cdn.shopify.com/s/files/1/0390/2985/files/3-birds-mb.png?v=1651824435), url(https://cdn.shopify.com/s/files/1/0390/2985/files/banner-bottom-mb.png?v=1651824461), url(https://cdn.shopify.com/s/files/1/0390/2985/files/apple-mb.png?v=1651824492), url(https://cdn.shopify.com/s/files/1/0390/2985/files/home-mb.png?v=1651824524), url(https://cdn.shopify.com/s/files/1/0390/2985/files/banner-bg.png?v=1651823791);
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/dog-mb.png?v=1651825238), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/3clouds-mb.png?v=1651823580), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/Sun-Cloud-mb.png?v=1651824408), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/3-birds-mb.png?v=1651824435), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/banner-bottom-mb.png?v=1651824461), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/apple-mb.png?v=1651824492), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/home-mb.png?v=1651824524), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/banner-bg.png?v=1651823791);
     background-position:right bottom, left 120px bottom 120px, right 5px top 40px, left 10px bottom 120px, left -115px bottom -1px, left 52px bottom -18px, left 20px bottom, left top;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
     padding: 15px;
@@ -1196,11 +1196,11 @@ top: 0px;
       vertical-align: middle;
       width: 45%;
   }
-    .about-us .contact-deatils-copy{
-  background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-apple-mb.png?v=1651823844), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home4-mb.png?v=1651823870), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home1-mb.png?v=1651823889), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home2-mb.png?v=1651823928), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home3-mb.png?v=1651823928), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape1.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape2.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape3.png?v=1651824005), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-heart.png?v=1651824032);
-   background-position: left 430px bottom -100px, left 410px bottom -10px, left 370px bottom, right bottom ,left bottom, left 67px bottom, left 10px top -20px, left 315px top 320px, center top 845px, left 560px bottom 160px;
-   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-  }
+  .about-us .contact-deatils-copy{
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-apple-mb.png?v=1651823844), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home4-mb.png?v=1651823870), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home1-mb.png?v=1651823889), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home2-mb.png?v=1651823928), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home3-mb.png?v=1651823928), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-shape1.png?v=1651824247), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-shape2.png?v=1651824247), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-shape3.png?v=1651824005), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-heart.png?v=1651824032);
+     background-position: left 430px bottom -100px, left 410px bottom -10px, left 370px bottom, right bottom ,left bottom, left 67px bottom, left 10px top -20px, left 315px top 320px, center top 845px, left 560px bottom 160px;
+     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    }
   .about-us .contact-deatils-copy {
     padding-top: 75px;
     height: 1330px;
@@ -1267,23 +1267,23 @@ top: 0px;
     left: 0px;
   }
   .we-did-it {
-        background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822) ,url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape1-mb.png?v=1651824701), url(../images/we-did-it-shape3.png);
-    background-position: left 430px top -100px, left 330px top 80px, left 20px top 900px;
-    background-repeat: no-repeat, no-repeat, no-repeat;
-  }
-  .we-did-it-without-media {
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822) ,url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape1-mb.png?v=1651824701);
-    background-position: left 430px top -100px, left 330px top 80px;
-    background-repeat: no-repeat, no-repeat;
-    top: -42px;
-  }
-  .we-did-it-style {
-    position: relative;
-    top: 130px;
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape2.png?v=1651824919);
-    background-position: center bottom;
-    background-repeat: no-repeat;
-  }
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822) ,url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/we-did-it-shape1-mb.png?v=1651824701), url(../images/we-did-it-shape3.png);
+background-position: left 430px top -100px, left 330px top 80px, left 20px top 900px;
+background-repeat: no-repeat, no-repeat, no-repeat;
+}
+.we-did-it-without-media {
+background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822) ,url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/we-did-it-shape1-mb.png?v=1651824701);
+background-position: left 430px top -100px, left 330px top 80px;
+background-repeat: no-repeat, no-repeat;
+top: -42px;
+}
+.we-did-it-style {
+  position: relative;
+  top: 130px;
+  background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/we-did-it-shape2.png?v=1651824919);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
   .vedio-media-box {
     width: 90%;
     display: block;
@@ -1305,7 +1305,7 @@ top: 0px;
     z-index: 69;
     left: 50%;
     transform: translateX(-50%);
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon2.png?v=1651825527), url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575), url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-dit-it-vedio.png?v=1651824958);
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/vedio-payler-icon2.png?v=1651825527), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/we-dit-it-vedio.png?v=1651824958);
     background-position: center center, center center, center center;
     background-repeat: no-repeat ,no-repeat, no-repeat;
         top: 20px;
@@ -1326,7 +1326,7 @@ top: 0px;
   .how-its-work {
     width: 100%;
     padding: 0px 0px 0px 0px;
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-bg.png?v=1651825083);
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/how-its-work-bg.png?v=1651825083);
     background-position: top right;
     background-repeat: repeat;
     height: 590px;
@@ -1371,7 +1371,7 @@ top: 0px;
     height: 450px;
     position: relative;
     top: 100px;
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/know-more-dog-mb.png?v=1651825181);
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/know-more-dog-mb.png?v=1651825181);
     background-position: left bottom;
     background-repeat: no-repeat;
   }
@@ -1441,60 +1441,60 @@ top: 0px;
     width: auto;
   }
   .banner {
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/dog.png?v=1651823557), url(https://cdn.shopify.com/s/files/1/0390/2985/files/3clouds.png?v=1651823602), url(https://cdn.shopify.com/s/files/1/0390/2985/files/Sun-Cloud2.png?v=1651823646), url(https://cdn.shopify.com/s/files/1/0390/2985/files/3-birds.png?v=1651823675), url(https://cdn.shopify.com/s/files/1/0390/2985/files/banner-bottom.png?v=1651823701), url(https://cdn.shopify.com/s/files/1/0390/2985/files/apple.png?v=1651823727), url(https://cdn.shopify.com/s/files/1/0390/2985/files/home.png?v=1651823768), url(https://cdn.shopify.com/s/files/1/0390/2985/files/banner-bg.png?v=1651823791);
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/dog.png?v=1651823557), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/3clouds.png?v=1651823602), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/Sun-Cloud2.png?v=1651823646), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/3-birds.png?v=1651823675), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/banner-bottom.png?v=1651823701), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/apple.png?v=1651823727), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/home.png?v=1651823768), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/banner-bg.png?v=1651823791);
     background-position: right 60px bottom, left 152px top 45px, left 945px top 10px, right 50px top 50px, left 140px bottom -5px, left 255px bottom -32px, left 215px bottom, left top;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
     padding: 15px;
     height: 650px;
 }
 .we-did-it-vedio-no-media {
-    border-radius: 100px;
-    background-color: #f2e3fc00;
-    position: relative;
-    width: 45%;
-    height: 485px;
-    z-index: 69;
-    left: 50%;
-    transform: translateX(-50%);
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575), url(https://cdn.shopify.com/s/files/1/0390/2985/files/6_33bea314-7133-4d44-90b6-e3ab675715a7.jpg?v=1652101389);
-    background-position: center center, center center;
-    background-repeat: no-repeat, no-repeat;
+  border-radius: 100px;
+  background-color: #f2e3fc00;
+  position: relative;
+  width: 45%;
+  height: 485px;
+  z-index: 69;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/6_33bea314-7133-4d44-90b6-e3ab675715a7.jpg?v=1652101389);
+  background-position: center center, center center;
+  background-repeat: no-repeat, no-repeat;
 }
 .how-its-work-vedio {
-    border-radius: 100px;
-    background-color: rgb(242, 227, 252);
-    position: relative;
-    width: 45%;
-    height: 485px;
-    z-index: 69;
-    left: 50%;
-    transform: translateX(-50%);
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575), url(https://cdn.shopify.com/s/files/1/0390/2985/files/yt-thumb2.jpg?v=1651826313);
-    background-position: center center, center center;
-    background-repeat: no-repeat, no-repeat;
-    background-size: auto, cover;
+  border-radius: 100px;
+  background-color: rgb(242, 227, 252);
+  position: relative;
+  width: 45%;
+  height: 485px;
+  z-index: 69;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/yt-thumb2.jpg?v=1651826313);
+  background-position: center center, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, cover;
 }
 .know-more-at {
-    width: 100%;
-    padding: 0px 0px 0px 0px;
-    height: 450px;
-    position: relative;
-    top: 330px;
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/know-more-dog.png?v=1651826371);
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    margin-bottom: 260px;
+  width: 100%;
+  padding: 0px 0px 0px 0px;
+  height: 450px;
+  position: relative;
+  top: 330px;
+  background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/know-more-dog.png?v=1651826371);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  margin-bottom: 260px;
 }
 .how-its-work {
-    width: 100%;
-    padding: 0px 0px 0px 0px;
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-3birds.png?v=1651826397), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-clouds.png?v=1651825915), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-clouds2.png?v=1651825956 ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-bottom.png?v=1651826083 ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/how-its-work-bg.png?v=1651825083);
-    background-position: right 90px top 70px, right 150px bottom 140px, left 60px top 70px, left 40px bottom -10px, left top;
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
-    height: 650px;
-    position: relative;
-    top: 235px;
-  }
+  width: 100%;
+  padding: 0px 0px 0px 0px;
+  background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/how-its-work-3birds.png?v=1651826397), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/how-its-work-clouds.png?v=1651825915), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/how-its-work-clouds2.png?v=1651825956 ), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/how-its-work-bottom.png?v=1651826083 ), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/how-its-work-bg.png?v=1651825083);
+  background-position: right 90px top 70px, right 150px bottom 140px, left 60px top 70px, left 40px bottom -10px, left top;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+  height: 650px;
+  position: relative;
+  top: 235px;
+}
   .about-text1 {
       font-size: 44px;
   }
@@ -1516,7 +1516,7 @@ top: 0px;
     height: 116px;
   }
   .about-us .contact-deatils-copy {
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home1.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home2.png?v=1651824248), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home3.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-apple.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home4.png?v=1651824247), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape1-max.png?v=1651826570), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape2-max.png?v=1651826598), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape3-max.png?v=1651826625), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-heart.png?v=1651824032);
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home1.png?v=1651824247), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home2.png?v=1651824248), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home3.png?v=1651824247), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-dog.png?v=1651824247), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-apple.png?v=1651824247), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home4.png?v=1651824247), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-shape1-max.png?v=1651826570), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-shape2-max.png?v=1651826598), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-shape3-max.png?v=1651826625), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-heart.png?v=1651824032);
     background-position: left bottom ,right bottom, right 89px bottom, right 600px bottom -160px, right 600px bottom, right 530px bottom, left 180px top -38px, left 949px top 415px, center top 879px, right 540px bottom 210px;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
   }
@@ -1537,11 +1537,11 @@ top: 0px;
     width: auto;
 }
 .we-did-it-without-media {
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog.png?v=1651824247),url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape1.png?v=1651825826), url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape3-max.png);
-    background-position: right 600px top -139px,right 695px top 110px, left 120px top 885px;
-    background-repeat: no-repeat,no-repeat, no-repeat;
-    top: -1px;
-    margin-bottom: -50px;
+  background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-dog.png?v=1651824247),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/we-did-it-shape1.png?v=1651825826), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/we-did-it-shape3-max.png);
+  background-position: right 600px top -139px,right 695px top 110px, left 120px top 885px;
+  background-repeat: no-repeat,no-repeat, no-repeat;
+  top: -1px;
+  margin-bottom: -50px;
 }
 .we-did-it-title {
     font-size: 75px;
@@ -1598,13 +1598,13 @@ top: 0px;
     z-index: 69;
     left: 50%;
     transform: translateX(-50%);
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIJ8Wg79rw$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-dit-it-vedio.png?v=1651824958__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIK_fYdJXg$ );
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/vedio-payler-icon.png?v=1651825575__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIJ8Wg79rw$ ), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/we-dit-it-vedio.png?v=1651824958__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIK_fYdJXg$ );
     background-position: center center, center center;
     background-repeat: no-repeat, no-repeat;
 }
 
 .we-did-it {
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog.png?v=1651824247__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIJRAs3CzQ$ ) ,url(https://cdn.shopify.com/s/files/1/0390/2985/files/we-did-it-shape1.png?v=1651825826__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhILQgvEwAA$ ), url(../images/we-did-it-shape3-max.png);
+    background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-dog.png?v=1651824247__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIJRAs3CzQ$ ) ,url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/we-did-it-shape1.png?v=1651825826__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhILQgvEwAA$ ), url(../images/we-did-it-shape3-max.png);
     background-position: right 600px top -139px, right 699px top 120px, left 120px top 885px;
     background-repeat: no-repeat, no-repeat, no-repeat;
 }
@@ -1733,11 +1733,11 @@ top: 0px;
     height: 1635px;
 }
 .about-us .contact-deatils-copy {
-background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-apple-mb.png?v=1651823844),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home4-mb.png?v=1651823870),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home1-mb.png?v=1651823889),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home2-mb.png?v=1651823928),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home3-mb.png?v=1651823928),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape1-mb.png?v=1651823969),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape2-mb.png?v=1651823928),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape3.png?v=1651824005),url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-heart.png?v=1651824032);
-    background-position: left 130px bottom -100px,left 110px bottom -10px,left 70px bottom,right bottom,left bottom,left 67px bottom,left 65px top,left 160px top 477px,center top 1135px,left 242px bottom 160px;
-    background-repeat: no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
+  background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-apple-mb.png?v=1651823844),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home4-mb.png?v=1651823870),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home1-mb.png?v=1651823889),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home2-mb.png?v=1651823928),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home3-mb.png?v=1651823928),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-shape1-mb.png?v=1651823969),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-shape2-mb.png?v=1651823928),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-shape3.png?v=1651824005),url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-heart.png?v=1651824032);
+      background-position: left 130px bottom -100px,left 110px bottom -10px,left 70px bottom,right bottom,left bottom,left 67px bottom,left 65px top,left 160px top 477px,center top 1135px,left 242px bottom 160px;
+      background-repeat: no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
+    }
   }
-}
 @media only screen and (min-device-width: 400px) and (max-device-width: 414px) {
   .text11 {
     font-size: 32px;
@@ -1758,9 +1758,9 @@ background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-do
     height: 1630px;
 }
 .about-us .contact-deatils-copy {
-    background-image: url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIJ36Vr53Q$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-apple-mb.png?v=1651823844__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIJLoI3FSA$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home4-mb.png?v=1651823870__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIIU0Do07A$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home1-mb.png?v=1651823889__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhII5EF6DWw$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home2-mb.png?v=1651823928__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIK2YvfIug$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-home3-mb.png?v=1651823928__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIJrEwYxSA$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape1-mb.png?v=1651823969__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIK_MFg9rw$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape2-mb.png?v=1651823928__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhILRfcO8mA$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape3.png?v=1651824005__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIKynIaUmg$ ), url(https://cdn.shopify.com/s/files/1/0390/2985/files/about-heart.png?v=1651824032__;!!N96JrnIq8IfO5w!k9ZDNjYl-qarlw9Ik5RUITFCqAeA46UrbYTJg4knIfcOzZcGEHv9ZjPc3HF_9DaxAya_eJU130tCp9O_lYa9jmMukT0pSMThhIK47Z6ByA$ );
-    background-position: left 130px bottom -100px, left 110px bottom -10px, left 70px bottom, right bottom ,left bottom, left 67px bottom, left 65px top, left 160px top 477px, center top 1095px, left 242px bottom 160px;
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-image: url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-dog-mb.png?v=1651823822), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-apple-mb.png?v=1651823844), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home4-mb.png?v=1651823870), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home1-mb.png?v=1651823889), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home2-mb.png?v=1651823928), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-home3-mb.png?v=1651823928), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-shape1-mb.png?v=1651823969), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-shape2-mb.png?v=1651823928), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-shape3.png?v=1651824005), url(https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-heart.png?v=1651824032);
+  background-position: left 130px bottom -100px, left 110px bottom -10px, left 70px bottom, right bottom ,left bottom, left 67px bottom, left 65px top, left 160px top 477px, center top 1095px, left 242px bottom 160px;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
 }
 .how-its-work{
   height: 930px;
@@ -1821,7 +1821,7 @@ p.limited {
 
 .about-us .contact-deatils-copy .fill-details:before {
     content: "";
-    background: url("https://cdn.shopify.com/s/files/1/0390/2985/files/about-shape3.png");
+    background: url("https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/about-shape3.png");
     display: block;
     width: 3px;
     height: 50px;

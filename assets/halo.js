@@ -1562,7 +1562,7 @@ if ((typeof Shopify.getCart) === 'undefined') {
 //         var actu_price = 129900 - cart.total_price;
 
 //         $(".special_offer").show();
-//         $('.special_offer_p').html('<div class="special_offer"> Pick plums worth '+Shopify.formatMoney(actu_price, window.money_format)+' more & get <span>FREE vanilla vibes shower cream</span>  <img src="https://cdn.shopify.com/s/files/1/0390/2985/files/like_1.png?v=1589371393"> </div>');      
+//         $('.special_offer_p').html('<div class="special_offer"> Pick plums worth '+Shopify.formatMoney(actu_price, window.money_format)+' more & get <span>FREE vanilla vibes shower cream</span>  <img src="https://47vuve1w.cdn.imgeng.in/s/files/1/0390/2985/files/like_1.png?v=1589371393"> </div>');      
 
        }
       else{  
