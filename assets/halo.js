@@ -1730,7 +1730,7 @@ if ((typeof Shopify.getCart) === 'undefined') {
           var varientid = a.match(/\d+/g);
           var quantity = $(this).closest('.item').find(".quantity").val();
           console.log(varientid+' a '+quantity);
-          if (quantity == 0){
+          if ((jQuery(this).text() == "-") && quantity == 1){
           $.ajax({
             type: "post",
             url: "/cart/update.js",
