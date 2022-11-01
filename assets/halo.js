@@ -1732,7 +1732,7 @@ if ((typeof Shopify.getCart) === 'undefined') {
           console.log(varientid+' a '+quantity);
           $.ajax({
             type: "post",
-            url: "/cart/change.js",
+            url: "/cart/update.js",
             data: "quantity=" + quantity + "&id=" + varientid,
             dataType: "json",
             beforeSend: function() {
