@@ -1730,10 +1730,9 @@ if ((typeof Shopify.getCart) === 'undefined') {
           var varientid = a.match(/\d+/g);
           var quantity = $(this).closest('.item').find(".quantity").val();
           console.log(varientid+' a '+quantity);
-          if ((jQuery(this).text() == "-") && quantity == 1){
           $.ajax({
             type: "post",
-            url: "/cart/update.js",
+            url: "/cart/change.js",
             data: "quantity=" + quantity + "&id=" + varientid,
             dataType: "json",
             beforeSend: function() {
@@ -1753,13 +1752,6 @@ if ((typeof Shopify.getCart) === 'undefined') {
               console.log(i);
             }
           });
-          }
-          else
-          {
-            Shopify.removeItem(productIDCart, function (cart) {
-              ella.doUpdateDropdownCart(cart);
-            });
-          }
         }
 
       });
