@@ -1721,7 +1721,7 @@ if ((typeof Shopify.getCart) === 'undefined') {
           } else if (oldValue > 1) {
             newVal = parseInt(oldValue) - 1;
           }else{
-            newVal = 1;
+            newVal = 0;
           }
           $(this).closest('.item').find(".quantity").val(newVal);
           var a = $(this).parents(".item").attr("id");
